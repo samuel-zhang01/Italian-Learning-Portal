@@ -1,0 +1,27 @@
+export type Skill = "grammar" | "vocabulary" | "reading" | "listening" | "writing" | "speaking" | "interaction";
+export type ExerciseType = "mcq" | "input" | "reorder" | "listen" | "reading" | "speak";
+export type BilingualNote = { it:string; en:string };
+export type LessonMistake = { wrong:string; right:string; noteIt:string; noteEn:string };
+export type Lesson = { id:string; course:1|2; week:string; title:string; subtitle:string; topics:string[]; italian:string; english:string; prompt:string; answer:string; canDo:string; canDoIt:string; summaryIt:string; summaryEn:string; grammarRuleIds:string[]; remember:BilingualNote[]; writeDown:BilingualNote[]; mistakes:LessonMistake[]; sourceRefs:string[] };
+export type Reading = { id:string; level:string; title:string; theme:string; sentences:[string,string][] };
+export type Grammar = { title:string; rule:string; example:string; translation:string };
+export type Exercise = { id:string; lessonId:string; skill:Skill; type:ExerciseType; prompt:string; answer:string; alternatives?:string[]; options?:string[]; explanation:string; passage?:string; audioText?:string; hint?:string };
+export type RoadmapWeek = { week:number; title:string; titleIt:string; lessons:string[]; goal:string; goalIt:string };
+export type SkillInfo = { id:Skill; it:string; en:string; target:string; targetIt:string };
+export type Vocab = { id:string; italian:string; english:string; topic:string; example:string; exampleEn:string };
+export type Preposition = { id:string; before:string; target:string; hint:string; answer:string; full:string; beforeEn:string; targetEn:string; hintEn:string; fullEn:string };
+export type GrammarRule = { id:string; titleIt:string; titleEn:string; ruleIt:string; ruleEn:string; examples:{it:string;en:string}[]; exceptionIt:string; exceptionEn:string; mistake:{wrong:string;right:string}; rememberIt:string };
+export type Verb = { id:string; infinitive:string; english:string; forms:string[] };
+export type Content = { lesson:Lesson[]; reading:Reading[]; grammar:Grammar[]; grammar_rule:GrammarRule[]; exercise:Exercise[]; roadmap:RoadmapWeek[]; skill:SkillInfo[]; vocab:Vocab[]; preposition:Preposition[]; verb:Verb[] };
+export type PlanDayProgress = { completedTaskIds:string[]; actualMinutes:number; confidence:number; note:string; completedAt?:string; testScore?:number; workedOn?:string };
+export type CefrEvidenceStatus = "not-yet" | "supported" | "independent";
+export type CefrEvidenceEntry = { date:string; note:string };
+export type CefrEvidence = { status:CefrEvidenceStatus; entries:CefrEvidenceEntry[] };
+export type LearnerState = {
+  xp:number; attempts:number; correct:number; studyDays:string[]; dailyGoal:number; revision:number;
+  planStart:string; planDays:Record<string,PlanDayProgress>; cefrEvidence:Record<string,CefrEvidence>;
+  cards:Record<string,{interval:number;due:string;ease:number;reviews:number}>;
+  mastery:Record<string,{attempts:number;correct:number;xp:number;lastSeen:string}>;
+  exerciseStats:Record<string,{attempts:number;correct:number;lastSeen:string;bestMs:number}>;
+  activity:{date:string;type:string;xp:number;correct?:boolean;lessonId?:string;skill?:Skill}[];
+};
