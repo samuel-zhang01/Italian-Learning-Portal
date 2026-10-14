@@ -1,0 +1,28 @@
+name: Local app verification
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: italian-local-ci
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    if: github.repository == 'samuel-zhang01/Italian-Learning-Portal' && github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: [ci-italian]
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Run maintained lint build and test with fresh offline state
+        run: python3 -I -B ci/run_checks.py verify
+      - name: Reconcile only this run and attempt
+        if: always()
+        run: python3 -I -B ci/run_checks.py verify --cleanup
