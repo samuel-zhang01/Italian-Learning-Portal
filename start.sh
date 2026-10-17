@@ -4,7 +4,7 @@ setopt NULL_GLOB
 
 cd "$(dirname "$0")"
 
-BUNDLED_NODE="/Users/samuel/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin"
+BUNDLED_NODE="$HOME/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin"
 if [[ -x "$BUNDLED_NODE/node" ]]; then
   export PATH="$BUNDLED_NODE:$PATH"
 fi

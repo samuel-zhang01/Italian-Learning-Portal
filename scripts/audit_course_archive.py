@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import argparse
 import json
+import os
 import re
 import sys
 import zipfile
@@ -10,14 +12,10 @@ from html.parser import HTMLParser
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-from docx import Document
-from pypdf import PdfReader
-
-
-ROOT = Path(__file__).resolve().parents[2]
 PORTAL = Path(__file__).resolve().parents[1]
-OUT = PORTAL / "data"
-SKIP_PARTS = {"Italian Learning Portal", ".git", "node_modules"}
+MATERIALS = PORTAL / "materials"
+OUT = PORTAL / "data" / "incoming"
+SKIP_PARTS = {"__MACOSX", "__pycache__", "node_modules"}
 TEXT_LIMIT = 120_000
 
 
@@ -42,10 +40,14 @@ def html_text(path: Path) -> str:
 
 
 def pdf_text(path: Path) -> str:
+    from pypdf import PdfReader
+
     return clean("\n".join((page.extract_text() or "") for page in PdfReader(path).pages))
 
 
 def docx_text(path: Path) -> str:
+    from docx import Document
+
     doc = Document(path)
     parts = [p.text for p in doc.paragraphs]
     for table in doc.tables:
@@ -114,14 +116,36 @@ def extract(path: Path) -> tuple[str, dict[str, str]]:
     return "", {}
 
 
+def material_files(source: Path):
+    # Prune before walking; do not follow links or index hidden credential files.
+    for directory, folders, files in os.walk(source, followlinks=False):
+        folders[:] = sorted(name for name in folders if not name.startswith(".")
+                            and name not in SKIP_PARTS
+                            and not (Path(directory) / name).is_symlink())
+        for name in sorted(files):
+            path = Path(directory) / name
+            if not name.startswith(".") and not path.is_symlink() and path.is_file():
+                yield path
+
+
 def main() -> None:
-    OUT.mkdir(parents=True, exist_ok=True)
+    parser = argparse.ArgumentParser(description="Inventory local study materials without importing them into the app.")
+    parser.add_argument("--source", type=Path, default=MATERIALS / "inbox",
+                        help="Study folder under materials/ (default: materials/inbox)")
+    args = parser.parse_args()
+    source = args.source.resolve()
+    if MATERIALS.is_symlink() or not source.is_relative_to(MATERIALS):
+        parser.error("The source must be inside this project's materials/ folder.")
+    if not source.is_dir():
+        parser.error(f"Source folder does not exist: {source}")
+    paths = sorted(material_files(source))
+    if not paths:
+        parser.error("No materials found. Add files to materials/inbox/ first; existing reports were left untouched.")
+
     inventory: list[dict[str, object]] = []
     corpus: list[dict[str, object]] = []
-    for path in sorted(ROOT.rglob("*")):
-        if not path.is_file() or any(part in SKIP_PARTS for part in path.parts):
-            continue
-        rel = path.relative_to(ROOT).as_posix()
+    for path in paths:
+        rel = path.relative_to(source).as_posix()
         record: dict[str, object] = {
             "path": rel,
             "extension": path.suffix.lower(),
@@ -137,8 +161,9 @@ def main() -> None:
             record["error"] = f"{type(exc).__name__}: {exc}"
         inventory.append(record)
 
-    (OUT / "archive-inventory.json").write_text(json.dumps(inventory, ensure_ascii=False, indent=2))
-    (OUT / "archive-corpus.json").write_text(json.dumps(corpus, ensure_ascii=False, indent=2))
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "archive-inventory.json").write_text(json.dumps(inventory, ensure_ascii=False, indent=2), encoding="utf-8")
+    (OUT / "archive-corpus.json").write_text(json.dumps(corpus, ensure_ascii=False, indent=2), encoding="utf-8")
     summary = {
         "files": len(inventory),
         "extractable_files": len(corpus),
@@ -148,7 +173,7 @@ def main() -> None:
     for item in inventory:
         ext = str(item["extension"] or "[none]")
         summary["extensions"][ext] = summary["extensions"].get(ext, 0) + 1
-    (OUT / "archive-summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2))
+    (OUT / "archive-summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 

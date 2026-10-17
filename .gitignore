@@ -20,6 +20,8 @@
 
 # misc
 .DS_Store
+._*
+__MACOSX/
 *.pem
 
 # debug
@@ -36,11 +38,23 @@ yarn-error.log*
 
 # typescript
 next-env.d.ts
+*.tsbuildinfo
 /dist/
 /.wrangler/
 /outputs/
+/output/
 /work/
 /data/archive-*.json
+/data/incoming/
 /backups/local-data/
 /tmp/
 /.start.sh.swp
+
+# Private study materials; keep the drop folder in the project.
+/materials/inbox/*
+!/materials/inbox/.gitkeep
+
+# Python tools
+.venv/
+__pycache__/
+*.py[cod]

@@ -1,4 +1,4 @@
-"""Run the unchanged maintained lint/build/test commands using fresh local state."""
+"""Run maintained lint/typecheck/build/test commands using fresh local state."""
 import hashlib
 import json
 import os
@@ -35,11 +35,12 @@ def main():
     shutil.copytree(source, work)
     (work/'node_modules').symlink_to('/opt/ci-node/node_modules', target_is_directory=True)
     package = json.loads((work/'package.json').read_text())
-    expected = {'lint': 'eslint . --ignore-pattern dist --ignore-pattern .next',
+    expected = {'lint': 'eslint .',
+                'typecheck': 'tsc --noEmit',
                 'build': 'WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build',
-                'test': 'npm run build && node --test tests/rendered-html.test.mjs'}
+                'test': 'npm run build && node --test tests/*.test.mjs'}
     require(all(package['scripts'].get(key) == value for key, value in expected.items()), 'Maintained command changed')
-    require(not any(key in package['scripts'] for key in ('prelint', 'postlint', 'prebuild', 'postbuild', 'pretest', 'posttest')),
+    require(not any(key in package['scripts'] for key in ('prelint', 'postlint', 'pretypecheck', 'posttypecheck', 'prebuild', 'postbuild', 'pretest', 'posttest')),
             'New lifecycle script requires review')
     def preserve():
         for relative, digest in manifest.items():
@@ -47,7 +48,7 @@ def main():
                     and hashlib.sha256((work/relative).read_bytes()).hexdigest() == digest,
                     'Original tracked source changed')
     preserve(); outcomes = {}; test_output = ''
-    for name in ('lint', 'build', 'test'):
+    for name in ('lint', 'typecheck', 'build', 'test'):
         result = subprocess.run(['npm', 'run', name], cwd=work, timeout=480,
                                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
         print(result.stdout, end='', flush=True)

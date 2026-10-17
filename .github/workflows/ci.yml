@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - name: Run maintained lint build and test with fresh offline state
+      - name: Run lint typecheck build and test with fresh offline state
         run: python3 -I -B ci/run_checks.py verify
       - name: Reconcile only this run and attempt
         if: always()
