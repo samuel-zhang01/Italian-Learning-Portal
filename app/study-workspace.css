@@ -1,0 +1,110 @@
+/* A study notebook: clear daily steps, readable actions and a quiet paper surface. */
+.sprint-hero {
+  min-height: auto;
+  padding-block: 64px 46px;
+  gap: 64px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+}
+.sprint-hero h1 { font-size: clamp(44px, 4.5vw, 66px); line-height: 1.04; }
+.sprint-hero .hero-sub { font-size: 19px; line-height: 1.55; }
+.sprint-hero .hero-actions { display: grid; grid-template-columns: 1fr 1.1fr; gap: 12px; }
+.sprint-hero .hero-actions button {
+  position: relative;
+  border-radius: 12px;
+  padding: 15px 38px 15px 18px;
+  text-align: left;
+  min-height: 70px;
+}
+.sprint-hero .hero-actions span { display: block; margin: 0; font-size: 13px; }
+.sprint-hero .hero-actions small { display: block; margin-top: 4px; font-size: 11px; font-weight: 400; }
+.sprint-hero .hero-actions b { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); }
+.sprint-hero .sync-status { display: block; max-width: 100%; line-height: 1.65; }
+
+.sprint-card.study-sheet {
+  min-width: 0;
+  min-height: 0;
+  transform: none;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 30px;
+  background: var(--paper);
+  box-shadow: 0 16px 42px #18372c12, 0 5px 0 -2px var(--paper), 0 6px 0 -2px var(--line);
+}
+.study-sheet::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  background: linear-gradient(to right, var(--green) 0 33.33%, #e9dfcc 33.33% 66.66%, var(--red) 66.66%);
+}
+.study-sheet-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.study-sheet-header .eyebrow { font-size: 9px; letter-spacing: 1.3px; margin-bottom: 12px; }
+.study-sheet-header h2 { margin: 0; max-width: 300px; font: 29px/1.14 Georgia, serif; letter-spacing: -.6px; }
+.study-sheet-translation { margin: 8px 0 0; font: italic 13px/1.45 Georgia, serif; color: var(--muted); }
+.study-day { flex: none; min-width: 66px; padding: 10px; border: 1px solid var(--line); border-radius: 9px; text-align: center; background: #f4eddf; }
+.study-day small { display: block; font-size: 8px; font-weight: 800; letter-spacing: 1px; }
+.study-day strong { display: block; margin-top: 2px; font: 36px/1 Georgia, serif; color: var(--red); }
+.study-steps { list-style: none; padding: 0; margin: 25px 0 0; }
+.study-steps li { display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 13px 0; border-top: 1px solid var(--line); }
+.study-step { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; font: 13px Georgia, serif; color: var(--muted); }
+.study-steps li[data-complete="true"] .study-step { background: var(--green); border-color: var(--green); color: var(--paper); }
+.study-steps li strong { display: block; font-size: 12px; font-weight: 700; }
+.study-steps li div > small { display: block; margin-top: 4px; font-size: 10px; color: var(--muted); }
+.study-time { display: flex; align-items: baseline; gap: 4px; font: 22px Georgia, serif; font-variant-numeric: tabular-nums; }
+.study-time small { font: 9px ui-sans-serif, sans-serif; color: var(--muted); }
+.study-sheet-total { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 11px; }
+.study-sheet-total > span { color: var(--muted); }
+.study-sheet-total strong span { font-weight: 400; }
+.study-sheet-progress { padding-top: 20px; }
+.study-sheet-progress > div { display: flex; justify-content: space-between; gap: 12px; font-size: 10px; color: var(--muted); }
+.study-sheet-progress strong { color: var(--green); }
+.study-sheet-progress progress { appearance: none; display: block; width: 100%; height: 5px; margin-top: 10px; border: 0; border-radius: 6px; overflow: hidden; background: #e8e1d4; color: var(--green); }
+.study-sheet-progress progress::-webkit-progress-bar { background: #e8e1d4; }
+.study-sheet-progress progress::-webkit-progress-value { background: var(--green); }
+.study-sheet-progress progress::-moz-progress-bar { background: var(--green); }
+
+.sprint-stats { background: var(--green); color: var(--paper); border: 0; border-radius: 15px; padding: 24px 12px; margin-bottom: 42px; }
+.sprint-stats > div, .sprint-stats > div:first-child { padding: 0 23px; border-color: #ffffff2b; }
+.sprint-stats strong { font-size: 34px; margin-bottom: 7px; font-variant-numeric: tabular-nums; }
+.sprint-stats strong small, .sprint-stats span { color: #e0eadd; }
+.sprint-stats .stat-translation { color: #ead0a1; font-size: 11px; }
+.agenda { padding-bottom: 40px; }
+.agenda-task { border-radius: 13px; border-top: 3px solid var(--green); box-shadow: 0 3px 0 #18372c08; }
+.agenda-task:focus-within { outline: 2px solid var(--red); outline-offset: 3px; }
+.week-strip { padding-block: 28px 60px; }
+.week-strip-grid button { border-radius: 11px; }
+.lesson-card { border-radius: 13px; border-top: 3px solid var(--ochre); }
+
+@media (max-width: 1000px) {
+  .sprint-hero { gap: 28px; }
+  .sprint-card.study-sheet { padding: 24px; }
+  .sprint-hero .hero-actions { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .sprint-hero { grid-template-columns: minmax(0, 1fr); padding-block: 32px 30px; gap: 30px; }
+  .sprint-hero h1 { font-size: clamp(40px, 7vw, 58px); }
+  .sprint-hero .hero-sub { font-size: 17px; }
+  .sprint-hero .hero-actions { grid-template-columns: 1fr 1fr; margin-top: 22px; }
+  .sprint-stats { margin-bottom: 30px; }
+  .study-sheet-header h2 { max-width: none; }
+}
+@media (max-width: 620px) {
+  .sprint-stats { row-gap: 22px; padding: 22px 16px; }
+  .sprint-stats > div, .sprint-stats > div:first-child { padding: 0 12px !important; }
+  .sprint-stats > div:nth-child(2) { border-right: 0; }
+  .sprint-stats strong { font-size: 30px; }
+  .sprint-stats span { font-size: 9px; letter-spacing: .5px; }
+  .sprint-hero .hero-actions { grid-template-columns: minmax(0, 1fr); }
+  .sprint-card.study-sheet { padding: 23px 19px; }
+  .study-sheet-header h2 { font-size: 26px; }
+  .study-sheet-header .eyebrow { font-size: 8px; }
+  .study-day { min-width: 58px; padding: 8px; }
+  .study-steps li { gap: 10px; }
+  .study-time { font-size: 20px; }
+  .agenda { padding-bottom: 26px; }
+  .agenda-task { padding: 18px 14px; gap: 9px; }
+  .practice-controls label { flex-wrap: wrap; max-width: 100%; white-space: normal; }
+  .practice-controls select { max-width: 100%; }
+}

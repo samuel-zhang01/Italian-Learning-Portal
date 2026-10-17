@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./study-workspace.css";
 
 export const metadata: Metadata = {
   title: "Parliamo! — 56 giorni per un A1 solido",
