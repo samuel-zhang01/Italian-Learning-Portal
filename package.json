@@ -13,7 +13,10 @@
     "test": "npm run build && node --test tests/*.test.mjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "dev:daily": "vite --config vite.static.config.ts",
+    "build:daily": "vite build --config vite.static.config.ts && cp public/favicon.svg site-dist/favicon.svg",
+    "test:daily": "node --experimental-strip-types --test tests/learning.test.mjs"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

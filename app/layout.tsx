@@ -1,24 +1,32 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import "./study-workspace.css";
 
 export const metadata: Metadata = {
-  title: "Parliamo! — 56 giorni per un A1 solido",
-  description: "Un piano italiano di otto settimane costruito su Nuovo Espresso 1 e sulle lezioni Imperial di Samuel.",
+  title: "Parliamo! — Un po’ d’italiano, ogni giorno",
+  description:
+    "Lezioni brevi, piano flessibile e progressi sul dispositivo, basati sui materiali del corso.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
   },
   openGraph: {
-    title: "Parliamo! — 56 giorni. Italiano che resta.",
-    description: "Piano quotidiano, 28 lesson hub, prove CEFR e progressi salvati per consolidare l’italiano A1.",
+    title: "Parliamo! — Un po’ d’italiano, ogni giorno.",
+    description:
+      "36 brevi lezioni bilingui, ripassi e un piano flessibile per usare l’italiano ogni giorno.",
     type: "website",
-    images: [{ url: "/parliamo-social.png", width: 1731, height: 909, alt: "Parliamo — 56 giorni. Italiano che resta." }],
+    images: [
+      {
+        url: "/parliamo-social.png",
+        width: 1731,
+        height: 909,
+        alt: "Parliamo — Un po’ d’italiano, ogni giorno.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Parliamo! — 56 giorni. Italiano che resta.",
-    description: "Piano quotidiano, 28 lesson hub, prove CEFR e progressi salvati per consolidare l’italiano A1.",
+    title: "Parliamo! — Un po’ d’italiano, ogni giorno.",
+    description:
+      "36 brevi lezioni bilingui, ripassi e un piano flessibile per usare l’italiano ogni giorno.",
     images: ["/parliamo-social.png"],
   },
 };

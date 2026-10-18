@@ -1,0 +1,4 @@
+interface:
+  display_name: "New Italian Material"
+  short_description: "Turn new class PDFs into bilingual daily practice"
+  default_prompt: "Use $new-material to review the newly supplied class materials and update the Italian Learning Portal."

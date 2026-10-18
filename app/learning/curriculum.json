@@ -1,0 +1,4175 @@
+{
+  "reviewedOn": "2026-10-18",
+  "missions": [
+    {
+      "id": "say-hello",
+      "course": 1,
+      "title": {
+        "en": "A first conversation",
+        "it": "Una prima conversazione"
+      },
+      "goal": {
+        "en": "Introduce yourself and ask someone’s name.",
+        "it": "Presentati e chiedi il nome a qualcuno."
+      },
+      "rule": {
+        "en": "Use mi chiamo for your name and sono for who you are. Come ti chiami? is informal; Come si chiama? is formal.",
+        "it": "Usa mi chiamo per il nome e sono per dire chi sei. Come ti chiami? è informale; Come si chiama? è formale."
+      },
+      "examples": [
+        {
+          "en": "Hello, my name is Elena. And you?",
+          "it": "Ciao, mi chiamo Elena. E tu?"
+        },
+        {
+          "en": "Good morning, what is your name?",
+          "it": "Buongiorno, come si chiama?"
+        }
+      ],
+      "words": [
+        {
+          "en": "hello / goodbye (informal)",
+          "it": "ciao"
+        },
+        {
+          "en": "good morning",
+          "it": "buongiorno"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Mi ___ Nora. (My name is Nora.)",
+            "it": "Completa: Mi ___ Nora."
+          },
+          "answers": [
+            "chiamo"
+          ],
+          "explanation": {
+            "en": "Mi chiamo gives your name.",
+            "it": "Mi chiamo indica il tuo nome."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Ask a friend: Come ___ chiami?",
+            "it": "Chiedi a un amico: Come ___ chiami?"
+          },
+          "answers": [
+            "ti"
+          ],
+          "explanation": {
+            "en": "Use ti when addressing a friend with tu.",
+            "it": "Usa ti quando ti rivolgi a un amico con tu."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Formal question: Come ___ chiama?",
+          "it": "Domanda formale: Come ___ chiama?"
+        },
+        "answers": [
+          "si"
+        ],
+        "explanation": {
+          "en": "Formal Lei uses si chiama.",
+          "it": "Il Lei formale usa si chiama."
+        }
+      },
+      "output": {
+        "en": "Introduce an invented person in two sentences, then ask my name.",
+        "it": "Presentati con un’identità inventata in due frasi, poi chiedimi il nome."
+      },
+      "model": {
+        "en": "Hello, my name is Ada. I am a student. What is your name?",
+        "it": "Ciao, mi chiamo Ada. Sono studentessa. Come ti chiami?"
+      },
+      "rubric": [
+        {
+          "en": "I gave a name using mi chiamo.",
+          "it": "Ho indicato un nome con mi chiamo."
+        },
+        {
+          "en": "I asked a question with a consistent formal or informal form.",
+          "it": "Ho fatto una domanda usando coerentemente il registro formale o informale."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-7db7f28ef20a",
+          "pages": [
+            10,
+            11
+          ]
+        },
+        {
+          "id": "src-e47e5cd3afc4",
+          "pages": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "where-from",
+      "course": 1,
+      "title": {
+        "en": "From here, living there",
+        "it": "Di qui, ma vivo lì"
+      },
+      "goal": {
+        "en": "Say where you come from and where you live.",
+        "it": "Di’ da dove vieni e dove abiti."
+      },
+      "rule": {
+        "en": "Sono di + city describes origin. Abito a + city and abito in + country describe where you live.",
+        "it": "Sono di + città indica l’origine. Abito a + città e abito in + paese indicano dove vivi."
+      },
+      "examples": [
+        {
+          "en": "I am from Bari, but I live in Bristol.",
+          "it": "Sono di Bari, ma abito a Bristol."
+        },
+        {
+          "en": "I live in Italy.",
+          "it": "Abito in Italia."
+        }
+      ],
+      "words": [
+        {
+          "en": "where",
+          "it": "dove"
+        },
+        {
+          "en": "country",
+          "it": "paese"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Sono ___ Napoli. (I am from Naples.)",
+            "it": "Completa: Sono ___ Napoli."
+          },
+          "answers": [
+            "di"
+          ],
+          "explanation": {
+            "en": "Use di for your city of origin after essere.",
+            "it": "Usa di per la città d’origine dopo essere."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Abito ___ Francia. (I live in France.)",
+            "it": "Completa: Abito ___ Francia."
+          },
+          "answers": [
+            "in"
+          ],
+          "explanation": {
+            "en": "Countries usually take in.",
+            "it": "I nomi di paesi usano di solito in."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Abito ___ Bologna. (I live in Bologna.)",
+          "it": "Completa: Abito ___ Bologna."
+        },
+        "answers": [
+          "a"
+        ],
+        "explanation": {
+          "en": "Use a with a city.",
+          "it": "Usa a con una città."
+        }
+      },
+      "output": {
+        "en": "Write two sentences about an invented traveller’s origin and home.",
+        "it": "Scrivi due frasi sull’origine e sulla residenza di un viaggiatore inventato."
+      },
+      "model": {
+        "en": "I am from Leeds. I live in Turin, in Italy.",
+        "it": "Sono di Leeds. Abito a Torino, in Italia."
+      },
+      "rubric": [
+        {
+          "en": "I used di with the city of origin.",
+          "it": "Ho usato di con la città d’origine."
+        },
+        {
+          "en": "I used a for a city or in for a country of residence.",
+          "it": "Ho usato a per una città o in per un paese di residenza."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-df590882a757",
+          "pages": [
+            4,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nationalities",
+      "course": 1,
+      "title": {
+        "en": "People and nationalities",
+        "it": "Persone e nazionalità"
+      },
+      "goal": {
+        "en": "Match nationality adjectives to people.",
+        "it": "Concorda gli aggettivi di nazionalità con le persone."
+      },
+      "rule": {
+        "en": "Adjectives in -o change to -a, -i, -e. Those in -e use -i in the plural, for both genders.",
+        "it": "Gli aggettivi in -o cambiano in -a, -i, -e. Quelli in -e hanno il plurale in -i, per entrambi i generi."
+      },
+      "examples": [
+        {
+          "en": "Paolo is Italian; Sara is Italian.",
+          "it": "Paolo è italiano; Sara è italiana."
+        },
+        {
+          "en": "The French students are here.",
+          "it": "Gli studenti francesi sono qui."
+        }
+      ],
+      "words": [
+        {
+          "en": "Italian (feminine singular)",
+          "it": "italiana"
+        },
+        {
+          "en": "French (singular)",
+          "it": "francese"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Lucia è ___. (Italian)",
+            "it": "Completa: Lucia è ___. (italiano)"
+          },
+          "answers": [
+            "italiana"
+          ],
+          "explanation": {
+            "en": "Lucia requires feminine singular -a.",
+            "it": "Lucia richiede il femminile singolare in -a."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Due ragazze ___. (French)",
+            "it": "Completa: Due ragazze ___. (francese)"
+          },
+          "answers": [
+            "francesi"
+          ],
+          "explanation": {
+            "en": "An adjective in -e becomes -i in the plural.",
+            "it": "Un aggettivo in -e diventa -i al plurale."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Due ragazzi ___. (Italian)",
+          "it": "Completa: Due ragazzi ___. (italiano)"
+        },
+        "answers": [
+          "italiani"
+        ],
+        "explanation": {
+          "en": "Masculine plural uses -i.",
+          "it": "Il maschile plurale usa -i."
+        }
+      },
+      "output": {
+        "en": "Describe two invented classmates with different nationalities.",
+        "it": "Descrivi due compagni inventati con nazionalità diverse."
+      },
+      "model": {
+        "en": "Marta is Spanish. Jules and Léa are French.",
+        "it": "Marta è spagnola. Jules e Léa sono francesi."
+      },
+      "rubric": [
+        {
+          "en": "My endings agree with each person.",
+          "it": "Le desinenze concordano con ogni persona."
+        },
+        {
+          "en": "I used a singular and a plural form.",
+          "it": "Ho usato una forma singolare e una plurale."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-df590882a757",
+          "pages": [
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "age-numbers",
+      "course": 1,
+      "title": {
+        "en": "Age is something you have",
+        "it": "Gli anni si hanno"
+      },
+      "goal": {
+        "en": "Give an age using avere.",
+        "it": "Indica l’età con avere."
+      },
+      "rule": {
+        "en": "Italian uses avere, not essere, for age: ho vent’anni. The forms include ho, hai, ha, abbiamo, avete, hanno.",
+        "it": "L’italiano usa avere, non essere, per l’età: ho vent’anni. Le forme sono ho, hai, ha, abbiamo, avete, hanno."
+      },
+      "examples": [
+        {
+          "en": "I am twenty-four years old.",
+          "it": "Ho ventiquattro anni."
+        },
+        {
+          "en": "How old are you?",
+          "it": "Quanti anni hai?"
+        }
+      ],
+      "words": [
+        {
+          "en": "twenty",
+          "it": "venti"
+        },
+        {
+          "en": "thirty",
+          "it": "trenta"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Io ___ trentadue anni.",
+            "it": "Completa: Io ___ trentadue anni."
+          },
+          "answers": [
+            "ho"
+          ],
+          "explanation": {
+            "en": "Age uses avere: io ho.",
+            "it": "L’età richiede avere: io ho."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Write 28 as one Italian word.",
+            "it": "Scrivi 28 in lettere, in una parola."
+          },
+          "answers": [
+            "ventotto"
+          ],
+          "explanation": {
+            "en": "Venti loses its final vowel before otto.",
+            "it": "Venti perde la vocale finale prima di otto."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Giulia ___ diciannove anni.",
+          "it": "Completa: Giulia ___ diciannove anni."
+        },
+        "answers": [
+          "ha"
+        ],
+        "explanation": {
+          "en": "Third-person avere is ha.",
+          "it": "La terza persona di avere è ha."
+        }
+      },
+      "output": {
+        "en": "Invent an age for yourself and ask someone else their age.",
+        "it": "Inventa un’età per te e chiedi l’età a un’altra persona."
+      },
+      "model": {
+        "en": "I am twenty-one years old. How old are you?",
+        "it": "Ho ventuno anni. Quanti anni hai?"
+      },
+      "rubric": [
+        {
+          "en": "I used avere for age.",
+          "it": "Ho usato avere per l’età."
+        },
+        {
+          "en": "I wrote the number in words.",
+          "it": "Ho scritto il numero in lettere."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-5747c8e0d8e6",
+          "pages": [
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "articles",
+      "course": 1,
+      "title": {
+        "en": "A word’s little companion",
+        "it": "Il piccolo compagno di un nome"
+      },
+      "goal": {
+        "en": "Choose il, lo, la or l’.",
+        "it": "Scegli il, lo, la o l’."
+      },
+      "rule": {
+        "en": "Use lo before masculine nouns beginning with z or s + consonant; il before most other consonants. La is feminine; l’ goes before a vowel.",
+        "it": "Usa lo davanti ai nomi maschili che iniziano con z o s + consonante; il davanti alla maggior parte delle altre consonanti. La è femminile; l’ precede una vocale."
+      },
+      "examples": [
+        {
+          "en": "The backpack is here.",
+          "it": "Lo zaino è qui."
+        },
+        {
+          "en": "The friend is a doctor.",
+          "it": "L’amica è medico."
+        }
+      ],
+      "words": [
+        {
+          "en": "backpack",
+          "it": "zaino"
+        },
+        {
+          "en": "female friend",
+          "it": "amica"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Choose the article: ___ studente.",
+            "it": "Scegli l’articolo: ___ studente."
+          },
+          "answers": [
+            "lo"
+          ],
+          "explanation": {
+            "en": "Studente begins with s + consonant.",
+            "it": "Studente inizia con s + consonante."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Choose the article: ___ casa.",
+            "it": "Scegli l’articolo: ___ casa."
+          },
+          "answers": [
+            "la"
+          ],
+          "explanation": {
+            "en": "Casa is feminine and begins with a consonant.",
+            "it": "Casa è femminile e inizia con una consonante."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Choose the article: ___ zaino.",
+          "it": "Scegli l’articolo: ___ zaino."
+        },
+        "answers": [
+          "lo"
+        ],
+        "explanation": {
+          "en": "Masculine z takes lo.",
+          "it": "La z iniziale maschile richiede lo."
+        }
+      },
+      "output": {
+        "en": "Write a sentence naming a masculine object and a feminine object, with articles.",
+        "it": "Scrivi una frase con un oggetto maschile e uno femminile, con gli articoli."
+      },
+      "model": {
+        "en": "The book and the pen are on the table.",
+        "it": "Il libro e la penna sono sul tavolo."
+      },
+      "rubric": [
+        {
+          "en": "I included an article for each noun.",
+          "it": "Ho inserito un articolo per ogni nome."
+        },
+        {
+          "en": "Each article matches the noun’s gender and starting sound.",
+          "it": "Ogni articolo concorda con il genere e il suono iniziale del nome."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-e47e5cd3afc4",
+          "pages": [
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jobs",
+      "course": 1,
+      "title": {
+        "en": "What do you do?",
+        "it": "Che lavoro fai?"
+      },
+      "goal": {
+        "en": "Describe a job in two ways.",
+        "it": "Descrivi un lavoro in due modi."
+      },
+      "rule": {
+        "en": "Use fare + article + profession: faccio il medico. With essere, a simple profession usually has no article: sono medico.",
+        "it": "Usa fare + articolo + professione: faccio il medico. Con essere, una professione semplice di solito non ha l’articolo: sono medico."
+      },
+      "examples": [
+        {
+          "en": "I work as a teacher.",
+          "it": "Faccio l’insegnante."
+        },
+        {
+          "en": "We are doctors.",
+          "it": "Siamo medici."
+        }
+      ],
+      "words": [
+        {
+          "en": "job / work",
+          "it": "lavoro"
+        },
+        {
+          "en": "teacher",
+          "it": "insegnante"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Io ___ il cuoco. (fare)",
+            "it": "Completa: Io ___ il cuoco. (fare)"
+          },
+          "answers": [
+            "faccio"
+          ],
+          "explanation": {
+            "en": "Io uses faccio.",
+            "it": "Con io si usa faccio."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Che lavoro ___? (tu, fare)",
+            "it": "Completa: Che lavoro ___? (tu, fare)"
+          },
+          "answers": [
+            "fai"
+          ],
+          "explanation": {
+            "en": "Tu uses fai.",
+            "it": "Con tu si usa fai."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Noi ___ i medici. (fare)",
+          "it": "Completa: Noi ___ i medici. (fare)"
+        },
+        "answers": [
+          "facciamo"
+        ],
+        "explanation": {
+          "en": "Noi uses facciamo.",
+          "it": "Con noi si usa facciamo."
+        }
+      },
+      "output": {
+        "en": "Choose an imaginary job. Describe it once with essere and once with fare.",
+        "it": "Scegli un lavoro immaginario. Descrivilo una volta con essere e una con fare."
+      },
+      "model": {
+        "en": "I am an engineer. I work as an engineer.",
+        "it": "Sono ingegnere. Faccio l’ingegnere."
+      },
+      "rubric": [
+        {
+          "en": "I used essere without an unnecessary article.",
+          "it": "Ho usato essere senza un articolo superfluo."
+        },
+        {
+          "en": "I included the article after fare.",
+          "it": "Ho inserito l’articolo dopo fare."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-e47e5cd3afc4",
+          "pages": [
+            12,
+            13,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "one-many",
+      "course": 1,
+      "title": {
+        "en": "One coffee, two coffees",
+        "it": "Un caffè, due caffè"
+      },
+      "goal": {
+        "en": "Turn common nouns and articles into plurals.",
+        "it": "Trasforma nomi e articoli comuni al plurale."
+      },
+      "rule": {
+        "en": "Most -o nouns become -i, -a becomes -e, and -e becomes -i. Il → i, lo/l’ masculine → gli, la/l’ feminine → le. Accented nouns like caffè do not change.",
+        "it": "Di solito -o diventa -i, -a diventa -e e -e diventa -i. Il → i, lo/l’ maschile → gli, la/l’ femminile → le. I nomi accentati come caffè non cambiano."
+      },
+      "examples": [
+        {
+          "en": "The tables and the chairs.",
+          "it": "I tavoli e le sedie."
+        },
+        {
+          "en": "The students order two coffees.",
+          "it": "Gli studenti ordinano due caffè."
+        }
+      ],
+      "words": [
+        {
+          "en": "table",
+          "it": "tavolo"
+        },
+        {
+          "en": "chair",
+          "it": "sedia"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Make plural: la casa → ___.",
+            "it": "Metti al plurale: la casa → ___."
+          },
+          "answers": [
+            "le case"
+          ],
+          "explanation": {
+            "en": "Both article and noun change.",
+            "it": "Cambiano sia l’articolo sia il nome."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Make plural: lo studente → ___.",
+            "it": "Metti al plurale: lo studente → ___."
+          },
+          "answers": [
+            "gli studenti"
+          ],
+          "explanation": {
+            "en": "Lo becomes gli; studente becomes studenti.",
+            "it": "Lo diventa gli; studente diventa studenti."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Make plural: il libro → ___.",
+          "it": "Metti al plurale: il libro → ___."
+        },
+        "answers": [
+          "i libri"
+        ],
+        "explanation": {
+          "en": "Il becomes i and -o becomes -i.",
+          "it": "Il diventa i e -o diventa -i."
+        }
+      },
+      "output": {
+        "en": "Describe two things on a café table, using plural nouns.",
+        "it": "Descrivi due cose sul tavolo di un bar, usando nomi plurali."
+      },
+      "model": {
+        "en": "The cups are white and the spoons are small.",
+        "it": "Le tazze sono bianche e i cucchiaini sono piccoli."
+      },
+      "rubric": [
+        {
+          "en": "My articles are plural.",
+          "it": "I miei articoli sono plurali."
+        },
+        {
+          "en": "My noun endings are plural where needed.",
+          "it": "Le desinenze dei nomi sono plurali dove necessario."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-861f47bf8fe2",
+          "pages": [
+            4,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "coffee-order",
+      "course": 1,
+      "title": {
+        "en": "Your first café order",
+        "it": "La tua prima ordinazione"
+      },
+      "goal": {
+        "en": "Order politely and ask for the bill.",
+        "it": "Ordina con cortesia e chiedi il conto."
+      },
+      "rule": {
+        "en": "Vorrei means I would like and works as a ready-to-use polite request. Add per favore. Il conto, per favore asks for the bill.",
+        "it": "Vorrei esprime una richiesta cortese pronta all’uso. Aggiungi per favore. Il conto, per favore serve a chiedere il conto."
+      },
+      "examples": [
+        {
+          "en": "I would like a tea, please.",
+          "it": "Vorrei un tè, per favore."
+        },
+        {
+          "en": "Anything else? No, thank you.",
+          "it": "Altro? No, grazie."
+        }
+      ],
+      "words": [
+        {
+          "en": "bill",
+          "it": "conto"
+        },
+        {
+          "en": "a glass of water",
+          "it": "un bicchiere d’acqua"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: ___ un cappuccino, per favore. (I would like)",
+            "it": "Completa: ___ un cappuccino, per favore. (richiesta cortese)"
+          },
+          "answers": [
+            "vorrei"
+          ],
+          "explanation": {
+            "en": "Vorrei makes the request polite.",
+            "it": "Vorrei rende cortese la richiesta."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Il ___, per favore. (bill)",
+            "it": "Completa: Il ___, per favore. (per pagare)"
+          },
+          "answers": [
+            "conto"
+          ],
+          "explanation": {
+            "en": "Il conto is the bill.",
+            "it": "Il conto è ciò che chiedi per pagare."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Un tè, per ___.",
+          "it": "Completa: Un tè, per ___."
+        },
+        "answers": [
+          "favore"
+        ],
+        "explanation": {
+          "en": "Per favore means please.",
+          "it": "Per favore è una formula di cortesia."
+        }
+      },
+      "output": {
+        "en": "Write your own three-line café exchange: order, price question, thanks.",
+        "it": "Scrivi uno scambio al bar in tre righe: ordinazione, domanda sul prezzo, ringraziamento."
+      },
+      "model": {
+        "en": "I would like a coffee. How much is it? Thank you!",
+        "it": "Vorrei un caffè. Quant’è? Grazie!"
+      },
+      "rubric": [
+        {
+          "en": "I made a polite request.",
+          "it": "Ho fatto una richiesta cortese."
+        },
+        {
+          "en": "I included a price question and thanks.",
+          "it": "Ho inserito una domanda sul prezzo e un ringraziamento."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-861f47bf8fe2",
+          "pages": [
+            8,
+            18,
+            19,
+            22
+          ]
+        }
+      ]
+    },
+    {
+      "id": "regular-verbs",
+      "course": 1,
+      "title": {
+        "en": "A pattern you can reuse",
+        "it": "Uno schema da riutilizzare"
+      },
+      "goal": {
+        "en": "Build present-tense forms from a verb stem.",
+        "it": "Forma il presente partendo dalla radice."
+      },
+      "rule": {
+        "en": "Remove -are, -ere or -ire. Io ends in -o and noi in -iamo in all three groups. Tu ends in -i. Some -ire verbs add -isc- in certain persons.",
+        "it": "Togli -are, -ere o -ire. Io termina in -o e noi in -iamo in tutti e tre i gruppi. Tu termina in -i. Alcuni verbi in -ire aggiungono -isc- in alcune persone."
+      },
+      "examples": [
+        {
+          "en": "I read; we read.",
+          "it": "Io leggo; noi leggiamo."
+        },
+        {
+          "en": "You speak; we leave.",
+          "it": "Tu parli; noi partiamo."
+        }
+      ],
+      "words": [
+        {
+          "en": "to speak",
+          "it": "parlare"
+        },
+        {
+          "en": "to leave",
+          "it": "partire"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Noi ___ italiano. (parlare)",
+            "it": "Completa: Noi ___ italiano. (parlare)"
+          },
+          "answers": [
+            "parliamo"
+          ],
+          "explanation": {
+            "en": "Parl- + -iamo gives parliamo.",
+            "it": "Parl- + -iamo dà parliamo."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Io ___ alle otto. (partire)",
+            "it": "Completa: Io ___ alle otto. (partire)"
+          },
+          "answers": [
+            "parto"
+          ],
+          "explanation": {
+            "en": "Part- + -o gives parto.",
+            "it": "Part- + -o dà parto."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Tu ___ un tè. (prendere)",
+          "it": "Completa: Tu ___ un tè. (prendere)"
+        },
+        "answers": [
+          "prendi"
+        ],
+        "explanation": {
+          "en": "Prend- + -i gives prendi.",
+          "it": "Prend- + -i dà prendi."
+        }
+      },
+      "output": {
+        "en": "Say what you do and what you and a friend do, using two present-tense verbs.",
+        "it": "Di’ che cosa fai e che cosa fate tu e un amico, usando due verbi al presente."
+      },
+      "model": {
+        "en": "I study Italian. We read a book together.",
+        "it": "Studio italiano. Leggiamo un libro insieme."
+      },
+      "rubric": [
+        {
+          "en": "I used an io form.",
+          "it": "Ho usato una forma con io."
+        },
+        {
+          "en": "I used a noi form ending in -iamo.",
+          "it": "Ho usato una forma con noi in -iamo."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-5747c8e0d8e6",
+          "pages": [
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "free-time",
+      "course": 1,
+      "title": {
+        "en": "A small everyday habit",
+        "it": "Una piccola abitudine"
+      },
+      "goal": {
+        "en": "Say how often you do something.",
+        "it": "Di’ con quale frequenza fai qualcosa."
+      },
+      "rule": {
+        "en": "Spesso and sempre often follow the verb. To say never in this pattern, use non before the verb and mai after it.",
+        "it": "Spesso e sempre seguono spesso il verbo. Per esprimere una negazione con mai, metti non prima del verbo e mai dopo."
+      },
+      "examples": [
+        {
+          "en": "I often go out in the evening.",
+          "it": "Esco spesso la sera."
+        },
+        {
+          "en": "I never watch television.",
+          "it": "Non guardo mai la televisione."
+        }
+      ],
+      "words": [
+        {
+          "en": "often",
+          "it": "spesso"
+        },
+        {
+          "en": "never",
+          "it": "mai"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Io ___ al cinema. (andare)",
+            "it": "Completa: Io ___ al cinema. (andare)"
+          },
+          "answers": [
+            "vado"
+          ],
+          "explanation": {
+            "en": "Andare is irregular: io vado.",
+            "it": "Andare è irregolare: io vado."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: ___ bevo mai caffè.",
+            "it": "Completa: ___ bevo mai caffè."
+          },
+          "answers": [
+            "non"
+          ],
+          "explanation": {
+            "en": "Non before the verb pairs with mai after it.",
+            "it": "Non prima del verbo si abbina a mai dopo."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Noi ___ il sabato. (uscire)",
+          "it": "Completa: Noi ___ il sabato. (uscire)"
+        },
+        "answers": [
+          "usciamo"
+        ],
+        "explanation": {
+          "en": "Noi uses usciamo.",
+          "it": "Con noi si usa usciamo."
+        }
+      },
+      "output": {
+        "en": "Write one thing you often do and one thing you never do.",
+        "it": "Scrivi una cosa che fai spesso e una che non fai mai."
+      },
+      "model": {
+        "en": "I often read in the evening. I never work on Sunday.",
+        "it": "Leggo spesso la sera. Non lavoro mai la domenica."
+      },
+      "rubric": [
+        {
+          "en": "I included a frequency word.",
+          "it": "Ho inserito una parola di frequenza."
+        },
+        {
+          "en": "I used non … mai for a negative habit.",
+          "it": "Ho usato non … mai per un’abitudine negativa."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-61ed8b6b8bf0",
+          "pages": [
+            5,
+            7,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "likes",
+      "course": 1,
+      "title": {
+        "en": "What makes you happy?",
+        "it": "Che cosa ti piace?"
+      },
+      "goal": {
+        "en": "Choose piace or piacciono.",
+        "it": "Scegli piace o piacciono."
+      },
+      "rule": {
+        "en": "The thing liked controls the verb: mi piace + singular noun or infinitive; mi piacciono + plural noun. Use the article with a general noun.",
+        "it": "La cosa che piace determina il verbo: mi piace + nome singolare o infinito; mi piacciono + nome plurale. Usa l’articolo con un nome generale."
+      },
+      "examples": [
+        {
+          "en": "I like swimming.",
+          "it": "Mi piace nuotare."
+        },
+        {
+          "en": "I like Italian films.",
+          "it": "Mi piacciono i film italiani."
+        }
+      ],
+      "words": [
+        {
+          "en": "I like",
+          "it": "mi piace"
+        },
+        {
+          "en": "me too",
+          "it": "anche a me"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Mi ___ le montagne.",
+            "it": "Completa: Mi ___ le montagne."
+          },
+          "answers": [
+            "piacciono"
+          ],
+          "explanation": {
+            "en": "Le montagne is plural.",
+            "it": "Le montagne è plurale."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Ti ___ cucinare?",
+            "it": "Completa: Ti ___ cucinare?"
+          },
+          "answers": [
+            "piace"
+          ],
+          "explanation": {
+            "en": "An infinitive takes piace.",
+            "it": "Un infinito richiede piace."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Mi ___ il gelato.",
+          "it": "Completa: Mi ___ il gelato."
+        },
+        "answers": [
+          "piace"
+        ],
+        "explanation": {
+          "en": "Il gelato is singular.",
+          "it": "Il gelato è singolare."
+        }
+      },
+      "output": {
+        "en": "Write something you like doing and some things you like.",
+        "it": "Scrivi un’attività che ti piace e alcune cose che ti piacciono."
+      },
+      "model": {
+        "en": "I like travelling. I like small cities.",
+        "it": "Mi piace viaggiare. Mi piacciono le città piccole."
+      },
+      "rubric": [
+        {
+          "en": "I used piace with an infinitive.",
+          "it": "Ho usato piace con un infinito."
+        },
+        {
+          "en": "I used piacciono with a plural noun.",
+          "it": "Ho usato piacciono con un nome plurale."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-6330a9e35470",
+          "pages": [
+            6,
+            8,
+            9,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the-time",
+      "course": 1,
+      "title": {
+        "en": "Meet me at eight",
+        "it": "Ci vediamo alle otto"
+      },
+      "goal": {
+        "en": "Tell the time and arrange a meeting.",
+        "it": "Di’ l’ora e organizza un incontro."
+      },
+      "rule": {
+        "en": "Use è l’una for one o’clock and sono le for other hours. For at a time, use all’una or alle + hour.",
+        "it": "Usa è l’una per l’una e sono le per le altre ore. Per indicare un orario, usa all’una oppure alle + ora."
+      },
+      "examples": [
+        {
+          "en": "It is half past six.",
+          "it": "Sono le sei e mezza."
+        },
+        {
+          "en": "Let’s meet at one.",
+          "it": "Ci vediamo all’una."
+        }
+      ],
+      "words": [
+        {
+          "en": "half past",
+          "it": "e mezza"
+        },
+        {
+          "en": "a quarter",
+          "it": "un quarto"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: ___ le nove. (It is nine.)",
+            "it": "Completa: ___ le nove."
+          },
+          "answers": [
+            "sono"
+          ],
+          "explanation": {
+            "en": "Hours other than one use sono le.",
+            "it": "Le ore diverse dall’una usano sono le."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Ci vediamo ___ otto.",
+            "it": "Completa: Ci vediamo ___ otto."
+          },
+          "answers": [
+            "alle"
+          ],
+          "explanation": {
+            "en": "A + le becomes alle.",
+            "it": "A + le diventa alle."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: ___ l’una. (It is one.)",
+          "it": "Completa: ___ l’una."
+        },
+        "answers": [
+          "è"
+        ],
+        "explanation": {
+          "en": "One o’clock is singular: è l’una.",
+          "it": "L’una è singolare: è l’una."
+        }
+      },
+      "output": {
+        "en": "Give the current time in words and suggest a meeting time.",
+        "it": "Scrivi l’ora attuale in lettere e proponi un orario per un incontro."
+      },
+      "model": {
+        "en": "It is four. Let’s meet at five thirty.",
+        "it": "Sono le quattro. Ci vediamo alle cinque e mezza."
+      },
+      "rubric": [
+        {
+          "en": "I used è or sono correctly.",
+          "it": "Ho usato correttamente è oppure sono."
+        },
+        {
+          "en": "I used alle or all’una for the meeting.",
+          "it": "Ho usato alle oppure all’una per l’incontro."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-6330a9e35470",
+          "pages": [
+            15,
+            16,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "there-is",
+      "course": 1,
+      "title": {
+        "en": "What is in the room?",
+        "it": "Che cosa c’è nella stanza?"
+      },
+      "goal": {
+        "en": "Describe what is present.",
+        "it": "Descrivi ciò che è presente."
+      },
+      "rule": {
+        "en": "Use c’è with one thing and ci sono with more than one. The accent in è matters: e on its own means and.",
+        "it": "Usa c’è con una cosa e ci sono con più cose. L’accento di è conta: e senza accento è una congiunzione."
+      },
+      "examples": [
+        {
+          "en": "There is a balcony.",
+          "it": "C’è un balcone."
+        },
+        {
+          "en": "There are two beds.",
+          "it": "Ci sono due letti."
+        }
+      ],
+      "words": [
+        {
+          "en": "room",
+          "it": "camera"
+        },
+        {
+          "en": "bed",
+          "it": "letto"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: ___ una piscina. (There is)",
+            "it": "Completa: ___ una piscina."
+          },
+          "answers": [
+            "c’è",
+            "c'è"
+          ],
+          "explanation": {
+            "en": "A singular noun takes c’è.",
+            "it": "Un nome singolare richiede c’è."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: ___ tre finestre. (There are)",
+            "it": "Completa: ___ tre finestre."
+          },
+          "answers": [
+            "ci sono"
+          ],
+          "explanation": {
+            "en": "Finestre is plural.",
+            "it": "Finestre è plurale."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: ___ un bagno. (There is)",
+          "it": "Completa: ___ un bagno."
+        },
+        "answers": [
+          "c’è",
+          "c'è"
+        ],
+        "explanation": {
+          "en": "Un bagno is singular.",
+          "it": "Un bagno è singolare."
+        }
+      },
+      "output": {
+        "en": "Describe your room with one singular and one plural sentence.",
+        "it": "Descrivi la tua stanza con una frase al singolare e una al plurale."
+      },
+      "model": {
+        "en": "There is a table. There are two chairs.",
+        "it": "C’è un tavolo. Ci sono due sedie."
+      },
+      "rubric": [
+        {
+          "en": "I used c’è with a singular noun.",
+          "it": "Ho usato c’è con un nome singolare."
+        },
+        {
+          "en": "I used ci sono with a plural noun.",
+          "it": "Ho usato ci sono con un nome plurale."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-5789e1d3dc28",
+          "pages": [
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hotel",
+      "course": 1,
+      "title": {
+        "en": "A room for two nights",
+        "it": "Una camera per due notti"
+      },
+      "goal": {
+        "en": "Ask for a room and check a service.",
+        "it": "Chiedi una camera e verifica un servizio."
+      },
+      "rule": {
+        "en": "Build a booking with vorrei + room + per + number of nights. Ask La colazione è inclusa? to check breakfast.",
+        "it": "Costruisci una prenotazione con vorrei + camera + per + numero di notti. Chiedi La colazione è inclusa? per verificare la colazione."
+      },
+      "examples": [
+        {
+          "en": "I would like a single room for two nights.",
+          "it": "Vorrei una camera singola per due notti."
+        },
+        {
+          "en": "Is breakfast included?",
+          "it": "La colazione è inclusa?"
+        }
+      ],
+      "words": [
+        {
+          "en": "single room",
+          "it": "camera singola"
+        },
+        {
+          "en": "double room",
+          "it": "camera doppia"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Una camera ___ due notti.",
+            "it": "Completa: Una camera ___ due notti."
+          },
+          "answers": [
+            "per"
+          ],
+          "explanation": {
+            "en": "Per introduces the duration of the booking.",
+            "it": "Per introduce la durata della prenotazione."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: La colazione è ___? (included)",
+            "it": "Completa: La colazione è ___? (includere)"
+          },
+          "answers": [
+            "inclusa"
+          ],
+          "explanation": {
+            "en": "Inclusa agrees with feminine colazione.",
+            "it": "Inclusa concorda con colazione, femminile."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: ___ una camera doppia. (I would like)",
+          "it": "Completa: ___ una camera doppia. (richiesta cortese)"
+        },
+        "answers": [
+          "vorrei"
+        ],
+        "explanation": {
+          "en": "Vorrei is a polite request.",
+          "it": "Vorrei è una richiesta cortese."
+        }
+      },
+      "output": {
+        "en": "Book an imaginary room and ask one question about the hotel.",
+        "it": "Prenota una camera immaginaria e fai una domanda sull’albergo."
+      },
+      "model": {
+        "en": "I would like a double room for four nights. Is there a lift?",
+        "it": "Vorrei una camera doppia per quattro notti. C’è un ascensore?"
+      },
+      "rubric": [
+        {
+          "en": "I specified room type and nights.",
+          "it": "Ho specificato il tipo di camera e le notti."
+        },
+        {
+          "en": "I asked about a service.",
+          "it": "Ho chiesto informazioni su un servizio."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-5789e1d3dc28",
+          "pages": [
+            2,
+            12,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prepositions",
+      "course": 1,
+      "title": {
+        "en": "From a city to a café",
+        "it": "Da una città a un bar"
+      },
+      "goal": {
+        "en": "Use common place phrases and contractions.",
+        "it": "Usa espressioni di luogo e preposizioni articolate."
+      },
+      "rule": {
+        "en": "Learn useful chunks: in banca, a scuola, al bar, dal medico. When a meets il, it becomes al; da + il becomes dal.",
+        "it": "Impara espressioni utili: in banca, a scuola, al bar, dal medico. A + il diventa al; da + il diventa dal."
+      },
+      "examples": [
+        {
+          "en": "I go to the cinema.",
+          "it": "Vado al cinema."
+        },
+        {
+          "en": "I go to the doctor.",
+          "it": "Vado dal medico."
+        }
+      ],
+      "words": [
+        {
+          "en": "on foot",
+          "it": "a piedi"
+        },
+        {
+          "en": "by train",
+          "it": "in treno"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Combine a + il: Vado ___ bar.",
+            "it": "Unisci a + il: Vado ___ bar."
+          },
+          "answers": [
+            "al"
+          ],
+          "explanation": {
+            "en": "A + il = al.",
+            "it": "A + il = al."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Vado ___ treno. (by train)",
+            "it": "Completa: Vado ___ treno."
+          },
+          "answers": [
+            "in"
+          ],
+          "explanation": {
+            "en": "Use in with this means of transport.",
+            "it": "Usa in con questo mezzo di trasporto."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Combine da + il: Vado ___ dentista.",
+          "it": "Unisci da + il: Vado ___ dentista."
+        },
+        "answers": [
+          "dal"
+        ],
+        "explanation": {
+          "en": "Da + il = dal; use da for going to a person.",
+          "it": "Da + il = dal; usa da per andare da una persona."
+        }
+      },
+      "output": {
+        "en": "Write where you are going and how you will get there.",
+        "it": "Scrivi dove vai e con quale mezzo."
+      },
+      "model": {
+        "en": "I go to the cinema by bus. Then I go to the café on foot.",
+        "it": "Vado al cinema in autobus. Poi vado al bar a piedi."
+      },
+      "rubric": [
+        {
+          "en": "I used a place phrase correctly.",
+          "it": "Ho usato correttamente un’espressione di luogo."
+        },
+        {
+          "en": "I used in with transport or a piedi.",
+          "it": "Ho usato in con un mezzo oppure a piedi."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-5789e1d3dc28",
+          "pages": [
+            3,
+            4,
+            5,
+            6,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "daily-routine",
+      "course": 1,
+      "title": {
+        "en": "My morning in three verbs",
+        "it": "La mia mattina in tre verbi"
+      },
+      "goal": {
+        "en": "Use reflexive verbs to describe a routine.",
+        "it": "Usa i verbi riflessivi per descrivere una routine."
+      },
+      "rule": {
+        "en": "Match the reflexive pronoun to the person: mi, ti, si, ci, vi, si. Then conjugate the verb: mi alzo, ci alziamo.",
+        "it": "Concorda il pronome riflessivo con la persona: mi, ti, si, ci, vi, si. Poi coniuga il verbo: mi alzo, ci alziamo."
+      },
+      "examples": [
+        {
+          "en": "I get up at seven.",
+          "it": "Mi alzo alle sette."
+        },
+        {
+          "en": "We get ready in the morning.",
+          "it": "Ci prepariamo la mattina."
+        }
+      ],
+      "words": [
+        {
+          "en": "to get up",
+          "it": "alzarsi"
+        },
+        {
+          "en": "to get dressed",
+          "it": "vestirsi"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Io ___ sveglio presto.",
+            "it": "Completa: Io ___ sveglio presto."
+          },
+          "answers": [
+            "mi"
+          ],
+          "explanation": {
+            "en": "Io takes mi.",
+            "it": "Io richiede mi."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Noi ci ___ alle otto. (alzarsi)",
+            "it": "Completa: Noi ci ___ alle otto. (alzarsi)"
+          },
+          "answers": [
+            "alziamo"
+          ],
+          "explanation": {
+            "en": "Noi uses the -iamo ending.",
+            "it": "Noi usa la desinenza -iamo."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Tu ___ vesti. (reflexive pronoun)",
+          "it": "Completa: Tu ___ vesti. (pronome riflessivo)"
+        },
+        "answers": [
+          "ti"
+        ],
+        "explanation": {
+          "en": "Tu takes ti.",
+          "it": "Tu richiede ti."
+        }
+      },
+      "output": {
+        "en": "Describe two things you do in the morning, with their times.",
+        "it": "Descrivi due cose che fai la mattina, con gli orari."
+      },
+      "model": {
+        "en": "I wake up at seven. I get dressed at seven thirty.",
+        "it": "Mi sveglio alle sette. Mi vesto alle sette e mezza."
+      },
+      "rubric": [
+        {
+          "en": "I used reflexive pronouns.",
+          "it": "Ho usato i pronomi riflessivi."
+        },
+        {
+          "en": "I matched each verb to its subject.",
+          "it": "Ho concordato ogni verbo con il soggetto."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-a66d8428d12d",
+          "pages": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "family",
+      "course": 1,
+      "title": {
+        "en": "People close to you",
+        "it": "Le persone care"
+      },
+      "goal": {
+        "en": "Describe family relationships and possession.",
+        "it": "Descrivi i rapporti familiari e il possesso."
+      },
+      "rule": {
+        "en": "Possessives agree with the thing possessed. With unmodified singular family nouns, omit the article: mia sorella. Use it with plurals and loro: le mie sorelle, la loro madre.",
+        "it": "I possessivi concordano con la cosa posseduta. Con i nomi di parentela singolari non modificati, ometti l’articolo: mia sorella. Usalo con i plurali e loro: le mie sorelle, la loro madre."
+      },
+      "examples": [
+        {
+          "en": "My brother lives in Rome.",
+          "it": "Mio fratello abita a Roma."
+        },
+        {
+          "en": "My sisters live in Pisa.",
+          "it": "Le mie sorelle abitano a Pisa."
+        }
+      ],
+      "words": [
+        {
+          "en": "brother",
+          "it": "fratello"
+        },
+        {
+          "en": "sister",
+          "it": "sorella"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: ___ madre si chiama Rosa. (my; no article)",
+            "it": "Completa: ___ madre si chiama Rosa. (possessivo di io; senza articolo)"
+          },
+          "answers": [
+            "mia"
+          ],
+          "explanation": {
+            "en": "Singular madre takes mia without an article here.",
+            "it": "Madre singolare richiede mia senza articolo in questo caso."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Le ___ sorelle. (my)",
+            "it": "Completa: Le ___ sorelle. (possessivo di io)"
+          },
+          "answers": [
+            "mie"
+          ],
+          "explanation": {
+            "en": "Mie agrees with feminine plural sorelle.",
+            "it": "Mie concorda con sorelle, femminile plurale."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: ___ padre è cuoco. (my; no article)",
+          "it": "Completa: ___ padre è cuoco. (possessivo di io; senza articolo)"
+        },
+        "answers": [
+          "mio"
+        ],
+        "explanation": {
+          "en": "Padre is masculine singular.",
+          "it": "Padre è maschile singolare."
+        }
+      },
+      "output": {
+        "en": "Describe two real or imaginary relatives and something about them.",
+        "it": "Descrivi due parenti reali o immaginari e una loro caratteristica."
+      },
+      "model": {
+        "en": "My aunt is a teacher. My cousins live in Milan.",
+        "it": "Mia zia è insegnante. I miei cugini abitano a Milano."
+      },
+      "rubric": [
+        {
+          "en": "My possessives agree with the family nouns.",
+          "it": "I possessivi concordano con i nomi di parentela."
+        },
+        {
+          "en": "I checked where articles are needed.",
+          "it": "Ho controllato dove servono gli articoli."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-a66d8428d12d",
+          "pages": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "in-town",
+      "course": 1,
+      "title": {
+        "en": "Find your way",
+        "it": "Trova la strada"
+      },
+      "goal": {
+        "en": "Ask for and give simple directions.",
+        "it": "Chiedi e dai indicazioni semplici."
+      },
+      "rule": {
+        "en": "Start politely with Scusi. Use Dov’è…? to ask where something is. Directions can use vada dritto, giri a destra and giri a sinistra.",
+        "it": "Inizia con Scusi. Usa Dov’è…? per chiedere dove si trova qualcosa. Per le indicazioni puoi usare vada dritto, giri a destra e giri a sinistra."
+      },
+      "examples": [
+        {
+          "en": "Excuse me, where is the station?",
+          "it": "Scusi, dov’è la stazione?"
+        },
+        {
+          "en": "Go straight, then turn right.",
+          "it": "Vada dritto, poi giri a destra."
+        }
+      ],
+      "words": [
+        {
+          "en": "left",
+          "it": "sinistra"
+        },
+        {
+          "en": "right",
+          "it": "destra"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Giri a ___. (left)",
+            "it": "Completa: Giri a ___. (il contrario di destra)"
+          },
+          "answers": [
+            "sinistra"
+          ],
+          "explanation": {
+            "en": "A sinistra means to the left.",
+            "it": "A sinistra indica la direzione opposta a destra."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Vada ___. (straight ahead)",
+            "it": "Completa: Vada ___. (senza girare)"
+          },
+          "answers": [
+            "dritto"
+          ],
+          "explanation": {
+            "en": "Vada dritto means go straight ahead.",
+            "it": "Vada dritto significa prosegua senza girare."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Giri a ___. (right)",
+          "it": "Completa: Giri a ___. (il contrario di sinistra)"
+        },
+        "answers": [
+          "destra"
+        ],
+        "explanation": {
+          "en": "A destra means to the right.",
+          "it": "A destra indica la direzione opposta a sinistra."
+        }
+      },
+      "output": {
+        "en": "Ask where a museum is, then write a two-step route.",
+        "it": "Chiedi dov’è un museo, poi scrivi un percorso in due tappe."
+      },
+      "model": {
+        "en": "Excuse me, where is the museum? Go straight, then turn left.",
+        "it": "Scusi, dov’è il museo? Vada dritto, poi giri a sinistra."
+      },
+      "rubric": [
+        {
+          "en": "I asked a polite location question.",
+          "it": "Ho fatto una domanda cortese sul luogo."
+        },
+        {
+          "en": "I gave two clear directions.",
+          "it": "Ho dato due indicazioni chiare."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-aa466593013b",
+          "pages": [
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "can-must-want",
+      "course": 1,
+      "title": {
+        "en": "Can, must, want",
+        "it": "Potere, dovere, volere"
+      },
+      "goal": {
+        "en": "Combine a modal verb with an infinitive.",
+        "it": "Unisci un verbo modale a un infinito."
+      },
+      "rule": {
+        "en": "Conjugate potere, dovere or volere; leave the next verb in the infinitive: posso partire, devo studiare, voglio leggere.",
+        "it": "Coniuga potere, dovere o volere; lascia il verbo seguente all’infinito: posso partire, devo studiare, voglio leggere."
+      },
+      "examples": [
+        {
+          "en": "I cannot come today.",
+          "it": "Non posso venire oggi."
+        },
+        {
+          "en": "We must leave.",
+          "it": "Dobbiamo partire."
+        }
+      ],
+      "words": [
+        {
+          "en": "I can",
+          "it": "posso"
+        },
+        {
+          "en": "I must",
+          "it": "devo"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Io ___ studiare. (must)",
+            "it": "Completa: Io ___ studiare. (dovere)"
+          },
+          "answers": [
+            "devo"
+          ],
+          "explanation": {
+            "en": "Io uses devo.",
+            "it": "Io usa devo."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Voglio ___. (to eat)",
+            "it": "Completa: Voglio ___. (mangiare all’infinito)"
+          },
+          "answers": [
+            "mangiare"
+          ],
+          "explanation": {
+            "en": "The verb after a modal stays in the infinitive.",
+            "it": "Il verbo dopo un modale resta all’infinito."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Noi ___ venire. (can)",
+          "it": "Completa: Noi ___ venire. (potere)"
+        },
+        "answers": [
+          "possiamo"
+        ],
+        "explanation": {
+          "en": "Noi uses possiamo.",
+          "it": "Noi usa possiamo."
+        }
+      },
+      "output": {
+        "en": "Suggest an activity and explain why you can or cannot do it.",
+        "it": "Proponi un’attività e spiega perché puoi o non puoi farla."
+      },
+      "model": {
+        "en": "I want to go out, but I must work. I can come tomorrow.",
+        "it": "Voglio uscire, ma devo lavorare. Posso venire domani."
+      },
+      "rubric": [
+        {
+          "en": "I conjugated a modal verb.",
+          "it": "Ho coniugato un verbo modale."
+        },
+        {
+          "en": "The following verb is an infinitive.",
+          "it": "Il verbo seguente è un infinito."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-aa466593013b",
+          "pages": [
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yesterday",
+      "course": 1,
+      "title": {
+        "en": "A little story about yesterday",
+        "it": "Una piccola storia di ieri"
+      },
+      "goal": {
+        "en": "Build a first past-tense story.",
+        "it": "Costruisci un primo racconto al passato."
+      },
+      "rule": {
+        "en": "Passato prossimo uses avere or essere + past participle. Learn each verb with its auxiliary: ho mangiato, sono arrivato/a. With essere, the participle agrees. Movement alone does not decide: ho camminato.",
+        "it": "Il passato prossimo usa avere o essere + participio passato. Impara ogni verbo con il suo ausiliare: ho mangiato, sono arrivato/a. Con essere il participio concorda. Il solo movimento non decide: ho camminato."
+      },
+      "examples": [
+        {
+          "en": "Yesterday I ate a pizza.",
+          "it": "Ieri ho mangiato una pizza."
+        },
+        {
+          "en": "Giulia arrived early.",
+          "it": "Giulia è arrivata presto."
+        }
+      ],
+      "words": [
+        {
+          "en": "yesterday",
+          "it": "ieri"
+        },
+        {
+          "en": "last week",
+          "it": "la settimana scorsa"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Ho ___. (mangiare)",
+            "it": "Completa: Ho ___. (mangiare)"
+          },
+          "answers": [
+            "mangiato"
+          ],
+          "explanation": {
+            "en": "Regular -are becomes -ato.",
+            "it": "Il participio regolare di -are termina in -ato."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Sara è ___. (partire)",
+            "it": "Completa: Sara è ___. (partire)"
+          },
+          "answers": [
+            "partita"
+          ],
+          "explanation": {
+            "en": "Partire takes essere; Sara needs feminine -a.",
+            "it": "Partire usa essere; Sara richiede il femminile in -a."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Ieri ___ camminato molto. (io)",
+          "it": "Completa: Ieri ___ camminato molto. (io)"
+        },
+        "answers": [
+          "ho"
+        ],
+        "explanation": {
+          "en": "Camminare takes avere despite describing movement.",
+          "it": "Camminare usa avere anche se descrive un movimento."
+        }
+      },
+      "output": {
+        "en": "Write two things you did yesterday, one with avere and one with essere.",
+        "it": "Scrivi due cose che hai fatto ieri, una con avere e una con essere."
+      },
+      "model": {
+        "en": "I read a book. Then I went out with a friend.",
+        "it": "Ho letto un libro. Poi sono uscito con un amico."
+      },
+      "rubric": [
+        {
+          "en": "I included an auxiliary and a participle.",
+          "it": "Ho inserito un ausiliare e un participio."
+        },
+        {
+          "en": "I checked agreement with essere.",
+          "it": "Ho controllato la concordanza con essere."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-25e5c76ace25",
+          "pages": [
+            5,
+            6,
+            8,
+            9,
+            10,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shopping-amounts",
+      "course": 2,
+      "title": {
+        "en": "Enough for dinner",
+        "it": "Quanto basta per cena"
+      },
+      "goal": {
+        "en": "Ask for food with a quantity.",
+        "it": "Chiedi del cibo indicando la quantità."
+      },
+      "rule": {
+        "en": "Use a measure + di + food: un chilo di mele, due etti di formaggio. An etto is 100 grams.",
+        "it": "Usa una misura + di + cibo: un chilo di mele, due etti di formaggio. Un etto equivale a 100 grammi."
+      },
+      "examples": [
+        {
+          "en": "I would like half a kilo of tomatoes.",
+          "it": "Vorrei mezzo chilo di pomodori."
+        },
+        {
+          "en": "A bottle of water, please.",
+          "it": "Una bottiglia d’acqua, per favore."
+        }
+      ],
+      "words": [
+        {
+          "en": "one hundred grams",
+          "it": "un etto"
+        },
+        {
+          "en": "a kilo",
+          "it": "un chilo"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Un chilo ___ patate.",
+            "it": "Completa: Un chilo ___ patate."
+          },
+          "answers": [
+            "di"
+          ],
+          "explanation": {
+            "en": "Di links the measure and food.",
+            "it": "Di unisce la misura e il cibo."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Write 200 grams as: due ___ .",
+            "it": "Scrivi 200 grammi come: due ___ ."
+          },
+          "answers": [
+            "etti"
+          ],
+          "explanation": {
+            "en": "Two etti are 200 grams.",
+            "it": "Due etti sono 200 grammi."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Una bottiglia ___ latte.",
+          "it": "Completa: Una bottiglia ___ latte."
+        },
+        "answers": [
+          "di"
+        ],
+        "explanation": {
+          "en": "A quantity phrase uses di.",
+          "it": "Un’espressione di quantità usa di."
+        }
+      },
+      "output": {
+        "en": "Write a shopping request for two foods with different quantities.",
+        "it": "Scrivi una richiesta di acquisto per due cibi con quantità diverse."
+      },
+      "model": {
+        "en": "I would like a kilo of apples and two hundred grams of cheese.",
+        "it": "Vorrei un chilo di mele e due etti di formaggio."
+      },
+      "rubric": [
+        {
+          "en": "I included two quantities.",
+          "it": "Ho inserito due quantità."
+        },
+        {
+          "en": "I linked each quantity to the food with di.",
+          "it": "Ho collegato ogni quantità al cibo con di."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-d6a6521ac166",
+          "pages": [
+            7,
+            16,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "object-pronouns",
+      "course": 2,
+      "title": {
+        "en": "Say it without repeating it",
+        "it": "Dillo senza ripeterlo"
+      },
+      "goal": {
+        "en": "Replace a named object with lo, la, li or le.",
+        "it": "Sostituisci un oggetto con lo, la, li o le."
+      },
+      "rule": {
+        "en": "A direct object pronoun replaces the thing: il pane → lo, la mela → la, i biscotti → li, le pere → le. Place it before a conjugated verb.",
+        "it": "Un pronome diretto sostituisce la cosa: il pane → lo, la mela → la, i biscotti → li, le pere → le. Mettilo prima del verbo coniugato."
+      },
+      "examples": [
+        {
+          "en": "The jacket? I’ll take it.",
+          "it": "La giacca? La prendo."
+        },
+        {
+          "en": "The tomatoes? I’ll buy them.",
+          "it": "I pomodori? Li compro."
+        }
+      ],
+      "words": [
+        {
+          "en": "I’ll take it (feminine)",
+          "it": "la prendo"
+        },
+        {
+          "en": "I’ll buy them (masculine)",
+          "it": "li compro"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Le scarpe? ___ compro.",
+            "it": "Completa: Le scarpe? ___ compro."
+          },
+          "answers": [
+            "le"
+          ],
+          "explanation": {
+            "en": "Scarpe is feminine plural: le.",
+            "it": "Scarpe è femminile plurale: le."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Il cappotto? ___ prendo.",
+            "it": "Completa: Il cappotto? ___ prendo."
+          },
+          "answers": [
+            "lo"
+          ],
+          "explanation": {
+            "en": "Cappotto is masculine singular: lo.",
+            "it": "Cappotto è maschile singolare: lo."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: I panini? ___ mangio.",
+          "it": "Completa: I panini? ___ mangio."
+        },
+        "answers": [
+          "li"
+        ],
+        "explanation": {
+          "en": "Panini is masculine plural: li.",
+          "it": "Panini è maschile plurale: li."
+        }
+      },
+      "output": {
+        "en": "Name two things you want to buy, then refer to each with a pronoun.",
+        "it": "Nomina due cose che vuoi comprare, poi indica ciascuna con un pronome."
+      },
+      "model": {
+        "en": "The bread? I’ll take it. The apples? I’ll buy them.",
+        "it": "Il pane? Lo prendo. Le mele? Le compro."
+      },
+      "rubric": [
+        {
+          "en": "Each pronoun matches gender and number.",
+          "it": "Ogni pronome concorda per genere e numero."
+        },
+        {
+          "en": "I put the pronoun before the verb.",
+          "it": "Ho messo il pronome prima del verbo."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-99e2f65b7831",
+          "pages": [
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "family-news",
+      "course": 2,
+      "title": {
+        "en": "News from the family",
+        "it": "Notizie di famiglia"
+      },
+      "goal": {
+        "en": "Tell a family event using a reflexive verb in the past.",
+        "it": "Racconta un evento familiare con un riflessivo al passato."
+      },
+      "rule": {
+        "en": "Reflexive verbs take essere in the passato prossimo: mi sono alzato/a. Keep the pronoun and make the participle agree with the subject.",
+        "it": "I verbi riflessivi usano essere al passato prossimo: mi sono alzato/a. Mantieni il pronome e concorda il participio con il soggetto."
+      },
+      "examples": [
+        {
+          "en": "My sister got married.",
+          "it": "Mia sorella si è sposata."
+        },
+        {
+          "en": "My cousins moved house.",
+          "it": "I miei cugini si sono trasferiti."
+        }
+      ],
+      "words": [
+        {
+          "en": "to get married",
+          "it": "sposarsi"
+        },
+        {
+          "en": "to move house",
+          "it": "trasferirsi"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Anna si è ___. (sposarsi)",
+            "it": "Completa: Anna si è ___. (sposarsi)"
+          },
+          "answers": [
+            "sposata"
+          ],
+          "explanation": {
+            "en": "Anna is feminine singular: sposata.",
+            "it": "Anna è femminile singolare: sposata."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Marco e Luca si ___ trasferiti.",
+            "it": "Completa: Marco e Luca si ___ trasferiti."
+          },
+          "answers": [
+            "sono"
+          ],
+          "explanation": {
+            "en": "The plural subject needs sono.",
+            "it": "Il soggetto plurale richiede sono."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Mia zia ___ è sposata.",
+          "it": "Completa: Mia zia ___ è sposata."
+        },
+        "answers": [
+          "si"
+        ],
+        "explanation": {
+          "en": "Keep the reflexive pronoun si.",
+          "it": "Mantieni il pronome riflessivo si."
+        }
+      },
+      "output": {
+        "en": "Invent two pieces of family news using reflexive verbs in the past.",
+        "it": "Inventa due notizie familiari con verbi riflessivi al passato."
+      },
+      "model": {
+        "en": "My aunt got married. My cousins moved to Genoa.",
+        "it": "Mia zia si è sposata. I miei cugini si sono trasferiti a Genova."
+      },
+      "rubric": [
+        {
+          "en": "I kept the reflexive pronoun.",
+          "it": "Ho mantenuto il pronome riflessivo."
+        },
+        {
+          "en": "I used essere and checked the participle ending.",
+          "it": "Ho usato essere e controllato la desinenza del participio."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-457d6a840fbe",
+          "pages": [
+            8,
+            9,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "course": 2,
+      "title": {
+        "en": "A place to call home",
+        "it": "Una casa da abitare"
+      },
+      "goal": {
+        "en": "Describe a home and ask about rent.",
+        "it": "Descrivi una casa e chiedi dell’affitto."
+      },
+      "rule": {
+        "en": "Combine c’è / ci sono with rooms and objects. To ask about rent, use Quanto costa l’affitto? Describe nouns with agreeing adjectives.",
+        "it": "Unisci c’è / ci sono a stanze e oggetti. Per chiedere dell’affitto, usa Quanto costa l’affitto? Descrivi i nomi con aggettivi concordati."
+      },
+      "examples": [
+        {
+          "en": "There is a bright kitchen.",
+          "it": "C’è una cucina luminosa."
+        },
+        {
+          "en": "How much is the rent?",
+          "it": "Quanto costa l’affitto?"
+        }
+      ],
+      "words": [
+        {
+          "en": "rent",
+          "it": "affitto"
+        },
+        {
+          "en": "living room",
+          "it": "soggiorno"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Una casa ___. (bright)",
+            "it": "Completa: Una casa ___. (luminoso)"
+          },
+          "answers": [
+            "luminosa"
+          ],
+          "explanation": {
+            "en": "Casa is feminine singular.",
+            "it": "Casa è femminile singolare."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Ci ___ due camere.",
+            "it": "Completa: Ci ___ due camere."
+          },
+          "answers": [
+            "sono"
+          ],
+          "explanation": {
+            "en": "Due camere is plural.",
+            "it": "Due camere è plurale."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Quanto costa l’___? (rent)",
+          "it": "Completa: Quanto costa l’___? (pagamento per una casa in locazione)"
+        },
+        "answers": [
+          "affitto"
+        ],
+        "explanation": {
+          "en": "Affitto is rent.",
+          "it": "Affitto indica il pagamento per una casa in locazione."
+        }
+      },
+      "output": {
+        "en": "Describe your ideal flat in two sentences, then ask a rental question.",
+        "it": "Descrivi il tuo appartamento ideale in due frasi, poi fai una domanda sull’affitto."
+      },
+      "model": {
+        "en": "There are two bedrooms. The kitchen is big. How much is the rent?",
+        "it": "Ci sono due camere. La cucina è grande. Quanto costa l’affitto?"
+      },
+      "rubric": [
+        {
+          "en": "I described rooms or features.",
+          "it": "Ho descritto stanze o caratteristiche."
+        },
+        {
+          "en": "I asked a useful rental question.",
+          "it": "Ho fatto una domanda utile sull’affitto."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-42659a57be22",
+          "pages": [
+            2,
+            8,
+            9,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a-workday",
+      "course": 2,
+      "title": {
+        "en": "A day at work",
+        "it": "Una giornata di lavoro"
+      },
+      "goal": {
+        "en": "Connect work, routine and a reason.",
+        "it": "Collega lavoro, routine e una motivazione."
+      },
+      "rule": {
+        "en": "Use present-tense verbs to describe a normal day. Perché introduces a reason; poi puts events in order.",
+        "it": "Usa verbi al presente per descrivere una giornata normale. Perché introduce una motivazione; poi ordina gli eventi."
+      },
+      "examples": [
+        {
+          "en": "I work in a library because I love books.",
+          "it": "Lavoro in biblioteca perché amo i libri."
+        },
+        {
+          "en": "Then I go home.",
+          "it": "Poi torno a casa."
+        }
+      ],
+      "words": [
+        {
+          "en": "company",
+          "it": "azienda"
+        },
+        {
+          "en": "office",
+          "it": "ufficio"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Noi ___ in ufficio. (lavorare)",
+            "it": "Completa: Noi ___ in ufficio. (lavorare)"
+          },
+          "answers": [
+            "lavoriamo"
+          ],
+          "explanation": {
+            "en": "Noi takes -iamo.",
+            "it": "Noi richiede -iamo."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Mi piace ___ aiuto le persone. (because)",
+            "it": "Completa: Mi piace ___ aiuto le persone. (motivo)"
+          },
+          "answers": [
+            "perché"
+          ],
+          "explanation": {
+            "en": "Perché explains a reason; keep the accent.",
+            "it": "Perché spiega un motivo; mantieni l’accento."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Lei ___ alle nove. (iniziare)",
+          "it": "Completa: Lei ___ alle nove. (iniziare)"
+        },
+        "answers": [
+          "inizia"
+        ],
+        "explanation": {
+          "en": "Lei takes inizia.",
+          "it": "Lei richiede inizia."
+        }
+      },
+      "output": {
+        "en": "Describe an invented working day and give one reason for liking the job.",
+        "it": "Descrivi una giornata lavorativa inventata e spiega perché ti piace il lavoro."
+      },
+      "model": {
+        "en": "I am a cook. I start at ten. I like my job because I create new dishes.",
+        "it": "Sono cuoco. Inizio alle dieci. Mi piace il mio lavoro perché creo piatti nuovi."
+      },
+      "rubric": [
+        {
+          "en": "I used present tense for a routine.",
+          "it": "Ho usato il presente per una routine."
+        },
+        {
+          "en": "I gave a reason with perché.",
+          "it": "Ho dato una motivazione con perché."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-1570d34b06cf",
+          "pages": [
+            5,
+            6,
+            7,
+            15,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body-routine",
+      "course": 2,
+      "title": {
+        "en": "Hands, teeth, morning",
+        "it": "Mani, denti, mattina"
+      },
+      "goal": {
+        "en": "Use body vocabulary in a routine.",
+        "it": "Usa il lessico del corpo in una routine."
+      },
+      "rule": {
+        "en": "With reflexive actions on body parts, Italian normally uses an article: mi lavo le mani. Mano is feminine; its plural is mani.",
+        "it": "Con le azioni riflessive sulle parti del corpo, l’italiano usa normalmente l’articolo: mi lavo le mani. Mano è femminile; il plurale è mani."
+      },
+      "examples": [
+        {
+          "en": "I wash my hands.",
+          "it": "Mi lavo le mani."
+        },
+        {
+          "en": "She brushes her teeth.",
+          "it": "Si lava i denti."
+        }
+      ],
+      "words": [
+        {
+          "en": "hands",
+          "it": "mani"
+        },
+        {
+          "en": "teeth",
+          "it": "denti"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Mi lavo ___ mani.",
+            "it": "Completa: Mi lavo ___ mani."
+          },
+          "answers": [
+            "le"
+          ],
+          "explanation": {
+            "en": "Mani is feminine plural.",
+            "it": "Mani è femminile plurale."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Luca ___ lava i denti.",
+            "it": "Completa: Luca ___ lava i denti."
+          },
+          "answers": [
+            "si"
+          ],
+          "explanation": {
+            "en": "Luca takes the third-person pronoun si.",
+            "it": "Luca richiede il pronome di terza persona si."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Tu ___ lavi le mani.",
+          "it": "Completa: Tu ___ lavi le mani."
+        },
+        "answers": [
+          "ti"
+        ],
+        "explanation": {
+          "en": "Tu takes ti.",
+          "it": "Tu richiede ti."
+        }
+      },
+      "output": {
+        "en": "Write two personal-care actions you do during the day.",
+        "it": "Scrivi due azioni di cura personale che fai durante la giornata."
+      },
+      "model": {
+        "en": "I wash my hands before lunch. I brush my teeth in the evening.",
+        "it": "Mi lavo le mani prima di pranzo. Mi lavo i denti la sera."
+      },
+      "rubric": [
+        {
+          "en": "I used a reflexive pronoun.",
+          "it": "Ho usato un pronome riflessivo."
+        },
+        {
+          "en": "I used an article with a body part.",
+          "it": "Ho usato un articolo con una parte del corpo."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-65a201367db4",
+          "pages": [
+            6,
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "restaurant-repair",
+      "course": 2,
+      "title": {
+        "en": "When the order goes wrong",
+        "it": "Quando l’ordine non va"
+      },
+      "goal": {
+        "en": "Explain a small problem politely.",
+        "it": "Spiega un piccolo problema con cortesia."
+      },
+      "rule": {
+        "en": "Say Scusi, then describe the problem. Troppo before an adjective means too and does not change: troppo fredda. Follow with a specific polite request.",
+        "it": "Di’ Scusi, poi descrivi il problema. Troppo davanti a un aggettivo non cambia: troppo fredda. Aggiungi una richiesta cortese precisa."
+      },
+      "examples": [
+        {
+          "en": "Excuse me, the soup is cold.",
+          "it": "Scusi, la zuppa è fredda."
+        },
+        {
+          "en": "Could you bring another spoon?",
+          "it": "Mi porta un altro cucchiaio, per favore?"
+        }
+      ],
+      "words": [
+        {
+          "en": "cold (feminine)",
+          "it": "fredda"
+        },
+        {
+          "en": "salty (feminine)",
+          "it": "salata"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: La pasta è troppo ___. (salty)",
+            "it": "Completa: La pasta è troppo ___. (salato)"
+          },
+          "answers": [
+            "salata"
+          ],
+          "explanation": {
+            "en": "Salata agrees with pasta.",
+            "it": "Salata concorda con pasta."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: ___, mi porta il conto? (formal excuse me)",
+            "it": "Completa: ___, mi porta il conto? (richiamo formale)"
+          },
+          "answers": [
+            "scusi"
+          ],
+          "explanation": {
+            "en": "Scusi is the formal way to get attention.",
+            "it": "Scusi è il modo formale per richiamare l’attenzione."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: La zuppa è ___. (cold)",
+          "it": "Completa: La zuppa è ___. (freddo)"
+        },
+        "answers": [
+          "fredda"
+        ],
+        "explanation": {
+          "en": "Fredda agrees with zuppa.",
+          "it": "Fredda concorda con zuppa."
+        }
+      },
+      "output": {
+        "en": "Write a two-sentence request to resolve a problem with a meal.",
+        "it": "Scrivi una richiesta in due frasi per risolvere un problema con un pasto."
+      },
+      "model": {
+        "en": "Excuse me, there is no water. Could you bring a bottle, please?",
+        "it": "Scusi, non c’è acqua. Mi porta una bottiglia, per favore?"
+      },
+      "rubric": [
+        {
+          "en": "I named the problem clearly.",
+          "it": "Ho indicato chiaramente il problema."
+        },
+        {
+          "en": "I asked for a specific solution politely.",
+          "it": "Ho chiesto una soluzione precisa con cortesia."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-ae6920807098",
+          "pages": [
+            12,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clothes",
+      "course": 2,
+      "title": {
+        "en": "Finding the right fit",
+        "it": "Trovare la taglia giusta"
+      },
+      "goal": {
+        "en": "Describe clothes and make a purchase decision.",
+        "it": "Descrivi i vestiti e decidi un acquisto."
+      },
+      "rule": {
+        "en": "Adjectives usually agree with clothing nouns: una gonna rossa, due pantaloni neri. Blu stays unchanged. Use Posso provarlo/provarla? to ask to try something on.",
+        "it": "Gli aggettivi di solito concordano con i vestiti: una gonna rossa, due pantaloni neri. Blu non cambia. Usa Posso provarlo/provarla? per chiedere di provare un capo."
+      },
+      "examples": [
+        {
+          "en": "The jacket is too small.",
+          "it": "La giacca è troppo piccola."
+        },
+        {
+          "en": "I like the blue shoes.",
+          "it": "Mi piacciono le scarpe blu."
+        }
+      ],
+      "words": [
+        {
+          "en": "size",
+          "it": "taglia"
+        },
+        {
+          "en": "jacket",
+          "it": "giacca"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Le scarpe ___. (black)",
+            "it": "Completa: Le scarpe ___. (nero)"
+          },
+          "answers": [
+            "nere"
+          ],
+          "explanation": {
+            "en": "Scarpe is feminine plural, so nere.",
+            "it": "Scarpe è femminile plurale, quindi nere."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: La gonna? ___ prendo. (it)",
+            "it": "Completa: La gonna? ___ prendo. (pronome)"
+          },
+          "answers": [
+            "la"
+          ],
+          "explanation": {
+            "en": "Gonna is feminine singular.",
+            "it": "Gonna è femminile singolare."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Una camicia ___. (white)",
+          "it": "Completa: Una camicia ___. (bianco)"
+        },
+        "answers": [
+          "bianca"
+        ],
+        "explanation": {
+          "en": "Camicia is feminine singular.",
+          "it": "Camicia è femminile singolare."
+        }
+      },
+      "output": {
+        "en": "Describe an item of clothing and say whether you will buy it, with a reason.",
+        "it": "Descrivi un capo di abbigliamento e di’ se lo compri, con una motivazione."
+      },
+      "model": {
+        "en": "The jacket is blue. I’ll take it because I like it.",
+        "it": "La giacca è blu. La prendo perché mi piace."
+      },
+      "rubric": [
+        {
+          "en": "I matched colour or size adjectives to the noun.",
+          "it": "Ho concordato gli aggettivi di colore o taglia con il nome."
+        },
+        {
+          "en": "I made a decision and gave a reason.",
+          "it": "Ho deciso e dato una motivazione."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-99e2f65b7831",
+          "pages": [
+            14,
+            15,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hotel-problem",
+      "course": 2,
+      "title": {
+        "en": "A call to reception",
+        "it": "Una chiamata alla reception"
+      },
+      "goal": {
+        "en": "Locate and report a hotel problem.",
+        "it": "Localizza e segnala un problema in albergo."
+      },
+      "rule": {
+        "en": "Use nella mia camera to locate a problem. Non funziona describes one thing that is not working; non funzionano describes several.",
+        "it": "Usa nella mia camera per localizzare un problema. Non funziona descrive una cosa che non va; non funzionano ne descrive più di una."
+      },
+      "examples": [
+        {
+          "en": "The television in my room is not working.",
+          "it": "Nella mia camera la televisione non funziona."
+        },
+        {
+          "en": "Can you help me?",
+          "it": "Mi può aiutare?"
+        }
+      ],
+      "words": [
+        {
+          "en": "key",
+          "it": "chiave"
+        },
+        {
+          "en": "reception",
+          "it": "reception"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Il telefono non ___. (funzionare)",
+            "it": "Completa: Il telefono non ___. (funzionare)"
+          },
+          "answers": [
+            "funziona"
+          ],
+          "explanation": {
+            "en": "A singular subject takes funziona.",
+            "it": "Un soggetto singolare richiede funziona."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Combine in + la: ___ camera.",
+            "it": "Unisci in + la: ___ camera."
+          },
+          "answers": [
+            "nella"
+          ],
+          "explanation": {
+            "en": "In + la = nella.",
+            "it": "In + la = nella."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Le chiavi non ___. (funzionare)",
+          "it": "Completa: Le chiavi non ___. (funzionare)"
+        },
+        "answers": [
+          "funzionano"
+        ],
+        "explanation": {
+          "en": "A plural subject takes funzionano.",
+          "it": "Un soggetto plurale richiede funzionano."
+        }
+      },
+      "output": {
+        "en": "Write a short message to reception: where you are, what is wrong, what you need.",
+        "it": "Scrivi un breve messaggio alla reception: dove sei, qual è il problema e che cosa ti serve."
+      },
+      "model": {
+        "en": "I am in room twelve. The heating is not working. Can you help me?",
+        "it": "Sono nella camera dodici. Il riscaldamento non funziona. Mi può aiutare?"
+      },
+      "rubric": [
+        {
+          "en": "I located and described the problem.",
+          "it": "Ho localizzato e descritto il problema."
+        },
+        {
+          "en": "I asked for help politely.",
+          "it": "Ho chiesto aiuto con cortesia."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-dfe191b10b0b",
+          "pages": [
+            9,
+            12,
+            13,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weekend-plan",
+      "course": 2,
+      "title": {
+        "en": "Make a plan together",
+        "it": "Facciamo un programma"
+      },
+      "goal": {
+        "en": "Propose, decline and suggest an alternative.",
+        "it": "Proponi, rifiuta e suggerisci un’alternativa."
+      },
+      "rule": {
+        "en": "Ti va di + infinitive invites someone. Accept with Sì, volentieri, or decline with Mi dispiace, non posso and offer another time.",
+        "it": "Ti va di + infinito invita qualcuno. Accetta con Sì, volentieri, oppure rifiuta con Mi dispiace, non posso e proponi un altro momento."
+      },
+      "examples": [
+        {
+          "en": "Do you fancy going for a walk?",
+          "it": "Ti va di fare una passeggiata?"
+        },
+        {
+          "en": "I’m sorry, I can’t. How about tomorrow?",
+          "it": "Mi dispiace, non posso. E domani?"
+        }
+      ],
+      "words": [
+        {
+          "en": "gladly",
+          "it": "volentieri"
+        },
+        {
+          "en": "another time",
+          "it": "un’altra volta"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Ti va ___ uscire?",
+            "it": "Completa: Ti va ___ uscire?"
+          },
+          "answers": [
+            "di"
+          ],
+          "explanation": {
+            "en": "Ti va di is followed by an infinitive.",
+            "it": "Ti va di è seguito da un infinito."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Sì, ___. (gladly)",
+            "it": "Completa: Sì, ___. (accettazione cordiale)"
+          },
+          "answers": [
+            "volentieri"
+          ],
+          "explanation": {
+            "en": "Volentieri accepts an invitation warmly.",
+            "it": "Volentieri accetta cordialmente un invito."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Mi dispiace, non ___. (I can)",
+          "it": "Completa: Mi dispiace, non ___. (potere, io)"
+        },
+        "answers": [
+          "posso"
+        ],
+        "explanation": {
+          "en": "Non posso politely explains you cannot.",
+          "it": "Non posso spiega con cortesia che non puoi."
+        }
+      },
+      "output": {
+        "en": "Write a three-line exchange: invitation, refusal with reason, alternative.",
+        "it": "Scrivi uno scambio in tre righe: invito, rifiuto motivato, alternativa."
+      },
+      "model": {
+        "en": "Do you fancy a walk? I can’t: I must study. Shall we go tomorrow?",
+        "it": "Ti va di fare una passeggiata? Non posso: devo studiare. Andiamo domani?"
+      },
+      "rubric": [
+        {
+          "en": "I invited using ti va di + infinitive.",
+          "it": "Ho invitato con ti va di + infinito."
+        },
+        {
+          "en": "I included a reason and an alternative.",
+          "it": "Ho inserito una motivazione e un’alternativa."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-dfe191b10b0b",
+          "pages": [
+            16,
+            17,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agreement-repair",
+      "course": 3,
+      "title": {
+        "en": "Make the whole phrase agree",
+        "it": "Concorda tutta la frase"
+      },
+      "goal": {
+        "en": "Repair noun, article and adjective agreement.",
+        "it": "Correggi la concordanza di nome, articolo e aggettivo."
+      },
+      "rule": {
+        "en": "Check the whole group: article + noun + adjective. When a group becomes plural, each changing word must agree: lo zaino rosso → gli zaini rossi.",
+        "it": "Controlla tutto il gruppo: articolo + nome + aggettivo. Al plurale, ogni parola variabile deve concordare: lo zaino rosso → gli zaini rossi."
+      },
+      "examples": [
+        {
+          "en": "The small station → the small stations.",
+          "it": "La stazione piccola → le stazioni piccole."
+        },
+        {
+          "en": "The red backpack → the red backpacks.",
+          "it": "Lo zaino rosso → gli zaini rossi."
+        }
+      ],
+      "words": [
+        {
+          "en": "team",
+          "it": "squadra"
+        },
+        {
+          "en": "station",
+          "it": "stazione"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Make plural: la squadra italiana → ___.",
+            "it": "Metti al plurale: la squadra italiana → ___."
+          },
+          "answers": [
+            "le squadre italiane"
+          ],
+          "explanation": {
+            "en": "All three words become feminine plural.",
+            "it": "Tutte e tre le parole diventano femminili plurali."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Make plural: lo zaino rosso → ___.",
+            "it": "Metti al plurale: lo zaino rosso → ___."
+          },
+          "answers": [
+            "gli zaini rossi"
+          ],
+          "explanation": {
+            "en": "Lo becomes gli; -o endings become -i.",
+            "it": "Lo diventa gli; le desinenze -o diventano -i."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Make plural: il libro nuovo → ___.",
+          "it": "Metti al plurale: il libro nuovo → ___."
+        },
+        "answers": [
+          "i libri nuovi"
+        ],
+        "explanation": {
+          "en": "Check the article, noun and adjective together.",
+          "it": "Controlla insieme articolo, nome e aggettivo."
+        }
+      },
+      "output": {
+        "en": "Describe two groups of objects in the room using articles and adjectives.",
+        "it": "Descrivi due gruppi di oggetti nella stanza usando articoli e aggettivi."
+      },
+      "model": {
+        "en": "The white tables are big. The black chairs are comfortable.",
+        "it": "I tavoli bianchi sono grandi. Le sedie nere sono comode."
+      },
+      "rubric": [
+        {
+          "en": "I checked every article, noun and adjective.",
+          "it": "Ho controllato ogni articolo, nome e aggettivo."
+        },
+        {
+          "en": "I used masculine and feminine plural groups.",
+          "it": "Ho usato gruppi al maschile e al femminile plurale."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-579689db998e",
+          "pages": [
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-detective",
+      "course": 3,
+      "title": {
+        "en": "Be a room detective",
+        "it": "Esplora la stanza"
+      },
+      "goal": {
+        "en": "Use c’è and ci sono without a model.",
+        "it": "Usa c’è e ci sono senza un modello."
+      },
+      "rule": {
+        "en": "Count first, then choose esserci. Use non c’è / non ci sono to say something is missing. Keep nouns and adjectives in agreement.",
+        "it": "Conta prima, poi scegli esserci. Usa non c’è / non ci sono per indicare un’assenza. Mantieni la concordanza di nomi e aggettivi."
+      },
+      "examples": [
+        {
+          "en": "There are three interesting paintings.",
+          "it": "Ci sono tre quadri interessanti."
+        },
+        {
+          "en": "There is no window.",
+          "it": "Non c’è una finestra."
+        }
+      ],
+      "words": [
+        {
+          "en": "painting",
+          "it": "quadro"
+        },
+        {
+          "en": "building",
+          "it": "edificio"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Non ___ sedie libere. (there are)",
+            "it": "Completa: Non ___ sedie libere."
+          },
+          "answers": [
+            "ci sono"
+          ],
+          "explanation": {
+            "en": "Sedie is plural even in a negative sentence.",
+            "it": "Sedie è plurale anche in una frase negativa."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: ___ un edificio antico. (there is)",
+            "it": "Completa: ___ un edificio antico."
+          },
+          "answers": [
+            "c’è",
+            "c'è"
+          ],
+          "explanation": {
+            "en": "Un edificio is singular.",
+            "it": "Un edificio è singolare."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: ___ molte persone. (there are)",
+          "it": "Completa: ___ molte persone."
+        },
+        "answers": [
+          "ci sono"
+        ],
+        "explanation": {
+          "en": "Persone is plural.",
+          "it": "Persone è plurale."
+        }
+      },
+      "output": {
+        "en": "Look around, then look away. Describe two things present and one thing absent.",
+        "it": "Guardati intorno, poi distogli lo sguardo. Descrivi due cose presenti e una assente."
+      },
+      "model": {
+        "en": "There is a desk. There are two lamps. There is no television.",
+        "it": "C’è una scrivania. Ci sono due lampade. Non c’è una televisione."
+      },
+      "rubric": [
+        {
+          "en": "I used both c’è and ci sono.",
+          "it": "Ho usato sia c’è sia ci sono."
+        },
+        {
+          "en": "I included a negative sentence from memory.",
+          "it": "Ho inserito una frase negativa a memoria."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-579689db998e",
+          "pages": [
+            12,
+            13,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "present-yourself",
+      "course": 3,
+      "title": {
+        "en": "An introduction that sounds like you",
+        "it": "Una presentazione personale"
+      },
+      "goal": {
+        "en": "Build an introduction you can say from memory.",
+        "it": "Costruisci una presentazione da dire a memoria."
+      },
+      "rule": {
+        "en": "Connect familiar facts with e, ma and perché. Draft with words you already know, then look away and speak. This is original practice, separate from your class homework.",
+        "it": "Collega fatti familiari con e, ma e perché. Scrivi con parole che conosci, poi distogli lo sguardo e parla. Questa è pratica originale, separata dai compiti di classe."
+      },
+      "examples": [
+        {
+          "en": "I live in Oxford, but I work in London.",
+          "it": "Abito a Oxford, ma lavoro a Londra."
+        },
+        {
+          "en": "I learn Italian because I like travelling.",
+          "it": "Imparo l’italiano perché mi piace viaggiare."
+        }
+      ],
+      "words": [
+        {
+          "en": "but",
+          "it": "ma"
+        },
+        {
+          "en": "because",
+          "it": "perché"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Io ___ tre lingue. (parlare)",
+            "it": "Completa: Io ___ tre lingue. (parlare)"
+          },
+          "answers": [
+            "parlo"
+          ],
+          "explanation": {
+            "en": "Io takes parlo.",
+            "it": "Io richiede parlo."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Studio italiano ___ mi piace. (because)",
+            "it": "Completa: Studio italiano ___ mi piace. (motivo)"
+          },
+          "answers": [
+            "perché"
+          ],
+          "explanation": {
+            "en": "Perché introduces your motivation.",
+            "it": "Perché introduce la tua motivazione."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Nel tempo libero mi ___ leggere.",
+          "it": "Completa: Nel tempo libero mi ___ leggere."
+        },
+        "answers": [
+          "piace"
+        ],
+        "explanation": {
+          "en": "An infinitive takes piace.",
+          "it": "Un infinito richiede piace."
+        }
+      },
+      "output": {
+        "en": "Invent a character different from yourself. Introduce their home, work and hobby in three sentences, then say it aloud without reading.",
+        "it": "Inventa un personaggio diverso da te. Presenta la sua residenza, il lavoro e un hobby in tre frasi, poi ripeti ad alta voce senza leggere."
+      },
+      "model": {
+        "en": "My name is Nina and I live in Verona. I am a photographer. I like cycling.",
+        "it": "Mi chiamo Nina e abito a Verona. Sono fotografa. Mi piace andare in bici."
+      },
+      "rubric": [
+        {
+          "en": "I linked at least three facts with familiar language.",
+          "it": "Ho collegato almeno tre fatti con parole note."
+        },
+        {
+          "en": "I tried saying it aloud without reading.",
+          "it": "Ho provato a dirlo ad alta voce senza leggere."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-579689db998e",
+          "pages": [
+            3,
+            6,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verb-switch",
+      "course": 3,
+      "title": {
+        "en": "Change the person, keep the meaning",
+        "it": "Cambia persona, mantieni il senso"
+      },
+      "goal": {
+        "en": "Switch between regular, -isc and irregular verbs.",
+        "it": "Passa tra verbi regolari, in -isc e irregolari."
+      },
+      "rule": {
+        "en": "Preferire uses -isc- with io, tu, lui/lei and loro, but not noi or voi. Irregular verbs need their own forms: vengo, veniamo; faccio, facciamo.",
+        "it": "Preferire usa -isc- con io, tu, lui/lei e loro, ma non con noi o voi. I verbi irregolari hanno forme proprie: vengo, veniamo; faccio, facciamo."
+      },
+      "examples": [
+        {
+          "en": "I prefer the train; we prefer the train.",
+          "it": "Preferisco il treno; preferiamo il treno."
+        },
+        {
+          "en": "I come from home; we come from home.",
+          "it": "Vengo da casa; veniamo da casa."
+        }
+      ],
+      "words": [
+        {
+          "en": "to understand",
+          "it": "capire"
+        },
+        {
+          "en": "to prefer",
+          "it": "preferire"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Noi ___ il tè. (preferire)",
+            "it": "Completa: Noi ___ il tè. (preferire)"
+          },
+          "answers": [
+            "preferiamo"
+          ],
+          "explanation": {
+            "en": "No -isc- in the noi form.",
+            "it": "Non c’è -isc- nella forma con noi."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Loro ___ italiano. (capire)",
+            "it": "Completa: Loro ___ italiano. (capire)"
+          },
+          "answers": [
+            "capiscono"
+          ],
+          "explanation": {
+            "en": "The loro form uses -isc- + -ono.",
+            "it": "La forma con loro usa -isc- + -ono."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Noi ___ da Roma. (venire)",
+          "it": "Completa: Noi ___ da Roma. (venire)"
+        },
+        "answers": [
+          "veniamo"
+        ],
+        "explanation": {
+          "en": "The noi form is veniamo.",
+          "it": "La forma con noi è veniamo."
+        }
+      },
+      "output": {
+        "en": "Write one preference with io, then change it to noi. Add one sentence with an irregular verb.",
+        "it": "Scrivi una preferenza con io, poi trasformala con noi. Aggiungi una frase con un verbo irregolare."
+      },
+      "model": {
+        "en": "I prefer the sea. We prefer the sea. We go to the beach on Saturday.",
+        "it": "Preferisco il mare. Preferiamo il mare. Andiamo in spiaggia sabato."
+      },
+      "rubric": [
+        {
+          "en": "I removed -isc- when changing to noi.",
+          "it": "Ho tolto -isc- passando a noi."
+        },
+        {
+          "en": "I used an irregular present-tense form.",
+          "it": "Ho usato una forma irregolare al presente."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-a746533b6323",
+          "pages": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "impossible-excuse",
+      "course": 3,
+      "title": {
+        "en": "A wonderfully unlikely excuse",
+        "it": "Una scusa improbabile"
+      },
+      "goal": {
+        "en": "Respond to an invitation using modal verbs.",
+        "it": "Rispondi a un invito usando i modali."
+      },
+      "rule": {
+        "en": "Keep the modal conjugated and the action in the infinitive. Use perché to explain a refusal. You can be imaginative while keeping the grammar simple.",
+        "it": "Mantieni il modale coniugato e l’azione all’infinito. Usa perché per spiegare un rifiuto. Puoi essere creativo mantenendo semplice la grammatica."
+      },
+      "examples": [
+        {
+          "en": "I can’t go out because I must teach my parrot Italian.",
+          "it": "Non posso uscire perché devo insegnare l’italiano al mio pappagallo."
+        },
+        {
+          "en": "Do you want to come tomorrow?",
+          "it": "Vuoi venire domani?"
+        }
+      ],
+      "words": [
+        {
+          "en": "excuse",
+          "it": "scusa"
+        },
+        {
+          "en": "to guess",
+          "it": "indovinare"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Noi ___ restare. (dovere)",
+            "it": "Completa: Noi ___ restare. (dovere)"
+          },
+          "answers": [
+            "dobbiamo"
+          ],
+          "explanation": {
+            "en": "Noi uses dobbiamo.",
+            "it": "Noi usa dobbiamo."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: ___ venire? (tu, volere)",
+            "it": "Completa: ___ venire? (tu, volere)"
+          },
+          "answers": [
+            "vuoi"
+          ],
+          "explanation": {
+            "en": "Tu uses vuoi.",
+            "it": "Tu usa vuoi."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Io non ___ uscire. (potere)",
+          "it": "Completa: Io non ___ uscire. (potere)"
+        },
+        "answers": [
+          "posso"
+        ],
+        "explanation": {
+          "en": "Io uses posso; uscire stays infinitive.",
+          "it": "Io usa posso; uscire resta all’infinito."
+        }
+      },
+      "output": {
+        "en": "Turn down a dinner invitation with an invented, funny reason using two modal verbs.",
+        "it": "Rifiuta un invito a cena con un motivo inventato e divertente usando due modali."
+      },
+      "model": {
+        "en": "I can’t come because I must cook for a hundred cats.",
+        "it": "Non posso venire perché devo cucinare per cento gatti."
+      },
+      "rubric": [
+        {
+          "en": "I used two different modal verbs.",
+          "it": "Ho usato due modali diversi."
+        },
+        {
+          "en": "Each modal is followed by an infinitive.",
+          "it": "Ogni modale è seguito da un infinito."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-a746533b6323",
+          "pages": [
+            5,
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "character-day",
+      "course": 3,
+      "title": {
+        "en": "A day in someone else’s shoes",
+        "it": "Una giornata diversa"
+      },
+      "goal": {
+        "en": "Combine your revision into a small story.",
+        "it": "Unisci il ripasso in un piccolo racconto."
+      },
+      "rule": {
+        "en": "Choose one subject and keep the verb forms consistent. Use a reflexive verb, a regular verb and an irregular verb. Then try retelling it without reading.",
+        "it": "Scegli un soggetto e mantieni coerenti le forme verbali. Usa un riflessivo, un verbo regolare e uno irregolare. Poi prova a raccontare senza leggere."
+      },
+      "examples": [
+        {
+          "en": "Dario gets up late and works at night.",
+          "it": "Dario si alza tardi e lavora di notte."
+        },
+        {
+          "en": "He goes to the park with his dog.",
+          "it": "Va al parco con il suo cane."
+        }
+      ],
+      "words": [
+        {
+          "en": "habit",
+          "it": "abitudine"
+        },
+        {
+          "en": "lunch break",
+          "it": "pausa pranzo"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: Marta ___ sveglia alle sei.",
+            "it": "Completa: Marta ___ sveglia alle sei."
+          },
+          "answers": [
+            "si"
+          ],
+          "explanation": {
+            "en": "Marta uses the third-person reflexive pronoun.",
+            "it": "Marta usa il pronome riflessivo di terza persona."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: Poi Marta ___ colazione. (fare)",
+            "it": "Completa: Poi Marta ___ colazione. (fare)"
+          },
+          "answers": [
+            "fa"
+          ],
+          "explanation": {
+            "en": "The third-person form is fa, without an accent.",
+            "it": "La terza persona è fa, senza accento."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: Marta e Leo ___ al parco. (andare)",
+          "it": "Completa: Marta e Leo ___ al parco. (andare)"
+        },
+        "answers": [
+          "vanno"
+        ],
+        "explanation": {
+          "en": "A third-person plural subject takes vanno.",
+          "it": "Un soggetto di terza persona plurale richiede vanno."
+        }
+      },
+      "output": {
+        "en": "Write three sentences about an invented character with an unusual routine. Use one reflexive, one regular and one irregular verb. Retell it aloud.",
+        "it": "Scrivi tre frasi su un personaggio inventato con una routine insolita. Usa un riflessivo, un regolare e un irregolare. Racconta ad alta voce."
+      },
+      "model": {
+        "en": "Lina gets up at noon. She paints at night. She goes to work by boat.",
+        "it": "Lina si alza a mezzogiorno. Dipinge di notte. Va al lavoro in barca."
+      },
+      "rubric": [
+        {
+          "en": "I included all three kinds of verb.",
+          "it": "Ho inserito tutti e tre i tipi di verbo."
+        },
+        {
+          "en": "I kept the subject consistent and retold the story.",
+          "it": "Ho mantenuto coerente il soggetto e raccontato di nuovo la storia."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-a746533b6323",
+          "pages": [
+            13,
+            14
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-c62281320322",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Reference Materials/I verbi-Presente indicativo.pptx",
+      "title": "I verbi-Presente indicativo.pptx",
+      "course": 1,
+      "pages": 7,
+      "sha256": "c622813203223ceb1c08099eaee2d1c6d49e21ef6db6170215d3ed6d30e8954b"
+    },
+    {
+      "id": "src-93be9aa5bec6",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Reference Materials/PDF_Grammar_Revision.pdf",
+      "title": "PDF_Grammar_Revision.pdf",
+      "course": 1,
+      "pages": 23,
+      "sha256": "93be9aa5bec6d022ec7ac952e5f3bdf931cf07d819746e7604f7999e30186f1b"
+    },
+    {
+      "id": "src-a1ef1a0898bc",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Reference Materials/PDF_I_verbi.pdf",
+      "title": "PDF_I_verbi.pdf",
+      "course": 1,
+      "pages": 7,
+      "sha256": "a1ef1a0898bc094b75d9bda1c35909fd8849d8cb17aa63abfc04417e334809c0"
+    },
+    {
+      "id": "src-5226d8ba4206",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Reference Materials/Revision_Grammar_ A1.pptx",
+      "title": "Revision_Grammar_ A1.pptx",
+      "course": 1,
+      "pages": 22,
+      "sha256": "5226d8ba4206127aa817245c2232f1b695babbbedd84eb2894699d8e2da675e3"
+    },
+    {
+      "id": "src-df590882a757",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 02 — Countries & Nationalities/PDF_Week_2_Countries_and_Nationalities.pdf",
+      "title": "PDF_Week_2_Countries_and_Nationalities.pdf",
+      "course": 1,
+      "pages": 17,
+      "sha256": "df590882a7573bd9cd97f26775f0dd9eb22ec620d7acfc9ac7312cf0461b3d3c"
+    },
+    {
+      "id": "src-5747c8e0d8e6",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 03 — Additional Info/PDF_Week_3_Additional_info.pdf",
+      "title": "PDF_Week_3_Additional_info.pdf",
+      "course": 1,
+      "pages": 15,
+      "sha256": "5747c8e0d8e68b1418e7304cba47db476c3bf70105b5ac6b42b067021ec25590"
+    },
+    {
+      "id": "src-e47e5cd3afc4",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 04 — Jobs & Professions/PDF_Week_4_Jobs_and_professions.pdf",
+      "title": "PDF_Week_4_Jobs_and_professions.pdf",
+      "course": 1,
+      "pages": 18,
+      "sha256": "e47e5cd3afc4dcf07993364d6fdaff277f8f6fc73c1397a0e396b9b227f6b549"
+    },
+    {
+      "id": "src-e95312c57a8a",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 04 — Jobs & Professions/Week 4_Jobs and professions.pptx",
+      "title": "Week 4_Jobs and professions.pptx",
+      "course": 1,
+      "pages": 18,
+      "sha256": "e95312c57a8acd4ff33fbee16fb844de5d2ecfe4abfda76706788964bd74f43c"
+    },
+    {
+      "id": "src-861f47bf8fe2",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 05 — At the Bar & Restaurant/PDF_Week_5.pdf",
+      "title": "PDF_Week_5.pdf",
+      "course": 1,
+      "pages": 27,
+      "sha256": "861f47bf8fe29c59e503b6176d33fa974eb1530103e7fcc6044ff60c76e687c0"
+    },
+    {
+      "id": "src-43b82c2f29d2",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 06 — The Spare Time/I_verbi-Presente_indicativo.pptx",
+      "title": "I_verbi-Presente_indicativo.pptx",
+      "course": 1,
+      "pages": 6,
+      "sha256": "43b82c2f29d274f74f1258b66dc582a18a94ec51a2f1d5db04a060b9a3fd9a87"
+    },
+    {
+      "id": "src-61ed8b6b8bf0",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 06 — The Spare Time/PDF_Week_6__The_spare_time.pdf",
+      "title": "PDF_Week_6__The_spare_time.pdf",
+      "course": 1,
+      "pages": 14,
+      "sha256": "61ed8b6b8bf007ea0f3684c9b156b07527bdac468a32003c4d43672635a45485"
+    },
+    {
+      "id": "src-6330a9e35470",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 07 — Piacere & The Time/PDF_Week_7_Piacere___The_time.pdf",
+      "title": "PDF_Week_7_Piacere___The_time.pdf",
+      "course": 1,
+      "pages": 20,
+      "sha256": "6330a9e3547076b8ecc0918c38c81888e0a8b20aeedccdcb52739d370d1505bd"
+    },
+    {
+      "id": "src-5789e1d3dc28",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 08 — Hotel & Prepositions/PDF_Week_8_Hotel_prepositions.pdf",
+      "title": "PDF_Week_8_Hotel_prepositions.pdf",
+      "course": 1,
+      "pages": 16,
+      "sha256": "5789e1d3dc285c7b31480bd661ab2e00e9c17fffccf456494a3c755bde105b60"
+    },
+    {
+      "id": "src-cf2609342814",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 09 — Revision/PDF_Week_9_Revision.pdf",
+      "title": "PDF_Week_9_Revision.pdf",
+      "course": 1,
+      "pages": 22,
+      "sha256": "cf2609342814446709d52101f7030dc8431df5b3c141819349f05f392056de92"
+    },
+    {
+      "id": "src-a66d8428d12d",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 11/PDF_Week_11.pdf",
+      "title": "PDF_Week_11.pdf",
+      "course": 1,
+      "pages": 13,
+      "sha256": "a66d8428d12d5c04ffaf3770b6b30b1da35c786a478044886c69c910ab1ccd6a"
+    },
+    {
+      "id": "src-aa466593013b",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 12 — In Town/PDF_Week_12_In_town.pdf",
+      "title": "PDF_Week_12_In_town.pdf",
+      "course": 1,
+      "pages": 14,
+      "sha256": "aa466593013b1b12c6fbe1d1cd76e2ef819bde684b8fc0420baeacef79bf4502"
+    },
+    {
+      "id": "src-25e5c76ace25",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 13 — The Past/PDF_Week_13_The_past.pdf",
+      "title": "PDF_Week_13_The_past.pdf",
+      "course": 1,
+      "pages": 16,
+      "sha256": "25e5c76ace254bbab62c72bd06ce2d6aabfeb07f747efb1b27bf582f350f200f"
+    },
+    {
+      "id": "src-a6e6827aed0a",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 13b — Revision Session/Festa_Internazionale.pdf",
+      "title": "Festa_Internazionale.pdf",
+      "course": 1,
+      "pages": 5,
+      "sha256": "a6e6827aed0a4035e831cf94590426bff8854a03dc00159cd51c07e6241872e8"
+    },
+    {
+      "id": "src-3afe65bec96a",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 13b — Revision Session/Giochi_A1.pdf",
+      "title": "Giochi_A1.pdf",
+      "course": 1,
+      "pages": 4,
+      "sha256": "3afe65bec96a23c37bd3f74d98da72b7531ad37d1d37eb6f6f6b0056cda85452"
+    },
+    {
+      "id": "src-127909477831",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 13b — Revision Session/PDF_Week_13_Revision.pdf",
+      "title": "PDF_Week_13_Revision.pdf",
+      "course": 1,
+      "pages": 15,
+      "sha256": "1279094778314cfeef2a055496f81dc56d724bcbc23d3060785117d122b58e60"
+    },
+    {
+      "id": "src-3281c0414c93",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 14 — Revision/PDF_Verbs_Revision.pdf",
+      "title": "PDF_Verbs_Revision.pdf",
+      "course": 1,
+      "pages": 15,
+      "sha256": "3281c0414c93e402940357431d724bb4fbac725fbf0dd56cd9b89b1a7b6d4d1d"
+    },
+    {
+      "id": "src-f13e405076fa",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 14 — Revision/PDF_Week_14_Revision.pdf",
+      "title": "PDF_Week_14_Revision.pdf",
+      "course": 1,
+      "pages": 16,
+      "sha256": "f13e405076fa577db988643c7053fd15faf40a7a204598e23bfb0fca8cf90a3c"
+    },
+    {
+      "id": "src-d6a6521ac166",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 15 — At the Supermarket/PDF_Week_15_The_supermarket.pdf",
+      "title": "PDF_Week_15_The_supermarket.pdf",
+      "course": 1,
+      "pages": 21,
+      "sha256": "d6a6521ac16649f347a4d38585f78d8f4cfa3d7556aeba3a8e424440349be03a"
+    },
+    {
+      "id": "src-457d6a840fbe",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 16 — The Family/PDF_Week_16_The_family.pdf",
+      "title": "PDF_Week_16_The_family.pdf",
+      "course": 1,
+      "pages": 15,
+      "sha256": "457d6a840fbeccf60b79ca5097240457f555a9e3d2094c65bd2e2b4e6db2ee93"
+    },
+    {
+      "id": "src-2ff0a330b006",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 17 — Passaporto & Identities/PDF_Identities.pdf",
+      "title": "PDF_Identities.pdf",
+      "course": 1,
+      "pages": 14,
+      "sha256": "2ff0a330b006af451f0cdad0cc65f7338f6e35d81a6db22491318ec7770b17b8"
+    },
+    {
+      "id": "src-052f37e33e4e",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 17 — Passaporto & Identities/PDF_Passaporto.pdf",
+      "title": "PDF_Passaporto.pdf",
+      "course": 1,
+      "pages": 10,
+      "sha256": "052f37e33e4e7a40f0e76881c02532601f37d3b7d177d4c280b805b8b5e8d32b"
+    },
+    {
+      "id": "src-8b2162f38542",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 17 — Passaporto & Identities/PDF_Week 17.pdf",
+      "title": "PDF_Week 17.pdf",
+      "course": 1,
+      "pages": 14,
+      "sha256": "8b2162f3854220b8f313713c3507b794d07d4a9b28ff9a3be03dc5cba85847eb"
+    },
+    {
+      "id": "src-38b70cc243f2",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 18 — Revision/Week 18_Revision.pptx",
+      "title": "Week 18_Revision.pptx",
+      "course": 1,
+      "pages": 27,
+      "sha256": "38b70cc243f238fb6df55411557c03dd984f07e99f70fd2250f89e8478ef8c6d"
+    },
+    {
+      "id": "src-9d234f3a6d22",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 19/PDF.pdf",
+      "title": "PDF.pdf",
+      "course": 1,
+      "pages": 16,
+      "sha256": "9d234f3a6d2215c7627167e7dbeead369030923c38b322ee3207f79f2b56b5b1"
+    },
+    {
+      "id": "src-42659a57be22",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 20 — Estate & Property/PDF_Week_20.pdf",
+      "title": "PDF_Week_20.pdf",
+      "course": 1,
+      "pages": 15,
+      "sha256": "42659a57be220f1ef9c94e18bb2d03526412f4fc9af7003ff7581397e832ad88"
+    },
+    {
+      "id": "src-81c4d36f0185",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 20 — Estate & Property/all_agenzia_immobiliare.pdf",
+      "title": "all_agenzia_immobiliare.pdf",
+      "course": 1,
+      "pages": 2,
+      "sha256": "81c4d36f018521cd87f1a2b9c7aa2f6b1be0c98c20d9720d316b5cb25b7fae23"
+    },
+    {
+      "id": "src-d12d7450f272",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 01 — Presentazioni/I Verbi_A1.pdf",
+      "title": "I Verbi_A1.pdf",
+      "course": 2,
+      "pages": 8,
+      "sha256": "d12d7450f272338f3928f9695471663d23f2895a40299cbe8336b4e61c130c60"
+    },
+    {
+      "id": "src-9979a5079ca5",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 01 — Presentazioni/Italian Grammar_A1.pdf",
+      "title": "Italian Grammar_A1.pdf",
+      "course": 2,
+      "pages": 77,
+      "sha256": "9979a5079ca53425f6e8782030cbbe8d68e26de9e3f91de437e995116a1621c0"
+    },
+    {
+      "id": "src-7db7f28ef20a",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 01 — Presentazioni/PDF_Week 1_Presentazioni.pdf",
+      "title": "PDF_Week 1_Presentazioni.pdf",
+      "course": 2,
+      "pages": 27,
+      "sha256": "7db7f28ef20ab931b25f3da7ab250df8d4205205300a4a5b37f22c929af4dff9"
+    },
+    {
+      "id": "src-9d1980b98737",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 02 — La Famiglia/Glossario L1.pdf",
+      "title": "Glossario L1.pdf",
+      "course": 2,
+      "pages": 14,
+      "sha256": "9d1980b9873715d116dc6797ec676e9f28aba5fe4e480f4075ce97568d25c4a9"
+    },
+    {
+      "id": "src-0508dce07d17",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 02 — La Famiglia/PDF_Week 2_La famiglia.pdf",
+      "title": "PDF_Week 2_La famiglia.pdf",
+      "course": 2,
+      "pages": 25,
+      "sha256": "0508dce07d173f78ab384d1502e6eec2e86fcdd8d544d3024a6d4605bcff5967"
+    },
+    {
+      "id": "src-1570d34b06cf",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 03 — Jobs & Professions/PDF_Week_3_Jobs_and_professions.pdf",
+      "title": "PDF_Week_3_Jobs_and_professions.pdf",
+      "course": 2,
+      "pages": 21,
+      "sha256": "1570d34b06cf1116023cabc713071aafec97895594dd367fe2d56a313598768b"
+    },
+    {
+      "id": "src-65a201367db4",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 04 — Routine & Il Corpo Umano/Sts_Week 4_Routine e corpo umano.pptx",
+      "title": "Sts_Week 4_Routine e corpo umano.pptx",
+      "course": 2,
+      "pages": 18,
+      "sha256": "65a201367db4d9530e9f308dbe27e98f6788a479d7c49058ebee0c0b0b82dce8"
+    },
+    {
+      "id": "src-c3bb65371fe9",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 05 — In Town & Reflexive Verbs/Esercizi_Verbi_riflessivi.pdf",
+      "title": "Esercizi_Verbi_riflessivi.pdf",
+      "course": 2,
+      "pages": 1,
+      "sha256": "c3bb65371fe9b15ab3c7b05f78835802d4641146abf6e67fe360005b50d58762"
+    },
+    {
+      "id": "src-6935e00afd8e",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 05 — In Town & Reflexive Verbs/PDF_Week_5_In_town.pdf",
+      "title": "PDF_Week_5_In_town.pdf",
+      "course": 2,
+      "pages": 19,
+      "sha256": "6935e00afd8ef564dbfe8da753f7b6fb5c07b786066e640564a6ac6dd0627ec1"
+    },
+    {
+      "id": "src-ae6920807098",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 06 — Al Bar e al Ristorante/Week 6_Bar and Restaurant.pptx",
+      "title": "Week 6_Bar and Restaurant.pptx",
+      "course": 2,
+      "pages": 16,
+      "sha256": "ae69208070988316f97feefabdccaf73e9b52d095e2e1bb4a7f511b8ebc81e4b"
+    },
+    {
+      "id": "src-1a621df1dba2",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 07 — Revision & Prepositions/Grammar_ A1_2026.pptx",
+      "title": "Grammar_ A1_2026.pptx",
+      "course": 2,
+      "pages": 77,
+      "sha256": "1a621df1dba231839212d350a6fd9ebefaeed16984c843f40c57890c570e0b14"
+    },
+    {
+      "id": "src-f56b63c24b1b",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 07 — Revision & Prepositions/Week 7_A1_Grammar Revision.pptx",
+      "title": "Week 7_A1_Grammar Revision.pptx",
+      "course": 2,
+      "pages": 14,
+      "sha256": "f56b63c24b1b9df193631d16205e18bc36f7017da47a9764ef614289ce0aebba"
+    },
+    {
+      "id": "src-99e2f65b7831",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 08 — Food & Clothes/Week 8.pptx",
+      "title": "Week 8.pptx",
+      "course": 2,
+      "pages": 19,
+      "sha256": "99e2f65b7831e090c46c0aba92076240d47d857ca5b4b1680e8e9ed0cdd8252d"
+    },
+    {
+      "id": "src-dfe191b10b0b",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 09 — Albergo e Progetti/Week 9 1.pptx",
+      "title": "Week 9 1.pptx",
+      "course": 2,
+      "pages": 21,
+      "sha256": "dfe191b10b0b43bf3834af0ae20ec47171ecc61f4a305aee2c277fc7b6b283c6"
+    },
+    {
+      "id": "src-a746533b6323",
+      "path": "Course 3/L2_Week_2_Verbs_revision.pdf",
+      "title": "L2_Week_2_Verbs_revision.pdf",
+      "course": 3,
+      "pages": 17,
+      "sha256": "a746533b63239225ff1ec22c67e7a564f213970498049eb018c03d332f47a129"
+    },
+    {
+      "id": "src-579689db998e",
+      "path": "Course 3/Week_1_Revision_Nouns_and_adjectives.pptx",
+      "title": "Week_1_Revision_Nouns_and_adjectives.pptx",
+      "course": 3,
+      "pages": 20,
+      "sha256": "579689db998e7d4bae3c219d292d8fa72ed84e072c6ac5ff64b7c8611cf99e05"
+    }
+  ]
+}

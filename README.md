@@ -1,107 +1,84 @@
-# Parliamo!
+# Parliamo
 
-Parliamo is Samuel's private, local-first Italian A1 learning portal: a dated 56-day completion and consolidation plan built around the original 2014 edition of *Nuovo Espresso 1*, the archived Imperial College lessons, and an original practice library.
+A little Italian, every day. Parliamo turns the supplied class materials into short, original practice: notice an idea, retrieve it, then use it in your own Italian.
 
-The [public source repository](https://github.com/samuel-zhang01/Italian-Learning-Portal) contains the app, curriculum and generated workbooks. Each installation keeps its own learner progress. This is a single-learner application intended for local use; its progress API does not provide authentication or separate user accounts.
+Production: **https://italian.samuelzhang.co.uk**
 
-## Quick start
+## Learn
 
-With Node.js 22.13 or newer installed:
+- **36 five-minute lessons** across foundations, everyday Italian and the two supplied Level 2 revision lessons.
+- Fully switchable English and Italian navigation, explanations, feedback and planning. English example translations can be hidden independently.
+- Two recall checks per lesson, an original writing/speaking prompt and a self-check. First attempts remain visible after corrections; writing is self-assessed, not automatically graded.
+- A flexible **5, 10 or 15 minute** daily budget, chosen study days and a rolling seven-day plan. Missed days do not create a penalty or erase work.
+- Delayed recall after one day, then three, seven and fourteen days when successful. A missed recall returns the following day. Reviews count as two estimated minutes; lessons count as five. These are effort estimates, not measured time.
+- A notebook of the learner’s own Italian, browser-local progress, mid-lesson drafts, and validated JSON backup export/import.
+- Exact file/page references and optional local PDF connections. Connected PDFs are opened locally and are never uploaded.
+
+The portal is a companion to the PDFs, not a worksheet clone or a completed homework service. Original class assignments requiring independent work remain for the student to complete. The material review identified **Nuovo Espresso Plus 1** in Courses 1–2 and **Plus 2** in Course 3; the old original-edition textbook page plan is no longer the main journey.
+
+## Run locally
+
+Node.js 22.22 or newer:
 
 ```bash
-git clone https://github.com/samuel-zhang01/Italian-Learning-Portal.git
-cd Italian-Learning-Portal
 npm ci
-npm run local
+npm run dev:daily
 ```
 
-Open [http://localhost:3000](http://localhost:3000). The server binds to this computer only. The macOS launcher below also opens the browser and makes daily database backups.
-
-## Start it on this Mac
-
-Double-click **`Start Parliamo.command`**. The launcher prepares the app on first use, starts it only on this computer, and opens [http://localhost:3000](http://localhost:3000) in the default browser. Keep the Terminal window open while studying; press Control-C or close that window to stop.
-
-Requirements:
-
-- macOS
-- Node.js 22.13 or newer (a local Codex runtime is used automatically when available)
-- Internet only for the first dependency install and optional external source links; day-to-day lesson content and tracking run locally
-
-## Cost and privacy
-
-- Local mode does not publish, call Sites, require ChatGPT sign-in, or need an OpenAI API key.
-- The launcher removes any inherited `OPENAI_API_KEY` and explicitly disables metered AI feedback. Speaking feedback uses the included local rubric.
-- Progress is stored in a local Cloudflare D1/SQLite development database under `.wrangler/state/` and mirrored in this browser's local cache.
-- On each launch, the learner database is backed up at most once per day with SQLite's consistent-backup command, then integrity-checked in `backups/local-data/`. These backups stay on this Mac and are ignored by Git.
-- Nothing in `npm run local` deploys the project. The previously published Sites copy is separate and is not changed by local use.
-
-### Restore a local backup
-
-Stop Parliamo first. Keep the current `.wrangler/state/` folder as an extra safety copy, find the learner database (the hashed `.sqlite` file beside `metadata.sqlite`), and replace it with the chosen dated file from `backups/local-data/`. Start Parliamo again and confirm the dashboard counts. Never replace `metadata.sqlite`; the launcher deliberately excludes it from learner-data backups.
-
-## What is included
-
-- A start-date-aware 8-week plan with 56 daily agendas and exact student-book, workbook, review, test, and grammar page references.
-- Persistent task checklists, actual minutes, confidence, checkpoint scores, reflection notes, and projected pace.
-- Twenty-eight archived lesson hubs and an original practice bank covering grammar, listening, speaking, reading, writing, vocabulary, and interaction.
-- Spaced vocabulary review, readings, preposition drills, and three production-focused games.
-- Separate CEFR evidence lanes for listening, reading, spoken interaction, spoken production, and writing.
-- Italian immersion and bilingual Italian-English modes, plus an accessible guided tour that can be reopened from the header.
-
-Textbook scans, class archives, recordings and learner databases are not included in the public repository. The curriculum contains original practice and references to the source materials.
-
-## Developer commands
-
-Run these from the workspace root, which contains `package.json`. On Linux, use `npm run local` directly; the double-click launcher is for macOS.
+Open http://127.0.0.1:3000. The daily app is a static React/Vite site and needs no accounts, API keys or database.
 
 ```bash
-npm ci
-npm run local
-npm run lint
 npm run typecheck
-npm test
+npm run test:daily
+npm run lint
+npm run build:daily
 ```
 
-- `npm run local`: private local server at `127.0.0.1:3000`
-- `npm run dev`: development server using Vinext defaults
-- `npm run build`: verify the production build
-- `npm run typecheck`: check the application and build configuration types
-- `npm test`: build and verify the 56-day curriculum source contracts
-- `npm run db:generate`: generate Drizzle migrations after schema changes
+`site-dist/` is the complete deployable daily site. Only that directory should be published. It contains no course PDFs, extracted source text, credentials, database or learner records.
 
-## Adding study materials
+The maintained Vinext commands (`npm run local`, `npm run build`, `npm test`) also remain available. They now render the daily portal at the root. Historical practice code is retained in `app/legacy-portal.tsx`, `app/study-plan.ts`, `db/` and `drizzle/`; the legacy database APIs are **not deployed** on the public static host. The older Sites project in `.openai/hosting.json` is a separate publication and is not modified by the custom-domain deployment.
 
-Drop new PDFs, documents, notes, audio, or archives into **`materials/inbox/`**. Group them in folders by course or topic if useful. This folder is ignored by Git and is outside `public/`, so its files are not served by the app. Adding files does not change the curriculum automatically; they can be reviewed and incorporated in a separate pass.
+## Saving and privacy
 
-The optional archive tool inventories files and extracts text from PDF, DOCX, PPTX, XLSX, HTML, EML, Markdown, and text files. Audio and ZIP archives are inventoried only; unpack course archives into the inbox before extracting their contents.
+Progress is stored under `parliamo-daily-v1` in this browser’s localStorage. No account or progress API is used by the daily app. Different browsers and origins have separate progress; clearing site data removes it. Export a backup from **Progress** to move or preserve it, then restore it on the other device. Imports are validated and require an explicit replacement action in the UI.
+
+If browser storage is unavailable, an explicit warning appears and the current session can continue in memory. A corrupt stored record is preserved for recovery instead of overwritten. Existing legacy localStorage and `.wrangler/state/` learner databases are untouched; they are not automatically translated into the new scoring system. Preserve `backups/local-data/` and the existing local launcher’s backups.
+
+Listening uses the browser/device speech service with `it-IT`, when available. It is synthetic pronunciation support, not recorded class audio or an assessed listening exam. Writing and speaking checklists are self-assessments, not certification of fluency or CEFR level.
+
+## Add another lesson PDF
+
+Put new files in **`materials/inbox/`**, then invoke **`/new-material`** or **`$new-material`** in this repository. The repository-scoped skill is [`.agents/skills/new-material/SKILL.md`](.agents/skills/new-material/SKILL.md). A client may need to rescan repository skills before listing a newly added skill; naming its file directly also works.
+
+The skill reads the actual material, checks its edition and place in the course, creates original bilingual micro-lessons, preserves progress IDs, verifies the journey, and publishes only when the active request authorizes deployment. Dropping a PDF does not silently modify the course.
+
+The page-preserving helper requires Poppler (`pdftotext`). OCR additionally uses Tesseract with Italian/English language data and, for presentations, LibreOffice:
 
 ```bash
-python3 -m venv .venv
-.venv/bin/python -m pip install -r scripts/requirements.txt
-.venv/bin/python scripts/audit_course_archive.py
+python3 scripts/review_materials.py --source materials/inbox
+python3 scripts/review_materials.py --source materials/inbox --ocr
 ```
 
-Use Python 3.10 or newer. The tool scans `materials/inbox/` by default; `--source materials/inbox/course-name` limits it to one course. Hidden files and symbolic links are skipped. Reports go to `data/incoming/`, separate from the preserved `data/archive-*.json` reports. Each run replaces the incoming reports; an empty inbox leaves them untouched.
+Reports go to ignored `data/incoming/source-pages.json`; low-text or OCR pages are flagged for visual checking. The helper accepts only study folders under this repository’s `materials/` or `Organised/`, skips hidden files, symlinks and course-admin folders, and leaves existing reports intact for an empty inbox. The earlier `scripts/audit_course_archive.py` remains available for broader document inventory.
 
-## Project layout
+## Validation and audits
 
-- `app/`: portal screens, study plan, and API routes
-- `db/` and `drizzle/`: curriculum seed, database schema, and migrations
-- `public/downloads/`: the two workbooks used by the app
-- `materials/inbox/`: new source materials awaiting review
-- `scripts/`: archive inventory and workbook generation tools
-- `tests/`: curriculum source checks
-- `build/`, `worker/`, and `.openai/`: required build and hosting configuration
-- `.wrangler/state/` and `backups/local-data/`: local progress and database backups; preserve these
+- `tests/learning.test.mjs` checks source bounds, translation coverage, Italian accent handling, scheduling, recall scoring, duplicate completion and backup validation.
+- `scripts/audit_learning_browser.mjs` runs student journeys in isolated browser contexts. It requires a running browser-view runtime and the daily preview; use `PARLIAMO_URL` to choose a preview and `PARLIAMO_CDP_URL` for a different private CDP endpoint. It never reads another browser profile’s data.
+- `docs/material-review.json` records source review, curriculum corrections and coverage limits.
+- `docs/student-audit.json` records adversarial student scenarios, observed defects and fixes.
 
-`dist/`, `.vinext/`, `tmp/`, and `output/` are generated files and are ignored by Git. The workbook generator writes to `output/pdf/` and copies the final PDFs into `public/downloads/`; it currently requires the macOS Arial and Georgia fonts.
+```bash
+node scripts/audit_learning_browser.mjs
+node scripts/audit_storage_browser.mjs
+```
 
-## Source and licence status
+Screenshots and temporary test outputs go to ignored `work/`. Source PDFs, `Organised.zip`, the extracted archive and runtime state stay out of Git and deployment bundles.
 
-The source is public on GitHub. No explicit licence is declared for this repository. The linked textbook and course resources remain separate from the app's original practice content.
+## Custom-domain release
 
-## Curriculum sources
+The daily site is served by the existing VPS reverse proxy as static files at `/data/italian/current`. Release directories are under `/data/italian/releases/` inside that container’s existing data mount. Its dedicated nginx configuration is `/data/nginx/custom/italian.conf`; it does not expose the legacy progress endpoints. A certificate for `italian.samuelzhang.co.uk` is managed through the existing Certbot installation, with a scoped renewal job in `/etc/cron.d/parliamo-certificate`.
 
-- [ALMA Edizioni: official original-edition index](https://www.almaedizioni.it/wp-content/uploads/2019/10/nesp1_indice-intro.pdf)
-- [ALMA Edizioni: official teacher guide](https://www.almaedizioni.it/wp-content/uploads/2019/10/NE1_guida_totale.pdf)
-- [Council of Europe: CEFR self-assessment grid](https://www.coe.int/en/web/common-European-framework-reference-languages/table-2-cefr-3.3-common-reference-levels-self-assessment-grid)
+Use the global `authenticate` skill for authorized infrastructure work. Build and verify locally first, transfer only `site-dist/` into a new release directory, switch the `current` symlink atomically, then verify public HTTPS and the asset responses. Retain the previous release for rollback. Do not package the repository root, raw materials or local learner data. The domain and certificate are already provisioned; ordinary content releases do not need to recreate them.
+
+The source repository contains application code and original practice. Third-party course material and textbook rights remain separate. No explicit software licence is declared.

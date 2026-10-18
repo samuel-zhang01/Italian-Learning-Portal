@@ -7,7 +7,7 @@ const read = path => readFile(new URL(path, root), "utf8");
 
 test("ships a database-backed A1 curriculum", async () => {
   const [seedText, schema, contentRoute, page, plan, types] = await Promise.all([
-    read("db/content-seed.json"), read("db/schema.ts"), read("app/api/content/route.ts"), read("app/page.tsx"), read("app/study-plan.ts"), read("app/portal-types.ts"),
+    read("db/content-seed.json"), read("db/schema.ts"), read("app/api/content/route.ts"), read("app/legacy-portal.tsx"), read("app/study-plan.ts"), read("app/portal-types.ts"),
   ]);
   const seed = JSON.parse(seedText);
   const kinds = new Set(seed.map(row => row.kind));
@@ -42,7 +42,7 @@ test("ships a database-backed A1 curriculum", async () => {
 
 test("includes adaptive practice, durable analytics and open-text evaluation", async () => {
   const [page, evaluate, progress, migration] = await Promise.all([
-    read("app/page.tsx"), read("app/api/evaluate/route.ts"), read("app/api/progress/route.ts"), read("drizzle/0000_unknown_jack_flag.sql"),
+    read("app/legacy-portal.tsx"), read("app/api/evaluate/route.ts"), read("app/api/progress/route.ts"), read("drizzle/0000_unknown_jack_flag.sql"),
   ]);
   assert.match(page, /function PracticeLab/);
   assert.match(page, /function SpeakingBox/);
@@ -68,7 +68,7 @@ test("includes adaptive practice, durable analytics and open-text evaluation", a
 
 test("keeps local study free by default and ships the bilingual guided tour", async () => {
   const [page, evaluate, progress, plan, types, launcher, pkg, styles] = await Promise.all([
-    read("app/page.tsx"), read("app/api/evaluate/route.ts"), read("app/api/progress/route.ts"), read("app/study-plan.ts"), read("app/portal-types.ts"), read("start.sh"), read("package.json"), read("app/globals.css"),
+    read("app/legacy-portal.tsx"), read("app/api/evaluate/route.ts"), read("app/api/progress/route.ts"), read("app/study-plan.ts"), read("app/portal-types.ts"), read("start.sh"), read("package.json"), read("app/globals.css"),
   ]);
   assert.match(page, /function GuidedTour/);
   assert.match(page, /data-tour="plan"/);

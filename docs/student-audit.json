@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-18",
+  "method": "Simulated adversarial student journeys, automated Chromium interactions, visual desktop/mobile inspection and unit tests. No human student study is claimed.",
+  "scenarios": [
+    {
+      "student": "Busy beginner",
+      "challenge": "Find the next action, set a five-minute goal, pause mid-answer and resume.",
+      "result": "Passed. A clear start action, draft persistence and saved plan were exercised."
+    },
+    {
+      "student": "Guessing student",
+      "challenge": "Submit a wrong answer, correct it, replay a lesson and try to gain duplicate credit.",
+      "result": "Passed. First-attempt errors remain; completed lessons and same-day scheduled reviews cannot award duplicate credit."
+    },
+    {
+      "student": "Italian-only learner",
+      "challenge": "Switch language midway through a lesson and navigate the planner, notebook and sources on a phone.",
+      "result": "Passed in EN and IT; target Italian remains Italian, optional English examples are separate."
+    },
+    {
+      "student": "Returning after a break",
+      "challenge": "Encounter overdue recall, answer incorrectly, correct it and check the next date.",
+      "result": "Passed. The first failed recall is recorded once and returns the next day; no streak penalty. The planner carries overdue items to the next chosen study day and respects the remaining daily budget."
+    },
+    {
+      "student": "Small-phone / keyboard learner",
+      "challenge": "Use 390px and 320px screens, access labels and focus, navigate native keyboard controls.",
+      "result": "Passed tested layout and labelled-form journeys. Fixed calendar overflow and kept visible focus. No full assistive-technology certification is claimed."
+    },
+    {
+      "student": "Progress-loss skeptic",
+      "challenge": "Block storage, exhaust its quota, load corrupt JSON, import invalid backups and restore a valid export.",
+      "result": "Passed. Memory-only practice warns explicitly; corrupt data is preserved; validated replacement is explicit."
+    },
+    {
+      "student": "Two-tab learner",
+      "challenge": "Change notes in a second tab and preferences in the first.",
+      "result": "Passed. Storage event synchronization retained notes."
+    },
+    {
+      "student": "Source-checking learner",
+      "challenge": "Follow lesson citations back to physical source pages rather than extracted-text indexes.",
+      "result": "Found shifted references caused by blank/image pages; corrected all affected mission citations."
+    }
+  ],
+  "defects_fixed": [
+    "Whitespace before trailing punctuation caused valid Italian answers to fail.",
+    "Blocked localStorage was initially treated like corrupt data and blocked practice.",
+    "Seven calendar cells overflowed the narrow layout.",
+    "Source references initially inherited text-only indexes that skipped blank/image pages.",
+    "Empty-review copy always described a first review even after prior practice.",
+    "Native file-input text could remain in the browser’s language; replaced visible controls with translated labels.",
+    "Planner now carries overdue reviews beyond rest days and subtracts practice already completed today."
+  ],
+  "checks": {
+    "typecheck": "pass",
+    "lint": "pass",
+    "unit_tests": 10,
+    "vinext_build": "pass",
+    "static_build": "pass",
+    "main_browser_scenarios": [
+      "wrong answer correction and reload resume",
+      "complete lesson in Italian with honest first-attempt score",
+      "daily budget and learning path persist",
+      "export, invalid import rejection and confirmed restore",
+      "failed delayed recall keeps its first score and schedules tomorrow",
+      "all primary screens fit 390px in English and Italian",
+      "320px home layout fits",
+      "two-tab updates retain saved notes",
+      "no browser runtime errors"
+    ],
+    "storage_scenarios": [
+      "blocked: pass",
+      "quota: pass",
+      "corrupt: pass"
+    ],
+    "production_browser_scenarios": "Passed all nine main scenarios against https://italian.samuelzhang.co.uk",
+    "keyboard": "Passed skip link, keyboard lesson entry and labelled controls",
+    "local_pdf": "Passed blob URL page=4 link with zero POST requests",
+    "https": "verified; certificate renewal dry run passed",
+    "deployment": "static release only; legacy /api/progress returns 404"
+  },
+  "limits": [
+    "Synthetic voice availability and quality depend on the browser/device; original class audio is not included.",
+    "Production writing is self-checked and stored, not semantically graded.",
+    "Tests ran in Chromium; Safari/Firefox and physical screen-reader sessions were not run.",
+    "All 36 lessons have schema, translation and source-bound checks; full interactive completion was exercised on a representative lesson."
+  ]
+}

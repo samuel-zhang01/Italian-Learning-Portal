@@ -1,0 +1,418 @@
+{
+  "reviewed_on": "2026-10-18",
+  "scope": "47 supplied PDF/presentation files, excluding course-admin maps and certificate; text extraction plus OCR of sparse pages, with selected visual checks. Supporting companion HTML is not a teacher-verified answer key.",
+  "source_files": 47,
+  "physical_pages_or_slides": 858,
+  "ocr_pages": 508,
+  "decisions": [
+    "Courses 1–2 reference Nuovo Espresso Plus 1, not the original edition assumed by the legacy plan.",
+    "Course 3 introduces Plus 2 but supplied lessons currently teach revision; later syllabus topics are not presented as taught.",
+    "Course 1 Week 14 is integrated revision, not a direct-pronouns lesson; direct-object practice is sourced to supermarket/clothing files.",
+    "Course 1 Week 19 is an end-of-course summer/reflection session, not a daily-routine lesson.",
+    "Passato prossimo auxiliary choice is taught per verb, avoiding the overgeneralization that every movement/intransitive verb takes essere.",
+    "New practice uses original details; source homework explicitly requesting independent work is not completed for the learner.",
+    "Cross-checked lesson citations against physical pages after OCR; blank/image pages in several PDFs shifted text-only page numbering. Corrected citations before publication."
+  ],
+  "daily_missions": 36,
+  "course_missions": {
+    "1": 20,
+    "2": 10,
+    "3": 6
+  },
+  "coverage_limits": [
+    "The daily path selects reusable outcomes; it is not a page-for-page treatment of every archive activity.",
+    "Image-based tables can have OCR defects. Teaching examples and cited concepts were checked; OCR is not used as an automatic answer key.",
+    "The reference glossary, songs, external video listening activities and complete course homework are not reproduced.",
+    "No original class audio is supplied by the daily app; optional playback uses device speech synthesis.",
+    "Course 3 future conditional, imperfect, future and imperative syllabus topics await corresponding lessons."
+  ],
+  "files": [
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Reference Materials/I verbi-Presente indicativo.pptx",
+      "sha256": "c622813203223ceb1c08099eaee2d1c6d49e21ef6db6170215d3ed6d30e8954b",
+      "pages": 7,
+      "ocr_pages": 2,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Reference Materials/PDF_Grammar_Revision.pdf",
+      "sha256": "93be9aa5bec6d022ec7ac952e5f3bdf931cf07d819746e7604f7999e30186f1b",
+      "pages": 23,
+      "ocr_pages": 16,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Reference Materials/PDF_I_verbi.pdf",
+      "sha256": "a1ef1a0898bc094b75d9bda1c35909fd8849d8cb17aa63abfc04417e334809c0",
+      "pages": 7,
+      "ocr_pages": 2,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Reference Materials/Revision_Grammar_ A1.pptx",
+      "sha256": "5226d8ba4206127aa817245c2232f1b695babbbedd84eb2894699d8e2da675e3",
+      "pages": 22,
+      "ocr_pages": 15,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 02 — Countries & Nationalities/PDF_Week_2_Countries_and_Nationalities.pdf",
+      "sha256": "df590882a7573bd9cd97f26775f0dd9eb22ec620d7acfc9ac7312cf0461b3d3c",
+      "pages": 17,
+      "ocr_pages": 5,
+      "mapped_missions": [
+        "where-from",
+        "nationalities"
+      ]
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 03 — Additional Info/PDF_Week_3_Additional_info.pdf",
+      "sha256": "5747c8e0d8e68b1418e7304cba47db476c3bf70105b5ac6b42b067021ec25590",
+      "pages": 15,
+      "ocr_pages": 7,
+      "mapped_missions": [
+        "age-numbers",
+        "regular-verbs"
+      ]
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 04 — Jobs & Professions/PDF_Week_4_Jobs_and_professions.pdf",
+      "sha256": "e47e5cd3afc4dcf07993364d6fdaff277f8f6fc73c1397a0e396b9b227f6b549",
+      "pages": 18,
+      "ocr_pages": 9,
+      "mapped_missions": [
+        "say-hello",
+        "articles",
+        "jobs"
+      ]
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 04 — Jobs & Professions/Week 4_Jobs and professions.pptx",
+      "sha256": "e95312c57a8acd4ff33fbee16fb844de5d2ecfe4abfda76706788964bd74f43c",
+      "pages": 18,
+      "ocr_pages": 7,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 05 — At the Bar & Restaurant/PDF_Week_5.pdf",
+      "sha256": "861f47bf8fe29c59e503b6176d33fa974eb1530103e7fcc6044ff60c76e687c0",
+      "pages": 27,
+      "ocr_pages": 16,
+      "mapped_missions": [
+        "one-many",
+        "coffee-order"
+      ]
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 06 — The Spare Time/I_verbi-Presente_indicativo.pptx",
+      "sha256": "43b82c2f29d274f74f1258b66dc582a18a94ec51a2f1d5db04a060b9a3fd9a87",
+      "pages": 6,
+      "ocr_pages": 2,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 06 — The Spare Time/PDF_Week_6__The_spare_time.pdf",
+      "sha256": "61ed8b6b8bf007ea0f3684c9b156b07527bdac468a32003c4d43672635a45485",
+      "pages": 14,
+      "ocr_pages": 4,
+      "mapped_missions": [
+        "free-time"
+      ]
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 07 — Piacere & The Time/PDF_Week_7_Piacere___The_time.pdf",
+      "sha256": "6330a9e3547076b8ecc0918c38c81888e0a8b20aeedccdcb52739d370d1505bd",
+      "pages": 20,
+      "ocr_pages": 9,
+      "mapped_missions": [
+        "likes",
+        "the-time"
+      ]
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 08 — Hotel & Prepositions/PDF_Week_8_Hotel_prepositions.pdf",
+      "sha256": "5789e1d3dc285c7b31480bd661ab2e00e9c17fffccf456494a3c755bde105b60",
+      "pages": 16,
+      "ocr_pages": 4,
+      "mapped_missions": [
+        "there-is",
+        "hotel",
+        "prepositions"
+      ]
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 09 — Revision/PDF_Week_9_Revision.pdf",
+      "sha256": "cf2609342814446709d52101f7030dc8431df5b3c141819349f05f392056de92",
+      "pages": 22,
+      "ocr_pages": 9,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 11/PDF_Week_11.pdf",
+      "sha256": "a66d8428d12d5c04ffaf3770b6b30b1da35c786a478044886c69c910ab1ccd6a",
+      "pages": 13,
+      "ocr_pages": 4,
+      "mapped_missions": [
+        "daily-routine",
+        "family"
+      ]
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 12 — In Town/PDF_Week_12_In_town.pdf",
+      "sha256": "aa466593013b1b12c6fbe1d1cd76e2ef819bde684b8fc0420baeacef79bf4502",
+      "pages": 14,
+      "ocr_pages": 4,
+      "mapped_missions": [
+        "in-town",
+        "can-must-want"
+      ]
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 13 — The Past/PDF_Week_13_The_past.pdf",
+      "sha256": "25e5c76ace254bbab62c72bd06ce2d6aabfeb07f747efb1b27bf582f350f200f",
+      "pages": 16,
+      "ocr_pages": 4,
+      "mapped_missions": [
+        "yesterday"
+      ]
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 13b — Revision Session/Festa_Internazionale.pdf",
+      "sha256": "a6e6827aed0a4035e831cf94590426bff8854a03dc00159cd51c07e6241872e8",
+      "pages": 5,
+      "ocr_pages": 5,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 13b — Revision Session/Giochi_A1.pdf",
+      "sha256": "3afe65bec96a23c37bd3f74d98da72b7531ad37d1d37eb6f6f6b0056cda85452",
+      "pages": 4,
+      "ocr_pages": 0,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 13b — Revision Session/PDF_Week_13_Revision.pdf",
+      "sha256": "1279094778314cfeef2a055496f81dc56d724bcbc23d3060785117d122b58e60",
+      "pages": 15,
+      "ocr_pages": 5,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 14 — Revision/PDF_Verbs_Revision.pdf",
+      "sha256": "3281c0414c93e402940357431d724bb4fbac725fbf0dd56cd9b89b1a7b6d4d1d",
+      "pages": 15,
+      "ocr_pages": 15,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 14 — Revision/PDF_Week_14_Revision.pdf",
+      "sha256": "f13e405076fa577db988643c7053fd15faf40a7a204598e23bfb0fca8cf90a3c",
+      "pages": 16,
+      "ocr_pages": 16,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 15 — At the Supermarket/PDF_Week_15_The_supermarket.pdf",
+      "sha256": "d6a6521ac16649f347a4d38585f78d8f4cfa3d7556aeba3a8e424440349be03a",
+      "pages": 21,
+      "ocr_pages": 21,
+      "mapped_missions": [
+        "shopping-amounts"
+      ]
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 16 — The Family/PDF_Week_16_The_family.pdf",
+      "sha256": "457d6a840fbeccf60b79ca5097240457f555a9e3d2094c65bd2e2b4e6db2ee93",
+      "pages": 15,
+      "ocr_pages": 14,
+      "mapped_missions": [
+        "family-news"
+      ]
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 17 — Passaporto & Identities/PDF_Identities.pdf",
+      "sha256": "2ff0a330b006af451f0cdad0cc65f7338f6e35d81a6db22491318ec7770b17b8",
+      "pages": 14,
+      "ocr_pages": 14,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 17 — Passaporto & Identities/PDF_Passaporto.pdf",
+      "sha256": "052f37e33e4e7a40f0e76881c02532601f37d3b7d177d4c280b805b8b5e8d32b",
+      "pages": 10,
+      "ocr_pages": 10,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 17 — Passaporto & Identities/PDF_Week 17.pdf",
+      "sha256": "8b2162f3854220b8f313713c3507b794d07d4a9b28ff9a3be03dc5cba85847eb",
+      "pages": 14,
+      "ocr_pages": 14,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 18 — Revision/Week 18_Revision.pptx",
+      "sha256": "38b70cc243f238fb6df55411557c03dd984f07e99f70fd2250f89e8478ef8c6d",
+      "pages": 27,
+      "ocr_pages": 6,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 19/PDF.pdf",
+      "sha256": "9d234f3a6d2215c7627167e7dbeead369030923c38b322ee3207f79f2b56b5b1",
+      "pages": 16,
+      "ocr_pages": 16,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 20 — Estate & Property/PDF_Week_20.pdf",
+      "sha256": "42659a57be220f1ef9c94e18bb2d03526412f4fc9af7003ff7581397e832ad88",
+      "pages": 15,
+      "ocr_pages": 5,
+      "mapped_missions": [
+        "home"
+      ]
+    },
+    {
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 20 — Estate & Property/all_agenzia_immobiliare.pdf",
+      "sha256": "81c4d36f018521cd87f1a2b9c7aa2f6b1be0c98c20d9720d316b5cb25b7fae23",
+      "pages": 2,
+      "ocr_pages": 0,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 01 — Presentazioni/I Verbi_A1.pdf",
+      "sha256": "d12d7450f272338f3928f9695471663d23f2895a40299cbe8336b4e61c130c60",
+      "pages": 8,
+      "ocr_pages": 3,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 01 — Presentazioni/Italian Grammar_A1.pdf",
+      "sha256": "9979a5079ca53425f6e8782030cbbe8d68e26de9e3f91de437e995116a1621c0",
+      "pages": 77,
+      "ocr_pages": 35,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 01 — Presentazioni/PDF_Week 1_Presentazioni.pdf",
+      "sha256": "7db7f28ef20ab931b25f3da7ab250df8d4205205300a4a5b37f22c929af4dff9",
+      "pages": 27,
+      "ocr_pages": 24,
+      "mapped_missions": [
+        "say-hello"
+      ]
+    },
+    {
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 02 — La Famiglia/Glossario L1.pdf",
+      "sha256": "9d1980b9873715d116dc6797ec676e9f28aba5fe4e480f4075ce97568d25c4a9",
+      "pages": 14,
+      "ocr_pages": 14,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 02 — La Famiglia/PDF_Week 2_La famiglia.pdf",
+      "sha256": "0508dce07d173f78ab384d1502e6eec2e86fcdd8d544d3024a6d4605bcff5967",
+      "pages": 25,
+      "ocr_pages": 16,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 03 — Jobs & Professions/PDF_Week_3_Jobs_and_professions.pdf",
+      "sha256": "1570d34b06cf1116023cabc713071aafec97895594dd367fe2d56a313598768b",
+      "pages": 21,
+      "ocr_pages": 8,
+      "mapped_missions": [
+        "a-workday"
+      ]
+    },
+    {
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 04 — Routine & Il Corpo Umano/Sts_Week 4_Routine e corpo umano.pptx",
+      "sha256": "65a201367db4d9530e9f308dbe27e98f6788a479d7c49058ebee0c0b0b82dce8",
+      "pages": 18,
+      "ocr_pages": 16,
+      "mapped_missions": [
+        "body-routine"
+      ]
+    },
+    {
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 05 — In Town & Reflexive Verbs/Esercizi_Verbi_riflessivi.pdf",
+      "sha256": "c3bb65371fe9b15ab3c7b05f78835802d4641146abf6e67fe360005b50d58762",
+      "pages": 1,
+      "ocr_pages": 1,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 05 — In Town & Reflexive Verbs/PDF_Week_5_In_town.pdf",
+      "sha256": "6935e00afd8ef564dbfe8da753f7b6fb5c07b786066e640564a6ac6dd0627ec1",
+      "pages": 19,
+      "ocr_pages": 17,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 06 — Al Bar e al Ristorante/Week 6_Bar and Restaurant.pptx",
+      "sha256": "ae69208070988316f97feefabdccaf73e9b52d095e2e1bb4a7f511b8ebc81e4b",
+      "pages": 16,
+      "ocr_pages": 16,
+      "mapped_missions": [
+        "restaurant-repair"
+      ]
+    },
+    {
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 07 — Revision & Prepositions/Grammar_ A1_2026.pptx",
+      "sha256": "1a621df1dba231839212d350a6fd9ebefaeed16984c843f40c57890c570e0b14",
+      "pages": 77,
+      "ocr_pages": 35,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 07 — Revision & Prepositions/Week 7_A1_Grammar Revision.pptx",
+      "sha256": "f56b63c24b1b9df193631d16205e18bc36f7017da47a9764ef614289ce0aebba",
+      "pages": 14,
+      "ocr_pages": 14,
+      "mapped_missions": []
+    },
+    {
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 08 — Food & Clothes/Week 8.pptx",
+      "sha256": "99e2f65b7831e090c46c0aba92076240d47d857ca5b4b1680e8e9ed0cdd8252d",
+      "pages": 19,
+      "ocr_pages": 19,
+      "mapped_missions": [
+        "object-pronouns",
+        "clothes"
+      ]
+    },
+    {
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 09 — Albergo e Progetti/Week 9 1.pptx",
+      "sha256": "dfe191b10b0b43bf3834af0ae20ec47171ecc61f4a305aee2c277fc7b6b283c6",
+      "pages": 21,
+      "ocr_pages": 20,
+      "mapped_missions": [
+        "hotel-problem",
+        "weekend-plan"
+      ]
+    },
+    {
+      "path": "Course 3/L2_Week_2_Verbs_revision.pdf",
+      "sha256": "a746533b63239225ff1ec22c67e7a564f213970498049eb018c03d332f47a129",
+      "pages": 17,
+      "ocr_pages": 5,
+      "mapped_missions": [
+        "verb-switch",
+        "impossible-excuse",
+        "character-day"
+      ]
+    },
+    {
+      "path": "Course 3/Week_1_Revision_Nouns_and_adjectives.pptx",
+      "sha256": "579689db998e7d4bae3c219d292d8fa72ed84e072c6ac5ff64b7c8611cf99e05",
+      "pages": 20,
+      "ocr_pages": 5,
+      "mapped_missions": [
+        "agreement-repair",
+        "room-detective",
+        "present-yourself"
+      ]
+    }
+  ]
+}
