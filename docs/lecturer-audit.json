@@ -1,0 +1,176 @@
+{
+  "reviewedOn": "2026-10-20",
+  "role": "Adversarial A1 lecturer and source reviewer",
+  "reviewer": "source-review agent independently reviewing grammar-content agent work; root independently sampling companion work",
+  "threshold": 9.5,
+  "checksTotal": 20,
+  "checksPassed": 20,
+  "scoreOutOf10": 10,
+  "status": "pass",
+  "unresolvedCriticalOrHigh": 0,
+  "method": "Twenty explicit content checks across ten criteria. At least 19 passes and no unresolved critical or high finding are required. This is an internal editorial acceptance checklist, not an independent teacher certification, learner satisfaction score or measured proficiency outcome.",
+  "reviewScope": {
+    "grammar": "Independent review of all 28 units: teaching, examples, all 224 controlled exercise prompts/answers/options, and all 28 production tasks/models. Detailed bilingual review of foundational units and targeted later items; structural bilingual checks cover every field.",
+    "companion": "The source-review agent authored and self-reviewed 113 distinct practice patterns mapped to 730 physical pages. The root agent independently sampled 22 cards: new grammar deck slides 10, 26, 54, 58, 67, 71, 75 and 77, plus all 14 glossary pages. Do not describe all companion content as independently reviewed.",
+    "sources": "All 936 physical pages in 48 supplied PDF/PPTX files were assigned page-specific topics after text/OCR review. All 78 new grammar deck slides and 34 older pages with insufficient OCR were visually reviewed. Older text-readable pages did not all receive a full visual proofread.",
+    "programmes": "All 14 intensive days, 28 supported days and 10 repair days were checked for valid references. Prerequisite order was checked for the two introductory programmes; the repair programme explicitly assumes previous exposure."
+  },
+  "reviewedFiles": [
+    {
+      "path": "app/learning/grammar.json",
+      "sha256": "610582f95ede24f2cc6d3da63fb4f2159dc57ec706f7d83487ac16981f78edf8"
+    },
+    {
+      "path": "app/learning/companion.json",
+      "sha256": "fc1c02b727321f68e1ce24b5161e7c2ce8be9c9e4e6b49d81d475feb01875e2b"
+    }
+  ],
+  "checks": [
+    {
+      "criterion": "1 · Source accuracy",
+      "name": "Physical page numbering and source identity are preserved",
+      "status": "pass",
+      "evidence": "Validated all 48 source SHA-256 hashes, unique source/page IDs and exact page sets 1–N for all 936 entries. Presentation relationship order matches numeric slide order. The new 78-slide deck has its own stable source ID, src-2c59b3929a33."
+    },
+    {
+      "criterion": "1 · Source accuracy",
+      "name": "Grammar references support the taught topic",
+      "status": "pass",
+      "evidence": "Checked new-deck topic-to-slide mapping. Corrected definite article references to slides 10/12 and indefinite references to 11/12. Added the actual irregular-participle table, src-25e5c76ace25 p12, and partitive table, src-d6a6521ac166 p8. Every grammar citation refers to an existing source and in-range physical page."
+    },
+    {
+      "criterion": "2 · Linguistic correctness",
+      "name": "Controlled answers and examples use correct Italian forms",
+      "status": "pass",
+      "evidence": "Reviewed all 224 answer sets and all 28 units' examples, covering articles, agreement, present conjugation, pronouns, modal infinitives and passato prossimo. Replaced unnatural Capisco lentamente with Capisco la domanda. Correct contrasts include e/è, ho/o, può, c’è/ci sono, piace/piacciono and essere participle agreement."
+    },
+    {
+      "criterion": "2 · Linguistic correctness",
+      "name": "Simplifications avoid false universal rules",
+      "status": "pass",
+      "evidence": "Content does not teach that all movement/intransitive verbs take essere or that all -ire verbs use -isc-. Companions correct source overstatements with ho camminato/ho dormito versus sono arrivato/a; bello placement and standalone quelli are correct. Frequency-adverb positions and oggi are not treated as absolute word-order or tense rules."
+    },
+    {
+      "criterion": "3 · Task and model alignment",
+      "name": "Grammar production models answer their actual tasks",
+      "status": "pass",
+      "evidence": "Reviewed all 28 production prompts, frames and models. They provide possible original responses to the requested person, number, function and tense. Each has three visible criteria for the learner's own response."
+    },
+    {
+      "criterion": "3 · Task and model alignment",
+      "name": "Sampled companions match the page focus and requested output",
+      "status": "pass",
+      "evidence": "Self-review covered the 113 practice patterns; independent root review covered 22 specified cards. Root's two findings were repaired: slide 67 now uses infinitive cues and retains Ieri/Yesterday in the model; slide 75 now uses Italian near/far contextual cues instead of English target chunks."
+    },
+    {
+      "criterion": "4 · Bilingual clarity",
+      "name": "English and Italian learner support is complete",
+      "status": "pass",
+      "evidence": "Executed checks for non-empty English and Italian in every grammar title, summary, teaching paragraph, example, vocabulary item, exercise prompt/hint/explanation, production field/rubric, and every companion focus/task/model/check. Found no missing bilingual fields."
+    },
+    {
+      "criterion": "4 · Bilingual clarity",
+      "name": "Reviewed translations preserve the learner's task without exposing the answer",
+      "status": "pass",
+      "evidence": "Removed exact Italian reorder answers from prompts, fixed the noun-plurals Italian answer leak, and changed noun-gender-8 to meaningful Italian options. Companion reference language fields were corrected where reversed. Slide 67 Italian now asks the learner to form the past rather than supplying the entire target sentence."
+    },
+    {
+      "criterion": "5 · Support for a mid-A1 learner",
+      "name": "Teaching precedes independent production with concrete support",
+      "status": "pass",
+      "evidence": "Every unit supplies four short bilingual teaching sections, three examples, six vocabulary chunks, eight controlled exercises and a framed production task. Nouns are taught with articles; exceptions are explicit; hints and word banks support a learner who needs help with basic tasks."
+    },
+    {
+      "criterion": "5 · Support for a mid-A1 learner",
+      "name": "Exercise demands vary gradually and have usable feedback",
+      "status": "pass",
+      "evidence": "Units mix recognition, gaps, reordering, correction and transformation before production. All 224 exercises have a hint and an explanation. Practice companions have a concrete original task, a possible response and at least two self-checks; reference pages are distinguished from assessed practice."
+    },
+    {
+      "criterion": "6 · Assessment validity",
+      "name": "Controlled prompts measure the intended distinction",
+      "status": "pass",
+      "evidence": "Replaced a punctuation-only question transformation with Dove abita Ada?, since punctuation is ignored by grading. Added an explicit origin cue to Sono ___ Bari and its parallel companion. Reviewed choice distractors and confirmed every accepted choice occurs in its option list."
+    },
+    {
+      "criterion": "6 · Assessment validity",
+      "name": "Accepted reorder responses are valid and common alternatives are included",
+      "status": "pass",
+      "evidence": "Executed token-multiset checks on every accepted reorder response. Added common time-first alternatives for modal and past sentences, three Ada/ieri placements, and four natural placements for Studio spesso la sera. The content does not claim an unrestricted natural-language grader."
+    },
+    {
+      "criterion": "7 · Coherent sequencing",
+      "name": "Unit dependencies and linked missions are valid",
+      "status": "pass",
+      "evidence": "Executed checks for known prerequisite IDs, absence of prerequisite cycles, and valid mission references in every unit and programme day. Removed the premature articulated-prepositions dependency from time-frequency, which teaches its own basic time expressions."
+    },
+    {
+      "criterion": "7 · Coherent sequencing",
+      "name": "Study routes fit their stated starting point",
+      "status": "pass",
+      "evidence": "Checked all day mappings in the 14-day intensive and 28-day supported routes: prerequisites occur earlier or in the same day's work. The 10-day repair route explicitly revisits topics already encountered, so it is not misrepresented as a beginner's prerequisite sequence."
+    },
+    {
+      "criterion": "8 · Retrieval and transfer",
+      "name": "Study guidance includes delayed retrieval and repair",
+      "status": "pass",
+      "evidence": "Programme instructions call for retrieval before new work, retries after a break and specific error repair. Intensive outcomes revisit earlier articles, present forms, vocabulary and weak units; supported and repair summaries explicitly direct delayed retrieval."
+    },
+    {
+      "criterion": "8 · Retrieval and transfer",
+      "name": "Learners generate language beyond copying a supplied answer",
+      "status": "pass",
+      "evidence": "All 28 units include personal or invented production with a frame and self-check rubric. Companion patterns use original scenarios, person/number changes, contrasts or vocabulary combinations. Root's answer-leaking companion cue was repaired before this report."
+    },
+    {
+      "criterion": "9 · Honest scope and workload",
+      "name": "Compressed study is not presented as guaranteed A2 proficiency",
+      "status": "pass",
+      "evidence": "The intensive route describes 45–60-minute revision, permits multiple sittings and extra study days, and states that listening and live conversation are also needed. Irregular past, direct pronouns and sapere/conoscere are labeled A1-plus stretch. The supported route gives 30–45-minute guidance with an optional 60-minute extension."
+    },
+    {
+      "criterion": "9 · Honest scope and workload",
+      "name": "Coverage and completion categories are not inflated",
+      "status": "pass",
+      "evidence": "Recalculated 730 practice entries, 206 reference entries and zero unresolved visual-review entries over 936 physical pages. There are 113 distinct practice patterns, not 936 unique exercises. Covers, homework, answer pages and unavailable audio/video instructions retain honest reference classifications."
+    },
+    {
+      "criterion": "10 · Originality and privacy",
+      "name": "Companions do not complete independent class homework",
+      "status": "pass",
+      "evidence": "Authored parallel tasks and possible models rather than filling source worksheets. Homework and solution pages receive study guidance, not copied answer keys. Video/listening pages do not invent answers for unavailable media. Source-specific misconceptions are corrected in original examples."
+    },
+    {
+      "criterion": "10 · Originality and privacy",
+      "name": "Source evidence remains separate from distributable learning content",
+      "status": "pass",
+      "evidence": "Extraction, OCR, rendered pages and build helpers remain under ignored data/incoming. Published learning JSON contains source metadata and original tasks, without source page images, raw extracts, private class names or course-admin certificates/maps. Validated output source IDs against supplied study files only."
+    }
+  ],
+  "resolvedFindings": [
+    "Removed Italian reorder answer leakage and an Italian plural prompt that supplied its own answer.",
+    "Replaced a punctuation-only question item with a meaningful question-word transformation.",
+    "Disambiguated origin versus location in a simple-preposition item and companion.",
+    "Added common valid reorder alternatives and validated their token multisets.",
+    "Corrected definite/indefinite article citations and added direct source evidence for irregular participles and partitivi.",
+    "Repaired the time-frequency prerequisite and improved an unnatural capire example.",
+    "Corrected mixed-language noun-gender options and reversed bilingual reference model fields.",
+    "Repaired root's independent companion findings on past-tense cues and Italian demonstrative instructions.",
+    "Kept source inaccuracies about quello/bello, standalone quelli and auxiliary selection out of teaching practice."
+  ],
+  "limitations": [
+    "No live learner trial, timed lesson trial or longitudinal retention result was performed; daily durations are planning guidance.",
+    "This is agent-based editorial review, not certification by an independent qualified Italian teacher.",
+    "Independent companion review sampled 22 cards. The author self-reviewed the remaining patterns; repeated page mappings do not multiply independent review coverage.",
+    "Bilingual structural completeness is exhaustive; detailed semantic bilingual review used foundational units and targeted later samples rather than a second independent translation review of every string.",
+    "Source classification used text/OCR for most older pages; all new slides and all insufficient-OCR pages received visual review.",
+    "Controlled answer sets cover intended and common alternate forms, not every grammatical paraphrase. Open production remains self-assessed.",
+    "UI behavior, progress persistence and actual grading execution are covered by the separate student and UI audits, not this content checklist."
+  ],
+  "untestedOutsideRubric": [
+    "Learning effectiveness with a real mid-A1 student",
+    "Actual completion time for each learner and study day",
+    "Spoken pronunciation and spontaneous conversational competence",
+    "Comprehensive human teacher review of all source and generated strings"
+  ]
+}

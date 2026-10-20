@@ -59,4 +59,208 @@ export type Progress = {
   reviewLog: { id: string; date: string; correct: boolean }[];
   notes: string;
   updatedAt: string;
+  // Optional so version-1 backups from the original daily portal remain valid.
+  sessions?: Record<string, StudySession>;
+  academy?: AcademyProgress;
+  arcade?: ArcadeProgress;
+};
+export type ArcadeMode = "words" | "builder" | "detective" | "conversation";
+export type ArcadeSettings = {
+  mode: ArcadeMode;
+  size: 5 | 10 | 15;
+  support: "guided" | "recall";
+  topic: string;
+  bank: string;
+  scene: string;
+};
+export type ArcadeItem = {
+  id: string;
+  mode: ArcadeMode;
+  title: Pair;
+  prompt: Pair;
+  answers: string[];
+  hint: Pair;
+  explanation: Pair;
+  options?: string[];
+  tokens?: string[];
+  unitId?: string;
+  bankId?: string;
+  sceneId?: string;
+  word?: { term: Pair; example: Pair };
+};
+export type ArcadeAnswer = {
+  answer: string;
+  correct: boolean;
+  assisted: boolean;
+};
+export type ArcadeRound = {
+  id: string;
+  date: string;
+  mode: ArcadeMode | "review";
+  support: "guided" | "recall";
+  itemIds: string[];
+  index: number;
+  answers: Record<string, ArcadeAnswer>;
+  hints: string[];
+  draft: string;
+  tokens: number[];
+};
+export type ArcadeMemory = {
+  first: ArcadeAnswer;
+  last: ArcadeAnswer;
+  date: string;
+  due: string;
+  successes: number;
+};
+export type ArcadeProgress = {
+  settings: ArcadeSettings;
+  active: ArcadeRound | null;
+  history: {
+    id: string;
+    date: string;
+    mode: ArcadeRound["mode"];
+    total: number;
+    independent: number;
+    supported: number;
+  }[];
+  records: Record<string, ArcadeMemory>;
+};
+export type SessionActivity =
+  | "warmup"
+  | "vocab"
+  | "input"
+  | "speak"
+  | "exit"
+  | "core";
+export type StudySession = {
+  missionId: string;
+  duration?: number;
+  done: SessionActivity[];
+  warmup: string;
+  recalled: string[];
+  inputAnswer: string;
+  speaking: string;
+  exit: string;
+};
+export type VocabularyBank = {
+  id: string;
+  title: Pair;
+  // Existing values retain their original arcade IDs; never renumber on reorder.
+  words: { id: string; term: Pair; example: Pair }[];
+};
+export type Enrichment = {
+  missionId: string;
+  bank: string;
+  notes: Pair[];
+  dialogue: Pair[];
+  question: Check;
+  frame: Pair;
+  speaking: Pair;
+  resource: string;
+};
+export type OnlineResource = {
+  id: string;
+  title: string;
+  url: string;
+  level: Pair;
+  kind: Pair;
+  task: Pair;
+  access: Pair;
+};
+export type GrammarExercise = {
+  id: string;
+  kind: "choice" | "gap" | "reorder" | "correct" | "transform" | "tense";
+  prompt: Pair;
+  options?: string[];
+  tokens?: string[];
+  answers: string[];
+  hint: Pair;
+  explanation: Pair;
+  focus: string;
+};
+export type GrammarUnit = {
+  id: string;
+  title: Pair;
+  level: "A1" | "A1-plus";
+  summary: Pair;
+  prerequisites: string[];
+  missionIds: string[];
+  teaching: Pair[];
+  examples: Pair[];
+  words: Pair[];
+  exercises: GrammarExercise[];
+  production: { prompt: Pair; frame: Pair; model: Pair; rubric: Pair[] };
+  sources: { id: string; pages: number[] }[];
+};
+export type Programme = {
+  id: string;
+  title: Pair;
+  summary: Pair;
+  days: {
+    title: Pair;
+    unitIds: string[];
+    missionIds: string[];
+    outcome: Pair;
+  }[];
+};
+export type PageCompanion = {
+  id: string;
+  sourceId: string;
+  page: number;
+  kind: "practice" | "reference" | "needs-review";
+  focus: Pair;
+  unitIds: string[];
+  task: Pair;
+  model: Pair;
+  checks: Pair[];
+};
+export type GrammarAttempt = {
+  answer: string;
+  correct: boolean;
+  assisted: boolean;
+  date: string;
+};
+export type GrammarDraft = {
+  exerciseIndex: number;
+  answers: Record<string, string>;
+  attempts: Record<string, GrammarAttempt[]>;
+  hints: string[];
+  hintDates?: Record<string, string>;
+  output: string;
+  rubric: number[];
+  modelSeen: boolean;
+  completed?: string;
+};
+export type CompanionDraft = {
+  answer: string;
+  selfChecked: boolean;
+  modelSeen: boolean;
+  completed?: string;
+};
+export type ReadinessRun = {
+  date: string;
+  exerciseIds: string[];
+  answers: Record<string, { answer: string; correct: boolean; date?: string }>;
+  completed: boolean;
+};
+export type WordMemory = {
+  term: Pair;
+  example?: Pair;
+  starred: boolean;
+  successes: number;
+  lapses: number;
+  due: string;
+  lastDate: string;
+};
+export type AcademyProgress = {
+  grammar: Record<string, GrammarDraft>;
+  companion: Record<string, CompanionDraft>;
+  programme: {
+    id: string;
+    started: string;
+    day: number;
+    completed: Record<string, string>;
+  } | null;
+  assessments: Record<string, ReadinessRun>;
+  words: Record<string, WordMemory>;
 };

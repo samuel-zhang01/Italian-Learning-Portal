@@ -1,0 +1,70 @@
+{
+  "deployedAt": "2026-10-20T10:57:57.692649+00:00",
+  "verifiedAt": "2026-10-20T10:59:16.315773+00:00",
+  "url": "https://italian.samuelzhang.co.uk",
+  "release": "20261020T105743Z-academy",
+  "releaseDirectory": "/data/italian/releases/20261020T105743Z-academy",
+  "previousReleaseDirectory": "/data/italian/releases/20261018T141815Z",
+  "status": "deployed-and-verified",
+  "method": "Uploaded exactly the four verified site-dist files to a new release directory, verified remote SHA-256 hashes, then atomically replaced the live current symlink.",
+  "artifactHashes": {
+    "site-dist/assets/index-CDo0HU4k.css": "6d9148b4bc6db4d7f949db2254be77fad0c2657e4d9b34519f543ef7c52c4d0b",
+    "site-dist/assets/index-CY15MBCK.js": "41018cd67ab57f4405915e3de0d0d71b5679ab046934e90267441ac051f969c7",
+    "site-dist/favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "site-dist/index.html": "20755b6b7944a1ccc0a06d3dd91ccbd2e974a9adf7ca49061e7521035838b6bc"
+  },
+  "remoteHashVerification": "pass",
+  "publicHttpsVerification": [
+    {
+      "path": "assets/index-CDo0HU4k.css",
+      "httpsFetch": "pass",
+      "hashMatch": true
+    },
+    {
+      "path": "assets/index-CY15MBCK.js",
+      "httpsFetch": "pass",
+      "hashMatch": true
+    },
+    {
+      "path": "favicon.svg",
+      "httpsFetch": "pass",
+      "hashMatch": true
+    },
+    {
+      "path": "index.html",
+      "httpsFetch": "pass",
+      "hashMatch": false,
+      "currentAssetReferences": true,
+      "edgeTransformation": "Cloudflare adds its challenge bootstrap; current asset references verified."
+    }
+  ],
+  "legacyApiStatus": 404,
+  "liveBrowserVerification": {
+    "script": "scripts/audit_academy_browser.mjs",
+    "isolatedSyntheticProgress": true,
+    "checks": [
+      "all seven budgets produce exact itinerary totals, correct session stages and persistent duration snapshots",
+      "changing the time budget caps today's blocks and preserves active or older session steps",
+      "all three active programmes combine the right number of grammar blocks and required core mission within 30/45/60-minute budgets",
+      "both twelve-question diagnostics preserve wrong first answers, resume after reload, explain corrections and retain results",
+      "saved vocabulary persists and an unsuccessful self-rated recall returns tomorrow without repeat credit",
+      "large academy backups reach a detailed restore preview; invalid replacements clear stale previews without overwriting work",
+      "core and new planning/diagnostic routes fit desktop, 390px and 320px in both languages",
+      "no browser runtime errors across the audited journeys"
+    ],
+    "runtimeErrors": [],
+    "desktopScreenshotVisuallyReviewed": true
+  },
+  "privacy": {
+    "rawCourseFilesPublished": false,
+    "learnerDatabasesModified": false,
+    "browserStorageKey": "parliamo-daily-v1",
+    "progressVersion": 1
+  },
+  "rollback": "Atomically point /data/italian/current at the retained previous release directory inside the existing static-site container.",
+  "limitations": [
+    "Python urllib received an edge 403; verified HTTPS asset requests using curl and the live Chromium journey passed.",
+    "Cloudflare transforms public HTML with its challenge bootstrap; exact remote HTML hash and current public asset references were verified.",
+    "The deployment browser checks use synthetic learner data and do not inspect existing users’ browser storage."
+  ]
+}

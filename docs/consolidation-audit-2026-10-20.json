@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-20",
+  "scope": "Simplify UI/navigation and resolve whole-app audit defects without adding routes or feature modes.",
+  "changes": [
+    "Four primary destinations: Today, Programme, Practice, Progress.",
+    "One programme-aware Continue today action, shared with the optional checklist.",
+    "Supported A1 recommended, one programme day shown, comparison and full syllabus collapsed.",
+    "Optional games, reviews and short lessons disclosed on demand.",
+    "Fixed duplicate React sibling keys that produced duplicated menus.",
+    "Explicit whole-sentence correction instructions and authored valid answer alternatives.",
+    "Both diagnostics resume across dates with earlier checks preserved.",
+    "Empty, unknown and duplicate diagnostic item sets rejected on import.",
+    "144 stable vocabulary IDs preserve deployed progress associations.",
+    "Five-minute programme sittings progress to unfinished grammar across dates.",
+    "CI checks the maintained daily build and tests; application source captured in Git."
+  ],
+  "verification": {
+    "dailyTests": 49,
+    "typecheck": "pass",
+    "lint": "pass",
+    "dailyBuild": "pass",
+    "browserEvidence": [
+      "work/consolidation-browser/report.json",
+      "work/arcade-browser/results.json",
+      "work/academy-browser-results.json"
+    ],
+    "independentUiReview": "work/consolidation-independent-ux/review.json",
+    "independentFindingResolution": "Five-minute programme trap fixed with two unit regressions and a complete browser handoff test."
+  },
+  "auditResolution": {
+    "DAILY-01": "resolved",
+    "FEEDBACK-01": "resolved for reproduced cases and explicit response contracts; finite authored matching remains",
+    "CONTINUITY-01": "resolved",
+    "NAV-01": "resolved",
+    "UX-01": "simplified and browser-checked",
+    "RELEASE-01": "daily CI updated; committed-source clean build and deployment receipt recorded with release",
+    "IMPORT-01": "resolved",
+    "SCOPE-01": "four primary routes and supported default",
+    "MAINTAIN-01": "resolved with existing IDs retained",
+    "MAINTAIN-02": "deferred: broader component/storage refactor is unnecessary for this focused UI pass; no current storage failure demonstrated"
+  },
+  "limits": [
+    "Internal checks are not a numerical whole-product quality rating.",
+    "Real learner observation and independent Italian-teacher review remain outstanding.",
+    "Responsive Chromium checks, not physical-device or multi-browser certification.",
+    "Existing large bundle warning remains; no slow-device performance claim.",
+    "CI wrapper configuration reviewed and daily commands run locally; hosted CI execution is not claimed."
+  ],
+  "privacy": "Only site-dist is deployed. No source archive, learner data, local database or credential is published."
+}

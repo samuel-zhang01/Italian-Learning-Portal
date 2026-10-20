@@ -1,0 +1,46 @@
+{
+  "reviewedOn": "2026-10-20",
+  "contentFile": "app/learning/arcade-scenes.json",
+  "authorship": "Original practice written for this portal; class worksheets are not reproduced.",
+  "grounding": [
+    "app/learning/grammar.json",
+    "app/learning/enrichment.json"
+  ],
+  "counts": {
+    "scenes": 8,
+    "turns": 24,
+    "options": 72,
+    "linkedGrammarUnits": 15
+  },
+  "mechanicalChecks": {
+    "uniqueSceneAndTurnIds": true,
+    "threeTurnsPerScene": true,
+    "threeDistinctOptionsPerTurn": true,
+    "oneExactAnswerPerTurn": true,
+    "allUnitIdsExist": true,
+    "allTeachingTextBilingual": true,
+    "hintsDoNotRepeatFullAnswers": true,
+    "correctAnswerPositions": {
+      "1": 8,
+      "2": 8,
+      "3": 8
+    },
+    "allTurnUnitIdsExist": true,
+    "turnUnitsIncludedInSceneUnits": true
+  },
+  "editorialReview": [
+    "Every prompt gives a specific communicative intention, number, destination, direction or preference. Distractors contradict that detail or answer a different question.",
+    "Every correct response uses present-tense language, an infinitive after a modal, or a short fixed phrase. There is no requirement to conjugate past, future, conditional or subjunctive forms.",
+    "Service encounters consistently address staff or strangers politely; classmate and friend conversations use informal tu.",
+    "Grammar notes distinguish origin from current location, clock times from prices, singular piace from plural nouns, age with avere, and the reflexive pronoun in mi sveglio.",
+    "Scene introductions gloss less familiar task words. Hints support meaning or form; explanations disclose the answer and contrast its distractors.",
+    "All identities, plans and routines are fictional; no personal information is needed to practise.",
+    "Each of the 24 turns has a specific grammar unit link. Age opens avere, daily work opens present -are, and food preferences open piacere. Scene-level links remain available for broader study."
+  ],
+  "limitations": [
+    "This is a model editorial review, not an independent native-speaker assessment or externally validated CEFR rating.",
+    "Multiple-choice recognition cannot certify spontaneous speaking, pronunciation, listening comprehension or A2 readiness.",
+    "A few practical phrases such as da quale binario and basta così are scaffolded chunks; beginners may need the English introduction and hint.",
+    "A learner who already knows numbers may find quantity and clock-time distractors easy; pair this content with supported spoken recall or sentence production in the UI."
+  ]
+}

@@ -1,0 +1,132 @@
+.study-itinerary {
+  margin: 28px 0;
+  padding: 28px;
+  background: #f8f6ed;
+  border: 1px solid #e1dccd;
+  border-radius: 20px;
+}
+.itinerary-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+.itinerary-blocks li {
+  display: flex;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #d9dfd8;
+  border-radius: 12px;
+  padding: 18px;
+  min-width: 0;
+}
+.itinerary-blocks p {
+  font-size: 0.9rem;
+  margin: 8px 0;
+}
+.itinerary-number {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e4ece2;
+  color: #294e3c;
+}
+.study-tools-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 24px;
+}
+.study-tools-links button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 7px;
+  border: 1px solid #c5d3c5;
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  min-height: 88px;
+  color: #244c3c;
+}
+.study-tools-links button span {
+  font-size: 0.84rem;
+  color: #52665a;
+}
+.study-tools-links button:hover {
+  border-color: #365c49;
+  background: #eff4ed;
+}
+.assessment-view progress {
+  width: 100%;
+  accent-color: #2d5d46;
+}
+.assessment-view .panel {
+  margin: 20px 0;
+}
+.assessment-view form h2 {
+  font-size: 1.3rem;
+}
+.assessment-view details article {
+  padding: 14px 0;
+  border-bottom: 1px solid #ddd;
+}
+.assessment-view li {
+  margin: 12px 0;
+}
+.assessment-view .support-box li {
+  line-height: 1.65;
+}
+.word-review {
+  margin: 24px 0;
+}
+.study-tools-nav {
+  max-width: 1184px;
+  margin: 0 auto;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 14px 28px;
+  border-bottom: 1px solid #e1e4db;
+  margin-bottom: 20px;
+}
+.study-tools-nav button {
+  border: 1px solid #d6ded3;
+  border-radius: 20px;
+  background: transparent;
+  padding: 10px 16px;
+  color: #355743;
+  min-height: 44px;
+}
+.study-tools-nav button[aria-current="page"] {
+  background: #284e3d;
+  color: white;
+}
+@media (max-width: 700px) {
+  .study-tools-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .study-itinerary {
+    padding: 18px;
+  }
+  .itinerary-blocks {
+    grid-template-columns: 1fr;
+  }
+  .study-tools-nav {
+    gap: 5px;
+  }
+  .study-tools-nav button {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+}
+@media (max-width: 360px) {
+  .study-tools-links {
+    grid-template-columns: 1fr;
+  }
+}

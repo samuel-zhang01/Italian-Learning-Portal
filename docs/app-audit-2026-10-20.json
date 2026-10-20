@@ -1,0 +1,174 @@
+{
+  "reviewedOn": "2026-10-20",
+  "kind": "Whole-app scope, implementation and live usability audit",
+  "productionUrl": "https://italian.samuelzhang.co.uk/",
+  "productionRelease": "20261020T203951Z-arcade",
+  "repositoryHead": "5fd6fdf",
+  "sourceState": "Existing tracked changes and untracked academy/arcade files were present. The current production expansion is not represented by a complete source commit.",
+  "verdict": {
+    "summary": "A strong personal mid-A1 learning companion with substantial useful practice. Individual activities are more coherent than the overall daily journey. Consolidation and reliability work should precede further feature expansion.",
+    "scope": "The educational purpose is clear. The app fits a personal class companion with flexible daily sessions and optional practice. Multiple competing routes and overlapping tools weaken the scope presented to the learner.",
+    "development": "Meaningful engine tests, defensive progress handling and thoughtful activity design provide a good foundation. Confirmed cross-route, answer-contract and next-day continuity defects, plus release reproducibility gaps, prevent a fully polished assessment.",
+    "requested95Threshold": "Not established. Earlier 20/20 role checklists are narrow feature acceptance results, not independent evidence of 9.5/10 whole-product quality or learning outcomes.",
+    "recommendedNextPhase": "Consolidate the daily learning journey, repair feedback and continuity, capture a reproducible release, then observe a real mid-A1 learner completing and resuming several days."
+  },
+  "method": {
+    "reviewers": "Primary agent plus separate scope/usability and reliability audit agents; these are agent reviews, not independent human teaching or learner validation.",
+    "freshChecks": [
+      "npm run test:daily: 37 tests passed",
+      "npm run typecheck: passed",
+      "npm run lint: passed",
+      "Fresh synthetic Chromium contexts on the production site at mobile and desktop sizes",
+      "Live reproduction of two answer-checking cases",
+      "Synthetic previous-day assessment and malformed-import reproductions",
+      "Synthetic full-course progress persistence check",
+      "Source, Git state and CI configuration inspection"
+    ],
+    "privacy": "No real learner records or shared browser state were used. Audit browser contexts were closed.",
+    "changes": "No application edits or deployment. Added this report and local audit evidence.",
+    "limits": [
+      "Bounded audit, not exhaustive content review or accessibility certification",
+      "No real learner observation or longitudinal retention study",
+      "No cross-browser or slow-device performance certification",
+      "No independent human Italian-teacher review",
+      "No inference that passing automated tests establishes overall product quality"
+    ]
+  },
+  "strengths": [
+    "Clear connection to supplied class materials and original bilingual practice",
+    "Beginner support through short prompts, hints, examples and saved drafts",
+    "Flexible session budgets and optional games with one question at a time",
+    "Readable spacing and no document-level horizontal overflow on sampled mobile and desktop routes",
+    "Honest distinction between first attempts, supported practice, XP and proficiency",
+    "Validated backup/recovery flows and compatibility with earlier saved progress",
+    "Appropriate static, local-first architecture for a personal companion",
+    "Separated learning engines with meaningful regression coverage"
+  ],
+  "priorityDefinitions": {
+    "P2": "Material usability, learning-feedback, continuity or release-quality issue to fix in the next consolidation pass",
+    "P3": "Lower-impact edge case, design tradeoff or maintainability risk"
+  },
+  "findings": [
+    {
+      "id": "DAILY-01",
+      "priority": "P2",
+      "status": "confirmed",
+      "title": "Today gives conflicting next-step recommendations",
+      "observed": "After selecting the intensive programme at a 30-minute budget, the guided session recommends A word’s little companion and its grammar topic, while the large YOUR NEXT SMALL STEP card recommends A first conversation from a separate class path.",
+      "impact": "A beginner must decide which of two recommended next tasks to follow.",
+      "source": ["app/learning/portal.tsx:229", "app/learning/portal.tsx:472", "app/learning/portal.tsx:497", "app/learning/enriched.tsx:61", "app/learning/study.ts:114"],
+      "evidence": ["work/scope-audit/interaction-observations.json", "work/scope-audit/mobile-programme-today.png"],
+      "acceptance": "Today has one programme-aware primary action. Its session, itinerary, completion state and next-day continuation agree; alternative practice is explicitly optional."
+    },
+    {
+      "id": "FEEDBACK-01",
+      "priority": "P2",
+      "status": "confirmed",
+      "title": "Answer contracts reject valid Italian or reasonably interpreted short answers",
+      "observed": [
+        "In simple-prepositions exercise 4, A piedi vado da Ada. is marked for repair, although it is grammatical, uses the supplied words and expresses the requested meaning. Only the authored model ordering is accepted.",
+        "In present-are exercise 5, Correct the verb: Voi cucina a casa. rejects cucinate. The exercise requires a whole sentence without explicitly stating that response format."
+      ],
+      "impact": "Learners can receive misleading corrective feedback and a recorded failed first attempt despite knowing the target form.",
+      "source": ["app/learning/learning-utils.ts:18", "app/learning/academy.tsx:1116", "app/learning/academy.tsx:1173", "app/learning/grammar.json:2808", "app/learning/grammar.json:5445", "app/learning/arcade-catalogue.ts:62"],
+      "evidence": ["work/app-audit/live-answer-contract.json", "work/app-audit/check-answer-contract.mjs", "work/app-audit/answer-contract-samples.json"],
+      "acceptance": "All tools show the same explicit response format. Authored valid alternatives are accepted where appropriate; model-answer mismatch is not presented as proof that otherwise valid Italian is wrong. Both reproduced cases have regression coverage."
+    },
+    {
+      "id": "CONTINUITY-01",
+      "priority": "P2",
+      "status": "confirmed",
+      "title": "An unfinished diagnostic cannot be resumed on a later date",
+      "observed": "A valid yesterday readiness run containing one saved answer remains in stored progress, but today the UI offers Start my check with no resume or history control. The view selects only the current date's assessment key.",
+      "impact": "The pause/resume promise does not match a learner returning the next day. This is an access/continuity defect, not demonstrated deletion of the old answers.",
+      "source": ["app/learning/practice-tools.tsx:258", "app/learning/practice-tools.tsx:304", "app/learning/portal.tsx:736"],
+      "evidence": ["work/reliability-audit/reproduce.mjs", "work/reliability-audit/results.jsonl"],
+      "acceptance": "An unfinished prior-date check can be resumed, with a separate explicit new-check action. Completed checks remain inspectable and midnight behavior is tested."
+    },
+    {
+      "id": "NAV-01",
+      "priority": "P2",
+      "status": "confirmed; root cause not yet established",
+      "title": "A cross-route navigation sequence duplicates the Practice tools menu",
+      "observed": "Fresh mobile context: Games, Let’s play, Practice tools, Grammar lab, same-page hash navigation to Programmes, Make this my programme, Open today’s timed route. Two practice-menu elements persist after 1.5 seconds. Reproduced twice; a simpler main-navigation loop retains one.",
+      "source": ["app/learning/portal.tsx:389"],
+      "evidence": ["work/scope-audit/interaction-observations.json", "work/scope-audit/mobile-programme-today.png", "work/scope-audit/interact-stable.mjs", "work/scope-audit/nav-recheck.json"],
+      "acceptance": "Exactly one tools menu remains after the reproduced sequence, repeated transitions and browser back/forward."
+    },
+    {
+      "id": "UX-01",
+      "priority": "P2",
+      "status": "observed design issue",
+      "title": "Spacious layouts still require excessive scrolling before starting",
+      "observed": "In a fresh 390 by 844 English context, Today's first session button starts at y=923 on a 3433px page. The Programmes selection action starts at y=2144 on an 8763px page. Multiple session, itinerary, game and short-lesson entry points compete.",
+      "impact": "Whitespace avoids visual cramping but does not resolve decision load or discoverability for a mid-A1 learner.",
+      "source": ["app/learning/portal.tsx:471", "app/learning/academy.tsx:1394", "app/learning/academy.tsx:1498"],
+      "evidence": ["work/scope-audit/observations.json", "work/scope-audit/mobile-today.png", "work/scope-audit/mobile-programmes.png"],
+      "acceptance": "A short top-level card exposes the current programme/day and primary start action promptly on a phone. Full syllabuses and optional activities use progressive disclosure; a real beginner can choose the next action unaided."
+    },
+    {
+      "id": "RELEASE-01",
+      "priority": "P2",
+      "status": "confirmed",
+      "title": "The current live expansion lacks a complete committed source revision and daily-build CI gate",
+      "observed": "HEAD is the October 18 daily-lessons commit. Academy/arcade sources and tests are untracked alongside modified tracked files. ci/checks.py validates the legacy Vinext build command, rather than the maintained build:daily target that produces site-dist.",
+      "impact": "A fresh checkout of the committed revision cannot reproduce the current deployed app. Existing release hashes and rollback artifacts help operations but do not replace a complete source revision.",
+      "source": ["ci/checks.py:38", "ci/checks.py:51", "package.json", "docs/deployment-arcade-2026-10-20.json"],
+      "clarification": "The npm test glob can include newly committed tests; the finding is not that CI necessarily excludes every academy/arcade test.",
+      "acceptance": "All intended application sources and tests are reviewed and committed. CI verifies test:daily, typecheck, lint and build:daily from a clean checkout. Each release records the source revision and artifact digest, and retains a known rollback."
+    },
+    {
+      "id": "IMPORT-01",
+      "priority": "P3",
+      "status": "confirmed synthetic edge case",
+      "title": "A zero-question imported assessment receives positive completion feedback",
+      "observed": "An assessment with exerciseIds=[], answers={} and completed=true passes progress parsing and renders 0/0 first answers correct with A promising grammar snapshot.",
+      "source": ["app/learning/academy-engine.ts:523", "app/learning/academy-engine.ts:539", "app/learning/practice-tools.tsx:433"],
+      "evidence": ["work/reliability-audit/results.jsonl"],
+      "acceptance": "Import validation requires a nonempty valid item set for completed assessments. Zero valid questions can never produce favorable attainment feedback."
+    },
+    {
+      "id": "SCOPE-01",
+      "priority": "P3",
+      "status": "design tradeoff",
+      "title": "Navigation and programme defaults do not fully reflect the stated learner",
+      "observed": "Seven persistent navigation items prioritize the original class path. On a 390px phone, Progress is partially offscreen and Materials needs horizontal scrolling, while Grammar is inside a generic tools menu. Programmes initially displays the 14-day intensive route at the default 30-minute budget; the supported 28-day option is available but not recommended first.",
+      "clarification": "These destinations remain reachable, and intensive timing is explained. This is a hierarchy and fit issue, not a broken-link claim.",
+      "source": ["app/learning/portal.css:2367", "app/learning/academy.tsx:1347"],
+      "acceptance": "Recommend the supported route for the stated mid-A1 learner. Keep intensive as a deliberate choice and validate a simpler Learn/Practice/Progress hierarchy before adding more destinations."
+    },
+    {
+      "id": "MAINTAIN-01",
+      "priority": "P3",
+      "status": "future content-change risk",
+      "title": "Arcade word progress IDs depend on array position",
+      "observed": "Word item IDs contain bank ID and array index. Inserting or reordering entries could associate saved progress with another word.",
+      "source": ["app/learning/arcade-catalogue.ts:20"],
+      "acceptance": "Use stable authored word IDs with a migration before reordering or inserting bank content."
+    },
+    {
+      "id": "MAINTAIN-02",
+      "priority": "P3",
+      "status": "maintainability and performance risk; no demonstrated current storage failure",
+      "title": "Large route components and whole-progress synchronous saves need a bounded maintenance plan",
+      "observed": "Several components contain hundreds or thousands of lines. Progress is parsed and serialized on each persisted edit. Session and assessment histories are not bounded like some attempt and round records.",
+      "counterEvidence": "A synthetic full-course progress fixture of 2,980,598 characters saved successfully in fresh Chromium. The observed production JS transfer was about 263KB encoded and 1.49MB decoded; this audit did not establish a slow-device performance failure.",
+      "source": ["app/learning/portal.tsx:199", "app/learning/academy.tsx", "app/learning/enriched.tsx", "app/learning/practice-tools.tsx"],
+      "evidence": ["work/reliability-audit/results.jsonl", "work/app-audit/live-answer-contract.json"],
+      "acceptance": "Extract route responsibilities when consolidating the journey, preserve save reliability while limiting redundant work, define history retention, and benchmark realistic progress on a slower phone before claiming performance readiness."
+    }
+  ],
+  "recommendedOrder": [
+    "Fix misleading answer feedback and next-day diagnostic continuation.",
+    "Unify Today with the selected programme and remove duplicate navigation rendering.",
+    "Shorten the mobile start path and make optional material progressively discoverable.",
+    "Capture a clean source revision and automate the actual daily deployment build.",
+    "Run a real mid-A1 learner task study across several days; have an Italian teacher sample feedback and accepted variants.",
+    "Only then decide whether another feature addresses an observed learning need."
+  ],
+  "learningClaims": {
+    "assessment": "The app correctly describes readiness as a grammar snapshot. Successful grammar checks alone do not establish full A2 readiness across listening, reading, spoken interaction, spoken production and writing.",
+    "source": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-2-cefr-3.3-common-reference-levels-self-assessment-grid",
+    "remainingValidation": "Independent teaching review, authentic listening and interaction, and real learner outcomes."
+  }
+}

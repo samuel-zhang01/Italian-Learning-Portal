@@ -1,0 +1,136 @@
+{
+  "reviewedOn": "2026-10-20",
+  "objective": "Expand Parliamo for mid-A1 learners with detailed source-linked practice, guided plans up to 60 minutes, intensive A1 revision and A2 preparation; preserve existing progress and verify the full journey.",
+  "status": "pass",
+  "acceptance": {
+    "requiredPerAudit": 19,
+    "checksPerAudit": 20,
+    "thresholdOutOf10": 9.5,
+    "unresolvedCriticalOrHigh": 0,
+    "meaning": "Each score is an internal observable acceptance-check result. No human learner satisfaction study, external teacher certification or measured learning outcome is claimed."
+  },
+  "audits": [
+    {
+      "role": "student",
+      "passed": 20,
+      "total": 20,
+      "scoreOutOf10": 10,
+      "evidence": "docs/student-audit-academy.json"
+    },
+    {
+      "role": "lecturer",
+      "passed": 20,
+      "total": 20,
+      "scoreOutOf10": 10,
+      "evidence": "docs/lecturer-audit.json"
+    },
+    {
+      "role": "ui-ux",
+      "passed": 20,
+      "total": 20,
+      "scoreOutOf10": 10,
+      "evidence": "docs/ui-ux-audit.json"
+    }
+  ],
+  "scope": {
+    "stableMissions": 36,
+    "grammarUnits": 28,
+    "coreA1Units": 25,
+    "stretchUnits": 3,
+    "controlledExercises": 224,
+    "teachingSections": 112,
+    "workedExamples": 84,
+    "grammarWordEntries": 168,
+    "existingVocabularyBanks": 18,
+    "existingVocabularyEntries": 144,
+    "onlineResources": 11,
+    "programmes": {
+      "intensive-a1": 14,
+      "supported-a1": 28,
+      "grammar-repair": 10
+    },
+    "dailyMinuteChoices": [
+      5,
+      10,
+      15,
+      20,
+      30,
+      45,
+      60
+    ],
+    "sourceFiles": 48,
+    "physicalPages": 936,
+    "practicePageCards": 730,
+    "referencePageCards": 206,
+    "distinctOriginalCompanionPatterns": 113
+  },
+  "requiredChecks": {
+    "npm run typecheck": "pass",
+    "npm run test:daily": "26/26 pass",
+    "npm run lint": "pass",
+    "npm run build:daily": "pass"
+  },
+  "rootBrowserVerification": {
+    "target": "Built site-dist static preview, with isolated synthetic learner contexts",
+    "script": "scripts/audit_academy_browser.mjs",
+    "checks": [
+      "all seven budgets produce exact itinerary totals, correct session stages and persistent duration snapshots",
+      "changing the time budget caps today's blocks and preserves active or older session steps",
+      "all three active programmes combine the right number of grammar blocks and required core mission within 30/45/60-minute budgets",
+      "both twelve-question diagnostics preserve wrong first answers, resume after reload, explain corrections and retain results",
+      "saved vocabulary persists and an unsuccessful self-rated recall returns tomorrow without repeat credit",
+      "large academy backups reach a detailed restore preview; invalid replacements clear stale previews without overwriting work",
+      "core and new planning/diagnostic routes fit desktop, 390px and 320px in both languages",
+      "no browser runtime errors across the audited journeys"
+    ],
+    "runtimeErrors": []
+  },
+  "retainedJourneyVerification": [
+    "All 36 original enrichment scene answers checked in the browser.",
+    "Full guided 30-minute session including correction, saved production, vocabulary and badge passed.",
+    "Legacy core lesson, failed review, validated backup restore, two-tab updates and EN/IT mobile journeys passed.",
+    "Blocked storage, quota exhaustion and corrupt stored progress recovery passed."
+  ],
+  "rootRepairs": [
+    "Expanded time controls wrap on phones; the first daily-session action precedes the optional tool directory.",
+    "Programme recipes now budget required grammar and one core mission together, including two-unit intensive days and three-unit repair days.",
+    "Existing sessions retain original duration and mission. When the budget changes, suggested blocks are capped at the new goal; old sessions without duration retain 30 minutes.",
+    "Grammar corrections and same-day retries after feedback remain assisted; a later blind recall can become independent. Dated hint evidence survives reload.",
+    "A completed eight-question grammar workshop credits 15 estimated minutes, including reading and personal production.",
+    "Backup import boundaries now accept up to 8 MB and were tested with a complete notebook larger than 2 MB. Restore previews include academy counts; selecting an invalid replacement clears a stale preview.",
+    "Personal vocabulary retains example sentences when entries overlap between banks and grammar, and exposes further catalogue entries with Show 24 more."
+  ],
+  "independence": "The source agent independently reviewed the grammar author’s content; the grammar author independently exercised root engine/student behavior; the UI author audited its interface and root independently tested the assembled build. Root separately reviewed 22 companion cards. Broader companion drafting and source classification include author self-review.",
+  "limits": [
+    "Page coverage is not 936 unique exercises; repeated physical sources reuse 113 original practice patterns.",
+    "Controlled exercises use exact matching with authored alternatives. Free production, companion responses and word-memory ratings are self-assessments.",
+    "Both diagnostics test selected grammar and preserve first submitted answers. Unsubmitted diagnostic text is not saved; speaking/listening placement needs separate judgement.",
+    "Programme switching restarts its day checklist while preserving learned units and core missions. Study-day duration is an estimate and can span multiple sittings.",
+    "Browser checks cover Chromium, representative routes and widths 1440/390/320. No full screen-reader session, native mobile device study or human learner timing trial was performed.",
+    "The build reports a large-chunk advisory: approximately 325 kB gzip JavaScript with the full original content catalogue. It builds successfully; mobile-network performance was not benchmarked.",
+    "External resources may change or require JavaScript/embedded media consent. Original practice remains available inside the app."
+  ],
+  "privacyAndRelease": {
+    "progressVersion": 1,
+    "stableStorageKey": "parliamo-daily-v1",
+    "sourceArchivesPublished": false,
+    "learnerDatabasesModified": false,
+    "deploymentPerformed": true,
+    "artifactDirectory": "site-dist",
+    "releaseState": "Deployed to the existing custom domain and verified over public HTTPS.",
+    "release": "20261020T105743Z-academy",
+    "deploymentEvidence": "docs/deployment-2026-10-20.json"
+  },
+  "contentHashes": {
+    "app/learning/curriculum.json": "003f519a10469b2fe35fbdf299ccb2970037800fef20ea50a4589ca2d78a5b86",
+    "app/learning/grammar.json": "610582f95ede24f2cc6d3da63fb4f2159dc57ec706f7d83487ac16981f78edf8",
+    "app/learning/companion.json": "fc1c02b727321f68e1ce24b5161e7c2ce8be9c9e4e6b49d81d475feb01875e2b",
+    "app/learning/enrichment.json": "cc344c5745e6b40bae1cc513cabe968abd09f946129818e6820a6bfde9f13be7"
+  },
+  "artifactHashes": {
+    "site-dist/assets/index-CDo0HU4k.css": "6d9148b4bc6db4d7f949db2254be77fad0c2657e4d9b34519f543ef7c52c4d0b",
+    "site-dist/assets/index-CY15MBCK.js": "41018cd67ab57f4405915e3de0d0d71b5679ab046934e90267441ac051f969c7",
+    "site-dist/favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "site-dist/index.html": "20755b6b7944a1ccc0a06d3dd91ccbd2e974a9adf7ca49061e7521035838b6bc"
+  }
+}

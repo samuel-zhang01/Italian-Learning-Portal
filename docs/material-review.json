@@ -414,5 +414,46 @@
         "present-yourself"
       ]
     }
-  ]
+  ],
+  "companion_enrichment": {
+    "reviewed_on": "2026-10-19",
+    "scope": "Original mid-A1 companion material for all existing missions; existing private-source review and exact source citations unchanged. No newly supplied class files were reviewed.",
+    "guided_sessions": 36,
+    "vocabulary_banks": 18,
+    "vocabulary_entries": 144,
+    "original_scenes": 36,
+    "external_resources": 7,
+    "approach": [
+      "Recall before reveal; feedback and original examples; retain the existing 1/3/7/14-day core review schedule.",
+      "One guided topic per 30-minute study day with sentence frames and short, self-checked output.",
+      "Optional A1 online activities have bounded tasks; original scenes remain usable independently.",
+      "Advanced course topics are supported stretch practice, not a claim that a mid-A1 learner has mastered them."
+    ],
+    "new_source_coverage": false,
+    "external_resource_catalogue": "app/learning/enrichment.json"
+  },
+  "academy_refresh": {
+    "reviewed_on": "2026-10-20",
+    "source_files": 48,
+    "physical_pages_or_slides": 936,
+    "new_deck": "Course 3/Grammar_ A1.pptx",
+    "new_deck_slides": 78,
+    "grammar_units": 28,
+    "controlled_exercises": 224,
+    "teaching_sections": 112,
+    "worked_examples": 84,
+    "page_companions": {
+      "practice": 730,
+      "reference": 206,
+      "distinct_original_patterns": 113
+    },
+    "programmes": [
+      14,
+      28,
+      10
+    ],
+    "source_coverage_evidence": "docs/source-coverage.json",
+    "external_resources": 11,
+    "scope_note": "This refresh supersedes the earlier page-coverage limitation; historical47-source review remains above. Page companions are original parallel practice, not reproduced source worksheets or teacher-reviewed answer keys."
+  }
 }

@@ -85,5 +85,49 @@
     "Production writing is self-checked and stored, not semantically graded.",
     "Tests ran in Chromium; Safari/Firefox and physical screen-reader sessions were not run.",
     "All 36 lessons have schema, translation and source-bound checks; full interactive completion was exercised on a representative lesson."
-  ]
+  ],
+  "enrichment_audit": {
+    "date": "2026-10-19",
+    "environment": "Local static daily app; isolated Chromium browser-view runtime on CDP port 9224, separate synthetic contexts; no production learner records used.",
+    "unit_tests": 13,
+    "checks": {
+      "typecheck": "pass",
+      "lint": "pass",
+      "static_build": "pass",
+      "existing_browser_audit": "all 9 scenarios pass",
+      "storage_audit": "blocked, quota and corrupt scenarios pass",
+      "guided_browser_audit": [
+        "guided topic remains pinned after core completion and returns to vocabulary",
+        "six quests complete a 30-minute day with eight vocabulary attempts, correction, draft reload and badge",
+        "replaying a completed activity does not duplicate completion",
+        "vocabulary search selects a matching bank and flashcards reveal the Italian",
+        "all 36 enrichment scenes accept their authored comprehension answers in the browser",
+        "all enriched screens fit 390px and 320px in EN and IT",
+        "no browser runtime errors"
+      ],
+      "targeted_followup": "Session conversation notebook rendered saved notes; selected quest background and small-label colours verified in Chromium after the style fix."
+    },
+    "preservation": "All original 36 mission IDs, content and source references match the previous curriculum exactly; old version-1 backups are accepted without a migration or loss of records.",
+    "fixes": [
+      "Textareas now keep explicit accessible names after a reload with a saved value.",
+      "The guided calendar retains today’s topic after its core lesson is completed.",
+      "Core-lesson and scheduled-review credit are not counted twice within a 30-minute session.",
+      "The narrow navigation scrolls inside its own container; enriched pages fit 320px and 390px.",
+      "Selected quest styles are scoped separately from the original plan controls so their small time labels stay readable."
+    ],
+    "limits": [
+      "External resource pages and topic metadata were checked online; actual third-party media playback and regional availability were not exhaustively tested.",
+      "Device speech synthesis remains optional and was not assessed for pronunciation quality.",
+      "No human learning-outcome study or CEFR assessment is claimed.",
+      "The changes have been built locally; this audit does not claim a new production deployment."
+    ]
+  },
+  "academy_refresh": {
+    "reviewedOn": "2026-10-20",
+    "summary": "All three requested internal acceptance audits passed 20/20 checks; root integration passed 26 automated tests and compiled-browser journeys. Full limits and evidence in the linked reports.",
+    "report": "docs/academy-audit.json",
+    "student": "docs/student-audit-academy.json",
+    "lecturer": "docs/lecturer-audit.json",
+    "uiUx": "docs/ui-ux-audit.json"
+  }
 }

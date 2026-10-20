@@ -1,0 +1,112 @@
+{
+  "release": "20261020T203951Z-arcade",
+  "releaseDirectory": "/data/italian/releases/20261020T203951Z-arcade",
+  "previousReleaseDirectory": "/data/italian/releases/20261020T105743Z-academy",
+  "activatedAt": "2026-10-20T20:39:56.766104+00:00",
+  "artifactHashes": {
+    "assets/index-DDQ4XWIi.js": "3325f9c5f02492efe7e9e8dd5d053058960828485c865fca5466db9dcb114ffb",
+    "assets/index-Lb7K_cYI.css": "6f2af82a8579ff9d50faff1dd034932d46251e7d22bb6ab79b53aa1829b79d32",
+    "favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "index.html": "cac4633b9fb651d128443b32278d60e902f87c2aed7371f78f877177fe37ea66"
+  },
+  "remoteHashVerification": "pass",
+  "status": "deployed-and-verified",
+  "scope": "Only the four site-dist files were uploaded; previous release retained.",
+  "url": "https://italian.samuelzhang.co.uk/#games",
+  "verifiedAt": "2026-10-20T20:41:05.741026+00:00",
+  "publicHttpsVerification": [
+    {
+      "path": "assets/index-DDQ4XWIi.js",
+      "httpsFetch": "pass",
+      "hashMatch": true
+    },
+    {
+      "path": "assets/index-Lb7K_cYI.css",
+      "httpsFetch": "pass",
+      "hashMatch": true
+    },
+    {
+      "path": "favicon.svg",
+      "httpsFetch": "pass",
+      "hashMatch": true
+    },
+    {
+      "path": "index.html",
+      "httpsFetch": "pass",
+      "hashMatch": false,
+      "currentAssetReferences": true
+    }
+  ],
+  "liveBrowserVerification": {
+    "url": "https://italian.samuelzhang.co.uk",
+    "checkedAt": "2026-10-20T20:40:22.324Z",
+    "checks": [
+      "Today has one game entry; tool menus and game settings start collapsed",
+      "words: complete round, single question, hint/correction evidence, reload and valid backup",
+      "builder: complete round, single question, hint/correction evidence, reload and valid backup",
+      "detective: complete round, single question, hint/correction evidence, reload and valid backup",
+      "conversation: complete round, single question, hint/correction evidence, reload and valid backup",
+      "Italian typed builder preserves word clues and draft; accent keyboard inserts Italian characters",
+      "Recall mode keeps necessary choices for paired vocabulary and choice-dependent grammar",
+      "Word saving, pause/resume, cancel early-end and explicit early-end retain submitted practice",
+      "English and Italian at 320, 390 and 1440 pixels fit without overflow; new targets are at least 44px",
+      "Keyboard-only game selection and answering work; feedback receives focus",
+      "No browser runtime errors in audited journeys"
+    ],
+    "errors": [],
+    "syntheticProgressOnly": true
+  },
+  "localBrowserVerification": {
+    "url": "http://127.0.0.1:5197",
+    "checkedAt": "2026-10-20T20:38:44.156Z",
+    "checks": [
+      "Today has one game entry; tool menus and game settings start collapsed",
+      "words: complete round, single question, hint/correction evidence, reload and valid backup",
+      "builder: complete round, single question, hint/correction evidence, reload and valid backup",
+      "detective: complete round, single question, hint/correction evidence, reload and valid backup",
+      "conversation: complete round, single question, hint/correction evidence, reload and valid backup",
+      "Italian typed builder preserves word clues and draft; accent keyboard inserts Italian characters",
+      "Recall mode keeps necessary choices for paired vocabulary and choice-dependent grammar",
+      "Word saving, pause/resume, cancel early-end and explicit early-end retain submitted practice",
+      "English and Italian at 320, 390 and 1440 pixels fit without overflow; new targets are at least 44px",
+      "Keyboard-only game selection and answering work; feedback receives focus",
+      "No browser runtime errors in audited journeys"
+    ],
+    "errors": [],
+    "syntheticProgressOnly": true
+  },
+  "requiredChecks": {
+    "npm run typecheck": "pass",
+    "npm run lint": "pass",
+    "npm run test:daily": "37/37 pass",
+    "npm run build:daily": "pass"
+  },
+  "content": {
+    "gameModes": 4,
+    "reusedVocabularyEntries": 144,
+    "reusedSentenceBuilders": 28,
+    "reusedGrammarDetectiveQuestions": 101,
+    "newConversationScenes": 8,
+    "newConversationQuestions": 24
+  },
+  "audits": {
+    "report": "docs/arcade-peer-audit.json",
+    "student": "20/20",
+    "lecturer": "20/20",
+    "ui": "20/20",
+    "meaning": "Observable internal acceptance checks, not measured learning effectiveness or human/native-speaker assessment."
+  },
+  "privacy": {
+    "rawCourseFilesPublished": false,
+    "learnerDatabasesModified": false,
+    "browserStorageKey": "parliamo-daily-v1",
+    "progressVersion": 1
+  },
+  "limitations": [
+    "Responsive Chromium checks, not a physical-device or multi-browser certification.",
+    "Device speech is optional synthetic pronunciation; a listening exam is not claimed.",
+    "The existing source companion data remains bundled; the build reports a large-chunk warning (approximately 338 KB gzip JavaScript).",
+    "Cloudflare modifies public HTML; remote HTML hash and public current asset references are verified."
+  ],
+  "rollback": "Atomically restore the retained academy release target at /data/italian/current inside the existing static-site container."
+}

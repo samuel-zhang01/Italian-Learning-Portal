@@ -16,7 +16,7 @@
     "db:generate": "drizzle-kit generate",
     "dev:daily": "vite --config vite.static.config.ts",
     "build:daily": "vite build --config vite.static.config.ts && cp public/favicon.svg site-dist/favicon.svg",
-    "test:daily": "node --experimental-strip-types --test tests/learning.test.mjs"
+    "test:daily": "node --experimental-strip-types --test tests/learning.test.mjs tests/academy.test.mjs tests/arcade.test.mjs tests/answer-contract.test.mjs"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

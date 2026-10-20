@@ -1,17 +1,21 @@
 import type { Draft, Mission, Progress } from "./types.ts";
+import {
+  SESSION_ORDER,
+  sessionActivities,
+  sessionLayout,
+  sessionCredit,
+  sessionDone,
+} from "./study.ts";
+import { addDays, dayKey, validDate } from "./learning-utils.ts";
+import { academyMinutes, validateAcademy } from "./academy-engine.ts";
+import { validateArcade } from "./arcade-engine.ts";
+export { addDays, dayKey, normalise, isCorrect } from "./learning-utils.ts";
 export const STORAGE_KEY = "parliamo-daily-v1";
-export const dayKey = (date = new Date()) =>
-  `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
-export function addDays(date: string, days: number) {
-  const d = new Date(`${date}T12:00:00`);
-  d.setDate(d.getDate() + days);
-  return dayKey(d);
-}
 export const emptyProgress = (): Progress => ({
   version: 1,
   language: "en",
   translations: true,
-  plan: { minutes: 10, days: [1, 2, 3, 4, 5], start: dayKey(), course: 1 },
+  plan: { minutes: 30, days: [1, 2, 3, 4, 5], start: dayKey(), course: 1 },
   completed: {},
   drafts: {},
   reviews: {},
@@ -28,18 +32,6 @@ export const emptyDraft = (): Draft => ({
   rubric: [false, false],
   modelSeen: false,
 });
-// Keep Italian accents meaningful: e (and) and è (is) are different words.
-export const normalise = (s: string) =>
-  s
-    .trim()
-    .normalize("NFC")
-    .toLocaleLowerCase("it")
-    .replace(/[’‘]/g, "'")
-    .replace(/[.!?,;:]+$/g, "")
-    .replace(/\s+/g, " ")
-    .trim();
-export const isCorrect = (input: string, answers: string[]) =>
-  answers.some((a) => normalise(a) === normalise(input));
 export function dueReviews(p: Progress, today = dayKey()) {
   return Object.entries(p.reviews)
     .filter(([id, r]) => p.completed[id] && r.due <= today)
@@ -118,7 +110,9 @@ export function nextMission(p: Progress, missions: Mission[]) {
 export function dailyMinutes(p: Progress, today = dayKey()) {
   return (
     Object.values(p.completed).filter((c) => c.date === today).length * 5 +
-    p.reviewLog.filter((r) => r.date === today).length * 2
+    p.reviewLog.filter((r) => r.date === today).length * 2 +
+    sessionCredit(p, today) +
+    academyMinutes(p, today)
   );
 }
 export function schedule(
@@ -146,24 +140,48 @@ export function schedule(
           p.completed[id] && r.due <= date && !plannedReviews.has(id),
       )
       .sort((a, b) => a[1].due.localeCompare(b[1].due))
-      .slice(0, Math.floor(budget / 2))
+      .slice(
+        0,
+        p.plan.minutes >= 20
+          ? Math.min(
+              Math.floor(sessionLayout(p.plan.minutes).warmup / 2),
+              Math.floor(budget / 2),
+            )
+          : Math.floor(budget / 2),
+      )
       .map(([id]) => id);
     due.forEach((id) => plannedReviews.add(id));
-    const slots = Math.floor((budget - due.length * 2) / 5);
-    const items = pending.slice(index, index + slots);
-    index += items.length;
-    return { date, active, items, due };
+    const slots =
+      p.plan.minutes >= 20
+        ? Math.min(1, Math.floor((budget - due.length * 2) / 5))
+        : Math.floor((budget - due.length * 2) / 5);
+    const pinned =
+      i === 0 &&
+      p.plan.minutes >= 20 &&
+      budget > 0 &&
+      sessionDone(p, today).length <
+        sessionActivities(
+          p.sessions?.[today]?.duration ?? Math.min(30, p.plan.minutes),
+        ).length
+        ? missions.find((m) => m.id === p.sessions?.[today]?.missionId)
+        : undefined;
+    const items = pinned ? [pinned] : pending.slice(index, index + slots);
+    index += items.filter((m) => !p.completed[m.id]).length;
+    return {
+      date,
+      active,
+      items,
+      due,
+      guided: p.plan.minutes >= 20 && active && budget > 0,
+      budget,
+    };
   });
 }
-const validDate = (s: unknown): s is string =>
-  typeof s === "string" &&
-  /^\d{4}-\d{2}-\d{2}$/.test(s) &&
-  dayKey(new Date(`${s}T12:00:00`)) === s;
 const object = (x: unknown): x is Record<string, unknown> =>
   !!x && typeof x === "object" && !Array.isArray(x);
 // A strict import boundary prevents a malformed backup from breaking the learning journey.
 export function parseProgress(raw: string, ids: string[]): Progress {
-  if (raw.length > 2_000_000) throw new Error("size");
+  if (raw.length > 8_000_000) throw new Error("size");
   const x = JSON.parse(raw);
   const allowed = new Set(ids);
   const integer = (n: unknown, min: number, max: number) =>
@@ -175,7 +193,8 @@ export function parseProgress(raw: string, ids: string[]): Progress {
     typeof x.translations !== "boolean" ||
     !object(x.plan) ||
     !(
-      typeof x.plan.minutes === "number" && [5, 10, 15].includes(x.plan.minutes)
+      typeof x.plan.minutes === "number" &&
+      [5, 10, 15, 20, 30, 45, 60].includes(x.plan.minutes)
     ) ||
     !(typeof x.plan.course === "number" && [1, 2, 3].includes(x.plan.course)) ||
     !validDate(x.plan.start) ||
@@ -248,5 +267,32 @@ export function parseProgress(raw: string, ids: string[]): Progress {
     )
   )
     throw new Error("log");
+  if (x.sessions !== undefined) {
+    if (!object(x.sessions)) throw new Error("sessions");
+    for (const [date, s] of Object.entries(x.sessions)) {
+      if (
+        !validDate(date) ||
+        !object(s) ||
+        !allowed.has(String(s.missionId)) ||
+        (s.duration !== undefined &&
+          (typeof s.duration !== "number" ||
+            ![5, 10, 15, 20, 30].includes(s.duration))) ||
+        !Array.isArray(s.done) ||
+        s.done.length > 6 ||
+        new Set(s.done).size !== s.done.length ||
+        !s.done.every((a) => SESSION_ORDER.includes(a)) ||
+        ![s.warmup, s.inputAnswer, s.speaking, s.exit].every(
+          (v) => typeof v === "string" && v.length <= 2000,
+        ) ||
+        !Array.isArray(s.recalled) ||
+        s.recalled.length > 20 ||
+        new Set(s.recalled).size !== s.recalled.length ||
+        !s.recalled.every((v) => typeof v === "string" && v.length <= 200)
+      )
+        throw new Error("session");
+    }
+  }
+  if (x.academy !== undefined) validateAcademy(x.academy);
+  if (x.arcade !== undefined) validateArcade(x.arcade);
   return x as unknown as Progress;
 }

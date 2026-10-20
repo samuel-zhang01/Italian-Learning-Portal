@@ -1,0 +1,3817 @@
+{
+  "reviewedOn": "2026-10-20",
+  "banks": [
+    {
+      "id": "survival",
+      "title": {
+        "en": "Conversation helpers",
+        "it": "Parole per cavarsela"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "hi / bye (informal)",
+            "it": "ciao"
+          },
+          "example": {
+            "en": "Hi, I am Anna.",
+            "it": "Ciao, sono Anna."
+          },
+          "id": "word:survival:0"
+        },
+        {
+          "term": {
+            "en": "good morning / good day",
+            "it": "buongiorno"
+          },
+          "example": {
+            "en": "Good morning, madam.",
+            "it": "Buongiorno, signora."
+          },
+          "id": "word:survival:1"
+        },
+        {
+          "term": {
+            "en": "my name is",
+            "it": "mi chiamo"
+          },
+          "example": {
+            "en": "My name is Luca.",
+            "it": "Mi chiamo Luca."
+          },
+          "id": "word:survival:2"
+        },
+        {
+          "term": {
+            "en": "nice to meet you",
+            "it": "piacere"
+          },
+          "example": {
+            "en": "Nice to meet you, I am Eva.",
+            "it": "Piacere, sono Eva."
+          },
+          "id": "word:survival:3"
+        },
+        {
+          "term": {
+            "en": "please",
+            "it": "per favore"
+          },
+          "example": {
+            "en": "A coffee, please.",
+            "it": "Un caffè, per favore."
+          },
+          "id": "word:survival:4"
+        },
+        {
+          "term": {
+            "en": "thank you",
+            "it": "grazie"
+          },
+          "example": {
+            "en": "Thank you for the help.",
+            "it": "Grazie per l'aiuto."
+          },
+          "id": "word:survival:5"
+        },
+        {
+          "term": {
+            "en": "I don't understand",
+            "it": "non capisco"
+          },
+          "example": {
+            "en": "Sorry, I don't understand.",
+            "it": "Scusa, non capisco."
+          },
+          "id": "word:survival:6"
+        },
+        {
+          "term": {
+            "en": "can you repeat? (informal)",
+            "it": "puoi ripetere?"
+          },
+          "example": {
+            "en": "Can you repeat, please?",
+            "it": "Puoi ripetere, per favore?"
+          },
+          "id": "word:survival:7"
+        }
+      ]
+    },
+    {
+      "id": "identity",
+      "title": {
+        "en": "Where I am from",
+        "it": "Da dove vengo"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "I am from (a city)",
+            "it": "sono di"
+          },
+          "example": {
+            "en": "I am from Rome.",
+            "it": "Sono di Roma."
+          },
+          "id": "word:identity:0"
+        },
+        {
+          "term": {
+            "en": "I live in (a city)",
+            "it": "abito a"
+          },
+          "example": {
+            "en": "I live in London.",
+            "it": "Abito a Londra."
+          },
+          "id": "word:identity:1"
+        },
+        {
+          "term": {
+            "en": "I come from",
+            "it": "vengo da"
+          },
+          "example": {
+            "en": "I come from Milan.",
+            "it": "Vengo da Milano."
+          },
+          "id": "word:identity:2"
+        },
+        {
+          "term": {
+            "en": "in Italy",
+            "it": "in Italia"
+          },
+          "example": {
+            "en": "I study in Italy.",
+            "it": "Studio in Italia."
+          },
+          "id": "word:identity:3"
+        },
+        {
+          "term": {
+            "en": "Italian (masculine / feminine)",
+            "it": "italiano / italiana"
+          },
+          "example": {
+            "en": "Luca is Italian. Eva is Italian.",
+            "it": "Luca è italiano. Eva è italiana."
+          },
+          "id": "word:identity:4"
+        },
+        {
+          "term": {
+            "en": "English (singular)",
+            "it": "inglese"
+          },
+          "example": {
+            "en": "Anna is English.",
+            "it": "Anna è inglese."
+          },
+          "id": "word:identity:5"
+        },
+        {
+          "term": {
+            "en": "French (singular)",
+            "it": "francese"
+          },
+          "example": {
+            "en": "Paul is French.",
+            "it": "Paul è francese."
+          },
+          "id": "word:identity:6"
+        },
+        {
+          "term": {
+            "en": "the city",
+            "it": "la città"
+          },
+          "example": {
+            "en": "Rome is an Italian city.",
+            "it": "Roma è una città italiana."
+          },
+          "id": "word:identity:7"
+        }
+      ]
+    },
+    {
+      "id": "numbers",
+      "title": {
+        "en": "Numbers and age",
+        "it": "Numeri ed età"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "one (masculine / feminine)",
+            "it": "uno / una"
+          },
+          "example": {
+            "en": "One coffee and one pizza.",
+            "it": "Un caffè e una pizza."
+          },
+          "id": "word:numbers:0"
+        },
+        {
+          "term": {
+            "en": "two",
+            "it": "due"
+          },
+          "example": {
+            "en": "I have two books.",
+            "it": "Ho due libri."
+          },
+          "id": "word:numbers:1"
+        },
+        {
+          "term": {
+            "en": "three",
+            "it": "tre"
+          },
+          "example": {
+            "en": "There are three of us.",
+            "it": "Siamo in tre."
+          },
+          "id": "word:numbers:2"
+        },
+        {
+          "term": {
+            "en": "ten",
+            "it": "dieci"
+          },
+          "example": {
+            "en": "It is ten o'clock.",
+            "it": "Sono le dieci."
+          },
+          "id": "word:numbers:3"
+        },
+        {
+          "term": {
+            "en": "twenty",
+            "it": "venti"
+          },
+          "example": {
+            "en": "I have twenty euros.",
+            "it": "Ho venti euro."
+          },
+          "id": "word:numbers:4"
+        },
+        {
+          "term": {
+            "en": "twenty-one",
+            "it": "ventuno"
+          },
+          "example": {
+            "en": "I am twenty-one years old.",
+            "it": "Ho ventuno anni."
+          },
+          "id": "word:numbers:5"
+        },
+        {
+          "term": {
+            "en": "thirty",
+            "it": "trenta"
+          },
+          "example": {
+            "en": "I study for thirty minutes.",
+            "it": "Studio per trenta minuti."
+          },
+          "id": "word:numbers:6"
+        },
+        {
+          "term": {
+            "en": "how old are you? (informal)",
+            "it": "quanti anni hai?"
+          },
+          "example": {
+            "en": "Hi! How old are you?",
+            "it": "Ciao! Quanti anni hai?"
+          },
+          "id": "word:numbers:7"
+        }
+      ]
+    },
+    {
+      "id": "things",
+      "title": {
+        "en": "Everyday things",
+        "it": "Oggetti quotidiani"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "the book",
+            "it": "il libro"
+          },
+          "example": {
+            "en": "The book is here.",
+            "it": "Il libro è qui."
+          },
+          "id": "word:things:0"
+        },
+        {
+          "term": {
+            "en": "the pen",
+            "it": "la penna"
+          },
+          "example": {
+            "en": "The pen is blue.",
+            "it": "La penna è blu."
+          },
+          "id": "word:things:1"
+        },
+        {
+          "term": {
+            "en": "the student (masculine)",
+            "it": "lo studente"
+          },
+          "example": {
+            "en": "The student reads.",
+            "it": "Lo studente legge."
+          },
+          "id": "word:things:2"
+        },
+        {
+          "term": {
+            "en": "the friend (feminine)",
+            "it": "l'amica"
+          },
+          "example": {
+            "en": "Eva's friend is here.",
+            "it": "L'amica di Eva è qui."
+          },
+          "id": "word:things:3"
+        },
+        {
+          "term": {
+            "en": "a notebook",
+            "it": "un quaderno"
+          },
+          "example": {
+            "en": "I have a notebook.",
+            "it": "Ho un quaderno."
+          },
+          "id": "word:things:4"
+        },
+        {
+          "term": {
+            "en": "a bag",
+            "it": "una borsa"
+          },
+          "example": {
+            "en": "This is a bag.",
+            "it": "Questa è una borsa."
+          },
+          "id": "word:things:5"
+        },
+        {
+          "term": {
+            "en": "the books",
+            "it": "i libri"
+          },
+          "example": {
+            "en": "The books are on the table.",
+            "it": "I libri sono sul tavolo."
+          },
+          "id": "word:things:6"
+        },
+        {
+          "term": {
+            "en": "the keys",
+            "it": "le chiavi"
+          },
+          "example": {
+            "en": "Where are the keys?",
+            "it": "Dove sono le chiavi?"
+          },
+          "id": "word:things:7"
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "title": {
+        "en": "Work and study",
+        "it": "Lavoro e studio"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "work / the job",
+            "it": "il lavoro"
+          },
+          "example": {
+            "en": "Work starts at nine.",
+            "it": "Il lavoro inizia alle nove."
+          },
+          "id": "word:work:0"
+        },
+        {
+          "term": {
+            "en": "I study",
+            "it": "studio"
+          },
+          "example": {
+            "en": "I study Italian.",
+            "it": "Studio italiano."
+          },
+          "id": "word:work:1"
+        },
+        {
+          "term": {
+            "en": "I work",
+            "it": "lavoro"
+          },
+          "example": {
+            "en": "I work in an office.",
+            "it": "Lavoro in un ufficio."
+          },
+          "id": "word:work:2"
+        },
+        {
+          "term": {
+            "en": "the teacher",
+            "it": "l'insegnante"
+          },
+          "example": {
+            "en": "The teacher speaks slowly.",
+            "it": "L'insegnante parla piano."
+          },
+          "id": "word:work:3"
+        },
+        {
+          "term": {
+            "en": "the doctor (masculine)",
+            "it": "il medico"
+          },
+          "example": {
+            "en": "Paolo is a doctor.",
+            "it": "Paolo è medico."
+          },
+          "id": "word:work:4"
+        },
+        {
+          "term": {
+            "en": "the colleague (feminine)",
+            "it": "la collega"
+          },
+          "example": {
+            "en": "The colleague is called Eva.",
+            "it": "La collega si chiama Eva."
+          },
+          "id": "word:work:5"
+        },
+        {
+          "term": {
+            "en": "the office",
+            "it": "l'ufficio"
+          },
+          "example": {
+            "en": "The office is in the centre.",
+            "it": "L'ufficio è in centro."
+          },
+          "id": "word:work:6"
+        },
+        {
+          "term": {
+            "en": "the break",
+            "it": "la pausa"
+          },
+          "example": {
+            "en": "I take a break at eleven.",
+            "it": "Faccio una pausa alle undici."
+          },
+          "id": "word:work:7"
+        }
+      ]
+    },
+    {
+      "id": "cafe",
+      "title": {
+        "en": "At the café",
+        "it": "Al bar"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "an espresso / a coffee",
+            "it": "un caffè"
+          },
+          "example": {
+            "en": "I would like a coffee.",
+            "it": "Vorrei un caffè."
+          },
+          "id": "word:cafe:0"
+        },
+        {
+          "term": {
+            "en": "a cappuccino",
+            "it": "un cappuccino"
+          },
+          "example": {
+            "en": "A cappuccino, please.",
+            "it": "Un cappuccino, per favore."
+          },
+          "id": "word:cafe:1"
+        },
+        {
+          "term": {
+            "en": "a breakfast pastry",
+            "it": "un cornetto"
+          },
+          "example": {
+            "en": "I will have a breakfast pastry.",
+            "it": "Prendo un cornetto."
+          },
+          "id": "word:cafe:2"
+        },
+        {
+          "term": {
+            "en": "a water",
+            "it": "un'acqua"
+          },
+          "example": {
+            "en": "I would like a still water.",
+            "it": "Vorrei un'acqua naturale."
+          },
+          "id": "word:cafe:3"
+        },
+        {
+          "term": {
+            "en": "I would like",
+            "it": "vorrei"
+          },
+          "example": {
+            "en": "I would like a tea.",
+            "it": "Vorrei un tè."
+          },
+          "id": "word:cafe:4"
+        },
+        {
+          "term": {
+            "en": "how much does it cost?",
+            "it": "quanto costa?"
+          },
+          "example": {
+            "en": "How much does the cappuccino cost?",
+            "it": "Quanto costa il cappuccino?"
+          },
+          "id": "word:cafe:5"
+        },
+        {
+          "term": {
+            "en": "the bill",
+            "it": "il conto"
+          },
+          "example": {
+            "en": "The bill, please.",
+            "it": "Il conto, per favore."
+          },
+          "id": "word:cafe:6"
+        },
+        {
+          "term": {
+            "en": "for me",
+            "it": "per me"
+          },
+          "example": {
+            "en": "A coffee for me.",
+            "it": "Per me un caffè."
+          },
+          "id": "word:cafe:7"
+        }
+      ]
+    },
+    {
+      "id": "habits",
+      "title": {
+        "en": "Things I do",
+        "it": "Cose che faccio"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "to speak",
+            "it": "parlare"
+          },
+          "example": {
+            "en": "I speak Italian.",
+            "it": "Parlo italiano."
+          },
+          "id": "word:habits:0"
+        },
+        {
+          "term": {
+            "en": "to listen",
+            "it": "ascoltare"
+          },
+          "example": {
+            "en": "I listen to a song.",
+            "it": "Ascolto una canzone."
+          },
+          "id": "word:habits:1"
+        },
+        {
+          "term": {
+            "en": "to read",
+            "it": "leggere"
+          },
+          "example": {
+            "en": "I read a book.",
+            "it": "Leggo un libro."
+          },
+          "id": "word:habits:2"
+        },
+        {
+          "term": {
+            "en": "to take / have",
+            "it": "prendere"
+          },
+          "example": {
+            "en": "I have a coffee.",
+            "it": "Prendo un caffè."
+          },
+          "id": "word:habits:3"
+        },
+        {
+          "term": {
+            "en": "to sleep",
+            "it": "dormire"
+          },
+          "example": {
+            "en": "I sleep well.",
+            "it": "Dormo bene."
+          },
+          "id": "word:habits:4"
+        },
+        {
+          "term": {
+            "en": "I like (one thing / an activity)",
+            "it": "mi piace"
+          },
+          "example": {
+            "en": "I like reading.",
+            "it": "Mi piace leggere."
+          },
+          "id": "word:habits:5"
+        },
+        {
+          "term": {
+            "en": "I like (plural things)",
+            "it": "mi piacciono"
+          },
+          "example": {
+            "en": "I like books.",
+            "it": "Mi piacciono i libri."
+          },
+          "id": "word:habits:6"
+        },
+        {
+          "term": {
+            "en": "every day",
+            "it": "ogni giorno"
+          },
+          "example": {
+            "en": "I study every day.",
+            "it": "Studio ogni giorno."
+          },
+          "id": "word:habits:7"
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "title": {
+        "en": "Time and plans",
+        "it": "Ore e programmi"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "today",
+            "it": "oggi"
+          },
+          "example": {
+            "en": "Today I am studying.",
+            "it": "Oggi studio."
+          },
+          "id": "word:time:0"
+        },
+        {
+          "term": {
+            "en": "tomorrow",
+            "it": "domani"
+          },
+          "example": {
+            "en": "Tomorrow I am working.",
+            "it": "Domani lavoro."
+          },
+          "id": "word:time:1"
+        },
+        {
+          "term": {
+            "en": "the morning / in the morning",
+            "it": "la mattina"
+          },
+          "example": {
+            "en": "In the morning I drink a coffee.",
+            "it": "La mattina bevo un caffè."
+          },
+          "id": "word:time:2"
+        },
+        {
+          "term": {
+            "en": "the evening / in the evening",
+            "it": "la sera"
+          },
+          "example": {
+            "en": "In the evening I read.",
+            "it": "La sera leggo."
+          },
+          "id": "word:time:3"
+        },
+        {
+          "term": {
+            "en": "at eight o'clock",
+            "it": "alle otto"
+          },
+          "example": {
+            "en": "We will meet at eight.",
+            "it": "Ci vediamo alle otto."
+          },
+          "id": "word:time:4"
+        },
+        {
+          "term": {
+            "en": "at noon",
+            "it": "a mezzogiorno"
+          },
+          "example": {
+            "en": "I eat at noon.",
+            "it": "Mangio a mezzogiorno."
+          },
+          "id": "word:time:5"
+        },
+        {
+          "term": {
+            "en": "what time is it?",
+            "it": "che ore sono?"
+          },
+          "example": {
+            "en": "Excuse me, what time is it?",
+            "it": "Scusa, che ore sono?"
+          },
+          "id": "word:time:6"
+        },
+        {
+          "term": {
+            "en": "when?",
+            "it": "quando?"
+          },
+          "example": {
+            "en": "When are we leaving?",
+            "it": "Quando partiamo?"
+          },
+          "id": "word:time:7"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": {
+        "en": "Rooms and places",
+        "it": "Stanze e luoghi"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "the house / home",
+            "it": "la casa"
+          },
+          "example": {
+            "en": "The house is small.",
+            "it": "La casa è piccola."
+          },
+          "id": "word:home:0"
+        },
+        {
+          "term": {
+            "en": "the kitchen",
+            "it": "la cucina"
+          },
+          "example": {
+            "en": "The kitchen is bright.",
+            "it": "La cucina è luminosa."
+          },
+          "id": "word:home:1"
+        },
+        {
+          "term": {
+            "en": "the bedroom / room",
+            "it": "la camera"
+          },
+          "example": {
+            "en": "The bedroom is big.",
+            "it": "La camera è grande."
+          },
+          "id": "word:home:2"
+        },
+        {
+          "term": {
+            "en": "the bathroom",
+            "it": "il bagno"
+          },
+          "example": {
+            "en": "The bathroom is on the right.",
+            "it": "Il bagno è a destra."
+          },
+          "id": "word:home:3"
+        },
+        {
+          "term": {
+            "en": "the table",
+            "it": "il tavolo"
+          },
+          "example": {
+            "en": "The book is on the table.",
+            "it": "Il libro è sul tavolo."
+          },
+          "id": "word:home:4"
+        },
+        {
+          "term": {
+            "en": "the chair",
+            "it": "la sedia"
+          },
+          "example": {
+            "en": "The chair is near the table.",
+            "it": "La sedia è vicino al tavolo."
+          },
+          "id": "word:home:5"
+        },
+        {
+          "term": {
+            "en": "there is",
+            "it": "c'è"
+          },
+          "example": {
+            "en": "There is a window.",
+            "it": "C'è una finestra."
+          },
+          "id": "word:home:6"
+        },
+        {
+          "term": {
+            "en": "there are",
+            "it": "ci sono"
+          },
+          "example": {
+            "en": "There are two chairs.",
+            "it": "Ci sono due sedie."
+          },
+          "id": "word:home:7"
+        }
+      ]
+    },
+    {
+      "id": "hotel",
+      "title": {
+        "en": "Staying somewhere",
+        "it": "In albergo"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "a room",
+            "it": "una camera"
+          },
+          "example": {
+            "en": "I would like a room.",
+            "it": "Vorrei una camera."
+          },
+          "id": "word:hotel:0"
+        },
+        {
+          "term": {
+            "en": "two nights",
+            "it": "due notti"
+          },
+          "example": {
+            "en": "I am staying for two nights.",
+            "it": "Resto per due notti."
+          },
+          "id": "word:hotel:1"
+        },
+        {
+          "term": {
+            "en": "the booking",
+            "it": "la prenotazione"
+          },
+          "example": {
+            "en": "I have a booking.",
+            "it": "Ho una prenotazione."
+          },
+          "id": "word:hotel:2"
+        },
+        {
+          "term": {
+            "en": "breakfast",
+            "it": "la colazione"
+          },
+          "example": {
+            "en": "Is breakfast included?",
+            "it": "La colazione è inclusa?"
+          },
+          "id": "word:hotel:3"
+        },
+        {
+          "term": {
+            "en": "the key",
+            "it": "la chiave"
+          },
+          "example": {
+            "en": "The key does not work.",
+            "it": "La chiave non funziona."
+          },
+          "id": "word:hotel:4"
+        },
+        {
+          "term": {
+            "en": "it does not work",
+            "it": "non funziona"
+          },
+          "example": {
+            "en": "The shower does not work.",
+            "it": "La doccia non funziona."
+          },
+          "id": "word:hotel:5"
+        },
+        {
+          "term": {
+            "en": "can you help me? (formal)",
+            "it": "può aiutarmi?"
+          },
+          "example": {
+            "en": "Excuse me, can you help me?",
+            "it": "Scusi, può aiutarmi?"
+          },
+          "id": "word:hotel:6"
+        },
+        {
+          "term": {
+            "en": "hot water",
+            "it": "l'acqua calda"
+          },
+          "example": {
+            "en": "There is no hot water.",
+            "it": "Non c'è acqua calda."
+          },
+          "id": "word:hotel:7"
+        }
+      ]
+    },
+    {
+      "id": "routine",
+      "title": {
+        "en": "My daily routine",
+        "it": "La mia giornata"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "I wake up",
+            "it": "mi sveglio"
+          },
+          "example": {
+            "en": "I wake up at seven.",
+            "it": "Mi sveglio alle sette."
+          },
+          "id": "word:routine:0"
+        },
+        {
+          "term": {
+            "en": "I get up",
+            "it": "mi alzo"
+          },
+          "example": {
+            "en": "I get up at ten past seven.",
+            "it": "Mi alzo alle sette e dieci."
+          },
+          "id": "word:routine:1"
+        },
+        {
+          "term": {
+            "en": "I wash myself",
+            "it": "mi lavo"
+          },
+          "example": {
+            "en": "I wash my hands.",
+            "it": "Mi lavo le mani."
+          },
+          "id": "word:routine:2"
+        },
+        {
+          "term": {
+            "en": "I have breakfast",
+            "it": "faccio colazione"
+          },
+          "example": {
+            "en": "I have breakfast at home.",
+            "it": "Faccio colazione a casa."
+          },
+          "id": "word:routine:3"
+        },
+        {
+          "term": {
+            "en": "I go out / leave",
+            "it": "esco"
+          },
+          "example": {
+            "en": "I leave at eight.",
+            "it": "Esco alle otto."
+          },
+          "id": "word:routine:4"
+        },
+        {
+          "term": {
+            "en": "first / before",
+            "it": "prima"
+          },
+          "example": {
+            "en": "First I have breakfast.",
+            "it": "Prima faccio colazione."
+          },
+          "id": "word:routine:5"
+        },
+        {
+          "term": {
+            "en": "then",
+            "it": "poi"
+          },
+          "example": {
+            "en": "Then I go to work.",
+            "it": "Poi vado al lavoro."
+          },
+          "id": "word:routine:6"
+        },
+        {
+          "term": {
+            "en": "I fall asleep",
+            "it": "mi addormento"
+          },
+          "example": {
+            "en": "I fall asleep at eleven.",
+            "it": "Mi addormento alle undici."
+          },
+          "id": "word:routine:7"
+        }
+      ]
+    },
+    {
+      "id": "family",
+      "title": {
+        "en": "People close to me",
+        "it": "Le persone vicine"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "my mother",
+            "it": "mia madre"
+          },
+          "example": {
+            "en": "My mother lives in Rome.",
+            "it": "Mia madre abita a Roma."
+          },
+          "id": "word:family:0"
+        },
+        {
+          "term": {
+            "en": "my father",
+            "it": "mio padre"
+          },
+          "example": {
+            "en": "My father works here.",
+            "it": "Mio padre lavora qui."
+          },
+          "id": "word:family:1"
+        },
+        {
+          "term": {
+            "en": "my sister",
+            "it": "mia sorella"
+          },
+          "example": {
+            "en": "My sister studies.",
+            "it": "Mia sorella studia."
+          },
+          "id": "word:family:2"
+        },
+        {
+          "term": {
+            "en": "my brother",
+            "it": "mio fratello"
+          },
+          "example": {
+            "en": "My brother is twenty years old.",
+            "it": "Mio fratello ha venti anni."
+          },
+          "id": "word:family:3"
+        },
+        {
+          "term": {
+            "en": "my parents",
+            "it": "i miei genitori"
+          },
+          "example": {
+            "en": "My parents are at home.",
+            "it": "I miei genitori sono a casa."
+          },
+          "id": "word:family:4"
+        },
+        {
+          "term": {
+            "en": "a friend (masculine)",
+            "it": "un amico"
+          },
+          "example": {
+            "en": "A friend is coming to dinner.",
+            "it": "Un amico viene a cena."
+          },
+          "id": "word:family:5"
+        },
+        {
+          "term": {
+            "en": "the family",
+            "it": "la famiglia"
+          },
+          "example": {
+            "en": "My family is small.",
+            "it": "La mia famiglia è piccola."
+          },
+          "id": "word:family:6"
+        },
+        {
+          "term": {
+            "en": "how is he / she? or how are you? (formal)",
+            "it": "come sta?"
+          },
+          "example": {
+            "en": "How is your mother?",
+            "it": "Tua madre come sta?"
+          },
+          "id": "word:family:7"
+        }
+      ]
+    },
+    {
+      "id": "town",
+      "title": {
+        "en": "Around town",
+        "it": "In città"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "the station",
+            "it": "la stazione"
+          },
+          "example": {
+            "en": "The station is nearby.",
+            "it": "La stazione è vicina."
+          },
+          "id": "word:town:0"
+        },
+        {
+          "term": {
+            "en": "the pharmacy",
+            "it": "la farmacia"
+          },
+          "example": {
+            "en": "I am looking for a pharmacy.",
+            "it": "Cerco una farmacia."
+          },
+          "id": "word:town:1"
+        },
+        {
+          "term": {
+            "en": "to the right",
+            "it": "a destra"
+          },
+          "example": {
+            "en": "Turn right.",
+            "it": "Gira a destra."
+          },
+          "id": "word:town:2"
+        },
+        {
+          "term": {
+            "en": "to the left",
+            "it": "a sinistra"
+          },
+          "example": {
+            "en": "Turn left.",
+            "it": "Gira a sinistra."
+          },
+          "id": "word:town:3"
+        },
+        {
+          "term": {
+            "en": "straight ahead",
+            "it": "sempre dritto"
+          },
+          "example": {
+            "en": "Go straight ahead.",
+            "it": "Vai sempre dritto."
+          },
+          "id": "word:town:4"
+        },
+        {
+          "term": {
+            "en": "near",
+            "it": "vicino a"
+          },
+          "example": {
+            "en": "The café is near the station.",
+            "it": "Il bar è vicino alla stazione."
+          },
+          "id": "word:town:5"
+        },
+        {
+          "term": {
+            "en": "where is it?",
+            "it": "dov'è?"
+          },
+          "example": {
+            "en": "Where is the pharmacy?",
+            "it": "Dov'è la farmacia?"
+          },
+          "id": "word:town:6"
+        },
+        {
+          "term": {
+            "en": "on foot",
+            "it": "a piedi"
+          },
+          "example": {
+            "en": "I go on foot.",
+            "it": "Vado a piedi."
+          },
+          "id": "word:town:7"
+        }
+      ]
+    },
+    {
+      "id": "plans",
+      "title": {
+        "en": "Can, want and need",
+        "it": "Posso, voglio e devo"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "I can / may",
+            "it": "posso"
+          },
+          "example": {
+            "en": "May I come in?",
+            "it": "Posso entrare?"
+          },
+          "id": "word:plans:0"
+        },
+        {
+          "term": {
+            "en": "you can (informal)",
+            "it": "puoi"
+          },
+          "example": {
+            "en": "Can you come tomorrow?",
+            "it": "Puoi venire domani?"
+          },
+          "id": "word:plans:1"
+        },
+        {
+          "term": {
+            "en": "I want",
+            "it": "voglio"
+          },
+          "example": {
+            "en": "I want to learn Italian.",
+            "it": "Voglio imparare l'italiano."
+          },
+          "id": "word:plans:2"
+        },
+        {
+          "term": {
+            "en": "I have to / must",
+            "it": "devo"
+          },
+          "example": {
+            "en": "I have to study.",
+            "it": "Devo studiare."
+          },
+          "id": "word:plans:3"
+        },
+        {
+          "term": {
+            "en": "to go",
+            "it": "andare"
+          },
+          "example": {
+            "en": "I have to go home.",
+            "it": "Devo andare a casa."
+          },
+          "id": "word:plans:4"
+        },
+        {
+          "term": {
+            "en": "to come",
+            "it": "venire"
+          },
+          "example": {
+            "en": "Do you want to come to the cinema?",
+            "it": "Vuoi venire al cinema?"
+          },
+          "id": "word:plans:5"
+        },
+        {
+          "term": {
+            "en": "together",
+            "it": "insieme"
+          },
+          "example": {
+            "en": "We study together.",
+            "it": "Studiamo insieme."
+          },
+          "id": "word:plans:6"
+        },
+        {
+          "term": {
+            "en": "okay / that works",
+            "it": "va bene"
+          },
+          "example": {
+            "en": "At eight? That works!",
+            "it": "Alle otto? Va bene!"
+          },
+          "id": "word:plans:7"
+        }
+      ]
+    },
+    {
+      "id": "past",
+      "title": {
+        "en": "A little about yesterday",
+        "it": "Un po’ di ieri"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "yesterday",
+            "it": "ieri"
+          },
+          "example": {
+            "en": "Yesterday I studied.",
+            "it": "Ieri ho studiato."
+          },
+          "id": "word:past:0"
+        },
+        {
+          "term": {
+            "en": "I ate / have eaten",
+            "it": "ho mangiato"
+          },
+          "example": {
+            "en": "I ate a pizza.",
+            "it": "Ho mangiato una pizza."
+          },
+          "id": "word:past:1"
+        },
+        {
+          "term": {
+            "en": "I visited / have visited",
+            "it": "ho visitato"
+          },
+          "example": {
+            "en": "I visited Rome.",
+            "it": "Ho visitato Roma."
+          },
+          "id": "word:past:2"
+        },
+        {
+          "term": {
+            "en": "I worked / have worked",
+            "it": "ho lavorato"
+          },
+          "example": {
+            "en": "I worked at home.",
+            "it": "Ho lavorato a casa."
+          },
+          "id": "word:past:3"
+        },
+        {
+          "term": {
+            "en": "I went (masculine / feminine)",
+            "it": "sono andato / andata"
+          },
+          "example": {
+            "en": "I went to the cinema (female speaker).",
+            "it": "Sono andata al cinema."
+          },
+          "id": "word:past:4"
+        },
+        {
+          "term": {
+            "en": "I arrived (masculine / feminine)",
+            "it": "sono arrivato / arrivata"
+          },
+          "example": {
+            "en": "I arrived at eight (male speaker).",
+            "it": "Sono arrivato alle otto."
+          },
+          "id": "word:past:5"
+        },
+        {
+          "term": {
+            "en": "because / why",
+            "it": "perché"
+          },
+          "example": {
+            "en": "I study because I like it.",
+            "it": "Studio perché mi piace."
+          },
+          "id": "word:past:6"
+        },
+        {
+          "term": {
+            "en": "but",
+            "it": "ma"
+          },
+          "example": {
+            "en": "I am tired, but I am happy.",
+            "it": "Sono stanco, ma sono contento."
+          },
+          "id": "word:past:7"
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": {
+        "en": "Food and quantities",
+        "it": "Cibo e quantità"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "bread",
+            "it": "il pane"
+          },
+          "example": {
+            "en": "I buy bread.",
+            "it": "Compro il pane."
+          },
+          "id": "word:food:0"
+        },
+        {
+          "term": {
+            "en": "milk",
+            "it": "il latte"
+          },
+          "example": {
+            "en": "I would like a litre of milk.",
+            "it": "Vorrei un litro di latte."
+          },
+          "id": "word:food:1"
+        },
+        {
+          "term": {
+            "en": "apples",
+            "it": "le mele"
+          },
+          "example": {
+            "en": "I buy two apples.",
+            "it": "Compro due mele."
+          },
+          "id": "word:food:2"
+        },
+        {
+          "term": {
+            "en": "a kilogram of",
+            "it": "un chilo di"
+          },
+          "example": {
+            "en": "I would like a kilogram of apples.",
+            "it": "Vorrei un chilo di mele."
+          },
+          "id": "word:food:3"
+        },
+        {
+          "term": {
+            "en": "a hundred grams of",
+            "it": "un etto di"
+          },
+          "example": {
+            "en": "A hundred grams of cheese, please.",
+            "it": "Un etto di formaggio, per favore."
+          },
+          "id": "word:food:4"
+        },
+        {
+          "term": {
+            "en": "cheese",
+            "it": "il formaggio"
+          },
+          "example": {
+            "en": "I like cheese.",
+            "it": "Mi piace il formaggio."
+          },
+          "id": "word:food:5"
+        },
+        {
+          "term": {
+            "en": "pasta",
+            "it": "la pasta"
+          },
+          "example": {
+            "en": "The pasta is good.",
+            "it": "La pasta è buona."
+          },
+          "id": "word:food:6"
+        },
+        {
+          "term": {
+            "en": "without",
+            "it": "senza"
+          },
+          "example": {
+            "en": "A coffee without sugar.",
+            "it": "Un caffè senza zucchero."
+          },
+          "id": "word:food:7"
+        }
+      ]
+    },
+    {
+      "id": "clothes",
+      "title": {
+        "en": "Clothes and descriptions",
+        "it": "Vestiti e descrizioni"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "the T-shirt",
+            "it": "la maglietta"
+          },
+          "example": {
+            "en": "The T-shirt is blue.",
+            "it": "La maglietta è blu."
+          },
+          "id": "word:clothes:0"
+        },
+        {
+          "term": {
+            "en": "the trousers",
+            "it": "i pantaloni"
+          },
+          "example": {
+            "en": "The trousers are black.",
+            "it": "I pantaloni sono neri."
+          },
+          "id": "word:clothes:1"
+        },
+        {
+          "term": {
+            "en": "the shoes",
+            "it": "le scarpe"
+          },
+          "example": {
+            "en": "The shoes are comfortable.",
+            "it": "Le scarpe sono comode."
+          },
+          "id": "word:clothes:2"
+        },
+        {
+          "term": {
+            "en": "the size (clothing)",
+            "it": "la taglia"
+          },
+          "example": {
+            "en": "What size do you wear? (formal)",
+            "it": "Che taglia porta?"
+          },
+          "id": "word:clothes:3"
+        },
+        {
+          "term": {
+            "en": "red (masculine / feminine)",
+            "it": "rosso / rossa"
+          },
+          "example": {
+            "en": "The bag is red.",
+            "it": "La borsa è rossa."
+          },
+          "id": "word:clothes:4"
+        },
+        {
+          "term": {
+            "en": "big / large (singular)",
+            "it": "grande"
+          },
+          "example": {
+            "en": "The room is large.",
+            "it": "La camera è grande."
+          },
+          "id": "word:clothes:5"
+        },
+        {
+          "term": {
+            "en": "small (masculine / feminine)",
+            "it": "piccolo / piccola"
+          },
+          "example": {
+            "en": "The table is small.",
+            "it": "Il tavolo è piccolo."
+          },
+          "id": "word:clothes:6"
+        },
+        {
+          "term": {
+            "en": "can I try it on?",
+            "it": "posso provare?"
+          },
+          "example": {
+            "en": "Can I try on this T-shirt?",
+            "it": "Posso provare questa maglietta?"
+          },
+          "id": "word:clothes:7"
+        }
+      ]
+    },
+    {
+      "id": "body",
+      "title": {
+        "en": "Body and care",
+        "it": "Corpo e cura"
+      },
+      "words": [
+        {
+          "term": {
+            "en": "the hand / hands",
+            "it": "la mano / le mani"
+          },
+          "example": {
+            "en": "I wash my hands.",
+            "it": "Mi lavo le mani."
+          },
+          "id": "word:body:0"
+        },
+        {
+          "term": {
+            "en": "the tooth / teeth",
+            "it": "il dente / i denti"
+          },
+          "example": {
+            "en": "I brush my teeth.",
+            "it": "Mi lavo i denti."
+          },
+          "id": "word:body:1"
+        },
+        {
+          "term": {
+            "en": "the head",
+            "it": "la testa"
+          },
+          "example": {
+            "en": "My head hurts.",
+            "it": "Mi fa male la testa."
+          },
+          "id": "word:body:2"
+        },
+        {
+          "term": {
+            "en": "the face",
+            "it": "il viso"
+          },
+          "example": {
+            "en": "I wash my face.",
+            "it": "Mi lavo il viso."
+          },
+          "id": "word:body:3"
+        },
+        {
+          "term": {
+            "en": "hair",
+            "it": "i capelli"
+          },
+          "example": {
+            "en": "I wash my hair.",
+            "it": "Mi lavo i capelli."
+          },
+          "id": "word:body:4"
+        },
+        {
+          "term": {
+            "en": "the shower",
+            "it": "la doccia"
+          },
+          "example": {
+            "en": "I take a shower.",
+            "it": "Faccio la doccia."
+          },
+          "id": "word:body:5"
+        },
+        {
+          "term": {
+            "en": "soap",
+            "it": "il sapone"
+          },
+          "example": {
+            "en": "Where is the soap?",
+            "it": "Dov'è il sapone?"
+          },
+          "id": "word:body:6"
+        },
+        {
+          "term": {
+            "en": "the toothbrush",
+            "it": "lo spazzolino"
+          },
+          "example": {
+            "en": "The toothbrush is in the bathroom.",
+            "it": "Lo spazzolino è in bagno."
+          },
+          "id": "word:body:7"
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "missionId": "say-hello",
+      "bank": "survival",
+      "notes": [
+        {
+          "en": "Use ciao with friends and buongiorno with someone you do not know. Mi chiamo gives your name; sono can introduce your name or role. Keep Come ti chiami? as one useful chunk.",
+          "it": "Usa ciao con gli amici e buongiorno con una persona che non conosci. Mi chiamo introduce il nome; sono può introdurre il nome o il ruolo. Impara Come ti chiami? come espressione intera."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Hi! My name is Nina. And you?",
+          "it": "A: Ciao! Mi chiamo Nina. E tu?"
+        },
+        {
+          "en": "B: I am Leo. Nice to meet you!",
+          "it": "B: Sono Leo. Piacere!"
+        },
+        {
+          "en": "A: Nice to meet you, Leo. Do you study Italian?",
+          "it": "A: Piacere, Leo. Studi italiano?"
+        },
+        {
+          "en": "B: Yes. Can you repeat, please?",
+          "it": "B: Sì. Puoi ripetere, per favore?"
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What is the first speaker called? Write only the name.",
+          "it": "Come si chiama la prima persona? Scrivi solo il nome."
+        },
+        "answers": [
+          "Nina"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: Nina.",
+          "it": "Cerca questo dettaglio nella scena: Nina."
+        }
+      },
+      "frame": {
+        "en": "Hi, my name is ___. And you? Nice to meet you!",
+        "it": "Ciao, mi chiamo ___. E tu? Piacere!"
+      },
+      "speaking": {
+        "en": "Play both roles: greet, give your name, ask the other name. Then ask for repetition. Change the names on the second try.",
+        "it": "Interpreta entrambi i ruoli: saluta, dì il nome e chiedi il nome. Poi chiedi di ripetere. Cambia i nomi al secondo giro."
+      },
+      "resource": "rai"
+    },
+    {
+      "missionId": "where-from",
+      "bank": "identity",
+      "notes": [
+        {
+          "en": "Separate origin from residence: sono di + city, abito a + city. Countries normally use in for residence. You can come from one place and live in another.",
+          "it": "Distingui origine e residenza: sono di + città, abito a + città. Con i paesi si usa normalmente in per la residenza. Puoi venire da un posto e abitare in un altro."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Where are you from, Sara?",
+          "it": "A: Di dove sei, Sara?"
+        },
+        {
+          "en": "B: I am from Turin, but I live in London.",
+          "it": "B: Sono di Torino, ma abito a Londra."
+        },
+        {
+          "en": "A: Do you live in Italy, Marco?",
+          "it": "A: Abiti in Italia, Marco?"
+        },
+        {
+          "en": "C: Yes, I live in Bologna.",
+          "it": "C: Sì, abito a Bologna."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Where does Sara live? Write the city.",
+          "it": "Dove abita Sara? Scrivi la città."
+        },
+        "answers": [
+          "Londra",
+          "a Londra"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: Londra.",
+          "it": "Cerca questo dettaglio nella scena: Londra."
+        }
+      },
+      "frame": {
+        "en": "I am from ___, but I live in ___.",
+        "it": "Sono di ___, ma abito a ___."
+      },
+      "speaking": {
+        "en": "Use your own city or invent one. Ask and answer where two people come from and live.",
+        "it": "Usa la tua città oppure inventane una. Chiedi e dì da dove vengono e dove abitano due persone."
+      },
+      "resource": "nationality"
+    },
+    {
+      "missionId": "nationalities",
+      "bank": "identity",
+      "notes": [
+        {
+          "en": "Choose the adjective to match the person: Marco è italiano, Anna è italiana. Inglese and francese have the same singular form for both genders; their plural ends in -i.",
+          "it": "Scegli l’aggettivo in base alla persona: Marco è italiano, Anna è italiana. Inglese e francese hanno la stessa forma singolare nei due generi; al plurale finiscono in -i."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: This is Alice. She is French.",
+          "it": "A: Questa è Alice. È francese."
+        },
+        {
+          "en": "B: And Luca and Paolo?",
+          "it": "B: E Luca e Paolo?"
+        },
+        {
+          "en": "A: They are Italian. They live in Rome.",
+          "it": "A: Sono italiani. Abitano a Roma."
+        },
+        {
+          "en": "B: I am English and I live in Paris.",
+          "it": "B: Io sono inglese e abito a Parigi."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Complete from the scene: Alice è ___.",
+          "it": "Completa dalla scena: Alice è ___."
+        },
+        "answers": [
+          "francese"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: francese.",
+          "it": "Cerca questo dettaglio nella scena: francese."
+        }
+      },
+      "frame": {
+        "en": "___ is ___. ___ and ___ are ___.",
+        "it": "___ è ___. ___ e ___ sono ___."
+      },
+      "speaking": {
+        "en": "Introduce one person and then two people. Say each nationality slowly and check the ending.",
+        "it": "Presenta una persona e poi due persone. Dì ogni nazionalità lentamente e controlla la desinenza."
+      },
+      "resource": "nationality"
+    },
+    {
+      "missionId": "age-numbers",
+      "bank": "numbers",
+      "notes": [
+        {
+          "en": "Italian uses avere for age: ho venti anni. Ho means I have; hai means you have. Ventuno loses its final -o before anni: ventun anni; ventuno anni is also used.",
+          "it": "In italiano si usa avere per l’età: ho venti anni. Ho indica io; hai indica tu. Ventuno perde la -o davanti ad anni: ventun anni; si usa anche ventuno anni."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: How old are you, Eva?",
+          "it": "A: Quanti anni hai, Eva?"
+        },
+        {
+          "en": "B: I am twenty. And you?",
+          "it": "B: Ho venti anni. E tu?"
+        },
+        {
+          "en": "A: I am thirty.",
+          "it": "A: Ho trenta anni."
+        },
+        {
+          "en": "B: My brother is ten.",
+          "it": "B: Mio fratello ha dieci anni."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "How old is Eva? Write the number in Italian.",
+          "it": "Quanti anni ha Eva? Scrivi il numero in italiano."
+        },
+        "answers": [
+          "venti"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: venti.",
+          "it": "Cerca questo dettaglio nella scena: venti."
+        }
+      },
+      "frame": {
+        "en": "I am ___ years old. And you, how old are you?",
+        "it": "Ho ___ anni. E tu, quanti anni hai?"
+      },
+      "speaking": {
+        "en": "Count from one to ten, then say your real or invented age and a friend’s age.",
+        "it": "Conta da uno a dieci, poi dì la tua età reale o inventata e l’età di un amico."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "articles",
+      "bank": "things",
+      "notes": [
+        {
+          "en": "Learn each noun with its article. Il libro and la penna are useful pairs. Lo appears before words such as studente; l’ appears before a vowel. Una becomes un’ before a feminine vowel.",
+          "it": "Impara ogni nome con l’articolo. Il libro e la penna sono coppie utili. Si usa lo davanti a parole come studente; l’ davanti a una vocale. Una diventa un’ davanti a una vocale femminile."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Do you have a pen?",
+          "it": "A: Hai una penna?"
+        },
+        {
+          "en": "B: Yes, the pen is here.",
+          "it": "B: Sì, la penna è qui."
+        },
+        {
+          "en": "A: And the book?",
+          "it": "A: E il libro?"
+        },
+        {
+          "en": "B: The book is in the bag.",
+          "it": "B: Il libro è nella borsa."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Complete: ___ penna. Use the definite article.",
+          "it": "Completa: ___ penna. Usa l’articolo determinativo."
+        },
+        "answers": [
+          "la"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: la.",
+          "it": "Cerca questo dettaglio nella scena: la."
+        }
+      },
+      "frame": {
+        "en": "I have a ___. I have a ___. The ___ is here.",
+        "it": "Ho un ___. Ho una ___. Il / La ___ è qui."
+      },
+      "speaking": {
+        "en": "Point to four objects nearby. Say the article and noun, then make two short sentences.",
+        "it": "Indica quattro oggetti vicini. Dì articolo e nome, poi crea due frasi brevi."
+      },
+      "resource": "transfer"
+    },
+    {
+      "missionId": "jobs",
+      "bank": "work",
+      "notes": [
+        {
+          "en": "For a simple job label, sono insegnante or sono medico usually needs no article. Faccio l’insegnante is another pattern. Use studio if you are studying.",
+          "it": "Per indicare il lavoro, sono insegnante o sono medico di solito non richiede l’articolo. Faccio l’insegnante è un altro modello. Usa studio se stai studiando."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What do you do for work, Paolo?",
+          "it": "A: Che lavoro fai, Paolo?"
+        },
+        {
+          "en": "B: I am a doctor. And you?",
+          "it": "B: Sono medico. E tu?"
+        },
+        {
+          "en": "A: I study Italian and work in a café.",
+          "it": "A: Studio italiano e lavoro in un bar."
+        },
+        {
+          "en": "B: My colleague is a teacher.",
+          "it": "B: La mia collega è insegnante."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What is Paolo’s job? Write the Italian noun.",
+          "it": "Che lavoro fa Paolo? Scrivi il nome italiano."
+        },
+        "answers": [
+          "medico"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: medico.",
+          "it": "Cerca questo dettaglio nella scena: medico."
+        }
+      },
+      "frame": {
+        "en": "I am a ___. I work in ___. / I study ___.",
+        "it": "Sono ___. Lavoro in ___. / Studio ___."
+      },
+      "speaking": {
+        "en": "Describe your work or an invented job. Ask another person what they do, then answer as that person.",
+        "it": "Descrivi il tuo lavoro o un lavoro inventato. Chiedi a un’altra persona che lavoro fa, poi rispondi al suo posto."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "one-many",
+      "bank": "things",
+      "notes": [
+        {
+          "en": "Regular nouns often change -o to -i and -a to -e. Nouns ending in -e usually become -i. Caffè stays caffè; the number or article shows how many.",
+          "it": "I nomi regolari spesso cambiano -o in -i e -a in -e. I nomi in -e di solito diventano -i. Caffè resta caffè; il numero o l’articolo indica la quantità."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: There is one book in the bag.",
+          "it": "A: Nella borsa c’è un libro."
+        },
+        {
+          "en": "B: There are two books on the table.",
+          "it": "B: Sul tavolo ci sono due libri."
+        },
+        {
+          "en": "A: And the pens?",
+          "it": "A: E le penne?"
+        },
+        {
+          "en": "B: There are three pens and two coffees.",
+          "it": "B: Ci sono tre penne e due caffè."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "How do you say two books? Use the scene.",
+          "it": "Come si dice two books? Usa la scena."
+        },
+        "answers": [
+          "due libri"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: due libri.",
+          "it": "Cerca questo dettaglio nella scena: due libri."
+        }
+      },
+      "frame": {
+        "en": "One book, two ___. One pen, two ___.",
+        "it": "Un libro, due ___. Una penna, due ___."
+      },
+      "speaking": {
+        "en": "Make three one-to-two pairs using objects. Include one word that stays the same, such as caffè.",
+        "it": "Crea tre coppie da uno a due con gli oggetti. Includi una parola invariabile, come caffè."
+      },
+      "resource": "transfer"
+    },
+    {
+      "missionId": "coffee-order",
+      "bank": "cafe",
+      "notes": [
+        {
+          "en": "Vorrei is a useful polite chunk: I would like. You can order with just a noun + per favore. In an Italian bar, un caffè usually means an espresso.",
+          "it": "Vorrei è un’espressione cortese utile. Puoi ordinare anche con un nome + per favore. In un bar italiano, un caffè di solito è un espresso."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Good morning! I would like a cappuccino.",
+          "it": "A: Buongiorno! Vorrei un cappuccino."
+        },
+        {
+          "en": "B: And something to eat?",
+          "it": "B: E da mangiare?"
+        },
+        {
+          "en": "A: A breakfast pastry, please.",
+          "it": "A: Un cornetto, per favore."
+        },
+        {
+          "en": "B: Certainly. That is four euros.",
+          "it": "B: Certo. Sono quattro euro."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What drink is ordered? Write the noun with or without its article.",
+          "it": "Quale bevanda viene ordinata? Scrivi il nome con o senza articolo."
+        },
+        "answers": [
+          "cappuccino",
+          "un cappuccino"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: cappuccino.",
+          "it": "Cerca questo dettaglio nella scena: cappuccino."
+        }
+      },
+      "frame": {
+        "en": "Good morning. I would like ___ and ___, please. How much does it cost?",
+        "it": "Buongiorno. Vorrei ___ e ___, per favore. Quanto costa?"
+      },
+      "speaking": {
+        "en": "Order a drink and a snack. Swap roles and give an invented price. Repeat without the frame.",
+        "it": "Ordina una bevanda e uno spuntino. Cambia ruolo e indica un prezzo inventato. Ripeti senza il modello."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "regular-verbs",
+      "bank": "habits",
+      "notes": [
+        {
+          "en": "Start with io and tu: parlo/parli, prendo/prendi, dormo/dormi. Remove -are, -ere or -ire before adding the ending. Some -ire verbs add -isc-; learn those separately.",
+          "it": "Inizia con io e tu: parlo/parli, prendo/prendi, dormo/dormi. Togli -are, -ere o -ire prima di aggiungere la desinenza. Alcuni verbi in -ire aggiungono -isc-; imparali a parte."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Do you speak Italian every day?",
+          "it": "A: Parli italiano ogni giorno?"
+        },
+        {
+          "en": "B: Yes, I speak with a friend.",
+          "it": "B: Sì, parlo con un amico."
+        },
+        {
+          "en": "A: Do you have a coffee in the morning?",
+          "it": "A: Prendi un caffè la mattina?"
+        },
+        {
+          "en": "B: Yes, and I sleep well at night.",
+          "it": "B: Sì, e dormo bene la notte."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Complete from the scene: Io ___ con un amico.",
+          "it": "Completa dalla scena: Io ___ con un amico."
+        },
+        "answers": [
+          "parlo"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: parlo.",
+          "it": "Cerca questo dettaglio nella scena: parlo."
+        }
+      },
+      "frame": {
+        "en": "I speak ___. Do you speak ___? I have ___.",
+        "it": "Io parlo ___. Tu parli ___? Io prendo ___."
+      },
+      "speaking": {
+        "en": "Say three things you do. Turn each into a tu question; listen for the change from -o to -i.",
+        "it": "Dì tre cose che fai. Trasforma ciascuna in una domanda con tu; ascolta il passaggio da -o a -i."
+      },
+      "resource": "transfer"
+    },
+    {
+      "missionId": "free-time",
+      "bank": "habits",
+      "notes": [
+        {
+          "en": "A habit can be one short sentence: leggo la sera. Add ogni giorno, la mattina or la sera to show when. You can omit io because the verb ending identifies the speaker.",
+          "it": "Un’abitudine può essere una frase breve: leggo la sera. Aggiungi ogni giorno, la mattina o la sera per dire quando. Puoi omettere io perché la desinenza indica chi parla."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What do you do in the evening?",
+          "it": "A: Che cosa fai la sera?"
+        },
+        {
+          "en": "B: I read a book and listen to music.",
+          "it": "B: Leggo un libro e ascolto musica."
+        },
+        {
+          "en": "A: Do you study every day?",
+          "it": "A: Studi ogni giorno?"
+        },
+        {
+          "en": "B: Yes, I study Italian in the morning.",
+          "it": "B: Sì, studio italiano la mattina."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "When does the second speaker study? Write the Italian time phrase.",
+          "it": "Quando studia la seconda persona? Scrivi l’espressione di tempo italiana."
+        },
+        "answers": [
+          "la mattina"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: la mattina.",
+          "it": "Cerca questo dettaglio nella scena: la mattina."
+        }
+      },
+      "frame": {
+        "en": "In the morning I ___. In the evening I ___. Every day I ___.",
+        "it": "La mattina ___. La sera ___. Ogni giorno ___."
+      },
+      "speaking": {
+        "en": "Describe two real habits and one invented habit. Ask someone to guess which is invented. Alone? Answer in a second voice.",
+        "it": "Descrivi due abitudini vere e una inventata. Chiedi di indovinare quella inventata. Sei da solo? Rispondi con un’altra voce."
+      },
+      "resource": "hobby"
+    },
+    {
+      "missionId": "likes",
+      "bank": "habits",
+      "notes": [
+        {
+          "en": "Use mi piace with one thing or an infinitive: mi piace il caffè; mi piace leggere. Use mi piacciono with plural things: mi piacciono i libri.",
+          "it": "Usa mi piace con una cosa o un infinito: mi piace il caffè; mi piace leggere. Usa mi piacciono con cose plurali: mi piacciono i libri."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Do you like reading?",
+          "it": "A: Ti piace leggere?"
+        },
+        {
+          "en": "B: Yes, I like Italian books.",
+          "it": "B: Sì, mi piacciono i libri italiani."
+        },
+        {
+          "en": "A: And coffee?",
+          "it": "A: E il caffè?"
+        },
+        {
+          "en": "B: I do not like coffee. I like tea.",
+          "it": "B: Non mi piace il caffè. Mi piace il tè."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Does the second speaker like coffee? Answer sì or no.",
+          "it": "Alla seconda persona piace il caffè? Rispondi sì o no."
+        },
+        "answers": [
+          "no"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: no.",
+          "it": "Cerca questo dettaglio nella scena: no."
+        }
+      },
+      "frame": {
+        "en": "I like ___. I like (plural things) ___. I do not like ___.",
+        "it": "Mi piace ___. Mi piacciono ___. Non mi piace ___."
+      },
+      "speaking": {
+        "en": "Say one activity you like, two things you like, and one thing you dislike. Ask Ti piace...?",
+        "it": "Dì un’attività che ti piace, due cose che ti piacciono e una cosa che non ti piace. Chiedi Ti piace...?"
+      },
+      "resource": "hobby"
+    },
+    {
+      "missionId": "the-time",
+      "bank": "time",
+      "notes": [
+        {
+          "en": "Use è l’una for one o’clock and sono le... for other hours. For an appointment, use all’una or alle otto. Mezzogiorno and mezzanotte take a.",
+          "it": "Usa è l’una per l’una e sono le... per le altre ore. Per un appuntamento, usa all’una o alle otto. Mezzogiorno e mezzanotte richiedono a."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What time is it?",
+          "it": "A: Che ore sono?"
+        },
+        {
+          "en": "B: It is seven o’clock.",
+          "it": "B: Sono le sette."
+        },
+        {
+          "en": "A: Shall we meet at eight at the café?",
+          "it": "A: Ci vediamo alle otto al bar?"
+        },
+        {
+          "en": "B: That works. At eight!",
+          "it": "B: Va bene. Alle otto!"
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "At what time will they meet? Write the phrase in Italian.",
+          "it": "A che ora si vedono? Scrivi l’espressione in italiano."
+        },
+        "answers": [
+          "alle otto",
+          "otto"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: alle otto.",
+          "it": "Cerca questo dettaglio nella scena: alle otto."
+        }
+      },
+      "frame": {
+        "en": "It is ___. Shall we meet at ___? That works.",
+        "it": "Sono le ___. Ci vediamo alle ___? Va bene."
+      },
+      "speaking": {
+        "en": "Read three different times from a clock. Arrange a meeting and repeat the time to confirm it.",
+        "it": "Leggi tre ore diverse da un orologio. Organizza un incontro e ripeti l’ora per confermare."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "there-is",
+      "bank": "home",
+      "notes": [
+        {
+          "en": "C’è introduces one thing; ci sono introduces more than one. Keep the accent and apostrophe in c’è. E without an accent means and.",
+          "it": "C’è introduce una cosa; ci sono introduce più cose. Mantieni l’accento e l’apostrofo in c’è. E senza accento significa and."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What is the room like?",
+          "it": "A: Com’è la camera?"
+        },
+        {
+          "en": "B: There is a table and there are two chairs.",
+          "it": "B: C’è un tavolo e ci sono due sedie."
+        },
+        {
+          "en": "A: Is there a window?",
+          "it": "A: C’è una finestra?"
+        },
+        {
+          "en": "B: Yes, there is a large window.",
+          "it": "B: Sì, c’è una finestra grande."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "How many chairs are there? Write the number in Italian.",
+          "it": "Quante sedie ci sono? Scrivi il numero in italiano."
+        },
+        "answers": [
+          "due"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: due.",
+          "it": "Cerca questo dettaglio nella scena: due."
+        }
+      },
+      "frame": {
+        "en": "There is a ___. There are two ___.",
+        "it": "C’è un / una ___. Ci sono due ___."
+      },
+      "speaking": {
+        "en": "Look around your room. Name one single object and two plural groups. Then describe an imaginary room.",
+        "it": "Guarda la stanza. Nomina un oggetto singolo e due gruppi plurali. Poi descrivi una stanza immaginaria."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "hotel",
+      "bank": "hotel",
+      "notes": [
+        {
+          "en": "Keep ho una prenotazione as a ready-to-use phrase. Use per + number + notti for the length of a stay. Ask one practical question, such as La colazione è inclusa?",
+          "it": "Impara ho una prenotazione come frase pronta. Usa per + numero + notti per la durata del soggiorno. Fai una domanda pratica, come La colazione è inclusa?"
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Good evening, I have a booking.",
+          "it": "A: Buonasera, ho una prenotazione."
+        },
+        {
+          "en": "B: Under what name?",
+          "it": "B: A che nome?"
+        },
+        {
+          "en": "A: Rossi. A room for two nights.",
+          "it": "A: Rossi. Una camera per due notti."
+        },
+        {
+          "en": "B: Here is the key. Breakfast is included.",
+          "it": "B: Ecco la chiave. La colazione è inclusa."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "How many nights is the booking for? Write in Italian.",
+          "it": "Per quante notti è la prenotazione? Scrivi in italiano."
+        },
+        "answers": [
+          "due",
+          "due notti"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: due.",
+          "it": "Cerca questo dettaglio nella scena: due."
+        }
+      },
+      "frame": {
+        "en": "I have a booking under the name ___. For ___ nights.",
+        "it": "Ho una prenotazione a nome ___. Per ___ notti."
+      },
+      "speaking": {
+        "en": "Check in using an invented surname. Ask about breakfast, then swap roles.",
+        "it": "Fai il check-in con un cognome inventato. Chiedi della colazione, poi cambia ruolo."
+      },
+      "resource": "booking"
+    },
+    {
+      "missionId": "prepositions",
+      "bank": "town",
+      "notes": [
+        {
+          "en": "Learn small place phrases together: a Roma, in Italia, al bar, a casa. Al joins a + il. Do not try to translate every English in or to with the same Italian word.",
+          "it": "Impara insieme le espressioni di luogo: a Roma, in Italia, al bar, a casa. Al unisce a + il. Non tradurre ogni in o to inglese con la stessa parola italiana."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Where do you live?",
+          "it": "A: Dove abiti?"
+        },
+        {
+          "en": "B: In Florence, in Italy.",
+          "it": "B: A Firenze, in Italia."
+        },
+        {
+          "en": "A: Where are you going now?",
+          "it": "A: Dove vai adesso?"
+        },
+        {
+          "en": "B: I am going to the café, then home.",
+          "it": "B: Vado al bar, poi a casa."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Complete from the scene: Vado ___ bar.",
+          "it": "Completa dalla scena: Vado ___ bar."
+        },
+        "answers": [
+          "al"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: al.",
+          "it": "Cerca questo dettaglio nella scena: al."
+        }
+      },
+      "frame": {
+        "en": "I live in ___. I go to the ___. Then I go home.",
+        "it": "Abito a ___. Vado al ___. Poi vado a casa."
+      },
+      "speaking": {
+        "en": "Describe where you live and two places you go. Use complete place phrases.",
+        "it": "Descrivi dove abiti e due posti dove vai. Usa espressioni di luogo complete."
+      },
+      "resource": "transfer"
+    },
+    {
+      "missionId": "daily-routine",
+      "bank": "routine",
+      "notes": [
+        {
+          "en": "Mi belongs with the io form of a reflexive verb: mi alzo. The tu form is ti alzi. Build a routine with prima and poi; two or three actions are enough.",
+          "it": "Mi accompagna la forma io di un verbo riflessivo: mi alzo. Con tu si usa ti alzi. Costruisci una routine con prima e poi; bastano due o tre azioni."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What time do you get up?",
+          "it": "A: A che ora ti alzi?"
+        },
+        {
+          "en": "B: I get up at seven.",
+          "it": "B: Mi alzo alle sette."
+        },
+        {
+          "en": "A: And then?",
+          "it": "A: E poi?"
+        },
+        {
+          "en": "B: I wash and have breakfast.",
+          "it": "B: Mi lavo e faccio colazione."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "At what time does the second speaker get up?",
+          "it": "A che ora si alza la seconda persona?"
+        },
+        "answers": [
+          "alle sette",
+          "sette"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: alle sette.",
+          "it": "Cerca questo dettaglio nella scena: alle sette."
+        }
+      },
+      "frame": {
+        "en": "First I get up at ___. Then I wash and ___.",
+        "it": "Prima mi alzo alle ___. Poi mi lavo e ___."
+      },
+      "speaking": {
+        "en": "Mime and say three morning actions. Repeat as a question to a friend using ti.",
+        "it": "Mima e dì tre azioni del mattino. Ripeti come domanda a un amico usando ti."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "family",
+      "bank": "family",
+      "notes": [
+        {
+          "en": "Singular unmodified family nouns usually omit the article: mia madre, mio fratello. Plurals use it: i miei genitori. Learn the whole family phrase at first.",
+          "it": "Con i nomi singolari di parentela non modificati di solito si omette l’articolo: mia madre, mio fratello. Al plurale si usa: i miei genitori. All’inizio impara l’espressione intera."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Do you have brothers or sisters?",
+          "it": "A: Hai fratelli o sorelle?"
+        },
+        {
+          "en": "B: I have a sister. Her name is Marta.",
+          "it": "B: Ho una sorella. Si chiama Marta."
+        },
+        {
+          "en": "A: Where do your parents live?",
+          "it": "A: Dove abitano i tuoi genitori?"
+        },
+        {
+          "en": "B: My parents live in Pisa.",
+          "it": "B: I miei genitori abitano a Pisa."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What is the sister’s name?",
+          "it": "Come si chiama la sorella?"
+        },
+        "answers": [
+          "Marta"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: Marta.",
+          "it": "Cerca questo dettaglio nella scena: Marta."
+        }
+      },
+      "frame": {
+        "en": "My ___ is called ___. My parents live in ___.",
+        "it": "Mio / Mia ___ si chiama ___. I miei genitori abitano a ___."
+      },
+      "speaking": {
+        "en": "Describe two relatives or invented relatives. Add one name and one city.",
+        "it": "Descrivi due parenti reali o inventati. Aggiungi un nome e una città."
+      },
+      "resource": "family-audio"
+    },
+    {
+      "missionId": "in-town",
+      "bank": "town",
+      "notes": [
+        {
+          "en": "For a polite opener, use scusi with a stranger. Learn directions as chunks: a destra, a sinistra, sempre dritto. Repeat the direction back to check it.",
+          "it": "Per iniziare con cortesia, usa scusi con una persona sconosciuta. Impara le indicazioni come espressioni: a destra, a sinistra, sempre dritto. Ripeti l’indicazione per controllare."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Excuse me, where is the pharmacy?",
+          "it": "A: Scusi, dov’è la farmacia?"
+        },
+        {
+          "en": "B: Straight ahead, then left.",
+          "it": "B: Sempre dritto, poi a sinistra."
+        },
+        {
+          "en": "A: Left after the café?",
+          "it": "A: A sinistra dopo il bar?"
+        },
+        {
+          "en": "B: Yes, exactly.",
+          "it": "B: Sì, esatto."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "After going straight, which way do you turn?",
+          "it": "Dopo essere andato dritto, da che parte giri?"
+        },
+        "answers": [
+          "a sinistra",
+          "sinistra"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: a sinistra.",
+          "it": "Cerca questo dettaglio nella scena: a sinistra."
+        }
+      },
+      "frame": {
+        "en": "Excuse me, where is ___? Straight ahead, then to the ___.",
+        "it": "Scusi, dov’è ___? Sempre dritto, poi a ___."
+      },
+      "speaking": {
+        "en": "Draw a three-place mini map. Ask for directions and give two steps. Trace the route with your finger.",
+        "it": "Disegna una piccola mappa con tre luoghi. Chiedi indicazioni e dai due istruzioni. Segui il percorso con il dito."
+      },
+      "resource": "rai"
+    },
+    {
+      "missionId": "can-must-want",
+      "bank": "plans",
+      "notes": [
+        {
+          "en": "After posso, devo or voglio, keep the next verb in the infinitive: posso entrare, devo studiare. You only change the first verb for the person.",
+          "it": "Dopo posso, devo o voglio, lascia il secondo verbo all’infinito: posso entrare, devo studiare. Cambia solo il primo verbo in base alla persona."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Do you want to come to the cinema?",
+          "it": "A: Vuoi venire al cinema?"
+        },
+        {
+          "en": "B: I would like to, but I have to study.",
+          "it": "B: Vorrei, ma devo studiare."
+        },
+        {
+          "en": "A: Can you come tomorrow?",
+          "it": "A: Puoi venire domani?"
+        },
+        {
+          "en": "B: Yes, I can come tomorrow.",
+          "it": "B: Sì, domani posso venire."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What does the second speaker have to do? Write the infinitive.",
+          "it": "Che cosa deve fare la seconda persona? Scrivi l’infinito."
+        },
+        "answers": [
+          "studiare"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: studiare.",
+          "it": "Cerca questo dettaglio nella scena: studiare."
+        }
+      },
+      "frame": {
+        "en": "I can ___. I have to ___. I want to ___.",
+        "it": "Posso ___. Devo ___. Voglio ___."
+      },
+      "speaking": {
+        "en": "Give one permission, one obligation and one wish. Keep each second verb in the infinitive.",
+        "it": "Dì un permesso, un obbligo e un desiderio. Mantieni ogni secondo verbo all’infinito."
+      },
+      "resource": "transfer"
+    },
+    {
+      "missionId": "yesterday",
+      "bank": "past",
+      "notes": [
+        {
+          "en": "This is a first step beyond present-tense basics. Use ho + participle for ho mangiato. Andare uses essere: sono andato/andata, with the ending matching the speaker.",
+          "it": "È un primo passo oltre le basi del presente. Usa ho + participio per ho mangiato. Andare usa essere: sono andato/andata, con la desinenza concordata con chi parla."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What did you do yesterday, Anna?",
+          "it": "A: Che cosa hai fatto ieri, Anna?"
+        },
+        {
+          "en": "B: I studied and ate a pizza.",
+          "it": "B: Ho studiato e ho mangiato una pizza."
+        },
+        {
+          "en": "A: Did you go to the cinema?",
+          "it": "A: Sei andata al cinema?"
+        },
+        {
+          "en": "B: No, I went home.",
+          "it": "B: No, sono andata a casa."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Where did Anna go? Write the Italian place phrase.",
+          "it": "Dove è andata Anna? Scrivi l’espressione di luogo italiana."
+        },
+        "answers": [
+          "a casa",
+          "casa"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: a casa.",
+          "it": "Cerca questo dettaglio nella scena: a casa."
+        }
+      },
+      "frame": {
+        "en": "Yesterday I ___. Then I went to ___.",
+        "it": "Ieri ho ___. Poi sono andato / andata a ___."
+      },
+      "speaking": {
+        "en": "Tell a two-action story about yesterday. If the past feels difficult, copy the frame and change just the place.",
+        "it": "Racconta due azioni di ieri. Se il passato è difficile, copia il modello e cambia solo il luogo."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "shopping-amounts",
+      "bank": "food",
+      "notes": [
+        {
+          "en": "After a quantity, use di: un chilo di mele. Learn un etto as 100 grams. Begin with one or two items; you do not need a complete shopping conversation yet.",
+          "it": "Dopo una quantità, usa di: un chilo di mele. Un etto significa 100 grammi. Inizia con uno o due prodotti; non serve ancora una conversazione completa."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Good morning, I would like a kilogram of apples.",
+          "it": "A: Buongiorno, vorrei un chilo di mele."
+        },
+        {
+          "en": "B: Anything else?",
+          "it": "B: Altro?"
+        },
+        {
+          "en": "A: A hundred grams of cheese, please.",
+          "it": "A: Un etto di formaggio, per favore."
+        },
+        {
+          "en": "B: Here you are. (formal)",
+          "it": "B: Ecco a Lei."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What fruit is bought? Write the Italian plural noun.",
+          "it": "Quale frutta viene comprata? Scrivi il nome italiano al plurale."
+        },
+        "answers": [
+          "mele"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: mele.",
+          "it": "Cerca questo dettaglio nella scena: mele."
+        }
+      },
+      "frame": {
+        "en": "I would like a kilogram of ___ and a hundred grams of ___.",
+        "it": "Vorrei un chilo di ___ e un etto di ___."
+      },
+      "speaking": {
+        "en": "Make a tiny shopping list and order two amounts. Swap roles and ask Altro?",
+        "it": "Crea una piccola lista e ordina due quantità. Cambia ruolo e chiedi Altro?"
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "object-pronouns",
+      "bank": "food",
+      "notes": [
+        {
+          "en": "Start with a full noun, then replace it: il pane → lo compro; le mele → le compro. Put lo, la, li or le before the conjugated verb. This is a stretch topic; one pair is enough today.",
+          "it": "Inizia con il nome intero, poi sostituiscilo: il pane → lo compro; le mele → le compro. Metti lo, la, li o le prima del verbo coniugato. È un argomento impegnativo; oggi basta una coppia."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Are you buying the bread?",
+          "it": "A: Compri il pane?"
+        },
+        {
+          "en": "B: Yes, I am buying it today.",
+          "it": "B: Sì, lo compro oggi."
+        },
+        {
+          "en": "A: And the apples?",
+          "it": "A: E le mele?"
+        },
+        {
+          "en": "B: I will buy them tomorrow.",
+          "it": "B: Le compro domani."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Complete from the scene: Il pane? ___ compro oggi.",
+          "it": "Completa dalla scena: Il pane? ___ compro oggi."
+        },
+        "answers": [
+          "lo"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: lo.",
+          "it": "Cerca questo dettaglio nella scena: lo."
+        }
+      },
+      "frame": {
+        "en": "I buy the bread. I buy it today. / I buy the apples. I buy them tomorrow.",
+        "it": "Compro il pane. Lo compro oggi. / Compro le mele. Le compro domani."
+      },
+      "speaking": {
+        "en": "Read the full noun sentence, then replace the noun. Try only lo first, then le if comfortable.",
+        "it": "Leggi la frase con il nome intero, poi sostituisci il nome. Prova prima solo lo, poi le se ti senti pronto."
+      },
+      "resource": "transfer"
+    },
+    {
+      "missionId": "family-news",
+      "bank": "family",
+      "notes": [
+        {
+          "en": "Combine a family phrase with an easy present-tense verb: mia sorella studia. Ask Come sta...? for a small personal update. You can stay in the present tense.",
+          "it": "Unisci un’espressione di parentela a un verbo semplice al presente: mia sorella studia. Chiedi Come sta...? per una piccola notizia personale. Puoi restare al presente."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: How is your sister?",
+          "it": "A: Come sta tua sorella?"
+        },
+        {
+          "en": "B: Well, thank you. Now she studies in Rome.",
+          "it": "B: Bene, grazie. Adesso studia a Roma."
+        },
+        {
+          "en": "A: And your brother?",
+          "it": "A: E tuo fratello?"
+        },
+        {
+          "en": "B: He works in a café in Pisa.",
+          "it": "B: Lavora in un bar a Pisa."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Where does the sister study?",
+          "it": "Dove studia la sorella?"
+        },
+        "answers": [
+          "Roma",
+          "a Roma"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: Roma.",
+          "it": "Cerca questo dettaglio nella scena: Roma."
+        }
+      },
+      "frame": {
+        "en": "My ___ is well. Now he / she studies / works in ___.",
+        "it": "Mio / Mia ___ sta bene. Adesso studia / lavora a ___."
+      },
+      "speaking": {
+        "en": "Give a small update about an invented relative. Ask one follow-up question.",
+        "it": "Dai una piccola notizia su un parente inventato. Fai una domanda per saperne di più."
+      },
+      "resource": "family-audio"
+    },
+    {
+      "missionId": "home",
+      "bank": "home",
+      "notes": [
+        {
+          "en": "Describe what there is before adding details: c’è una cucina. For two things, ci sono due camere. Grande has the same singular form with masculine and feminine nouns.",
+          "it": "Descrivi prima che cosa c’è, poi aggiungi dettagli: c’è una cucina. Per due cose: ci sono due camere. Grande ha la stessa forma singolare con nomi maschili e femminili."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What is your home like?",
+          "it": "A: Com’è la tua casa?"
+        },
+        {
+          "en": "B: It is small, but there is a big kitchen.",
+          "it": "B: È piccola, ma c’è una cucina grande."
+        },
+        {
+          "en": "A: How many bedrooms are there?",
+          "it": "A: Quante camere ci sono?"
+        },
+        {
+          "en": "B: There are two bedrooms.",
+          "it": "B: Ci sono due camere."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Which room is big? Write the noun.",
+          "it": "Quale stanza è grande? Scrivi il nome."
+        },
+        "answers": [
+          "cucina",
+          "la cucina"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: cucina.",
+          "it": "Cerca questo dettaglio nella scena: cucina."
+        }
+      },
+      "frame": {
+        "en": "My home is ___. There is ___. There are ___.",
+        "it": "La mia casa è ___. C’è ___. Ci sono ___."
+      },
+      "speaking": {
+        "en": "Give a tiny home tour, real or imaginary. Name three rooms and one detail.",
+        "it": "Fai un piccolo giro di una casa reale o immaginaria. Nomina tre stanze e un dettaglio."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "a-workday",
+      "bank": "work",
+      "notes": [
+        {
+          "en": "Build a day with time + verb: alle nove lavoro. Use faccio una pausa for taking a break. Keep new sentences short; link just two with e or poi.",
+          "it": "Costruisci la giornata con ora + verbo: alle nove lavoro. Usa faccio una pausa per interrompere il lavoro. Mantieni le frasi brevi; uniscine solo due con e o poi."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What time do you start work?",
+          "it": "A: A che ora inizi il lavoro?"
+        },
+        {
+          "en": "B: At nine. I work in an office.",
+          "it": "B: Alle nove. Lavoro in ufficio."
+        },
+        {
+          "en": "A: Do you take a break?",
+          "it": "A: Fai una pausa?"
+        },
+        {
+          "en": "B: Yes, at eleven I have a coffee.",
+          "it": "B: Sì, alle undici prendo un caffè."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "At what time is the coffee break?",
+          "it": "A che ora è la pausa caffè?"
+        },
+        "answers": [
+          "alle undici",
+          "undici"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: alle undici.",
+          "it": "Cerca questo dettaglio nella scena: alle undici."
+        }
+      },
+      "frame": {
+        "en": "At ___ I work / study. At ___ I take a break.",
+        "it": "Alle ___ lavoro / studio. Alle ___ faccio una pausa."
+      },
+      "speaking": {
+        "en": "Describe your study or work day in three time slots. Invent a relaxing day if you prefer.",
+        "it": "Descrivi lo studio o il lavoro in tre momenti. Se preferisci, inventa una giornata rilassante."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "body-routine",
+      "bank": "body",
+      "notes": [
+        {
+          "en": "Use the definite article for a body part after a reflexive verb: mi lavo le mani. Mani is a feminine irregular plural. Change mi to ti when asking a friend.",
+          "it": "Usa l’articolo determinativo con una parte del corpo dopo un verbo riflessivo: mi lavo le mani. Mani è un plurale femminile irregolare. Cambia mi in ti per fare una domanda a un amico."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What do you do before breakfast?",
+          "it": "A: Che cosa fai prima di colazione?"
+        },
+        {
+          "en": "B: I wash my hands.",
+          "it": "B: Mi lavo le mani."
+        },
+        {
+          "en": "A: And after breakfast?",
+          "it": "A: E dopo colazione?"
+        },
+        {
+          "en": "B: I brush my teeth.",
+          "it": "B: Mi lavo i denti."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What does the second speaker wash before breakfast?",
+          "it": "Che cosa si lava la seconda persona prima di colazione?"
+        },
+        "answers": [
+          "le mani",
+          "mani"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: le mani.",
+          "it": "Cerca questo dettaglio nella scena: le mani."
+        }
+      },
+      "frame": {
+        "en": "First I wash ___. Then I wash ___.",
+        "it": "Prima mi lavo ___. Poi mi lavo ___."
+      },
+      "speaking": {
+        "en": "Mime two actions and say them. Then ask a friend about the same actions with ti.",
+        "it": "Mima due azioni e dille. Poi chiedi a un amico delle stesse azioni usando ti."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "restaurant-repair",
+      "bank": "food",
+      "notes": [
+        {
+          "en": "A polite repair can be very short: scusi, ho chiesto... or questo non è.... State one problem, then ask for the item you need. Use the model if the past form is new.",
+          "it": "Una correzione cortese può essere breve: scusi, ho chiesto... oppure questo non è.... Indica un problema, poi chiedi ciò che serve. Usa il modello se la forma al passato è nuova."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Here is the pasta with cheese.",
+          "it": "A: Ecco la pasta con il formaggio."
+        },
+        {
+          "en": "B: Excuse me, I asked for pasta without cheese.",
+          "it": "B: Scusi, ho chiesto la pasta senza formaggio."
+        },
+        {
+          "en": "A: I am sorry. One moment.",
+          "it": "A: Mi dispiace. Un momento."
+        },
+        {
+          "en": "B: Thank you. I would also like a water.",
+          "it": "B: Grazie. Vorrei anche un’acqua."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What ingredient did the customer want to leave out?",
+          "it": "Quale ingrediente voleva escludere il cliente?"
+        },
+        "answers": [
+          "formaggio",
+          "il formaggio"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: formaggio.",
+          "it": "Cerca questo dettaglio nella scena: formaggio."
+        }
+      },
+      "frame": {
+        "en": "Excuse me, I asked for ___ without ___.",
+        "it": "Scusi, ho chiesto ___ senza ___."
+      },
+      "speaking": {
+        "en": "Practise one polite correction. Repeat it more slowly, then swap the food and ingredient.",
+        "it": "Prova una correzione cortese. Ripetila più lentamente, poi cambia il piatto e l’ingrediente."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "clothes",
+      "bank": "clothes",
+      "notes": [
+        {
+          "en": "Choose one useful shop question: posso provare...? To describe an item, match the adjective: una maglietta rossa; pantaloni neri. Blu does not change.",
+          "it": "Scegli una domanda utile in negozio: posso provare...? Per descrivere un capo, concorda l’aggettivo: una maglietta rossa; pantaloni neri. Blu non cambia."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: I would like a blue T-shirt.",
+          "it": "A: Vorrei una maglietta blu."
+        },
+        {
+          "en": "B: What size do you wear? (formal)",
+          "it": "B: Che taglia porta?"
+        },
+        {
+          "en": "A: Medium. Can I try this one on?",
+          "it": "A: La M. Posso provare questa?"
+        },
+        {
+          "en": "B: Of course, the changing room is on the right.",
+          "it": "B: Certo, il camerino è a destra."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What colour T-shirt is wanted?",
+          "it": "Di che colore è la maglietta desiderata?"
+        },
+        "answers": [
+          "blu"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: blu.",
+          "it": "Cerca questo dettaglio nella scena: blu."
+        }
+      },
+      "frame": {
+        "en": "I would like a ___ T-shirt. Size ___. Can I try it on?",
+        "it": "Vorrei una maglietta ___. Taglia ___. Posso provare?"
+      },
+      "speaking": {
+        "en": "Choose a colour and size. Ask to try on an item, then describe one thing that fits.",
+        "it": "Scegli colore e taglia. Chiedi di provare un capo, poi descrivi una cosa che va bene."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "hotel-problem",
+      "bank": "hotel",
+      "notes": [
+        {
+          "en": "Use non before the verb for a negative: non funziona. You can state the room number and problem in two short sentences, then ask Può aiutarmi?",
+          "it": "Usa non prima del verbo per la negazione: non funziona. Puoi dire il numero della camera e il problema in due frasi brevi, poi chiedere Può aiutarmi?"
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Hello, I am in room ten.",
+          "it": "A: Pronto, sono nella camera dieci."
+        },
+        {
+          "en": "B: How can I help? (formal)",
+          "it": "B: Mi dica."
+        },
+        {
+          "en": "A: The shower does not work. There is no hot water.",
+          "it": "A: La doccia non funziona. Non c’è acqua calda."
+        },
+        {
+          "en": "B: We will come right away.",
+          "it": "B: Arriviamo subito."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What does not work? Write the noun.",
+          "it": "Che cosa non funziona? Scrivi il nome."
+        },
+        "answers": [
+          "la doccia",
+          "doccia"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: la doccia.",
+          "it": "Cerca questo dettaglio nella scena: la doccia."
+        }
+      },
+      "frame": {
+        "en": "I am in room ___. ___ does not work. Can you help me?",
+        "it": "Sono nella camera ___. ___ non funziona. Può aiutarmi?"
+      },
+      "speaking": {
+        "en": "Pretend to call reception. Say the room, one problem, and a request for help.",
+        "it": "Fingi di telefonare alla reception. Dì la camera, un problema e una richiesta di aiuto."
+      },
+      "resource": "booking"
+    },
+    {
+      "missionId": "weekend-plan",
+      "bank": "plans",
+      "notes": [
+        {
+          "en": "The present tense can describe an arranged future with domani or sabato. Start with Vuoi venire...? Accept with va bene or suggest a different day.",
+          "it": "Il presente può descrivere un futuro programmato con domani o sabato. Inizia con Vuoi venire...? Accetta con va bene oppure proponi un altro giorno."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Do you want to come to the cinema on Saturday?",
+          "it": "A: Vuoi venire al cinema sabato?"
+        },
+        {
+          "en": "B: I have to work on Saturday. Does Sunday work?",
+          "it": "B: Sabato devo lavorare. Domenica va bene?"
+        },
+        {
+          "en": "A: Yes, we will meet at eight.",
+          "it": "A: Sì, ci vediamo alle otto."
+        },
+        {
+          "en": "B: Perfect, see you Sunday!",
+          "it": "B: Perfetto, a domenica!"
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Which day do they agree on?",
+          "it": "Quale giorno scelgono?"
+        },
+        "answers": [
+          "domenica"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: domenica.",
+          "it": "Cerca questo dettaglio nella scena: domenica."
+        }
+      },
+      "frame": {
+        "en": "Do you want to come to ___? Does ___ work? We will meet at ___.",
+        "it": "Vuoi venire a ___? ___ va bene? Ci vediamo alle ___."
+      },
+      "speaking": {
+        "en": "Invite a friend, refuse the first day politely, then agree on a day and time.",
+        "it": "Invita un amico, rifiuta cortesemente il primo giorno, poi concorda giorno e ora."
+      },
+      "resource": "hobby"
+    },
+    {
+      "missionId": "agreement-repair",
+      "bank": "clothes",
+      "notes": [
+        {
+          "en": "Work left to right: article, noun, adjective. Una borsa rossa becomes due borse rosse. For adjectives in -e, the plural is -i: grande → grandi.",
+          "it": "Lavora da sinistra a destra: articolo, nome, aggettivo. Una borsa rossa diventa due borse rosse. Gli aggettivi in -e hanno il plurale in -i: grande → grandi."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Do you have a red bag?",
+          "it": "A: Hai una borsa rossa?"
+        },
+        {
+          "en": "B: No, I have two red bags.",
+          "it": "B: No, ho due borse rosse."
+        },
+        {
+          "en": "A: Are they big?",
+          "it": "A: Sono grandi?"
+        },
+        {
+          "en": "B: No, they are small.",
+          "it": "B: No, sono piccole."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Complete from the scene: due borse ___. (red)",
+          "it": "Completa dalla scena: due borse ___. (rosso)"
+        },
+        "answers": [
+          "rosse"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: rosse.",
+          "it": "Cerca questo dettaglio nella scena: rosse."
+        }
+      },
+      "frame": {
+        "en": "A red bag. Two red bags. A large book. Two large books.",
+        "it": "Una borsa rossa. Due borse ___. Un libro grande. Due libri ___."
+      },
+      "speaking": {
+        "en": "Say three singular phrases, then make each plural. Check the noun and adjective endings separately.",
+        "it": "Dì tre espressioni singolari, poi mettile al plurale. Controlla separatamente le desinenze di nome e aggettivo."
+      },
+      "resource": "transfer"
+    },
+    {
+      "missionId": "room-detective",
+      "bank": "home",
+      "notes": [
+        {
+          "en": "Look for one thing at a time: c’è un libro. Add its position with sul tavolo or vicino alla finestra. Use ci sono only when the thing described is plural.",
+          "it": "Cerca una cosa alla volta: c’è un libro. Aggiungi la posizione con sul tavolo o vicino alla finestra. Usa ci sono solo quando la cosa descritta è plurale."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Where is the book?",
+          "it": "A: Dov’è il libro?"
+        },
+        {
+          "en": "B: It is on the table.",
+          "it": "B: È sul tavolo."
+        },
+        {
+          "en": "A: Are there chairs near the window?",
+          "it": "A: Ci sono sedie vicino alla finestra?"
+        },
+        {
+          "en": "B: Yes, there are two chairs.",
+          "it": "B: Sì, ci sono due sedie."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Where is the book? Write the Italian place phrase.",
+          "it": "Dov’è il libro? Scrivi l’espressione di luogo italiana."
+        },
+        "answers": [
+          "sul tavolo"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: sul tavolo.",
+          "it": "Cerca questo dettaglio nella scena: sul tavolo."
+        }
+      },
+      "frame": {
+        "en": "There is ___ on the table. There are ___ near the window.",
+        "it": "C’è ___ sul tavolo. Ci sono ___ vicino alla finestra."
+      },
+      "speaking": {
+        "en": "Study your room for ten seconds, then look away and describe three things from memory.",
+        "it": "Osserva la stanza per dieci secondi, poi guarda altrove e descrivi tre cose a memoria."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "present-yourself",
+      "bank": "identity",
+      "notes": [
+        {
+          "en": "Build an introduction from three independent chunks: mi chiamo..., sono di..., abito a.... Add study or work only when the first three feel easy.",
+          "it": "Costruisci una presentazione con tre espressioni indipendenti: mi chiamo..., sono di..., abito a.... Aggiungi studio o lavoro solo quando le prime tre sono facili."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Hi, my name is Giulia.",
+          "it": "A: Ciao, mi chiamo Giulia."
+        },
+        {
+          "en": "A: I am from Genoa, but I live in Rome.",
+          "it": "A: Sono di Genova, ma abito a Roma."
+        },
+        {
+          "en": "A: I study Italian and work in a café.",
+          "it": "A: Studio italiano e lavoro in un bar."
+        },
+        {
+          "en": "B: Nice to meet you! I am Amir.",
+          "it": "B: Piacere! Io sono Amir."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Where is Giulia from?",
+          "it": "Di dov’è Giulia?"
+        },
+        "answers": [
+          "Genova",
+          "di Genova"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: Genova.",
+          "it": "Cerca questo dettaglio nella scena: Genova."
+        }
+      },
+      "frame": {
+        "en": "My name is ___. I am from ___. I live in ___. I study / work ___.",
+        "it": "Mi chiamo ___. Sono di ___. Abito a ___. Studio / Lavoro ___."
+      },
+      "speaking": {
+        "en": "Give a 20-second introduction. Repeat once with only three cue words, then ask E tu?",
+        "it": "Presentati in venti secondi. Ripeti con solo tre parole guida, poi chiedi E tu?"
+      },
+      "resource": "rai"
+    },
+    {
+      "missionId": "verb-switch",
+      "bank": "habits",
+      "notes": [
+        {
+          "en": "Change the subject and the verb together: io parlo → tu parli → noi parliamo. Start with a regular -are verb; handle irregular verbs such as essere separately.",
+          "it": "Cambia insieme soggetto e verbo: io parlo → tu parli → noi parliamo. Inizia con un verbo regolare in -are; tratta a parte i verbi irregolari come essere."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: I study Italian. And you?",
+          "it": "A: Io studio italiano. E tu?"
+        },
+        {
+          "en": "B: I study Italian too.",
+          "it": "B: Anche io studio italiano."
+        },
+        {
+          "en": "A: Then we study together!",
+          "it": "A: Allora noi studiamo insieme!"
+        },
+        {
+          "en": "B: Yes, and we speak every day.",
+          "it": "B: Sì, e parliamo ogni giorno."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Complete from the scene: Noi ___ insieme. (study)",
+          "it": "Completa dalla scena: Noi ___ insieme. (studiare)"
+        },
+        "answers": [
+          "studiamo"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: studiamo.",
+          "it": "Cerca questo dettaglio nella scena: studiamo."
+        }
+      },
+      "frame": {
+        "en": "I speak ___. You speak ___. We speak ___.",
+        "it": "Io parlo ___. Tu parli ___. Noi parliamo ___."
+      },
+      "speaking": {
+        "en": "Choose parlare or studiare. Say the same idea with io, tu and noi, pointing to the person each time.",
+        "it": "Scegli parlare o studiare. Dì la stessa idea con io, tu e noi, indicando ogni volta la persona."
+      },
+      "resource": "transfer"
+    },
+    {
+      "missionId": "impossible-excuse",
+      "bank": "past",
+      "notes": [
+        {
+          "en": "Treat the past forms as supported practice. A simple excuse needs one event and perché. Keep the story short; an amusing detail is enough.",
+          "it": "Tratta le forme al passato come pratica guidata. Per una scusa semplice bastano un evento e perché. Mantieni la storia breve; basta un dettaglio divertente."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Why did you not study yesterday?",
+          "it": "A: Perché non hai studiato ieri?"
+        },
+        {
+          "en": "B: I did not study because a cat took the book.",
+          "it": "B: Non ho studiato perché un gatto ha preso il libro."
+        },
+        {
+          "en": "A: A cat?",
+          "it": "A: Un gatto?"
+        },
+        {
+          "en": "B: Yes, now the cat is studying Italian!",
+          "it": "B: Sì, adesso il gatto studia italiano!"
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Which animal took the book? Write the noun.",
+          "it": "Quale animale ha preso il libro? Scrivi il nome."
+        },
+        "answers": [
+          "gatto",
+          "un gatto",
+          "il gatto"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: gatto.",
+          "it": "Cerca questo dettaglio nella scena: gatto."
+        }
+      },
+      "frame": {
+        "en": "I did not study because ___. Now ___.",
+        "it": "Non ho studiato perché ___. Adesso ___."
+      },
+      "speaking": {
+        "en": "Invent a two-sentence silly excuse. You may reuse Non ho studiato perché and change just the animal or object.",
+        "it": "Inventa una scusa buffa di due frasi. Puoi riusare Non ho studiato perché e cambiare solo animale o oggetto."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "character-day",
+      "bank": "routine",
+      "notes": [
+        {
+          "en": "A third-person routine changes mi to si: mi alzo → si alza. Keep one character throughout. Use a time and poi to make the sequence clear.",
+          "it": "Una routine alla terza persona cambia mi in si: mi alzo → si alza. Mantieni lo stesso personaggio. Usa un’ora e poi per rendere chiara la sequenza."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Who is this character?",
+          "it": "A: Chi è questo personaggio?"
+        },
+        {
+          "en": "B: He is a cook. His name is Nico.",
+          "it": "B: È un cuoco. Si chiama Nico."
+        },
+        {
+          "en": "A: What time does he get up?",
+          "it": "A: A che ora si alza?"
+        },
+        {
+          "en": "B: He gets up at six, then has breakfast.",
+          "it": "B: Si alza alle sei, poi fa colazione."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "At what time does Nico get up?",
+          "it": "A che ora si alza Nico?"
+        },
+        "answers": [
+          "alle sei",
+          "sei"
+        ],
+        "explanation": {
+          "en": "Look for this detail in the scene: alle sei.",
+          "it": "Cerca questo dettaglio nella scena: alle sei."
+        }
+      },
+      "frame": {
+        "en": "___ gets up at ___. Then he / she has breakfast and ___.",
+        "it": "___ si alza alle ___. Poi fa colazione e ___."
+      },
+      "speaking": {
+        "en": "Invent a character and describe three actions. Then say the same routine as that character using mi.",
+        "it": "Inventa un personaggio e descrivi tre azioni. Poi racconta la stessa routine come quel personaggio usando mi."
+      },
+      "resource": "club"
+    }
+  ],
+  "resources": [
+    {
+      "id": "rai",
+      "title": "Rai Scuola · Unità 1, A1",
+      "url": "https://www.raiscuola.rai.it/percorsi/unita1-livelloa1",
+      "level": {
+        "en": "A1 · start here",
+        "it": "A1 · inizia qui"
+      },
+      "kind": {
+        "en": "Video and course activities",
+        "it": "Video e attività"
+      },
+      "task": {
+        "en": "Open one short item. Watch just the first 60–90 seconds twice. First identify the situation; then note two greetings or familiar words. Return and say one phrase aloud.",
+        "it": "Apri un contenuto breve. Guarda solo i primi 60–90 secondi due volte. Prima identifica la situazione; poi annota due saluti o parole note. Torna e dì una frase ad alta voce."
+      },
+      "access": {
+        "en": "Public course page; video availability may depend on region.",
+        "it": "Pagina pubblica; la disponibilità dei video può dipendere dal paese."
+      }
+    },
+    {
+      "id": "transfer",
+      "title": "Language Transfer · Introduction to Italian",
+      "url": "https://www.languagetransfer.org/italian",
+      "level": {
+        "en": "Beginner · English guidance",
+        "it": "Principiante · guida in inglese"
+      },
+      "kind": {
+        "en": "Guided audio",
+        "it": "Audio guidato"
+      },
+      "task": {
+        "en": "Start with the first track, or resume your next one. Listen for up to six minutes. Pause whenever the teacher asks a question and answer aloud before the student. Stop there; finishing the whole track is optional.",
+        "it": "Inizia dalla prima traccia o riprendi la successiva. Ascolta per un massimo di sei minuti. Fermati a ogni domanda del docente e rispondi prima dello studente. Puoi fermarti senza finire la traccia."
+      },
+      "access": {
+        "en": "Public audio player and download links; instruction is in English.",
+        "it": "Lettore audio pubblico e link per scaricare; spiegazioni in inglese."
+      }
+    },
+    {
+      "id": "club",
+      "title": "OnlineItalianClub · A1 practice library",
+      "url": "https://onlineitalianclub.com/free-italian-exercises-and-resources/online-italian-course-beginner-level-a1/",
+      "level": {
+        "en": "A1 · choose today’s topic",
+        "it": "A1 · scegli il tema di oggi"
+      },
+      "kind": {
+        "en": "Listening, vocabulary and grammar",
+        "it": "Ascolto, lessico e grammatica"
+      },
+      "task": {
+        "en": "Choose one A1 exercise that matches today’s lesson. Try only the first three items, check the corrections, and say one corrected sentence aloud. No need to finish the page.",
+        "it": "Scegli un esercizio A1 sul tema della lezione. Prova solo i primi tre punti, controlla le correzioni e dì una frase corretta ad alta voce. Non serve finire la pagina."
+      },
+      "access": {
+        "en": "Public exercises; the site also advertises paid products.",
+        "it": "Esercizi pubblici; il sito propone anche prodotti a pagamento."
+      }
+    },
+    {
+      "id": "nationality",
+      "title": "OnlineItalianClub · Nazionalità · A1 listening",
+      "url": "https://onlineitalianclub.com/free-italian-exercises-and-resources/online-italian-course-beginner-level-a1/italian-listenings-with-transcripts-level-a1-listening-3/",
+      "level": {
+        "en": "A1 · transcript available",
+        "it": "A1 · con trascrizione"
+      },
+      "kind": {
+        "en": "Listening and transcript",
+        "it": "Ascolto e trascrizione"
+      },
+      "task": {
+        "en": "Listen once without the transcript. Listen again and note two nationality words; check them in the transcript. Say a sentence about an invented person.",
+        "it": "Ascolta una volta senza trascrizione. Riascolta e annota due nazionalità; controllale nella trascrizione. Dì una frase su una persona inventata."
+      },
+      "access": {
+        "en": "Public exercise page; audio uses an external player.",
+        "it": "Pagina pubblica; l’audio usa un lettore esterno."
+      }
+    },
+    {
+      "id": "hobby",
+      "title": "OnlineItalianClub · Hobby · A1 listening",
+      "url": "https://onlineitalianclub.com/free-italian-exercises-and-resources/online-italian-course-beginner-level-a1/new-free-elementary-level-italian-listening-exercises-28/",
+      "level": {
+        "en": "A1 · transcript available",
+        "it": "A1 · con trascrizione"
+      },
+      "kind": {
+        "en": "Listening and transcript",
+        "it": "Ascolto e trascrizione"
+      },
+      "task": {
+        "en": "Listen to the first short section twice. Note one activity you recognise, then check the transcript. Say whether you like that activity.",
+        "it": "Ascolta due volte la prima parte breve. Annota un’attività che riconosci, poi controlla la trascrizione. Dì se ti piace quell’attività."
+      },
+      "access": {
+        "en": "Public exercise page; audio uses an external player.",
+        "it": "Pagina pubblica; l’audio usa un lettore esterno."
+      }
+    },
+    {
+      "id": "family-audio",
+      "title": "OnlineItalianClub · Famiglia 1 · A1 listening",
+      "url": "https://onlineitalianclub.com/free-italian-exercises-and-resources/online-italian-course-beginner-level-a1/italian-listening-comprehension-exercise-a15/",
+      "level": {
+        "en": "A1 · transcript available",
+        "it": "A1 · con trascrizione"
+      },
+      "kind": {
+        "en": "Listening and transcript",
+        "it": "Ascolto e trascrizione"
+      },
+      "task": {
+        "en": "Listen for family words. Note just two, then check the transcript. Say one sentence about a real or invented relative.",
+        "it": "Ascolta cercando parole di parentela. Annotane solo due, poi controlla la trascrizione. Dì una frase su un parente reale o inventato."
+      },
+      "access": {
+        "en": "Public exercise page; audio uses an external player.",
+        "it": "Pagina pubblica; l’audio usa un lettore esterno."
+      }
+    },
+    {
+      "id": "booking",
+      "title": "OnlineItalianClub · Prenotazione · A1 listening",
+      "url": "https://onlineitalianclub.com/free-italian-exercises-and-resources/online-italian-course-beginner-level-a1/new-free-elementary-level-italian-listening-exercises-38/",
+      "level": {
+        "en": "A1 · transcript available",
+        "it": "A1 · con trascrizione"
+      },
+      "kind": {
+        "en": "Listening and transcript",
+        "it": "Ascolto e trascrizione"
+      },
+      "task": {
+        "en": "Listen for the purpose of the call first. On a second listen, note one booking detail and check the transcript. Practise ho una prenotazione aloud.",
+        "it": "Al primo ascolto cerca lo scopo della telefonata. Al secondo annota un dettaglio della prenotazione e controlla la trascrizione. Ripeti ho una prenotazione ad alta voce."
+      },
+      "access": {
+        "en": "Public exercise page; audio uses an external player.",
+        "it": "Pagina pubblica; l’audio usa un lettore esterno."
+      }
+    },
+    {
+      "id": "articles-drill",
+      "title": "OnlineItalianClub · Article practice",
+      "url": "https://onlineitalianclub.com/free_italian_exercises/articoli.html",
+      "level": {
+        "en": "A1 · nouns and articles",
+        "it": "A1 · nomi e articoli"
+      },
+      "kind": {
+        "en": "Interactive grammar",
+        "it": "Grammatica interattiva"
+      },
+      "task": {
+        "en": "Try three article choices. Before each answer, say the noun’s gender and number. Check, then write one new noun with the same article. Stop after five minutes.",
+        "it": "Prova tre scelte di articoli. Prima di rispondere, di’ genere e numero del nome. Controlla e scrivi un nome nuovo con lo stesso articolo. Fermati dopo cinque minuti."
+      },
+      "access": {
+        "en": "Free public page. Interactive tools or embedded audio may need JavaScript or consent; use the portal exercises or the transcript if unavailable.",
+        "it": "Pagina pubblica gratuita. Esercizi interattivi o audio incorporato possono richiedere JavaScript o consenso; se non disponibili usa gli esercizi del portale o la trascrizione."
+      }
+    },
+    {
+      "id": "present-drill",
+      "title": "OnlineItalianClub · Present verb practice",
+      "url": "https://onlineitalianclub.com/free_italian_exercises/altri_verbi_al_presente_a1.html",
+      "level": {
+        "en": "A1 · after present verb lessons",
+        "it": "A1 · dopo le lezioni sul presente"
+      },
+      "kind": {
+        "en": "Interactive grammar",
+        "it": "Grammatica interattiva"
+      },
+      "task": {
+        "en": "Try three verbs. First underline the subject on paper, then choose the ending. Say each corrected sentence aloud and change its subject. About five minutes.",
+        "it": "Prova tre verbi. Prima sottolinea il soggetto su carta, poi scegli la desinenza. Di’ ogni frase corretta ad alta voce e cambia il soggetto. Circa cinque minuti."
+      },
+      "access": {
+        "en": "Free public page. Interactive tools or embedded audio may need JavaScript or consent; use the portal exercises or the transcript if unavailable.",
+        "it": "Pagina pubblica gratuita. Esercizi interattivi o audio incorporato possono richiedere JavaScript o consenso; se non disponibili usa gli esercizi del portale o la trascrizione."
+      }
+    },
+    {
+      "id": "auxiliary-drill",
+      "title": "OnlineItalianClub · Essere or avere in the past",
+      "url": "https://onlineitalianclub.com/free_italian_exercises/A1_passato_prossimo_essere_o_avere.html",
+      "level": {
+        "en": "Late A1 · after past-tense units",
+        "it": "A1 avanzato · dopo le unità sul passato"
+      },
+      "kind": {
+        "en": "Interactive grammar",
+        "it": "Grammatica interattiva"
+      },
+      "task": {
+        "en": "Try three auxiliary choices. Record each as a complete verb chunk, not a movement rule. Compare any mistake with the portal’s past-avere and past-essere units. About five minutes.",
+        "it": "Prova tre scelte di ausiliare. Registra ogni verbo come espressione completa, senza una regola generale sul movimento. Confronta gli errori con le unità del portale sul passato con avere ed essere. Circa cinque minuti."
+      },
+      "access": {
+        "en": "Free public page. Interactive tools or embedded audio may need JavaScript or consent; use the portal exercises or the transcript if unavailable.",
+        "it": "Pagina pubblica gratuita. Esercizi interattivi o audio incorporato possono richiedere JavaScript o consenso; se non disponibili usa gli esercizi del portale o la trascrizione."
+      }
+    },
+    {
+      "id": "past-listening",
+      "title": "OnlineItalianClub · A day out: past-tense listening",
+      "url": "https://onlineitalianclub.com/free-italian-exercises-and-resources/online-italian-course-beginner-level-a1/la-grammatica-ascoltata-a1-6-passato-prossimo-dei-verbi-regolari/",
+      "level": {
+        "en": "Late A1 stretch · transcript support",
+        "it": "A1 avanzato · con trascrizione"
+      },
+      "kind": {
+        "en": "Listening with transcript",
+        "it": "Ascolto con trascrizione"
+      },
+      "task": {
+        "en": "Use only a short excerpt. Listen twice, find two completed actions, then compare their auxiliaries in the transcript. Tell your own two-action story. Skip unfamiliar tense forms; return after the past-tense lessons.",
+        "it": "Usa solo un breve estratto. Ascolta due volte, trova due azioni concluse e confronta gli ausiliari nella trascrizione. Racconta due azioni tue. Salta i tempi sconosciuti; torna dopo le lezioni sul passato."
+      },
+      "access": {
+        "en": "Free public page. Interactive tools or embedded audio may need JavaScript or consent; use the portal exercises or the transcript if unavailable.",
+        "it": "Pagina pubblica gratuita. Esercizi interattivi o audio incorporato possono richiedere JavaScript o consenso; se non disponibili usa gli esercizi del portale o la trascrizione."
+      }
+    }
+  ],
+  "research": [
+    {
+      "title": "The Learning Scientists · Spacing, examples and retrieval",
+      "url": "https://www.learningscientists.org/blog/2017/4/20-1"
+    },
+    {
+      "title": "Council of Europe · CEFR self-assessment grid",
+      "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-2-cefr-3.3-common-reference-levels-self-assessment-grid"
+    },
+    {
+      "title": "Council of Europe · CEFR global scale (A1 and A2)",
+      "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale"
+    }
+  ]
+}

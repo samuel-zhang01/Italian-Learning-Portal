@@ -1,0 +1,684 @@
+{
+  "scenes": [
+    {
+      "id": "cafe-stop",
+      "title": {
+        "en": "A coffee break",
+        "it": "Una pausa al bar"
+      },
+      "intro": {
+        "en": "Order one coffee, drink it at the café, then ask for the bill. Useful words: un caffè = a coffee; qui = here; il conto = the bill.",
+        "it": "Ordina un caffè, bevi al bar e poi chiedi il conto. Parole utili: un caffè, qui, il conto."
+      },
+      "unitIds": [
+        "indefinite-articles",
+        "present-ere",
+        "definite-articles",
+        "questions-negation"
+      ],
+      "turns": [
+        {
+          "id": "cafe-stop-order",
+          "prompt": {
+            "en": "The barista asks: «Che cosa prende?» You want one coffee. What do you say?",
+            "it": "Il barista chiede: «Che cosa prende?» Vuoi un caffè. Che cosa dici?"
+          },
+          "options": [
+            "Un caffè, per favore.",
+            "Due caffè, per favore.",
+            "Un tè, per favore."
+          ],
+          "answer": "Un caffè, per favore.",
+          "hint": {
+            "en": "Check both the drink and the quantity. Per favore makes a request polite.",
+            "it": "Controlla la bevanda e la quantità. Per favore rende gentile la richiesta."
+          },
+          "explanation": {
+            "en": "Un caffè means one coffee. Caffè is masculine, so use un. A short order with per favore is natural.",
+            "it": "Un caffè indica una sola bevanda. Caffè è maschile: usa un. Un ordine breve con per favore è naturale."
+          },
+          "unitId": "indefinite-articles"
+        },
+        {
+          "id": "cafe-stop-here",
+          "prompt": {
+            "en": "The barista asks: «Qui o da portare via?» (Here or to take away?) You want to drink at the café.",
+            "it": "Il barista chiede: «Qui o da portare via?» Vuoi bere al bar."
+          },
+          "options": [
+            "Da portare via, grazie.",
+            "Qui, grazie.",
+            "Senza zucchero, grazie."
+          ],
+          "answer": "Qui, grazie.",
+          "hint": {
+            "en": "Answer the question about the place, not about sugar.",
+            "it": "Rispondi alla domanda sul posto, non sullo zucchero."
+          },
+          "explanation": {
+            "en": "Qui means here. Da portare via means to take away; senza zucchero means without sugar. Only qui matches your plan.",
+            "it": "Qui indica questo posto. Da portare via indica una bevanda da bere fuori dal bar; senza zucchero riguarda lo zucchero. Qui corrisponde al tuo programma."
+          },
+          "unitId": "questions-negation"
+        },
+        {
+          "id": "cafe-stop-bill",
+          "prompt": {
+            "en": "You finish your coffee and want to pay. Ask for the bill.",
+            "it": "Finisci il caffè e vuoi pagare. Chiedi il conto."
+          },
+          "options": [
+            "Un altro caffè, per favore.",
+            "Un bicchiere d’acqua, per favore.",
+            "Il conto, per favore."
+          ],
+          "answer": "Il conto, per favore.",
+          "hint": {
+            "en": "Choose the request about payment, not another drink.",
+            "it": "Scegli la richiesta per pagare, non un’altra bevanda."
+          },
+          "explanation": {
+            "en": "Il conto is the bill. Conto is masculine singular, so the article is il. The other replies order more drinks.",
+            "it": "Il conto serve per pagare. Conto è maschile singolare: l’articolo è il. Le altre risposte chiedono altre bevande."
+          },
+          "unitId": "definite-articles"
+        }
+      ]
+    },
+    {
+      "id": "station-ticket",
+      "title": {
+        "en": "At the station",
+        "it": "Alla stazione"
+      },
+      "intro": {
+        "en": "Buy a ticket to Bologna, choose a departure time and find the platform. Useful words: un biglietto = a ticket; parte = departs; il binario = the platform track.",
+        "it": "Compra un biglietto per Bologna, scegli l’ora e chiedi il binario. Parole utili: un biglietto, parte, il binario."
+      },
+      "unitIds": [
+        "indefinite-articles",
+        "simple-prepositions",
+        "time-frequency",
+        "questions-negation"
+      ],
+      "turns": [
+        {
+          "id": "station-ticket-destination",
+          "prompt": {
+            "en": "At the ticket desk, you need one ticket to Bologna. Choose your request.",
+            "it": "In biglietteria, vuoi un biglietto per Bologna. Scegli la richiesta."
+          },
+          "options": [
+            "Due biglietti per Bologna, per favore.",
+            "Un biglietto per Bologna, per favore.",
+            "Un biglietto per Firenze, per favore."
+          ],
+          "answer": "Un biglietto per Bologna, per favore.",
+          "hint": {
+            "en": "Check the number of tickets and the city after per.",
+            "it": "Controlla il numero dei biglietti e la città dopo per."
+          },
+          "explanation": {
+            "en": "Un biglietto is one ticket. Per Bologna gives the destination. The alternatives change either the quantity or the city.",
+            "it": "Un biglietto indica un solo biglietto. Per Bologna indica la destinazione. Le altre risposte cambiano la quantità o la città."
+          },
+          "unitId": "simple-prepositions"
+        },
+        {
+          "id": "station-ticket-time",
+          "prompt": {
+            "en": "The clerk asks: «A che ora vuole partire?» (What time do you want to leave?) You want 09:00.",
+            "it": "L’impiegato chiede: «A che ora vuole partire?» Vuoi partire alle 09:00."
+          },
+          "options": [
+            "Alle dieci, per favore.",
+            "Alle otto, per favore.",
+            "Alle nove, per favore."
+          ],
+          "answer": "Alle nove, per favore.",
+          "hint": {
+            "en": "Match the hour. Use alle with most clock times.",
+            "it": "Controlla l’ora. Usa alle con la maggior parte delle ore."
+          },
+          "explanation": {
+            "en": "Alle nove means at nine o’clock. Alle otto is at eight; alle dieci is at ten.",
+            "it": "Alle nove indica le 09:00. Alle otto indica le 08:00; alle dieci indica le 10:00."
+          },
+          "unitId": "time-frequency"
+        },
+        {
+          "id": "station-ticket-platform",
+          "prompt": {
+            "en": "You know the departure time. Now ask which platform the train leaves from.",
+            "it": "Conosci l’ora di partenza. Ora chiedi da quale binario parte il treno."
+          },
+          "options": [
+            "Da quale binario parte il treno?",
+            "A che ora parte il treno?",
+            "Quanto costa il biglietto?"
+          ],
+          "answer": "Da quale binario parte il treno?",
+          "hint": {
+            "en": "Binario is the word for the platform track. Da asks about a starting point.",
+            "it": "Binario indica il posto del treno. Da indica il punto di partenza."
+          },
+          "explanation": {
+            "en": "Da quale binario…? asks from which platform. A che ora…? asks the time, and quanto costa…? asks the price.",
+            "it": "Da quale binario…? chiede il binario di partenza. A che ora…? chiede l’ora; quanto costa…? chiede il prezzo."
+          },
+          "unitId": "questions-negation"
+        }
+      ]
+    },
+    {
+      "id": "market-basket",
+      "title": {
+        "en": "At the market",
+        "it": "Al mercato"
+      },
+      "intro": {
+        "en": "Buy apples, ask the price of bread and finish your order. Useful words: le mele = apples; il pane = bread; basta così = that is all.",
+        "it": "Compra le mele, chiedi il prezzo del pane e finisci l’ordine. Parole utili: le mele, il pane, basta così."
+      },
+      "unitIds": [
+        "quantity-partitives",
+        "noun-plurals",
+        "questions-negation"
+      ],
+      "turns": [
+        {
+          "id": "market-basket-apples",
+          "prompt": {
+            "en": "The seller asks: «Che cosa prende?» You need one kilogram of apples.",
+            "it": "Il venditore chiede: «Che cosa prende?» Vuoi un chilo di mele."
+          },
+          "options": [
+            "Due chili di mele, per favore.",
+            "Un chilo di pere, per favore.",
+            "Un chilo di mele, per favore."
+          ],
+          "answer": "Un chilo di mele, per favore.",
+          "hint": {
+            "en": "Check the amount and the fruit. A measured amount uses di before the food.",
+            "it": "Controlla la quantità e il frutto. Usa di dopo la quantità."
+          },
+          "explanation": {
+            "en": "Un chilo di mele means one kilogram of apples. The measurement uses di; mela becomes mele in the plural.",
+            "it": "Un chilo di mele indica la quantità desiderata. Dopo un chilo usa di; il plurale di mela è mele."
+          },
+          "unitId": "quantity-partitives"
+        },
+        {
+          "id": "market-basket-price",
+          "prompt": {
+            "en": "You also see bread, but there is no price label. Ask how much the bread costs.",
+            "it": "Vedi anche il pane, ma non c’è il prezzo. Chiedi quanto costa il pane."
+          },
+          "options": [
+            "Quanto costa il pane?",
+            "Dov’è il pane?",
+            "Quanto costa il formaggio?"
+          ],
+          "answer": "Quanto costa il pane?",
+          "hint": {
+            "en": "Use a price question and name the food you are asking about.",
+            "it": "Usa una domanda sul prezzo e il nome del cibo giusto."
+          },
+          "explanation": {
+            "en": "Quanto costa…? asks how much something costs. Il pane is the bread. Dov’è…? asks where it is.",
+            "it": "Quanto costa…? chiede il prezzo. Il pane è il cibo della domanda. Dov’è…? chiede il posto."
+          },
+          "unitId": "questions-negation"
+        },
+        {
+          "id": "market-basket-finish",
+          "prompt": {
+            "en": "The seller asks: «Altro?» (Anything else?) You have everything you need. Decline politely.",
+            "it": "Il venditore chiede: «Altro?» Hai tutto quello che serve. Rispondi di no in modo gentile."
+          },
+          "options": [
+            "Sì, anche due pere, grazie.",
+            "No, grazie. Basta così.",
+            "Sì, anche il formaggio, grazie."
+          ],
+          "answer": "No, grazie. Basta così.",
+          "hint": {
+            "en": "You are finishing the order, so do not add another item.",
+            "it": "Finisci l’ordine: non aggiungere un altro prodotto."
+          },
+          "explanation": {
+            "en": "No, grazie politely declines. Basta così is a useful fixed phrase meaning that is all. Both other replies add food.",
+            "it": "No, grazie è una risposta negativa gentile. Basta così è una frase utile per finire l’ordine. Le altre risposte aggiungono cibo."
+          },
+          "unitId": "questions-negation"
+        }
+      ]
+    },
+    {
+      "id": "new-classmate",
+      "title": {
+        "en": "Meet a classmate",
+        "it": "Conosci un compagno di corso"
+      },
+      "intro": {
+        "en": "Practise with an imaginary identity: you are Luca, from Bristol, aged 27. Useful words: mi chiamo = my name is; sono di = I am from; anni = years.",
+        "it": "Usa un’identità immaginaria: ti chiami Luca, sei di Bristol e hai 27 anni. Parole utili: mi chiamo, sono di, anni."
+      },
+      "unitIds": [
+        "essere",
+        "avere",
+        "questions-negation",
+        "simple-prepositions",
+        "reflexive-routine"
+      ],
+      "turns": [
+        {
+          "id": "new-classmate-name",
+          "prompt": {
+            "en": "A classmate asks: «Come ti chiami?» Your name in this scene is Luca.",
+            "it": "Un compagno chiede: «Come ti chiami?» In questa scena ti chiami Luca."
+          },
+          "options": [
+            "Mi chiamo Luca.",
+            "Ho ventisette anni.",
+            "Sono di Bristol."
+          ],
+          "answer": "Mi chiamo Luca.",
+          "hint": {
+            "en": "Come ti chiami? asks for a name, not an age or a city.",
+            "it": "Come ti chiami? chiede il nome, non l’età o la città."
+          },
+          "explanation": {
+            "en": "Mi chiamo Luca answers the name question. Learn mi chiamo as a useful introduction phrase.",
+            "it": "Mi chiamo Luca risponde alla domanda sul nome. Impara mi chiamo come frase utile per presentarti."
+          },
+          "unitId": "reflexive-routine"
+        },
+        {
+          "id": "new-classmate-origin",
+          "prompt": {
+            "en": "Your classmate asks: «Di dove sei?» You are from Bristol.",
+            "it": "Il compagno chiede: «Di dove sei?» Sei di Bristol."
+          },
+          "options": [
+            "Sono a Bristol.",
+            "Sono di Bristol.",
+            "Sono di Roma."
+          ],
+          "answer": "Sono di Bristol.",
+          "hint": {
+            "en": "For your city of origin, use essere + di + city. Check the city too.",
+            "it": "Per la città di origine, usa essere + di + città. Controlla anche la città."
+          },
+          "explanation": {
+            "en": "Sono di Bristol says you are from Bristol. Sono a Bristol says where you are now, which is a different meaning.",
+            "it": "Sono di Bristol indica la tua città di origine. Sono a Bristol indica dove sei adesso: il significato è diverso."
+          },
+          "unitId": "simple-prepositions"
+        },
+        {
+          "id": "new-classmate-age",
+          "prompt": {
+            "en": "Your classmate asks: «Quanti anni hai?» Your age in this scene is 27.",
+            "it": "Il compagno chiede: «Quanti anni hai?» In questa scena hai 27 anni."
+          },
+          "options": [
+            "Ho diciassette anni.",
+            "Ho trentasette anni.",
+            "Ho ventisette anni."
+          ],
+          "answer": "Ho ventisette anni.",
+          "hint": {
+            "en": "Italian uses avere for age. Check the number: twenty plus seven.",
+            "it": "In italiano usa avere per l’età. Controlla il numero: venti più sette."
+          },
+          "explanation": {
+            "en": "Ho ventisette anni means I am 27 years old. Italian uses ho, from avere. Diciassette is 17; trentasette is 37.",
+            "it": "Ho ventisette anni indica l’età di 27 anni. Ho è una forma di avere. Diciassette indica 17; trentasette indica 37."
+          },
+          "unitId": "avere"
+        }
+      ]
+    },
+    {
+      "id": "town-directions",
+      "title": {
+        "en": "Find the station",
+        "it": "Trova la stazione"
+      },
+      "intro": {
+        "en": "Ask where the station is and check the direction. Useful words: la stazione = the station; a destra = on the right; a sinistra = on the left; a piedi = on foot.",
+        "it": "Chiedi dov’è la stazione e controlla la direzione. Parole utili: la stazione, a destra, a sinistra, a piedi."
+      },
+      "unitIds": [
+        "questions-negation",
+        "essere",
+        "simple-prepositions",
+        "irregular-present"
+      ],
+      "turns": [
+        {
+          "id": "town-directions-where",
+          "prompt": {
+            "en": "You need to find the station. Ask a stranger where it is.",
+            "it": "Cerchi la stazione. Chiedi a una persona dove si trova."
+          },
+          "options": [
+            "Scusi, che ore sono?",
+            "Scusi, dov’è la stazione?",
+            "Scusi, dov’è la farmacia?"
+          ],
+          "answer": "Scusi, dov’è la stazione?",
+          "hint": {
+            "en": "Use a where question and check the place name. Scusi is a polite way to get attention.",
+            "it": "Usa una domanda con dove e controlla il nome del posto. Scusi è una parola gentile per chiedere attenzione."
+          },
+          "explanation": {
+            "en": "Dov’è is dove + è: where is. La stazione names the place you need. Che ore sono? asks the time.",
+            "it": "Dov’è unisce dove ed è. La stazione è il posto che cerchi. Che ore sono? chiede l’ora."
+          },
+          "unitId": "questions-negation"
+        },
+        {
+          "id": "town-directions-confirm",
+          "prompt": {
+            "en": "The person says: «La stazione è a destra.» Confirm the direction you hear.",
+            "it": "La persona dice: «La stazione è a destra.» Conferma la direzione."
+          },
+          "options": [
+            "A sinistra, grazie.",
+            "Sempre dritto, grazie.",
+            "A destra, grazie."
+          ],
+          "answer": "A destra, grazie.",
+          "hint": {
+            "en": "Repeat the direction given, then thank the person.",
+            "it": "Ripeti la direzione indicata e ringrazia la persona."
+          },
+          "explanation": {
+            "en": "A destra means on the right. A sinistra means on the left; sempre dritto means straight ahead.",
+            "it": "A destra è la direzione indicata. A sinistra indica il lato opposto; sempre dritto indica di continuare senza girare."
+          },
+          "unitId": "simple-prepositions"
+        },
+        {
+          "id": "town-directions-walk",
+          "prompt": {
+            "en": "The person asks: «Va a piedi o in autobus?» (Are you walking or taking the bus?) You are walking.",
+            "it": "La persona chiede: «Va a piedi o in autobus?» Vai a piedi."
+          },
+          "options": [
+            "Vado a piedi.",
+            "Vado in autobus.",
+            "Vado in macchina."
+          ],
+          "answer": "Vado a piedi.",
+          "hint": {
+            "en": "Choose the travel method without a vehicle. Vado means I go.",
+            "it": "Scegli il modo di viaggiare senza un veicolo. Vado è la forma per io."
+          },
+          "explanation": {
+            "en": "Vado a piedi means I am walking. Use a piedi for walking; use in autobus or in macchina for the bus or car.",
+            "it": "Vado a piedi indica che cammini. Usa a piedi per camminare; usa in autobus o in macchina per gli altri mezzi."
+          },
+          "unitId": "irregular-present"
+        }
+      ]
+    },
+    {
+      "id": "table-booking",
+      "title": {
+        "en": "Book a table",
+        "it": "Prenota un tavolo"
+      },
+      "intro": {
+        "en": "Phone a restaurant for a table for two at 20:00. Useful words: prenotare = to book; un tavolo = a table; due persone = two people.",
+        "it": "Telefona a un ristorante per un tavolo per due alle 20:00. Parole utili: prenotare, un tavolo, due persone."
+      },
+      "unitIds": [
+        "modal-verbs",
+        "indefinite-articles",
+        "simple-prepositions",
+        "time-frequency",
+        "noun-plurals"
+      ],
+      "turns": [
+        {
+          "id": "table-booking-request",
+          "prompt": {
+            "en": "You call a restaurant to reserve a table. Choose the request that says this.",
+            "it": "Telefoni a un ristorante per prenotare un tavolo. Scegli la richiesta giusta."
+          },
+          "options": [
+            "Buonasera. Posso pagare il conto?",
+            "Buonasera. Posso vedere il menù?",
+            "Buonasera. Posso prenotare un tavolo?"
+          ],
+          "answer": "Buonasera. Posso prenotare un tavolo?",
+          "hint": {
+            "en": "Look for the verb meaning to book. After posso, use an infinitive.",
+            "it": "Cerca il verbo che significa prenotare. Dopo posso, usa un infinito."
+          },
+          "explanation": {
+            "en": "Posso prenotare un tavolo? means Can I book a table? Posso is followed by the infinitive prenotare. The other requests are about paying or seeing the menu.",
+            "it": "Posso prenotare un tavolo? chiede una prenotazione. Dopo posso usa l’infinito prenotare. Le altre richieste riguardano il conto o il menù."
+          },
+          "unitId": "modal-verbs"
+        },
+        {
+          "id": "table-booking-people",
+          "prompt": {
+            "en": "The restaurant asks: «Per quante persone?» There are two of you.",
+            "it": "Il ristorante chiede: «Per quante persone?» Siete in due."
+          },
+          "options": [
+            "Per due persone.",
+            "Per tre persone.",
+            "Per quattro persone."
+          ],
+          "answer": "Per due persone.",
+          "hint": {
+            "en": "Quante persone? asks for the number of people. Match your group size.",
+            "it": "Quante persone? chiede il numero delle persone. Controlla il numero."
+          },
+          "explanation": {
+            "en": "Per due persone means for two people. Persona is singular; persone is plural.",
+            "it": "Per due persone indica un tavolo per due. Persona è singolare; persone è plurale."
+          },
+          "unitId": "noun-plurals"
+        },
+        {
+          "id": "table-booking-hour",
+          "prompt": {
+            "en": "The restaurant asks: «A che ora?» You want your table at 20:00.",
+            "it": "Il ristorante chiede: «A che ora?» Vuoi il tavolo alle 20:00."
+          },
+          "options": [
+            "Alle sette di sera.",
+            "Alle otto di sera.",
+            "Alle nove di sera."
+          ],
+          "answer": "Alle otto di sera.",
+          "hint": {
+            "en": "20:00 is eight in the evening. The reply needs both the hour and the evening.",
+            "it": "Le 20:00 sono le otto di sera. Controlla l’ora e la parte della giornata."
+          },
+          "explanation": {
+            "en": "Alle otto di sera means at eight in the evening, or 20:00. The other replies mean 19:00 and 21:00.",
+            "it": "Alle otto di sera indica le 20:00. Le altre risposte indicano le 19:00 e le 21:00."
+          },
+          "unitId": "time-frequency"
+        }
+      ]
+    },
+    {
+      "id": "daily-chat",
+      "title": {
+        "en": "Talk about your day",
+        "it": "Parla della tua giornata"
+      },
+      "intro": {
+        "en": "Use this imaginary routine: wake up at seven, start work at nine and study Italian every day. Useful words: mi sveglio = I wake up; inizio = I start; ogni giorno = every day.",
+        "it": "Usa questa routine immaginaria: ti svegli alle sette, inizi a lavorare alle nove e studi italiano ogni giorno. Parole utili: mi sveglio, inizio, ogni giorno."
+      },
+      "unitIds": [
+        "reflexive-routine",
+        "time-frequency",
+        "present-are"
+      ],
+      "turns": [
+        {
+          "id": "daily-chat-wake",
+          "prompt": {
+            "en": "A friend asks: «A che ora ti svegli?» In this routine, you wake up at seven.",
+            "it": "Un amico chiede: «A che ora ti svegli?» In questa routine ti svegli alle sette."
+          },
+          "options": [
+            "Mi sveglio alle sette.",
+            "Mi sveglio alle nove.",
+            "Mi sveglio alle dieci."
+          ],
+          "answer": "Mi sveglio alle sette.",
+          "hint": {
+            "en": "Answer with the io form and the correct waking time.",
+            "it": "Rispondi con la forma per io e con l’ora giusta."
+          },
+          "explanation": {
+            "en": "Mi sveglio is the io form of svegliarsi. Keep mi with the verb. Alle sette gives the time.",
+            "it": "Mi sveglio è la forma per io di svegliarsi. Conserva mi davanti al verbo. Alle sette indica l’ora."
+          },
+          "unitId": "reflexive-routine"
+        },
+        {
+          "id": "daily-chat-work",
+          "prompt": {
+            "en": "Your friend asks: «A che ora inizi a lavorare?» In this routine, work starts at nine.",
+            "it": "L’amico chiede: «A che ora inizi a lavorare?» In questa routine inizi alle nove."
+          },
+          "options": [
+            "Inizio alle sette.",
+            "Inizio alle nove.",
+            "Inizio alle undici."
+          ],
+          "answer": "Inizio alle nove.",
+          "hint": {
+            "en": "Inizi is the question’s tu form; use inizio to answer about yourself. Check the hour.",
+            "it": "Inizi è la forma per tu nella domanda; usa inizio per parlare di te. Controlla l’ora."
+          },
+          "explanation": {
+            "en": "Inizio alle nove means I start at nine. Inizio is the io form of iniziare; the ending changes from -i in the question to -o in the answer.",
+            "it": "Inizio alle nove indica l’ora di inizio. Inizio è la forma per io di iniziare: la desinenza passa da -i nella domanda a -o nella risposta."
+          },
+          "unitId": "present-are"
+        },
+        {
+          "id": "daily-chat-study",
+          "prompt": {
+            "en": "Your friend asks: «Quando studi italiano?» In this routine, you study every day.",
+            "it": "L’amico chiede: «Quando studi italiano?» In questa routine studi tutti i giorni."
+          },
+          "options": [
+            "Studio italiano solo il sabato.",
+            "Studio italiano ogni lunedì.",
+            "Studio italiano ogni giorno."
+          ],
+          "answer": "Studio italiano ogni giorno.",
+          "hint": {
+            "en": "Choose the frequency that includes all seven days of the week.",
+            "it": "Scegli la frequenza che comprende tutti i sette giorni della settimana."
+          },
+          "explanation": {
+            "en": "Ogni giorno means every day. Ogni lunedì means every Monday; solo il sabato means only on Saturdays. Studio is the io form of studiare.",
+            "it": "Ogni giorno significa tutti i giorni. Ogni lunedì indica un solo giorno della settimana; solo il sabato esclude gli altri giorni. Studio è la forma per io di studiare."
+          },
+          "unitId": "time-frequency"
+        }
+      ]
+    },
+    {
+      "id": "evening-invitation",
+      "title": {
+        "en": "Make an evening plan",
+        "it": "Organizza una serata"
+      },
+      "intro": {
+        "en": "Accept a cinema invitation, meet at 19:00 and talk about dinner. Useful words: stasera = this evening; volentieri = gladly; mi piace = I like.",
+        "it": "Accetta un invito al cinema, scegli le 19:00 e parla della cena. Parole utili: stasera, volentieri, mi piace."
+      },
+      "unitIds": [
+        "irregular-present",
+        "time-frequency",
+        "piacere",
+        "questions-negation"
+      ],
+      "turns": [
+        {
+          "id": "evening-invitation-accept",
+          "prompt": {
+            "en": "A friend asks: «Vieni al cinema stasera?» You are free and want to accept.",
+            "it": "Un amico chiede: «Vieni al cinema stasera?» Sei libero e vuoi accettare."
+          },
+          "options": [
+            "No, stasera lavoro.",
+            "Sì, vengo volentieri.",
+            "No, stasera resto a casa."
+          ],
+          "answer": "Sì, vengo volentieri.",
+          "hint": {
+            "en": "Choose an affirmative reply. Vieni is the tu form; vengo is the io form.",
+            "it": "Scegli una risposta affermativa. Vieni è la forma per tu; vengo è la forma per io."
+          },
+          "explanation": {
+            "en": "Sì, vengo volentieri means Yes, I would be happy to come. Vengo is present tense; volentieri adds the meaning gladly. Both other replies decline.",
+            "it": "Sì, vengo volentieri accetta l’invito. Vengo è al presente; volentieri indica che vuoi partecipare con piacere. Le altre risposte rifiutano."
+          },
+          "unitId": "irregular-present"
+        },
+        {
+          "id": "evening-invitation-meet",
+          "prompt": {
+            "en": "Your friend asks: «A che ora ci vediamo?» (What time shall we meet?) You want 19:00.",
+            "it": "L’amico chiede: «A che ora ci vediamo?» Vuoi incontrarlo alle 19:00."
+          },
+          "options": [
+            "Alle otto di sera.",
+            "Alle nove di sera.",
+            "Alle sette di sera."
+          ],
+          "answer": "Alle sette di sera.",
+          "hint": {
+            "en": "Convert 19:00 to the everyday twelve-hour expression, and include the evening.",
+            "it": "Le 19:00 sono le sette di sera. Controlla l’ora e la parte della giornata."
+          },
+          "explanation": {
+            "en": "Alle sette di sera means at seven in the evening, or 19:00. Alle otto di sera is 20:00; alle nove di sera is 21:00.",
+            "it": "Alle sette di sera indica le 19:00. Alle otto di sera indica le 20:00; alle nove di sera indica le 21:00."
+          },
+          "unitId": "time-frequency"
+        },
+        {
+          "id": "evening-invitation-dinner",
+          "prompt": {
+            "en": "For dinner, your friend asks: «Ti piace la pasta?» You like pasta. Give a clear yes about pasta.",
+            "it": "Per cena, l’amico chiede: «Ti piace la pasta?» La pasta ti piace. Rispondi di sì e parla della pasta."
+          },
+          "options": [
+            "Sì, mi piace la pasta.",
+            "No, non mi piace la pasta.",
+            "Sì, mi piace il gelato."
+          ],
+          "answer": "Sì, mi piace la pasta.",
+          "hint": {
+            "en": "Answer about the same food. One singular thing takes piace.",
+            "it": "Rispondi sullo stesso cibo. Con una cosa singolare usa piace."
+          },
+          "explanation": {
+            "en": "Mi piace la pasta means I like pasta. Pasta is singular, so use piace. Non mi piace says you do not like it; gelato is a different food.",
+            "it": "Mi piace la pasta esprime un gusto positivo. Pasta è singolare: usa piace. Non mi piace esprime un gusto negativo; gelato è un altro cibo."
+          },
+          "unitId": "piacere"
+        }
+      ]
+    }
+  ]
+}

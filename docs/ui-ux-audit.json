@@ -1,0 +1,271 @@
+{
+  "audit": "Adversarial UI and UX acceptance checks for A1 academy",
+  "reviewedOn": "2026-10-20",
+  "method": "Isolated Chromium/Playwright contexts through browser-view; synthetic learner state only. Views inspected at 1440, 390 and 320 CSS pixels, English and Italian. Screenshots manually inspected and live controls exercised.",
+  "scoring": {
+    "rubric": "Ten areas with two equally weighted observable acceptance checks each. A pass needs at least 19 of 20 and no unresolved critical/high findings.",
+    "passed": 20,
+    "failed": 0,
+    "untestedScoredChecks": 0,
+    "maximum": 20,
+    "scoreOutOf10": 10,
+    "requiredScoreOutOf10": 9.5,
+    "pass": true,
+    "meaning": "This is a measured acceptance-check score, not a human learner usability-study score or a claim that every page and answer has been tested."
+  },
+  "checks": [
+    {
+      "id": "U01",
+      "area": "Responsive presentation",
+      "check": "Desktop route layout",
+      "status": "pass",
+      "observed": "All eight new route states render an h1 and stay within a 1440px viewport in EN and IT.",
+      "evidence": "work/academy-ui/layout-report.json"
+    },
+    {
+      "id": "U02",
+      "area": "Responsive presentation",
+      "check": "Small-phone route layout",
+      "status": "pass",
+      "observed": "The same route states pass at 390px and 320px; all three programme lengths also pass at both widths.",
+      "evidence": "work/academy-ui/layout-report.json; work/academy-ui/programme-report.json"
+    },
+    {
+      "id": "U03",
+      "area": "Localisation",
+      "check": "Bilingual navigation and headings",
+      "status": "pass",
+      "observed": "EN/IT route headings, programme choices, page browser, filters and main interface strings observed in the 48-case route matrix. Italian learning targets remain in Italian.",
+      "evidence": "work/academy-ui/layout-report.json"
+    },
+    {
+      "id": "U04",
+      "area": "Localisation",
+      "check": "Italian error and help journey",
+      "status": "pass",
+      "observed": "An actual wrong grammar answer, correction message, hint, source picker and page search operate in Italian; html lang is it.",
+      "evidence": "work/academy-ui/supplemental-report.json"
+    },
+    {
+      "id": "U05",
+      "area": "Keyboard access",
+      "check": "Native answers and ordering",
+      "status": "pass",
+      "observed": "Radio answers can be selected with Space; ordering tokens can be activated with Enter and the sentence can also be typed and submitted with Enter.",
+      "evidence": "work/academy-ui/interaction-report.json"
+    },
+    {
+      "id": "U06",
+      "area": "Keyboard access",
+      "check": "Focus visibility and long-page navigation",
+      "status": "pass",
+      "observed": "Answer control has a visible 3px solid focus outline; next-day button and day selector focus the exact day heading.",
+      "evidence": "work/academy-ui/interaction-report.json; work/academy-ui/programme-report.json"
+    },
+    {
+      "id": "U07",
+      "area": "Saved work",
+      "check": "Bounded labelled input",
+      "status": "pass",
+      "observed": "Grammar answer and production fields resolve by explicit accessible labels; HTML limits are 500 and 2000 characters.",
+      "evidence": "work/academy-ui/interaction-report.json"
+    },
+    {
+      "id": "U08",
+      "area": "Saved work",
+      "check": "Resume without losing work",
+      "status": "pass",
+      "observed": "Grammar answer, hint use, personal writing, unit completion, companion answer and reference note survive reload.",
+      "evidence": "work/academy-ui/interaction-report.json"
+    },
+    {
+      "id": "U09",
+      "area": "Honest feedback",
+      "check": "First attempt survives correction",
+      "status": "pass",
+      "observed": "Wrong first answer remains false after a correct repair; repair is explicitly marked supported. All questions remain revisitable.",
+      "evidence": "work/academy-ui/interaction-report.json"
+    },
+    {
+      "id": "U10",
+      "area": "Honest feedback",
+      "check": "Assistance cannot be hidden by reload",
+      "status": "pass",
+      "observed": "A due-mode correction after same-day feedback remains supported; a hint revealed before reload remains supported after reload.",
+      "evidence": "work/academy-ui/interaction-report.json"
+    },
+    {
+      "id": "U11",
+      "area": "Guided grammar",
+      "check": "Recall before feedback",
+      "status": "pass",
+      "observed": "Due mode starts with a blank answer and covered feedback. A later-day unaided recall records an independent attempt without rewriting the first attempt.",
+      "evidence": "work/academy-ui/interaction-report.json"
+    },
+    {
+      "id": "U12",
+      "area": "Guided grammar",
+      "check": "Meaningful completion guard",
+      "status": "pass",
+      "observed": "Unit completion is disabled until all exercises have been solved, at least three production words exist, and every writing self-check is ticked; completion persists.",
+      "evidence": "work/academy-ui/interaction-report.json"
+    },
+    {
+      "id": "U13",
+      "area": "Source companions",
+      "check": "Original practice and self-check",
+      "status": "pass",
+      "observed": "Practice page saves an original response, offers a model, requires explicit self-check, then saves completion. Source picker, search and page route are operable.",
+      "evidence": "work/academy-ui/interaction-report.json; work/academy-ui/supplemental-report.json"
+    },
+    {
+      "id": "U14",
+      "area": "Source companions",
+      "check": "Reference is not falsely graded",
+      "status": "pass",
+      "observed": "Reference pages accept optional saved notes and explanatory models but have no exercise-completion control or completion award.",
+      "evidence": "work/academy-ui/interaction-report.json"
+    },
+    {
+      "id": "U15",
+      "area": "Programme progress",
+      "check": "Selection, resume and switching",
+      "status": "pass",
+      "observed": "Programme selection survives reload; switching preserves completed grammar. Interface states that a different programme starts its day checklist again.",
+      "evidence": "work/academy-ui/programme-report.json; app/learning/academy.tsx"
+    },
+    {
+      "id": "U16",
+      "area": "Programme progress",
+      "check": "Required work, sequencing and links",
+      "status": "pass",
+      "observed": "First day stays disabled until required units and mission are complete; later days cannot skip earlier days; stored day progress resumes; grammar/application buttons open exact routes.",
+      "evidence": "work/academy-ui/programme-report.json"
+    },
+    {
+      "id": "U17",
+      "area": "Independent review",
+      "check": "Grammar word to personal recall",
+      "status": "pass",
+      "observed": "A grammar word can be starred, opened in the personal word bank, revealed and self-rated; next review date is stored.",
+      "evidence": "work/academy-ui/interaction-report.json"
+    },
+    {
+      "id": "U18",
+      "area": "Independent review",
+      "check": "Source file and page navigation",
+      "status": "pass",
+      "observed": "Source selection, empty search state, restored full page list and selection of an exact source page all work in Italian.",
+      "evidence": "work/academy-ui/supplemental-report.json"
+    },
+    {
+      "id": "U19",
+      "area": "Daily use",
+      "check": "All available time budgets",
+      "status": "pass",
+      "observed": "5/10/15/20/30/45/60-minute choices persist through reload at 1440/390/320: 21 successful budget-width combinations without document overflow.",
+      "evidence": "work/academy-ui/supplemental-report.json"
+    },
+    {
+      "id": "U20",
+      "area": "Daily use",
+      "check": "Runtime stability",
+      "status": "pass",
+      "observed": "No browser pageerror events during the 48 route checks, 18 programme layout checks and functional journeys; current TypeScript and academy ESLint checks pass.",
+      "evidence": "work/academy-ui/layout-report.json; work/academy-ui/interaction-report.json; work/academy-ui/programme-report.json; work/academy-ui/supplemental-report.json"
+    }
+  ],
+  "supportingMeasurements": {
+    "routeLanguageWidthCases": 48,
+    "programmeLanguageWidthCases": 18,
+    "budgetWidthCombinations": 21,
+    "coreColourContrast": [
+      {
+        "foreground": "#243e32",
+        "background": "#fffefb",
+        "ratio": 11.5
+      },
+      {
+        "foreground": "#667267",
+        "background": "#f7f6ef",
+        "ratio": 4.65
+      },
+      {
+        "foreground": "#ffffff",
+        "background": "#214b3b",
+        "ratio": 9.84
+      }
+    ]
+  },
+  "findingsAndFixes": [
+    {
+      "severity": "high",
+      "finding": "A generic full-sentence answer label conflicted with verb-only and phrase-only exercises.",
+      "resolution": "Use a neutral Italian-answer label; the exercise prompt defines answer scope.",
+      "status": "fixed"
+    },
+    {
+      "severity": "high",
+      "finding": "UI completion gates initially differed from engine minimum-word and sequential-day requirements.",
+      "resolution": "Match three-word production threshold, all rubric checks and current-day programme gate; expose reason when disabled.",
+      "status": "fixed"
+    },
+    {
+      "severity": "high",
+      "finding": "Reference pages had no task rubric but could previously enter the exercise completion flow.",
+      "resolution": "Render reference guidance and optional saved notes with no exercise completion credit.",
+      "status": "fixed"
+    },
+    {
+      "severity": "high",
+      "finding": "A later independent recall could accidentally reuse visible previous answers or disappear before its feedback was read.",
+      "resolution": "Blank the local recall response, hide prior feedback and preserve the selected review queue until mode is refreshed.",
+      "status": "fixed"
+    },
+    {
+      "severity": "high",
+      "finding": "Same-day feedback and hint-before-reload could make a supported correction appear independent.",
+      "resolution": "Root engine constrains independent recall by date and records hintDates; UI persists every hint reveal and tests both adversarial flows.",
+      "status": "fixed"
+    },
+    {
+      "severity": "medium",
+      "finding": "The mobile step label Understand wrapped to a dangling final letter.",
+      "resolution": "Use the concise step label Learn; retain the Italian label Capisci.",
+      "status": "fixed"
+    },
+    {
+      "severity": "medium",
+      "finding": "Long programme pages required excessive scrolling to reach the next study day.",
+      "resolution": "Add a next-day button and native day jump selector that move focus to the exact heading.",
+      "status": "fixed"
+    },
+    {
+      "severity": "medium",
+      "finding": "Programme-switch copy did not explain that only the active programme day checklist is retained.",
+      "resolution": "State that selecting a different programme starts a new day checklist while learned unit and lesson evidence is kept.",
+      "status": "fixed"
+    },
+    {
+      "severity": "medium",
+      "finding": "Seven time choices could overflow narrow plan layouts.",
+      "resolution": "Root updated time-choice layout; all seven options verified at three widths.",
+      "status": "fixed"
+    },
+    {
+      "severity": "low",
+      "finding": "Muted text on tinted assistance panels had less contrast than the main paper surface.",
+      "resolution": "Darken assistance-panel copy to #455849 and make word-save targets 44px.",
+      "status": "fixed"
+    }
+  ],
+  "unresolvedCriticalOrHigh": [],
+  "limitations": [
+    "No real learner study, lecturer observation session or timing study was conducted; estimated study minutes are not measured learning durations.",
+    "No screen reader, mobile operating-system browser, high-zoom browser or colour-vision simulation was exercised. Keyboard and accessible control names were checked in Chromium.",
+    "Functional grammar journey covered the noun-gender unit and an Italian essere error/help path; UI did not exhaustively answer every one of the 224 exercises. Separate engine/content audits cover answer structure and curriculum.",
+    "Source companion UI was exercised on representative practice and reference pages, not every page. The final source data had no needs-review entry during the supplemental run, so that branch was not independently browser-exercised.",
+    "Private real learner state and local databases were not used by the audit. Synthetic completed units and missions were used only inside an isolated test context to exercise programme gating.",
+    "Screenshot and raw browser outputs remain ignored under work/academy-ui; this document records the durable observations without learner state or source extracts."
+  ]
+}

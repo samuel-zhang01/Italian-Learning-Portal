@@ -1,0 +1,5548 @@
+{
+  "reviewedOn": "2026-10-20",
+  "scope": "48 supplied PDF/PPTX files in Organised/Organised, excluding course-admin maps and certificates. Physical covers, blanks, solutions and homework remain in numbering. DOCX and previously generated HTML companions are outside this page-numbered review.",
+  "sourceFiles": 48,
+  "physicalPages": 936,
+  "counts": {
+    "practice": 730,
+    "reference": 206,
+    "needs-review": 0
+  },
+  "uniquePracticePatterns": 113,
+  "newSources": [
+    {
+      "id": "src-2c59b3929a33",
+      "path": "Course 3/Grammar_ A1.pptx",
+      "title": "Grammar_ A1.pptx",
+      "course": 3,
+      "pages": 78,
+      "sha256": "2c59b3929a334786d08bc844d9bb3d9c35d5df8fa4628e053db9597cb90afd40"
+    }
+  ],
+  "method": [
+    "SHA-256 matched to existing source IDs; new ID is src- plus first 12 checksum characters.",
+    "Confirmed presentation relationship order matches numeric slide order for all supplied PPTX files.",
+    "Read page-preserving extraction, with Italian/English OCR of sparse pages. Every page has an explicit reviewed topic assignment.",
+    "Viewed all 78 new Grammar_ A1.pptx slides in labeled contact sheets; detailed checks of tables and source inconsistencies. Also visually resolved all 34 older pages with insufficient OCR, distinguishing illustrations, activities, covers and video frames.",
+    "Practice uses original parallel scenarios. Repeated archive references share practice patterns; physical page coverage is not a count of unique grammar concepts.",
+    "Reference pages do not count as grammar mastery; needs-review pages cannot count as completed practice."
+  ],
+  "sourceCorrections": [
+    {
+      "sourceId": "src-2c59b3929a33",
+      "pages": [
+        54
+      ],
+      "issue": "Source prose confuses bello and quello after the noun; companion uses correct bello before/after patterns and separate demonstratives."
+    },
+    {
+      "sourceId": "src-2c59b3929a33",
+      "pages": [
+        75
+      ],
+      "issue": "The source pronoun table prints quegli as a standalone demonstrative plural. Practice correctly uses quelli when the noun is omitted."
+    },
+    {
+      "sourceId": "src-2c59b3929a33",
+      "pages": [
+        69,
+        71,
+        72
+      ],
+      "issue": "Intransitivity or movement alone does not determine the auxiliary. Practice teaches verb-specific pairs and includes ho camminato, ho dormito, sono arrivato/a."
+    },
+    {
+      "sourceId": "src-2c59b3929a33",
+      "pages": [
+        38
+      ],
+      "issue": "Frequency-adverb positions in the source are common patterns, not universal obligatory positions."
+    }
+  ],
+  "limits": [
+    "Original audio/video is not bundled or answered from guesses.",
+    "Some supplied classroom PDFs visibly include NotebookLM-generated notes; these are treated as supplied companion material, not independent authoritative grammar evidence.",
+    "No raw source pages, extracted text, private class names, answer keys or independent homework solutions are included.",
+    "All pages with insufficient OCR were visually classified. The remaining older pages were reviewed through extracted text/OCR, not a full visual proofread of every original slide.",
+    "The A2 roadmap is an overview; the supplied Course 3 lessons do not establish that all future course topics have been taught."
+  ],
+  "files": [
+    {
+      "sourceId": "src-c62281320322",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Reference Materials/I verbi-Presente indicativo.pptx",
+      "sha256": "c622813203223ceb1c08099eaee2d1c6d49e21ef6db6170215d3ed6d30e8954b",
+      "physicalPages": 7,
+      "counts": {
+        "reference": 1,
+        "practice": 6
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 2,
+        "text": 5
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 3,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "irregular",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "isc",
+          "kind": "practice"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-93be9aa5bec6",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Reference Materials/PDF_Grammar_Revision.pdf",
+      "sha256": "93be9aa5bec6d022ec7ac952e5f3bdf931cf07d819746e7604f7999e30186f1b",
+      "physicalPages": 23,
+      "counts": {
+        "reference": 3,
+        "practice": 20
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 16,
+        "text": 7
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "geography",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "vocab",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "plural",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "subject",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "negative",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "there",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "questions",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "calendar",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "contract",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "location",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "town",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "time",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "indirect",
+          "kind": "practice"
+        },
+        {
+          "page": 20,
+          "topic": "numbers",
+          "kind": "practice"
+        },
+        {
+          "page": 21,
+          "topic": "large-numbers",
+          "kind": "practice"
+        },
+        {
+          "page": 22,
+          "topic": "ordinal",
+          "kind": "practice"
+        },
+        {
+          "page": 23,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-a1ef1a0898bc",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Reference Materials/PDF_I_verbi.pdf",
+      "sha256": "a1ef1a0898bc094b75d9bda1c35909fd8849d8cb17aa63abfc04417e334809c0",
+      "physicalPages": 7,
+      "counts": {
+        "reference": 1,
+        "practice": 6
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 2,
+        "text": 5
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 3,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "irregular",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "isc",
+          "kind": "practice"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-5226d8ba4206",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Reference Materials/Revision_Grammar_ A1.pptx",
+      "sha256": "5226d8ba4206127aa817245c2232f1b695babbbedd84eb2894699d8e2da675e3",
+      "physicalPages": 22,
+      "counts": {
+        "reference": 3,
+        "practice": 19
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 15,
+        "text": 7
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "geography",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "vocab",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "plural",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "subject",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "negative",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "there",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "questions",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "calendar",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "contract",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "location",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "time",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "indirect",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "numbers",
+          "kind": "practice"
+        },
+        {
+          "page": 20,
+          "topic": "large-numbers",
+          "kind": "practice"
+        },
+        {
+          "page": 21,
+          "topic": "ordinal",
+          "kind": "practice"
+        },
+        {
+          "page": 22,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-df590882a757",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 02 — Countries & Nationalities/PDF_Week_2_Countries_and_Nationalities.pdf",
+      "sha256": "df590882a7573bd9cd97f26775f0dd9eb22ec620d7acfc9ac7312cf0461b3d3c",
+      "physicalPages": 17,
+      "counts": {
+        "reference": 6,
+        "practice": 11
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 5,
+        "text": 12
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "textbook",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "nationality",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "nationality",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "nationality",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "numbers",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "numbers",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "end",
+          "kind": "reference"
+        },
+        {
+          "page": 16,
+          "topic": "homework",
+          "kind": "reference"
+        },
+        {
+          "page": 17,
+          "topic": "video",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-5747c8e0d8e6",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 03 — Additional Info/PDF_Week_3_Additional_info.pdf",
+      "sha256": "5747c8e0d8e68b1418e7304cba47db476c3bf70105b5ac6b42b067021ec25590",
+      "physicalPages": 15,
+      "counts": {
+        "reference": 4,
+        "practice": 11
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 7,
+        "text": 8
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "gender",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "gender",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "numbers",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "avere",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "irregular",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "are",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "video",
+          "kind": "reference"
+        },
+        {
+          "page": 15,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-e47e5cd3afc4",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 04 — Jobs & Professions/PDF_Week_4_Jobs_and_professions.pdf",
+      "sha256": "e47e5cd3afc4dcf07993364d6fdaff277f8f6fc73c1397a0e396b9b227f6b549",
+      "physicalPages": 18,
+      "counts": {
+        "reference": 5,
+        "practice": 13
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 9,
+        "text": 9
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "polite",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "questions",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "fare",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "indef",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "textbook",
+          "kind": "reference"
+        },
+        {
+          "page": 17,
+          "topic": "end",
+          "kind": "reference"
+        },
+        {
+          "page": 18,
+          "topic": "homework",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-e95312c57a8a",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 04 — Jobs & Professions/Week 4_Jobs and professions.pptx",
+      "sha256": "e95312c57a8acd4ff33fbee16fb844de5d2ecfe4abfda76706788964bd74f43c",
+      "physicalPages": 18,
+      "counts": {
+        "reference": 5,
+        "practice": 13
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 7,
+        "text": 11
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "questions",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "fare",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "indef",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "textbook",
+          "kind": "reference"
+        },
+        {
+          "page": 17,
+          "topic": "end",
+          "kind": "reference"
+        },
+        {
+          "page": 18,
+          "topic": "homework",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-861f47bf8fe2",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 05 — At the Bar & Restaurant/PDF_Week_5.pdf",
+      "sha256": "861f47bf8fe29c59e503b6176d33fa974eb1530103e7fcc6044ff60c76e687c0",
+      "physicalPages": 27,
+      "counts": {
+        "reference": 5,
+        "practice": 22
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 16,
+        "text": 11
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "plural",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "cafe",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "cafe",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "cafe",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "food",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "drinks",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "drinks",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "restaurant",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "bill",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "bill",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "bill",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "polite",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "cafe",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "cafe",
+          "kind": "practice"
+        },
+        {
+          "page": 20,
+          "topic": "isc",
+          "kind": "practice"
+        },
+        {
+          "page": 21,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 22,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 23,
+          "topic": "restaurant",
+          "kind": "practice"
+        },
+        {
+          "page": 24,
+          "topic": "good",
+          "kind": "practice"
+        },
+        {
+          "page": 25,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 26,
+          "topic": "end",
+          "kind": "reference"
+        },
+        {
+          "page": 27,
+          "topic": "video",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-43b82c2f29d2",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 06 — The Spare Time/I_verbi-Presente_indicativo.pptx",
+      "sha256": "43b82c2f29d274f74f1258b66dc582a18a94ec51a2f1d5db04a060b9a3fd9a87",
+      "physicalPages": 6,
+      "counts": {
+        "reference": 1,
+        "practice": 5
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 2,
+        "text": 4
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 3,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "irregular",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "isc",
+          "kind": "practice"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-61ed8b6b8bf0",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 06 — The Spare Time/PDF_Week_6__The_spare_time.pdf",
+      "sha256": "61ed8b6b8bf007ea0f3684c9b156b07527bdac468a32003c4d43672635a45485",
+      "physicalPages": 14,
+      "counts": {
+        "reference": 5,
+        "practice": 9
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 4,
+        "text": 10
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "vocab",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "irregular",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "calendar",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "video",
+          "kind": "reference"
+        },
+        {
+          "page": 13,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 14,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-6330a9e35470",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 07 — Piacere & The Time/PDF_Week_7_Piacere___The_time.pdf",
+      "sha256": "6330a9e3547076b8ecc0918c38c81888e0a8b20aeedccdcb52739d370d1505bd",
+      "physicalPages": 20,
+      "counts": {
+        "reference": 7,
+        "practice": 13
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 9,
+        "text": 11
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "likes-more",
+          "kind": "reference"
+        },
+        {
+          "page": 11,
+          "topic": "likes-reply",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "likes-reply",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "time",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "listening",
+          "kind": "reference"
+        },
+        {
+          "page": 17,
+          "topic": "time",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "video",
+          "kind": "reference"
+        },
+        {
+          "page": 19,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 20,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-5789e1d3dc28",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 08 — Hotel & Prepositions/PDF_Week_8_Hotel_prepositions.pdf",
+      "sha256": "5789e1d3dc285c7b31480bd661ab2e00e9c17fffccf456494a3c755bde105b60",
+      "physicalPages": 16,
+      "counts": {
+        "reference": 5,
+        "practice": 11
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 4,
+        "text": 12
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "contract",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "contract",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "contract",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "location",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "there",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "hotel",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "video",
+          "kind": "reference"
+        },
+        {
+          "page": 15,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 16,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-cf2609342814",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 09 — Revision/PDF_Week_9_Revision.pdf",
+      "sha256": "cf2609342814446709d52101f7030dc8431df5b3c141819349f05f392056de92",
+      "physicalPages": 22,
+      "counts": {
+        "reference": 5,
+        "practice": 17
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 9,
+        "text": 13
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "music",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "reading",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "indef",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "plan",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "contract",
+          "kind": "practice"
+        },
+        {
+          "page": 20,
+          "topic": "textbook",
+          "kind": "reference"
+        },
+        {
+          "page": 21,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 22,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-a66d8428d12d",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 11/PDF_Week_11.pdf",
+      "sha256": "a66d8428d12d5c04ffaf3770b6b30b1da35c786a478044886c69c910ab1ccd6a",
+      "physicalPages": 13,
+      "counts": {
+        "reference": 4,
+        "practice": 9
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 4,
+        "text": 9
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "possess",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "possess",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "possess",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "family",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "family",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "fare",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 13,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-aa466593013b",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 12 — In Town/PDF_Week_12_In_town.pdf",
+      "sha256": "aa466593013b1b12c6fbe1d1cd76e2ef819bde684b8fc0420baeacef79bf4502",
+      "physicalPages": 14,
+      "counts": {
+        "reference": 4,
+        "practice": 10
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 4,
+        "text": 10
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "town",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "town",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "sapere",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "sapere",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "partitive",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "partitive",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "molto",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "molto",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 14,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-25e5c76ace25",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 13 — The Past/PDF_Week_13_The_past.pdf",
+      "sha256": "25e5c76ace254bbab62c72bd06ce2d6aabfeb07f747efb1b27bf582f350f200f",
+      "physicalPages": 16,
+      "counts": {
+        "reference": 5,
+        "practice": 11
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 4,
+        "text": 12
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "past-essere",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "past-essere",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "past",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "past-essere",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "past-essere",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "past",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "past-except",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "past-except",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "past-irregular",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "past-essere",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "past",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 16,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-a6e6827aed0a",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 13b — Revision Session/Festa_Internazionale.pdf",
+      "sha256": "a6e6827aed0a4035e831cf94590426bff8854a03dc00159cd51c07e6241872e8",
+      "physicalPages": 5,
+      "counts": {
+        "practice": 5
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 5
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 2,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 3,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "intro",
+          "kind": "practice"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-3afe65bec96a",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 13b — Revision Session/Giochi_A1.pdf",
+      "sha256": "3afe65bec96a23c37bd3f74d98da72b7531ad37d1d37eb6f6f6b0056cda85452",
+      "physicalPages": 4,
+      "counts": {
+        "reference": 1,
+        "practice": 3
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "text": 4
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "polite",
+          "kind": "practice"
+        },
+        {
+          "page": 3,
+          "topic": "vocab",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "present",
+          "kind": "practice"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-127909477831",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 13b — Revision Session/PDF_Week_13_Revision.pdf",
+      "sha256": "1279094778314cfeef2a055496f81dc56d724bcbc23d3060785117d122b58e60",
+      "physicalPages": 15,
+      "counts": {
+        "reference": 4,
+        "practice": 11
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 5,
+        "text": 10
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "vocab",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "town",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "polite",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "town",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "questions",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 15,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-3281c0414c93",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 14 — Revision/PDF_Verbs_Revision.pdf",
+      "sha256": "3281c0414c93e402940357431d724bb4fbac725fbf0dd56cd9b89b1a7b6d4d1d",
+      "physicalPages": 15,
+      "counts": {
+        "reference": 2,
+        "practice": 13
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 15
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 3,
+          "topic": "isc",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "irregular",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "irregular",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "vocab",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-f13e405076fa",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 14 — Revision/PDF_Week_14_Revision.pdf",
+      "sha256": "f13e405076fa577db988643c7053fd15faf40a7a204598e23bfb0fca8cf90a3c",
+      "physicalPages": 16,
+      "counts": {
+        "reference": 5,
+        "practice": 11
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 16
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "vocab",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "town",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "polite",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "town",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "questions",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 16,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-d6a6521ac166",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 15 — At the Supermarket/PDF_Week_15_The_supermarket.pdf",
+      "sha256": "d6a6521ac16649f347a4d38585f78d8f4cfa3d7556aeba3a8e424440349be03a",
+      "physicalPages": 21,
+      "counts": {
+        "reference": 6,
+        "practice": 15
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 21
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "homework",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 5,
+          "topic": "food",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "food",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "quantity",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "partitive",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "shopping",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "shopping",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "shopping",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "shopping",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "shopping",
+          "kind": "practice"
+        },
+        {
+          "page": 20,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 21,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-457d6a840fbe",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 16 — The Family/PDF_Week_16_The_family.pdf",
+      "sha256": "457d6a840fbeccf60b79ca5097240457f555a9e3d2094c65bd2e2b4e6db2ee93",
+      "physicalPages": 15,
+      "counts": {
+        "reference": 6,
+        "practice": 9
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 14,
+        "text": 1
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "family-lex",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "possess",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "superlative",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "superlative",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "past-reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "past-reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "family-lex",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "past-reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "possess",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 14,
+          "topic": "end",
+          "kind": "reference"
+        },
+        {
+          "page": 15,
+          "topic": "homework",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-2ff0a330b006",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 17 — Passaporto & Identities/PDF_Identities.pdf",
+      "sha256": "2ff0a330b006af451f0cdad0cc65f7338f6e35d81a6db22491318ec7770b17b8",
+      "physicalPages": 14,
+      "counts": {
+        "reference": 3,
+        "practice": 11
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 14
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "appearance",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "intro",
+          "kind": "practice"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-052f37e33e4e",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 17 — Passaporto & Identities/PDF_Passaporto.pdf",
+      "sha256": "052f37e33e4e7a40f0e76881c02532601f37d3b7d177d4c280b805b8b5e8d32b",
+      "physicalPages": 10,
+      "counts": {
+        "reference": 3,
+        "practice": 7
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 10
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 3,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "shopping",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "restaurant",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "hotel",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "plan",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "signature",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-8b2162f38542",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 17 — Passaporto & Identities/PDF_Week 17.pdf",
+      "sha256": "8b2162f3854220b8f313713c3507b794d07d4a9b28ff9a3be03dc5cba85847eb",
+      "physicalPages": 14,
+      "counts": {
+        "reference": 6,
+        "practice": 8
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 14
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 5,
+          "topic": "vocab",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "shopping",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "restaurant",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "restaurant-repair",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "hotel-problem",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "questions",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 14,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-38b70cc243f2",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 18 — Revision/Week 18_Revision.pptx",
+      "sha256": "38b70cc243f238fb6df55411557c03dd984f07e99f70fd2250f89e8478ef8c6d",
+      "physicalPages": 27,
+      "counts": {
+        "reference": 3,
+        "practice": 24
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 6,
+        "text": 21
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "vocab",
+          "kind": "practice"
+        },
+        {
+          "page": 3,
+          "topic": "listening",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "appearance",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "appearance",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "appearance",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "nationality",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "appearance",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "reading",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "family-lex",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "family-lex",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "possess",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "reading",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "family-lex",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "family-lex",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "invitation",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "invitation",
+          "kind": "practice"
+        },
+        {
+          "page": 20,
+          "topic": "invitation",
+          "kind": "practice"
+        },
+        {
+          "page": 21,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 22,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 23,
+          "topic": "time",
+          "kind": "practice"
+        },
+        {
+          "page": 24,
+          "topic": "time",
+          "kind": "practice"
+        },
+        {
+          "page": 25,
+          "topic": "past",
+          "kind": "practice"
+        },
+        {
+          "page": 26,
+          "topic": "tense",
+          "kind": "practice"
+        },
+        {
+          "page": 27,
+          "topic": "video",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-9d234f3a6d22",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 19/PDF.pdf",
+      "sha256": "9d234f3a6d2215c7627167e7dbeead369030923c38b322ee3207f79f2b56b5b1",
+      "physicalPages": 16,
+      "counts": {
+        "reference": 8,
+        "practice": 8
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 16
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 5,
+          "topic": "feelings",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "questions",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "plan",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "plan",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "music",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "music",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "music",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 14,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 15,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 16,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-42659a57be22",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 20 — Estate & Property/PDF_Week_20.pdf",
+      "sha256": "42659a57be220f1ef9c94e18bb2d03526412f4fc9af7003ff7581397e832ad88",
+      "physicalPages": 15,
+      "counts": {
+        "practice": 14,
+        "reference": 1
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 5,
+        "text": 10
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "home",
+          "kind": "practice"
+        },
+        {
+          "page": 2,
+          "topic": "home",
+          "kind": "practice"
+        },
+        {
+          "page": 3,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "home",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "home",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "there",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "rental",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "rental",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "home",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "home",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-81c4d36f0185",
+      "path": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 20 — Estate & Property/all_agenzia_immobiliare.pdf",
+      "sha256": "81c4d36f018521cd87f1a2b9c7aa2f6b1be0c98c20d9720d316b5cb25b7fae23",
+      "physicalPages": 2,
+      "counts": {
+        "practice": 2
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "text": 2
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "rental",
+          "kind": "practice"
+        },
+        {
+          "page": 2,
+          "topic": "rental",
+          "kind": "practice"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-d12d7450f272",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 01 — Presentazioni/I Verbi_A1.pdf",
+      "sha256": "d12d7450f272338f3928f9695471663d23f2895a40299cbe8336b4e61c130c60",
+      "physicalPages": 8,
+      "counts": {
+        "reference": 1,
+        "practice": 7
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 3,
+        "text": 5
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "are",
+          "kind": "practice"
+        },
+        {
+          "page": 3,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "irregular",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "isc",
+          "kind": "practice"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-9979a5079ca5",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 01 — Presentazioni/Italian Grammar_A1.pdf",
+      "sha256": "9979a5079ca53425f6e8782030cbbe8d68e26de9e3f91de437e995116a1621c0",
+      "physicalPages": 77,
+      "counts": {
+        "reference": 8,
+        "practice": 69
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 35,
+        "text": 42
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "alphabet",
+          "kind": "practice"
+        },
+        {
+          "page": 3,
+          "topic": "gender",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "plural",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "gender",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "subject",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "essere",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "negative",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "indef",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "article-contrast",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "there",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "questions",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "reflexive-switch",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "plural",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 20,
+          "topic": "irregular",
+          "kind": "practice"
+        },
+        {
+          "page": 21,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 22,
+          "topic": "possess",
+          "kind": "practice"
+        },
+        {
+          "page": 23,
+          "topic": "possess",
+          "kind": "practice"
+        },
+        {
+          "page": 24,
+          "topic": "family",
+          "kind": "practice"
+        },
+        {
+          "page": 25,
+          "topic": "family-exceptions",
+          "kind": "practice"
+        },
+        {
+          "page": 26,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 27,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 28,
+          "topic": "likes-person",
+          "kind": "practice"
+        },
+        {
+          "page": 29,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 30,
+          "topic": "likes-person",
+          "kind": "practice"
+        },
+        {
+          "page": 31,
+          "topic": "likes-article",
+          "kind": "practice"
+        },
+        {
+          "page": 32,
+          "topic": "likes-more",
+          "kind": "reference"
+        },
+        {
+          "page": 33,
+          "topic": "likes-reply",
+          "kind": "practice"
+        },
+        {
+          "page": 34,
+          "topic": "isc",
+          "kind": "practice"
+        },
+        {
+          "page": 35,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 36,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 37,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 38,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 39,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 40,
+          "topic": "di",
+          "kind": "practice"
+        },
+        {
+          "page": 41,
+          "topic": "a",
+          "kind": "practice"
+        },
+        {
+          "page": 42,
+          "topic": "da",
+          "kind": "practice"
+        },
+        {
+          "page": 43,
+          "topic": "in",
+          "kind": "practice"
+        },
+        {
+          "page": 44,
+          "topic": "con",
+          "kind": "practice"
+        },
+        {
+          "page": 45,
+          "topic": "su-per",
+          "kind": "practice"
+        },
+        {
+          "page": 46,
+          "topic": "tra",
+          "kind": "practice"
+        },
+        {
+          "page": 47,
+          "topic": "place-in",
+          "kind": "practice"
+        },
+        {
+          "page": 48,
+          "topic": "place-a",
+          "kind": "practice"
+        },
+        {
+          "page": 49,
+          "topic": "contract",
+          "kind": "practice"
+        },
+        {
+          "page": 50,
+          "topic": "specific-place",
+          "kind": "practice"
+        },
+        {
+          "page": 51,
+          "topic": "location",
+          "kind": "practice"
+        },
+        {
+          "page": 52,
+          "topic": "time",
+          "kind": "practice"
+        },
+        {
+          "page": 53,
+          "topic": "bello",
+          "kind": "practice"
+        },
+        {
+          "page": 54,
+          "topic": "quantity",
+          "kind": "practice"
+        },
+        {
+          "page": 55,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 56,
+          "topic": "indirect",
+          "kind": "practice"
+        },
+        {
+          "page": 57,
+          "topic": "pronoun-roles",
+          "kind": "practice"
+        },
+        {
+          "page": 58,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 59,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 60,
+          "topic": "indirect",
+          "kind": "practice"
+        },
+        {
+          "page": 61,
+          "topic": "sapere-forms",
+          "kind": "practice"
+        },
+        {
+          "page": 62,
+          "topic": "sapere",
+          "kind": "practice"
+        },
+        {
+          "page": 63,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 64,
+          "topic": "past-essere",
+          "kind": "practice"
+        },
+        {
+          "page": 65,
+          "topic": "past",
+          "kind": "practice"
+        },
+        {
+          "page": 66,
+          "topic": "be-have-past",
+          "kind": "practice"
+        },
+        {
+          "page": 67,
+          "topic": "past-essere",
+          "kind": "practice"
+        },
+        {
+          "page": 68,
+          "topic": "past-essere",
+          "kind": "practice"
+        },
+        {
+          "page": 69,
+          "topic": "past",
+          "kind": "practice"
+        },
+        {
+          "page": 70,
+          "topic": "past-except",
+          "kind": "practice"
+        },
+        {
+          "page": 71,
+          "topic": "past-except",
+          "kind": "practice"
+        },
+        {
+          "page": 72,
+          "topic": "quantity",
+          "kind": "practice"
+        },
+        {
+          "page": 73,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 74,
+          "topic": "demonstrative",
+          "kind": "practice"
+        },
+        {
+          "page": 75,
+          "topic": "demonstrative",
+          "kind": "practice"
+        },
+        {
+          "page": 76,
+          "topic": "demonstrative-pronoun",
+          "kind": "practice"
+        },
+        {
+          "page": 77,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-7db7f28ef20a",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 01 — Presentazioni/PDF_Week 1_Presentazioni.pdf",
+      "sha256": "7db7f28ef20ab931b25f3da7ab250df8d4205205300a4a5b37f22c929af4dff9",
+      "physicalPages": 27,
+      "counts": {
+        "reference": 8,
+        "practice": 19
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 24,
+        "text": 3
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "roadmap",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "nationality",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "nationality",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "nationality",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "nationality",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "nationality",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "answer",
+          "kind": "reference"
+        },
+        {
+          "page": 12,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "listening",
+          "kind": "reference"
+        },
+        {
+          "page": 14,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "isc",
+          "kind": "practice"
+        },
+        {
+          "page": 20,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 21,
+          "topic": "isc",
+          "kind": "practice"
+        },
+        {
+          "page": 22,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 23,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 24,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 25,
+          "topic": "answer",
+          "kind": "reference"
+        },
+        {
+          "page": 26,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 27,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-9d1980b98737",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 02 — La Famiglia/Glossario L1.pdf",
+      "sha256": "9d1980b9873715d116dc6797ec676e9f28aba5fe4e480f4075ce97568d25c4a9",
+      "physicalPages": 14,
+      "counts": {
+        "practice": 14
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 14
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "gloss-1",
+          "kind": "practice"
+        },
+        {
+          "page": 2,
+          "topic": "gloss-2",
+          "kind": "practice"
+        },
+        {
+          "page": 3,
+          "topic": "gloss-3",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "gloss-4",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "gloss-5",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "gloss-6",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "gloss-7",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "gloss-8",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "gloss-9",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "gloss-10",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "gloss-11",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "gloss-12",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "gloss-13",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "gloss-14",
+          "kind": "practice"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-0508dce07d17",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 02 — La Famiglia/PDF_Week 2_La famiglia.pdf",
+      "sha256": "0508dce07d173f78ab384d1502e6eec2e86fcdd8d544d3024a6d4605bcff5967",
+      "physicalPages": 25,
+      "counts": {
+        "reference": 10,
+        "practice": 15
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 16,
+        "text": 9
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 3,
+          "topic": "family-lex",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "family-lex",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "family-lex",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "possess",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "possess",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "answer",
+          "kind": "reference"
+        },
+        {
+          "page": 9,
+          "topic": "family-lex",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "answer",
+          "kind": "reference"
+        },
+        {
+          "page": 11,
+          "topic": "appearance",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "video",
+          "kind": "reference"
+        },
+        {
+          "page": 13,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 14,
+          "topic": "detective",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "family-lex",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "detective",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "detective",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "questions",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "answer",
+          "kind": "reference"
+        },
+        {
+          "page": 20,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 21,
+          "topic": "possess",
+          "kind": "practice"
+        },
+        {
+          "page": 22,
+          "topic": "answer",
+          "kind": "reference"
+        },
+        {
+          "page": 23,
+          "topic": "homework",
+          "kind": "reference"
+        },
+        {
+          "page": 24,
+          "topic": "family-lex",
+          "kind": "practice"
+        },
+        {
+          "page": 25,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-1570d34b06cf",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 03 — Jobs & Professions/PDF_Week_3_Jobs_and_professions.pdf",
+      "sha256": "1570d34b06cf1116023cabc713071aafec97895594dd367fe2d56a313598768b",
+      "physicalPages": 21,
+      "counts": {
+        "reference": 5,
+        "practice": 16
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "text": 13,
+        "ocr": 8
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "homework",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "video",
+          "kind": "reference"
+        },
+        {
+          "page": 10,
+          "topic": "listening",
+          "kind": "reference"
+        },
+        {
+          "page": 11,
+          "topic": "reading",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "reading",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 20,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 21,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-65a201367db4",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 04 — Routine & Il Corpo Umano/Sts_Week 4_Routine e corpo umano.pptx",
+      "sha256": "65a201367db4d9530e9f308dbe27e98f6788a479d7c49058ebee0c0b0b82dce8",
+      "physicalPages": 18,
+      "counts": {
+        "reference": 4,
+        "practice": 14
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 16,
+        "text": 2
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "jobs",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "body",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "music",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "body",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "body-idiom",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "detective",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "detective",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "detective",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 17,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-c3bb65371fe9",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 05 — In Town & Reflexive Verbs/Esercizi_Verbi_riflessivi.pdf",
+      "sha256": "c3bb65371fe9b15ab3c7b05f78835802d4641146abf6e67fe360005b50d58762",
+      "physicalPages": 1,
+      "counts": {
+        "practice": 1
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 1
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "reflexive",
+          "kind": "practice"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-6935e00afd8e",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 05 — In Town & Reflexive Verbs/PDF_Week_5_In_town.pdf",
+      "sha256": "6935e00afd8ef564dbfe8da753f7b6fb5c07b786066e640564a6ac6dd0627ec1",
+      "physicalPages": 19,
+      "counts": {
+        "reference": 7,
+        "practice": 12
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 17,
+        "text": 2
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "town",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "town",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "location",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "listening",
+          "kind": "reference"
+        },
+        {
+          "page": 8,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "private-interview",
+          "kind": "reference"
+        },
+        {
+          "page": 10,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "town",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "there",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "there",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "vocab",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "listening",
+          "kind": "reference"
+        },
+        {
+          "page": 18,
+          "topic": "town",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-ae6920807098",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 06 — Al Bar e al Ristorante/Week 6_Bar and Restaurant.pptx",
+      "sha256": "ae69208070988316f97feefabdccaf73e9b52d095e2e1bb4a7f511b8ebc81e4b",
+      "physicalPages": 16,
+      "counts": {
+        "reference": 4,
+        "practice": 12
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 16
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "cafe",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "cafe",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "food",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "restaurant",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "food",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "restaurant-repair",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "restaurant",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "cafe",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "cafe",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-1a621df1dba2",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 07 — Revision & Prepositions/Grammar_ A1_2026.pptx",
+      "sha256": "1a621df1dba231839212d350a6fd9ebefaeed16984c843f40c57890c570e0b14",
+      "physicalPages": 77,
+      "counts": {
+        "reference": 8,
+        "practice": 69
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 35,
+        "text": 42
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "alphabet",
+          "kind": "practice"
+        },
+        {
+          "page": 3,
+          "topic": "gender",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "plural",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "gender",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "subject",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "essere",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "negative",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "indef",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "article-contrast",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "there",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "questions",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "reflexive-switch",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "plural",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 20,
+          "topic": "irregular",
+          "kind": "practice"
+        },
+        {
+          "page": 21,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 22,
+          "topic": "possess",
+          "kind": "practice"
+        },
+        {
+          "page": 23,
+          "topic": "possess",
+          "kind": "practice"
+        },
+        {
+          "page": 24,
+          "topic": "family",
+          "kind": "practice"
+        },
+        {
+          "page": 25,
+          "topic": "family-exceptions",
+          "kind": "practice"
+        },
+        {
+          "page": 26,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 27,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 28,
+          "topic": "likes-person",
+          "kind": "practice"
+        },
+        {
+          "page": 29,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 30,
+          "topic": "likes-person",
+          "kind": "practice"
+        },
+        {
+          "page": 31,
+          "topic": "likes-article",
+          "kind": "practice"
+        },
+        {
+          "page": 32,
+          "topic": "likes-more",
+          "kind": "reference"
+        },
+        {
+          "page": 33,
+          "topic": "likes-reply",
+          "kind": "practice"
+        },
+        {
+          "page": 34,
+          "topic": "isc",
+          "kind": "practice"
+        },
+        {
+          "page": 35,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 36,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 37,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 38,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 39,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 40,
+          "topic": "di",
+          "kind": "practice"
+        },
+        {
+          "page": 41,
+          "topic": "a",
+          "kind": "practice"
+        },
+        {
+          "page": 42,
+          "topic": "da",
+          "kind": "practice"
+        },
+        {
+          "page": 43,
+          "topic": "in",
+          "kind": "practice"
+        },
+        {
+          "page": 44,
+          "topic": "con",
+          "kind": "practice"
+        },
+        {
+          "page": 45,
+          "topic": "su-per",
+          "kind": "practice"
+        },
+        {
+          "page": 46,
+          "topic": "tra",
+          "kind": "practice"
+        },
+        {
+          "page": 47,
+          "topic": "place-in",
+          "kind": "practice"
+        },
+        {
+          "page": 48,
+          "topic": "place-a",
+          "kind": "practice"
+        },
+        {
+          "page": 49,
+          "topic": "contract",
+          "kind": "practice"
+        },
+        {
+          "page": 50,
+          "topic": "specific-place",
+          "kind": "practice"
+        },
+        {
+          "page": 51,
+          "topic": "location",
+          "kind": "practice"
+        },
+        {
+          "page": 52,
+          "topic": "time",
+          "kind": "practice"
+        },
+        {
+          "page": 53,
+          "topic": "bello",
+          "kind": "practice"
+        },
+        {
+          "page": 54,
+          "topic": "quantity",
+          "kind": "practice"
+        },
+        {
+          "page": 55,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 56,
+          "topic": "indirect",
+          "kind": "practice"
+        },
+        {
+          "page": 57,
+          "topic": "pronoun-roles",
+          "kind": "practice"
+        },
+        {
+          "page": 58,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 59,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 60,
+          "topic": "indirect",
+          "kind": "practice"
+        },
+        {
+          "page": 61,
+          "topic": "sapere-forms",
+          "kind": "practice"
+        },
+        {
+          "page": 62,
+          "topic": "sapere",
+          "kind": "practice"
+        },
+        {
+          "page": 63,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 64,
+          "topic": "past-essere",
+          "kind": "practice"
+        },
+        {
+          "page": 65,
+          "topic": "past",
+          "kind": "practice"
+        },
+        {
+          "page": 66,
+          "topic": "be-have-past",
+          "kind": "practice"
+        },
+        {
+          "page": 67,
+          "topic": "past-essere",
+          "kind": "practice"
+        },
+        {
+          "page": 68,
+          "topic": "past-essere",
+          "kind": "practice"
+        },
+        {
+          "page": 69,
+          "topic": "past",
+          "kind": "practice"
+        },
+        {
+          "page": 70,
+          "topic": "past-except",
+          "kind": "practice"
+        },
+        {
+          "page": 71,
+          "topic": "past-except",
+          "kind": "practice"
+        },
+        {
+          "page": 72,
+          "topic": "quantity",
+          "kind": "practice"
+        },
+        {
+          "page": 73,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 74,
+          "topic": "demonstrative",
+          "kind": "practice"
+        },
+        {
+          "page": 75,
+          "topic": "demonstrative",
+          "kind": "practice"
+        },
+        {
+          "page": 76,
+          "topic": "demonstrative-pronoun",
+          "kind": "practice"
+        },
+        {
+          "page": 77,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-f56b63c24b1b",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 07 — Revision & Prepositions/Week 7_A1_Grammar Revision.pptx",
+      "sha256": "f56b63c24b1b9df193631d16205e18bc36f7017da47a9764ef614289ce0aebba",
+      "physicalPages": 14,
+      "counts": {
+        "reference": 4,
+        "practice": 10
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 14
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "vocab",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "vocab",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-99e2f65b7831",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 08 — Food & Clothes/Week 8.pptx",
+      "sha256": "99e2f65b7831e090c46c0aba92076240d47d857ca5b4b1680e8e9ed0cdd8252d",
+      "physicalPages": 19,
+      "counts": {
+        "reference": 4,
+        "practice": 15
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 19
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "homework",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "food",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "restaurant-repair",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "cafe",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "food",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "food",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "tableware",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "clothes",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "clothes",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "clothes",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "vocab",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-dfe191b10b0b",
+      "path": "Course 2 — Consolidation (Apr 2026–present)/Week 09 — Albergo e Progetti/Week 9 1.pptx",
+      "sha256": "dfe191b10b0b43bf3834af0ae20ec47171ecc61f4a305aee2c277fc7b6b283c6",
+      "physicalPages": 21,
+      "counts": {
+        "reference": 5,
+        "practice": 16
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 20,
+        "text": 1
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "hotel",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "hotel-lex",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "hotel-lex",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "listening",
+          "kind": "reference"
+        },
+        {
+          "page": 8,
+          "topic": "video",
+          "kind": "reference"
+        },
+        {
+          "page": 9,
+          "topic": "contract",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "contract",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "contract",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "contract",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "hotel",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "hotel-problem",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "plan",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "invitation",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "invitation",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "plan",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "plan",
+          "kind": "practice"
+        },
+        {
+          "page": 20,
+          "topic": "hotel",
+          "kind": "practice"
+        },
+        {
+          "page": 21,
+          "topic": "vocab",
+          "kind": "practice"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-2c59b3929a33",
+      "path": "Course 3/Grammar_ A1.pptx",
+      "sha256": "2c59b3929a334786d08bc844d9bb3d9c35d5df8fa4628e053db9597cb90afd40",
+      "physicalPages": 78,
+      "counts": {
+        "reference": 8,
+        "practice": 70
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 36,
+        "text": 42
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "alphabet",
+          "kind": "practice"
+        },
+        {
+          "page": 3,
+          "topic": "gender",
+          "kind": "practice"
+        },
+        {
+          "page": 4,
+          "topic": "plural",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "gender",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "subject",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "essere",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "negative",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "indef",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "article-contrast",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "there",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "questions",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "reflexive-switch",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "plural",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 20,
+          "topic": "irregular",
+          "kind": "practice"
+        },
+        {
+          "page": 21,
+          "topic": "salire",
+          "kind": "practice"
+        },
+        {
+          "page": 22,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 23,
+          "topic": "possess",
+          "kind": "practice"
+        },
+        {
+          "page": 24,
+          "topic": "possess",
+          "kind": "practice"
+        },
+        {
+          "page": 25,
+          "topic": "family",
+          "kind": "practice"
+        },
+        {
+          "page": 26,
+          "topic": "family-exceptions",
+          "kind": "practice"
+        },
+        {
+          "page": 27,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 28,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 29,
+          "topic": "likes-person",
+          "kind": "practice"
+        },
+        {
+          "page": 30,
+          "topic": "likes",
+          "kind": "practice"
+        },
+        {
+          "page": 31,
+          "topic": "likes-person",
+          "kind": "practice"
+        },
+        {
+          "page": 32,
+          "topic": "likes-article",
+          "kind": "practice"
+        },
+        {
+          "page": 33,
+          "topic": "likes-more",
+          "kind": "reference"
+        },
+        {
+          "page": 34,
+          "topic": "likes-reply",
+          "kind": "practice"
+        },
+        {
+          "page": 35,
+          "topic": "isc",
+          "kind": "practice"
+        },
+        {
+          "page": 36,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 37,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 38,
+          "topic": "frequency",
+          "kind": "practice"
+        },
+        {
+          "page": 39,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 40,
+          "topic": "simple",
+          "kind": "practice"
+        },
+        {
+          "page": 41,
+          "topic": "di",
+          "kind": "practice"
+        },
+        {
+          "page": 42,
+          "topic": "a",
+          "kind": "practice"
+        },
+        {
+          "page": 43,
+          "topic": "da",
+          "kind": "practice"
+        },
+        {
+          "page": 44,
+          "topic": "in",
+          "kind": "practice"
+        },
+        {
+          "page": 45,
+          "topic": "con",
+          "kind": "practice"
+        },
+        {
+          "page": 46,
+          "topic": "su-per",
+          "kind": "practice"
+        },
+        {
+          "page": 47,
+          "topic": "tra",
+          "kind": "practice"
+        },
+        {
+          "page": 48,
+          "topic": "place-in",
+          "kind": "practice"
+        },
+        {
+          "page": 49,
+          "topic": "place-a",
+          "kind": "practice"
+        },
+        {
+          "page": 50,
+          "topic": "contract",
+          "kind": "practice"
+        },
+        {
+          "page": 51,
+          "topic": "specific-place",
+          "kind": "practice"
+        },
+        {
+          "page": 52,
+          "topic": "location",
+          "kind": "practice"
+        },
+        {
+          "page": 53,
+          "topic": "time",
+          "kind": "practice"
+        },
+        {
+          "page": 54,
+          "topic": "bello",
+          "kind": "practice"
+        },
+        {
+          "page": 55,
+          "topic": "quantity",
+          "kind": "practice"
+        },
+        {
+          "page": 56,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 57,
+          "topic": "indirect",
+          "kind": "practice"
+        },
+        {
+          "page": 58,
+          "topic": "pronoun-roles",
+          "kind": "practice"
+        },
+        {
+          "page": 59,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 60,
+          "topic": "direct",
+          "kind": "practice"
+        },
+        {
+          "page": 61,
+          "topic": "indirect",
+          "kind": "practice"
+        },
+        {
+          "page": 62,
+          "topic": "sapere-forms",
+          "kind": "practice"
+        },
+        {
+          "page": 63,
+          "topic": "sapere",
+          "kind": "practice"
+        },
+        {
+          "page": 64,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 65,
+          "topic": "past-essere",
+          "kind": "practice"
+        },
+        {
+          "page": 66,
+          "topic": "past",
+          "kind": "practice"
+        },
+        {
+          "page": 67,
+          "topic": "be-have-past",
+          "kind": "practice"
+        },
+        {
+          "page": 68,
+          "topic": "past-essere",
+          "kind": "practice"
+        },
+        {
+          "page": 69,
+          "topic": "past-essere",
+          "kind": "practice"
+        },
+        {
+          "page": 70,
+          "topic": "past",
+          "kind": "practice"
+        },
+        {
+          "page": 71,
+          "topic": "past-except",
+          "kind": "practice"
+        },
+        {
+          "page": 72,
+          "topic": "past-except",
+          "kind": "practice"
+        },
+        {
+          "page": 73,
+          "topic": "quantity",
+          "kind": "practice"
+        },
+        {
+          "page": 74,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 75,
+          "topic": "demonstrative",
+          "kind": "practice"
+        },
+        {
+          "page": 76,
+          "topic": "demonstrative",
+          "kind": "practice"
+        },
+        {
+          "page": 77,
+          "topic": "demonstrative-pronoun",
+          "kind": "practice"
+        },
+        {
+          "page": 78,
+          "topic": "end",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-a746533b6323",
+      "path": "Course 3/L2_Week_2_Verbs_revision.pdf",
+      "sha256": "a746533b63239225ff1ec22c67e7a564f213970498049eb018c03d332f47a129",
+      "physicalPages": 17,
+      "counts": {
+        "reference": 6,
+        "practice": 11
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 5,
+        "text": 12
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "homework",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "present",
+          "kind": "practice"
+        },
+        {
+          "page": 5,
+          "topic": "irregular",
+          "kind": "practice"
+        },
+        {
+          "page": 6,
+          "topic": "questions",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "isc",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "hobbies",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 11,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "modal",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "reflexive",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "vocab",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 17,
+          "topic": "homework",
+          "kind": "reference"
+        }
+      ]
+    },
+    {
+      "sourceId": "src-579689db998e",
+      "path": "Course 3/Week_1_Revision_Nouns_and_adjectives.pptx",
+      "sha256": "579689db998e7d4bae3c219d292d8fa72ed84e072c6ac5ff64b7c8611cf99e05",
+      "physicalPages": 20,
+      "counts": {
+        "reference": 7,
+        "practice": 13
+      },
+      "needsVisualReviewPages": [],
+      "extractionMethods": {
+        "ocr": 5,
+        "text": 15
+      },
+      "pageTopics": [
+        {
+          "page": 1,
+          "topic": "cover",
+          "kind": "reference"
+        },
+        {
+          "page": 2,
+          "topic": "textbook",
+          "kind": "reference"
+        },
+        {
+          "page": 3,
+          "topic": "objectives",
+          "kind": "reference"
+        },
+        {
+          "page": 4,
+          "topic": "roadmap",
+          "kind": "reference"
+        },
+        {
+          "page": 5,
+          "topic": "listening",
+          "kind": "reference"
+        },
+        {
+          "page": 6,
+          "topic": "intro",
+          "kind": "practice"
+        },
+        {
+          "page": 7,
+          "topic": "articles",
+          "kind": "practice"
+        },
+        {
+          "page": 8,
+          "topic": "plural",
+          "kind": "practice"
+        },
+        {
+          "page": 9,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 10,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 11,
+          "topic": "agree",
+          "kind": "practice"
+        },
+        {
+          "page": 12,
+          "topic": "there",
+          "kind": "practice"
+        },
+        {
+          "page": 13,
+          "topic": "there",
+          "kind": "practice"
+        },
+        {
+          "page": 14,
+          "topic": "there",
+          "kind": "practice"
+        },
+        {
+          "page": 15,
+          "topic": "questions",
+          "kind": "practice"
+        },
+        {
+          "page": 16,
+          "topic": "reading",
+          "kind": "practice"
+        },
+        {
+          "page": 17,
+          "topic": "appearance",
+          "kind": "practice"
+        },
+        {
+          "page": 18,
+          "topic": "vocab",
+          "kind": "practice"
+        },
+        {
+          "page": 19,
+          "topic": "reflection",
+          "kind": "reference"
+        },
+        {
+          "page": 20,
+          "topic": "homework",
+          "kind": "reference"
+        }
+      ]
+    }
+  ]
+}

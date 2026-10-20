@@ -1,4 +1,4 @@
-"""Run maintained lint/typecheck/build/test commands using fresh local state."""
+"""Verify the maintained daily site using fresh local state."""
 import hashlib
 import json
 import os
@@ -37,10 +37,10 @@ def main():
     package = json.loads((work/'package.json').read_text())
     expected = {'lint': 'eslint .',
                 'typecheck': 'tsc --noEmit',
-                'build': 'WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build',
-                'test': 'npm run build && node --test tests/*.test.mjs'}
+                'build:daily': 'vite build --config vite.static.config.ts && cp public/favicon.svg site-dist/favicon.svg',
+                'test:daily': 'node --experimental-strip-types --test tests/learning.test.mjs tests/academy.test.mjs tests/arcade.test.mjs tests/answer-contract.test.mjs'}
     require(all(package['scripts'].get(key) == value for key, value in expected.items()), 'Maintained command changed')
-    require(not any(key in package['scripts'] for key in ('prelint', 'postlint', 'pretypecheck', 'posttypecheck', 'prebuild', 'postbuild', 'pretest', 'posttest')),
+    require(not any(key in package['scripts'] for name in expected for key in ('pre'+name, 'post'+name)),
             'New lifecycle script requires review')
     def preserve():
         for relative, digest in manifest.items():
@@ -48,20 +48,28 @@ def main():
                     and hashlib.sha256((work/relative).read_bytes()).hexdigest() == digest,
                     'Original tracked source changed')
     preserve(); outcomes = {}; test_output = ''
-    for name in ('lint', 'typecheck', 'build', 'test'):
+    for name in expected:
         result = subprocess.run(['npm', 'run', name], cwd=work, timeout=480,
                                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
         print(result.stdout, end='', flush=True)
         outcomes[name] = result.returncode
-        if name == 'test': test_output = result.stdout
-    # npm test's three current source contracts must actually execute, not skip.
+        if name == 'test:daily': test_output = result.stdout
+    # All daily engine/content cases must actually execute, not skip.
     totals = {name: re.findall(r'^# '+name+r' (\d+)\s*$', test_output, re.MULTILINE)
               for name in ('tests', 'pass', 'fail', 'cancelled', 'skipped', 'todo')}
     require(all(len(value) == 1 for value in totals.values()), 'Node test accounting missing or ambiguous')
     totals = {name: int(value[0]) for name, value in totals.items()}
-    require(all(code == 0 for code in outcomes.values()) and totals['tests'] >= 3
+    require(all(code == 0 for code in outcomes.values()) and totals['tests'] >= 37
             and totals['pass'] == totals['tests'] and all(totals[key] == 0 for key in ('fail', 'cancelled', 'skipped', 'todo')),
-            'All maintained commands and source contracts must pass without skips')
+            'All maintained daily commands and tests must pass without skips')
+    output = work/'site-dist'
+    artifacts = [path for path in output.rglob('*') if path.is_file()]
+    require((output/'index.html').is_file() and (output/'favicon.svg').is_file()
+            and any(path.suffix == '.js' for path in artifacts)
+            and any(path.suffix == '.css' for path in artifacts), 'Daily deployment artifacts missing')
+    require(not any(path.is_symlink() for path in output.rglob('*'))
+            and all(path.suffix in {'.html', '.svg', '.js', '.css'} for path in artifacts),
+            'Unexpected daily deployment content')
     preserve()
     print(json.dumps({'maintained_commands': outcomes, 'node_tests': totals, 'accepted': True,
                       'uid': 10001, 'caps': 0, 'no_new_privs': 1, 'seccomp': 2, 'cgroup': limits,

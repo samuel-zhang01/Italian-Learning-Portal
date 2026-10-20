@@ -1,6 +1,14 @@
 "use client";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import curriculum from "./curriculum.json";
+import companionData from "./companion.json";
+import { GrammarLab, ProgrammeView, CompanionView } from "./academy";
+import { ArcadeEntry, PracticeArcade } from "./arcade";
+import {
+  DailyItinerary,
+  AssessmentView,
+  PersonalWords,
+} from "./practice-tools";
 import {
   STORAGE_KEY,
   addDays,
@@ -17,10 +25,25 @@ import {
   schedule,
 } from "./engine";
 import type { Draft, Mission, Pair, Progress, Source } from "./types";
+import {
+  DailySession,
+  ResourceLibrary,
+  Rewards,
+  SessionNotebook,
+  SessionPreview,
+  VocabularyView,
+} from "./enriched";
 import "./portal.css";
 
 const missions = curriculum.missions as Mission[];
-const sources = curriculum.sources as Source[];
+const sources = Array.from(
+  new Map(
+    [
+      ...(curriculum.sources as Source[]),
+      ...(companionData.sources as Source[]),
+    ].map((s) => [s.id, s]),
+  ).values(),
+);
 const ids = missions.map((m) => m.id);
 type Translate = (en: string, it: string) => string;
 const courseName = (course: number, t: Translate) =>
@@ -114,6 +137,7 @@ export default function Portal() {
   const [pdfs, setPdfs] = useState<Record<string, string>>({});
   const [today, setToday] = useState(dayKey);
   const heading = useRef<HTMLElement>(null);
+  const toolsMenu = useRef<HTMLDetailsElement>(null);
   const current = useRef(p);
   const pdfRefs = useRef<Record<string, string>>({});
   const t: Translate = (en, it) => (p.language === "en" ? en : it);
@@ -171,6 +195,7 @@ export default function Portal() {
   useEffect(() => {
     heading.current?.focus({ preventScroll: true });
     window.scrollTo({ top: 0 });
+    if (toolsMenu.current) toolsMenu.current.open = false;
     window.speechSynthesis?.cancel();
   }, [route]);
   function save(update: (state: Progress) => Progress) {
@@ -206,14 +231,12 @@ export default function Portal() {
   const next = nextMission(p, missions);
   const completed = Object.keys(p.completed).length;
   const minutes = dailyMinutes(p, today);
-  const goalReached = minutes >= p.plan.minutes;
   const selected = missions.find((m) => m.id === route.split("/")[1]);
   const nav = [
     ["today", "sun", t("Today", "Oggi")],
-    ["path", "book", t("My learning path", "Il mio percorso")],
-    ["plan", "calendar", t("My plan", "Il mio piano")],
+    ["programmes", "calendar", t("Programme", "Percorso")],
+    ["grammar", "book", t("Practice", "Pratica")],
     ["progress", "chart", t("Progress", "Progressi")],
-    ["materials", "folder", t("Materials", "Materiali")],
   ];
   function exportProgress() {
     const url = URL.createObjectURL(
@@ -290,7 +313,7 @@ export default function Portal() {
             <button
               key={id}
               onClick={() => go(id)}
-              aria-current={route === id ? "page" : undefined}
+              aria-current={(route === id || (id === "grammar" && ["grammar", "games", "vocabulary", "words", "tense", "readiness"].includes(route.split("/")[0]))) ? "page" : undefined}
             >
               <Icon name={icon} />
               <span>{label}</span>
@@ -361,318 +384,106 @@ export default function Portal() {
         </div>
       )}
       <main id="main-content" ref={heading} tabIndex={-1}>
+        <details key="practice-tools-menu" ref={toolsMenu} className="practice-menu">
+          <summary>{t("More practice & materials", "Altra pratica e materiali")}</summary>
+          <nav
+            className="study-tools-nav"
+            aria-label={t("Study tools", "Strumenti di studio")}
+          >
+            {[
+              ["games", t("Games", "Giochi")],
+              ["grammar", t("Grammar lab", "Grammatica")],
+              ["vocabulary", t("Vocabulary cards", "Carte lessico")],
+              ["path", t("Class lessons", "Lezioni del corso")],
+              ["materials", t("Materials & links", "Materiali e link")],
+              ["plan", t("Time & settings", "Tempo e impostazioni")],
+              ["companion", t("Page companions", "Compagni delle pagine")],
+              ["words", t("My word bank", "Il mio lessico")],
+              ["readiness", t("A2 preparation", "Preparazione A2")],
+              ["tense", t("Tense checks", "Controlli dei tempi")],
+            ].map(([id, label]) => (
+              <button
+                key={id}
+                aria-current={route.split("/")[0] === id ? "page" : undefined}
+                onClick={() => go(id)}
+              >
+                {label}
+              </button>
+            ))}
+          </nav>
+        </details>
         {route === "today" && (
-          <div className="workspace">
-            <div className="page-intro">
-              <div>
-                <p className="eyebrow">
-                  {new Date(today + "T12:00:00").toLocaleDateString(
-                    p.language === "it" ? "it-IT" : "en-GB",
-                    { weekday: "long", day: "numeric", month: "long" },
-                  )}
-                </p>
-                <h1>
-                  {t("A little practice.", "Un po’ di pratica.")}
-                  <br />
-                  <em>
-                    {t("A little more Italian.", "Un po’ più d’italiano.")}
-                  </em>
-                </h1>
-                <p>
-                  {t(
-                    "Pick up where you are. One small conversation at a time.",
-                    "Riparti da dove sei. Una piccola conversazione alla volta.",
-                  )}
-                </p>
-              </div>
-              <div className="goal-pill">
-                <Icon name="clock" />
-                <div>
-                  <strong>
-                    {p.plan.minutes}{" "}
-                    {t("min / study day", "min / giorno di studio")}
-                  </strong>
-                  <button className="text-button" onClick={() => go("plan")}>
-                    {t("Make it your own", "Personalizza il piano")} ↗
-                  </button>
-                </div>
-              </div>
+          <div className="workspace today-workspace">
+            <div className="today-intro">
+              <p className="eyebrow">
+                {new Date(today + "T12:00:00").toLocaleDateString(
+                  p.language === "it" ? "it-IT" : "en-GB",
+                  { weekday: "long", day: "numeric", month: "long" },
+                )}
+              </p>
+              <h1>{t("A little Italian, today.", "Un po’ d’italiano, oggi.")}</h1>
             </div>
-            {(today < p.plan.start ||
-              !p.plan.days.includes(
-                new Date(today + "T12:00:00").getDay(),
-              )) && (
+            {(today < p.plan.start || !p.plan.days.includes(new Date(today + "T12:00:00").getDay())) && (
               <p className="rest-day-note">
-                {today < p.plan.start
-                  ? t(
-                      "Your plan starts on " +
-                        p.plan.start +
-                        ". Any practice today is optional.",
-                      "Il piano inizia il " +
-                        p.plan.start +
-                        ". La pratica di oggi è facoltativa.",
-                    )
-                  : t(
-                      "Today is a rest day in your plan. Any practice is a little extra.",
-                      "Oggi è un giorno di pausa nel piano. La pratica è un piccolo extra.",
-                    )}
+                {t("Today is outside your planned study days. Any practice is optional.",
+                  "Oggi non è un giorno di studio previsto. La pratica è facoltativa.")}
               </p>
             )}
-            <WeekStrip {...shared} />
-            <div className="today-layout">
-              <div>
-                <section className="hero-lesson">
-                  <div className="hero-content">
-                    <p className="eyebrow">
-                      {goalReached
-                        ? t(
-                            "TODAY’S GOAL COMPLETE",
-                            "OBIETTIVO DI OGGI COMPLETATO",
-                          )
-                        : t(
-                            "YOUR NEXT SMALL STEP",
-                            "IL TUO PROSSIMO PICCOLO PASSO",
-                          )}
-                    </p>
-                    <span className="tag light">
-                      {next
-                        ? courseName(next.course, t)
-                        : t("Keep it fresh", "Mantieni la pratica")}{" "}
-                      · {t("5 min", "5 min")}
-                    </span>
-                    <h2>
-                      {next
-                        ? text(next.title)
-                        : t(
-                            "You’ve built a habit. Keep it going.",
-                            "Hai costruito un’abitudine. Continua così.",
-                          )}
-                    </h2>
-                    <p>
-                      {goalReached
-                        ? t(
-                            "You have done enough for today. Come back for a short review, or explore another lesson if you feel like it.",
-                            "Hai fatto abbastanza per oggi. Torna per un breve ripasso oppure esplora un’altra lezione se ti va.",
-                          )
-                        : next
-                          ? text(next.goal)
-                          : t(
-                              "Your completed lessons are ready to revisit. Reviews help you see what stays with you.",
-                              "Le lezioni completate sono pronte da riprendere. I ripassi ti aiutano a capire che cosa ricordi.",
-                            )}
-                    </p>
-                    <button
-                      className="button cream"
-                      onClick={() => go(next ? `lesson/${next.id}` : "path")}
-                    >
-                      {next
-                        ? p.drafts[next.id]
-                          ? t("Continue my lesson", "Continua la lezione")
-                          : goalReached
-                            ? t("One more, if I like", "Un’altra, se mi va")
-                            : t(
-                                "Start my 5-minute lesson",
-                                "Inizia la lezione di 5 minuti",
-                              )
-                        : t("Explore my lessons", "Esplora le lezioni")}
-                      <Icon name="arrow" />
-                    </button>
-                    <small>
-                      {t(
-                        "Learn a little. Try it. Make it yours.",
-                        "Impara un po’. Prova. Usa parole tue.",
-                      )}
-                    </small>
-                  </div>
-                  <div className="lesson-illustration" aria-hidden="true">
-                    <div className="paper-back" />
-                    <div className="phrase-card">
-                      <span>un passo alla volta</span>
-                      <b>
-                        Ciao,
-                        <br />
-                        mondo<span>!</span>
-                      </b>
-                      <div className="card-rule" />
-                      <small>hello, world</small>
-                      <div className="sun-doodle">✳</div>
-                    </div>
-                    <span className="little-stamp">
-                      PICCOLI PASSI
-                      <br />
-                      GRANDI IDEE
-                    </span>
-                  </div>
-                </section>
-                <div className="section-heading">
-                  <h2>{t("A rhythm that sticks", "Un ritmo che resta")}</h2>
-                  <span>
-                    {t("Your 5-minute lesson", "La tua lezione di 5 minuti")}
-                  </span>
-                </div>
-                <div className="rhythm-grid">
-                  {[
-                    [
-                      t("Notice", "Osserva"),
-                      t(
-                        "One useful idea. A couple of examples.",
-                        "Un’idea utile. Un paio di esempi.",
-                      ),
-                      "01",
-                    ],
-                    [
-                      t("Remember", "Ricorda"),
-                      t(
-                        "Two small checks, with helpful corrections.",
-                        "Due piccole prove, con correzioni utili.",
-                      ),
-                      "02",
-                    ],
-                    [
-                      t("Use it", "Usalo"),
-                      t(
-                        "Your own words, saved in your notebook.",
-                        "Parole tue, salvate nel quaderno.",
-                      ),
-                      "03",
-                    ],
-                  ].map(([title, body, n]) => (
-                    <div key={n}>
-                      <span>{n}</span>
-                      <h3>{title}</h3>
-                      <p>{body}</p>
-                    </div>
-                  ))}
-                </div>
+            <SessionPreview {...shared} missions={missions} />
+            <details className="today-disclosure">
+              <summary>{t("Today’s checklist", "Le attività di oggi")}</summary>
+              <DailyItinerary {...shared} />
+            </details>
+            <details className="today-disclosure today-options">
+              <summary>{t("Optional practice · games, reviews & short lessons", "Pratica facoltativa · giochi, ripassi e brevi lezioni")}</summary>
+              <ArcadeEntry {...shared} />
+              <div className="optional-practice-links">
+                <button className="button secondary" disabled={!due.length} onClick={() => go(`review/${due[0]}`)}>
+                  {due.length ? t(`Review ${due.length} due lessons`, `Ripassa ${due.length} lezioni`) : t("No lesson reviews due", "Nessun ripasso in scadenza")}
+                </button>
+                <button className="button secondary" onClick={() => go(next ? `lesson/${next.id}` : "path")}>
+                  {t("Choose a 5-minute class lesson", "Scegli una lezione di 5 minuti")}
+                </button>
+                <button className="text-button" onClick={() => go("vocabulary")}>
+                  {t("Vocabulary cards", "Carte lessico")} →
+                </button>
               </div>
-              <aside className="today-sidebar">
-                <section className="panel daily-goal">
-                  <div className="section-heading">
-                    <h2>{t("Today, gently", "Oggi, con calma")}</h2>
-                    <Icon name="sun" />
-                  </div>
-                  <div className="goal-number">
-                    {minutes}
-                    <span>/ {p.plan.minutes} min</span>
-                  </div>
-                  <progress
-                    max={p.plan.minutes}
-                    value={Math.min(minutes, p.plan.minutes)}
-                    aria-label={t(
-                      "Daily goal progress",
-                      "Progresso dell’obiettivo giornaliero",
-                    )}
-                  />
-                  <p>
-                    {t(
-                      "Estimated practice completed. No timer to race.",
-                      "Pratica completata stimata. Nessuna corsa contro il tempo.",
-                    )}
-                  </p>
-                  <div className="mini-task">
-                    <span
-                      className={
-                        goalReached ? "check-circle done" : "check-circle"
-                      }
-                    >
-                      {goalReached ? "✓" : "1"}
-                    </span>
-                    <div>
-                      <strong>
-                        {goalReached
-                          ? t(
-                              "A good day’s practice",
-                              "Una buona giornata di pratica",
-                            )
-                          : t(
-                              "Build one small skill",
-                              "Costruisci una piccola abilità",
-                            )}
-                      </strong>
-                      <small>
-                        {t(
-                          "Each new lesson counts as 5 minutes",
-                          "Ogni nuova lezione vale 5 minuti",
-                        )}
-                      </small>
-                    </div>
-                  </div>
-                  <div className="mini-task">
-                    <span className="check-circle">↺</span>
-                    <div>
-                      <strong>
-                        {due.length} {t("reviews ready", "ripassi pronti")}
-                      </strong>
-                      <small>
-                        {t("About 2 minutes each", "Circa 2 minuti ciascuno")}
-                      </small>
-                    </div>
-                  </div>
-                  <button
-                    className="button secondary full"
-                    disabled={!due.length}
-                    onClick={() => go(`review/${due[0]}`)}
-                  >
-                    {due.length
-                      ? t("Refresh my memory", "Rinfresca la memoria")
-                      : t("Nothing due yet", "Nessun ripasso in scadenza")}
-                    <Icon name="refresh" />
-                  </button>
-                  {!due.length && (
-                    <small>
-                      {completed
-                        ? t("Next review: ", "Prossimo ripasso: ") +
-                          Object.values(p.reviews)
-                            .map((r) => r.due)
-                            .sort()[0]
-                        : t(
-                            "Your first review arrives the day after a lesson.",
-                            "Il primo ripasso arriva il giorno dopo una lezione.",
-                          )}
-                    </small>
-                  )}
-                </section>
-                <section className="quiet-note">
-                  <span className="eyebrow">
-                    {t("MADE FOR YOUR CLASS", "PENSATO PER IL TUO CORSO")}
-                  </span>
-                  <p>
-                    {t(
-                      "Your PDFs are the starting point. This is where you turn them into Italian you can use.",
-                      "I tuoi PDF sono il punto di partenza. Qui li trasformi in italiano da usare.",
-                    )}
-                  </p>
-                  <button
-                    className="text-button"
-                    onClick={() => go("materials")}
-                  >
-                    {t(
-                      "See the source materials",
-                      "Vedi i materiali di origine",
-                    )}{" "}
-                    ↗
-                  </button>
-                </section>
-              </aside>
-            </div>
-            <div className="journey-preview">
-              <div>
-                <span className="eyebrow">
-                  {t("YOUR LEARNING PATH", "IL TUO PERCORSO")}
-                </span>
-                <h2>
-                  {completed} / {missions.length}{" "}
-                  {t("small steps taken", "piccoli passi fatti")}
-                </h2>
-              </div>
-              <button className="text-button" onClick={() => go("path")}>
-                {t("See the whole journey", "Vedi tutto il percorso")}{" "}
-                <Icon name="arrow" />
-              </button>
-            </div>
+            </details>
+            <details className="today-disclosure">
+              <summary>{t("This week & my progress", "Questa settimana e i progressi")}</summary>
+              <WeekStrip {...shared} />
+              <p>{minutes}/{p.plan.minutes} {t("estimated minutes today", "minuti stimati oggi")} · {completed}/{missions.length} {t("lessons complete", "lezioni completate")}</p>
+              <button className="text-button" onClick={() => go("progress")}>{t("Open my progress", "Apri i progressi")} →</button>
+            </details>
           </div>
         )}
+        {(route === "grammar" || route.startsWith("grammar/")) && (
+          <GrammarLab key={route} {...shared} unitId={route.split("/")[1]} />
+        )}
+        {route === "programmes" && <ProgrammeView {...shared} />}
+        {(route === "companion" || route.startsWith("companion/")) && (
+          <CompanionView key={route} {...shared} pageId={route.split("/")[1]} />
+        )}
+        {route === "readiness" && (
+          <AssessmentView key="readiness" {...shared} />
+        )}
+        {route === "tense" && (
+          <AssessmentView key="tense" {...shared} mode="tense" />
+        )}
+        {route === "words" && <PersonalWords {...shared} />}
+        {route === "games" && <PracticeArcade {...shared} />}
         {route === "path" && <PathView {...shared} />}
+        {route === "session" && (
+          <DailySession
+            key={today}
+            {...shared}
+            missions={missions}
+            Audio={Listen}
+          />
+        )}
+        {route === "vocabulary" && (
+          <VocabularyView {...shared} Audio={Listen} />
+        )}
         {route === "plan" && <PlanView {...shared} />}
         {route === "progress" && (
           <ProgressView
@@ -702,11 +513,28 @@ export default function Portal() {
         {route.startsWith("review/") && selected && (
           <ReviewView key={selected.id} {...shared} m={selected} />
         )}
-        {!["today", "path", "plan", "progress", "materials"].includes(route) &&
+        {![
+          "today",
+          "session",
+          "vocabulary",
+          "path",
+          "plan",
+          "progress",
+          "materials",
+          "grammar",
+          "programmes",
+          "companion",
+          "readiness",
+          "tense",
+          "words",
+          "games",
+        ].includes(route) &&
           !(
             (route.startsWith("lesson/") || route.startsWith("review/")) &&
             selected
-          ) && (
+          ) &&
+          !route.startsWith("grammar/") &&
+          !route.startsWith("companion/") && (
             <div className="workspace">
               <h1>
                 {t("Let’s find your next step", "Troviamo il prossimo passo")}
@@ -945,6 +773,23 @@ function PlanView(props: Shared) {
           "Scegli il tuo ritmo. Salti un giorno? La prossima lezione ti aspetta. Le modifiche si salvano automaticamente.",
         )}
       />
+      <div className="support-box">
+        <h2>
+          {t(
+            "Choose a course as well as a daily rhythm",
+            "Scegli un corso e un ritmo quotidiano",
+          )}
+        </h2>
+        <p>
+          {t(
+            "Try the 14-study-day intensive A1 review, the 28-day supported route, or the 10-day grammar repair programme. Study days wait for you; missed days do not erase progress.",
+            "Prova il ripasso A1 intensivo di 14 giorni di studio, il percorso guidato di 28 giorni o il programma di ripasso grammaticale di 10 giorni. I giorni di studio ti aspettano; un’assenza non cancella i progressi.",
+          )}
+        </p>
+        <button className="button primary" onClick={() => go("programmes")}>
+          {t("Choose my programme", "Scegli il mio programma")}
+        </button>
+      </div>
       <div className="plan-layout">
         <section className="panel plan-settings">
           <h2>{t("My study rhythm", "Il mio ritmo di studio")}</h2>
@@ -953,7 +798,7 @@ function PlanView(props: Shared) {
               {t("Time on a study day", "Tempo in un giorno di studio")}
             </legend>
             <div className="choice-row">
-              {[5, 10, 15].map((n) => (
+              {[5, 10, 15, 20, 30, 45, 60].map((n) => (
                 <button
                   key={n}
                   aria-pressed={p.plan.minutes === n}
@@ -968,8 +813,8 @@ function PlanView(props: Shared) {
             </div>
             <p className="hint">
               {t(
-                "About 5 minutes per new lesson; 2 per review. These are estimates, not a stopwatch.",
-                "Circa 5 minuti per una nuova lezione; 2 per un ripasso. Sono stime, non un cronometro.",
+                "Choose 5–30 minutes for a guided topic. At 45 minutes add a grammar workshop; at 60 add tense practice and a page companion. Keep unfinished work for next time. All times are estimates.",
+                "Scegli 5–30 minuti per un tema guidato. A 45 minuti aggiungi grammatica; a 60 aggiungi pratica dei tempi e una pagina del compagno. Conserva il lavoro incompleto per la prossima volta. Tutti i tempi sono stime.",
               )}
             </p>
           </fieldset>
@@ -1049,7 +894,12 @@ function PlanView(props: Shared) {
         </section>
         <section>
           <div className="section-heading">
-            <h2>{t("The next seven days", "I prossimi sette giorni")}</h2>
+            <h2>
+              {t(
+                "Class path · next seven days",
+                "Percorso del corso · prossimi sette giorni",
+              )}
+            </h2>
             <span>
               {t(
                 "Remaining practice · flexible",
@@ -1057,6 +907,17 @@ function PlanView(props: Shared) {
               )}
             </span>
           </div>
+          {p.academy?.programme && (
+            <p className="hint">
+              {t(
+                "This calendar previews your class path. Your selected programme has its own study-day checklist; Today combines its grammar topics and core lesson within your time budget.",
+                "Questo calendario anticipa il percorso del corso. Il programma scelto ha una propria lista di giorni di studio; Oggi combina i suoi temi di grammatica e la lezione base nel tempo disponibile.",
+              )}{" "}
+              <button className="text-button" onClick={() => go("programmes")}>
+                {t("Open programme days", "Apri i giorni del programma")} →
+              </button>
+            </p>
+          )}
           <div className="calendar-list">
             {calendar.map((day) => (
               <article
@@ -1094,13 +955,31 @@ function PlanView(props: Shared) {
                     </p>
                   ) : (
                     <>
+                      {day.guided && (
+                        <p>
+                          {t(
+                            "One guided topic · pause and resume as needed",
+                            "Un tema guidato · fermati e riprendi quando serve",
+                          )}
+                        </p>
+                      )}
                       <div className="calendar-lessons">
                         {day.items.map((m) => (
                           <button
-                            onClick={() => go(`lesson/${m.id}`)}
+                            onClick={() =>
+                              go(
+                                day.guided && day.date === today
+                                  ? "session"
+                                  : `lesson/${m.id}`,
+                              )
+                            }
                             key={m.id}
                           >
-                            {text(m.title)} <span>5 min ↗</span>
+                            {text(m.title)}{" "}
+                            <span>
+                              {day.guided ? Math.min(30, day.budget) : "5"} min
+                              ↗
+                            </span>
                           </button>
                         ))}
                       </div>
@@ -1130,7 +1009,7 @@ function PlanView(props: Shared) {
                 </div>
                 <span className="calendar-minutes">
                   {day.active
-                    ? `${day.items.length * 5 + day.due.length * 2} min`
+                    ? `${day.guided ? day.budget : day.items.length * 5 + day.due.length * 2} min`
                     : "—"}
                 </span>
               </article>
@@ -1336,6 +1215,15 @@ function LessonView({
             </div>
           )}
           <div className="button-row">
+            {p.sessions?.[today]?.missionId === m.id && (
+              <button className="button primary" onClick={() => go("session")}>
+                {t(
+                  "Continue my daily session",
+                  "Continua la sessione quotidiana",
+                )}{" "}
+                →
+              </button>
+            )}
             <button className="button primary" onClick={() => go("today")}>
               {t("Back to today", "Torna a oggi")}
               <Icon name="arrow" />
@@ -1740,6 +1628,11 @@ function ReviewView({
         <Icon name="back" />
         {t("Back to today", "Torna a oggi")}
       </button>
+      {p.sessions?.[today] && (
+        <button className="text-button" onClick={() => go("session")}>
+          {t("Return to my daily session", "Torna alla sessione quotidiana")} →
+        </button>
+      )}
       <article className="study-paper">
         <p className="eyebrow">
           {t("A TWO-MINUTE MEMORY CHECK", "UNA PROVA DI MEMORIA DI DUE MINUTI")}
@@ -1891,6 +1784,9 @@ function ProgressView({
   const practiced = new Set([
     ...entries.map(([, c]) => c.date),
     ...p.reviewLog.map((r) => r.date),
+    ...Object.entries(p.sessions ?? {})
+      .filter(([, s]) => s.done.length > 0)
+      .map(([date]) => date),
   ]);
   const week = Array.from({ length: 7 }, (_, i) => addDays(today, i - 6));
   return (
@@ -1909,6 +1805,7 @@ function ProgressView({
           "I primi tentativi, il ricordo nel tempo e il tuo italiano. I progressi restano in questo browser, su questo dispositivo.",
         )}
       />
+      <Rewards p={p} t={t} />
       <div className="stats-grid">
         <div>
           <Icon name="book" />
@@ -2025,6 +1922,7 @@ function ProgressView({
                 })}
             </div>
           )}
+          <SessionNotebook p={p} t={t} text={text} missions={missions} />
           <label className="field reflection">
             {t("A note to my future self", "Un appunto per il mio futuro")}
             <textarea
@@ -2063,8 +1961,9 @@ function ProgressView({
                 onChange={async (e) => {
                   const file = e.target.files?.[0];
                   if (!file) return;
+                  setPending(null);
                   try {
-                    if (file.size > 2_000_000) throw new Error();
+                    if (file.size > 8_000_000) throw new Error();
                     setPending(parseProgress(await file.text(), ids));
                     setMessage("");
                   } catch {
@@ -2092,6 +1991,39 @@ function ProgressView({
                   {t(
                     "completed lessons in this backup. Restoring replaces the progress currently saved here.",
                     "lezioni completate in questo backup. Il ripristino sostituisce i progressi salvati qui.",
+                  )}
+                </p>
+                <p>
+                  {
+                    Object.values(pending.academy?.grammar ?? {}).filter(
+                      (d) => d.completed,
+                    ).length
+                  }{" "}
+                  {t("grammar units", "unità di grammatica")} ·{" "}
+                  {
+                    Object.values(pending.academy?.companion ?? {}).filter(
+                      (d) => d.completed,
+                    ).length
+                  }{" "}
+                  {t("companion pages", "pagine del compagno")} ·{" "}
+                  {
+                    Object.values(pending.academy?.words ?? {}).filter(
+                      (w) => w.starred,
+                    ).length
+                  }{" "}
+                  {t(
+                    "saved words. Drafts and notes are also included.",
+                    "parole salvate. Sono incluse anche bozze e note.",
+                  )}
+                  {pending.arcade && (
+                    <>
+                      {" "}
+                      {Object.keys(pending.arcade.records).length}{" "}
+                      {t(
+                        "game questions, game settings and any paused round are included.",
+                        "domande dei giochi, impostazioni e l’eventuale giro in pausa sono inclusi.",
+                      )}
+                    </>
                   )}
                 </p>
                 <div className="button-row">
@@ -2228,6 +2160,24 @@ function Materials({
           "Il portale è un compagno di pratica: spiegazioni brevi, situazioni nuove e prove di memoria basate sugli argomenti del corso.",
         )}
       />
+      <div className="support-box">
+        <h2>
+          {t(
+            "Practise beside each source page",
+            "Esercitati accanto a ogni pagina",
+          )}
+        </h2>
+        <p>
+          {t(
+            "Find your file and physical page or slide. The companion offers original parallel practice, examples and self-checks. Reference pages and unclear pages are labelled separately.",
+            "Trova il file e la pagina o diapositiva fisica. Il compagno offre pratica parallela originale, esempi e autoverifiche. Le pagine di riferimento e quelle poco chiare hanno etichette distinte.",
+          )}
+        </p>
+        <button className="button primary" onClick={() => go("companion")}>
+          {t("Open page companions", "Apri i compagni delle pagine")}
+        </button>
+      </div>
+      <ResourceLibrary t={t} text={text} />
       <div className="materials-banner">
         <div>
           <Icon name="folder" size={28} />

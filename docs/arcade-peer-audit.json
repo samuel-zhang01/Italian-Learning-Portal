@@ -1,0 +1,4629 @@
+{
+  "reviewedOn": "2026-10-20T20:36:47.132Z",
+  "preview": "http://127.0.0.1:5197",
+  "reviewer": "Independent model agent /root/arcade_final_review",
+  "method": "Task-owned headless Chromium; fresh synthetic storage; DOM assertions plus separately reviewed screenshots. Equal-weight binary rubric; 20 observable criteria per role; threshold 19/20 = 9.5/10.",
+  "buildIndexLastModified": "Tue, 20 Oct 2026 20:37:18 GMT",
+  "checks": {
+    "student": [
+      {
+        "id": "01",
+        "criterion": "Default round is five questions with no timer",
+        "status": "pass",
+        "observed": "5 questions · no timer\n\nConversation helpers\n\nLet’s play →"
+      },
+      {
+        "id": "02",
+        "criterion": "Every game tells a beginner what to do",
+        "status": "pass",
+        "observed": [
+          "01Word huntFind a useful Italian word or phrase.●",
+          "02Sentence builderPut the words in order, one tap at a time.○",
+          "03Grammar detectiveChoose a form or repair a small mistake.○",
+          "04Conversation trailTry three replies in an everyday situation.○"
+        ]
+      },
+      {
+        "id": "03",
+        "criterion": "Round length offers five, ten or fifteen questions",
+        "status": "pass",
+        "observed": [
+          "5 questions",
+          "10 questions",
+          "15 questions"
+        ]
+      },
+      {
+        "id": "04",
+        "criterion": "Chosen round size, word bank and answer support survive reload",
+        "status": "pass",
+        "observed": {
+          "mode": "words",
+          "size": 10,
+          "support": "recall",
+          "topic": "foundations",
+          "bank": "all",
+          "scene": "cafe-stop"
+        }
+      },
+      {
+        "id": "05",
+        "criterion": "Word recall has an explicitly labelled Italian answer input",
+        "status": "pass",
+        "observed": 1
+      },
+      {
+        "id": "06",
+        "criterion": "An empty answer cannot be submitted",
+        "status": "pass",
+        "observed": true
+      },
+      {
+        "id": "07",
+        "criterion": "Accent buttons insert Italian characters into typed answers",
+        "status": "pass",
+        "observed": "cià"
+      },
+      {
+        "id": "08",
+        "criterion": "Wrong answers show the learner answer and the correct answer calmly",
+        "status": "pass",
+        "observed": "A useful one to practise.\n\nYour answer: no\n\nciao\n\nHi, I am Anna.\n\nCiao, sono Anna.\n\nHear the answer\nSave this word\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 0 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+      },
+      {
+        "id": "09",
+        "criterion": "Saving a useful word gives visible confirmation",
+        "status": "pass",
+        "observed": true
+      },
+      {
+        "id": "10",
+        "criterion": "Round completion reports independent answers and preserves the first attempt",
+        "status": "pass",
+        "observed": "Your last round\n\n0/1 correct without hints · 0 correct with support.\n\nYour first answer in each round stays recorded. Replays are practice, not a level test."
+      },
+      {
+        "id": "11",
+        "criterion": "Guided builder explains both adding and removing tiles",
+        "status": "pass",
+        "observed": "GIVE EVERY NOUN A PARTNER\n\nBuild 'the key is here'.\n\nTap words to build your sentence. Tap a chosen word to remove it.\n\nYour sentence goes here…\nqui\nchiave\nLa\nè\nCheck answer\nShow a hint"
+      },
+      {
+        "id": "12",
+        "criterion": "Tapped tiles appear in the sentence and cannot be tapped twice",
+        "status": "pass",
+        "observed": "La\nLa"
+      },
+      {
+        "id": "13",
+        "criterion": "Removing a chosen tile makes it available again",
+        "status": "pass",
+        "observed": "Your sentence goes here…"
+      },
+      {
+        "id": "14",
+        "criterion": "Builder waits for every word before checking",
+        "status": "pass",
+        "observed": true
+      },
+      {
+        "id": "15",
+        "criterion": "An unfinished sentence survives reload",
+        "status": "pass",
+        "observed": "La"
+      },
+      {
+        "id": "16",
+        "criterion": "Pause and return preserve the exact question and partial sentence",
+        "status": "pass",
+        "observed": {
+          "draft": "La",
+          "item": "grammar:noun-gender-4"
+        }
+      },
+      {
+        "id": "17",
+        "criterion": "Italian typed sentence building retains all required word cues",
+        "status": "pass",
+        "observed": "Usa tutte queste parole:\n\nchiave · qui · è · La"
+      },
+      {
+        "id": "18",
+        "criterion": "Grammar repair explicitly asks for the whole corrected sentence",
+        "status": "pass",
+        "observed": "Correct only the article: Il casa è qui. Rewrite the whole sentence with that correction."
+      },
+      {
+        "id": "19",
+        "criterion": "Choice-dependent grammar keeps its choices in Recall mode",
+        "status": "pass",
+        "observed": [
+          "il ponte",
+          "la notte"
+        ]
+      },
+      {
+        "id": "20",
+        "criterion": "Conversation starts with a three-turn scenario and useful-word guidance",
+        "status": "pass",
+        "observed": {
+          "intro": "Order one coffee, drink it at the café, then ask for the bill. Useful words: un caffè = a coffee; qui = here; il conto = the bill.",
+          "start": "3 questions · no timer\n\nA coffee break\n\nLet’s play →"
+        }
+      }
+    ],
+    "lecturer": [
+      {
+        "id": "01",
+        "criterion": "Word feedback connects English meaning to an Italian example",
+        "status": "pass",
+        "observed": "A useful one to practise.\n\nYour answer: no\n\nciao\n\nHi, I am Anna.\n\nCiao, sono Anna.\n\nHear the answer\nSave this word\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 0 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+      },
+      {
+        "id": "02",
+        "criterion": "Submitted answer choices are locked until the learner moves on",
+        "status": "pass",
+        "observed": 0
+      },
+      {
+        "id": "03",
+        "criterion": "Pronunciation is labelled as device audio and prompts spoken practice",
+        "status": "pass",
+        "observed": "Device pronunciation; try saying it once yourself."
+      },
+      {
+        "id": "04",
+        "criterion": "Round summaries explicitly state that replay is not a level test",
+        "status": "pass",
+        "observed": "Your last round\n\n0/1 correct without hints · 0 correct with support.\n\nYour first answer in each round stays recorded. Replays are practice, not a level test."
+      },
+      {
+        "id": "05",
+        "criterion": "Practice XP policy rewards each new question once, including errors",
+        "status": "pass",
+        "observed": "My practice trail · 1 questions explored\n\nEach new question earns 2 practice XP once, including mistakes. These games do not complete grammar lessons or certify A1. Game time is extra to your planned lesson minutes.\n\nRecall due (0)\nReplay mistakes & hints (1)\nBack up my progress\n\nReturn tomorrow for fresh recall. Independent answers on later days move reviews to three, then seven days."
+      },
+      {
+        "id": "06",
+        "criterion": "The trail distinguishes games from grammar completion and A1 certification",
+        "status": "pass",
+        "observed": "My practice trail · 1 questions explored\n\nEach new question earns 2 practice XP once, including mistakes. These games do not complete grammar lessons or certify A1. Game time is extra to your planned lesson minutes.\n\nRecall due (0)\nReplay mistakes & hints (1)\nBack up my progress\n\nReturn tomorrow for fresh recall. Independent answers on later days move reviews to three, then seven days."
+      },
+      {
+        "id": "07",
+        "criterion": "Game time is stated to be extra to planned lessons",
+        "status": "pass",
+        "observed": "My practice trail · 1 questions explored\n\nEach new question earns 2 practice XP once, including mistakes. These games do not complete grammar lessons or certify A1. Game time is extra to your planned lesson minutes.\n\nRecall due (0)\nReplay mistakes & hints (1)\nBack up my progress\n\nReturn tomorrow for fresh recall. Independent answers on later days move reviews to three, then seven days."
+      },
+      {
+        "id": "08",
+        "criterion": "Spaced recall instructions mention tomorrow, then three and seven days",
+        "status": "pass",
+        "observed": "My practice trail · 1 questions explored\n\nEach new question earns 2 practice XP once, including mistakes. These games do not complete grammar lessons or certify A1. Game time is extra to your planned lesson minutes.\n\nRecall due (0)\nReplay mistakes & hints (1)\nBack up my progress\n\nReturn tomorrow for fresh recall. Independent answers on later days move reviews to three, then seven days."
+      },
+      {
+        "id": "09",
+        "criterion": "A new error enters mistake replay while recall is due tomorrow",
+        "status": "pass",
+        "observed": {
+          "trail": "My practice trail · 1 questions explored\n\nEach new question earns 2 practice XP once, including mistakes. These games do not complete grammar lessons or certify A1. Game time is extra to your planned lesson minutes.\n\nRecall due (0)\nReplay mistakes & hints (1)\nBack up my progress\n\nReturn tomorrow for fresh recall. Independent answers on later days move reviews to three, then seven days.",
+          "record": {
+            "first": {
+              "answer": "no",
+              "correct": false,
+              "assisted": false
+            },
+            "last": {
+              "answer": "no",
+              "correct": false,
+              "assisted": false
+            },
+            "date": "2026-10-20",
+            "due": "2026-10-21",
+            "successes": 0
+          }
+        }
+      },
+      {
+        "id": "10",
+        "criterion": "A successful replay retains the original error in its first-attempt record",
+        "status": "pass",
+        "observed": {
+          "first": {
+            "answer": "no",
+            "correct": false,
+            "assisted": false
+          },
+          "last": {
+            "answer": "ciao",
+            "correct": true,
+            "assisted": false
+          },
+          "date": "2026-10-20",
+          "due": "2026-10-21",
+          "successes": 0
+        }
+      },
+      {
+        "id": "11",
+        "criterion": "A whole-sentence grammar repair receives the matching explanation",
+        "status": "pass",
+        "observed": "You got it.\n\nLa casa è qui.\n\nThe article must match the noun: la casa.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n1/1 correct without hints · 0 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+      },
+      {
+        "id": "12",
+        "criterion": "Two-form word entries remain selectable with an explicit both-forms prompt",
+        "status": "pass",
+        "observed": {
+          "prompt": "Find the matching Italian entry (both forms): Italian (masculine / feminine)",
+          "choices": [
+            "sono di",
+            "italiano / italiana",
+            "inglese",
+            "in Italia"
+          ]
+        }
+      },
+      {
+        "id": "13",
+        "criterion": "Hint-assisted success is reported separately from independent recall",
+        "status": "pass",
+        "observed": {
+          "text": "You got it with support.\n\nciao\n\nHi, I am Anna.\n\nCiao, sono Anna.\n\nHear the answer\nSave this word\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+          "result": {
+            "answer": "ciao",
+            "correct": true,
+            "assisted": true
+          }
+        }
+      },
+      {
+        "id": "14",
+        "criterion": "Broader grammar selection warns that all A1 includes past tense",
+        "status": "pass",
+        "observed": [
+          "Gentle foundations · start here",
+          "All A1 · includes past tense",
+          "Give every noun a partner",
+          "One thing, several things",
+          "Choose il, lo, la and their plurals",
+          "Say a or an naturally",
+          "Make the description agree",
+          "Be someone, be somewhere",
+          "Have things, age and needs",
+          "Ask a clear question; say no",
+          "Describe what is there",
+          "Build regular -are verbs",
+          "Read, take and write",
+          "Two useful -ire patterns",
+          "High-use verbs that change shape",
+          "Can, must and want",
+          "Two pieces for a daily routine",
+          "When and how often?",
+          "Let the thing you like choose the verb",
+          "Whose thing? Whose family?",
+          "Small words that carry the route",
+          "Join the preposition and article",
+          "Some, a few and a measured amount",
+          "This one and that one",
+          "Tell a finished event with avere",
+          "Arrive, leave and agree",
+          "Switch between a habit and one event",
+          "Remember the useful irregular pasts · A1+",
+          "Replace the repeated object · A1+",
+          "Know a fact, know a place, know how · A1+"
+        ]
+      },
+      {
+        "id": "15",
+        "criterion": "Optional harder grammar topics are visibly marked A1+",
+        "status": "pass",
+        "observed": [
+          "Remember the useful irregular pasts · A1+",
+          "Replace the repeated object · A1+",
+          "Know a fact, know a place, know how · A1+"
+        ]
+      },
+      {
+        "id": "16",
+        "criterion": "Eight everyday situations are available with descriptive titles",
+        "status": "pass",
+        "observed": [
+          "A coffee break",
+          "At the station",
+          "At the market",
+          "Meet a classmate",
+          "Find the station",
+          "Book a table",
+          "Talk about your day",
+          "Make an evening plan"
+        ]
+      },
+      {
+        "id": "17",
+        "criterion": "Every conversation turn renders its specific intention and exactly three distinct replies",
+        "status": "pass",
+        "observed": [
+          {
+            "id": "scene:cafe-stop:cafe-stop-order",
+            "prompt": "The barista asks: «Che cosa prende?» You want one coffee. What do you say?",
+            "options": [
+              "Un tè, per favore.",
+              "Due caffè, per favore.",
+              "Un caffè, per favore."
+            ]
+          },
+          {
+            "id": "scene:cafe-stop:cafe-stop-here",
+            "prompt": "The barista asks: «Qui o da portare via?» (Here or to take away?) You want to drink at the café.",
+            "options": [
+              "Da portare via, grazie.",
+              "Senza zucchero, grazie.",
+              "Qui, grazie."
+            ]
+          },
+          {
+            "id": "scene:cafe-stop:cafe-stop-bill",
+            "prompt": "You finish your coffee and want to pay. Ask for the bill.",
+            "options": [
+              "Il conto, per favore.",
+              "Un altro caffè, per favore.",
+              "Un bicchiere d’acqua, per favore."
+            ]
+          },
+          {
+            "id": "scene:station-ticket:station-ticket-destination",
+            "prompt": "At the ticket desk, you need one ticket to Bologna. Choose your request.",
+            "options": [
+              "Due biglietti per Bologna, per favore.",
+              "Un biglietto per Bologna, per favore.",
+              "Un biglietto per Firenze, per favore."
+            ]
+          },
+          {
+            "id": "scene:station-ticket:station-ticket-time",
+            "prompt": "The clerk asks: «A che ora vuole partire?» (What time do you want to leave?) You want 09:00.",
+            "options": [
+              "Alle dieci, per favore.",
+              "Alle nove, per favore.",
+              "Alle otto, per favore."
+            ]
+          },
+          {
+            "id": "scene:station-ticket:station-ticket-platform",
+            "prompt": "You know the departure time. Now ask which platform the train leaves from.",
+            "options": [
+              "Da quale binario parte il treno?",
+              "Quanto costa il biglietto?",
+              "A che ora parte il treno?"
+            ]
+          },
+          {
+            "id": "scene:market-basket:market-basket-apples",
+            "prompt": "The seller asks: «Che cosa prende?» You need one kilogram of apples.",
+            "options": [
+              "Due chili di mele, per favore.",
+              "Un chilo di pere, per favore.",
+              "Un chilo di mele, per favore."
+            ]
+          },
+          {
+            "id": "scene:market-basket:market-basket-price",
+            "prompt": "You also see bread, but there is no price label. Ask how much the bread costs.",
+            "options": [
+              "Quanto costa il pane?",
+              "Quanto costa il formaggio?",
+              "Dov’è il pane?"
+            ]
+          },
+          {
+            "id": "scene:market-basket:market-basket-finish",
+            "prompt": "The seller asks: «Altro?» (Anything else?) You have everything you need. Decline politely.",
+            "options": [
+              "Sì, anche due pere, grazie.",
+              "Sì, anche il formaggio, grazie.",
+              "No, grazie. Basta così."
+            ]
+          },
+          {
+            "id": "scene:new-classmate:new-classmate-name",
+            "prompt": "A classmate asks: «Come ti chiami?» Your name in this scene is Luca.",
+            "options": [
+              "Ho ventisette anni.",
+              "Sono di Bristol.",
+              "Mi chiamo Luca."
+            ]
+          },
+          {
+            "id": "scene:new-classmate:new-classmate-origin",
+            "prompt": "Your classmate asks: «Di dove sei?» You are from Bristol.",
+            "options": [
+              "Sono di Roma.",
+              "Sono di Bristol.",
+              "Sono a Bristol."
+            ]
+          },
+          {
+            "id": "scene:new-classmate:new-classmate-age",
+            "prompt": "Your classmate asks: «Quanti anni hai?» Your age in this scene is 27.",
+            "options": [
+              "Ho trentasette anni.",
+              "Ho ventisette anni.",
+              "Ho diciassette anni."
+            ]
+          },
+          {
+            "id": "scene:town-directions:town-directions-where",
+            "prompt": "You need to find the station. Ask a stranger where it is.",
+            "options": [
+              "Scusi, dov’è la stazione?",
+              "Scusi, che ore sono?",
+              "Scusi, dov’è la farmacia?"
+            ]
+          },
+          {
+            "id": "scene:town-directions:town-directions-confirm",
+            "prompt": "The person says: «La stazione è a destra.» Confirm the direction you hear.",
+            "options": [
+              "A destra, grazie.",
+              "Sempre dritto, grazie.",
+              "A sinistra, grazie."
+            ]
+          },
+          {
+            "id": "scene:town-directions:town-directions-walk",
+            "prompt": "The person asks: «Va a piedi o in autobus?» (Are you walking or taking the bus?) You are walking.",
+            "options": [
+              "Vado in macchina.",
+              "Vado in autobus.",
+              "Vado a piedi."
+            ]
+          },
+          {
+            "id": "scene:table-booking:table-booking-request",
+            "prompt": "You call a restaurant to reserve a table. Choose the request that says this.",
+            "options": [
+              "Buonasera. Posso pagare il conto?",
+              "Buonasera. Posso prenotare un tavolo?",
+              "Buonasera. Posso vedere il menù?"
+            ]
+          },
+          {
+            "id": "scene:table-booking:table-booking-people",
+            "prompt": "The restaurant asks: «Per quante persone?» There are two of you.",
+            "options": [
+              "Per due persone.",
+              "Per tre persone.",
+              "Per quattro persone."
+            ]
+          },
+          {
+            "id": "scene:table-booking:table-booking-hour",
+            "prompt": "The restaurant asks: «A che ora?» You want your table at 20:00.",
+            "options": [
+              "Alle otto di sera.",
+              "Alle nove di sera.",
+              "Alle sette di sera."
+            ]
+          },
+          {
+            "id": "scene:daily-chat:daily-chat-wake",
+            "prompt": "A friend asks: «A che ora ti svegli?» In this routine, you wake up at seven.",
+            "options": [
+              "Mi sveglio alle nove.",
+              "Mi sveglio alle sette.",
+              "Mi sveglio alle dieci."
+            ]
+          },
+          {
+            "id": "scene:daily-chat:daily-chat-work",
+            "prompt": "Your friend asks: «A che ora inizi a lavorare?» In this routine, work starts at nine.",
+            "options": [
+              "Inizio alle undici.",
+              "Inizio alle sette.",
+              "Inizio alle nove."
+            ]
+          },
+          {
+            "id": "scene:daily-chat:daily-chat-study",
+            "prompt": "Your friend asks: «Quando studi italiano?» In this routine, you study every day.",
+            "options": [
+              "Studio italiano ogni lunedì.",
+              "Studio italiano ogni giorno.",
+              "Studio italiano solo il sabato."
+            ]
+          },
+          {
+            "id": "scene:evening-invitation:evening-invitation-accept",
+            "prompt": "A friend asks: «Vieni al cinema stasera?» You are free and want to accept.",
+            "options": [
+              "No, stasera lavoro.",
+              "No, stasera resto a casa.",
+              "Sì, vengo volentieri."
+            ]
+          },
+          {
+            "id": "scene:evening-invitation:evening-invitation-meet",
+            "prompt": "Your friend asks: «A che ora ci vediamo?» (What time shall we meet?) You want 19:00.",
+            "options": [
+              "Alle nove di sera.",
+              "Alle otto di sera.",
+              "Alle sette di sera."
+            ]
+          },
+          {
+            "id": "scene:evening-invitation:evening-invitation-dinner",
+            "prompt": "For dinner, your friend asks: «Ti piace la pasta?» You like pasta. Give a clear yes about pasta.",
+            "options": [
+              "Sì, mi piace il gelato.",
+              "No, non mi piace la pasta.",
+              "Sì, mi piace la pasta."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "criterion": "All conversation hints and corrective explanations render alongside their intended answer",
+        "status": "pass",
+        "observed": [
+          {
+            "id": "scene:cafe-stop:cafe-stop-order",
+            "hint": "Check both the drink and the quantity. Per favore makes a request polite.",
+            "feedback": "You got it with support.\n\nUn caffè, per favore.\n\nUn caffè means one coffee. Caffè is masculine, so use un. A short order with per favore is natural.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:cafe-stop:cafe-stop-here",
+            "hint": "Answer the question about the place, not about sugar.",
+            "feedback": "You got it with support.\n\nQui, grazie.\n\nQui means here. Da portare via means to take away; senza zucchero means without sugar. Only qui matches your plan.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:cafe-stop:cafe-stop-bill",
+            "hint": "Choose the request about payment, not another drink.",
+            "feedback": "You got it with support.\n\nIl conto, per favore.\n\nIl conto is the bill. Conto is masculine singular, so the article is il. The other replies order more drinks.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:station-ticket:station-ticket-destination",
+            "hint": "Check the number of tickets and the city after per.",
+            "feedback": "You got it with support.\n\nUn biglietto per Bologna, per favore.\n\nUn biglietto is one ticket. Per Bologna gives the destination. The alternatives change either the quantity or the city.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:station-ticket:station-ticket-time",
+            "hint": "Match the hour. Use alle with most clock times.",
+            "feedback": "You got it with support.\n\nAlle nove, per favore.\n\nAlle nove means at nine o’clock. Alle otto is at eight; alle dieci is at ten.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:station-ticket:station-ticket-platform",
+            "hint": "Binario is the word for the platform track. Da asks about a starting point.",
+            "feedback": "You got it with support.\n\nDa quale binario parte il treno?\n\nDa quale binario…? asks from which platform. A che ora…? asks the time, and quanto costa…? asks the price.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:market-basket:market-basket-apples",
+            "hint": "Check the amount and the fruit. A measured amount uses di before the food.",
+            "feedback": "You got it with support.\n\nUn chilo di mele, per favore.\n\nUn chilo di mele means one kilogram of apples. The measurement uses di; mela becomes mele in the plural.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:market-basket:market-basket-price",
+            "hint": "Use a price question and name the food you are asking about.",
+            "feedback": "You got it with support.\n\nQuanto costa il pane?\n\nQuanto costa…? asks how much something costs. Il pane is the bread. Dov’è…? asks where it is.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:market-basket:market-basket-finish",
+            "hint": "You are finishing the order, so do not add another item.",
+            "feedback": "You got it with support.\n\nNo, grazie. Basta così.\n\nNo, grazie politely declines. Basta così is a useful fixed phrase meaning that is all. Both other replies add food.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:new-classmate:new-classmate-name",
+            "hint": "Come ti chiami? asks for a name, not an age or a city.",
+            "feedback": "You got it with support.\n\nMi chiamo Luca.\n\nMi chiamo Luca answers the name question. Learn mi chiamo as a useful introduction phrase.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:new-classmate:new-classmate-origin",
+            "hint": "For your city of origin, use essere + di + city. Check the city too.",
+            "feedback": "You got it with support.\n\nSono di Bristol.\n\nSono di Bristol says you are from Bristol. Sono a Bristol says where you are now, which is a different meaning.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:new-classmate:new-classmate-age",
+            "hint": "Italian uses avere for age. Check the number: twenty plus seven.",
+            "feedback": "You got it with support.\n\nHo ventisette anni.\n\nHo ventisette anni means I am 27 years old. Italian uses ho, from avere. Diciassette is 17; trentasette is 37.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:town-directions:town-directions-where",
+            "hint": "Use a where question and check the place name. Scusi is a polite way to get attention.",
+            "feedback": "You got it with support.\n\nScusi, dov’è la stazione?\n\nDov’è is dove + è: where is. La stazione names the place you need. Che ore sono? asks the time.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:town-directions:town-directions-confirm",
+            "hint": "Repeat the direction given, then thank the person.",
+            "feedback": "You got it with support.\n\nA destra, grazie.\n\nA destra means on the right. A sinistra means on the left; sempre dritto means straight ahead.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:town-directions:town-directions-walk",
+            "hint": "Choose the travel method without a vehicle. Vado means I go.",
+            "feedback": "You got it with support.\n\nVado a piedi.\n\nVado a piedi means I am walking. Use a piedi for walking; use in autobus or in macchina for the bus or car.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:table-booking:table-booking-request",
+            "hint": "Look for the verb meaning to book. After posso, use an infinitive.",
+            "feedback": "You got it with support.\n\nBuonasera. Posso prenotare un tavolo?\n\nPosso prenotare un tavolo? means Can I book a table? Posso is followed by the infinitive prenotare. The other requests are about paying or seeing the menu.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:table-booking:table-booking-people",
+            "hint": "Quante persone? asks for the number of people. Match your group size.",
+            "feedback": "You got it with support.\n\nPer due persone.\n\nPer due persone means for two people. Persona is singular; persone is plural.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:table-booking:table-booking-hour",
+            "hint": "20:00 is eight in the evening. The reply needs both the hour and the evening.",
+            "feedback": "You got it with support.\n\nAlle otto di sera.\n\nAlle otto di sera means at eight in the evening, or 20:00. The other replies mean 19:00 and 21:00.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:daily-chat:daily-chat-wake",
+            "hint": "Answer with the io form and the correct waking time.",
+            "feedback": "You got it with support.\n\nMi sveglio alle sette.\n\nMi sveglio is the io form of svegliarsi. Keep mi with the verb. Alle sette gives the time.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:daily-chat:daily-chat-work",
+            "hint": "Inizi is the question’s tu form; use inizio to answer about yourself. Check the hour.",
+            "feedback": "You got it with support.\n\nInizio alle nove.\n\nInizio alle nove means I start at nine. Inizio is the io form of iniziare; the ending changes from -i in the question to -o in the answer.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:daily-chat:daily-chat-study",
+            "hint": "Choose the frequency that includes all seven days of the week.",
+            "feedback": "You got it with support.\n\nStudio italiano ogni giorno.\n\nOgni giorno means every day. Ogni lunedì means every Monday; solo il sabato means only on Saturdays. Studio is the io form of studiare.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:evening-invitation:evening-invitation-accept",
+            "hint": "Choose an affirmative reply. Vieni is the tu form; vengo is the io form.",
+            "feedback": "You got it with support.\n\nSì, vengo volentieri.\n\nSì, vengo volentieri means Yes, I would be happy to come. Vengo is present tense; volentieri adds the meaning gladly. Both other replies decline.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:evening-invitation:evening-invitation-meet",
+            "hint": "Convert 19:00 to the everyday twelve-hour expression, and include the evening.",
+            "feedback": "You got it with support.\n\nAlle sette di sera.\n\nAlle sette di sera means at seven in the evening, or 19:00. Alle otto di sera is 20:00; alle nove di sera is 21:00.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          },
+          {
+            "id": "scene:evening-invitation:evening-invitation-dinner",
+            "hint": "Answer about the same food. One singular thing takes piace.",
+            "feedback": "You got it with support.\n\nSì, mi piace la pasta.\n\nMi piace la pasta means I like pasta. Pasta is singular, so use piace. Non mi piace says you do not like it; gelato is a different food.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "criterion": "All 24 conversation lesson buttons open the specific grammar unit for their turn",
+        "status": "pass",
+        "observed": [
+          {
+            "id": "scene:cafe-stop:cafe-stop-order",
+            "unit": "indefinite-articles",
+            "route": "#grammar/indefinite-articles"
+          },
+          {
+            "id": "scene:cafe-stop:cafe-stop-here",
+            "unit": "questions-negation",
+            "route": "#grammar/questions-negation"
+          },
+          {
+            "id": "scene:cafe-stop:cafe-stop-bill",
+            "unit": "definite-articles",
+            "route": "#grammar/definite-articles"
+          },
+          {
+            "id": "scene:station-ticket:station-ticket-destination",
+            "unit": "simple-prepositions",
+            "route": "#grammar/simple-prepositions"
+          },
+          {
+            "id": "scene:station-ticket:station-ticket-time",
+            "unit": "time-frequency",
+            "route": "#grammar/time-frequency"
+          },
+          {
+            "id": "scene:station-ticket:station-ticket-platform",
+            "unit": "questions-negation",
+            "route": "#grammar/questions-negation"
+          },
+          {
+            "id": "scene:market-basket:market-basket-apples",
+            "unit": "quantity-partitives",
+            "route": "#grammar/quantity-partitives"
+          },
+          {
+            "id": "scene:market-basket:market-basket-price",
+            "unit": "questions-negation",
+            "route": "#grammar/questions-negation"
+          },
+          {
+            "id": "scene:market-basket:market-basket-finish",
+            "unit": "questions-negation",
+            "route": "#grammar/questions-negation"
+          },
+          {
+            "id": "scene:new-classmate:new-classmate-name",
+            "unit": "reflexive-routine",
+            "route": "#grammar/reflexive-routine"
+          },
+          {
+            "id": "scene:new-classmate:new-classmate-origin",
+            "unit": "simple-prepositions",
+            "route": "#grammar/simple-prepositions"
+          },
+          {
+            "id": "scene:new-classmate:new-classmate-age",
+            "unit": "avere",
+            "route": "#grammar/avere"
+          },
+          {
+            "id": "scene:town-directions:town-directions-where",
+            "unit": "questions-negation",
+            "route": "#grammar/questions-negation"
+          },
+          {
+            "id": "scene:town-directions:town-directions-confirm",
+            "unit": "simple-prepositions",
+            "route": "#grammar/simple-prepositions"
+          },
+          {
+            "id": "scene:town-directions:town-directions-walk",
+            "unit": "irregular-present",
+            "route": "#grammar/irregular-present"
+          },
+          {
+            "id": "scene:table-booking:table-booking-request",
+            "unit": "modal-verbs",
+            "route": "#grammar/modal-verbs"
+          },
+          {
+            "id": "scene:table-booking:table-booking-people",
+            "unit": "noun-plurals",
+            "route": "#grammar/noun-plurals"
+          },
+          {
+            "id": "scene:table-booking:table-booking-hour",
+            "unit": "time-frequency",
+            "route": "#grammar/time-frequency"
+          },
+          {
+            "id": "scene:daily-chat:daily-chat-wake",
+            "unit": "reflexive-routine",
+            "route": "#grammar/reflexive-routine"
+          },
+          {
+            "id": "scene:daily-chat:daily-chat-work",
+            "unit": "present-are",
+            "route": "#grammar/present-are"
+          },
+          {
+            "id": "scene:daily-chat:daily-chat-study",
+            "unit": "time-frequency",
+            "route": "#grammar/time-frequency"
+          },
+          {
+            "id": "scene:evening-invitation:evening-invitation-accept",
+            "unit": "irregular-present",
+            "route": "#grammar/irregular-present"
+          },
+          {
+            "id": "scene:evening-invitation:evening-invitation-meet",
+            "unit": "time-frequency",
+            "route": "#grammar/time-frequency"
+          },
+          {
+            "id": "scene:evening-invitation:evening-invitation-dinner",
+            "unit": "piacere",
+            "route": "#grammar/piacere"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "criterion": "Opening a related lesson before answering records support and preserves the unfinished question",
+        "status": "pass",
+        "observed": {
+          "assistedByLesson": true,
+          "current": "grammar:noun-gender-3"
+        }
+      }
+    ],
+    "ui": [
+      {
+        "id": "01",
+        "criterion": "Secondary practice navigation starts collapsed in English and Italian at 320/390px",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "02",
+        "criterion": "Round configuration starts collapsed at all four phone profiles",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "03",
+        "criterion": "Review history starts collapsed at all four phone profiles",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "04",
+        "criterion": "Four game cards are rendered in one mobile column without truncating their descriptions",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "05",
+        "criterion": "Closed game chooser has no document horizontal overflow",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "06",
+        "criterion": "Expanded menus and configuration have no document horizontal overflow",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "07",
+        "criterion": "Every game-card and launch control in the closed chooser is at least 44px high",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "08",
+        "criterion": "Expanded form controls and disclosure summaries stay inside the phone viewport",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "09",
+        "criterion": "Expanded practice menu exposes all seven tools",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "10",
+        "criterion": "Active play shows one question and removes game choices and setup fields",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "11",
+        "criterion": "Active question and feedback fit every phone viewport horizontally",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "12",
+        "criterion": "Alternative-activity actions remain collapsed while answering",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "13",
+        "criterion": "Question title receives keyboard focus on entry",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "14",
+        "criterion": "Answer feedback receives keyboard focus after submission",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "15",
+        "criterion": "Each screen has one main heading",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "16",
+        "criterion": "Document language follows English/Italian choice",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "17",
+        "criterion": "Question copy is at least 23px on narrow phones",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "18",
+        "criterion": "Visible question and feedback controls have at least 44px touch height",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "19",
+        "criterion": "Hints and feedback remain in normal document flow without overlays",
+        "status": "pass",
+        "observed": {
+          "profiles": [
+            {
+              "language": "en",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "en",
+              "width": 390,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 320,
+              "pass": true
+            },
+            {
+              "language": "it",
+              "width": 390,
+              "pass": true
+            }
+          ],
+          "evidence": "finalUiMatrix"
+        }
+      },
+      {
+        "id": "20",
+        "criterion": "Visual inspection finds a clear action hierarchy, separated controls, readable wrapping and no overlapping arcade content on the reviewed phone and desktop screens.",
+        "status": "pass",
+        "observed": {
+          "screenshots": [
+            "work/arcade-peer/final-en-320-question.png",
+            "work/arcade-peer/final-it-390-feedback.png",
+            "work/arcade-peer/final-it-320-expanded.png",
+            "work/arcade-peer/final-en-390-expanded.png",
+            "work/arcade-peer/final-it-320-closed.png",
+            "work/arcade-peer/final-it-390-closed.png",
+            "work/arcade-peer/final-en-390-closed.png",
+            "work/arcade-peer/en-390-builder-guided.png",
+            "work/arcade-peer/it-390-builder-recall.png",
+            "work/arcade-peer/it-390-conversation.png",
+            "work/arcade-peer/en-1440-closed.png"
+          ],
+          "assessment": "Chooser cards use one mobile column and two desktop columns. Settings, history and navigation stay behind disclosure controls. Active practice concentrates on one prompt and its answer choices or input, with generous spacing. Expanded settings remain readable through vertical scrolling. Long Italian labels wrap without clipping their card or action. The narrow main navigation is its existing independently scrollable strip."
+        }
+      }
+    ]
+  },
+  "matrix": [
+    {
+      "lang": "en",
+      "width": 320,
+      "closed": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "SMALL ROUNDS, USEFUL ITALIANA little play. A little practice.Choose one game. Ta",
+          "x": 0,
+          "y": 238,
+          "w": 320,
+          "h": 1243.0625
+        },
+        "controls": [
+          {
+            "text": "01Word huntFind a useful Italian word or phrase.●",
+            "x": 22,
+            "y": 474.3125,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "02Sentence builderPut the words in order, one tap at a time.○",
+            "x": 22,
+            "y": 609.5,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "03Grammar detectiveChoose a form or repair a small mistake.○",
+            "x": 22,
+            "y": 744.6875,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "04Conversation trailTry three replies in an everyday situation.○",
+            "x": 22,
+            "y": 879.875,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "Let’s play →",
+            "x": 41,
+            "y": 1116.0625,
+            "w": 238,
+            "h": 48
+          },
+          {
+            "text": "Customise this round",
+            "x": 41,
+            "y": 1205.0625,
+            "w": 238,
+            "h": 44
+          },
+          {
+            "text": "My practice trail · 0 questions explored",
+            "x": 22,
+            "y": 1321.0625,
+            "w": 276,
+            "h": 68
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "en",
+        "questionFont": "34px",
+        "primaryStyle": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 75, 59)"
+        }
+      },
+      "expanded": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "SMALL ROUNDS, USEFUL ITALIANA little play. A little practice.Choose one game. Ta",
+          "x": 0,
+          "y": -1262,
+          "w": 320,
+          "h": 2079.140625
+        },
+        "controls": [
+          {
+            "text": "01Word huntFind a useful Italian word or phrase.●",
+            "x": 22,
+            "y": -1025.6875,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "02Sentence builderPut the words in order, one tap at a time.○",
+            "x": 22,
+            "y": -890.5,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "03Grammar detectiveChoose a form or repair a small mistake.○",
+            "x": 22,
+            "y": -755.3125,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "04Conversation trailTry three replies in an everyday situation.○",
+            "x": 22,
+            "y": -620.125,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "Let’s play →",
+            "x": 41,
+            "y": -383.9375,
+            "w": 238,
+            "h": 48
+          },
+          {
+            "text": "Customise this round",
+            "x": 41,
+            "y": -294.9375,
+            "w": 238,
+            "h": 44
+          },
+          {
+            "text": "5 questions10 questions15 questions",
+            "x": 41,
+            "y": -198.9375,
+            "w": 238,
+            "h": 47
+          },
+          {
+            "text": "All word banksConversation helpersWhere I am fromNumbers and ageEveryday thingsW",
+            "x": 41,
+            "y": -99.9375,
+            "w": 238,
+            "h": 47
+          },
+          {
+            "text": "Guided · choices and word tilesRecall · type words and sentences",
+            "x": 41,
+            "y": -0.9375,
+            "w": 238,
+            "h": 47
+          },
+          {
+            "text": "My practice trail · 0 questions explored",
+            "x": 22,
+            "y": 264.015625,
+            "w": 276,
+            "h": 68
+          },
+          {
+            "text": "Recall due (0)",
+            "x": 22,
+            "y": 468.96875,
+            "w": 136.265625,
+            "h": 48
+          },
+          {
+            "text": "Replay mistakes & hints (0)",
+            "x": 22,
+            "y": 532.96875,
+            "w": 229.296875,
+            "h": 48
+          },
+          {
+            "text": "Back up my progress",
+            "x": 22,
+            "y": 596.96875,
+            "w": 149.859375,
+            "h": 34
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": true,
+        "reviewOpen": true,
+        "lang": "en",
+        "questionFont": "34px",
+        "primaryStyle": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 75, 59)"
+        }
+      },
+      "question": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "← Pause & save1 / 5Conversation helpersFind the matching Italian word or phrase:",
+          "x": 0,
+          "y": -372,
+          "w": 320,
+          "h": 796.0625
+        },
+        "controls": [
+          {
+            "text": "← Pause & save",
+            "x": 22,
+            "y": -344,
+            "w": 113.171875,
+            "h": 34
+          },
+          {
+            "text": "ciao",
+            "x": 41,
+            "y": -68.9375,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "per favore",
+            "x": 41,
+            "y": 1.0625,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "non capisco",
+            "x": 41,
+            "y": 71.0625,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "grazie",
+            "x": 41,
+            "y": 141.0625,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "Show a hint",
+            "x": 41,
+            "y": 223.0625,
+            "w": 82.625,
+            "h": 34
+          },
+          {
+            "text": "Need a different activity?",
+            "x": 22,
+            "y": 308.0625,
+            "w": 276,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "en",
+        "questionFont": "23px",
+        "primaryStyle": null
+      },
+      "feedback": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "← Pause & save1 / 5Conversation helpersFind the matching Italian word or phrase:",
+          "x": 0,
+          "y": -372,
+          "w": 320,
+          "h": 826.046875
+        },
+        "controls": [
+          {
+            "text": "← Pause & save",
+            "x": 22,
+            "y": -344,
+            "w": 113.171875,
+            "h": 34
+          },
+          {
+            "text": "Hear the answer",
+            "x": 41,
+            "y": 124.046875,
+            "w": 116.671875,
+            "h": 34
+          },
+          {
+            "text": "Save this word",
+            "x": 173.671875,
+            "y": 124.046875,
+            "w": 104.0625,
+            "h": 34
+          },
+          {
+            "text": "Next question →",
+            "x": 41,
+            "y": 239.046875,
+            "w": 238,
+            "h": 48
+          },
+          {
+            "text": "Need a different activity?",
+            "x": 22,
+            "y": 338.046875,
+            "w": 276,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "en",
+        "questionFont": "23px",
+        "primaryStyle": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 75, 59)"
+        }
+      },
+      "hiddenMenu": false,
+      "hiddenFields": false,
+      "visibleModes": 4,
+      "visibleTools": 7,
+      "names": [
+        "Round length5 questions10 questions15 questions",
+        "Word bankAll word banksConversation helpersWhere I am fromNumbers and ageEveryday thingsWork and studyAt the caféThings I doTime and plansRooms and placesStaying somewhereMy daily routinePeople close to meAround townCan, want and needA little about yesterdayFood and quantitiesClothes and descriptionsBody and care",
+        "Answer supportGuided · choices and word tilesRecall · type words and sentences"
+      ],
+      "qCounts": {
+        "questions": 1,
+        "modes": 0,
+        "selects": 0,
+        "helpOpen": false,
+        "options": 4
+      },
+      "focus": "H1",
+      "hint": "It begins with “pe”. Include the article if the word bank uses one.",
+      "feedbackFocused": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "closed": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "SMALL ROUNDS, USEFUL ITALIANA little play. A little practice.Choose one game. Ta",
+          "x": 0,
+          "y": 238,
+          "w": 390,
+          "h": 1198.0625
+        },
+        "controls": [
+          {
+            "text": "01Word huntFind a useful Italian word or phrase.●",
+            "x": 22,
+            "y": 474.3125,
+            "w": 346,
+            "h": 98.1875
+          },
+          {
+            "text": "02Sentence builderPut the words in order, one tap at a time.○",
+            "x": 22,
+            "y": 588.5,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "03Grammar detectiveChoose a form or repair a small mistake.○",
+            "x": 22,
+            "y": 723.6875,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "04Conversation trailTry three replies in an everyday situation.○",
+            "x": 22,
+            "y": 858.875,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "Let’s play →",
+            "x": 41,
+            "y": 1095.0625,
+            "w": 308,
+            "h": 48
+          },
+          {
+            "text": "Customise this round",
+            "x": 41,
+            "y": 1184.0625,
+            "w": 308,
+            "h": 44
+          },
+          {
+            "text": "My practice trail · 0 questions explored",
+            "x": 22,
+            "y": 1300.0625,
+            "w": 346,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "en",
+        "questionFont": "34px",
+        "primaryStyle": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 75, 59)"
+        }
+      },
+      "expanded": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "SMALL ROUNDS, USEFUL ITALIANA little play. A little practice.Choose one game. Ta",
+          "x": 0,
+          "y": -918,
+          "w": 390,
+          "h": 1989.359375
+        },
+        "controls": [
+          {
+            "text": "01Word huntFind a useful Italian word or phrase.●",
+            "x": 22,
+            "y": -681.6875,
+            "w": 346,
+            "h": 98.1875
+          },
+          {
+            "text": "02Sentence builderPut the words in order, one tap at a time.○",
+            "x": 22,
+            "y": -567.5,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "03Grammar detectiveChoose a form or repair a small mistake.○",
+            "x": 22,
+            "y": -432.3125,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "04Conversation trailTry three replies in an everyday situation.○",
+            "x": 22,
+            "y": -297.125,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "Let’s play →",
+            "x": 41,
+            "y": -60.9375,
+            "w": 308,
+            "h": 48
+          },
+          {
+            "text": "Customise this round",
+            "x": 41,
+            "y": 28.0625,
+            "w": 308,
+            "h": 44
+          },
+          {
+            "text": "5 questions10 questions15 questions",
+            "x": 41,
+            "y": 124.0625,
+            "w": 308,
+            "h": 47
+          },
+          {
+            "text": "All word banksConversation helpersWhere I am fromNumbers and ageEveryday thingsW",
+            "x": 41,
+            "y": 223.0625,
+            "w": 308,
+            "h": 47
+          },
+          {
+            "text": "Guided · choices and word tilesRecall · type words and sentences",
+            "x": 41,
+            "y": 322.0625,
+            "w": 308,
+            "h": 47
+          },
+          {
+            "text": "My practice trail · 0 questions explored",
+            "x": 22,
+            "y": 564.625,
+            "w": 346,
+            "h": 44
+          },
+          {
+            "text": "Recall due (0)",
+            "x": 22,
+            "y": 723.1875,
+            "w": 136.265625,
+            "h": 48
+          },
+          {
+            "text": "Replay mistakes & hints (0)",
+            "x": 22,
+            "y": 787.1875,
+            "w": 229.296875,
+            "h": 48
+          },
+          {
+            "text": "Back up my progress",
+            "x": 22,
+            "y": 851.1875,
+            "w": 149.859375,
+            "h": 34
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": true,
+        "reviewOpen": true,
+        "lang": "en",
+        "questionFont": "34px",
+        "primaryStyle": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 75, 59)"
+        }
+      },
+      "question": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "← Pause & save1 / 5Conversation helpersFind the matching Italian word or phrase:",
+          "x": 0,
+          "y": -64,
+          "w": 390,
+          "h": 763.875
+        },
+        "controls": [
+          {
+            "text": "← Pause & save",
+            "x": 22,
+            "y": -36,
+            "w": 113.171875,
+            "h": 34
+          },
+          {
+            "text": "buongiorno",
+            "x": 41,
+            "y": 206.875,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "piacere",
+            "x": 41,
+            "y": 276.875,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "mi chiamo",
+            "x": 41,
+            "y": 346.875,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "ciao",
+            "x": 41,
+            "y": 416.875,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "Show a hint",
+            "x": 41,
+            "y": 498.875,
+            "w": 82.625,
+            "h": 34
+          },
+          {
+            "text": "Need a different activity?",
+            "x": 22,
+            "y": 583.875,
+            "w": 346,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "en",
+        "questionFont": "23px",
+        "primaryStyle": null
+      },
+      "feedback": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "← Pause & save1 / 5Conversation helpersFind the matching Italian word or phrase:",
+          "x": 0,
+          "y": -64,
+          "w": 390,
+          "h": 773.859375
+        },
+        "controls": [
+          {
+            "text": "← Pause & save",
+            "x": 22,
+            "y": -36,
+            "w": 113.171875,
+            "h": 34
+          },
+          {
+            "text": "Hear the answer",
+            "x": 41,
+            "y": 399.859375,
+            "w": 116.671875,
+            "h": 34
+          },
+          {
+            "text": "Save this word",
+            "x": 173.671875,
+            "y": 399.859375,
+            "w": 104.0625,
+            "h": 34
+          },
+          {
+            "text": "Next question →",
+            "x": 41,
+            "y": 494.859375,
+            "w": 308,
+            "h": 48
+          },
+          {
+            "text": "Need a different activity?",
+            "x": 22,
+            "y": 593.859375,
+            "w": 346,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "en",
+        "questionFont": "23px",
+        "primaryStyle": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 75, 59)"
+        }
+      },
+      "hiddenMenu": false,
+      "hiddenFields": false,
+      "visibleModes": 4,
+      "visibleTools": 7,
+      "names": [
+        "Round length5 questions10 questions15 questions",
+        "Word bankAll word banksConversation helpersWhere I am fromNumbers and ageEveryday thingsWork and studyAt the caféThings I doTime and plansRooms and placesStaying somewhereMy daily routinePeople close to meAround townCan, want and needA little about yesterdayFood and quantitiesClothes and descriptionsBody and care",
+        "Answer supportGuided · choices and word tilesRecall · type words and sentences"
+      ],
+      "qCounts": {
+        "questions": 1,
+        "modes": 0,
+        "selects": 0,
+        "helpOpen": false,
+        "options": 4
+      },
+      "focus": "H1",
+      "hint": "It begins with “mi”. Include the article if the word bank uses one.",
+      "feedbackFocused": true
+    },
+    {
+      "lang": "it",
+      "width": 320,
+      "closed": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "PICCOLI GIRI, ITALIANO UTILEUn po’ di gioco. Un po’ di pratica.Scegli un gioco. ",
+          "x": 0,
+          "y": 279,
+          "w": 320,
+          "h": 1342.4375
+        },
+        "controls": [
+          {
+            "text": "01Caccia alle paroleTrova una parola o una frase utile.●",
+            "x": 22,
+            "y": 539.3125,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "02Costruisci la fraseMetti le parole in ordine, un tocco alla volta.○",
+            "x": 22,
+            "y": 674.5,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "03Detective grammaticaleScegli una forma o correggi un piccolo errore.○",
+            "x": 22,
+            "y": 809.6875,
+            "w": 276,
+            "h": 167.375
+          },
+          {
+            "text": "04Piccole conversazioniProva tre risposte in una situazione quotidiana.○",
+            "x": 22,
+            "y": 993.0625,
+            "w": 276,
+            "h": 146.375
+          },
+          {
+            "text": "Giochiamo →",
+            "x": 41,
+            "y": 1256.4375,
+            "w": 238,
+            "h": 48
+          },
+          {
+            "text": "Personalizza questo giro",
+            "x": 41,
+            "y": 1345.4375,
+            "w": 238,
+            "h": 44
+          },
+          {
+            "text": "Il mio percorso di pratica · 0 domande esplorate",
+            "x": 22,
+            "y": 1461.4375,
+            "w": 276,
+            "h": 68
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "it",
+        "questionFont": "34px",
+        "primaryStyle": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 75, 59)"
+        }
+      },
+      "expanded": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "PICCOLI GIRI, ITALIANO UTILEUn po’ di gioco. Un po’ di pratica.Scegli un gioco. ",
+          "x": 0,
+          "y": -1406,
+          "w": 320,
+          "h": 2268.078125
+        },
+        "controls": [
+          {
+            "text": "01Caccia alle paroleTrova una parola o una frase utile.●",
+            "x": 22,
+            "y": -1145.6875,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "02Costruisci la fraseMetti le parole in ordine, un tocco alla volta.○",
+            "x": 22,
+            "y": -1010.5,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "03Detective grammaticaleScegli una forma o correggi un piccolo errore.○",
+            "x": 22,
+            "y": -875.3125,
+            "w": 276,
+            "h": 167.375
+          },
+          {
+            "text": "04Piccole conversazioniProva tre risposte in una situazione quotidiana.○",
+            "x": 22,
+            "y": -691.9375,
+            "w": 276,
+            "h": 146.375
+          },
+          {
+            "text": "Giochiamo →",
+            "x": 41,
+            "y": -428.5625,
+            "w": 238,
+            "h": 48
+          },
+          {
+            "text": "Personalizza questo giro",
+            "x": 41,
+            "y": -339.5625,
+            "w": 238,
+            "h": 44
+          },
+          {
+            "text": "5 domande10 domande15 domande",
+            "x": 41,
+            "y": -243.5625,
+            "w": 238,
+            "h": 47
+          },
+          {
+            "text": "Tutti i lessiciParole per cavarselaDa dove vengoNumeri ed etàOggetti quotidianiL",
+            "x": 41,
+            "y": -144.5625,
+            "w": 238,
+            "h": 47
+          },
+          {
+            "text": "Guidato · scelte e tessereMemoria · scrivi parole e frasi",
+            "x": 41,
+            "y": -45.5625,
+            "w": 238,
+            "h": 47
+          },
+          {
+            "text": "Il mio percorso di pratica · 0 domande esplorate",
+            "x": 22,
+            "y": 264.171875,
+            "w": 276,
+            "h": 68
+          },
+          {
+            "text": "Ripasso in scadenza (0)",
+            "x": 22,
+            "y": 491.515625,
+            "w": 208.015625,
+            "h": 48
+          },
+          {
+            "text": "Riprova errori e indizi (0)",
+            "x": 22,
+            "y": 555.515625,
+            "w": 213.171875,
+            "h": 48
+          },
+          {
+            "text": "Salva i miei progressi",
+            "x": 22,
+            "y": 619.515625,
+            "w": 150.359375,
+            "h": 34
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": true,
+        "reviewOpen": true,
+        "lang": "it",
+        "questionFont": "34px",
+        "primaryStyle": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 75, 59)"
+        }
+      },
+      "question": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "← Pausa e salva1 / 5Parole per cavarselaTrova l’italiano per: I don't understand",
+          "x": 0,
+          "y": -340,
+          "w": 320,
+          "h": 763.875
+        },
+        "controls": [
+          {
+            "text": "← Pausa e salva",
+            "x": 22,
+            "y": -312,
+            "w": 115.765625,
+            "h": 34
+          },
+          {
+            "text": "mi chiamo",
+            "x": 41,
+            "y": -69.125,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "buongiorno",
+            "x": 41,
+            "y": 0.875,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "per favore",
+            "x": 41,
+            "y": 70.875,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "non capisco",
+            "x": 41,
+            "y": 140.875,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "Mostra un indizio",
+            "x": 41,
+            "y": 222.875,
+            "w": 121.84375,
+            "h": 34
+          },
+          {
+            "text": "Vuoi cambiare attività?",
+            "x": 22,
+            "y": 307.875,
+            "w": 276,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "it",
+        "questionFont": "23px",
+        "primaryStyle": null
+      },
+      "feedback": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "← Pausa e salva1 / 5Parole per cavarselaTrova l’italiano per: I don't understand",
+          "x": 0,
+          "y": -340,
+          "w": 320,
+          "h": 830.859375
+        },
+        "controls": [
+          {
+            "text": "← Pausa e salva",
+            "x": 22,
+            "y": -312,
+            "w": 115.765625,
+            "h": 34
+          },
+          {
+            "text": "Ascolta la risposta",
+            "x": 41,
+            "y": 110.859375,
+            "w": 130.515625,
+            "h": 34
+          },
+          {
+            "text": "Salva questa parola",
+            "x": 41,
+            "y": 160.859375,
+            "w": 139.296875,
+            "h": 34
+          },
+          {
+            "text": "Prossima domanda →",
+            "x": 41,
+            "y": 275.859375,
+            "w": 238,
+            "h": 48
+          },
+          {
+            "text": "Vuoi cambiare attività?",
+            "x": 22,
+            "y": 374.859375,
+            "w": 276,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "it",
+        "questionFont": "23px",
+        "primaryStyle": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 75, 59)"
+        }
+      },
+      "hiddenMenu": false,
+      "hiddenFields": false,
+      "visibleModes": 4,
+      "visibleTools": 7,
+      "names": [
+        "Lunghezza del giro5 domande10 domande15 domande",
+        "LessicoTutti i lessiciParole per cavarselaDa dove vengoNumeri ed etàOggetti quotidianiLavoro e studioAl barCose che faccioOre e programmiStanze e luoghiIn albergoLa mia giornataLe persone vicineIn cittàPosso, voglio e devoUn po’ di ieriCibo e quantitàVestiti e descrizioniCorpo e cura",
+        "Aiuto per rispondereGuidato · scelte e tessereMemoria · scrivi parole e frasi"
+      ],
+      "qCounts": {
+        "questions": 1,
+        "modes": 0,
+        "selects": 0,
+        "helpOpen": false,
+        "options": 4
+      },
+      "focus": "H1",
+      "hint": "Inizia con “no”. Includi l’articolo se è presente nel lessico.",
+      "feedbackFocused": true
+    },
+    {
+      "lang": "it",
+      "width": 390,
+      "closed": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "PICCOLI GIRI, ITALIANO UTILEUn po’ di gioco. Un po’ di pratica.Scegli un gioco. ",
+          "x": 0,
+          "y": 222,
+          "w": 390,
+          "h": 1222.0625
+        },
+        "controls": [
+          {
+            "text": "01Caccia alle paroleTrova una parola o una frase utile.●",
+            "x": 22,
+            "y": 458.3125,
+            "w": 346,
+            "h": 98.1875
+          },
+          {
+            "text": "02Costruisci la fraseMetti le parole in ordine, un tocco alla volta.○",
+            "x": 22,
+            "y": 572.5,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "03Detective grammaticaleScegli una forma o correggi un piccolo errore.○",
+            "x": 22,
+            "y": 707.6875,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "04Piccole conversazioniProva tre risposte in una situazione quotidiana.○",
+            "x": 22,
+            "y": 842.875,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "Giochiamo →",
+            "x": 41,
+            "y": 1079.0625,
+            "w": 308,
+            "h": 48
+          },
+          {
+            "text": "Personalizza questo giro",
+            "x": 41,
+            "y": 1168.0625,
+            "w": 308,
+            "h": 44
+          },
+          {
+            "text": "Il mio percorso di pratica · 0 domande esplorate",
+            "x": 22,
+            "y": 1284.0625,
+            "w": 346,
+            "h": 68
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "it",
+        "questionFont": "34px",
+        "primaryStyle": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 75, 59)"
+        }
+      },
+      "expanded": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "PICCOLI GIRI, ITALIANO UTILEUn po’ di gioco. Un po’ di pratica.Scegli un gioco. ",
+          "x": 0,
+          "y": -965,
+          "w": 390,
+          "h": 2058.140625
+        },
+        "controls": [
+          {
+            "text": "01Caccia alle paroleTrova una parola o una frase utile.●",
+            "x": 22,
+            "y": -728.6875,
+            "w": 346,
+            "h": 98.1875
+          },
+          {
+            "text": "02Costruisci la fraseMetti le parole in ordine, un tocco alla volta.○",
+            "x": 22,
+            "y": -614.5,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "03Detective grammaticaleScegli una forma o correggi un piccolo errore.○",
+            "x": 22,
+            "y": -479.3125,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "04Piccole conversazioniProva tre risposte in una situazione quotidiana.○",
+            "x": 22,
+            "y": -344.125,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "Giochiamo →",
+            "x": 41,
+            "y": -107.9375,
+            "w": 308,
+            "h": 48
+          },
+          {
+            "text": "Personalizza questo giro",
+            "x": 41,
+            "y": -18.9375,
+            "w": 308,
+            "h": 44
+          },
+          {
+            "text": "5 domande10 domande15 domande",
+            "x": 41,
+            "y": 77.0625,
+            "w": 308,
+            "h": 47
+          },
+          {
+            "text": "Tutti i lessiciParole per cavarselaDa dove vengoNumeri ed etàOggetti quotidianiL",
+            "x": 41,
+            "y": 176.0625,
+            "w": 308,
+            "h": 47
+          },
+          {
+            "text": "Guidato · scelte e tessereMemoria · scrivi parole e frasi",
+            "x": 41,
+            "y": 275.0625,
+            "w": 308,
+            "h": 47
+          },
+          {
+            "text": "Il mio percorso di pratica · 0 domande esplorate",
+            "x": 22,
+            "y": 540.015625,
+            "w": 346,
+            "h": 68
+          },
+          {
+            "text": "Ripasso in scadenza (0)",
+            "x": 22,
+            "y": 744.96875,
+            "w": 208.015625,
+            "h": 48
+          },
+          {
+            "text": "Riprova errori e indizi (0)",
+            "x": 22,
+            "y": 808.96875,
+            "w": 213.171875,
+            "h": 48
+          },
+          {
+            "text": "Salva i miei progressi",
+            "x": 22,
+            "y": 872.96875,
+            "w": 150.359375,
+            "h": 34
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": true,
+        "reviewOpen": true,
+        "lang": "it",
+        "questionFont": "34px",
+        "primaryStyle": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 75, 59)"
+        }
+      },
+      "question": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "← Pausa e salva1 / 5Parole per cavarselaTrova l’italiano per: hi / bye (informal",
+          "x": 0,
+          "y": -64,
+          "w": 390,
+          "h": 763.875
+        },
+        "controls": [
+          {
+            "text": "← Pausa e salva",
+            "x": 22,
+            "y": -36,
+            "w": 115.765625,
+            "h": 34
+          },
+          {
+            "text": "puoi ripetere?",
+            "x": 41,
+            "y": 206.875,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "buongiorno",
+            "x": 41,
+            "y": 276.875,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "ciao",
+            "x": 41,
+            "y": 346.875,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "non capisco",
+            "x": 41,
+            "y": 416.875,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "Mostra un indizio",
+            "x": 41,
+            "y": 498.875,
+            "w": 121.84375,
+            "h": 34
+          },
+          {
+            "text": "Vuoi cambiare attività?",
+            "x": 22,
+            "y": 583.875,
+            "w": 346,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "it",
+        "questionFont": "23px",
+        "primaryStyle": null
+      },
+      "feedback": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "← Pausa e salva1 / 5Parole per cavarselaTrova l’italiano per: hi / bye (informal",
+          "x": 0,
+          "y": -35,
+          "w": 390,
+          "h": 734.859375
+        },
+        "controls": [
+          {
+            "text": "← Pausa e salva",
+            "x": 22,
+            "y": -7,
+            "w": 115.765625,
+            "h": 34
+          },
+          {
+            "text": "Ascolta la risposta",
+            "x": 41,
+            "y": 389.859375,
+            "w": 130.515625,
+            "h": 34
+          },
+          {
+            "text": "Salva questa parola",
+            "x": 187.515625,
+            "y": 389.859375,
+            "w": 139.296875,
+            "h": 34
+          },
+          {
+            "text": "Prossima domanda →",
+            "x": 41,
+            "y": 484.859375,
+            "w": 308,
+            "h": 48
+          },
+          {
+            "text": "Vuoi cambiare attività?",
+            "x": 22,
+            "y": 583.859375,
+            "w": 346,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "it",
+        "questionFont": "23px",
+        "primaryStyle": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(33, 75, 59)"
+        }
+      },
+      "hiddenMenu": false,
+      "hiddenFields": false,
+      "visibleModes": 4,
+      "visibleTools": 7,
+      "names": [
+        "Lunghezza del giro5 domande10 domande15 domande",
+        "LessicoTutti i lessiciParole per cavarselaDa dove vengoNumeri ed etàOggetti quotidianiLavoro e studioAl barCose che faccioOre e programmiStanze e luoghiIn albergoLa mia giornataLe persone vicineIn cittàPosso, voglio e devoUn po’ di ieriCibo e quantitàVestiti e descrizioniCorpo e cura",
+        "Aiuto per rispondereGuidato · scelte e tessereMemoria · scrivi parole e frasi"
+      ],
+      "qCounts": {
+        "questions": 1,
+        "modes": 0,
+        "selects": 0,
+        "helpOpen": false,
+        "options": 4
+      },
+      "focus": "H1",
+      "hint": "Inizia con “ci”. Includi l’articolo se è presente nel lessico.",
+      "feedbackFocused": true
+    }
+  ],
+  "sceneObservations": [
+    {
+      "id": "scene:cafe-stop:cafe-stop-order",
+      "prompt": "The barista asks: «Che cosa prende?» You want one coffee. What do you say?",
+      "options": [
+        "Un tè, per favore.",
+        "Due caffè, per favore.",
+        "Un caffè, per favore."
+      ],
+      "hint": "Check both the drink and the quantity. Per favore makes a request polite.",
+      "feedback": "You got it with support.\n\nUn caffè, per favore.\n\nUn caffè means one coffee. Caffè is masculine, so use un. A short order with per favore is natural.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "indefinite-articles",
+      "route": "#grammar/indefinite-articles",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:cafe-stop:cafe-stop-here",
+      "prompt": "The barista asks: «Qui o da portare via?» (Here or to take away?) You want to drink at the café.",
+      "options": [
+        "Da portare via, grazie.",
+        "Senza zucchero, grazie.",
+        "Qui, grazie."
+      ],
+      "hint": "Answer the question about the place, not about sugar.",
+      "feedback": "You got it with support.\n\nQui, grazie.\n\nQui means here. Da portare via means to take away; senza zucchero means without sugar. Only qui matches your plan.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "questions-negation",
+      "route": "#grammar/questions-negation",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:cafe-stop:cafe-stop-bill",
+      "prompt": "You finish your coffee and want to pay. Ask for the bill.",
+      "options": [
+        "Il conto, per favore.",
+        "Un altro caffè, per favore.",
+        "Un bicchiere d’acqua, per favore."
+      ],
+      "hint": "Choose the request about payment, not another drink.",
+      "feedback": "You got it with support.\n\nIl conto, per favore.\n\nIl conto is the bill. Conto is masculine singular, so the article is il. The other replies order more drinks.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "definite-articles",
+      "route": "#grammar/definite-articles",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:station-ticket:station-ticket-destination",
+      "prompt": "At the ticket desk, you need one ticket to Bologna. Choose your request.",
+      "options": [
+        "Due biglietti per Bologna, per favore.",
+        "Un biglietto per Bologna, per favore.",
+        "Un biglietto per Firenze, per favore."
+      ],
+      "hint": "Check the number of tickets and the city after per.",
+      "feedback": "You got it with support.\n\nUn biglietto per Bologna, per favore.\n\nUn biglietto is one ticket. Per Bologna gives the destination. The alternatives change either the quantity or the city.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "simple-prepositions",
+      "route": "#grammar/simple-prepositions",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:station-ticket:station-ticket-time",
+      "prompt": "The clerk asks: «A che ora vuole partire?» (What time do you want to leave?) You want 09:00.",
+      "options": [
+        "Alle dieci, per favore.",
+        "Alle nove, per favore.",
+        "Alle otto, per favore."
+      ],
+      "hint": "Match the hour. Use alle with most clock times.",
+      "feedback": "You got it with support.\n\nAlle nove, per favore.\n\nAlle nove means at nine o’clock. Alle otto is at eight; alle dieci is at ten.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "time-frequency",
+      "route": "#grammar/time-frequency",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:station-ticket:station-ticket-platform",
+      "prompt": "You know the departure time. Now ask which platform the train leaves from.",
+      "options": [
+        "Da quale binario parte il treno?",
+        "Quanto costa il biglietto?",
+        "A che ora parte il treno?"
+      ],
+      "hint": "Binario is the word for the platform track. Da asks about a starting point.",
+      "feedback": "You got it with support.\n\nDa quale binario parte il treno?\n\nDa quale binario…? asks from which platform. A che ora…? asks the time, and quanto costa…? asks the price.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "questions-negation",
+      "route": "#grammar/questions-negation",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:market-basket:market-basket-apples",
+      "prompt": "The seller asks: «Che cosa prende?» You need one kilogram of apples.",
+      "options": [
+        "Due chili di mele, per favore.",
+        "Un chilo di pere, per favore.",
+        "Un chilo di mele, per favore."
+      ],
+      "hint": "Check the amount and the fruit. A measured amount uses di before the food.",
+      "feedback": "You got it with support.\n\nUn chilo di mele, per favore.\n\nUn chilo di mele means one kilogram of apples. The measurement uses di; mela becomes mele in the plural.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "quantity-partitives",
+      "route": "#grammar/quantity-partitives",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:market-basket:market-basket-price",
+      "prompt": "You also see bread, but there is no price label. Ask how much the bread costs.",
+      "options": [
+        "Quanto costa il pane?",
+        "Quanto costa il formaggio?",
+        "Dov’è il pane?"
+      ],
+      "hint": "Use a price question and name the food you are asking about.",
+      "feedback": "You got it with support.\n\nQuanto costa il pane?\n\nQuanto costa…? asks how much something costs. Il pane is the bread. Dov’è…? asks where it is.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "questions-negation",
+      "route": "#grammar/questions-negation",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:market-basket:market-basket-finish",
+      "prompt": "The seller asks: «Altro?» (Anything else?) You have everything you need. Decline politely.",
+      "options": [
+        "Sì, anche due pere, grazie.",
+        "Sì, anche il formaggio, grazie.",
+        "No, grazie. Basta così."
+      ],
+      "hint": "You are finishing the order, so do not add another item.",
+      "feedback": "You got it with support.\n\nNo, grazie. Basta così.\n\nNo, grazie politely declines. Basta così is a useful fixed phrase meaning that is all. Both other replies add food.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "questions-negation",
+      "route": "#grammar/questions-negation",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:new-classmate:new-classmate-name",
+      "prompt": "A classmate asks: «Come ti chiami?» Your name in this scene is Luca.",
+      "options": [
+        "Ho ventisette anni.",
+        "Sono di Bristol.",
+        "Mi chiamo Luca."
+      ],
+      "hint": "Come ti chiami? asks for a name, not an age or a city.",
+      "feedback": "You got it with support.\n\nMi chiamo Luca.\n\nMi chiamo Luca answers the name question. Learn mi chiamo as a useful introduction phrase.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "reflexive-routine",
+      "route": "#grammar/reflexive-routine",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:new-classmate:new-classmate-origin",
+      "prompt": "Your classmate asks: «Di dove sei?» You are from Bristol.",
+      "options": [
+        "Sono di Roma.",
+        "Sono di Bristol.",
+        "Sono a Bristol."
+      ],
+      "hint": "For your city of origin, use essere + di + city. Check the city too.",
+      "feedback": "You got it with support.\n\nSono di Bristol.\n\nSono di Bristol says you are from Bristol. Sono a Bristol says where you are now, which is a different meaning.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "simple-prepositions",
+      "route": "#grammar/simple-prepositions",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:new-classmate:new-classmate-age",
+      "prompt": "Your classmate asks: «Quanti anni hai?» Your age in this scene is 27.",
+      "options": [
+        "Ho trentasette anni.",
+        "Ho ventisette anni.",
+        "Ho diciassette anni."
+      ],
+      "hint": "Italian uses avere for age. Check the number: twenty plus seven.",
+      "feedback": "You got it with support.\n\nHo ventisette anni.\n\nHo ventisette anni means I am 27 years old. Italian uses ho, from avere. Diciassette is 17; trentasette is 37.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "avere",
+      "route": "#grammar/avere",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:town-directions:town-directions-where",
+      "prompt": "You need to find the station. Ask a stranger where it is.",
+      "options": [
+        "Scusi, dov’è la stazione?",
+        "Scusi, che ore sono?",
+        "Scusi, dov’è la farmacia?"
+      ],
+      "hint": "Use a where question and check the place name. Scusi is a polite way to get attention.",
+      "feedback": "You got it with support.\n\nScusi, dov’è la stazione?\n\nDov’è is dove + è: where is. La stazione names the place you need. Che ore sono? asks the time.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "questions-negation",
+      "route": "#grammar/questions-negation",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:town-directions:town-directions-confirm",
+      "prompt": "The person says: «La stazione è a destra.» Confirm the direction you hear.",
+      "options": [
+        "A destra, grazie.",
+        "Sempre dritto, grazie.",
+        "A sinistra, grazie."
+      ],
+      "hint": "Repeat the direction given, then thank the person.",
+      "feedback": "You got it with support.\n\nA destra, grazie.\n\nA destra means on the right. A sinistra means on the left; sempre dritto means straight ahead.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "simple-prepositions",
+      "route": "#grammar/simple-prepositions",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:town-directions:town-directions-walk",
+      "prompt": "The person asks: «Va a piedi o in autobus?» (Are you walking or taking the bus?) You are walking.",
+      "options": [
+        "Vado in macchina.",
+        "Vado in autobus.",
+        "Vado a piedi."
+      ],
+      "hint": "Choose the travel method without a vehicle. Vado means I go.",
+      "feedback": "You got it with support.\n\nVado a piedi.\n\nVado a piedi means I am walking. Use a piedi for walking; use in autobus or in macchina for the bus or car.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "irregular-present",
+      "route": "#grammar/irregular-present",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:table-booking:table-booking-request",
+      "prompt": "You call a restaurant to reserve a table. Choose the request that says this.",
+      "options": [
+        "Buonasera. Posso pagare il conto?",
+        "Buonasera. Posso prenotare un tavolo?",
+        "Buonasera. Posso vedere il menù?"
+      ],
+      "hint": "Look for the verb meaning to book. After posso, use an infinitive.",
+      "feedback": "You got it with support.\n\nBuonasera. Posso prenotare un tavolo?\n\nPosso prenotare un tavolo? means Can I book a table? Posso is followed by the infinitive prenotare. The other requests are about paying or seeing the menu.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "modal-verbs",
+      "route": "#grammar/modal-verbs",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:table-booking:table-booking-people",
+      "prompt": "The restaurant asks: «Per quante persone?» There are two of you.",
+      "options": [
+        "Per due persone.",
+        "Per tre persone.",
+        "Per quattro persone."
+      ],
+      "hint": "Quante persone? asks for the number of people. Match your group size.",
+      "feedback": "You got it with support.\n\nPer due persone.\n\nPer due persone means for two people. Persona is singular; persone is plural.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "noun-plurals",
+      "route": "#grammar/noun-plurals",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:table-booking:table-booking-hour",
+      "prompt": "The restaurant asks: «A che ora?» You want your table at 20:00.",
+      "options": [
+        "Alle otto di sera.",
+        "Alle nove di sera.",
+        "Alle sette di sera."
+      ],
+      "hint": "20:00 is eight in the evening. The reply needs both the hour and the evening.",
+      "feedback": "You got it with support.\n\nAlle otto di sera.\n\nAlle otto di sera means at eight in the evening, or 20:00. The other replies mean 19:00 and 21:00.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "time-frequency",
+      "route": "#grammar/time-frequency",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:daily-chat:daily-chat-wake",
+      "prompt": "A friend asks: «A che ora ti svegli?» In this routine, you wake up at seven.",
+      "options": [
+        "Mi sveglio alle nove.",
+        "Mi sveglio alle sette.",
+        "Mi sveglio alle dieci."
+      ],
+      "hint": "Answer with the io form and the correct waking time.",
+      "feedback": "You got it with support.\n\nMi sveglio alle sette.\n\nMi sveglio is the io form of svegliarsi. Keep mi with the verb. Alle sette gives the time.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "reflexive-routine",
+      "route": "#grammar/reflexive-routine",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:daily-chat:daily-chat-work",
+      "prompt": "Your friend asks: «A che ora inizi a lavorare?» In this routine, work starts at nine.",
+      "options": [
+        "Inizio alle undici.",
+        "Inizio alle sette.",
+        "Inizio alle nove."
+      ],
+      "hint": "Inizi is the question’s tu form; use inizio to answer about yourself. Check the hour.",
+      "feedback": "You got it with support.\n\nInizio alle nove.\n\nInizio alle nove means I start at nine. Inizio is the io form of iniziare; the ending changes from -i in the question to -o in the answer.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "present-are",
+      "route": "#grammar/present-are",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:daily-chat:daily-chat-study",
+      "prompt": "Your friend asks: «Quando studi italiano?» In this routine, you study every day.",
+      "options": [
+        "Studio italiano ogni lunedì.",
+        "Studio italiano ogni giorno.",
+        "Studio italiano solo il sabato."
+      ],
+      "hint": "Choose the frequency that includes all seven days of the week.",
+      "feedback": "You got it with support.\n\nStudio italiano ogni giorno.\n\nOgni giorno means every day. Ogni lunedì means every Monday; solo il sabato means only on Saturdays. Studio is the io form of studiare.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "time-frequency",
+      "route": "#grammar/time-frequency",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:evening-invitation:evening-invitation-accept",
+      "prompt": "A friend asks: «Vieni al cinema stasera?» You are free and want to accept.",
+      "options": [
+        "No, stasera lavoro.",
+        "No, stasera resto a casa.",
+        "Sì, vengo volentieri."
+      ],
+      "hint": "Choose an affirmative reply. Vieni is the tu form; vengo is the io form.",
+      "feedback": "You got it with support.\n\nSì, vengo volentieri.\n\nSì, vengo volentieri means Yes, I would be happy to come. Vengo is present tense; volentieri adds the meaning gladly. Both other replies decline.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "irregular-present",
+      "route": "#grammar/irregular-present",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:evening-invitation:evening-invitation-meet",
+      "prompt": "Your friend asks: «A che ora ci vediamo?» (What time shall we meet?) You want 19:00.",
+      "options": [
+        "Alle nove di sera.",
+        "Alle otto di sera.",
+        "Alle sette di sera."
+      ],
+      "hint": "Convert 19:00 to the everyday twelve-hour expression, and include the evening.",
+      "feedback": "You got it with support.\n\nAlle sette di sera.\n\nAlle sette di sera means at seven in the evening, or 19:00. Alle otto di sera is 20:00; alle nove di sera is 21:00.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "time-frequency",
+      "route": "#grammar/time-frequency",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    },
+    {
+      "id": "scene:evening-invitation:evening-invitation-dinner",
+      "prompt": "For dinner, your friend asks: «Ti piace la pasta?» You like pasta. Give a clear yes about pasta.",
+      "options": [
+        "Sì, mi piace il gelato.",
+        "No, non mi piace la pasta.",
+        "Sì, mi piace la pasta."
+      ],
+      "hint": "Answer about the same food. One singular thing takes piace.",
+      "feedback": "You got it with support.\n\nSì, mi piace la pasta.\n\nMi piace la pasta means I like pasta. Pasta is singular, so use piace. Non mi piace says you do not like it; gelato is a different food.\n\nHear the answer\nDevice pronunciation; try saying it once yourself.\n\n0/1 correct without hints · 1 with support\n\nRound complete. Come back tomorrow and see what you remember.\n\nFinish round",
+      "expectedUnit": "piacere",
+      "route": "#grammar/piacere",
+      "promptMatches": true,
+      "hintMatches": true,
+      "answerMatches": true,
+      "explanationMatches": true,
+      "routeMatches": true
+    }
+  ],
+  "screenshots": [
+    "work/arcade-peer/en-320-closed.png",
+    "work/arcade-peer/en-320-expanded.png",
+    "work/arcade-peer/en-320-question.png",
+    "work/arcade-peer/en-320-feedback.png",
+    "work/arcade-peer/en-390-closed.png",
+    "work/arcade-peer/en-390-expanded.png",
+    "work/arcade-peer/en-390-question.png",
+    "work/arcade-peer/en-390-feedback.png",
+    "work/arcade-peer/it-320-closed.png",
+    "work/arcade-peer/it-320-expanded.png",
+    "work/arcade-peer/it-320-question.png",
+    "work/arcade-peer/it-320-feedback.png",
+    "work/arcade-peer/it-390-closed.png",
+    "work/arcade-peer/it-390-expanded.png",
+    "work/arcade-peer/it-390-question.png",
+    "work/arcade-peer/it-390-feedback.png",
+    "work/arcade-peer/it-390-builder-recall.png",
+    "work/arcade-peer/en-390-grammar-choice.png",
+    "work/arcade-peer/it-390-conversation.png",
+    "work/arcade-peer/en-390-builder-guided.png",
+    "work/arcade-peer/en-1440-closed.png",
+    "work/arcade-peer/final-en-320-closed.png",
+    "work/arcade-peer/final-en-320-expanded.png",
+    "work/arcade-peer/final-en-320-question.png",
+    "work/arcade-peer/final-en-320-feedback.png",
+    "work/arcade-peer/final-en-390-closed.png",
+    "work/arcade-peer/final-en-390-expanded.png",
+    "work/arcade-peer/final-en-390-question.png",
+    "work/arcade-peer/final-en-390-feedback.png",
+    "work/arcade-peer/final-it-320-closed.png",
+    "work/arcade-peer/final-it-320-expanded.png",
+    "work/arcade-peer/final-it-320-question.png",
+    "work/arcade-peer/final-it-320-feedback.png",
+    "work/arcade-peer/final-it-390-closed.png",
+    "work/arcade-peer/final-it-390-expanded.png",
+    "work/arcade-peer/final-it-390-question.png",
+    "work/arcade-peer/final-it-390-feedback.png"
+  ],
+  "browserErrors": [],
+  "limitations": [
+    "Not a human learner usability test.",
+    "Not a native-speaker or externally validated CEFR assessment.",
+    "Chromium viewport emulation only; no native mobile, VoiceOver/TalkBack, Firefox or WebKit validation.",
+    "Device speech playback quality was not rated.",
+    "The 10/10 values below are internal acceptance rubric results for the listed observable criteria, not a comprehensive quality rating or proof of learning effectiveness.",
+    "All 24 English conversation turns were exercised in the browser; Italian conversation and grammar wording were sampled, rather than independently validated in full.",
+    "The existing main navigation uses horizontal scrolling at narrow widths; the arcade itself has no document-level horizontal overflow."
+  ],
+  "finalUiMatrix": [
+    {
+      "lang": "en",
+      "width": 320,
+      "closed": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "SMALL ROUNDS, USEFUL ITALIANA little play. A little practice.Choose one game. Ta",
+          "x": 0,
+          "y": 238,
+          "w": 320,
+          "h": 1243.0625
+        },
+        "controls": [
+          {
+            "text": "01Word huntFind a useful Italian word or phrase.●",
+            "x": 22,
+            "y": 474.3125,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "02Sentence builderPut the words in order, one tap at a time.○",
+            "x": 22,
+            "y": 609.5,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "03Grammar detectiveChoose a form or repair a small mistake.○",
+            "x": 22,
+            "y": 744.6875,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "04Conversation trailTry three replies in an everyday situation.○",
+            "x": 22,
+            "y": 879.875,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "Let’s play →",
+            "x": 41,
+            "y": 1116.0625,
+            "w": 238,
+            "h": 48
+          },
+          {
+            "text": "Customise this round",
+            "x": 41,
+            "y": 1205.0625,
+            "w": 238,
+            "h": 44
+          },
+          {
+            "text": "My practice trail · 0 questions explored",
+            "x": 22,
+            "y": 1321.0625,
+            "w": 276,
+            "h": 68
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "en",
+        "questionFont": "34px"
+      },
+      "expanded": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "SMALL ROUNDS, USEFUL ITALIANA little play. A little practice.Choose one game. Ta",
+          "x": 0,
+          "y": -1262,
+          "w": 320,
+          "h": 2089.140625
+        },
+        "controls": [
+          {
+            "text": "01Word huntFind a useful Italian word or phrase.●",
+            "x": 22,
+            "y": -1025.6875,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "02Sentence builderPut the words in order, one tap at a time.○",
+            "x": 22,
+            "y": -890.5,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "03Grammar detectiveChoose a form or repair a small mistake.○",
+            "x": 22,
+            "y": -755.3125,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "04Conversation trailTry three replies in an everyday situation.○",
+            "x": 22,
+            "y": -620.125,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "Let’s play →",
+            "x": 41,
+            "y": -383.9375,
+            "w": 238,
+            "h": 48
+          },
+          {
+            "text": "Customise this round",
+            "x": 41,
+            "y": -294.9375,
+            "w": 238,
+            "h": 44
+          },
+          {
+            "text": "5 questions10 questions15 questions",
+            "x": 41,
+            "y": -198.9375,
+            "w": 238,
+            "h": 47
+          },
+          {
+            "text": "All word banksConversation helpersWhere I am fromNumbers and ageEveryday thingsW",
+            "x": 41,
+            "y": -99.9375,
+            "w": 238,
+            "h": 47
+          },
+          {
+            "text": "Guided · choices and word tilesRecall · type words and sentences",
+            "x": 41,
+            "y": -0.9375,
+            "w": 238,
+            "h": 47
+          },
+          {
+            "text": "My practice trail · 0 questions explored",
+            "x": 22,
+            "y": 264.015625,
+            "w": 276,
+            "h": 68
+          },
+          {
+            "text": "Recall due (0)",
+            "x": 22,
+            "y": 468.96875,
+            "w": 136.265625,
+            "h": 48
+          },
+          {
+            "text": "Replay mistakes & hints (0)",
+            "x": 22,
+            "y": 532.96875,
+            "w": 229.296875,
+            "h": 48
+          },
+          {
+            "text": "Back up my progress",
+            "x": 22,
+            "y": 596.96875,
+            "w": 149.859375,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": true,
+        "reviewOpen": true,
+        "lang": "en",
+        "questionFont": "34px"
+      },
+      "question": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "← Pause & save1 / 5Conversation helpersFind the matching Italian word or phrase:",
+          "x": 0,
+          "y": -424,
+          "w": 320,
+          "h": 848.25
+        },
+        "controls": [
+          {
+            "text": "← Pause & save",
+            "x": 22,
+            "y": -396,
+            "w": 113.171875,
+            "h": 44
+          },
+          {
+            "text": "buongiorno",
+            "x": 41,
+            "y": -78.75,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "non capisco",
+            "x": 41,
+            "y": -8.75,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "grazie",
+            "x": 41,
+            "y": 61.25,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "mi chiamo",
+            "x": 41,
+            "y": 131.25,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "Show a hint",
+            "x": 41,
+            "y": 213.25,
+            "w": 82.625,
+            "h": 44
+          },
+          {
+            "text": "Need a different activity?",
+            "x": 22,
+            "y": 308.25,
+            "w": 276,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "en",
+        "questionFont": "23px"
+      },
+      "feedback": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "← Pause & save1 / 5Conversation helpersFind the matching Italian word or phrase:",
+          "x": 0,
+          "y": -345,
+          "w": 320,
+          "h": 878.234375
+        },
+        "controls": [
+          {
+            "text": "← Pause & save",
+            "x": 22,
+            "y": -317,
+            "w": 113.171875,
+            "h": 44
+          },
+          {
+            "text": "Hear the answer",
+            "x": 41,
+            "y": 193.234375,
+            "w": 116.671875,
+            "h": 44
+          },
+          {
+            "text": "Save this word",
+            "x": 173.671875,
+            "y": 193.234375,
+            "w": 104.0625,
+            "h": 44
+          },
+          {
+            "text": "Next question →",
+            "x": 41,
+            "y": 318.234375,
+            "w": 238,
+            "h": 48
+          },
+          {
+            "text": "Need a different activity?",
+            "x": 22,
+            "y": 417.234375,
+            "w": 276,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "en",
+        "questionFont": "23px"
+      },
+      "hiddenMenu": false,
+      "hiddenFields": false,
+      "visibleModes": 4,
+      "visibleTools": 7,
+      "qCounts": {
+        "questions": 1,
+        "modes": 0,
+        "selects": 0,
+        "helpOpen": false
+      },
+      "focus": "H1",
+      "hint": "It begins with “bu”. Include the article if the word bank uses one.",
+      "feedbackFocused": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "closed": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "SMALL ROUNDS, USEFUL ITALIANA little play. A little practice.Choose one game. Ta",
+          "x": 0,
+          "y": 238,
+          "w": 390,
+          "h": 1198.0625
+        },
+        "controls": [
+          {
+            "text": "01Word huntFind a useful Italian word or phrase.●",
+            "x": 22,
+            "y": 474.3125,
+            "w": 346,
+            "h": 98.1875
+          },
+          {
+            "text": "02Sentence builderPut the words in order, one tap at a time.○",
+            "x": 22,
+            "y": 588.5,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "03Grammar detectiveChoose a form or repair a small mistake.○",
+            "x": 22,
+            "y": 723.6875,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "04Conversation trailTry three replies in an everyday situation.○",
+            "x": 22,
+            "y": 858.875,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "Let’s play →",
+            "x": 41,
+            "y": 1095.0625,
+            "w": 308,
+            "h": 48
+          },
+          {
+            "text": "Customise this round",
+            "x": 41,
+            "y": 1184.0625,
+            "w": 308,
+            "h": 44
+          },
+          {
+            "text": "My practice trail · 0 questions explored",
+            "x": 22,
+            "y": 1300.0625,
+            "w": 346,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "en",
+        "questionFont": "34px"
+      },
+      "expanded": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "SMALL ROUNDS, USEFUL ITALIANA little play. A little practice.Choose one game. Ta",
+          "x": 0,
+          "y": -918,
+          "w": 390,
+          "h": 1999.359375
+        },
+        "controls": [
+          {
+            "text": "01Word huntFind a useful Italian word or phrase.●",
+            "x": 22,
+            "y": -681.6875,
+            "w": 346,
+            "h": 98.1875
+          },
+          {
+            "text": "02Sentence builderPut the words in order, one tap at a time.○",
+            "x": 22,
+            "y": -567.5,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "03Grammar detectiveChoose a form or repair a small mistake.○",
+            "x": 22,
+            "y": -432.3125,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "04Conversation trailTry three replies in an everyday situation.○",
+            "x": 22,
+            "y": -297.125,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "Let’s play →",
+            "x": 41,
+            "y": -60.9375,
+            "w": 308,
+            "h": 48
+          },
+          {
+            "text": "Customise this round",
+            "x": 41,
+            "y": 28.0625,
+            "w": 308,
+            "h": 44
+          },
+          {
+            "text": "5 questions10 questions15 questions",
+            "x": 41,
+            "y": 124.0625,
+            "w": 308,
+            "h": 47
+          },
+          {
+            "text": "All word banksConversation helpersWhere I am fromNumbers and ageEveryday thingsW",
+            "x": 41,
+            "y": 223.0625,
+            "w": 308,
+            "h": 47
+          },
+          {
+            "text": "Guided · choices and word tilesRecall · type words and sentences",
+            "x": 41,
+            "y": 322.0625,
+            "w": 308,
+            "h": 47
+          },
+          {
+            "text": "My practice trail · 0 questions explored",
+            "x": 22,
+            "y": 564.625,
+            "w": 346,
+            "h": 44
+          },
+          {
+            "text": "Recall due (0)",
+            "x": 22,
+            "y": 723.1875,
+            "w": 136.265625,
+            "h": 48
+          },
+          {
+            "text": "Replay mistakes & hints (0)",
+            "x": 22,
+            "y": 787.1875,
+            "w": 229.296875,
+            "h": 48
+          },
+          {
+            "text": "Back up my progress",
+            "x": 22,
+            "y": 851.1875,
+            "w": 149.859375,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": true,
+        "reviewOpen": true,
+        "lang": "en",
+        "questionFont": "34px"
+      },
+      "question": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "← Pause & save1 / 5Conversation helpersFind the matching Italian word or phrase:",
+          "x": 0,
+          "y": -116,
+          "w": 390,
+          "h": 816.0625
+        },
+        "controls": [
+          {
+            "text": "← Pause & save",
+            "x": 22,
+            "y": -88,
+            "w": 113.171875,
+            "h": 44
+          },
+          {
+            "text": "mi chiamo",
+            "x": 41,
+            "y": 197.0625,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "per favore",
+            "x": 41,
+            "y": 267.0625,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "piacere",
+            "x": 41,
+            "y": 337.0625,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "non capisco",
+            "x": 41,
+            "y": 407.0625,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "Show a hint",
+            "x": 41,
+            "y": 489.0625,
+            "w": 82.625,
+            "h": 44
+          },
+          {
+            "text": "Need a different activity?",
+            "x": 22,
+            "y": 584.0625,
+            "w": 346,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "en",
+        "questionFont": "23px"
+      },
+      "feedback": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "← Pause & save1 / 5Conversation helpersFind the matching Italian word or phrase:",
+          "x": 0,
+          "y": 195,
+          "w": 390,
+          "h": 826.046875
+        },
+        "controls": [
+          {
+            "text": "← Pause & save",
+            "x": 22,
+            "y": 223,
+            "w": 113.171875,
+            "h": 44
+          },
+          {
+            "text": "Hear the answer",
+            "x": 41,
+            "y": 701.046875,
+            "w": 116.671875,
+            "h": 44
+          },
+          {
+            "text": "Save this word",
+            "x": 173.671875,
+            "y": 701.046875,
+            "w": 104.0625,
+            "h": 44
+          },
+          {
+            "text": "Next question →",
+            "x": 41,
+            "y": 806.046875,
+            "w": 308,
+            "h": 48
+          },
+          {
+            "text": "Need a different activity?",
+            "x": 22,
+            "y": 905.046875,
+            "w": 346,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "en",
+        "questionFont": "23px"
+      },
+      "hiddenMenu": false,
+      "hiddenFields": false,
+      "visibleModes": 4,
+      "visibleTools": 7,
+      "qCounts": {
+        "questions": 1,
+        "modes": 0,
+        "selects": 0,
+        "helpOpen": false
+      },
+      "focus": "H1",
+      "hint": "It begins with “pi”. Include the article if the word bank uses one.",
+      "feedbackFocused": true
+    },
+    {
+      "lang": "it",
+      "width": 320,
+      "closed": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "PICCOLI GIRI, ITALIANO UTILEUn po’ di gioco. Un po’ di pratica.Scegli un gioco. ",
+          "x": 0,
+          "y": 279,
+          "w": 320,
+          "h": 1342.4375
+        },
+        "controls": [
+          {
+            "text": "01Caccia alle paroleTrova una parola o una frase utile.●",
+            "x": 22,
+            "y": 539.3125,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "02Costruisci la fraseMetti le parole in ordine, un tocco alla volta.○",
+            "x": 22,
+            "y": 674.5,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "03Detective grammaticaleScegli una forma o correggi un piccolo errore.○",
+            "x": 22,
+            "y": 809.6875,
+            "w": 276,
+            "h": 167.375
+          },
+          {
+            "text": "04Piccole conversazioniProva tre risposte in una situazione quotidiana.○",
+            "x": 22,
+            "y": 993.0625,
+            "w": 276,
+            "h": 146.375
+          },
+          {
+            "text": "Giochiamo →",
+            "x": 41,
+            "y": 1256.4375,
+            "w": 238,
+            "h": 48
+          },
+          {
+            "text": "Personalizza questo giro",
+            "x": 41,
+            "y": 1345.4375,
+            "w": 238,
+            "h": 44
+          },
+          {
+            "text": "Il mio percorso di pratica · 0 domande esplorate",
+            "x": 22,
+            "y": 1461.4375,
+            "w": 276,
+            "h": 68
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "it",
+        "questionFont": "34px"
+      },
+      "expanded": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "PICCOLI GIRI, ITALIANO UTILEUn po’ di gioco. Un po’ di pratica.Scegli un gioco. ",
+          "x": 0,
+          "y": -1406,
+          "w": 320,
+          "h": 2278.078125
+        },
+        "controls": [
+          {
+            "text": "01Caccia alle paroleTrova una parola o una frase utile.●",
+            "x": 22,
+            "y": -1145.6875,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "02Costruisci la fraseMetti le parole in ordine, un tocco alla volta.○",
+            "x": 22,
+            "y": -1010.5,
+            "w": 276,
+            "h": 119.1875
+          },
+          {
+            "text": "03Detective grammaticaleScegli una forma o correggi un piccolo errore.○",
+            "x": 22,
+            "y": -875.3125,
+            "w": 276,
+            "h": 167.375
+          },
+          {
+            "text": "04Piccole conversazioniProva tre risposte in una situazione quotidiana.○",
+            "x": 22,
+            "y": -691.9375,
+            "w": 276,
+            "h": 146.375
+          },
+          {
+            "text": "Giochiamo →",
+            "x": 41,
+            "y": -428.5625,
+            "w": 238,
+            "h": 48
+          },
+          {
+            "text": "Personalizza questo giro",
+            "x": 41,
+            "y": -339.5625,
+            "w": 238,
+            "h": 44
+          },
+          {
+            "text": "5 domande10 domande15 domande",
+            "x": 41,
+            "y": -243.5625,
+            "w": 238,
+            "h": 47
+          },
+          {
+            "text": "Tutti i lessiciParole per cavarselaDa dove vengoNumeri ed etàOggetti quotidianiL",
+            "x": 41,
+            "y": -144.5625,
+            "w": 238,
+            "h": 47
+          },
+          {
+            "text": "Guidato · scelte e tessereMemoria · scrivi parole e frasi",
+            "x": 41,
+            "y": -45.5625,
+            "w": 238,
+            "h": 47
+          },
+          {
+            "text": "Il mio percorso di pratica · 0 domande esplorate",
+            "x": 22,
+            "y": 264.171875,
+            "w": 276,
+            "h": 68
+          },
+          {
+            "text": "Ripasso in scadenza (0)",
+            "x": 22,
+            "y": 491.515625,
+            "w": 208.015625,
+            "h": 48
+          },
+          {
+            "text": "Riprova errori e indizi (0)",
+            "x": 22,
+            "y": 555.515625,
+            "w": 213.171875,
+            "h": 48
+          },
+          {
+            "text": "Salva i miei progressi",
+            "x": 22,
+            "y": 619.515625,
+            "w": 150.359375,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": true,
+        "reviewOpen": true,
+        "lang": "it",
+        "questionFont": "34px"
+      },
+      "question": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "← Pausa e salva1 / 5Parole per cavarselaTrova l’italiano per: hi / bye (informal",
+          "x": 0,
+          "y": -360,
+          "w": 320,
+          "h": 783.875
+        },
+        "controls": [
+          {
+            "text": "← Pausa e salva",
+            "x": 22,
+            "y": -332,
+            "w": 115.765625,
+            "h": 44
+          },
+          {
+            "text": "ciao",
+            "x": 41,
+            "y": -79.125,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "buongiorno",
+            "x": 41,
+            "y": -9.125,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "puoi ripetere?",
+            "x": 41,
+            "y": 60.875,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "non capisco",
+            "x": 41,
+            "y": 130.875,
+            "w": 238,
+            "h": 58
+          },
+          {
+            "text": "Mostra un indizio",
+            "x": 41,
+            "y": 212.875,
+            "w": 121.84375,
+            "h": 44
+          },
+          {
+            "text": "Vuoi cambiare attività?",
+            "x": 22,
+            "y": 307.875,
+            "w": 276,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "it",
+        "questionFont": "23px"
+      },
+      "feedback": {
+        "viewport": 320,
+        "pageWidth": 320,
+        "app": {
+          "text": "← Pausa e salva1 / 5Parole per cavarselaTrova l’italiano per: hi / bye (informal",
+          "x": 0,
+          "y": -281,
+          "w": 320,
+          "h": 860.859375
+        },
+        "controls": [
+          {
+            "text": "← Pausa e salva",
+            "x": 22,
+            "y": -253,
+            "w": 115.765625,
+            "h": 44
+          },
+          {
+            "text": "Ascolta la risposta",
+            "x": 41,
+            "y": 179.859375,
+            "w": 130.515625,
+            "h": 44
+          },
+          {
+            "text": "Salva questa parola",
+            "x": 41,
+            "y": 239.859375,
+            "w": 139.296875,
+            "h": 44
+          },
+          {
+            "text": "Prossima domanda →",
+            "x": 41,
+            "y": 364.859375,
+            "w": 238,
+            "h": 48
+          },
+          {
+            "text": "Vuoi cambiare attività?",
+            "x": 22,
+            "y": 463.859375,
+            "w": 276,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "it",
+        "questionFont": "23px"
+      },
+      "hiddenMenu": false,
+      "hiddenFields": false,
+      "visibleModes": 4,
+      "visibleTools": 7,
+      "qCounts": {
+        "questions": 1,
+        "modes": 0,
+        "selects": 0,
+        "helpOpen": false
+      },
+      "focus": "H1",
+      "hint": "Inizia con “ci”. Includi l’articolo se è presente nel lessico.",
+      "feedbackFocused": true
+    },
+    {
+      "lang": "it",
+      "width": 390,
+      "closed": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "PICCOLI GIRI, ITALIANO UTILEUn po’ di gioco. Un po’ di pratica.Scegli un gioco. ",
+          "x": 0,
+          "y": 222,
+          "w": 390,
+          "h": 1222.0625
+        },
+        "controls": [
+          {
+            "text": "01Caccia alle paroleTrova una parola o una frase utile.●",
+            "x": 22,
+            "y": 458.3125,
+            "w": 346,
+            "h": 98.1875
+          },
+          {
+            "text": "02Costruisci la fraseMetti le parole in ordine, un tocco alla volta.○",
+            "x": 22,
+            "y": 572.5,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "03Detective grammaticaleScegli una forma o correggi un piccolo errore.○",
+            "x": 22,
+            "y": 707.6875,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "04Piccole conversazioniProva tre risposte in una situazione quotidiana.○",
+            "x": 22,
+            "y": 842.875,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "Giochiamo →",
+            "x": 41,
+            "y": 1079.0625,
+            "w": 308,
+            "h": 48
+          },
+          {
+            "text": "Personalizza questo giro",
+            "x": 41,
+            "y": 1168.0625,
+            "w": 308,
+            "h": 44
+          },
+          {
+            "text": "Il mio percorso di pratica · 0 domande esplorate",
+            "x": 22,
+            "y": 1284.0625,
+            "w": 346,
+            "h": 68
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "it",
+        "questionFont": "34px"
+      },
+      "expanded": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "PICCOLI GIRI, ITALIANO UTILEUn po’ di gioco. Un po’ di pratica.Scegli un gioco. ",
+          "x": 0,
+          "y": -965,
+          "w": 390,
+          "h": 2068.140625
+        },
+        "controls": [
+          {
+            "text": "01Caccia alle paroleTrova una parola o una frase utile.●",
+            "x": 22,
+            "y": -728.6875,
+            "w": 346,
+            "h": 98.1875
+          },
+          {
+            "text": "02Costruisci la fraseMetti le parole in ordine, un tocco alla volta.○",
+            "x": 22,
+            "y": -614.5,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "03Detective grammaticaleScegli una forma o correggi un piccolo errore.○",
+            "x": 22,
+            "y": -479.3125,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "04Piccole conversazioniProva tre risposte in una situazione quotidiana.○",
+            "x": 22,
+            "y": -344.125,
+            "w": 346,
+            "h": 119.1875
+          },
+          {
+            "text": "Giochiamo →",
+            "x": 41,
+            "y": -107.9375,
+            "w": 308,
+            "h": 48
+          },
+          {
+            "text": "Personalizza questo giro",
+            "x": 41,
+            "y": -18.9375,
+            "w": 308,
+            "h": 44
+          },
+          {
+            "text": "5 domande10 domande15 domande",
+            "x": 41,
+            "y": 77.0625,
+            "w": 308,
+            "h": 47
+          },
+          {
+            "text": "Tutti i lessiciParole per cavarselaDa dove vengoNumeri ed etàOggetti quotidianiL",
+            "x": 41,
+            "y": 176.0625,
+            "w": 308,
+            "h": 47
+          },
+          {
+            "text": "Guidato · scelte e tessereMemoria · scrivi parole e frasi",
+            "x": 41,
+            "y": 275.0625,
+            "w": 308,
+            "h": 47
+          },
+          {
+            "text": "Il mio percorso di pratica · 0 domande esplorate",
+            "x": 22,
+            "y": 540.015625,
+            "w": 346,
+            "h": 68
+          },
+          {
+            "text": "Ripasso in scadenza (0)",
+            "x": 22,
+            "y": 744.96875,
+            "w": 208.015625,
+            "h": 48
+          },
+          {
+            "text": "Riprova errori e indizi (0)",
+            "x": 22,
+            "y": 808.96875,
+            "w": 213.171875,
+            "h": 48
+          },
+          {
+            "text": "Salva i miei progressi",
+            "x": 22,
+            "y": 872.96875,
+            "w": 150.359375,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": true,
+        "customiseOpen": true,
+        "reviewOpen": true,
+        "lang": "it",
+        "questionFont": "34px"
+      },
+      "question": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "← Pausa e salva1 / 5Parole per cavarselaTrova l’italiano per: my name isbuongior",
+          "x": 0,
+          "y": -84,
+          "w": 390,
+          "h": 783.875
+        },
+        "controls": [
+          {
+            "text": "← Pausa e salva",
+            "x": 22,
+            "y": -56,
+            "w": 115.765625,
+            "h": 44
+          },
+          {
+            "text": "buongiorno",
+            "x": 41,
+            "y": 196.875,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "ciao",
+            "x": 41,
+            "y": 266.875,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "mi chiamo",
+            "x": 41,
+            "y": 336.875,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "piacere",
+            "x": 41,
+            "y": 406.875,
+            "w": 308,
+            "h": 58
+          },
+          {
+            "text": "Mostra un indizio",
+            "x": 41,
+            "y": 488.875,
+            "w": 121.84375,
+            "h": 44
+          },
+          {
+            "text": "Vuoi cambiare attività?",
+            "x": 22,
+            "y": 583.875,
+            "w": 346,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "it",
+        "questionFont": "23px"
+      },
+      "feedback": {
+        "viewport": 390,
+        "pageWidth": 390,
+        "app": {
+          "text": "← Pausa e salva1 / 5Parole per cavarselaTrova l’italiano per: my name isCi sei a",
+          "x": 0,
+          "y": 222,
+          "w": 390,
+          "h": 754.859375
+        },
+        "controls": [
+          {
+            "text": "← Pausa e salva",
+            "x": 22,
+            "y": 250,
+            "w": 115.765625,
+            "h": 44
+          },
+          {
+            "text": "Ascolta la risposta",
+            "x": 41,
+            "y": 656.859375,
+            "w": 130.515625,
+            "h": 44
+          },
+          {
+            "text": "Salva questa parola",
+            "x": 187.515625,
+            "y": 656.859375,
+            "w": 139.296875,
+            "h": 44
+          },
+          {
+            "text": "Prossima domanda →",
+            "x": 41,
+            "y": 761.859375,
+            "w": 308,
+            "h": 48
+          },
+          {
+            "text": "Vuoi cambiare attività?",
+            "x": 22,
+            "y": 860.859375,
+            "w": 346,
+            "h": 44
+          }
+        ],
+        "headings": 1,
+        "menuOpen": false,
+        "customiseOpen": false,
+        "reviewOpen": false,
+        "lang": "it",
+        "questionFont": "23px"
+      },
+      "hiddenMenu": false,
+      "hiddenFields": false,
+      "visibleModes": 4,
+      "visibleTools": 7,
+      "qCounts": {
+        "questions": 1,
+        "modes": 0,
+        "selects": 0,
+        "helpOpen": false
+      },
+      "focus": "H1",
+      "hint": "Inizia con “mi”. Includi l’articolo se è presente nel lessico.",
+      "feedbackFocused": true
+    }
+  ],
+  "finalUiReviewedOn": "2026-10-20T20:38:31.251Z",
+  "buildAssets": [
+    "assets/index-DDQ4XWIi.js",
+    "assets/index-Lb7K_cYI.css"
+  ],
+  "resolvedFindings": [
+    {
+      "finding": "Arcade secondary text buttons measured 34px high on phones.",
+      "resolution": "Arcade-scoped CSS now gives every observed question and feedback button a minimum height of 44px.",
+      "verified": true,
+      "evidence": [
+        "work/arcade-peer/final-en-320-question.png",
+        "work/arcade-peer/final-en-320-feedback.png",
+        "work/arcade-peer/final-en-390-question.png",
+        "work/arcade-peer/final-en-390-feedback.png",
+        "work/arcade-peer/final-it-320-question.png",
+        "work/arcade-peer/final-it-320-feedback.png",
+        "work/arcade-peer/final-it-390-question.png",
+        "work/arcade-peer/final-it-390-feedback.png"
+      ]
+    }
+  ],
+  "captureNotes": [
+    "Full-page screenshots captured after instant scroll to the page top. A previously apparent skip-link overlap was a screenshot scroll artifact: live viewport measurement found fixed top −80px and bottom −32px without focus.",
+    "The first harness included descendants of closed details in DOM geometry and used exact labels for wrapped selects. Both harness issues were corrected before acceptance scoring."
+  ],
+  "acceptance": {
+    "student": {
+      "passed": 20,
+      "total": 20,
+      "internalRubricScoreOutOf10": 10.0,
+      "requiredScoreOutOf10": 9.5,
+      "meetsThreshold": true
+    },
+    "lecturer": {
+      "passed": 20,
+      "total": 20,
+      "internalRubricScoreOutOf10": 10.0,
+      "requiredScoreOutOf10": 9.5,
+      "meetsThreshold": true
+    },
+    "ui": {
+      "passed": 20,
+      "total": 20,
+      "internalRubricScoreOutOf10": 10.0,
+      "requiredScoreOutOf10": 9.5,
+      "meetsThreshold": true
+    },
+    "allRolesMeetThreshold": true
+  },
+  "manualScreenshotInspection": {
+    "reviewedAt": "2026-10-20T20:39:30.167141+00:00",
+    "files": [
+      "work/arcade-peer/final-en-320-question.png",
+      "work/arcade-peer/final-it-390-feedback.png",
+      "work/arcade-peer/final-it-320-expanded.png",
+      "work/arcade-peer/final-en-390-expanded.png",
+      "work/arcade-peer/final-it-320-closed.png",
+      "work/arcade-peer/final-it-390-closed.png",
+      "work/arcade-peer/final-en-390-closed.png",
+      "work/arcade-peer/en-390-builder-guided.png",
+      "work/arcade-peer/it-390-builder-recall.png",
+      "work/arcade-peer/it-390-conversation.png",
+      "work/arcade-peer/en-1440-closed.png"
+    ],
+    "notedFinding": "Secondary arcade touch targets were initially 34px high; final browser matrix confirms 44px or greater after the scoped CSS correction.",
+    "unresolvedBlockingFindings": []
+  },
+  "evidenceHashes": {
+    "work/arcade-peer/en-320-closed.png": "61605786c94c7b5d38031736d169bf2d17443737d12e2c8fb92e9e58c71a3fc4",
+    "work/arcade-peer/en-320-expanded.png": "c7eda0ca07b155085b2dd4cdb969b64a549c3359476f781771fc1af31dee1d75",
+    "work/arcade-peer/en-320-question.png": "1c1483ecc19fa45ebe00e58ff7ac5bbcc59e44ebf2bcc4c43e05f2681dec3d4b",
+    "work/arcade-peer/en-320-feedback.png": "b751b94fb170c63060cd66da06a8334d7475fe6ffc8d66ba0a86a8ee40ef6091",
+    "work/arcade-peer/en-390-closed.png": "f6661b9026b4a2a004a3594a6be5d9d695ebf8396aa4e0be390514d910897e1c",
+    "work/arcade-peer/en-390-expanded.png": "b8177e2a577005bd7024faedc24214dbceadf6cacb86b07dd691fd62922f0bae",
+    "work/arcade-peer/en-390-question.png": "ad3764ee1181014d6b20a48d126dfc05c53f15719da927241f98333b0bf44a3f",
+    "work/arcade-peer/en-390-feedback.png": "a4532d52b5e64511608874780673ff3929a09d3871a944fd10374e2b1e682078",
+    "work/arcade-peer/it-320-closed.png": "121efa6be53461b0c0c8a045340085da94e509aa07b3c7f1b44ee0795087ad1e",
+    "work/arcade-peer/it-320-expanded.png": "4654333ba8df8d9edda8d13fb5dea3e9399af765cf66db211d8ea1681cd0891d",
+    "work/arcade-peer/it-320-question.png": "4fad2014a64326f9d6a59c36d435ca239110e4dc53b1f9e98ff2e38fbb071677",
+    "work/arcade-peer/it-320-feedback.png": "01695c6ed61e7be1701ef0ab2816f969aa0f01e3b1542743e77f8edb91190334",
+    "work/arcade-peer/it-390-closed.png": "4e91bf1fa0b6f33540528626d0caedf22ffa5395346d34577435869d378deb7a",
+    "work/arcade-peer/it-390-expanded.png": "6840ea2b6c25d2133a18a7f54abab01ba2879b087e7695b6bbb83345ca5178bb",
+    "work/arcade-peer/it-390-question.png": "5eb7c4aa7ff9e93532b3017fb91d2faef9ca322cfbe2e3603ced46d362fbe19c",
+    "work/arcade-peer/it-390-feedback.png": "c57783ca01bb13ea5ad25a017946e60fd69f58df337efb11980fb9af1d3840c7",
+    "work/arcade-peer/it-390-builder-recall.png": "971aa3b66d2a78078c6497710bbf39073061886006045cdaf484c16c1b659430",
+    "work/arcade-peer/en-390-grammar-choice.png": "5141fedca4794f0e9dd0bacc481bf21c8f0f102c1718aac61f6acd4e261fdf5a",
+    "work/arcade-peer/it-390-conversation.png": "fb09ac88d9d17d12140bfad3638b2e00de9a1f0251921427bad383ccb0bbe674",
+    "work/arcade-peer/en-390-builder-guided.png": "95664112dd63d7989aa4f15cd60d52a4f22f36e80d869fce6b40f24fa5ea3acc",
+    "work/arcade-peer/en-1440-closed.png": "a58ad615038924bfccfd6260dda2276bd273e09bf1d04c8dee826f4077fa1b0f",
+    "work/arcade-peer/final-en-320-closed.png": "61605786c94c7b5d38031736d169bf2d17443737d12e2c8fb92e9e58c71a3fc4",
+    "work/arcade-peer/final-en-320-expanded.png": "9cd60aae8d34459be451014e0625d8fd0729f4eb4e4ec643cb31efdbacf8b4d3",
+    "work/arcade-peer/final-en-320-question.png": "af6903288c8a4c7362162ea9a4672245a76c5f378edd6a0951f75816c6a930b4",
+    "work/arcade-peer/final-en-320-feedback.png": "e12baf1fdc57fca6f80402de0c688289b10c3c0da340af23514dc4642e10c257",
+    "work/arcade-peer/final-en-390-closed.png": "f6661b9026b4a2a004a3594a6be5d9d695ebf8396aa4e0be390514d910897e1c",
+    "work/arcade-peer/final-en-390-expanded.png": "edbab2828c25e0b622d282cb369877e022d1b6e4470e48eea04e78dd656d76cc",
+    "work/arcade-peer/final-en-390-question.png": "0f34f0c1ee45d207b95ef8d33899c8332ba7e7850ce24357f8d7bffce75c89c1",
+    "work/arcade-peer/final-en-390-feedback.png": "71cc31f1aa835ccafbc0decc4117d7c68e18e678d50d650daec9f29d5fa4a336",
+    "work/arcade-peer/final-it-320-closed.png": "121efa6be53461b0c0c8a045340085da94e509aa07b3c7f1b44ee0795087ad1e",
+    "work/arcade-peer/final-it-320-expanded.png": "635882fb8eaa2b213e9e8936c38d139f88eb6f2000011083e0693e2159108afa",
+    "work/arcade-peer/final-it-320-question.png": "dc319ea820b637b04d6a636727de2347355ae8c1b59a0890aafbd94dce349109",
+    "work/arcade-peer/final-it-320-feedback.png": "ed357d985368af14c66eb3bb2b1ce3efa427049e07b229dbad8a6fddb6e294ce",
+    "work/arcade-peer/final-it-390-closed.png": "4e91bf1fa0b6f33540528626d0caedf22ffa5395346d34577435869d378deb7a",
+    "work/arcade-peer/final-it-390-expanded.png": "f1d86adcf5a3327d9748abc2a03b52f467e44af46c4ac47cb6474e384b2c3781",
+    "work/arcade-peer/final-it-390-question.png": "9c0eb99c94740e7d5e8930aafe13db617c412d016897a198b5ba94afb2710cec",
+    "work/arcade-peer/final-it-390-feedback.png": "cf7720f2d07edbf562c069e106de1bc2189211cc411048f956f08cc1966f4f96"
+  }
+}

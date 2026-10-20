@@ -1,0 +1,148 @@
+{
+  "reviewedOn": "2026-10-20",
+  "role": "Adversarial mid-A1 student auditor",
+  "reviewer": "grammar-content agent auditing root engine and practice tools",
+  "threshold": 9.5,
+  "checksTotal": 20,
+  "checksPassed": 20,
+  "scoreOutOf10": 10,
+  "status": "pass",
+  "method": "20 explicit checks across10 criteria, executed against the production engine plus static interface copy inspection. This is an internal checklist result, not an independent learner satisfaction or language-proficiency rating.",
+  "checks": [
+    {
+      "criterion": "1 · Fair Italian grading",
+      "name": "Accent remains meaningful",
+      "status": "pass",
+      "evidence": "Executed e/è rejection and capitalisation/final-punctuation acceptance with production normaliser."
+    },
+    {
+      "criterion": "1 · Fair Italian grading",
+      "name": "Common apostrophe and word-order variants work",
+      "status": "pass",
+      "evidence": "Executed straight-apostrophe, time-first and common adverb-placement alternatives."
+    },
+    {
+      "criterion": "2 · Support for mistakes",
+      "name": "A correction cannot rewrite the first attempt",
+      "status": "pass",
+      "evidence": "Submitted wrong la mano article then corrected it; first-try accuracy stayed zero and correction was supported."
+    },
+    {
+      "criterion": "2 · Support for mistakes",
+      "name": "Hint evidence survives reload and blocks independent credit",
+      "status": "pass",
+      "evidence": "Recorded hint use, serialised/reloaded, then answered correctly with hintUsed=false; saved evidence still marked support."
+    },
+    {
+      "criterion": "3 · Resume learning",
+      "name": "Unsubmitted grammar draft and personal work survive",
+      "status": "pass",
+      "evidence": "Round-tripped partial answer, exercise index, production draft, rubric and revealed-model state."
+    },
+    {
+      "criterion": "3 · Resume learning",
+      "name": "Submitted diagnostic progress is resumable and immutable",
+      "status": "pass",
+      "evidence": "Paused after a wrong diagnostic answer, reloaded and attempted replacement; original record remained."
+    },
+    {
+      "criterion": "4 · Honest completion",
+      "name": "Grammar completion waits for practice and production",
+      "status": "pass",
+      "evidence": "Attempted early completion at zero work and after exercises alone; both blocked until personal response and all self-checks."
+    },
+    {
+      "criterion": "4 · Honest completion",
+      "name": "Production is explicitly self-assessed",
+      "status": "pass",
+      "evidence": "Inspected production UI wording and confirmed all28 tasks supply bilingual model and three self-check criteria."
+    },
+    {
+      "criterion": "5 · Fair practice rewards",
+      "name": "Repeated clicks and rewrites cannot farm exercise points",
+      "status": "pass",
+      "evidence": "25 distinct retry strings earned no extra XP/minutes; first evidence retained in bounded12-attempt history."
+    },
+    {
+      "criterion": "5 · Fair practice rewards",
+      "name": "Completion points are awarded once",
+      "status": "pass",
+      "evidence": "Repeated completion did not add unit XP."
+    },
+    {
+      "criterion": "6 · Useful assessment",
+      "name": "Mixed diagnostic spans twelve core domains",
+      "status": "pass",
+      "evidence": "Executed readiness sampling and checked core-only,12 distinct units, past and preposition representation."
+    },
+    {
+      "criterion": "6 · Useful assessment",
+      "name": "Tense check has twelve distinct questions and no certification promise",
+      "status": "pass",
+      "evidence": "Executed12-item tense sample and inspected explicit non-certification wording and speaking/listening follow-up."
+    },
+    {
+      "criterion": "7 · Delayed retrieval",
+      "name": "Errors return tomorrow, not immediately as new due work",
+      "status": "pass",
+      "evidence": "Mistake scheduled one day later with no same-day due-loop."
+    },
+    {
+      "criterion": "7 · Delayed retrieval",
+      "name": "Blind later success moves the next review out",
+      "status": "pass",
+      "evidence": "Independent next-day recall moved review to three days later while original first-try evidence remained."
+    },
+    {
+      "criterion": "8 · Flexible time",
+      "name": "All seven budgets have complete, persisted guided recipes",
+      "status": "pass",
+      "evidence": "Executed5/10/15/20/30/45/60-minute recipe sums and session snapshot round trips."
+    },
+    {
+      "criterion": "8 · Flexible time",
+      "name": "Time claims are estimates and a study day can take multiple sittings",
+      "status": "pass",
+      "evidence": "Inspected itinerary estimate wording and all three programme pacing descriptions."
+    },
+    {
+      "criterion": "9 · Coherent programmes",
+      "name": "Required missions are bounded and prerequisites fit taught order",
+      "status": "pass",
+      "evidence": "Verified one required transfer mission per study day and ordered prerequisites for both main courses."
+    },
+    {
+      "criterion": "9 · Coherent programmes",
+      "name": "Programme gates cannot skip incomplete earlier days",
+      "status": "pass",
+      "evidence": "Executed incomplete-day and out-of-order blocks; programme switching retained completed grammar and missions."
+    },
+    {
+      "criterion": "10 · Vocabulary practice",
+      "name": "Recall ratings schedule future practice without repeat farming",
+      "status": "pass",
+      "evidence": "Executed correct and forgotten word ratings, tomorrow retries and zero rating XP."
+    },
+    {
+      "criterion": "10 · Vocabulary practice",
+      "name": "Saving, unsaving and re-saving preserves memory history",
+      "status": "pass",
+      "evidence": "Toggled favourite through a reload without losing successful recall or next review date."
+    }
+  ],
+  "repairedFindings": [
+    "Natural common Italian adverb-order variants now accepted in reorder practice.",
+    "Programme summaries now match required completion gates and allow a study day to span sittings.",
+    "Each programme day now has one required transfer mission, reducing burden while related missions remain available.",
+    "Time-frequency prerequisites were adjusted to avoid requiring a preposition unit scheduled later.",
+    "Prompts ask for the needed answer shape; the UI no longer insists that every tense/transform answer be a full sentence."
+  ],
+  "limitations": [
+    "This audit executed engine paths and inspected interface source. Separate browser/UI audit owns rendering, keyboard, mobile and visual evidence.",
+    "Personal production and companion quality are self-assessed; the app checks completion evidence, not free-text linguistic correctness.",
+    "Unsubmitted diagnostic text is not persisted; the interface promises saved submitted answers. Grammar exercise and production drafts do persist.",
+    "Programme switching preserves learning records but restarts the selected programme day counter; verify the final UI explains this.",
+    "Exact-match controlled exercises cover listed common variants, not every grammatically possible Italian paraphrase.",
+    "Study-minute credit and plan duration are estimates; no human learner timing study was performed."
+  ]
+}
