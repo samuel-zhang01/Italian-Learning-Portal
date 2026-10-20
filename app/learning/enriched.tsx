@@ -107,6 +107,65 @@ export function SessionPreview({
           </button>
         )}
       </div>
+      <div className="paper-collage" aria-hidden="true">
+        <span className="collage-sun" />
+        <div className="collage-note">
+          <span>un po’ ogni giorno</span>
+          <strong>
+            ciao<span>!</span>
+          </strong>
+          <i />
+          <small>little by little.</small>
+        </div>
+        <svg className="collage-book" viewBox="0 0 260 200" fill="none">
+          <defs>
+            <filter
+              id="collage-painted-stock"
+              x="0"
+              y="0"
+              width="100%"
+              height="100%"
+              colorInterpolationFilters="sRGB"
+            >
+              <feImage
+                href={new URL("./painted-cardboard.webp", import.meta.url).href}
+                x="0"
+                y="0"
+                width="260"
+                height="200"
+                preserveAspectRatio="xMidYMid slice"
+                result="grain"
+              />
+              <feBlend
+                in="grain"
+                in2="SourceGraphic"
+                mode="soft-light"
+                result="paint"
+              />
+              <feComposite in="paint" in2="SourceGraphic" operator="in" />
+            </filter>
+          </defs>
+          <g filter="url(#collage-painted-stock)">
+            <path d="M20 58 113 82 137 181 7 147Z" fill="var(--orange)" />
+            <path d="m137 181 108-33-3-97-104 32Z" fill="var(--green)" />
+            <path
+              d="M27 48c46-11 80 4 110 35l-9 90c-34-24-67-37-111-35Z"
+              fill="var(--green)"
+            />
+            <path
+              d="M137 83c31-33 61-46 101-46l7 101c-44-1-82 11-117 35Z"
+              fill="var(--paper)"
+            />
+            <path
+              d="M137 83c37-21 64-30 94-31M136 98c36-22 65-31 97-32M134 113c37-22 66-31 100-32M132 128c37-22 68-32 103-32M131 143c39-22 69-32 106-32M129 158c39-22 71-32 110-32"
+              stroke="var(--ochre)"
+              strokeWidth=".8"
+            />
+            <path d="m137 83-9 90" stroke="var(--ochre)" />
+          </g>
+        </svg>
+        <span className="collage-caption">PARLIAMO · OGNI GIORNO</span>
+      </div>
     </section>
   );
 }

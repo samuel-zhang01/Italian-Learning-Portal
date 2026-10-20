@@ -1,0 +1,835 @@
+/* A shared paper-and-ink finish, inspired by public/parliamo-social.png. */
+.daily-app {
+  --ink: #253b2d;
+  --green: #193e2d;
+  --muted: #6c6959;
+  --paper: #fff6e3;
+  --cream: #f4ecdb;
+  --line: #d4c8b0;
+  --lime: #e5e8cf;
+  --orange: #b94729;
+  --ochre: #c28c2e;
+  --paper-grain: url("./paper-grain.svg");
+  --painted-grain: url("./painted-cardboard.webp");
+  --paper-shadow: 1px 1px 0 #fff8, 3px 4px 0 #cdbd9c, 0 7px 13px #4038210b;
+  --cutout-shadow: inset 0 1px 0 #fff5, inset 0 -1px 0 #4a351826,
+    1px 2px 0 #bca57c, 1px 4px 5px #40382112;
+  background-color: var(--cream);
+  background-image: var(--paper-grain);
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+
+/* Every control gets the material, including icon buttons and small actions. */
+.daily-app :is(button, .button, .file-button, summary) {
+  position: relative;
+  isolation: isolate;
+  min-width: 44px;
+  min-height: 44px;
+  max-width: 100%;
+  background-color: var(--paper);
+  background-image: var(--painted-grain);
+  background-size: 280px 280px;
+  background-blend-mode: soft-light;
+}
+
+.daily-app button,
+.daily-app .button,
+.daily-app .file-button {
+  border: 1px solid var(--line);
+  border-radius: 1px 3px 2px 2px;
+  box-shadow: var(--cutout-shadow);
+  transition: background-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+}
+
+.daily-app :is(button, .button, .file-button, summary):is(:hover, :active, :disabled, [aria-pressed], [aria-current]) {
+  background-image: var(--painted-grain);
+}
+
+.daily-app :is(button, .button, .file-button, summary)::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: var(--painted-grain) center / 280px 280px;
+  mix-blend-mode: multiply;
+  opacity: .18;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.daily-app button {
+  touch-action: manipulation;
+}
+
+.daily-app :is(button, .button, .file-button):disabled {
+  opacity: .62;
+  box-shadow: inset 0 -1px 0 #b4a17d;
+}
+
+.daily-app summary {
+  padding: 10px 12px;
+  border: 0;
+  border-bottom: 1px dashed var(--line);
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.daily-app summary::marker {
+  color: var(--orange);
+  font-size: .8em;
+}
+
+.daily-app ::selection {
+  color: var(--paper);
+  background: var(--orange);
+}
+
+.daily-app h1 {
+  color: var(--green);
+  font-family: "Bodoni MT", "Didot", "Times New Roman", serif;
+  letter-spacing: -1.5px;
+}
+
+.daily-app :is(h2, h3) {
+  text-wrap: pretty;
+}
+
+.daily-app .eyebrow {
+  color: var(--orange);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.8px;
+}
+
+.daily-header {
+  border-top: 5px solid var(--green);
+  border-bottom-color: var(--ochre);
+  background-color: var(--paper);
+  background-image: var(--paper-grain);
+}
+
+.daily-app .wordmark {
+  font-family: "Bodoni MT", "Didot", "Times New Roman", serif !important;
+  font-size: 34px !important;
+  font-weight: 700 !important;
+  letter-spacing: -1.5px;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background-image: var(--paper-grain);
+  box-shadow: none;
+}
+
+.daily-app .wordmark::before {
+  content: none;
+}
+
+.wordmark small {
+  letter-spacing: 1.5px;
+  color: var(--muted);
+}
+
+.brand-disc {
+  border-radius: 1px;
+  transform: rotate(-7deg);
+  box-shadow: 3px 3px 0 #d6b878;
+  background-image: var(--painted-grain);
+  background-size: 180px 180px;
+  background-blend-mode: soft-light;
+}
+
+.daily-header nav {
+  gap: 8px;
+}
+
+.daily-header nav button {
+  min-height: 44px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: #f8efd9;
+  box-shadow: 1px 2px 0 #dbccac;
+}
+
+.daily-header nav button[aria-current] {
+  background-color: var(--green);
+  background-image: var(--painted-grain);
+  color: var(--paper);
+  border-color: var(--green);
+  box-shadow: var(--cutout-shadow);
+}
+
+.daily-header nav button:hover:not([aria-current]) {
+  background-color: #ece1cb;
+  border-color: var(--line);
+}
+
+.lang-switch {
+  background: var(--cream);
+  border-radius: 2px;
+  border-color: var(--line);
+}
+
+.lang-switch button {
+  border-radius: 1px;
+  min-width: 44px;
+  min-height: 44px;
+  border-color: transparent;
+  background-color: #f6e9ce;
+  padding: 6px;
+  box-shadow: none;
+}
+
+.lang-switch button[aria-pressed="true"] {
+  background-color: var(--green);
+  background-image: var(--painted-grain);
+  box-shadow: var(--cutout-shadow);
+}
+
+.practice-menu {
+  border-bottom: 1px dashed var(--line);
+}
+
+.practice-menu > summary {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: .2px;
+  width: fit-content;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  box-shadow: 1px 2px 0 #ddcfb1;
+}
+
+.practice-menu[open] > summary {
+  color: var(--orange);
+}
+
+/* Sheets keep their existing layout; the paper finish is shared by every tool. */
+.daily-app :is(
+  .panel, .goal-pill, .week-strip, .lesson-tile, .calendar-list,
+  .study-paper, .finish-panel, .stats-grid > div, .resource-card, .rewards,
+  .academy-unit-card, .academy-sheet, .academy-exercise-card,
+  .academy-programme-choices > button, .academy-programme-banner,
+  .arcade-mode, .arcade-setup, .arcade-question, .flashcard,
+  .study-tools-links button, .itinerary-blocks li,
+  .notebook-list details, .source-list details, .today-disclosure
+) {
+  position: relative;
+  isolation: isolate;
+  border-color: var(--line);
+  border-radius: 2px 3px 2px 1px;
+  background-color: var(--paper);
+  background-image: var(--paper-grain);
+  box-shadow: var(--paper-shadow);
+}
+
+.daily-app :is(
+  .panel, .goal-pill, .week-strip, .lesson-tile, .calendar-list,
+  .study-paper, .finish-panel, .stats-grid > div, .resource-card, .rewards,
+  .academy-unit-card, .academy-sheet, .academy-exercise-card,
+  .academy-programme-choices > button, .academy-programme-banner,
+  .arcade-mode, .arcade-setup, .arcade-question, .flashcard,
+  .study-tools-links button, .itinerary-blocks li,
+  .notebook-list details, .source-list details, .today-disclosure,
+  .session-preview, .collage-note
+)::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: var(--painted-grain) center / 430px 430px;
+  mix-blend-mode: multiply;
+  opacity: .13;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.daily-app :is(.study-paper, .academy-sheet, .academy-exercise-card, .arcade-question) {
+  border-top: 3px solid var(--green);
+}
+
+.daily-app :is(.lesson-tile, .academy-unit-card, .resource-card) {
+  border-top: 2px solid var(--ochre);
+}
+
+.daily-app :is(.lesson-tile h2, .academy-unit-card h2, .resource-card h3,
+  .academy-programme-choices strong, .arcade-mode strong) {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.daily-app .academy-unit-card h2 button {
+  font: inherit;
+  min-height: 44px;
+  padding: 5px 0;
+  border: 0;
+  border-bottom: 1px dashed var(--line);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.daily-app :is(.academy-programme-choices > button[aria-pressed="true"],
+  .arcade-mode[aria-pressed="true"], .lesson-tile.completed) {
+  background-color: var(--lime);
+  border-color: #7b8864;
+  box-shadow: 3px 4px 0 #c8cfad;
+}
+
+/* Small cut-paper controls have a physical edge and a clear pressed state. */
+.daily-app :is(
+  .button, .file-button, .filter-tabs button, .academy-filters button,
+  .study-tools-nav button, .choice-row button, .day-choices button,
+  .confidence-choices button, .academy-day-tasks button, .session-stages button,
+  .arcade-option, .arcade-tiles button, .arcade-built button, .arcade-accents button,
+  .accent-keys button, .academy-question-dots button, .study-tools-links button,
+  .academy-tokens button, .academy-options label
+) {
+  border-radius: 2px;
+  background-image: var(--painted-grain);
+  background-size: 280px 280px;
+  background-blend-mode: soft-light;
+  box-shadow: var(--cutout-shadow);
+  transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease;
+}
+
+.daily-app .button {
+  font-weight: 650;
+  min-height: 46px;
+  border-color: #a99b7d;
+  padding: 12px 20px;
+  font-size: 13px;
+  letter-spacing: .1px;
+}
+
+.daily-app .button.primary {
+  color: var(--paper);
+  background-color: var(--green);
+  border-color: var(--green);
+  box-shadow: inset 0 1px 0 #e2edc731, inset 0 -1px 0 #061d2080,
+    2px 3px 0 #b9a079, 0 5px 7px #42361f14;
+}
+
+.daily-app .button.cream {
+  color: var(--green);
+  background-color: #f4e4bd;
+  border-color: #d3b778;
+}
+
+.daily-app .button.secondary {
+  background-color: var(--paper);
+  color: var(--green);
+}
+
+.daily-app :is(.button, .file-button, .lesson-tile,
+  .academy-programme-choices > button, .arcade-mode,
+  .study-tools-links button):hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 3px 5px 0 #cbbd9e;
+}
+
+.daily-app .button.primary:hover:not(:disabled) {
+  background-color: #2c533a;
+}
+
+.daily-app :is(.button.secondary, .button.cream):hover:not(:disabled) {
+  background-color: #f1e4c9;
+}
+
+.daily-app :is(.button, .filter-tabs button, .academy-filters button,
+  .arcade-tiles button, .arcade-accents button):active:not(:disabled) {
+  transform: translate(1px, 2px);
+  box-shadow: 0 1px 0 #cbbd9e;
+}
+
+.daily-app :is(button, a, input, select, textarea, summary):focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 4px;
+}
+
+.daily-app .text-button {
+  color: var(--green);
+  text-underline-offset: 5px;
+  padding: 7px 11px;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+  border-color: #cdbb98;
+  box-shadow: 1px 2px 0 #d2c2a2;
+}
+
+.daily-app .text-button:hover:not(:disabled) {
+  background-color: #f0e2c4;
+}
+
+.daily-app :is(button, .button, .file-button):active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: inset 0 1px 1px #735b3826;
+}
+
+.daily-app :is(.listen-button, .word-dots button, .academy-save-word,
+  .academy-question-dots button, .accent-keys button, .day-choices button) {
+  min-width: 44px;
+  min-height: 44px;
+  width: auto;
+  height: auto;
+  padding: 8px;
+  border-radius: 2px;
+  background-color: #f4e5c5;
+}
+
+.daily-app .listen-button {
+  width: 44px;
+  height: 44px;
+}
+
+.daily-app .word-dots button[aria-pressed="true"] {
+  color: var(--paper);
+  background-color: var(--green);
+  border-color: var(--green);
+}
+
+.daily-app .academy-save-word {
+  border: 1px solid #cdbb98;
+  font-size: 24px !important;
+  line-height: 1;
+}
+
+.daily-app :is(.filter-tabs button[aria-pressed="true"],
+  .academy-filters button[aria-pressed="true"], .study-tools-nav button[aria-current],
+  .choice-row button[aria-pressed="true"], .day-choices button[aria-pressed="true"],
+  .confidence-choices button[aria-pressed="true"]) {
+  background-color: var(--green);
+  border-color: var(--green);
+  color: var(--paper);
+}
+
+.daily-app :is(input:not([type="checkbox"]):not([type="radio"]):not([type="file"]), textarea, select) {
+  background-color: #fffbf2;
+  background-image: var(--paper-grain);
+  border-radius: 2px;
+  border-color: #ac9f83;
+  box-shadow: inset 0 -2px 0 #e9dfca;
+  font-size: 16px;
+}
+
+.daily-app :is(input, textarea)::placeholder {
+  color: #797461;
+  opacity: 1;
+}
+
+.daily-app input:is([type="checkbox"], [type="radio"]) {
+  min-height: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.daily-app .skip-link:not(:focus) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.daily-app :is(.tag, .word-chips > span, .badge-row span) {
+  border-radius: 1px;
+  border-color: #cbbb98;
+  background-color: #f3e9d4;
+  background-image: var(--paper-grain);
+}
+
+.daily-app .tag.light {
+  background-color: #ffffff0e;
+  border-color: #ffffff60;
+  color: var(--paper);
+}
+
+.daily-app :is(.support-box, .example, .materials-banner, .info-line,
+  .restore-preview, .academy-empty, .academy-guidance, .academy-model,
+  .academy-question-map, .arcade-help p, .study-itinerary, .session-celebration,
+  .academy-frame, .academy-hint) {
+  background-color: #ece6d3;
+  background-image: var(--paper-grain);
+  border-radius: 2px;
+  border-color: var(--line);
+}
+
+.daily-app :is(.support-box, .example, .materials-banner, .info-line,
+  .restore-preview, .academy-empty, .academy-guidance, .academy-model,
+  .academy-question-map, .arcade-help p, .study-itinerary, .session-celebration,
+  .academy-frame, .academy-hint, .feedback, .academy-feedback) {
+  position: relative;
+  isolation: isolate;
+  background-image: var(--painted-grain);
+  background-size: 430px 430px;
+  background-blend-mode: soft-light;
+}
+
+.daily-app :is(.support-box, .academy-model, .academy-guidance, .info-line) {
+  border-left: 3px solid var(--ochre);
+}
+
+.daily-app :is(.feedback, .academy-feedback, .model-answer, .arcade-built, .empty-state) {
+  border-radius: 2px;
+  background-image: var(--paper-grain);
+}
+
+.daily-app :is(.feedback, .academy-feedback) {
+  background-color: #e9eddc;
+  border-color: #b2bf98;
+  border-left: 3px solid #648048;
+}
+
+.daily-app :is(.feedback.retry, .feedback.incorrect, .academy-feedback.retry) {
+  background-color: #f8e6d5;
+  border-color: #d19a76;
+  border-left-color: var(--orange);
+}
+
+.daily-app :is(.session-stages button[aria-pressed="true"],
+  .academy-page-list button[aria-current], .calendar-day.today,
+  .bank-choices button[aria-pressed="true"], .academy-options label.selected) {
+  background-color: var(--lime);
+  border-radius: 2px;
+  border-color: #899571;
+  box-shadow: inset 3px 0 0 var(--green), 2px 3px 0 #c1c8a5;
+}
+
+.daily-app .arcade-option {
+  background-color: #fbf5e8;
+  border-color: #c4b698;
+}
+
+.daily-app .arcade-option:hover {
+  background-color: var(--lime);
+  border-color: var(--green);
+}
+
+.daily-app :is(.arcade-tiles button, .arcade-built button, .arcade-accents button,
+  .accent-keys button, .academy-tokens button) {
+  background-color: #f2e4c4;
+  border-color: #b6a074;
+}
+
+.daily-app progress,
+.daily-app progress::-webkit-progress-bar,
+.daily-app progress::-webkit-progress-value {
+  border-radius: 1px;
+}
+
+.daily-app progress::-webkit-progress-bar {
+  background-color: #e4dac5;
+}
+
+.daily-app progress::-webkit-progress-value {
+  background-color: var(--green);
+}
+
+.daily-app progress::-moz-progress-bar {
+  background-color: var(--green);
+}
+
+.academy {
+  --academy-accent: var(--orange);
+  --academy-sand: #ece3ce;
+}
+
+.academy-notebook-mark {
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(transparent 0 41px, #d9cfb6 42px 43px);
+  box-shadow: var(--paper-shadow);
+  border-left: 2px solid var(--orange);
+}
+
+.daily-app .flashcard {
+  border-top: 3px solid var(--orange);
+  background-image: var(--paper-grain), repeating-linear-gradient(transparent 0 31px, #d4c8b02e 32px 33px);
+}
+
+.daily-app :is(.academy-teaching > li > span, .itinerary-number) {
+  background-color: #e9d8b1;
+  border-radius: 2px;
+  color: var(--green);
+  box-shadow: 2px 2px 0 #d3c3a0;
+}
+
+.daily-app .rewards {
+  border-top: 2px solid var(--ochre);
+}
+
+.daily-app .badge-row .earned {
+  color: var(--green);
+  background-color: var(--lime);
+  border-color: #85976e;
+}
+
+/* The daily starting point echoes the reference's book-and-paper collage. */
+.today-workspace {
+  max-width: 1040px;
+  padding-top: 40px;
+}
+
+.today-intro h1 {
+  font-size: clamp(36px, 4.4vw, 52px);
+  margin-bottom: 20px;
+}
+
+.today-workspace .session-preview {
+  position: relative;
+  isolation: isolate;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  align-items: center;
+  gap: 32px;
+  padding: 34px 36px 38px;
+  margin: 24px 0 32px;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--green);
+  border-radius: 1px;
+  background: var(--paper) var(--paper-grain);
+  box-shadow: var(--paper-shadow);
+}
+
+.session-preview::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -5px;
+  height: 6px;
+  background: var(--paper) var(--paper-grain);
+  clip-path: polygon(0 0, 100% 0, 100% 55%, 97% 70%, 93% 40%, 89% 80%, 85% 45%, 81% 60%, 77% 35%, 73% 80%, 69% 40%, 65% 65%, 61% 45%, 57% 90%, 53% 40%, 49% 65%, 45% 40%, 41% 80%, 37% 45%, 33% 70%, 29% 40%, 25% 85%, 21% 45%, 17% 65%, 13% 35%, 9% 80%, 5% 45%, 0 70%);
+  pointer-events: none;
+}
+
+.today-workspace .session-preview h2 {
+  font: 400 clamp(28px, 3.3vw, 38px)/1.15 Georgia, serif;
+  letter-spacing: -.9px;
+  color: var(--green);
+  max-width: 540px;
+}
+
+.session-preview > div:first-child > p:not(.eyebrow) {
+  max-width: 480px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.session-preview .today-primary-action {
+  padding-inline: 23px;
+  margin-top: 5px;
+}
+
+.session-meta {
+  font-size: 11px;
+  gap: 8px 16px;
+  margin-top: 20px;
+}
+
+.session-meta > span {
+  border-left: 2px solid var(--ochre);
+  padding-left: 10px;
+}
+
+.daily-app .programme-suggestion {
+  font-size: 12px;
+}
+
+.paper-collage {
+  position: relative;
+  width: 240px;
+  height: 285px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.collage-sun {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 92px;
+  height: 92px;
+  border: 9px dotted var(--ochre);
+  border-left-color: var(--green);
+  border-bottom-color: var(--orange);
+  border-radius: 50%;
+  transform: rotate(-20deg);
+}
+
+.collage-note {
+  position: absolute;
+  isolation: isolate;
+  top: 28px;
+  left: 13px;
+  width: 150px;
+  height: 180px;
+  padding: 17px;
+  background: #f5e7c7 var(--paper-grain);
+  border: 1px solid #dcc596;
+  box-shadow: 5px 6px 0 #d0c2a35e;
+  transform: rotate(-9deg);
+}
+
+.collage-note > span {
+  font: italic 11px Georgia, serif;
+  color: var(--muted);
+}
+
+.collage-note strong {
+  display: block;
+  color: var(--green);
+  font: italic 56px/1.3 Georgia, serif;
+  margin-top: 9px;
+  letter-spacing: -4px;
+}
+
+.collage-note strong span {
+  color: var(--orange);
+}
+
+.collage-note i {
+  display: block;
+  border-top: 1px solid var(--ochre);
+  width: 64px;
+  margin: 7px 0;
+}
+
+.collage-note small {
+  font: italic 10px Georgia, serif;
+  color: var(--muted);
+}
+
+.collage-book {
+  position: absolute;
+  width: 230px;
+  height: 177px;
+  right: -8px;
+  bottom: 20px;
+  transform: rotate(8deg);
+  filter: drop-shadow(2px 5px 0 #413c2719);
+}
+
+.collage-caption {
+  position: absolute;
+  bottom: 0;
+  right: 9px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--orange);
+}
+
+.today-disclosure {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--ochre);
+  margin: 12px 0;
+  padding: 7px 20px;
+  background: #fff9ed66 var(--paper-grain);
+}
+
+.today-disclosure > summary {
+  min-height: 48px;
+  padding: 11px 0;
+  font-size: 13px;
+  border: 0;
+  background-color: #f7edda;
+  padding-inline: 10px;
+}
+
+.today-disclosure[open] {
+  border-left-color: var(--green);
+  padding-bottom: 20px;
+}
+
+.daily-footer {
+  border-top: 1px solid var(--ochre);
+  background: var(--paper) var(--paper-grain);
+}
+
+.daily-footer > button {
+  padding: 9px 12px;
+  font-size: 11px;
+}
+
+.daily-app .notice:not(:empty) {
+  border-radius: 2px;
+  background-image: var(--paper-grain);
+  box-shadow: 3px 4px 0 #bba77e;
+}
+
+@media (max-width: 780px) {
+  .daily-app .wordmark {
+    font-size: 29px !important;
+  }
+  .daily-header nav {
+    gap: 6px;
+    padding-bottom: 13px;
+  }
+  .daily-header nav button {
+    min-height: 53px;
+  }
+  .today-workspace {
+    padding-top: 26px;
+  }
+  .today-workspace .session-preview {
+    grid-template-columns: minmax(0, 1fr) 180px;
+    gap: 16px;
+    padding: 26px;
+  }
+  .paper-collage {
+    width: 180px;
+    transform: scale(.8);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .daily-header {
+    padding-inline: 16px;
+    column-gap: 8px;
+  }
+  .daily-app .wordmark {
+    gap: 8px;
+    font-size: 26px !important;
+  }
+  .brand-disc {
+    width: 36px;
+    height: 41px;
+    font-size: 30px;
+  }
+  .daily-app .wordmark small {
+    font-size: 6px;
+    letter-spacing: .6px;
+  }
+  .lang-switch {
+    padding: 2px;
+  }
+  .daily-app .button {
+    padding-inline: 15px;
+  }
+}
+
+@media (max-width: 560px) {
+  .today-workspace .session-preview {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 24px;
+    gap: 0;
+  }
+  .paper-collage {
+    display: none;
+  }
+  .today-workspace .session-preview h2 {
+    font-size: 30px;
+  }
+  .today-disclosure {
+    padding-inline: 15px;
+  }
+  .daily-app .wordmark small {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .daily-app *, .daily-app *::before, .daily-app *::after {
+    transition: none !important;
+  }
+  .daily-app :is(.button, .file-button, .lesson-tile,
+    .academy-programme-choices > button, .arcade-mode,
+    .study-tools-links button):hover:not(:disabled) {
+    transform: none;
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "views": 171,
+  "controls": 4309,
+  "failures": [],
+  "errors": [],
+  "interactions": [
+    "tools menu and daily disclosures",
+    "all eight grammar exercises, selected answer, hint and feedback",
+    "vocabulary reveal, audio controls and card selection",
+    "assessment form and disabled control",
+    "daily session stages",
+    "all four game modes and option feedback",
+    "hover, pressed, keyboard focus and reduced motion"
+  ],
+  "textureBytes": 61440,
+  "site": "Local production build",
+  "syntheticProgressOnly": true,
+  "viewportWidths": [
+    1440,
+    768,
+    390,
+    320
+  ],
+  "languages": [
+    "en",
+    "it"
+  ],
+  "assetPrompt": "app/learning/painted-cardboard.asset.json",
+  "limitations": [
+    "Chromium responsive and interaction checks; not a physical-device or multi-browser certification.",
+    "Internal acceptance checks, not an independently measured user satisfaction score."
+  ]
+}

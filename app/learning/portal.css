@@ -724,7 +724,7 @@
   gap: 15px;
   margin-bottom: 25px;
 }
-.daily-app input:not([type="checkbox"]):not([type="file"]),
+.daily-app input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
 .daily-app textarea,
 .daily-app select {
   background: var(--paper);

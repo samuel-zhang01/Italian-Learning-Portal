@@ -34,6 +34,7 @@ import {
   VocabularyView,
 } from "./enriched";
 import "./portal.css";
+import "./paper-cutout.css";
 
 const missions = curriculum.missions as Mission[];
 const sources = Array.from(

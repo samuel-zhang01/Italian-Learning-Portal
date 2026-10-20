@@ -68,7 +68,7 @@ def main():
             and any(path.suffix == '.js' for path in artifacts)
             and any(path.suffix == '.css' for path in artifacts), 'Daily deployment artifacts missing')
     require(not any(path.is_symlink() for path in output.rglob('*'))
-            and all(path.suffix in {'.html', '.svg', '.js', '.css'} for path in artifacts),
+            and all(path.suffix in {'.html', '.svg', '.webp', '.js', '.css'} for path in artifacts),
             'Unexpected daily deployment content')
     preserve()
     print(json.dumps({'maintained_commands': outcomes, 'node_tests': totals, 'accepted': True,
