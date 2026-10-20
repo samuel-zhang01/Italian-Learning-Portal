@@ -1,0 +1,228 @@
+{
+  "release": "20261020T213922Z-navigation",
+  "releaseDirectory": "/data/italian/releases/20261020T213922Z-navigation",
+  "sourceRevision": "467ec2affaa646908bc6a7d08312617b736497f1",
+  "cleanCheckoutBuild": "identical artifacts",
+  "previousReleaseDirectory": "/data/italian/releases/20261020T203951Z-arcade",
+  "activatedAt": "2026-10-20T21:39:27.712315+00:00",
+  "artifactHashes": {
+    "assets/index-BvffGOw6.js": "792af5332ece3f6f46763bfcdfe1b32e53d8f872e0de1b5c18abc2e1c9af6f2c",
+    "assets/index-CMwD0biW.css": "d86764abb30506554b98ff8a70187d73cf13d0ee3018c8a0ce31f5eeb5c2f772",
+    "favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "index.html": "193f0392acc9fc95ea5625ddf43e8bdc0ff132a2032ce99c999c3d15ca3795da"
+  },
+  "remoteHashVerification": "pass",
+  "status": "deployed-and-verified",
+  "scope": "Only the four site-dist files were uploaded; previous release retained.",
+  "url": "https://italian.samuelzhang.co.uk/",
+  "verifiedAt": "2026-10-20T21:42:21.480939+00:00",
+  "requiredChecks": {
+    "test:daily": "49/49 pass",
+    "typecheck": "pass",
+    "lint": "pass",
+    "build:daily": "pass"
+  },
+  "cleanSourceVerification": {
+    "sourceRevision": "467ec2affaa646908bc6a7d08312617b736497f1",
+    "identicalArtifacts": true,
+    "artifactHashes": {
+      "index.html": "193f0392acc9fc95ea5625ddf43e8bdc0ff132a2032ce99c999c3d15ca3795da",
+      "favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+      "assets/index-BvffGOw6.js": "792af5332ece3f6f46763bfcdfe1b32e53d8f872e0de1b5c18abc2e1c9af6f2c",
+      "assets/index-CMwD0biW.css": "d86764abb30506554b98ff8a70187d73cf13d0ee3018c8a0ce31f5eeb5c2f772"
+    },
+    "requiredChecks": "49 tests, typecheck, lint and build:daily passed from clean source checkout",
+    "dependencySource": "Existing lock-compatible node_modules shared locally; not a fresh network install"
+  },
+  "publicHttpsVerification": {
+    "verifiedAt": "2026-10-20T21:40:33.273Z",
+    "method": "Fresh Chromium HTTPS fetch with TLS validation; direct Python client received edge403",
+    "results": [
+      {
+        "path": "assets/index-BvffGOw6.js",
+        "httpsStatus": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-CMwD0biW.css",
+        "httpsStatus": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "favicon.svg",
+        "httpsStatus": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "index.html",
+        "httpsStatus": 200,
+        "hashMatch": false,
+        "currentAssetReferences": true
+      }
+    ]
+  },
+  "liveNavigationVerification": {
+    "checkedAt": "2026-10-20T21:41:30.255Z",
+    "url": "https://italian.samuelzhang.co.uk",
+    "checks": [
+      "Four visible navigation choices, one above-fold start action and collapsed optional tools in EN/IT at 320, 390 and 1440px",
+      "Supported programme is recommended, selection is above-fold, Today and checklist agree, and session draft survives reload",
+      "Completing the guided session advances the single Today action to programme grammar",
+      "Five-minute programme sittings advance to grammar on the next date and allow the study day to finish",
+      "Games\u2013grammar\u2013programme\u2013Today and browser history preserve exactly one closed tools menu",
+      "Valid Italian word order receives credit and correction prompts explicitly request a whole sentence",
+      "Both diagnostics resume across dates, retain answers on reload and preserve old checks when starting today's check",
+      "Keyboard skip link moves focus to the main learning area",
+      "No runtime errors or duplicate-key console errors in audited journeys"
+    ],
+    "measurements": [
+      {
+        "language": "en",
+        "width": 320,
+        "primaryY": 478,
+        "pageHeight": 1122
+      },
+      {
+        "language": "en",
+        "width": 390,
+        "primaryY": 454,
+        "pageHeight": 1057
+      },
+      {
+        "language": "en",
+        "width": 1440,
+        "primaryY": 425,
+        "pageHeight": 1000
+      },
+      {
+        "language": "it",
+        "width": 320,
+        "primaryY": 566,
+        "pageHeight": 1210
+      },
+      {
+        "language": "it",
+        "width": 390,
+        "primaryY": 454,
+        "pageHeight": 1071
+      },
+      {
+        "language": "it",
+        "width": 1440,
+        "primaryY": 425,
+        "pageHeight": 1000
+      }
+    ],
+    "errors": [],
+    "edgeWarnings": [
+      "Executing inline script violates the following Content Security Policy directive 'script-src 'self''. Either the 'unsafe-inline' keyword, a hash ('sha256-j5/GCMjnw9p4IULIRSVuS3y3eiEQslkSRn9zsB03LsY='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.",
+      "Loading the script 'https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092' violates the following Content Security Policy directive: \"script-src 'self'\". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked."
+    ],
+    "syntheticProgressOnly": true
+  },
+  "liveArcadeVerification": {
+    "url": "https://italian.samuelzhang.co.uk",
+    "checkedAt": "2026-10-20T21:40:13.812Z",
+    "checks": [
+      "Today has one game entry; tool menus and game settings start collapsed",
+      "words: complete round, single question, hint/correction evidence, reload and valid backup",
+      "builder: complete round, single question, hint/correction evidence, reload and valid backup",
+      "detective: complete round, single question, hint/correction evidence, reload and valid backup",
+      "conversation: complete round, single question, hint/correction evidence, reload and valid backup",
+      "Italian typed builder preserves word clues and draft; accent keyboard inserts Italian characters",
+      "Recall mode keeps necessary choices for paired vocabulary and choice-dependent grammar",
+      "Word saving, pause/resume, cancel early-end and explicit early-end retain submitted practice",
+      "English and Italian at 320, 390 and 1440 pixels fit without overflow; new targets are at least 44px",
+      "Keyboard-only game selection and answering work; feedback receives focus",
+      "No browser runtime errors in audited journeys"
+    ],
+    "errors": [],
+    "syntheticProgressOnly": true
+  },
+  "localNavigationVerification": {
+    "checkedAt": "2026-10-20T21:38:16.313Z",
+    "url": "http://127.0.0.1:5197",
+    "checks": [
+      "Four visible navigation choices, one above-fold start action and collapsed optional tools in EN/IT at 320, 390 and 1440px",
+      "Supported programme is recommended, selection is above-fold, Today and checklist agree, and session draft survives reload",
+      "Completing the guided session advances the single Today action to programme grammar",
+      "Five-minute programme sittings advance to grammar on the next date and allow the study day to finish",
+      "Games\u2013grammar\u2013programme\u2013Today and browser history preserve exactly one closed tools menu",
+      "Valid Italian word order receives credit and correction prompts explicitly request a whole sentence",
+      "Both diagnostics resume across dates, retain answers on reload and preserve old checks when starting today's check",
+      "Keyboard skip link moves focus to the main learning area",
+      "No runtime errors or duplicate-key console errors in audited journeys"
+    ],
+    "measurements": [
+      {
+        "language": "en",
+        "width": 320,
+        "primaryY": 478,
+        "pageHeight": 1122
+      },
+      {
+        "language": "en",
+        "width": 390,
+        "primaryY": 454,
+        "pageHeight": 1057
+      },
+      {
+        "language": "en",
+        "width": 1440,
+        "primaryY": 425,
+        "pageHeight": 1000
+      },
+      {
+        "language": "it",
+        "width": 320,
+        "primaryY": 566,
+        "pageHeight": 1210
+      },
+      {
+        "language": "it",
+        "width": 390,
+        "primaryY": 454,
+        "pageHeight": 1071
+      },
+      {
+        "language": "it",
+        "width": 1440,
+        "primaryY": 425,
+        "pageHeight": 1000
+      }
+    ],
+    "errors": [],
+    "syntheticProgressOnly": true
+  },
+  "localAcademyVerification": {
+    "date": "2026-10-20",
+    "checks": [
+      "all seven budgets produce exact itinerary totals, correct session stages and persistent duration snapshots",
+      "changing the time budget caps today's blocks and preserves active or older session steps",
+      "all three active programmes combine the right number of grammar blocks and required core mission within 30/45/60-minute budgets",
+      "both twelve-question diagnostics preserve wrong first answers, resume after reload, explain corrections and retain results",
+      "saved vocabulary persists and an unsuccessful self-rated recall returns tomorrow without repeat credit",
+      "large academy backups reach a detailed restore preview; invalid replacements clear stale previews without overwriting work",
+      "core and new planning/diagnostic routes fit desktop, 390px and 320px in both languages",
+      "no browser runtime errors across the audited journeys"
+    ],
+    "errors": []
+  },
+  "auditReport": "docs/consolidation-audit-2026-10-20.json",
+  "privacy": {
+    "publishedDirectory": "site-dist",
+    "rawCourseFilesPublished": false,
+    "learnerDataModified": false,
+    "storageKey": "parliamo-daily-v1",
+    "progressVersion": 1
+  },
+  "limitations": [
+    "Responsive Chromium verification, not physical-device or cross-browser certification.",
+    "Cloudflare adds inline challenge and analytics scripts that the existing CSP blocks. Two distinct edge console warnings are recorded separately; application runtime and navigation checks pass. No security policy was weakened.",
+    "Direct Python HTTPS client received edge403; fresh browser HTTPS fetch verified all asset hashes and current HTML references.",
+    "The existing approximately338KB gzip JavaScript bundle warning remains.",
+    "Hosted CI was not dispatched in this task; its daily commands passed from a clean local source checkout.",
+    "No real learner or independent teacher study is claimed."
+  ],
+  "rollback": "Restore the retained previous release target atomically at /data/italian/current in the existing static-site container."
+}

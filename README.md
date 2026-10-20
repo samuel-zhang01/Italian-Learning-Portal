@@ -2,7 +2,7 @@
 
 A little Italian, every day. Parliamo turns the supplied class materials into short, original practice: notice an idea, retrieve it, then use it in your own Italian.
 
-Live production: **https://italian.samuelzhang.co.uk**. The 2026-10-20 Practice Arcade and calmer navigation are deployed and verified: all four release files matched their server hashes, and all eleven arcade browser check groups passed against public HTTPS. Release evidence: [`docs/deployment-arcade-2026-10-20.json`](docs/deployment-arcade-2026-10-20.json). The preceding academy release remains documented in [`docs/deployment-2026-10-20.json`](docs/deployment-2026-10-20.json).
+Live production: **https://italian.samuelzhang.co.uk**. The 2026-10-20 navigation consolidation is deployed and verified: four primary destinations, one programme-aware daily action, a compact programme view and consistent saved practice. All 49 automated tests pass; nine navigation and eleven arcade browser check groups pass on public HTTPS. The deployed files match a clean build of committed source `467ec2a`. Release evidence: [`docs/deployment-consolidation-2026-10-20.json`](docs/deployment-consolidation-2026-10-20.json). The preceding arcade release is retained for rollback.
 
 ## Learn
 

@@ -25,7 +25,14 @@
       "work/academy-browser-results.json"
     ],
     "independentUiReview": "work/consolidation-independent-ux/review.json",
-    "independentFindingResolution": "Five-minute programme trap fixed with two unit regressions and a complete browser handoff test."
+    "independentFindingResolution": "Five-minute programme trap fixed with two unit regressions and a complete browser handoff test.",
+    "liveBrowserGroups": {
+      "navigation": 9,
+      "arcade": 11,
+      "applicationRuntimeErrors": 0
+    },
+    "cleanCheckoutBuild": "Required checks pass; four artifacts identical to deployed build.",
+    "edgeWarnings": "Existing CSP blocks two kinds of injected Cloudflare script; separately recorded in deployment receipt."
   },
   "auditResolution": {
     "DAILY-01": "resolved",
@@ -33,7 +40,7 @@
     "CONTINUITY-01": "resolved",
     "NAV-01": "resolved",
     "UX-01": "simplified and browser-checked",
-    "RELEASE-01": "daily CI updated; committed-source clean build and deployment receipt recorded with release",
+    "RELEASE-01": "Source committed as 467ec2a; clean source build produces identical artifacts; CI targets daily site; deployment receipt records revision and hashes.",
     "IMPORT-01": "resolved",
     "SCOPE-01": "four primary routes and supported default",
     "MAINTAIN-01": "resolved with existing IDs retained",
@@ -46,5 +53,8 @@
     "Existing large bundle warning remains; no slow-device performance claim.",
     "CI wrapper configuration reviewed and daily commands run locally; hosted CI execution is not claimed."
   ],
-  "privacy": "Only site-dist is deployed. No source archive, learner data, local database or credential is published."
+  "privacy": "Only site-dist is deployed. No source archive, learner data, local database or credential is published.",
+  "sourceRevision": "467ec2affaa646908bc6a7d08312617b736497f1",
+  "release": "20261020T213922Z-navigation",
+  "deployment": "docs/deployment-consolidation-2026-10-20.json"
 }

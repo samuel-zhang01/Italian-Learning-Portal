@@ -20,12 +20,19 @@ const grammar = JSON.parse(await fs.readFile("app/learning/grammar.json", "utf8"
 const curriculum = JSON.parse(await fs.readFile("app/learning/curriculum.json", "utf8"));
 const ids = curriculum.missions.map((mission) => mission.id);
 const today = dayKey(), yesterday = addDays(today, -1);
-const checks = [], errors = [], measurements = [];
+const checks = [], errors = [], edgeWarnings = [], measurements = [];
 const context = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: "reduce" });
 const page = await context.newPage();
 page.on("pageerror", (error) => errors.push(error.message));
 page.on("console", (message) => {
-  if (message.type() === "error") errors.push(message.text());
+  if (message.type() !== "error") return;
+  const text = message.text();
+  if (new URL(url).hostname === "italian.samuelzhang.co.uk"
+    && /Content Security Policy/i.test(text)
+    && (text.includes("https://static.cloudflareinsights.com/")
+      || text.startsWith("Executing inline script violates"))) {
+    edgeWarnings.push(text);
+  } else errors.push(text);
 });
 const go = async (route) => {
   await page.goto(`${url}/#${route}`);
@@ -187,8 +194,15 @@ try {
   assert.ok(await page.locator("#main-content").evaluate((element) => element === document.activeElement));
   pass("Keyboard skip link moves focus to the main learning area");
   assert.deepEqual(errors, []);
+  if (edgeWarnings.some((message) => message.startsWith("Executing inline script"))) {
+    // The deployed app has no inline scripts. Verify that blocked inline code
+    // belongs to the edge injection, and retain these warnings in the report.
+    assert.ok(await page.locator("script:not([src])").evaluateAll((scripts) =>
+      scripts.length > 0 && scripts.every((script) => script.textContent.includes("/cdn-cgi/"))));
+  }
   pass("No runtime errors or duplicate-key console errors in audited journeys");
-  const report = { checkedAt: new Date().toISOString(), url, checks, measurements, errors, syntheticProgressOnly: true };
+  const report = { checkedAt: new Date().toISOString(), url, checks, measurements, errors,
+    edgeWarnings: [...new Set(edgeWarnings)], syntheticProgressOnly: true };
   await fs.writeFile(`${output}/report.json`, JSON.stringify(report, null, 2) + "\n");
 } finally {
   await context.close();
