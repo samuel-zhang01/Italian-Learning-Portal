@@ -2,7 +2,7 @@
 
 A little Italian, every day. Parliamo turns the supplied class materials into short, original practice: notice an idea, retrieve it, then use it in your own Italian.
 
-Live production: **https://italian.samuelzhang.co.uk**. The 2026-10-20 navigation consolidation is deployed and verified: four primary destinations, one programme-aware daily action, a compact programme view and consistent saved practice. All 49 automated tests pass; nine navigation and eleven arcade browser check groups pass on public HTTPS. The deployed files match a clean build of committed source `467ec2a`. Release evidence: [`docs/deployment-consolidation-2026-10-20.json`](docs/deployment-consolidation-2026-10-20.json). The preceding arcade release is retained for rollback.
+Live production: **https://italian.samuelzhang.co.uk**. The painted-cardboard and paper-cutout interface is deployed and verified across navigation, lessons, programmes, games, vocabulary and settings. All 49 automated tests and 171 public browser screen/state checks pass, covering English and Italian at four viewport widths. The five deployed files match a clean build of committed source `6cdbc8a`. Release evidence: [`docs/deployment-paper-cutout-2026-10-20.json`](docs/deployment-paper-cutout-2026-10-20.json). The preceding navigation release is retained for rollback.
 
 ## Learn
 

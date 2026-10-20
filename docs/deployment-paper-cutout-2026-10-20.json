@@ -1,0 +1,107 @@
+{
+  "release": "20261020T225700Z-paper-cutout",
+  "releaseDirectory": "/data/italian/releases/20261020T225700Z-paper-cutout",
+  "sourceRevision": "6cdbc8a8832b915842fb284aecdb25a8dde47442",
+  "previousReleaseDirectory": "/data/italian/releases/20261020T213922Z-navigation",
+  "activatedAt": "2026-10-20T22:57:03.336416+00:00",
+  "artifactHashes": {
+    "assets/index-DEms4Dh2.js": "127a01830dec4225bfa025d4bfc3e455d1fbc838f8259539be6706b466f52416",
+    "assets/index-k8QGmq4h.css": "388d22391f6d758c60371d8240923a2408e18291a84631454a6f6a95de7f86fc",
+    "assets/painted-cardboard-CX92yXJi.webp": "2267856e5f4e1c2f9388fa4fe7cc1eff3746b3354407287574e42dd51533c2db",
+    "favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "index.html": "9dc42dc9e2949dc25e7cba7f54b2b91d8438d8f0017acdf4ca39f057dc0dd307"
+  },
+  "remoteHashVerification": "pass",
+  "cleanCheckoutBuild": "identical artifacts",
+  "status": "deployed-and-verified",
+  "url": "https://italian.samuelzhang.co.uk/",
+  "scope": "Only the five site-dist files uploaded; previous release retained; existing nginx and TLS configuration unchanged.",
+  "verifiedAt": "2026-10-20T22:58:45.223294+00:00",
+  "requiredChecks": {
+    "test:daily": "49/49 pass",
+    "typecheck": "pass",
+    "lint": "pass",
+    "build:daily": "pass"
+  },
+  "publicHttpsVerification": {
+    "checkedAt": "2026-10-20T22:58:12.619Z",
+    "tlsValidation": true,
+    "pass": true,
+    "results": [
+      {
+        "path": "assets/index-DEms4Dh2.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-k8QGmq4h.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/painted-cardboard-CX92yXJi.webp",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "favicon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "hashMatch": false,
+        "currentAssetReferences": true
+      }
+    ]
+  },
+  "liveBrowserVerification": {
+    "views": 171,
+    "controls": 4310,
+    "failures": [],
+    "errors": [],
+    "interactions": [
+      "tools menu and daily disclosures",
+      "all eight grammar exercises, selected answer, hint and feedback",
+      "vocabulary reveal, audio controls and card selection",
+      "assessment form and disabled control",
+      "daily session stages",
+      "all four game modes and option feedback",
+      "hover, pressed, keyboard focus and reduced motion"
+    ],
+    "textureBytes": 61440,
+    "languages": [
+      "en",
+      "it"
+    ],
+    "viewportWidths": [
+      1440,
+      768,
+      390,
+      320
+    ],
+    "syntheticProgressOnly": true
+  },
+  "privacy": {
+    "publishedDirectory": "site-dist",
+    "rawCourseFilesPublished": false,
+    "learnerDataModified": false,
+    "storageKey": "parliamo-daily-v1",
+    "progressVersion": 1
+  },
+  "rollback": "Atomically restore the retained previousReleaseDirectory target at /data/italian/current inside the existing static-site container.",
+  "limitations": [
+    "Responsive Chromium checks, not physical-device or multi-browser certification.",
+    "The existing approximately 338 KB gzip JavaScript bundle warning remains.",
+    "Cloudflare may transform the public HTML; asset hashes and current HTML references are verified."
+  ],
+  "hostedCI": {
+    "sourceRevision": "6cdbc8a8832b915842fb284aecdb25a8dde47442",
+    "url": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/39511654327",
+    "conclusion": "success",
+    "runAttempt": 2,
+    "verifiedAt": "2026-10-20T23:00:22.448681+00:00",
+    "initialAttempt": "The existing shared-runner load/RAM/disk preflight refused the first attempt before application checks. The unchanged gate accepted the retry; all checks and cleanup passed."
+  }
+}
