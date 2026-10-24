@@ -54,6 +54,10 @@ next-env.d.ts
 /materials/inbox/*
 !/materials/inbox/.gitkeep
 
+# Private book downloads, reader captures, media and per-book manifests.
+/materials/books/*
+!/materials/books/.gitkeep
+
 # Python tools
 .venv/
 __pycache__/

@@ -34,7 +34,7 @@ const doneDraft = () => ({
 });
 test("all lessons have bilingual teaching, distinct retrieval and exact source pages", () => {
   assert.equal(new Set(ids).size, missions.length);
-  assert.equal(missions.length, 36);
+  assert.equal(missions.length, 56);
   const bilingual = (x) => {
     if (Array.isArray(x)) x.forEach(bilingual);
     else if (x && typeof x === "object") {
@@ -62,6 +62,30 @@ test("all lessons have bilingual teaching, distinct retrieval and exact source p
     for (const q of [...m.checks, m.review]) {
       assert.ok(q.answers.length);
       assert.ok(q.answers.every((a) => isCorrect(a, q.answers)));
+    }
+  }
+});
+test("the two verified book sequences add ten original transfer missions each without inventing reader-page coverage", () => {
+  const added = missions.filter((mission) => /^espresso[12]-u\d{2}-/.test(mission.id));
+  assert.equal(added.length, 20);
+  for (const book of [1, 2]) {
+    const chapters = added.filter((mission) => mission.id.startsWith(`espresso${book}-`));
+    assert.deepEqual(
+      chapters.map((mission) => Number(mission.id.match(/-u(\d{2})-/)[1])),
+      Array.from({ length: 10 }, (_, index) => index + 1),
+    );
+    for (const mission of chapters) {
+      assert.equal(mission.course, book === 1 ? 1 : 3);
+      assert.equal(new Set([...mission.checks, mission.review].map((check) => check.prompt.it)).size, 3);
+      assert.equal(mission.words.length, 4);
+      if (book === 1) {
+        const chapter = Number(mission.id.match(/-u(\d{2})-/)[1]);
+        assert.deepEqual(mission.sources.find((source) => source.id === "src-8fa57188c2eb"), { id: "src-8fa57188c2eb", pages: [chapter <= 5 ? 1 : 2] });
+        assert.ok(mission.sources.some((source) => source.id === "src-1647be2784c9"));
+      } else {
+        assert.ok(mission.sources.some((source) => source.id === "src-070c40bad24b"));
+        assert.ok(mission.sources.some((source) => source.id === "src-580f7558db56"));
+      }
     }
   }
 });
@@ -174,8 +198,8 @@ test("every stable mission has original guided material and a valid vocabulary b
     enrichment.lessons.map((l) => l.missionId).sort(),
     [...ids].sort(),
   );
-  assert.equal(enrichment.banks.length, 18);
-  assert.equal(enrichment.banks.flatMap((b) => b.words).length, 144);
+  assert.equal(enrichment.banks.length, 38);
+  assert.equal(enrichment.banks.flatMap((b) => b.words).length, 304);
   const bilingual = (pair) => {
     assert.ok(pair.en.trim());
     assert.ok(pair.it.trim());

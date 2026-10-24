@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import {
   emptyProgress,
   dailyMinutes,
@@ -20,6 +21,8 @@ import {
 import {
   emptyAcademy,
   getGrammarDraft,
+  getGrammarRecallDraft,
+  updateGrammarRecallDraft,
   updateGrammarDraft,
   checkGrammarAnswer,
   completeGrammarUnit,
@@ -31,6 +34,9 @@ import {
   selectProgramme,
   programmeDayReady,
   completeProgrammeDay,
+  updateProgrammePracticeDraft,
+  completeProgrammePractice,
+  getProgrammePracticeDraft,
   startAssessment,
   assessmentItems,
   assessmentKey,
@@ -62,13 +68,13 @@ const pair = (p) =>
   );
 const valid = (p) => parseProgress(JSON.stringify(p), ids);
 
-test("grammar provides 28 substantial bilingual units, six exercise formats and bounded source references", () => {
-  assert.equal(units.length, 28);
+test("grammar provides 55 substantial bilingual A1/A2 units, six exercise formats and bounded source references", () => {
+  assert.equal(units.length, 55);
   assert.equal(new Set(units.map((u) => u.id)).size, units.length);
   const allIds = new Set(),
     kinds = new Set();
   for (const u of units) {
-    assert.ok(["A1", "A1-plus"].includes(u.level));
+    assert.ok(["A1", "A1-plus", "A2"].includes(u.level));
     [
       u.title,
       u.summary,
@@ -148,12 +154,12 @@ test("grammar provides 28 substantial bilingual units, six exercise formats and 
 });
 
 test("every source page has one explicit companion classification; original practice has support and valid grammar links", () => {
-  assert.equal(sources.length, 48);
+  assert.equal(sources.length, 53);
   assert.equal(
     pages.length,
     sources.reduce((n, s) => n + s.pages, 0),
   );
-  assert.equal(pages.length, 936);
+  assert.equal(pages.length, 1609);
   assert.equal(new Set(pages.map((p) => p.id)).size, pages.length);
   for (const source of sources) {
     assert.match(source.sha256, /^[0-9a-f]{64}$/);
@@ -177,10 +183,10 @@ test("every source page has one explicit companion classification; original prac
   }
 });
 
-test("intensive, supported and repair programmes reference real lessons and cover prerequisites progressively", () => {
+test("the original programmes and the chapter journey reference real lessons", () => {
   assert.deepEqual(
     programmes.map((p) => p.days.length),
-    [14, 28, 10],
+    [14, 28, 10, 80],
   );
   for (const programme of programmes) {
     [programme.title, programme.summary].forEach(pair);
@@ -197,7 +203,7 @@ test("intensive, supported and repair programmes reference real lessons and cove
       .days.flatMap((d) => d.unitIds),
   );
   assert.ok(
-    units.filter((u) => u.level === "A1").every((u) => intensive.has(u.id)),
+    units.slice(0, 28).filter((u) => u.level === "A1").every((u) => intensive.has(u.id)),
   );
 });
 
@@ -580,4 +586,233 @@ test("a complete course notebook larger than the old two-megabyte limit can stil
   const raw = JSON.stringify(p);
   assert.ok(raw.length > 2_000_000);
   assert.deepEqual(parseProgress(raw, ids), p);
+});
+
+const bookReview = JSON.parse(
+  readFileSync(new URL("../docs/book-course-review.json", import.meta.url), "utf8"),
+);
+const canonical = (value) => {
+  if (Array.isArray(value)) return value.map(canonical);
+  if (value && typeof value === "object")
+    return Object.fromEntries(Object.keys(value).sort().map((key) => [key, canonical(value[key])]));
+  return value;
+};
+
+test("book integration preserves every earlier content object and programme day in its original order", () => {
+  const documents = Object.fromEntries(
+    ["curriculum", "grammar", "enrichment", "companion"].map((name) => [name, read(name)]),
+  );
+  for (const [path, baseline] of Object.entries(bookReview.baselinePreservation.arrays)) {
+    const [document, key] = path.split(".");
+    const preserved = documents[document][key].slice(0, baseline.count);
+    const hash = createHash("sha256").update(JSON.stringify(canonical(preserved))).digest("hex");
+    assert.equal(hash, baseline.sha256, path);
+  }
+  assert.deepEqual(programmes.slice(0, 3).map((route) => route.id), ["intensive-a1", "supported-a1", "grammar-repair"]);
+});
+
+test("new book sources expose bounded metadata and reference pointers while the 730 practice companions stay unchanged", () => {
+  const expected = [
+    ["src-8fa57188c2eb", 2, "materials/books/nuovo-espresso-plus-1/originals/publisher/NEPLUS1_indice.pdf"],
+    ["src-c3791736675a", 2, "materials/books/nuovo-espresso-plus-2/originals/publisher/NESP2_indice.pdf"],
+    ["src-070c40bad24b", 166, "materials/books/nuovo-espresso-plus-2/originals/publisher/NEPLUS2_guida-totaleDEF.pdf"],
+    ...bookReview.nativeReaderCapture.books.map((book) => [book.sourceId, book.capturedPages, book.path]),
+  ];
+  assert.equal(expected.length, 5);
+  const curriculum = read("curriculum");
+  assert.equal(curriculum.sources.length, 53);
+  assert.deepEqual(new Set(curriculum.sources.map((source) => source.id)), new Set(sources.map((source) => source.id)));
+  for (const [id, count, path] of expected) {
+    const source = sources.find((item) => item.id === id);
+    assert.equal(source.pages, count);
+    assert.equal(source.path, path);
+    assert.equal(source.id, `src-${source.sha256.slice(0, 12)}`);
+    assert.deepEqual(curriculum.sources.find((item) => item.id === id), source);
+    const entries = pages.filter((page) => page.sourceId === id);
+    assert.equal(entries.length, count);
+    assert.ok(entries.every((page) => page.kind === "reference" && page.checks.length === 0));
+  }
+  assert.equal(pages.filter((page) => page.kind === "practice").length, 730);
+  for (const unit of units.filter((item) => item.level === "A2")) {
+    for (const ref of unit.sources) {
+      for (const page of ref.pages)
+        assert.ok(pages.find((entry) => entry.id === `${ref.id}-p${page}`)?.unitIds.includes(unit.id), `${unit.id}: ${ref.id} p${page}`);
+    }
+  }
+});
+
+test("A2 units link their verified chapters while foundation diagnostics retain their A1 scope", () => {
+  const added = units.filter((unit) => unit.level === "A2");
+  assert.equal(added.length, 20);
+  assert.equal(added.flatMap((unit) => unit.exercises).length, 160);
+  for (const mapping of bookReview.unitSourceMapping.filter((mapping) => mapping.id.startsWith("a2-"))) {
+    const unit = added.find((item) => item.id === mapping.id);
+    assert.ok(unit, mapping.id);
+    const chapterMissions = mapping.chapterLinks.map((chapter) => {
+      const prefix = `espresso2-u${String(chapter).padStart(2, "0")}-`;
+      return missions.find((mission) => mission.id.startsWith(prefix))?.id;
+    });
+    assert.deepEqual(unit.missionIds, chapterMissions);
+    assert.ok(unit.sources.some((ref) => ref.id === "src-070c40bad24b"));
+  }
+  for (const date of ["2026-10-24", "2026-11-15", "2027-01-09"]) {
+    for (const mode of ["readiness", "tense"]) {
+      const items = assessmentItems(units, date, mode);
+      assert.ok(items.length);
+      assert.ok(items.every(({ unit }) => unit.level === "A1"));
+      if (mode === "readiness")
+        assert.ok(items.every(({ unit }) => units.slice(0, 28).some((original) => original.id === unit.id)), "readiness retains its twelve existing foundation domains");
+    }
+  }
+});
+
+test("seven native-book A1 gap units use exact references and remain separate from the original foundation diagnostic domains", () => {
+  const added = units.filter((unit) => unit.id.startsWith("a1-"));
+  assert.equal(added.length, 7);
+  assert.equal(added.flatMap((unit) => unit.exercises).length, 56);
+  assert.equal(units.filter((unit) => unit.level === "A1").length, 32);
+  assert.equal(units.filter((unit) => unit.level === "A1-plus").length, 3);
+  assert.equal(units.flatMap((unit) => unit.exercises).length, 440);
+  for (const unit of added) {
+    assert.equal(unit.level, "A1");
+    assert.ok(unit.missionIds.length);
+    assert.notEqual(unit.production.frame.en, unit.production.frame.it);
+    for (const reference of unit.sources) {
+      assert.equal(reference.id, "src-1647be2784c9");
+      for (const page of reference.pages)
+        assert.ok(pages.find((entry) => entry.id === `${reference.id}-p${page}`)?.unitIds.includes(unit.id));
+    }
+  }
+  assert.ok(units.slice(28, 35).every((unit) => unit.id.startsWith("a1-")));
+  assert.ok(units.slice(35).every((unit) => unit.level === "A2"));
+});
+
+test("native reader sources distinguish captured sections, selectively reviewed pages and the unresolved publisher extent", () => {
+  const capture = bookReview.nativeReaderCapture;
+  assert.equal(capture.reviewAndCaptureAreDistinct, true);
+  assert.equal(capture.capturedMainBookPages, 503);
+  assert.deepEqual(capture.books.map((book) => book.capturedPages), [240, 263]);
+  for (const book of capture.books) {
+    const source = sources.find((item) => item.id === book.sourceId);
+    assert.ok(source.title.includes("reader XPS"));
+    assert.equal(source.pages, book.capturedPages);
+    assert.equal(source.sha256, book.sha256);
+    assert.equal(book.availableMainBookSections, 26);
+    assert.ok(book.selectivelyReviewedPhysicalPages.length > 0 && book.selectivelyReviewedPhysicalPages.length < book.capturedPages);
+    assert.ok(book.selectivelyReviewedPhysicalPages.every((page) => page > 0 && page <= book.capturedPages));
+    assert.deepEqual(
+      book.sections.flatMap((section) => Array.from({ length: section.pages }, (_, index) => section.start_page + index)),
+      Array.from({ length: book.capturedPages }, (_, index) => index + 1),
+    );
+    assert.ok(pages.filter((page) => page.sourceId === source.id).every((page) => page.kind === "reference" && page.checks.length === 0));
+  }
+  assert.equal(capture.publisherExtentDiscrepancy.publisherPages, 264);
+  assert.equal(capture.publisherExtentDiscrepancy.accessibleReaderPages, 263);
+  assert.equal(capture.publisherExtentDiscrepancy.paddedPages, 0);
+  assert.ok(!pages.some((page) => page.sourceId === "src-580f7558db56" && page.page === 264));
+});
+
+test("the 80 chapter checkpoints introduce prerequisites before use and cover all A1/A2 units with distinct practice", () => {
+  const route = programmes.find((programme) => programme.id === "espresso-plus-a1-a2");
+  assert.equal(route.days.length, 80);
+  const introduced = new Set();
+  for (const [index, day] of route.days.entries()) {
+    const newlyIntroduced = day.unitIds.filter((id) => !introduced.has(id));
+    assert.ok(newlyIntroduced.length <= 2, `day ${index + 1}`);
+    for (const id of day.unitIds) {
+      const unit = units.find((item) => item.id === id);
+      assert.ok(unit.prerequisites.every((prerequisite) => introduced.has(prerequisite)), `day ${index + 1}: ${id}`);
+      introduced.add(id);
+    }
+    assert.deepEqual(Object.keys(day.practice).sort(), ["model", "prompt", "rubric"]);
+    [day.practice.prompt, day.practice.model, ...day.practice.rubric].forEach(pair);
+    assert.equal(day.practice.rubric.length, 2);
+    if (index === 39) assert.ok(units.filter((unit) => unit.level !== "A2").every((unit) => introduced.has(unit.id)));
+  }
+  assert.deepEqual(introduced, new Set(units.map((unit) => unit.id)));
+  for (const language of ["en", "it"]) {
+    assert.equal(new Set(route.days.map((day) => day.practice.prompt[language])).size, 80);
+    assert.equal(new Set(route.days.map((day) => day.practice.model[language])).size, 80);
+  }
+  for (let chapter = 0; chapter < 20; chapter++) {
+    const book = chapter < 10 ? 1 : 2, number = chapter % 10 + 1;
+    const expected = missions.find((mission) => mission.id.startsWith(`espresso${book}-u${String(number).padStart(2, "0")}-`)).id;
+    assert.deepEqual(route.days[chapter * 4 + 2].missionIds, [expected]);
+    assert.deepEqual(route.days[chapter * 4 + 3].missionIds, [expected]);
+  }
+});
+
+test("historical lesson completion cannot bypass the actual book journey's next personal checkpoint", () => {
+  const route = programmes.find((programme) => programme.id === "espresso-plus-a1-a2");
+  let p = selectProgramme(emptyProgress(), route.id, today);
+  for (const unit of units) p.academy.grammar[unit.id] = { ...getGrammarDraft(p, unit.id), completed: today };
+  for (const mission of missions) p.completed[mission.id] = {
+    date: today, firstCorrect: 2, total: 2, output: "Una risposta già salvata.", supported: false, confidence: 2,
+  };
+  const savedLessons = structuredClone(p.completed), savedGrammar = structuredClone(p.academy.grammar);
+  assert.equal(programmeDayReady(p, route, 0), false);
+  p = updateProgrammePracticeDraft(p, route, 0, {
+    output: "Buongiorno, mi chiamo Tessa. Come, scusi?", rubric: [0, 1], modelSeen: false,
+  });
+  p = completeProgrammePractice(p, route, 0, today);
+  p = completeProgrammeDay(p, route, 0, today);
+  p = valid(p);
+  assert.equal(p.academy.programme.day, 1);
+  assert.equal(programmeDayReady(p, route, 1), false);
+  assert.equal(getProgrammePracticeDraft(p, route, 0).completed, today);
+  assert.equal(getProgrammePracticeDraft(p, route, 1).output, "");
+  assert.deepEqual(p.completed, savedLessons);
+  assert.deepEqual(p.academy.grammar, savedGrammar);
+});
+
+test("unfinished grammar recall survives backup and midnight separately from checked answers", () => {
+  const earlier = "2026-10-15";
+  let p = checkGrammarAnswer(emptyProgress(), unit, exercise.id, "an earlier wrong answer", { today: earlier, hintUsed: false });
+  p = updateGrammarDraft(p, unit.id, { exerciseIndex: 3, output: "La mia bozza personale.", rubric: [0] });
+  const prior = structuredClone(getGrammarDraft(p, unit.id));
+  const xp = academyXP(p);
+  p = updateGrammarRecallDraft(p, unit.id, exercise.id, "Una risposta da finire", today);
+  const restored = parseProgress(JSON.stringify(p), ids);
+  assert.equal(getGrammarRecallDraft(restored, unit.id, exercise.id, today).answer, "Una risposta da finire");
+  assert.equal(getGrammarRecallDraft(restored, unit.id, exercise.id, "2026-10-21").answer, "Una risposta da finire");
+  assert.equal(getGrammarRecallDraft(restored, unit.id, exercise.id, earlier), undefined);
+  assert.deepEqual(getGrammarDraft(restored, unit.id).answers, prior.answers);
+  assert.deepEqual(getGrammarDraft(restored, unit.id).attempts, prior.attempts);
+  assert.equal(getGrammarDraft(restored, unit.id).exerciseIndex, 3);
+  assert.equal(getGrammarDraft(restored, unit.id).output, prior.output);
+  assert.equal(academyXP(restored), xp);
+  assert.deepEqual(restored.reviews, p.reviews);
+  p = checkGrammarAnswer(restored, unit, exercise.id, exercise.answers[0], { today: "2026-10-21", hintUsed: false, independentRecall: true });
+  assert.equal(getGrammarDraft(p, unit.id).recallDrafts[exercise.id], undefined);
+  assert.equal(getGrammarRecallDraft(p, unit.id, exercise.id, "2026-10-24"), undefined);
+  assert.deepEqual(getGrammarDraft(p, unit.id).attempts[exercise.id][0], prior.attempts[exercise.id][0]);
+  assert.equal(getGrammarDraft(p, unit.id).attempts[exercise.id].at(-1).assisted, false);
+  assert.equal(academyXP(p), xp);
+});
+
+test("a pending recall keeps hint evidence over reload and midnight until it is checked", () => {
+  let p = checkGrammarAnswer(emptyProgress(), unit, exercise.id, exercise.answers[0], { today: "2026-10-15", hintUsed: false });
+  p = updateGrammarRecallDraft(p, unit.id, exercise.id, "", today, true);
+  p = parseProgress(JSON.stringify(p), ids);
+  p = updateGrammarRecallDraft(p, unit.id, exercise.id, exercise.answers[0], "2026-10-21");
+  assert.equal(getGrammarRecallDraft(p, unit.id, exercise.id, "2026-10-21").hintUsed, true);
+  p = checkGrammarAnswer(p, unit, exercise.id, exercise.answers[0], { today: "2026-10-21", hintUsed: false, independentRecall: true });
+  assert.equal(getGrammarDraft(p, unit.id).attempts[exercise.id].at(-1).assisted, true);
+  assert.equal(getGrammarDraft(p, unit.id).recallDrafts[exercise.id], undefined);
+  assert.ok(grammarReviewQueue(p, [unit], "2026-10-22").some((item) => item.exercise.id === exercise.id));
+});
+
+test("pending recall imports reject malformed records while old version-one backups remain valid", () => {
+  const base = updateGrammarRecallDraft(emptyProgress(), unit.id, exercise.id, "La bozza", today);
+  for (const pending of [null, [], { date: "yesterday", answer: "x", hintUsed: false }, { date: today, answer: "x".repeat(501), hintUsed: false }, { date: today, answer: "x", hintUsed: "yes" }]) {
+    const p = structuredClone(base);
+    p.academy.grammar[unit.id].recallDrafts[exercise.id] = pending;
+    assert.throws(() => parseProgress(JSON.stringify(p), ids));
+  }
+  const unknown = structuredClone(base);
+  unknown.academy.grammar[unit.id].recallDrafts.unknown = { date: today, answer: "x", hintUsed: false };
+  assert.throws(() => parseProgress(JSON.stringify(unknown), ids));
+  const old = structuredClone(base);
+  delete old.academy.grammar[unit.id].recallDrafts;
+  assert.equal(parseProgress(JSON.stringify(old), ids).version, 1);
 });

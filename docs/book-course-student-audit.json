@@ -1,0 +1,907 @@
+{
+  "reviewedOn": "2026-10-24T15:41:45.088Z",
+  "status": "passed",
+  "appUrl": "http://127.0.0.1:5197",
+  "browserIsolation": "Separate owned headless Chromium process, fresh disposable context. No shared CDP connection, user context, cookies, storage, browser pages or profile inspected.",
+  "syntheticDataOnly": true,
+  "programmeId": "espresso-plus-a1-a2",
+  "programmeStudyDays": 80,
+  "grammarUnit": "a2-imperfetto",
+  "checks": [
+    {
+      "label": "Selected the 80-study-day route through the visible programme chooser"
+    },
+    {
+      "label": "Personal draft, every criterion and model exposure survive reload; unfinished work stays unfinished"
+    },
+    {
+      "label": "Editing resets self-checks; personal work and linked work both gate completion; day 2 has a distinct empty draft",
+      "fixtureUse": "Linked day-1/day-2 work was seeded, not completed through every existing lesson UI."
+    },
+    {
+      "label": "New A2 lesson keeps wrong first-attempt evidence, marks the correction supported, and resumes an unsubmitted answer after reload"
+    },
+    {
+      "label": "Completed the new A2 grammar unit through all 8 exercises and all 3 self-checks in Italian; original first error survives completion and reload"
+    },
+    {
+      "label": "A2 source link opens the correct physical guide page; metadata retains 166 physical pages and labels it as reference without exercise credit",
+      "sourceId": "src-070c40bad24b",
+      "physicalPages": [
+        30,
+        31,
+        34,
+        35
+      ],
+      "openedPage": 30
+    },
+    {
+      "label": "Introductory subjunctive scope and A1-only non-certifying diagnostic scope are visible to the learner"
+    },
+    {
+      "label": "Seven student screens render in EN/IT at 390px, 320px and desktop without horizontal overflow",
+      "combinations": 42
+    },
+    {
+      "label": "No browser runtime or console errors during the audited journey"
+    }
+  ],
+  "failure": null,
+  "errors": [],
+  "measurements": [
+    {
+      "language": "en",
+      "width": 390,
+      "route": "today",
+      "viewport": 390,
+      "document": 390,
+      "height": 1212
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "route": "programmes",
+      "viewport": 390,
+      "document": 390,
+      "height": 2918
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "route": "grammar/a2-imperfetto",
+      "viewport": 390,
+      "document": 390,
+      "height": 2793
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "route": "grammar/a2-subjunctive-forms",
+      "viewport": 390,
+      "document": 390,
+      "height": 2848
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "route": "lesson/espresso2-u10-discuss-a-home",
+      "viewport": 390,
+      "document": 390,
+      "height": 1790
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "route": "companion/src-070c40bad24b-p30",
+      "viewport": 390,
+      "document": 390,
+      "height": 2283
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "route": "readiness",
+      "viewport": 390,
+      "document": 390,
+      "height": 1596
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "route": "today",
+      "viewport": 320,
+      "document": 320,
+      "height": 1261
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "route": "programmes",
+      "viewport": 320,
+      "document": 320,
+      "height": 3269
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "route": "grammar/a2-imperfetto",
+      "viewport": 320,
+      "document": 320,
+      "height": 2913
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "route": "grammar/a2-subjunctive-forms",
+      "viewport": 320,
+      "document": 320,
+      "height": 3135
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "route": "lesson/espresso2-u10-discuss-a-home",
+      "viewport": 320,
+      "document": 320,
+      "height": 1943
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "route": "companion/src-070c40bad24b-p30",
+      "viewport": 320,
+      "document": 320,
+      "height": 2475
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "route": "readiness",
+      "viewport": 320,
+      "document": 320,
+      "height": 1862
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "route": "today",
+      "viewport": 1440,
+      "document": 1440,
+      "height": 1106
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "route": "programmes",
+      "viewport": 1440,
+      "document": 1440,
+      "height": 2133
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "route": "grammar/a2-imperfetto",
+      "viewport": 1440,
+      "document": 1440,
+      "height": 1754
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "route": "grammar/a2-subjunctive-forms",
+      "viewport": 1440,
+      "document": 1440,
+      "height": 1656
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "route": "lesson/espresso2-u10-discuss-a-home",
+      "viewport": 1440,
+      "document": 1440,
+      "height": 1430
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "route": "companion/src-070c40bad24b-p30",
+      "viewport": 1440,
+      "document": 1440,
+      "height": 1516
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "route": "readiness",
+      "viewport": 1440,
+      "document": 1440,
+      "height": 1071
+    },
+    {
+      "language": "it",
+      "width": 390,
+      "route": "today",
+      "viewport": 390,
+      "document": 390,
+      "height": 1193
+    },
+    {
+      "language": "it",
+      "width": 390,
+      "route": "programmes",
+      "viewport": 390,
+      "document": 390,
+      "height": 2969
+    },
+    {
+      "language": "it",
+      "width": 390,
+      "route": "grammar/a2-imperfetto",
+      "viewport": 390,
+      "document": 390,
+      "height": 2769
+    },
+    {
+      "language": "it",
+      "width": 390,
+      "route": "grammar/a2-subjunctive-forms",
+      "viewport": 390,
+      "document": 390,
+      "height": 2898
+    },
+    {
+      "language": "it",
+      "width": 390,
+      "route": "lesson/espresso2-u10-discuss-a-home",
+      "viewport": 390,
+      "document": 390,
+      "height": 1790
+    },
+    {
+      "language": "it",
+      "width": 390,
+      "route": "companion/src-070c40bad24b-p30",
+      "viewport": 390,
+      "document": 390,
+      "height": 2383
+    },
+    {
+      "language": "it",
+      "width": 390,
+      "route": "readiness",
+      "viewport": 390,
+      "document": 390,
+      "height": 1639
+    },
+    {
+      "language": "it",
+      "width": 320,
+      "route": "today",
+      "viewport": 320,
+      "document": 320,
+      "height": 1395
+    },
+    {
+      "language": "it",
+      "width": 320,
+      "route": "programmes",
+      "viewport": 320,
+      "document": 320,
+      "height": 3464
+    },
+    {
+      "language": "it",
+      "width": 320,
+      "route": "grammar/a2-imperfetto",
+      "viewport": 320,
+      "document": 320,
+      "height": 3042
+    },
+    {
+      "language": "it",
+      "width": 320,
+      "route": "grammar/a2-subjunctive-forms",
+      "viewport": 320,
+      "document": 320,
+      "height": 3216
+    },
+    {
+      "language": "it",
+      "width": 320,
+      "route": "lesson/espresso2-u10-discuss-a-home",
+      "viewport": 320,
+      "document": 320,
+      "height": 2030
+    },
+    {
+      "language": "it",
+      "width": 320,
+      "route": "companion/src-070c40bad24b-p30",
+      "viewport": 320,
+      "document": 320,
+      "height": 2604
+    },
+    {
+      "language": "it",
+      "width": 320,
+      "route": "readiness",
+      "viewport": 320,
+      "document": 320,
+      "height": 1943
+    },
+    {
+      "language": "it",
+      "width": 1440,
+      "route": "today",
+      "viewport": 1440,
+      "document": 1440,
+      "height": 1106
+    },
+    {
+      "language": "it",
+      "width": 1440,
+      "route": "programmes",
+      "viewport": 1440,
+      "document": 1440,
+      "height": 2133
+    },
+    {
+      "language": "it",
+      "width": 1440,
+      "route": "grammar/a2-imperfetto",
+      "viewport": 1440,
+      "document": 1440,
+      "height": 1754
+    },
+    {
+      "language": "it",
+      "width": 1440,
+      "route": "grammar/a2-subjunctive-forms",
+      "viewport": 1440,
+      "document": 1440,
+      "height": 1679
+    },
+    {
+      "language": "it",
+      "width": 1440,
+      "route": "lesson/espresso2-u10-discuss-a-home",
+      "viewport": 1440,
+      "document": 1440,
+      "height": 1430
+    },
+    {
+      "language": "it",
+      "width": 1440,
+      "route": "companion/src-070c40bad24b-p30",
+      "viewport": 1440,
+      "document": 1440,
+      "height": 1544
+    },
+    {
+      "language": "it",
+      "width": 1440,
+      "route": "readiness",
+      "viewport": 1440,
+      "document": 1440,
+      "height": 1071
+    }
+  ],
+  "evidence": {
+    "directory": "work/book-course-audit",
+    "screenshots": [
+      "en-390-selected-80-day-route.png",
+      "en-390-personal-draft-after-reload.png",
+      "en-390-a2-wrong-first-answer.png",
+      "it-390-a2-mid-lesson-reload.png",
+      "it-390-a2-production-completed.png",
+      "it-390-physical-guide-reference-page.png",
+      "en-390-today.png",
+      "en-390-programmes.png",
+      "en-390-grammar-a2-imperfetto.png",
+      "en-390-grammar-a2-subjunctive-forms.png",
+      "en-390-lesson-espresso2-u10-discuss-a-home.png",
+      "en-390-companion-src-070c40bad24b-p30.png",
+      "en-390-readiness.png",
+      "en-320-today.png",
+      "en-320-programmes.png",
+      "en-320-grammar-a2-imperfetto.png",
+      "en-320-grammar-a2-subjunctive-forms.png",
+      "en-320-lesson-espresso2-u10-discuss-a-home.png",
+      "en-320-companion-src-070c40bad24b-p30.png",
+      "en-320-readiness.png",
+      "en-1440-today.png",
+      "en-1440-programmes.png",
+      "en-1440-grammar-a2-imperfetto.png",
+      "en-1440-grammar-a2-subjunctive-forms.png",
+      "en-1440-lesson-espresso2-u10-discuss-a-home.png",
+      "en-1440-companion-src-070c40bad24b-p30.png",
+      "en-1440-readiness.png",
+      "it-390-today.png",
+      "it-390-programmes.png",
+      "it-390-grammar-a2-imperfetto.png",
+      "it-390-grammar-a2-subjunctive-forms.png",
+      "it-390-lesson-espresso2-u10-discuss-a-home.png",
+      "it-390-companion-src-070c40bad24b-p30.png",
+      "it-390-readiness.png",
+      "it-320-today.png",
+      "it-320-programmes.png",
+      "it-320-grammar-a2-imperfetto.png",
+      "it-320-grammar-a2-subjunctive-forms.png",
+      "it-320-lesson-espresso2-u10-discuss-a-home.png",
+      "it-320-companion-src-070c40bad24b-p30.png",
+      "it-320-readiness.png",
+      "it-1440-today.png",
+      "it-1440-programmes.png",
+      "it-1440-grammar-a2-imperfetto.png",
+      "it-1440-grammar-a2-subjunctive-forms.png",
+      "it-1440-lesson-espresso2-u10-discuss-a-home.png",
+      "it-1440-companion-src-070c40bad24b-p30.png",
+      "it-1440-readiness.png",
+      "en-390-a2-english-scaffold-fixed.png",
+      "en-390-a2-production-after-scaffold-fix.png",
+      "final-en-390-a1-partitive-ne-wrong.png",
+      "final-en-390-a1-partitive-ne-correct-after-reload.png",
+      "final-en-390-a1-partitive-ne-native-source.png",
+      "final-it-320-a1-partitive-ne-wrong.png",
+      "final-it-320-a1-partitive-ne-correct-after-reload.png",
+      "final-targeted-failure.png",
+      "final-it-320-a1-partitive-ne-native-source.png",
+      "final-en-390-a1-sounds-stress-wrong.png",
+      "final-en-390-a1-sounds-stress-correct-after-reload.png",
+      "final-en-390-a1-sounds-stress-native-source.png",
+      "final-it-320-a1-sounds-stress-wrong.png",
+      "final-it-320-a1-sounds-stress-correct-after-reload.png",
+      "final-it-320-a1-sounds-stress-native-source.png",
+      "final-en-390-native-source-240-extent.png",
+      "final-en-390-native-source-263-extent.png",
+      "final-en-390-arcade-a2-topic-label.png",
+      "final-en-390-connected-native-240.png",
+      "final-en-390-connected-native-240-physical-page-link.png",
+      "final-en-390-connected-native-263.png",
+      "final-en-390-connected-native-263-physical-page-link.png",
+      "final-en-390-arcade-single-question-fixed.png",
+      "final-it-390-arcade-single-question-fixed.png"
+    ]
+  },
+  "fixtures": [
+    {
+      "purpose": "Linked work already completed, to isolate the new day-practice gate",
+      "day": 1,
+      "unitIds": [
+        "noun-gender",
+        "noun-plurals"
+      ],
+      "missionIds": [
+        "say-hello"
+      ]
+    },
+    {
+      "purpose": "Linked work already completed, to isolate the new day-practice gate",
+      "day": 2,
+      "unitIds": [
+        "definite-articles",
+        "adjective-agreement"
+      ],
+      "missionIds": [
+        "where-from"
+      ]
+    }
+  ],
+  "limitations": [
+    "One representative A2 unit was completed through the UI; the other new units received layout/scope samples or content/unit-test coverage, not full browser completion.",
+    "Only the first two programme days were exercised. Linked grammar/mission completions were explicitly seeded to isolate day-practice gates; the full 80-day route was not completed in real time.",
+    "Automated viewport/overflow assertions covered42language-width-route combinations. Visual inspection covered the10named screenshots including the focused scaffold correction. The focused follow-up did not repeat the unchanged42-screen audit. This audit does not measure pronunciation, language proficiency or CEFR placement.",
+    "Public deployment, account authentication, publisher reader access, audio and media playback are outside this synthetic local preview audit."
+  ],
+  "visualReview": {
+    "status": "performed on selected screenshots",
+    "screenshots": [
+      "en-390-programmes.png",
+      "en-320-programmes.png",
+      "en-1440-programmes.png",
+      "it-390-programmes.png",
+      "it-320-programmes.png",
+      "it-1440-programmes.png",
+      "en-390-a2-wrong-first-answer.png",
+      "it-390-a2-production-completed.png",
+      "it-390-physical-guide-reference-page.png",
+      "en-390-a2-english-scaffold-fixed.png"
+    ],
+    "observations": [
+      "Programme controls, day count, personal-response textarea, both criteria and disabled completion actions are visible without overlap or clipped text in English and Italian at390px,320px and1440px.",
+      "At320px Italian header/language controls wrap to another row; all controls remain inside the viewport. The programme is a long scrolling page.",
+      "Wrong-answer feedback distinguishes the preserved first try from later correction; completed A2 screenshot shows8/8solved but7/8first tries, matching the intentionally wrong first response.",
+      "Guide companion visibly names physical PDFpage30 and166source pages, with Reference classification and no exercise-completion credit.",
+      "Before correction, the A2-imperfetto frame duplicated Italian under enabled translations. After the19-field English correction, the focused rebuilt-preview screenshot shows a distinct English gloss beneath the preserved Italian scaffold."
+    ]
+  },
+  "findings": [
+    {
+      "id": "a2-frame-english-duplicates-italian",
+      "severity": "minor",
+      "status": "fixed and verified after rebuilt preview",
+      "observedUnit": "a2-imperfetto",
+      "inventoryConfirmed": "Before correction,19 of20 new A2 English frames duplicated Italian; after correction, all20 English frames differ from their Italian targets.",
+      "effect": "Enabled English translations repeat the Italian scaffold rather than giving an English gloss.",
+      "recommendedCorrection": "Translate those English frame fields while preserving the Italian target fields.",
+      "correction": "Provided true English glosses while retaining every Italian scaffold and all other unit data.",
+      "verification": "Data-only validation covered all19 corrected fields; a focused browser and visual check confirmed the representative A2-imperfetto frame renders the true English gloss separately from the preserved Italian scaffold."
+    },
+    {
+      "id": "native-pdf-source-identity",
+      "severity": "workflow bug",
+      "status": "fixed and verified",
+      "discoveredBy": "Source inspection before corrected build; the previous filename-keyed blobs could not match decorated native-source titles.",
+      "correction": "SHA-256 matching with source-ID keys, local-only in-memory blob links, individual Disconnect and URL revocation. Grammar and page-companion links use the cited physical page.",
+      "verification": "Both actual240/263page PDFs, a renamed replacement, an unmatched synthetic PDF, separate removal and reload passed in an isolated browser.5local hash calls;0network mutation attempts; original PDFs unchanged."
+    },
+    {
+      "id": "arcade-single-question-plural",
+      "severity": "minor copy",
+      "status": "fixed and verified in English and Italian after rebuild",
+      "observedText": "1 questions · no timer",
+      "scope": "Visible when the chosen A2 sentence-builder pool contains one item; the A2 topic label and item selection are correct.",
+      "recommendedCorrection": "Use question for a one-item pool and questions for plural pools.",
+      "correction": "Round-size-aware singular label:1 question /1 domanda.",
+      "verification": [
+        {
+          "language": "en",
+          "observedText": "1 question · no timer",
+          "screenshot": "final-en-390-arcade-single-question-fixed.png"
+        },
+        {
+          "language": "it",
+          "observedText": "1 domanda · senza cronometro",
+          "screenshot": "final-it-390-arcade-single-question-fixed.png"
+        }
+      ]
+    }
+  ],
+  "focusedFollowup": {
+    "status": "passed",
+    "checkedOn": "2026-10-24T15:47:06.976536+00:00",
+    "appUrl": "http://127.0.0.1:5197/",
+    "scope": "Single representative A2-imperfetto production scaffold in English with translations enabled,390px viewport. The unchanged42-screen workflow audit was not repeated.",
+    "observedEnglish": "As a child I lived… Usually… On Sundays… The house was…",
+    "observedItalian": "Da piccolo/a abitavo… Di solito… La domenica… La casa era…",
+    "browserAssertions": [
+      "English text matches corrected source data and differs from Italian.",
+      "Italian target matches its preserved source data.",
+      "No horizontal overflow at390px.",
+      "No browser runtime errors."
+    ],
+    "visualObservation": "Viewed the focused scaffold screenshot: Italian target appears first and a distinct, smaller English gloss appears beneath; no overlap or duplicate Italian line.",
+    "dataValidation": "Exactly19 production.frame.en fields changed in each authorized file; deep comparison verified all other data and every frame.it unchanged. All20 new A2 English frames now differ from their Italian targets.",
+    "browserIsolation": "Separate owned disposable headless Chromium; no connection to shared CDP or user browser.",
+    "screenshots": [
+      "en-390-a2-english-scaffold-fixed.png",
+      "en-390-a2-production-after-scaffold-fix.png"
+    ]
+  },
+  "targetedFinalFollowups": {
+    "content": {
+      "status": "passed",
+      "phase": "content",
+      "checkedOn": "2026-10-24T16:19:35.842Z",
+      "checks": [
+        {
+          "label": "a1-partitive-ne: wrong answer, correction, reload and exact native-source reference at 390px/en",
+          "exercise": "a1-partitive-ne-1",
+          "physicalPages": [
+            135,
+            139,
+            232
+          ],
+          "accentRequired": false
+        },
+        {
+          "label": "a1-partitive-ne: wrong answer, correction, reload and exact native-source reference at 320px/it",
+          "exercise": "a1-partitive-ne-1",
+          "physicalPages": [
+            135,
+            139,
+            232
+          ],
+          "accentRequired": false
+        },
+        {
+          "label": "a1-sounds-stress: wrong answer, correction, reload and exact native-source reference at 390px/en",
+          "exercise": "a1-sounds-stress-5",
+          "physicalPages": [
+            224,
+            225
+          ],
+          "accentRequired": true
+        },
+        {
+          "label": "a1-sounds-stress: wrong answer, correction, reload and exact native-source reference at 320px/it",
+          "exercise": "a1-sounds-stress-5",
+          "physicalPages": [
+            224,
+            225
+          ],
+          "accentRequired": true
+        },
+        {
+          "label": "Native source records retain240/263physical pages and reference-only credit through their last page"
+        },
+        {
+          "label": "Arcade topic option correctly labels the A2-imperfetto unit as A2"
+        }
+      ],
+      "screenshots": [
+        "final-en-390-a1-partitive-ne-wrong.png",
+        "final-en-390-a1-partitive-ne-correct-after-reload.png",
+        "final-en-390-a1-partitive-ne-native-source.png",
+        "final-it-320-a1-partitive-ne-wrong.png",
+        "final-it-320-a1-partitive-ne-correct-after-reload.png",
+        "final-it-320-a1-partitive-ne-native-source.png",
+        "final-en-390-a1-sounds-stress-wrong.png",
+        "final-en-390-a1-sounds-stress-correct-after-reload.png",
+        "final-en-390-a1-sounds-stress-native-source.png",
+        "final-it-320-a1-sounds-stress-wrong.png",
+        "final-it-320-a1-sounds-stress-correct-after-reload.png",
+        "final-it-320-a1-sounds-stress-native-source.png",
+        "final-en-390-native-source-240-extent.png",
+        "final-en-390-native-source-263-extent.png",
+        "final-en-390-arcade-a2-topic-label.png"
+      ],
+      "errors": [],
+      "blockedMutations": [],
+      "failure": null,
+      "isolation": "Separate disposable headless Chromium. No shared CDP or user profile was accessed. Network mutations were blocked before file attachment.",
+      "scope": "Targeted new-A1/source/PDF-attachment/arcade-label follow-up only; no unchanged42-screen audit repeat.",
+      "limitations": [
+        "Representative questions from two new A1 units were exercised, not every question in all seven units.",
+        "PDF connection is session-only; original archive files were not deleted or modified."
+      ],
+      "visualReview": {
+        "status": "selected screenshots inspected",
+        "screenshots": [
+          "final-it-320-a1-sounds-stress-wrong.png",
+          "final-en-390-a1-partitive-ne-correct-after-reload.png",
+          "final-en-390-arcade-a2-topic-label.png",
+          "final-en-390-native-source-263-extent.png"
+        ],
+        "observations": [
+          "Italian320px feedback rejects unaccented perche and clearly shows perché; the phonetics task is explicitly written recognition and self-assessed spoken practice.",
+          "Partitive-ne correction is labelled supported while the original first-try score remains0/1.",
+          "The selected Arcade grammar option visibly ends in A2. The existing count label still reads1questions when that bank has one item.",
+          "Plus2 last physical page263 is a Reference page, with263source pages and0/0practice pages completed."
+        ]
+      }
+    },
+    "pdf": {
+      "status": "passed",
+      "phase": "pdf",
+      "checkedOn": "2026-10-24T16:23:48.015Z",
+      "checks": [
+        {
+          "label": "Native 240-page PDF matches its source, opens locally, and links its grammar and companion at the correct physical page",
+          "sourceId": "src-1647be2784c9",
+          "bytes": 38526585,
+          "unitId": "a1-partitive-ne",
+          "physicalPage": 135
+        },
+        {
+          "label": "Native 263-page PDF matches its source, opens locally, and links its grammar and companion at the correct physical page",
+          "sourceId": "src-580f7558db56",
+          "bytes": 40552770,
+          "unitId": "a2-imperfetto",
+          "physicalPage": 33
+        },
+        {
+          "label": "A renamed native PDF is matched by SHA-256; replacing its connection revokes the old blob"
+        },
+        {
+          "label": "An unmatched synthetic PDF is reported without replacing either valid connection"
+        },
+        {
+          "label": "Both source connections disconnect separately and revoke their own blob URLs"
+        },
+        {
+          "label": "Connections clear on reload; both PDFs were hashed locally and no network POST/upload was attempted",
+          "digests": [
+            {
+              "algorithm": "SHA-256",
+              "bytes": 38526585
+            },
+            {
+              "algorithm": "SHA-256",
+              "bytes": 40552770
+            },
+            {
+              "algorithm": "SHA-256",
+              "bytes": 38526585
+            },
+            {
+              "algorithm": "SHA-256",
+              "bytes": 59
+            },
+            {
+              "algorithm": "SHA-256",
+              "bytes": 38526585
+            }
+          ]
+        }
+      ],
+      "screenshots": [
+        "final-en-390-connected-native-240.png",
+        "final-en-390-connected-native-240-physical-page-link.png",
+        "final-en-390-connected-native-263.png",
+        "final-en-390-connected-native-263-physical-page-link.png"
+      ],
+      "errors": [],
+      "blockedMutations": [],
+      "failure": null,
+      "isolation": "Separate disposable headless Chromium. No shared CDP or user profile was accessed. Network mutations were blocked before file attachment.",
+      "scope": "Targeted new-A1/source/PDF-attachment/arcade-label follow-up only; no unchanged42-screen audit repeat.",
+      "limitations": [
+        "Representative questions from two new A1 units were exercised, not every question in all seven units.",
+        "PDF connection is session-only; original archive files were not deleted or modified."
+      ],
+      "visualReview": {
+        "status": "selected screenshots inspected",
+        "screenshots": [
+          "final-en-390-connected-native-240.png",
+          "final-en-390-connected-native-263-physical-page-link.png"
+        ],
+        "observations": [
+          "Materials shows2matched,0unmatched,0unreadable and both native PDF source titles with separate Disconnect buttons.",
+          "The connected Plus2 companion visibly identifies physical page33 and offers Open connected PDF at this page while retaining reference-only credit."
+        ]
+      }
+    }
+  },
+  "targetedFinalSummary": {
+    "status": "passed; both reported minor findings resolved",
+    "workflowGroups": 12,
+    "contentGroups": 6,
+    "pdfGroups": 6,
+    "unchanged42ScreenAuditRepeated": false,
+    "browserRuntimeErrors": 0,
+    "networkMutationAttempts": 0,
+    "userBrowserAccess": false,
+    "sourcePdfFilesModified": false,
+    "actualNativePhysicalExtents": [
+      240,
+      263
+    ],
+    "localHashCallCount": 5,
+    "observedSourceBytes": [
+      38526585,
+      40552770
+    ]
+  },
+  "arcadeSingularFollowup": {
+    "status": "passed",
+    "checkedOn": "2026-10-24T16:28:31.787Z",
+    "scope": "One-item A2 sentence-builder count in EN/IT only; previous workflows not repeated.",
+    "observations": [
+      {
+        "language": "en",
+        "observedText": "1 question · no timer",
+        "screenshot": "final-en-390-arcade-single-question-fixed.png"
+      },
+      {
+        "language": "it",
+        "observedText": "1 domanda · senza cronometro",
+        "screenshot": "final-it-390-arcade-single-question-fixed.png"
+      }
+    ],
+    "runtimeErrors": [],
+    "isolation": "Separate disposable headless Chromium; shared user session untouched.",
+    "visualReview": "Viewed both focused screenshots:1 question · no timer and1 domanda · senza cronometro render correctly above their respective start buttons."
+  },
+  "localPdfHelperTextReview": {
+    "status": "reviewed; no accidental mismatch claim found",
+    "reviewedOn": "2026-10-24T16:28:31.787Z",
+    "scope": "Source review of Materials helper/status wording and matching behavior in local-pdfs.ts; the earlier actual-file workflow already verified behavior.",
+    "findings": [
+      "Helper accurately requests the exact source PDF and permits a renamed filename because identity uses the local SHA-256.",
+      "Matched/unmatched/unreadable counts describe selected files; a failed match is reported as no source match, without claiming an edition mismatch or corrupted file.",
+      "A no-source-match result leaves existing valid connections in place, as verified earlier.",
+      "Connection lifetime is stated as this tab until Disconnect or reload, matching the implemented memory-only behavior."
+    ]
+  },
+  "privateBoundaryAudit": {
+    "observedAt": "2026-10-24T17:44:18.942163+00:00",
+    "status": "passed-at-observation",
+    "scope": "Bounded filesystem and Git inspection of materials/books, data/incoming/books and site-dist; no learner databases, backups, credentials or browser state read.",
+    "privateFolders": [
+      {
+        "folder": "materials/books",
+        "regularFiles": 5708,
+        "gitkeepFiles": 1,
+        "privateFilesChecked": 5707,
+        "ignoredPrivateFiles": 5707,
+        "notIgnoredPrivateFiles": 0,
+        "trackedPrivateFiles": 0,
+        "symlinks": 0,
+        "specialFiles": 0
+      },
+      {
+        "folder": "data/incoming/books",
+        "regularFiles": 841,
+        "gitkeepFiles": 0,
+        "privateFilesChecked": 841,
+        "ignoredPrivateFiles": 841,
+        "notIgnoredPrivateFiles": 0,
+        "trackedPrivateFiles": 0,
+        "symlinks": 0,
+        "specialFiles": 0
+      }
+    ],
+    "privateFilesChecked": 6548,
+    "publicBuild": {
+      "regularFiles": 5,
+      "files": [
+        "assets/index-BEn9AUJR.js",
+        "assets/index-k8QGmq4h.css",
+        "assets/painted-cardboard-CX92yXJi.webp",
+        "favicon.svg",
+        "index.html"
+      ],
+      "onlyExpectedPublicAssetPatterns": true,
+      "unexpectedFiles": 0,
+      "documentArchiveTranscriptDatabaseBackupOrSourceMapFiles": 0,
+      "embeddedPdfZipOrPrivateDocumentDataUriFindings": 0,
+      "symlinks": 0,
+      "specialFiles": 0,
+      "htmlIsAppShell": true,
+      "inlineScripts": 0,
+      "rawStudyElementsInHtmlShell": 0,
+      "faviconAndWebpMatchExpectedPublicAssets": true,
+      "vitePublicDirectoryDisabled": true
+    },
+    "canonicalPdfIntegrity": [
+      {
+        "bookId": "nuovo-espresso-plus-1",
+        "sha256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf",
+        "hashMatches": true,
+        "physicalPages": 240,
+        "pageCountMatches": true,
+        "bytes": 38526585
+      },
+      {
+        "bookId": "nuovo-espresso-plus-2",
+        "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4",
+        "hashMatches": true,
+        "physicalPages": 263,
+        "pageCountMatches": true,
+        "bytes": 40552770
+      }
+    ],
+    "gitDiffCheckPassed": true,
+    "limitations": [
+      "This is a timestamped boundary snapshot before the parent finishes pending caption-derived repairs and any final rebuild; it is not a claim that subsequent files or assets are unchanged.",
+      "No learner databases, backups or browser storage were opened. Public-build checks verified the emitted file inventory, expected assets, document/archive signatures and app-shell structure; they did not inspect private learner records."
+    ]
+  },
+  "privateBoundaryFinalAudit": {
+    "checkedAt": "2026-10-24T17:53:44.216993+00:00",
+    "status": "passed",
+    "ignoredPrivateFiles": 6562,
+    "unignoredPrivateFiles": 0,
+    "trackedPrivateFiles": 0,
+    "symlinks": 0,
+    "specialFiles": 0,
+    "publicBuildFiles": 5,
+    "canonicalPDFs": [
+      {
+        "book": "nuovo-espresso-plus-1",
+        "sha256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf",
+        "pages": 240
+      },
+      {
+        "book": "nuovo-espresso-plus-2",
+        "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4",
+        "pages": 263
+      }
+    ],
+    "diffWhitespaceCheck": "passed",
+    "captionRepairsComplete": true,
+    "privateIndexesComplete": true,
+    "finalBuildComplete": true
+  }
+}

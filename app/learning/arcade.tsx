@@ -1,3 +1,4 @@
+export { ArcadeEntry } from "./daily-overview";
 import { useEffect, useRef, useState } from "react";
 import {
   arcadeBanks,
@@ -22,6 +23,7 @@ import {
 } from "./arcade-engine";
 import { saveWord, wordKey } from "./academy-engine";
 import { modelAnswerMismatch } from "./learning-utils";
+import { catalogueParams } from "./navigation";
 import type {
   ArcadeItem,
   ArcadeMode,
@@ -39,6 +41,7 @@ type Props = {
   text: (pair: Pair) => string;
   save: (update: (p: Progress) => Progress) => void;
   go: (route: string) => void;
+  sceneId?: string;
 };
 const modes: {
   id: ArcadeMode;
@@ -84,42 +87,31 @@ const modes: {
   },
 ];
 
-export function ArcadeEntry({ t, go }: Pick<Props, "t" | "go">) {
-  return (
-    <section className="arcade-entry">
-      <div>
-        <strong>{t("Fancy a little game?", "Ti va un piccolo gioco?")}</strong>
-        <p>
-          {t(
-            "A few words, a sentence, a short conversation.",
-            "Qualche parola, una frase, una breve conversazione.",
-          )}
-        </p>
-      </div>
-      <button className="button secondary" onClick={() => go("games")}>
-        {t("Open games", "Apri i giochi")} →
-      </button>
-    </section>
-  );
-}
-
 export function PracticeArcade(props: Props) {
   const { p, t, text, save, go, today } = props;
-  const a = p.arcade ?? emptyArcade(),
-    settings = a.settings;
+  const a = p.arcade ?? emptyArcade();
+  const requestedReviewId = catalogueParams().get("review");
+  const requestedReview = requestedReviewId ? arcadeItemById.get(requestedReviewId) : undefined;
+  const reviewRecord = requestedReview ? a.records[requestedReview.id] : undefined;
+  const reviewDue = !!(reviewRecord && reviewRecord.due <= today && reviewRecord.date !== today);
+  const requestedScene = arcadeScenes.find((scene) => scene.id === props.sceneId);
+  const settings: ArcadeSettings = requestedScene ? { ...a.settings, mode: "conversation", scene: requestedScene.id } : a.settings;
   const pool = arcadePool(settings),
     due = arcadeDue(p, arcadeItems, today),
     mistakes = arcadeMistakes(p, arcadeItems);
-  const set = (patch: Partial<ArcadeSettings>) =>
+  const roundSize = settings.mode === "conversation" ? 3 : Math.min(settings.size, pool.length);
+  const set = (patch: Partial<ArcadeSettings>) => {
+    if (requestedScene) go("games");
     save((p) => ({
       ...p,
       arcade: {
         ...(p.arcade ?? emptyArcade()),
-        settings: { ...(p.arcade ?? emptyArcade()).settings, ...patch },
+        settings: { ...settings, ...patch },
       },
     }));
+  };
   const start = (items: ArcadeItem[], review = false) =>
-    save((s) => startArcadeRound(s, items, today, crypto.randomUUID(), review));
+    save((s) => startArcadeRound({ ...s, arcade: { ...(s.arcade ?? emptyArcade()), settings } }, items, today, crypto.randomUUID(), review));
   if (a.active) {
     const item = arcadeItemById.get(a.active.itemIds[a.active.index]);
     if (!item)
@@ -148,14 +140,32 @@ export function PracticeArcade(props: Props) {
         </div>
       );
     return (
+      <>
+      {requestedReviewId && !a.active.itemIds.includes(requestedReviewId) && <p className="workspace hint">{t("Finish your saved round first. Your requested review will be ready afterwards.", "Termina prima il giro salvato. Il ripasso richiesto sarà disponibile dopo.")}</p>}
+      {requestedScene && !a.active.itemIds.every((id) => id.startsWith(`scene:${requestedScene.id}:`)) && <p className="workspace hint">{t("You have an unfinished round. Your saved answers stay here; the chapter conversation will be ready after you finish.", "Hai un giro incompleto. Le risposte salvate restano qui; la conversazione del capitolo sarà pronta quando avrai finito.")}</p>}
       <ArcadeQuestion
         key={`${a.active.id}:${a.active.index}`}
         {...props}
         round={a.active}
         item={item}
       />
+      </>
     );
   }
+  if (requestedReviewId !== null) return <div className="workspace arcade">
+    <button className="text-button" onClick={() => go("reviews")}>← {t("Back to review queue", "Torna al ripasso del giorno")}</button>
+    <p className="eyebrow">{t("ONE SCHEDULED RECALL", "UN RIPASSO PROGRAMMATO")}</p>
+    <h1>{requestedReview ? text(requestedReview.title) : t("Review item unavailable", "Ripasso non disponibile")}</h1>
+    <section className="panel">
+      {requestedReview && reviewDue ? <>
+        <p>{t("Try this question again from memory. Your earlier answer stays in your history.", "Riprova questa domanda a memoria. La risposta precedente resta nella cronologia.")}</p>
+        <button className="button primary" onClick={() => save((state) => startArcadeRound(state, [requestedReview], today, crypto.randomUUID(), true))}>{t("Start this review", "Inizia questo ripasso")}</button>
+      </> : <p role="status">{reviewRecord?.date === today
+        ? t("This item has been reviewed today. Return to your queue for another item.", "Hai ripassato questa domanda oggi. Torna all’elenco per un altro ripasso.")
+        : t("This item is not due now. Return to your queue for scheduled practice.", "Questa domanda non è da ripassare ora. Torna all’elenco dei ripassi programmati.")}</p>}
+    </section>
+    <button className="button secondary" onClick={() => go("reviews")}>{t("Return to my review queue", "Torna al mio ripasso")}</button>
+  </div>;
   const last = a.history.at(-1);
   return (
     <div className="workspace arcade">
@@ -208,10 +218,10 @@ export function PracticeArcade(props: Props) {
         <div className="arcade-start">
           <div>
             <strong>
-              {settings.mode === "conversation"
-                ? 3
-                : Math.min(settings.size, pool.length)}{" "}
-              {t("questions · no timer", "domande · senza cronometro")}
+              {roundSize}{" "}
+              {roundSize === 1
+                ? t("question · no timer", "domanda · senza cronometro")
+                : t("questions · no timer", "domande · senza cronometro")}
             </strong>
             <p>
               {settings.mode === "words"
@@ -296,7 +306,7 @@ export function PracticeArcade(props: Props) {
                   </option>
                   {arcadeBanks.map((b) => (
                     <option key={b.id} value={b.id}>
-                      {text(b.title)}
+                      {b.level ?? "A1"} · {text(b.title)}
                     </option>
                   ))}
                 </select>
@@ -324,7 +334,7 @@ export function PracticeArcade(props: Props) {
                   {arcadeUnits.map((u) => (
                     <option key={u.id} value={u.id}>
                       {text(u.title)}
-                      {u.level === "A1-plus" ? " · A1+" : ""}
+                      {u.level === "A1-plus" ? " · A1+" : u.level === "A2" ? " · A2" : ""}
                     </option>
                   ))}
                 </select>
@@ -339,7 +349,7 @@ export function PracticeArcade(props: Props) {
                 >
                   {arcadeScenes.map((s) => (
                     <option key={s.id} value={s.id}>
-                      {text(s.title)}
+                      {s.id.startsWith("espresso2-") ? "A2" : "A1"} · {text(s.title)}
                     </option>
                   ))}
                 </select>

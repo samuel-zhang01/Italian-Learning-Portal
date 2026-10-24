@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-10-20",
+  "reviewedOn": "2026-10-24",
   "banks": [
     {
       "id": "survival",
@@ -1744,6 +1744,2389 @@
             "it": "Lo spazzolino è in bagno."
           },
           "id": "word:body:7"
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u01",
+      "title": {
+        "en": "Plus 1 · 01 · Contact details and spelling",
+        "it": "Plus 1 · 01 · Contatti e lettere"
+      },
+      "level": "A1",
+      "missionId": "espresso1-u01-confirm-contact",
+      "bookId": "nuovo-espresso-plus-1",
+      "chapter": 1,
+      "sourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            11,
+            14,
+            224,
+            233
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso1-u01:0",
+          "term": {
+            "en": "the surname",
+            "it": "il cognome"
+          },
+          "example": {
+            "en": "My surname is Neri.",
+            "it": "Il mio cognome è Neri."
+          }
+        },
+        {
+          "id": "word:espresso1-u01:1",
+          "term": {
+            "en": "how do you spell it?",
+            "it": "come si scrive?"
+          },
+          "example": {
+            "en": "Neri: how do you spell it?",
+            "it": "Neri: come si scrive?"
+          }
+        },
+        {
+          "id": "word:espresso1-u01:2",
+          "term": {
+            "en": "the at sign",
+            "it": "la chiocciola"
+          },
+          "example": {
+            "en": "Chiocciola is the @ sign.",
+            "it": "Chiocciola è il simbolo @."
+          }
+        },
+        {
+          "id": "word:espresso1-u01:3",
+          "term": {
+            "en": "the dot",
+            "it": "il punto"
+          },
+          "example": {
+            "en": "The address ends in dot org.",
+            "it": "L’indirizzo finisce con punto org."
+          }
+        },
+        {
+          "id": "word:espresso1-u01:4",
+          "term": {
+            "en": "the letter of the alphabet",
+            "it": "la lettera"
+          },
+          "example": {
+            "en": "The first letter of Neri is N.",
+            "it": "La prima lettera di Neri è N."
+          }
+        },
+        {
+          "id": "word:espresso1-u01:5",
+          "term": {
+            "en": "the email address",
+            "it": "l’indirizzo e-mail"
+          },
+          "example": {
+            "en": "My email address is neri@example.org.",
+            "it": "Il mio indirizzo e-mail è neri@example.org."
+          }
+        },
+        {
+          "id": "word:espresso1-u01:6",
+          "term": {
+            "en": "to repeat",
+            "it": "ripetere"
+          },
+          "example": {
+            "en": "Can you repeat the name?",
+            "it": "Puoi ripetere il nome?"
+          }
+        },
+        {
+          "id": "word:espresso1-u01:7",
+          "term": {
+            "en": "correct / exactly right",
+            "it": "esatto"
+          },
+          "example": {
+            "en": "N-E-R-I: exactly right!",
+            "it": "N-E-R-I: esatto!"
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u02",
+      "title": {
+        "en": "Plus 1 · 02 · People and work",
+        "it": "Plus 1 · 02 · Persone e lavoro"
+      },
+      "level": "A1",
+      "missionId": "espresso1-u02-introduce-colleague",
+      "bookId": "nuovo-espresso-plus-1",
+      "chapter": 2,
+      "sourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            23,
+            24,
+            26,
+            29
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso1-u02:0",
+          "term": {
+            "en": "the female colleague",
+            "it": "la collega"
+          },
+          "example": {
+            "en": "This is my colleague Ada.",
+            "it": "Questa è la mia collega Ada."
+          }
+        },
+        {
+          "id": "word:espresso1-u02:1",
+          "term": {
+            "en": "the language",
+            "it": "la lingua"
+          },
+          "example": {
+            "en": "I speak two languages: Italian and French.",
+            "it": "Parlo due lingue: italiano e francese."
+          }
+        },
+        {
+          "id": "word:espresso1-u02:2",
+          "term": {
+            "en": "the office",
+            "it": "l’ufficio"
+          },
+          "example": {
+            "en": "I work in an office in Bern.",
+            "it": "Lavoro in un ufficio a Berna."
+          }
+        },
+        {
+          "id": "word:espresso1-u02:3",
+          "term": {
+            "en": "to introduce someone",
+            "it": "presentare qualcuno"
+          },
+          "example": {
+            "en": "Today I am introducing a colleague to the group.",
+            "it": "Oggi presento una collega al gruppo."
+          }
+        },
+        {
+          "id": "word:espresso1-u02:4",
+          "term": {
+            "en": "the teacher",
+            "it": "l’insegnante"
+          },
+          "example": {
+            "en": "Ada is a teacher.",
+            "it": "Ada è insegnante."
+          }
+        },
+        {
+          "id": "word:espresso1-u02:5",
+          "term": {
+            "en": "the city",
+            "it": "la città"
+          },
+          "example": {
+            "en": "Which city do you work in?",
+            "it": "In quale città lavori?"
+          }
+        },
+        {
+          "id": "word:espresso1-u02:6",
+          "term": {
+            "en": "to live / to reside",
+            "it": "abitare"
+          },
+          "example": {
+            "en": "I live in Turin and work in Ivrea.",
+            "it": "Abito a Torino e lavoro a Ivrea."
+          }
+        },
+        {
+          "id": "word:espresso1-u02:7",
+          "term": {
+            "en": "from where?",
+            "it": "di dove?"
+          },
+          "example": {
+            "en": "Where are you from, Ada?",
+            "it": "Di dove sei, Ada?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u03",
+      "title": {
+        "en": "Plus 1 · 03 · Booking a restaurant",
+        "it": "Plus 1 · 03 · Prenotare al ristorante"
+      },
+      "level": "A1",
+      "missionId": "espresso1-u03-book-a-table",
+      "bookId": "nuovo-espresso-plus-1",
+      "chapter": 3,
+      "sourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            46,
+            49,
+            237
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso1-u03:0",
+          "term": {
+            "en": "to book",
+            "it": "prenotare"
+          },
+          "example": {
+            "en": "I would like to book for Friday.",
+            "it": "Vorrei prenotare per venerdì."
+          }
+        },
+        {
+          "id": "word:espresso1-u03:1",
+          "term": {
+            "en": "the table",
+            "it": "il tavolo"
+          },
+          "example": {
+            "en": "A table for three, please.",
+            "it": "Un tavolo per tre, per favore."
+          }
+        },
+        {
+          "id": "word:espresso1-u03:2",
+          "term": {
+            "en": "the people",
+            "it": "le persone"
+          },
+          "example": {
+            "en": "The booking is for three people.",
+            "it": "La prenotazione è per tre persone."
+          }
+        },
+        {
+          "id": "word:espresso1-u03:3",
+          "term": {
+            "en": "under the name",
+            "it": "a nome"
+          },
+          "example": {
+            "en": "A table under the name Olmi.",
+            "it": "Un tavolo a nome Olmi."
+          }
+        },
+        {
+          "id": "word:espresso1-u03:4",
+          "term": {
+            "en": "the booking",
+            "it": "la prenotazione"
+          },
+          "example": {
+            "en": "The booking is for eight o’clock.",
+            "it": "La prenotazione è per le otto."
+          }
+        },
+        {
+          "id": "word:espresso1-u03:5",
+          "term": {
+            "en": "at what time?",
+            "it": "a che ora?"
+          },
+          "example": {
+            "en": "What time are we eating?",
+            "it": "A che ora mangiamo?"
+          }
+        },
+        {
+          "id": "word:espresso1-u03:6",
+          "term": {
+            "en": "the menu",
+            "it": "il menù"
+          },
+          "example": {
+            "en": "The menu is on the table.",
+            "it": "Il menù è sul tavolo."
+          }
+        },
+        {
+          "id": "word:espresso1-u03:7",
+          "term": {
+            "en": "available / free",
+            "it": "libero"
+          },
+          "example": {
+            "en": "Is there a table available?",
+            "it": "C’è un tavolo libero?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u04",
+      "title": {
+        "en": "Plus 1 · 04 · Likes and free time",
+        "it": "Plus 1 · 04 · Gusti e tempo libero"
+      },
+      "level": "A1",
+      "missionId": "espresso1-u04-find-common-ground",
+      "bookId": "nuovo-espresso-plus-1",
+      "chapter": 4,
+      "sourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            59,
+            61,
+            234
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso1-u04:0",
+          "term": {
+            "en": "so do I / me too",
+            "it": "anche a me"
+          },
+          "example": {
+            "en": "I like dancing. — So do I!",
+            "it": "Mi piace ballare. — Anche a me!"
+          }
+        },
+        {
+          "id": "word:espresso1-u04:1",
+          "term": {
+            "en": "neither do I / me neither",
+            "it": "neanche a me"
+          },
+          "example": {
+            "en": "I do not like running. — Neither do I.",
+            "it": "Non mi piace correre. — Neanche a me."
+          }
+        },
+        {
+          "id": "word:espresso1-u04:2",
+          "term": {
+            "en": "to draw",
+            "it": "disegnare"
+          },
+          "example": {
+            "en": "I like drawing in the evening.",
+            "it": "Mi piace disegnare la sera."
+          }
+        },
+        {
+          "id": "word:espresso1-u04:3",
+          "term": {
+            "en": "to dance",
+            "it": "ballare"
+          },
+          "example": {
+            "en": "Shall we dance on Friday?",
+            "it": "Balliamo venerdì?"
+          }
+        },
+        {
+          "id": "word:espresso1-u04:4",
+          "term": {
+            "en": "often",
+            "it": "spesso"
+          },
+          "example": {
+            "en": "I often go to the cinema on Saturdays.",
+            "it": "Il sabato vado spesso al cinema."
+          }
+        },
+        {
+          "id": "word:espresso1-u04:5",
+          "term": {
+            "en": "in my free time",
+            "it": "nel tempo libero"
+          },
+          "example": {
+            "en": "In my free time I listen to music.",
+            "it": "Nel tempo libero ascolto musica."
+          }
+        },
+        {
+          "id": "word:espresso1-u04:6",
+          "term": {
+            "en": "the concert",
+            "it": "il concerto"
+          },
+          "example": {
+            "en": "The concert starts at nine.",
+            "it": "Il concerto comincia alle nove."
+          }
+        },
+        {
+          "id": "word:espresso1-u04:7",
+          "term": {
+            "en": "to go for a walk",
+            "it": "fare una passeggiata"
+          },
+          "example": {
+            "en": "Do you like going for a walk on Sundays?",
+            "it": "Ti piace fare una passeggiata la domenica?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u05",
+      "title": {
+        "en": "Plus 1 · 05 · Choosing somewhere to stay",
+        "it": "Plus 1 · 05 · Scegliere un alloggio"
+      },
+      "level": "A1",
+      "missionId": "espresso1-u05-choose-a-stay",
+      "bookId": "nuovo-espresso-plus-1",
+      "chapter": 5,
+      "sourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            68,
+            75,
+            236,
+            239
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso1-u05:0",
+          "term": {
+            "en": "the kitchen",
+            "it": "la cucina"
+          },
+          "example": {
+            "en": "There is a small kitchen.",
+            "it": "C’è una cucina piccola."
+          }
+        },
+        {
+          "id": "word:espresso1-u05:1",
+          "term": {
+            "en": "the lift / elevator",
+            "it": "l’ascensore"
+          },
+          "example": {
+            "en": "The lift is next to the stairs.",
+            "it": "L’ascensore è accanto alle scale."
+          }
+        },
+        {
+          "id": "word:espresso1-u05:2",
+          "term": {
+            "en": "the room",
+            "it": "la camera"
+          },
+          "example": {
+            "en": "I am looking for a room for two nights.",
+            "it": "Cerco una camera per due notti."
+          }
+        },
+        {
+          "id": "word:espresso1-u05:3",
+          "term": {
+            "en": "because",
+            "it": "perché"
+          },
+          "example": {
+            "en": "I choose this hotel because it is near the centre.",
+            "it": "Scelgo questo albergo perché è vicino al centro."
+          }
+        },
+        {
+          "id": "word:espresso1-u05:4",
+          "term": {
+            "en": "the balcony",
+            "it": "il balcone"
+          },
+          "example": {
+            "en": "The room has a balcony.",
+            "it": "La camera ha un balcone."
+          }
+        },
+        {
+          "id": "word:espresso1-u05:5",
+          "term": {
+            "en": "the ground floor",
+            "it": "il piano terra"
+          },
+          "example": {
+            "en": "The room is on the ground floor.",
+            "it": "La camera è al piano terra."
+          }
+        },
+        {
+          "id": "word:espresso1-u05:6",
+          "term": {
+            "en": "the night",
+            "it": "la notte"
+          },
+          "example": {
+            "en": "One night costs seventy euros.",
+            "it": "Una notte costa settanta euro."
+          }
+        },
+        {
+          "id": "word:espresso1-u05:7",
+          "term": {
+            "en": "from… to…",
+            "it": "dal… al…"
+          },
+          "example": {
+            "en": "The room is available from the second to the fourth of June.",
+            "it": "La camera è libera dal due al quattro giugno."
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u06",
+      "title": {
+        "en": "Plus 1 · 06 · Invitations and schedules",
+        "it": "Plus 1 · 06 · Inviti e orari"
+      },
+      "level": "A1",
+      "missionId": "espresso1-u06-plan-a-celebration",
+      "bookId": "nuovo-espresso-plus-1",
+      "chapter": 6,
+      "sourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            95,
+            229,
+            234
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso1-u06:0",
+          "term": {
+            "en": "the party",
+            "it": "la festa"
+          },
+          "example": {
+            "en": "The party starts at five.",
+            "it": "La festa comincia alle cinque."
+          }
+        },
+        {
+          "id": "word:espresso1-u06:1",
+          "term": {
+            "en": "the birthday",
+            "it": "il compleanno"
+          },
+          "example": {
+            "en": "My birthday is in May.",
+            "it": "Il mio compleanno è a maggio."
+          }
+        },
+        {
+          "id": "word:espresso1-u06:2",
+          "term": {
+            "en": "to get up",
+            "it": "alzarsi"
+          },
+          "example": {
+            "en": "I get up at nine on Saturdays.",
+            "it": "Il sabato mi alzo alle nove."
+          }
+        },
+        {
+          "id": "word:espresso1-u06:3",
+          "term": {
+            "en": "the invitation",
+            "it": "l’invito"
+          },
+          "example": {
+            "en": "Thank you for the invitation to the party!",
+            "it": "Grazie per l’invito alla festa!"
+          }
+        },
+        {
+          "id": "word:espresso1-u06:4",
+          "term": {
+            "en": "to finish",
+            "it": "finire"
+          },
+          "example": {
+            "en": "What time do you finish work?",
+            "it": "A che ora finisci di lavorare?"
+          }
+        },
+        {
+          "id": "word:espresso1-u06:5",
+          "term": {
+            "en": "first / before / beforehand",
+            "it": "prima"
+          },
+          "example": {
+            "en": "I work first, then I come to the party.",
+            "it": "Prima lavoro, poi vengo alla festa."
+          }
+        },
+        {
+          "id": "word:espresso1-u06:6",
+          "term": {
+            "en": "after work",
+            "it": "dopo il lavoro"
+          },
+          "example": {
+            "en": "After work I go to Sara’s place.",
+            "it": "Dopo il lavoro vado da Sara."
+          }
+        },
+        {
+          "id": "word:espresso1-u06:7",
+          "term": {
+            "en": "to have time",
+            "it": "avere tempo"
+          },
+          "example": {
+            "en": "Today I have time for a coffee.",
+            "it": "Oggi ho tempo per un caffè."
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u07",
+      "title": {
+        "en": "Plus 1 · 07 · Open places and directions",
+        "it": "Plus 1 · 07 · Luoghi aperti e indicazioni"
+      },
+      "level": "A1",
+      "missionId": "espresso1-u07-find-an-open-place",
+      "bookId": "nuovo-espresso-plus-1",
+      "chapter": 7,
+      "sourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            100,
+            104,
+            106,
+            107,
+            232
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso1-u07:0",
+          "term": {
+            "en": "near here",
+            "it": "qui vicino"
+          },
+          "example": {
+            "en": "Is there a pharmacy near here?",
+            "it": "C’è una farmacia qui vicino?"
+          }
+        },
+        {
+          "id": "word:espresso1-u07:1",
+          "term": {
+            "en": "open",
+            "it": "aperto"
+          },
+          "example": {
+            "en": "The market is open until one.",
+            "it": "Il mercato è aperto fino all’una."
+          }
+        },
+        {
+          "id": "word:espresso1-u07:2",
+          "term": {
+            "en": "closed",
+            "it": "chiuso"
+          },
+          "example": {
+            "en": "The bakery is closed on Mondays.",
+            "it": "Il panificio è chiuso il lunedì."
+          }
+        },
+        {
+          "id": "word:espresso1-u07:3",
+          "term": {
+            "en": "next to",
+            "it": "accanto a"
+          },
+          "example": {
+            "en": "The bank is next to the cinema.",
+            "it": "La banca è accanto al cinema."
+          }
+        },
+        {
+          "id": "word:espresso1-u07:4",
+          "term": {
+            "en": "the bakery",
+            "it": "il panificio"
+          },
+          "example": {
+            "en": "The bakery is behind the square.",
+            "it": "Il panificio è dietro la piazza."
+          }
+        },
+        {
+          "id": "word:espresso1-u07:5",
+          "term": {
+            "en": "the crossroads / junction",
+            "it": "l’incrocio"
+          },
+          "example": {
+            "en": "The pharmacy is at the junction.",
+            "it": "La farmacia è all’incrocio."
+          }
+        },
+        {
+          "id": "word:espresso1-u07:6",
+          "term": {
+            "en": "straight ahead",
+            "it": "sempre dritto"
+          },
+          "example": {
+            "en": "To get to the square? Straight ahead.",
+            "it": "Per la piazza? Sempre dritto."
+          }
+        },
+        {
+          "id": "word:espresso1-u07:7",
+          "term": {
+            "en": "I go there",
+            "it": "ci vado"
+          },
+          "example": {
+            "en": "The market is open: I go there at ten.",
+            "it": "Il mercato è aperto: ci vado alle dieci."
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u08",
+      "title": {
+        "en": "Plus 1 · 08 · Changing an itinerary",
+        "it": "Plus 1 · 08 · Cambiare un itinerario"
+      },
+      "level": "A1",
+      "missionId": "espresso1-u08-change-the-itinerary",
+      "bookId": "nuovo-espresso-plus-1",
+      "chapter": 8,
+      "sourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            117,
+            119,
+            121,
+            235,
+            236
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso1-u08:0",
+          "term": {
+            "en": "the rain",
+            "it": "la pioggia"
+          },
+          "example": {
+            "en": "The rain changed our plans.",
+            "it": "La pioggia ha cambiato i nostri programmi."
+          }
+        },
+        {
+          "id": "word:espresso1-u08:1",
+          "term": {
+            "en": "the museum",
+            "it": "il museo"
+          },
+          "example": {
+            "en": "Yesterday we visited a museum.",
+            "it": "Ieri abbiamo visitato un museo."
+          }
+        },
+        {
+          "id": "word:espresso1-u08:2",
+          "term": {
+            "en": "the trip",
+            "it": "il viaggio"
+          },
+          "example": {
+            "en": "The trip was short.",
+            "it": "Il viaggio è stato breve."
+          }
+        },
+        {
+          "id": "word:espresso1-u08:3",
+          "term": {
+            "en": "nothing / anything in a negative sentence",
+            "it": "niente"
+          },
+          "example": {
+            "en": "I did not buy anything.",
+            "it": "Non ho comprato niente."
+          }
+        },
+        {
+          "id": "word:espresso1-u08:4",
+          "term": {
+            "en": "the gallery",
+            "it": "la galleria"
+          },
+          "example": {
+            "en": "We went into a gallery.",
+            "it": "Siamo entrati in una galleria."
+          }
+        },
+        {
+          "id": "word:espresso1-u08:5",
+          "term": {
+            "en": "to take a photo",
+            "it": "fare una foto"
+          },
+          "example": {
+            "en": "I took a photo of the square.",
+            "it": "Ho fatto una foto alla piazza."
+          }
+        },
+        {
+          "id": "word:espresso1-u08:6",
+          "term": {
+            "en": "something / anything in a question",
+            "it": "qualcosa"
+          },
+          "example": {
+            "en": "Did you see anything interesting?",
+            "it": "Avete visto qualcosa di interessante?"
+          }
+        },
+        {
+          "id": "word:espresso1-u08:7",
+          "term": {
+            "en": "so / therefore",
+            "it": "quindi"
+          },
+          "example": {
+            "en": "It rained, so we stayed in town.",
+            "it": "Ha piovuto, quindi siamo rimasti in città."
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u09",
+      "title": {
+        "en": "Plus 1 · 09 · Ingredients and quantities",
+        "it": "Plus 1 · 09 · Ingredienti e quantità"
+      },
+      "level": "A1",
+      "missionId": "espresso1-u09-plan-the-ingredients",
+      "bookId": "nuovo-espresso-plus-1",
+      "chapter": 9,
+      "sourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            135,
+            139,
+            232,
+            236
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso1-u09:0",
+          "term": {
+            "en": "half a kilo",
+            "it": "mezzo chilo"
+          },
+          "example": {
+            "en": "I will take half a kilo of bread.",
+            "it": "Prendo mezzo chilo di pane."
+          }
+        },
+        {
+          "id": "word:espresso1-u09:1",
+          "term": {
+            "en": "the bottle",
+            "it": "la bottiglia"
+          },
+          "example": {
+            "en": "I am buying a bottle of water.",
+            "it": "Compro una bottiglia d’acqua."
+          }
+        },
+        {
+          "id": "word:espresso1-u09:2",
+          "term": {
+            "en": "the ingredient",
+            "it": "l’ingrediente"
+          },
+          "example": {
+            "en": "Tomato is an ingredient in the soup.",
+            "it": "Il pomodoro è un ingrediente della zuppa."
+          }
+        },
+        {
+          "id": "word:espresso1-u09:3",
+          "term": {
+            "en": "the portion",
+            "it": "la porzione"
+          },
+          "example": {
+            "en": "One portion is for one person.",
+            "it": "Una porzione è per una persona."
+          }
+        },
+        {
+          "id": "word:espresso1-u09:4",
+          "term": {
+            "en": "I will take some / I will take that amount",
+            "it": "ne prendo"
+          },
+          "example": {
+            "en": "The apples? I will take six.",
+            "it": "Le mele? Ne prendo sei."
+          }
+        },
+        {
+          "id": "word:espresso1-u09:5",
+          "term": {
+            "en": "the packet",
+            "it": "il pacco"
+          },
+          "example": {
+            "en": "I am buying a packet of pasta.",
+            "it": "Compro un pacco di pasta."
+          }
+        },
+        {
+          "id": "word:espresso1-u09:6",
+          "term": {
+            "en": "the litre",
+            "it": "il litro"
+          },
+          "example": {
+            "en": "For four people I am buying a litre of juice.",
+            "it": "Per quattro persone compro un litro di succo."
+          }
+        },
+        {
+          "id": "word:espresso1-u09:7",
+          "term": {
+            "en": "as much as needed",
+            "it": "quanto basta"
+          },
+          "example": {
+            "en": "For the salt: as much as needed.",
+            "it": "Per il sale: quanto basta."
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u10",
+      "title": {
+        "en": "Plus 1 · 10 · Recounting a family celebration",
+        "it": "Plus 1 · 10 · Raccontare una festa in famiglia"
+      },
+      "level": "A1",
+      "missionId": "espresso1-u10-recount-a-celebration",
+      "bookId": "nuovo-espresso-plus-1",
+      "chapter": 10,
+      "sourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            147,
+            149,
+            153,
+            229,
+            235
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso1-u10:0",
+          "term": {
+            "en": "the relative",
+            "it": "il parente"
+          },
+          "example": {
+            "en": "I spoke with one of my mother’s relatives.",
+            "it": "Ho parlato con un parente di mia madre."
+          }
+        },
+        {
+          "id": "word:espresso1-u10:1",
+          "term": {
+            "en": "the female cousin",
+            "it": "la cugina"
+          },
+          "example": {
+            "en": "My cousin prepared the party.",
+            "it": "Mia cugina ha preparato la festa."
+          }
+        },
+        {
+          "id": "word:espresso1-u10:2",
+          "term": {
+            "en": "the wedding",
+            "it": "il matrimonio"
+          },
+          "example": {
+            "en": "We went to Lara’s wedding.",
+            "it": "Siamo andati al matrimonio di Lara."
+          }
+        },
+        {
+          "id": "word:espresso1-u10:3",
+          "term": {
+            "en": "to get ready",
+            "it": "prepararsi"
+          },
+          "example": {
+            "en": "My sister got ready at six.",
+            "it": "Mia sorella si è preparata alle sei."
+          }
+        },
+        {
+          "id": "word:espresso1-u10:4",
+          "term": {
+            "en": "to bring",
+            "it": "portare"
+          },
+          "example": {
+            "en": "My brothers brought dessert.",
+            "it": "I miei fratelli hanno portato il dolce."
+          }
+        },
+        {
+          "id": "word:espresso1-u10:5",
+          "term": {
+            "en": "to celebrate",
+            "it": "festeggiare"
+          },
+          "example": {
+            "en": "We celebrated together.",
+            "it": "Abbiamo festeggiato insieme."
+          }
+        },
+        {
+          "id": "word:espresso1-u10:6",
+          "term": {
+            "en": "the present",
+            "it": "il regalo"
+          },
+          "example": {
+            "en": "The present is for our mother.",
+            "it": "Il regalo è per nostra madre."
+          }
+        },
+        {
+          "id": "word:espresso1-u10:7",
+          "term": {
+            "en": "together",
+            "it": "insieme"
+          },
+          "example": {
+            "en": "We got up early and left together.",
+            "it": "Ci siamo alzati presto e siamo partiti insieme."
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u01",
+      "title": {
+        "en": "Plus 2 · 01 · Gifts and comparisons",
+        "it": "Plus 2 · 01 · Regali e confronti"
+      },
+      "level": "A2",
+      "missionId": "espresso2-u01-choose-a-gift",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 1,
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            17,
+            18,
+            20
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            19,
+            249,
+            250
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso2-u01:0",
+          "term": {
+            "en": "the scarf",
+            "it": "la sciarpa"
+          },
+          "example": {
+            "en": "I am giving her a green scarf.",
+            "it": "Le regalo una sciarpa verde."
+          }
+        },
+        {
+          "id": "word:espresso2-u01:1",
+          "term": {
+            "en": "the gloves",
+            "it": "i guanti"
+          },
+          "example": {
+            "en": "These gloves are warmer than those ones.",
+            "it": "Questi guanti sono più caldi di quelli."
+          }
+        },
+        {
+          "id": "word:espresso2-u01:2",
+          "term": {
+            "en": "light in weight",
+            "it": "leggero"
+          },
+          "example": {
+            "en": "This coat is lighter than the blue one.",
+            "it": "Questo cappotto è più leggero di quello blu."
+          }
+        },
+        {
+          "id": "word:espresso2-u01:3",
+          "term": {
+            "en": "warm",
+            "it": "caldo"
+          },
+          "example": {
+            "en": "Irene likes this warm jumper.",
+            "it": "A Irene piace questo maglione caldo."
+          }
+        },
+        {
+          "id": "word:espresso2-u01:4",
+          "term": {
+            "en": "the recipient",
+            "it": "il destinatario"
+          },
+          "example": {
+            "en": "The recipient is my father: he likes green.",
+            "it": "Il destinatario è mio padre: gli piace il verde."
+          }
+        },
+        {
+          "id": "word:espresso2-u01:5",
+          "term": {
+            "en": "the size for clothing",
+            "it": "la taglia"
+          },
+          "example": {
+            "en": "I ask him his jacket size.",
+            "it": "Gli chiedo la taglia della giacca."
+          }
+        },
+        {
+          "id": "word:espresso2-u01:6",
+          "term": {
+            "en": "more… than…",
+            "it": "più… di…"
+          },
+          "example": {
+            "en": "The red scarf is longer than the green one.",
+            "it": "La sciarpa rossa è più lunga di quella verde."
+          }
+        },
+        {
+          "id": "word:espresso2-u01:7",
+          "term": {
+            "en": "less… than…",
+            "it": "meno… di…"
+          },
+          "example": {
+            "en": "This gift is less expensive than that one.",
+            "it": "Questo regalo è meno caro di quello."
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u02",
+      "title": {
+        "en": "Plus 2 · 02 · Places we remember",
+        "it": "Plus 2 · 02 · Luoghi dei ricordi"
+      },
+      "level": "A2",
+      "missionId": "espresso2-u02-remember-a-place",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 2,
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            31,
+            35
+          ]
+        },
+        {
+          "id": "src-c3791736675a",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            33,
+            252
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            232
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso2-u02:0",
+          "term": {
+            "en": "the courtyard",
+            "it": "il cortile"
+          },
+          "example": {
+            "en": "As children we used to play in the courtyard.",
+            "it": "Da piccoli giocavamo nel cortile."
+          }
+        },
+        {
+          "id": "word:espresso2-u02:1",
+          "term": {
+            "en": "as a child, for a male speaker",
+            "it": "da piccolo"
+          },
+          "example": {
+            "en": "As a child I lived near the sea.",
+            "it": "Da piccolo abitavo vicino al mare."
+          }
+        },
+        {
+          "id": "word:espresso2-u02:2",
+          "term": {
+            "en": "every afternoon",
+            "it": "ogni pomeriggio"
+          },
+          "example": {
+            "en": "Every afternoon we used to go to the park.",
+            "it": "Ogni pomeriggio andavamo al parco."
+          }
+        },
+        {
+          "id": "word:espresso2-u02:3",
+          "term": {
+            "en": "the memory",
+            "it": "il ricordo"
+          },
+          "example": {
+            "en": "It is a memory from my childhood.",
+            "it": "È un ricordo della mia infanzia."
+          }
+        },
+        {
+          "id": "word:espresso2-u02:4",
+          "term": {
+            "en": "the fountain",
+            "it": "la fontana"
+          },
+          "example": {
+            "en": "There was a fountain in the square.",
+            "it": "Nella piazza c’era una fontana."
+          }
+        },
+        {
+          "id": "word:espresso2-u02:5",
+          "term": {
+            "en": "in those days",
+            "it": "a quei tempi"
+          },
+          "example": {
+            "en": "In those days the street was quiet.",
+            "it": "A quei tempi la strada era tranquilla."
+          }
+        },
+        {
+          "id": "word:espresso2-u02:6",
+          "term": {
+            "en": "narrow",
+            "it": "stretto"
+          },
+          "example": {
+            "en": "The alley was very narrow.",
+            "it": "Il vicolo era molto stretto."
+          }
+        },
+        {
+          "id": "word:espresso2-u02:7",
+          "term": {
+            "en": "we used to play there",
+            "it": "ci giocavamo"
+          },
+          "example": {
+            "en": "The courtyard was big: we used to play there every evening.",
+            "it": "Il cortile era grande: ci giocavamo ogni sera."
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u03",
+      "title": {
+        "en": "Plus 2 · 03 · Favours and alternatives",
+        "it": "Plus 2 · 03 · Favori e alternative"
+      },
+      "level": "A2",
+      "missionId": "espresso2-u03-ask-for-a-favour",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 3,
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            44,
+            46
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            55,
+            254,
+            258
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso2-u03:0",
+          "term": {
+            "en": "the favour",
+            "it": "il favore"
+          },
+          "example": {
+            "en": "Could you do me a favour?",
+            "it": "Potresti farmi un favore?"
+          }
+        },
+        {
+          "id": "word:espresso2-u03:1",
+          "term": {
+            "en": "to check",
+            "it": "controllare"
+          },
+          "example": {
+            "en": "I could check the draft tomorrow.",
+            "it": "Potrei controllare la bozza domani."
+          }
+        },
+        {
+          "id": "word:espresso2-u03:2",
+          "term": {
+            "en": "to manage / to be able to cope",
+            "it": "farcela"
+          },
+          "example": {
+            "en": "I cannot manage today, but I can tomorrow.",
+            "it": "Oggi non ce la faccio, ma domani sì."
+          }
+        },
+        {
+          "id": "word:espresso2-u03:3",
+          "term": {
+            "en": "after six o’clock",
+            "it": "dopo le sei"
+          },
+          "example": {
+            "en": "I could help you after six.",
+            "it": "Potrei aiutarti dopo le sei."
+          }
+        },
+        {
+          "id": "word:espresso2-u03:4",
+          "term": {
+            "en": "the draft",
+            "it": "la bozza"
+          },
+          "example": {
+            "en": "I would like to finish the draft tonight.",
+            "it": "Vorrei finire la bozza stasera."
+          }
+        },
+        {
+          "id": "word:espresso2-u03:5",
+          "term": {
+            "en": "to be available",
+            "it": "essere disponibile"
+          },
+          "example": {
+            "en": "Would you be available on Friday?",
+            "it": "Saresti disponibile venerdì?"
+          }
+        },
+        {
+          "id": "word:espresso2-u03:6",
+          "term": {
+            "en": "to postpone",
+            "it": "rimandare"
+          },
+          "example": {
+            "en": "We could postpone the meeting.",
+            "it": "Potremmo rimandare la riunione."
+          }
+        },
+        {
+          "id": "word:espresso2-u03:7",
+          "term": {
+            "en": "the deadline",
+            "it": "la scadenza"
+          },
+          "example": {
+            "en": "The deadline is tomorrow: could you help me today?",
+            "it": "La scadenza è domani: potresti aiutarmi oggi?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u04",
+      "title": {
+        "en": "Plus 2 · 04 · Preparing an outing",
+        "it": "Plus 2 · 04 · Preparare un’uscita"
+      },
+      "level": "A2",
+      "missionId": "espresso2-u04-coordinate-an-outing",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 4,
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            60,
+            61,
+            62
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            69,
+            252,
+            257,
+            261
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso2-u04:0",
+          "term": {
+            "en": "the seat / place",
+            "it": "il posto"
+          },
+          "example": {
+            "en": "The seats? I have already booked them.",
+            "it": "I posti? Li ho già prenotati."
+          }
+        },
+        {
+          "id": "word:espresso2-u04:1",
+          "term": {
+            "en": "the timetable / scheduled time",
+            "it": "l’orario"
+          },
+          "example": {
+            "en": "I am checking the theatre’s schedule.",
+            "it": "Sto controllando l’orario del teatro."
+          }
+        },
+        {
+          "id": "word:espresso2-u04:2",
+          "term": {
+            "en": "already",
+            "it": "già"
+          },
+          "example": {
+            "en": "The visits? I have already booked them.",
+            "it": "Le visite? Le ho già prenotate."
+          }
+        },
+        {
+          "id": "word:espresso2-u04:3",
+          "term": {
+            "en": "not yet",
+            "it": "non ancora"
+          },
+          "example": {
+            "en": "Have you printed the tickets? — Not yet.",
+            "it": "Hai stampato i biglietti? — Non ancora."
+          }
+        },
+        {
+          "id": "word:espresso2-u04:4",
+          "term": {
+            "en": "to reserve",
+            "it": "prenotare"
+          },
+          "example": {
+            "en": "I am reserving two seats.",
+            "it": "Sto prenotando due posti."
+          }
+        },
+        {
+          "id": "word:espresso2-u04:5",
+          "term": {
+            "en": "at this moment",
+            "it": "in questo momento"
+          },
+          "example": {
+            "en": "At this moment I am looking for the address.",
+            "it": "In questo momento sto cercando l’indirizzo."
+          }
+        },
+        {
+          "id": "word:espresso2-u04:6",
+          "term": {
+            "en": "to confirm",
+            "it": "confermare"
+          },
+          "example": {
+            "en": "The dates? I confirmed them yesterday.",
+            "it": "Le date? Le ho confermate ieri."
+          }
+        },
+        {
+          "id": "word:espresso2-u04:7",
+          "term": {
+            "en": "the ticket office",
+            "it": "la biglietteria"
+          },
+          "example": {
+            "en": "It is the ticket office that opens at five.",
+            "it": "È la biglietteria che apre alle cinque."
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u05",
+      "title": {
+        "en": "Plus 2 · 05 · Delays and journeys",
+        "it": "Plus 2 · 05 · Ritardi e percorsi"
+      },
+      "level": "A2",
+      "missionId": "espresso2-u05-explain-a-delay",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 5,
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            73,
+            75,
+            79
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            83,
+            253,
+            258
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso2-u05:0",
+          "term": {
+            "en": "the delay / lateness",
+            "it": "il ritardo"
+          },
+          "example": {
+            "en": "I was late because I was waiting for the bus.",
+            "it": "Ero in ritardo perché aspettavo l’autobus."
+          }
+        },
+        {
+          "id": "word:espresso2-u05:1",
+          "term": {
+            "en": "the stop for public transport",
+            "it": "la fermata"
+          },
+          "example": {
+            "en": "I was waiting at the bus stop when it started raining.",
+            "it": "Aspettavo alla fermata quando ha cominciato a piovere."
+          }
+        },
+        {
+          "id": "word:espresso2-u05:2",
+          "term": {
+            "en": "the journey / route",
+            "it": "il tragitto"
+          },
+          "example": {
+            "en": "The journey from the station takes ten minutes.",
+            "it": "Il tragitto dalla stazione dura dieci minuti."
+          }
+        },
+        {
+          "id": "word:espresso2-u05:3",
+          "term": {
+            "en": "to take an amount of time",
+            "it": "volerci"
+          },
+          "example": {
+            "en": "It takes twenty minutes to get there on foot.",
+            "it": "Per arrivare a piedi ci vogliono venti minuti."
+          }
+        },
+        {
+          "id": "word:espresso2-u05:4",
+          "term": {
+            "en": "the wait / waiting time",
+            "it": "l’attesa"
+          },
+          "example": {
+            "en": "The wait was long.",
+            "it": "L’attesa è stata lunga."
+          }
+        },
+        {
+          "id": "word:espresso2-u05:5",
+          "term": {
+            "en": "on foot",
+            "it": "a piedi"
+          },
+          "example": {
+            "en": "I arrived on foot.",
+            "it": "Sono arrivata a piedi."
+          }
+        },
+        {
+          "id": "word:espresso2-u05:6",
+          "term": {
+            "en": "to take time to do something",
+            "it": "metterci"
+          },
+          "example": {
+            "en": "It usually takes me ten minutes.",
+            "it": "Di solito ci metto dieci minuti."
+          }
+        },
+        {
+          "id": "word:espresso2-u05:7",
+          "term": {
+            "en": "in the meantime",
+            "it": "nel frattempo"
+          },
+          "example": {
+            "en": "Luca was buying the tickets; in the meantime I was looking for the platform.",
+            "it": "Luca comprava i biglietti; nel frattempo cercavo il binario."
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u06",
+      "title": {
+        "en": "Plus 2 · 06 · A useful break",
+        "it": "Plus 2 · 06 · Una pausa utile"
+      },
+      "level": "A2",
+      "missionId": "espresso2-u06-suggest-a-break",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 6,
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            90,
+            91,
+            93
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            103,
+            254,
+            255
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso2-u06:0",
+          "term": {
+            "en": "the break",
+            "it": "la pausa"
+          },
+          "example": {
+            "en": "Take a break with us.",
+            "it": "Fai una pausa con noi."
+          }
+        },
+        {
+          "id": "word:espresso2-u06:1",
+          "term": {
+            "en": "the window",
+            "it": "la finestra"
+          },
+          "example": {
+            "en": "Open the window, please.",
+            "it": "Apri la finestra, per favore."
+          }
+        },
+        {
+          "id": "word:espresso2-u06:2",
+          "term": {
+            "en": "later / afterwards",
+            "it": "dopo"
+          },
+          "example": {
+            "en": "Read the message later.",
+            "it": "Leggi il messaggio dopo."
+          }
+        },
+        {
+          "id": "word:espresso2-u06:3",
+          "term": {
+            "en": "straight away",
+            "it": "subito"
+          },
+          "example": {
+            "en": "Close the book and come straight away.",
+            "it": "Chiudi il libro e vieni subito."
+          }
+        },
+        {
+          "id": "word:espresso2-u06:4",
+          "term": {
+            "en": "the notebook",
+            "it": "il quaderno"
+          },
+          "example": {
+            "en": "The notebook? Leave it here.",
+            "it": "Il quaderno? Lascialo qui."
+          }
+        },
+        {
+          "id": "word:espresso2-u06:5",
+          "term": {
+            "en": "the piece of advice",
+            "it": "il consiglio"
+          },
+          "example": {
+            "en": "Listen to this advice.",
+            "it": "Ascolta questo consiglio."
+          }
+        },
+        {
+          "id": "word:espresso2-u06:6",
+          "term": {
+            "en": "to turn off",
+            "it": "spegnere"
+          },
+          "example": {
+            "en": "Turn off your phone during the break.",
+            "it": "Spegni il telefono durante la pausa."
+          }
+        },
+        {
+          "id": "word:espresso2-u06:7",
+          "term": {
+            "en": "what is needed",
+            "it": "quello che serve"
+          },
+          "example": {
+            "en": "Bring only what is needed.",
+            "it": "Porta solo quello che serve."
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u07",
+      "title": {
+        "en": "Plus 2 · 07 · Reception and waiting",
+        "it": "Plus 2 · 07 · Accettazione e attesa"
+      },
+      "level": "A2",
+      "missionId": "espresso2-u07-navigate-an-appointment",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 7,
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            101,
+            102,
+            103
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            117,
+            254,
+            255
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso2-u07:0",
+          "term": {
+            "en": "the appointment",
+            "it": "l’appuntamento"
+          },
+          "example": {
+            "en": "I have an appointment at eleven.",
+            "it": "Ho un appuntamento alle undici."
+          }
+        },
+        {
+          "id": "word:espresso2-u07:1",
+          "term": {
+            "en": "the reception / check-in desk",
+            "it": "l’accettazione"
+          },
+          "example": {
+            "en": "At the reception desk they ask for the surname.",
+            "it": "All’accettazione chiedono il cognome."
+          }
+        },
+        {
+          "id": "word:espresso2-u07:2",
+          "term": {
+            "en": "the headache",
+            "it": "il mal di testa"
+          },
+          "example": {
+            "en": "I would like to change the appointment: I have a headache.",
+            "it": "Vorrei spostare l’appuntamento: ho mal di testa."
+          }
+        },
+        {
+          "id": "word:espresso2-u07:3",
+          "term": {
+            "en": "the waiting room",
+            "it": "la sala d’attesa"
+          },
+          "example": {
+            "en": "Please wait in the waiting room.",
+            "it": "Aspetti nella sala d’attesa, per favore."
+          }
+        },
+        {
+          "id": "word:espresso2-u07:4",
+          "term": {
+            "en": "the form",
+            "it": "il modulo"
+          },
+          "example": {
+            "en": "Please fill in this form.",
+            "it": "Compili questo modulo, per favore."
+          }
+        },
+        {
+          "id": "word:espresso2-u07:5",
+          "term": {
+            "en": "to take a seat / make oneself comfortable",
+            "it": "accomodarsi"
+          },
+          "example": {
+            "en": "Please take a seat near the window.",
+            "it": "Si accomodi vicino alla finestra."
+          }
+        },
+        {
+          "id": "word:espresso2-u07:6",
+          "term": {
+            "en": "to wait",
+            "it": "attendere"
+          },
+          "example": {
+            "en": "Please wait a moment.",
+            "it": "Attenda un momento, per favore."
+          }
+        },
+        {
+          "id": "word:espresso2-u07:7",
+          "term": {
+            "en": "better",
+            "it": "migliore"
+          },
+          "example": {
+            "en": "This time works better for me.",
+            "it": "Questo orario è migliore per me."
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u08",
+      "title": {
+        "en": "Plus 2 · 08 · Plans and next steps",
+        "it": "Plus 2 · 08 · Progetti e prossimi passi"
+      },
+      "level": "A2",
+      "missionId": "espresso2-u08-plan-a-next-step",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 8,
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            116,
+            119,
+            121
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            133,
+            255,
+            256,
+            259
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso2-u08:0",
+          "term": {
+            "en": "next month",
+            "it": "il mese prossimo"
+          },
+          "example": {
+            "en": "Next month I will start the course.",
+            "it": "Il mese prossimo inizierò il corso."
+          }
+        },
+        {
+          "id": "word:espresso2-u08:1",
+          "term": {
+            "en": "the application for a position",
+            "it": "la candidatura"
+          },
+          "example": {
+            "en": "I will send the application on Friday.",
+            "it": "Invierò la candidatura venerdì."
+          }
+        },
+        {
+          "id": "word:espresso2-u08:2",
+          "term": {
+            "en": "to send",
+            "it": "inviare"
+          },
+          "example": {
+            "en": "If I have time, I will send the document tonight.",
+            "it": "Se ho tempo, invierò il documento stasera."
+          }
+        },
+        {
+          "id": "word:espresso2-u08:3",
+          "term": {
+            "en": "the condition",
+            "it": "la condizione"
+          },
+          "example": {
+            "en": "The condition is simple: if I have time, I leave.",
+            "it": "La condizione è semplice: se ho tempo, parto."
+          }
+        },
+        {
+          "id": "word:espresso2-u08:4",
+          "term": {
+            "en": "the evening course",
+            "it": "il corso serale"
+          },
+          "example": {
+            "en": "We will attend an evening course.",
+            "it": "Frequenteremo un corso serale."
+          }
+        },
+        {
+          "id": "word:espresso2-u08:5",
+          "term": {
+            "en": "to move home",
+            "it": "trasferirsi"
+          },
+          "example": {
+            "en": "Next year I will move to Trento.",
+            "it": "L’anno prossimo mi trasferirò a Trento."
+          }
+        },
+        {
+          "id": "word:espresso2-u08:6",
+          "term": {
+            "en": "to organise oneself",
+            "it": "organizzarsi"
+          },
+          "example": {
+            "en": "We will get organised before leaving.",
+            "it": "Ci organizzeremo prima di partire."
+          }
+        },
+        {
+          "id": "word:espresso2-u08:7",
+          "term": {
+            "en": "to update",
+            "it": "aggiornare"
+          },
+          "example": {
+            "en": "I will update my CV at the weekend.",
+            "it": "Aggiornerò il curriculum nel fine settimana."
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u09",
+      "title": {
+        "en": "Plus 2 · 09 · Unexpected problems and solutions",
+        "it": "Plus 2 · 09 · Imprevisti e soluzioni"
+      },
+      "level": "A2",
+      "missionId": "espresso2-u09-tell-an-interruption",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 9,
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            133,
+            134,
+            135,
+            136
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            153,
+            251,
+            257
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso2-u09:0",
+          "term": {
+            "en": "to be about to",
+            "it": "stare per"
+          },
+          "example": {
+            "en": "I was about to go out when you called.",
+            "it": "Stavo per uscire quando hai chiamato."
+          }
+        },
+        {
+          "id": "word:espresso2-u09:1",
+          "term": {
+            "en": "the interruption",
+            "it": "l’interruzione"
+          },
+          "example": {
+            "en": "The interruption lasted two minutes.",
+            "it": "L’interruzione è durata due minuti."
+          }
+        },
+        {
+          "id": "word:espresso2-u09:2",
+          "term": {
+            "en": "instead / however",
+            "it": "invece"
+          },
+          "example": {
+            "en": "I wanted to print; instead I had to write by hand.",
+            "it": "Volevo stampare; invece ho dovuto scrivere a mano."
+          }
+        },
+        {
+          "id": "word:espresso2-u09:3",
+          "term": {
+            "en": "to have to call",
+            "it": "dover chiamare"
+          },
+          "example": {
+            "en": "I had to call a colleague.",
+            "it": "Ho dovuto chiamare un collega."
+          }
+        },
+        {
+          "id": "word:espresso2-u09:4",
+          "term": {
+            "en": "the printer",
+            "it": "la stampante"
+          },
+          "example": {
+            "en": "The printer stopped working.",
+            "it": "La stampante ha smesso di funzionare."
+          }
+        },
+        {
+          "id": "word:espresso2-u09:5",
+          "term": {
+            "en": "to ask for help",
+            "it": "chiedere aiuto"
+          },
+          "example": {
+            "en": "I could not finish, so I asked for help.",
+            "it": "Non ho potuto finire e ho chiesto aiuto."
+          }
+        },
+        {
+          "id": "word:espresso2-u09:6",
+          "term": {
+            "en": "to manage to",
+            "it": "riuscire a"
+          },
+          "example": {
+            "en": "In the end I managed to print.",
+            "it": "Alla fine sono riuscita a stampare."
+          }
+        },
+        {
+          "id": "word:espresso2-u09:7",
+          "term": {
+            "en": "suddenly",
+            "it": "all’improvviso"
+          },
+          "example": {
+            "en": "Suddenly the power went out.",
+            "it": "All’improvviso è mancata la corrente."
+          }
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u10",
+      "title": {
+        "en": "Plus 2 · 10 · Opinions about a home",
+        "it": "Plus 2 · 10 · Opinioni su una casa"
+      },
+      "level": "A2",
+      "missionId": "espresso2-u10-discuss-a-home",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 10,
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            144,
+            145,
+            147,
+            148
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            167,
+            256,
+            257
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:espresso2-u10:0",
+          "term": {
+            "en": "bright / full of light",
+            "it": "luminoso"
+          },
+          "example": {
+            "en": "I think the living room is bright.",
+            "it": "Penso che il soggiorno sia luminoso."
+          }
+        },
+        {
+          "id": "word:espresso2-u10:1",
+          "term": {
+            "en": "the balcony",
+            "it": "il balcone"
+          },
+          "example": {
+            "en": "It is important that it has a balcony.",
+            "it": "È importante che abbia un balcone."
+          }
+        },
+        {
+          "id": "word:espresso2-u10:2",
+          "term": {
+            "en": "the requirement",
+            "it": "il requisito"
+          },
+          "example": {
+            "en": "Two bedrooms are an important requirement.",
+            "it": "Due camere sono un requisito importante."
+          }
+        },
+        {
+          "id": "word:espresso2-u10:3",
+          "term": {
+            "en": "in my opinion",
+            "it": "secondo me"
+          },
+          "example": {
+            "en": "In my opinion this house suits us.",
+            "it": "Secondo me questa casa è adatta a noi."
+          }
+        },
+        {
+          "id": "word:espresso2-u10:4",
+          "term": {
+            "en": "the rent",
+            "it": "l’affitto"
+          },
+          "example": {
+            "en": "I think the rent is high.",
+            "it": "Penso che l’affitto sia alto."
+          }
+        },
+        {
+          "id": "word:espresso2-u10:5",
+          "term": {
+            "en": "spacious",
+            "it": "spazioso"
+          },
+          "example": {
+            "en": "I think the kitchen is spacious.",
+            "it": "Penso che la cucina sia spaziosa."
+          }
+        },
+        {
+          "id": "word:espresso2-u10:6",
+          "term": {
+            "en": "it is important that",
+            "it": "è importante che"
+          },
+          "example": {
+            "en": "It is important that the home is quiet.",
+            "it": "È importante che la casa sia tranquilla."
+          }
+        },
+        {
+          "id": "word:espresso2-u10:7",
+          "term": {
+            "en": "suitable for",
+            "it": "adatto a"
+          },
+          "example": {
+            "en": "The apartment is suitable for a family.",
+            "it": "L’appartamento è adatto a una famiglia."
+          }
         }
       ]
     }
@@ -3565,6 +5948,1792 @@
         "it": "Inventa un personaggio e descrivi tre azioni. Poi racconta la stessa routine come quel personaggio usando mi."
       },
       "resource": "club"
+    },
+    {
+      "missionId": "espresso1-u01-confirm-contact",
+      "bank": "espresso1-u01",
+      "notes": [
+        {
+          "en": "When you miss one detail, ask about that detail. Saying a name letter by letter is useful communication, not a memory failure.",
+          "it": "Quando perdi un dettaglio, chiedi proprio quel dettaglio. Dire un nome lettera per lettera è una strategia utile, non un fallimento della memoria."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Good morning, my surname is Riva.",
+          "it": "A: Buongiorno, il mio cognome è Riva."
+        },
+        {
+          "en": "B: Sorry, how do you spell it?",
+          "it": "B: Scusi, come si scrive?"
+        },
+        {
+          "en": "A: R-I-V-A. My email is riva@example.org.",
+          "it": "A: R-I-V-A. La mia e-mail è riva@example.org."
+        },
+        {
+          "en": "B: Riva, perfect. Thank you.",
+          "it": "B: Riva, perfetto. Grazie."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Which surname is spelled? Write only the surname.",
+          "it": "Quale cognome viene scandito? Scrivi solo il cognome."
+        },
+        "answers": [
+          "Riva"
+        ],
+        "explanation": {
+          "en": "The speaker spells R-I-V-A.",
+          "it": "La persona scandisce R-I-V-A."
+        }
+      },
+      "frame": {
+        "en": "My surname is ___. How do you spell it? My email address is ___.",
+        "it": "Il mio cognome è ___. Come si scrive? Il mio indirizzo e-mail è ___."
+      },
+      "speaking": {
+        "en": "Say both roles, spelling a different invented surname on your second try.",
+        "it": "Interpreta entrambi i ruoli e, al secondo giro, scandisci un altro cognome inventato."
+      },
+      "resource": "rai",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "Which personal detail is spelled out? Name the type of detail in Italian, rather than the person’s surname. Leave out articles and possessives.",
+            "it": "Quale dato personale viene scandito? Scrivi il nome del dato, non il cognome della persona. Non aggiungere articoli o possessivi."
+          },
+          "answers": [
+            "cognome"
+          ],
+          "explanation": {
+            "en": "The exchange confirms a surname and a contact detail.",
+            "it": "La scena serve a confermare un cognome e un contatto."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Cover the scene. Play four turns using the new surname Neri: ask for it, answer, ask for the spelling and spell it out. Then compare.",
+            "it": "Copri la scena. Interpreta quattro battute con il nuovo cognome Neri: chiedilo, rispondi, chiedi come si scrive e scandiscilo. Poi confronta."
+          },
+          "frame": {
+            "en": "What is your surname? — My surname is ___. — How do you spell it? — ___.",
+            "it": "Qual è il tuo cognome? — Il mio cognome è ___. — Come si scrive? — ___."
+          },
+          "model": {
+            "en": "What is your surname? — My surname is Neri. — How do you spell it? — N-E-R-I.",
+            "it": "Qual è il tuo cognome? — Il mio cognome è Neri. — Come si scrive? — N-E-R-I."
+          },
+          "rubric": [
+            {
+              "en": "I used four turns, alternating questions and answers.",
+              "it": "Ho mantenuto quattro battute alternando domanda e risposta."
+            },
+            {
+              "en": "I used Neri and spelled all four letters.",
+              "it": "Ho usato Neri e scandito tutte e quattro le lettere."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso1-u02-introduce-colleague",
+      "bank": "espresso1-u02",
+      "notes": [
+        {
+          "en": "A group introduction describes someone with lui or lei; your next question addresses that person with tu. Listen for the change in the verb ending.",
+          "it": "Una presentazione al gruppo descrive qualcuno con lui o lei; la domanda successiva si rivolge alla persona con tu. Ascolta il cambiamento della desinenza."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: This is Elia. He is an architect.",
+          "it": "A: Questo è Elia. È architetto."
+        },
+        {
+          "en": "B: Nice to meet you, Elia. Where do you work?",
+          "it": "B: Piacere, Elia. Dove lavori?"
+        },
+        {
+          "en": "A: He works in Belgium.",
+          "it": "A: Lavora in Belgio."
+        },
+        {
+          "en": "C: Yes, and I speak French and Italian.",
+          "it": "C: Sì, e parlo francese e italiano."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "In which country does Elia work? Write the Italian country name.",
+          "it": "In quale paese lavora Elia? Scrivi il nome italiano del paese."
+        },
+        "answers": [
+          "Belgio"
+        ],
+        "explanation": {
+          "en": "Lavora in Belgio gives his workplace country.",
+          "it": "Lavora in Belgio indica il paese in cui lavora."
+        }
+      },
+      "frame": {
+        "en": "This is ___. They work in ___. What languages do you speak?",
+        "it": "Questo/Questa è ___. Lavora in ___. Che lingue parli?"
+      },
+      "speaking": {
+        "en": "Introduce a colleague, then become that colleague and answer a question about languages.",
+        "it": "Presenta una collega o un collega, poi interpreta quella persona e rispondi a una domanda sulle lingue."
+      },
+      "resource": "present-drill",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "What is the introduced person’s job? Write only the Italian job name.",
+            "it": "Quale professione ha la persona presentata? Scrivi solo il nome della professione."
+          },
+          "answers": [
+            "architetto"
+          ],
+          "explanation": {
+            "en": "The first line introduces Elia as an architect; his country is a separate detail.",
+            "it": "La prima battuta presenta Elia come architetto; il paese è un altro dettaglio."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Without reading, introduce Sara: she is a teacher, works in Switzerland and speaks Italian and German. Use three sentences, then check.",
+            "it": "Senza leggere, presenta Sara: è insegnante, lavora in Svizzera e parla italiano e tedesco. Usa tre frasi, poi controlla."
+          },
+          "frame": {
+            "en": "This is ___. She is a ___ and works in ___. She speaks ___ and ___.",
+            "it": "Questa è ___. È ___ e lavora in ___. Parla ___ e ___."
+          },
+          "model": {
+            "en": "This is Sara. She is a teacher and works in Switzerland. She speaks Italian and German.",
+            "it": "Questa è Sara. È insegnante e lavora in Svizzera. Parla italiano e tedesco."
+          },
+          "rubric": [
+            {
+              "en": "I changed the name, job, country and languages.",
+              "it": "Ho cambiato nome, professione, paese e lingue."
+            },
+            {
+              "en": "I used è, lavora and parla to introduce a third person.",
+              "it": "Ho usato è, lavora e parla per presentare una terza persona."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso1-u03-book-a-table",
+      "bank": "espresso1-u03",
+      "notes": [
+        {
+          "en": "Repeat the final booking once: a clear confirmation is more useful than adding many new sentences.",
+          "it": "Ripeti una volta la prenotazione finale: una conferma chiara è più utile di tante frasi nuove."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Good evening, a table for two for Sunday, please.",
+          "it": "A: Buonasera, un tavolo per due per domenica, per favore."
+        },
+        {
+          "en": "B: Certainly. At what time?",
+          "it": "B: Certo. A che ora?"
+        },
+        {
+          "en": "A: At one, under the name Valle.",
+          "it": "A: All’una, a nome Valle."
+        },
+        {
+          "en": "B: Perfect: Sunday at one, for two people.",
+          "it": "B: Perfetto: domenica all’una, per due persone."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "For how many people is the booking? Write the number in Italian.",
+          "it": "Per quante persone è la prenotazione? Scrivi il numero in lettere."
+        },
+        "answers": [
+          "due"
+        ],
+        "explanation": {
+          "en": "The booking is un tavolo per due.",
+          "it": "La prenotazione è un tavolo per due."
+        }
+      },
+      "frame": {
+        "en": "I would like to book a table for ___ people for ___ at ___.",
+        "it": "Vorrei prenotare un tavolo per ___ persone per ___ alle ___."
+      },
+      "speaking": {
+        "en": "Make the call twice. The second time change the day, time and number of diners.",
+        "it": "Telefona due volte. Al secondo giro cambia il giorno, l’ora e il numero di persone."
+      },
+      "resource": "booking",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "What do the speakers want to book? Write only the Italian noun. Leave out articles and possessives.",
+            "it": "Che cosa vogliono prenotare? Scrivi solo il nome dell’oggetto. Non aggiungere articoli o possessivi."
+          },
+          "answers": [
+            "tavolo"
+          ],
+          "explanation": {
+            "en": "The speakers arrange a restaurant table booking.",
+            "it": "Le persone concordano una prenotazione di un tavolo al ristorante."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Cover the scene and repeat the call in four turns: three people, Friday at eight, under the name Olmi.",
+            "it": "Copri la scena e rifai la telefonata in quattro battute: tre persone, venerdì alle otto, a nome Olmi."
+          },
+          "frame": {
+            "en": "A table for ___ for ___. — At what time? — At ___, under the name ___. — Perfect: ___.",
+            "it": "Un tavolo per ___ per ___. — A che ora? — Alle ___, a nome ___. — Perfetto: ___."
+          },
+          "model": {
+            "en": "Good evening, a table for three for Friday, please. — At what time? — At eight, under the name Olmi. — Perfect: Friday at eight, for three.",
+            "it": "Buonasera, un tavolo per tre per venerdì, per favore. — A che ora? — Alle otto, a nome Olmi. — Perfetto: venerdì alle otto, per tre."
+          },
+          "rubric": [
+            {
+              "en": "I changed the party size, day, time and surname.",
+              "it": "Ho cambiato numero, giorno, ora e cognome nella prenotazione."
+            },
+            {
+              "en": "The final confirmation repeats the new details without reverting to the scene.",
+              "it": "La conferma finale ripete i nuovi dati senza tornare a quelli della scena."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso1-u04-find-common-ground",
+      "bank": "espresso1-u04",
+      "notes": [
+        {
+          "en": "You can agree without repeating the entire sentence. Recall the short response first, then add a new detail if you want.",
+          "it": "Puoi essere d’accordo senza ripetere tutta la frase. Recupera prima la risposta breve, poi aggiungi un dettaglio se vuoi."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: I like cycling.",
+          "it": "A: Mi piace andare in bicicletta."
+        },
+        {
+          "en": "B: So do I. But I do not like running.",
+          "it": "B: Anche a me. Però non mi piace correre."
+        },
+        {
+          "en": "A: Neither do I. Shall we go cycling on Saturday?",
+          "it": "A: Neanche a me. Andiamo in bicicletta sabato?"
+        },
+        {
+          "en": "B: Yes, at ten!",
+          "it": "B: Sì, alle dieci!"
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "On which day do they suggest cycling? Write only the Italian day.",
+          "it": "Per quale giorno propongono di andare in bicicletta? Scrivi solo il giorno."
+        },
+        "answers": [
+          "sabato"
+        ],
+        "explanation": {
+          "en": "Andiamo in bicicletta sabato? contains the proposed day.",
+          "it": "Andiamo in bicicletta sabato? contiene il giorno proposto."
+        }
+      },
+      "frame": {
+        "en": "I like ___. — So do I. I do not like ___. — Neither do I.",
+        "it": "Mi piace ___. — Anche a me. Non mi piace ___. — Neanche a me."
+      },
+      "speaking": {
+        "en": "Play both roles, then change one response to A me sì or A me no and say the new exchange.",
+        "it": "Interpreta entrambi i ruoli, poi cambia una risposta in A me sì o A me no e ripeti lo scambio."
+      },
+      "resource": "hobby",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "Which activity do both speakers enjoy? Complete in Italian: andare in ___.",
+            "it": "Quale attività piace a entrambi? Completa: andare in ___."
+          },
+          "answers": [
+            "bicicletta"
+          ],
+          "explanation": {
+            "en": "Anche a me confirms that both enjoy cycling.",
+            "it": "Anche a me conferma che il piacere di andare in bicicletta è condiviso."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Without reading, create four turns: both enjoy dancing, but only one enjoys swimming. Suggest Friday at six.",
+            "it": "Senza leggere, crea quattro battute: a entrambi piace ballare, ma solo a uno piace nuotare. Proponi venerdì alle sei."
+          },
+          "frame": {
+            "en": "I like ___. — So do I! I do not like ___. — I do. Shall we ___ on Friday? — Yes, at ___.",
+            "it": "Mi piace ___. — Anche a me! Non mi piace ___. — A me sì. ___ venerdì? — Sì, alle ___."
+          },
+          "model": {
+            "en": "I like dancing. — So do I! I do not like swimming. — I do. Shall we dance on Friday? — Yes, at six.",
+            "it": "Mi piace ballare. — Anche a me! Non mi piace nuotare. — A me sì. Balliamo venerdì? — Sì, alle sei."
+          },
+          "rubric": [
+            {
+              "en": "I expressed a shared preference with anche a me and a contrast with a me sì.",
+              "it": "Ho espresso un gusto condiviso con anche a me e un contrasto con a me sì."
+            },
+            {
+              "en": "I changed the activities, day and time from the scene.",
+              "it": "Ho cambiato attività, giorno e ora rispetto alla scena."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso1-u05-choose-a-stay",
+      "bank": "espresso1-u05",
+      "notes": [
+        {
+          "en": "Decide what matters before asking about rooms. One clear facility question and one reason make the exchange usable.",
+          "it": "Decidi che cosa conta prima di chiedere le camere. Una domanda chiara su un servizio e una ragione rendono lo scambio utile."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: I am looking for a room from the fifth to the eighth of July.",
+          "it": "A: Cerco una camera dal cinque all’otto luglio."
+        },
+        {
+          "en": "B: There is a room with a balcony.",
+          "it": "B: C’è una camera con balcone."
+        },
+        {
+          "en": "A: Is there also a kitchen?",
+          "it": "A: C’è anche una cucina?"
+        },
+        {
+          "en": "B: Yes, and it is on the ground floor.",
+          "it": "B: Sì, ed è al piano terra."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Which facility does A ask about? Write the Italian noun.",
+          "it": "Di quale servizio chiede A? Scrivi il nome italiano."
+        },
+        "answers": [
+          "cucina"
+        ],
+        "explanation": {
+          "en": "C’è anche una cucina? asks about the kitchen.",
+          "it": "C’è anche una cucina? chiede della cucina."
+        }
+      },
+      "frame": {
+        "en": "I am looking for a room from ___ to ___. Is there ___? I choose this hotel because ___.",
+        "it": "Cerco una camera dal ___ al ___. C’è ___? Scelgo questo albergo perché ___."
+      },
+      "speaking": {
+        "en": "Ask about two possible stays and choose one aloud. Give a reason each time.",
+        "it": "Chiedi di due possibili alloggi e scegline uno a voce. Ogni volta indica una ragione."
+      },
+      "resource": "booking",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "What is A looking for during the stay? Write only the Italian noun. Leave out articles and possessives.",
+            "it": "Che cosa cerca A per il soggiorno? Scrivi solo il nome. Non aggiungere articoli o possessivi."
+          },
+          "answers": [
+            "camera"
+          ],
+          "explanation": {
+            "en": "The scene concerns finding a room and checking its facilities.",
+            "it": "La scena riguarda la ricerca di una camera e dei suoi servizi."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Cover the scene. Ask for a room from the second to the fourth of June and ask whether there is a kitchen and a lift. Use three sentences.",
+            "it": "Copri la scena. Cerca una camera dal due al quattro giugno e chiedi se ci sono cucina e ascensore. Usa tre frasi."
+          },
+          "frame": {
+            "en": "I am looking for a room from ___ to ___. Is there a ___? Is there a ___?",
+            "it": "Cerco una camera dal ___ al ___. C’è una ___? C’è un ___?"
+          },
+          "model": {
+            "en": "I am looking for a room from the second to the fourth of June. Is there a kitchen? Is there a lift?",
+            "it": "Cerco una camera dal due al quattro giugno. C’è una cucina? C’è un ascensore?"
+          },
+          "rubric": [
+            {
+              "en": "I used the new dates with dal and al.",
+              "it": "Ho usato le nuove date con dal e al."
+            },
+            {
+              "en": "I asked two separate c’è questions with suitable articles.",
+              "it": "Ho formulato due domande distinte con c’è e l’articolo adatto."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso1-u06-plan-a-celebration",
+      "bank": "espresso1-u06",
+      "notes": [
+        {
+          "en": "An invitation becomes easier to answer when the day and time are clear. Ask one routine question rather than guessing the other person’s availability.",
+          "it": "È più facile rispondere a un invito quando il giorno e l’ora sono chiari. Fai una domanda sulle abitudini invece di indovinare la disponibilità altrui."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: My birthday celebration is on Sunday at four. Are you coming?",
+          "it": "A: La mia festa di compleanno è domenica alle quattro. Vieni?"
+        },
+        {
+          "en": "B: Yes! I work in the morning.",
+          "it": "B: Sì! La mattina lavoro."
+        },
+        {
+          "en": "A: What time do you finish?",
+          "it": "A: A che ora finisci?"
+        },
+        {
+          "en": "B: At two. I have time!",
+          "it": "B: Alle due. Ho tempo!"
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "At what time does B finish work? Write only the number in Italian.",
+          "it": "A che ora finisce di lavorare B? Scrivi solo il numero in lettere."
+        },
+        "answers": [
+          "due"
+        ],
+        "explanation": {
+          "en": "B says alle due.",
+          "it": "B dice alle due."
+        }
+      },
+      "frame": {
+        "en": "My party is on ___ at ___. Are you coming? What time do you ___?",
+        "it": "La mia festa è ___ alle ___. Vieni? A che ora ___?"
+      },
+      "speaking": {
+        "en": "Say an invitation and answer it in the other role. Change the work schedule on the second try.",
+        "it": "Pronuncia un invito e rispondi nell’altro ruolo. Al secondo giro cambia l’orario di lavoro."
+      },
+      "resource": "present-drill",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "What occasion is the invitation for? Complete in Italian: una festa di ___.",
+            "it": "Di quale ricorrenza parla l’invito? Completa: una festa di ___."
+          },
+          "answers": [
+            "compleanno"
+          ],
+          "explanation": {
+            "en": "The invitation is for a birthday party; work affects the reply.",
+            "it": "L’invito riguarda una festa di compleanno, non un turno di lavoro."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Without reading, play four turns: a party on Saturday at five; the guest works in the morning and finishes at three. Confirm there is enough time.",
+            "it": "Senza leggere, interpreta quattro battute: festa sabato alle cinque; l’ospite lavora la mattina e finisce alle tre. Conferma che ha tempo."
+          },
+          "frame": {
+            "en": "The party is on ___ at ___. Are you coming? — Yes, but in the morning I ___. — What time do you finish? — At ___. I have time!",
+            "it": "La festa è ___ alle ___. Vieni? — Sì, ma la mattina ___. — A che ora finisci? — Alle ___. Ho tempo!"
+          },
+          "model": {
+            "en": "The party is on Saturday at five. Are you coming? — Yes, but I work in the morning. — What time do you finish? — At three. I have time!",
+            "it": "La festa è sabato alle cinque. Vieni? — Sì, ma la mattina lavoro. — A che ora finisci? — Alle tre. Ho tempo!"
+          },
+          "rubric": [
+            {
+              "en": "I distinguished the party time from the work finishing time.",
+              "it": "Ho distinto l’ora della festa dall’ora in cui finisce il lavoro."
+            },
+            {
+              "en": "I changed the day and times while keeping the invitation coherent.",
+              "it": "Ho cambiato giorno e orari senza perdere il senso dell’invito."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso1-u07-find-an-open-place",
+      "bank": "espresso1-u07",
+      "notes": [
+        {
+          "en": "If the first place is closed, keep the goal and ask about another place. You can reuse the same small set of questions.",
+          "it": "Se il primo posto è chiuso, mantieni l’obiettivo e chiedi di un altro luogo. Puoi riusare le stesse poche domande."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Excuse me, is there a bakery nearby?",
+          "it": "A: Scusi, c’è un panificio qui vicino?"
+        },
+        {
+          "en": "B: Yes, but it is closed. The market is open.",
+          "it": "B: Sì, ma è chiuso. Il mercato è aperto."
+        },
+        {
+          "en": "A: Where is the market?",
+          "it": "A: Dov’è il mercato?"
+        },
+        {
+          "en": "B: Behind the station. It closes at one.",
+          "it": "B: Dietro la stazione. Chiude all’una."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Where is the market? Complete: Dietro la ___.",
+          "it": "Dov’è il mercato? Completa: Dietro la ___."
+        },
+        "answers": [
+          "stazione"
+        ],
+        "explanation": {
+          "en": "The market is behind the station.",
+          "it": "Il mercato è dietro la stazione."
+        }
+      },
+      "frame": {
+        "en": "Is there ___ nearby? Where is ___? What time does it open? I go there ___.",
+        "it": "C’è ___ qui vicino? Dov’è ___? A che ora apre? Ci vado ___."
+      },
+      "speaking": {
+        "en": "Ask for a place, hear that it is closed, and ask for an alternative in the other role.",
+        "it": "Chiedi un luogo, scopri che è chiuso e domanda un’alternativa nell’altro ruolo."
+      },
+      "resource": "club",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "Which place is the open alternative? Write only the Italian noun. Leave out articles and possessives.",
+            "it": "Quale posto è l’alternativa aperta? Scrivi solo il nome. Non aggiungere articoli o possessivi."
+          },
+          "answers": [
+            "mercato"
+          ],
+          "explanation": {
+            "en": "The bakery is closed; the market is the available alternative.",
+            "it": "Il panificio è chiuso; il mercato è l’alternativa disponibile."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Cover the scene. In four turns ask for a pharmacy: the nearby one is closed, but another is next to the cinema and closes at six.",
+            "it": "Copri la scena. In quattro battute chiedi una farmacia: quella vicina è chiusa, ma un’altra è accanto al cinema e chiude alle sei."
+          },
+          "frame": {
+            "en": "Is there a ___ near here? — Yes, but it is ___. Another is ___. — What time does it close? — At ___.",
+            "it": "C’è una ___ qui vicino? — Sì, ma è ___. Un’altra è ___. — A che ora chiude? — Alle ___."
+          },
+          "model": {
+            "en": "Excuse me, is there a pharmacy near here? — Yes, but it is closed. Another is next to the cinema. — What time does it close? — At six.",
+            "it": "Scusi, c’è una farmacia qui vicino? — Sì, ma è chiusa. Un’altra è accanto al cinema. — A che ora chiude? — Alle sei."
+          },
+          "rubric": [
+            {
+              "en": "I used the feminine agreement farmacia/chiusa.",
+              "it": "Ho usato farmacia/chiusa con accordo femminile."
+            },
+            {
+              "en": "I gave a new location and a coherent closing time for the alternative.",
+              "it": "Ho dato una nuova posizione e un orario coerente per l’alternativa."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso1-u08-change-the-itinerary",
+      "bank": "espresso1-u08",
+      "notes": [
+        {
+          "en": "Your story needs a change and a result, not a list of every hour. The model uses one possible speaker; change andato to andata when appropriate.",
+          "it": "Il racconto richiede un cambiamento e un risultato, non l’elenco di ogni ora. Il modello usa una possibile voce: cambia andato in andata quando serve."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Did you go to the beach on Tuesday?",
+          "it": "A: Siete andati al mare martedì?"
+        },
+        {
+          "en": "B: No, it rained. We visited a gallery.",
+          "it": "B: No, ha piovuto. Abbiamo visitato una galleria."
+        },
+        {
+          "en": "A: Did you buy anything?",
+          "it": "A: Avete comprato qualcosa?"
+        },
+        {
+          "en": "B: No, we did not buy anything, but we took lots of photos.",
+          "it": "B: No, non abbiamo comprato niente, ma abbiamo fatto molte foto."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What did they visit? Write the Italian noun.",
+          "it": "Che cosa hanno visitato? Scrivi il nome italiano."
+        },
+        "answers": [
+          "galleria",
+          "una galleria"
+        ],
+        "explanation": {
+          "en": "They say abbiamo visitato una galleria.",
+          "it": "Dicono abbiamo visitato una galleria."
+        }
+      },
+      "frame": {
+        "en": "On ___ it rained, so I/we ___. Afterwards I/we did not ___ anything.",
+        "it": "___ ha piovuto, quindi ho/abbiamo ___. Poi non ho/abbiamo ___ niente."
+      },
+      "speaking": {
+        "en": "Tell the day from memory, then tell it for two female travellers and check the essere participles.",
+        "it": "Racconta la giornata a memoria, poi raccontala per due viaggiatrici e controlla i participi con essere."
+      },
+      "resource": "past-listening",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "What changes the day’s plan? Complete in Italian: ha ___.",
+            "it": "Quale fatto cambia il programma della giornata? Completa: ha ___."
+          },
+          "answers": [
+            "piovuto"
+          ],
+          "explanation": {
+            "en": "The rain explains why an indoor visit replaces the beach trip.",
+            "it": "La pioggia spiega perché la visita sostituisce la giornata al mare."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Without reading, recount three facts using noi: it rained on Wednesday, you went to the cinema and you did not buy anything.",
+            "it": "Senza leggere, racconta tre fatti usando noi per le azioni del gruppo: mercoledì ha piovuto, siete andati al cinema e non avete comprato niente."
+          },
+          "frame": {
+            "en": "On Wednesday it ___. We went ___. We did not buy ___.",
+            "it": "Mercoledì ha ___. Siamo andati ___. Non abbiamo comprato ___."
+          },
+          "model": {
+            "en": "It rained on Wednesday. We went to the cinema. We did not buy anything.",
+            "it": "Mercoledì ha piovuto. Siamo andati al cinema. Non abbiamo comprato niente."
+          },
+          "rubric": [
+            {
+              "en": "I distinguished ha piovuto, siamo andati and abbiamo comprato.",
+              "it": "Ho distinto ha piovuto, siamo andati e abbiamo comprato."
+            },
+            {
+              "en": "I changed the day and destination and retained non… niente.",
+              "it": "Ho cambiato il giorno e la destinazione e mantenuto non… niente."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso1-u09-plan-the-ingredients",
+      "bank": "espresso1-u09",
+      "notes": [
+        {
+          "en": "Ne does not carry the quantity by itself: keep due, tre or the measure. Practise changing only the quantity before inventing a longer recipe.",
+          "it": "Ne non indica da solo la quantità: conserva due, tre o la misura. Esercitati a cambiare solo la quantità prima di inventare una ricetta più lunga."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: For the picnic I buy a kilo of tomatoes.",
+          "it": "A: Per il picnic compro un chilo di pomodori."
+        },
+        {
+          "en": "B: And how many apples do you buy?",
+          "it": "B: E quante mele compri?"
+        },
+        {
+          "en": "A: I buy four. Do you buy the bread?",
+          "it": "A: Ne compro quattro. Compri tu il pane?"
+        },
+        {
+          "en": "B: Yes, I take half a kilo.",
+          "it": "B: Sì, ne prendo mezzo chilo."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "How many apples does A buy? Write the number in Italian.",
+          "it": "Quante mele compra A? Scrivi il numero in lettere."
+        },
+        "answers": [
+          "quattro"
+        ],
+        "explanation": {
+          "en": "Ne compro quattro refers back to mele.",
+          "it": "Ne compro quattro riprende mele."
+        }
+      },
+      "frame": {
+        "en": "I buy ___ of ___. How many ___ do you buy? I buy ___ of them.",
+        "it": "Compro ___ di ___. Quanti/Quante ___ compri? Ne compro ___."
+      },
+      "speaking": {
+        "en": "Plan a picnic for two, then for four. Change each quantity aloud and keep ne in the replies.",
+        "it": "Organizza un picnic per due, poi per quattro. Cambia ogni quantità a voce e mantieni ne nelle risposte."
+      },
+      "resource": "club",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "What occasion are they shopping for? Write the noun used in the scene. Leave out articles and possessives.",
+            "it": "Per quale occasione fanno la spesa? Scrivi il nome usato nella scena. Non aggiungere articoli o possessivi."
+          },
+          "answers": [
+            "picnic"
+          ],
+          "explanation": {
+            "en": "The opening per il picnic gives the shared purpose of the shopping.",
+            "it": "L’inizio per il picnic dà lo scopo comune degli acquisti."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Cover the scene. For a new picnic buy six apples and a kilo of bread. Play four turns with two replies using ne.",
+            "it": "Copri la scena. Per un nuovo picnic compra sei mele e un chilo di pane. Interpreta quattro battute con due risposte che usano ne."
+          },
+          "frame": {
+            "en": "How many apples are you buying? — I am buying ___. — How much bread are you getting? — I am getting ___.",
+            "it": "Quante mele compri? — Ne compro ___. — Quanto pane prendi? — Ne prendo ___."
+          },
+          "model": {
+            "en": "How many apples are you buying? — I am buying six. — How much bread are you getting? — I am getting a kilo.",
+            "it": "Quante mele compri? — Ne compro sei. — Quanto pane prendi? — Ne prendo un chilo."
+          },
+          "rubric": [
+            {
+              "en": "I distinguished quante mele from quanto pane.",
+              "it": "Ho distinto quante mele da quanto pane."
+            },
+            {
+              "en": "I used ne twice with the new quantities, without repeating the nouns.",
+              "it": "Ho usato ne due volte con le nuove quantità, senza ripetere i nomi."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso1-u10-recount-a-celebration",
+      "bank": "espresso1-u10",
+      "notes": [
+        {
+          "en": "Use the family relationship as a clue for agreement: mia zia → si è preparata; i miei zii → si sono preparati. Non-reflexive preparare uses avere.",
+          "it": "Usa il rapporto di parentela come indizio per la concordanza: mia zia → si è preparata; i miei zii → si sono preparati. Il verbo non riflessivo preparare usa avere."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Who prepared the celebration?",
+          "it": "A: Chi ha preparato la festa?"
+        },
+        {
+          "en": "B: My cousins. They got up at seven.",
+          "it": "B: Le mie cugine. Si sono alzate alle sette."
+        },
+        {
+          "en": "A: And your brother?",
+          "it": "A: E tuo fratello?"
+        },
+        {
+          "en": "B: He got ready later and brought the cake.",
+          "it": "B: Si è preparato dopo e ha portato la torta."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What did the brother bring? Write the Italian noun.",
+          "it": "Che cosa ha portato il fratello? Scrivi il nome italiano."
+        },
+        "answers": [
+          "torta",
+          "la torta"
+        ],
+        "explanation": {
+          "en": "Ha portato la torta gives his contribution.",
+          "it": "Ha portato la torta indica il suo contributo."
+        }
+      },
+      "frame": {
+        "en": "My ___ got up at ___. My ___ got ready and brought ___.",
+        "it": "Mia/Mio ___ si è alzata/alzato alle ___. Mia/Mio ___ si è preparata/preparato e ha portato ___."
+      },
+      "speaking": {
+        "en": "Tell the event first about a sister, then about two brothers. Change the possessives and participles aloud.",
+        "it": "Racconta l’evento prima con una sorella, poi con due fratelli. Cambia a voce possessivi e participi."
+      },
+      "resource": "auxiliary-drill",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "Which relatives prepared the party? Write only the plural Italian noun. Leave out articles and possessives.",
+            "it": "Quali parenti hanno preparato la festa? Scrivi solo il nome plurale. Non aggiungere articoli o possessivi."
+          },
+          "answers": [
+            "cugine"
+          ],
+          "explanation": {
+            "en": "Le mie cugine identifies the relatives who organised the party.",
+            "it": "Le mie cugine risponde a chi ha organizzato la festa."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Without reading, change the roles: your sister got up at eight, and two brothers got ready later and brought flowers. Use two sentences.",
+            "it": "Senza leggere, cambia i ruoli: tua sorella si è alzata alle otto e due fratelli si sono preparati dopo e hanno portato i fiori. Usa due frasi."
+          },
+          "frame": {
+            "en": "My sister got up at ___. My brothers got ready ___ and brought ___.",
+            "it": "Mia sorella si è alzata alle ___. I miei fratelli si sono preparati ___ e hanno portato ___."
+          },
+          "model": {
+            "en": "My sister got up at eight. My brothers got ready later and brought flowers.",
+            "it": "Mia sorella si è alzata alle otto. I miei fratelli si sono preparati dopo e hanno portato i fiori."
+          },
+          "rubric": [
+            {
+              "en": "I used mia sorella but i miei fratelli.",
+              "it": "Ho usato mia sorella ma i miei fratelli."
+            },
+            {
+              "en": "I matched alzata and preparati to their subjects and retained hanno portato.",
+              "it": "Ho accordato alzata e preparati e mantenuto hanno portato."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso2-u01-choose-a-gift",
+      "bank": "espresso2-u01",
+      "notes": [
+        {
+          "en": "Keep two decisions separate: the recipient chooses gli/le; the item chooses piace/piacciono. The optional A1 resource refreshes agreement before this A2 transfer.",
+          "it": "Separa due scelte: il destinatario determina gli/le; l’oggetto determina piace/piacciono. La risorsa A1 facoltativa ripassa la concordanza prima di questo compito A2."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: These gloves are for Irene.",
+          "it": "A: Questi guanti sono per Irene."
+        },
+        {
+          "en": "B: Does she like yellow?",
+          "it": "B: Le piace il giallo?"
+        },
+        {
+          "en": "A: Yes, but the blue gloves are warmer than the yellow ones.",
+          "it": "A: Sì, ma i guanti blu sono più caldi di quelli gialli."
+        },
+        {
+          "en": "B: Then let’s choose the blue ones.",
+          "it": "B: Allora scegliamo quelli blu."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Which gloves do they choose? Write only the colour in Italian.",
+          "it": "Quali guanti scelgono? Scrivi solo il colore in italiano."
+        },
+        "answers": [
+          "blu"
+        ],
+        "explanation": {
+          "en": "The final choice is quelli blu.",
+          "it": "La scelta finale è quelli blu."
+        }
+      },
+      "frame": {
+        "en": "It is for ___. They like ___. This item is more/less ___ than that one.",
+        "it": "È per ___. Gli/Le piace ___. Questo/Questa è più/meno ___ di quello/quella."
+      },
+      "speaking": {
+        "en": "Compare two imaginary gifts, then change the recipient and the pronoun.",
+        "it": "Confronta due regali immaginari, poi cambia il destinatario e il pronome."
+      },
+      "resource": "articles-drill",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "Who are the gloves for? Write only the person’s name.",
+            "it": "A chi sono destinati i guanti? Scrivi solo il nome della persona."
+          },
+          "answers": [
+            "Irene"
+          ],
+          "explanation": {
+            "en": "Irene is the recipient; the comparison helps choose her gift.",
+            "it": "Il destinatario è Irene; il confronto serve a scegliere il suo regalo."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Cover the scene. Choose a gift for Paolo: he likes green and the green scarf is cheaper than the red one. Summarise in three sentences.",
+            "it": "Copri la scena. Scegli un regalo per Paolo: gli piace il verde e la sciarpa verde è meno cara di quella rossa. Riassumi in tre frasi."
+          },
+          "frame": {
+            "en": "The gift is for ___. He likes ___. The ___ scarf is cheaper than the ___ one.",
+            "it": "Il regalo è per ___. Gli piace ___. La sciarpa ___ è meno cara di quella ___."
+          },
+          "model": {
+            "en": "The gift is for Paolo. He likes green. The green scarf is cheaper than the red one.",
+            "it": "Il regalo è per Paolo. Gli piace il verde. La sciarpa verde è meno cara di quella rossa."
+          },
+          "rubric": [
+            {
+              "en": "I changed the recipient and used gli for Paolo.",
+              "it": "Ho cambiato destinatario e usato gli per Paolo."
+            },
+            {
+              "en": "I made a coherent comparison with meno… di.",
+              "it": "Ho formulato un confronto coerente con meno… di."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso2-u02-remember-a-place",
+      "bank": "espresso2-u02",
+      "notes": [
+        {
+          "en": "A childhood memory can be invented. Focus on the repeated situation rather than searching for a single date. The optional A1 resource is a warm-up for verb persons.",
+          "it": "Il ricordo d’infanzia può essere inventato. Concentrati sulla situazione abituale senza cercare una data precisa. La risorsa A1 facoltativa prepara al ripasso delle persone verbali."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What was your street like?",
+          "it": "A: Com’era la tua strada?"
+        },
+        {
+          "en": "B: It was narrow and there was a fountain.",
+          "it": "B: Era stretta e c’era una fontana."
+        },
+        {
+          "en": "A: Did you play there?",
+          "it": "A: Ci giocavi?"
+        },
+        {
+          "en": "B: Yes, we played there every evening.",
+          "it": "B: Sì, ci giocavamo ogni sera."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What was in the street? Write the Italian noun.",
+          "it": "Che cosa c’era nella strada? Scrivi il nome italiano."
+        },
+        "answers": [
+          "fontana",
+          "una fontana"
+        ],
+        "explanation": {
+          "en": "B remembers a fountain: c’era una fontana.",
+          "it": "B ricorda una fontana: c’era una fontana."
+        }
+      },
+      "frame": {
+        "en": "The place was ___. We used to ___ there every ___.",
+        "it": "Il luogo era ___. Ci ___ ogni ___."
+      },
+      "speaking": {
+        "en": "Describe a place in thirty seconds. Tell the same memory again with noi instead of io.",
+        "it": "Descrivi un luogo in trenta secondi. Ripeti il ricordo con noi invece di io."
+      },
+      "resource": "present-drill",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "Which place is being remembered? Write the noun in the opening question. Leave out articles and possessives.",
+            "it": "Quale luogo viene ricordato? Scrivi il nome nella prima domanda. Non aggiungere articoli o possessivi."
+          },
+          "answers": [
+            "strada"
+          ],
+          "explanation": {
+            "en": "The exchange recalls what a street was like and what people did there.",
+            "it": "La conversazione ricostruisce com’era una strada e come veniva usata."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Without reading, describe your old courtyard: it was large, had a tree and you played there every afternoon. Speak using noi.",
+            "it": "Senza leggere, descrivi il vostro cortile: era grande, aveva un albero e ci giocavate ogni pomeriggio. Parla usando noi."
+          },
+          "frame": {
+            "en": "Our courtyard was ___. There was ___. We used to play there every ___.",
+            "it": "Il nostro cortile era ___. C’era ___. Ci giocavamo ogni ___."
+          },
+          "model": {
+            "en": "Our courtyard was large. There was a tree. We used to play there every afternoon.",
+            "it": "Il nostro cortile era grande. C’era un albero. Ci giocavamo ogni pomeriggio."
+          },
+          "rubric": [
+            {
+              "en": "I used the imperfetto for the description and habit.",
+              "it": "Ho usato l’imperfetto per descrizione e abitudine."
+            },
+            {
+              "en": "I changed the street, fountain and evening to a courtyard, tree and afternoon, and used ci.",
+              "it": "Ho cambiato strada/fontana/sera in cortile/albero/pomeriggio e usato ci."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso2-u03-ask-for-a-favour",
+      "bank": "espresso2-u03",
+      "notes": [
+        {
+          "en": "A useful polite exchange includes an answer, not only the request. The optional resource reviews basic modal meaning; practise the conditional forms in this scene.",
+          "it": "Uno scambio gentile utile comprende anche la risposta, non solo la richiesta. La risorsa facoltativa ripassa il significato dei modali; esercita qui le forme del condizionale."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Could you check the address?",
+          "it": "A: Potresti controllare l’indirizzo?"
+        },
+        {
+          "en": "B: I could do it after lunch.",
+          "it": "B: Potrei farlo dopo pranzo."
+        },
+        {
+          "en": "A: That is fine. I would like to send the letter tonight.",
+          "it": "A: Va bene. Vorrei spedire la lettera stasera."
+        },
+        {
+          "en": "B: Then I will check it at two.",
+          "it": "B: Allora lo controllo alle due."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "When does B offer to check the address? Complete in Italian: Dopo ___.",
+          "it": "Quando propone B di controllare l’indirizzo? Completa in italiano: Dopo ___."
+        },
+        "answers": [
+          "pranzo"
+        ],
+        "explanation": {
+          "en": "B says dopo pranzo, then specifies alle due.",
+          "it": "B dice dopo pranzo, poi precisa alle due."
+        }
+      },
+      "frame": {
+        "en": "Could you ___? I cannot manage now, but I could ___ at ___.",
+        "it": "Potresti ___? Adesso non ce la faccio, ma potrei ___ alle ___."
+      },
+      "speaking": {
+        "en": "Ask for a favour, refuse the first time politely, then agree on an alternative in both roles.",
+        "it": "Chiedi un favore, rifiuta gentilmente il primo momento proposto e concorda un’alternativa nei due ruoli."
+      },
+      "resource": "transfer",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "What favour is requested? Complete in Italian: controllare l’___.",
+            "it": "Quale favore viene chiesto? Completa: controllare l’___."
+          },
+          "answers": [
+            "indirizzo"
+          ],
+          "explanation": {
+            "en": "The favour is to check an address; the time is agreed afterwards.",
+            "it": "Il favore è controllare un indirizzo; l’orario viene concordato dopo."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Cover the scene. Play four turns: ask someone to read a draft; they can tomorrow at nine; accept and confirm the agreement.",
+            "it": "Copri la scena. Interpreta quattro battute: chiedi di leggere una bozza; l’altra persona può domani alle nove; accetta e conferma l’accordo."
+          },
+          "frame": {
+            "en": "Could you ___? — I could ___ tomorrow at ___. — That works for me. — Then ___.",
+            "it": "Potresti ___? — Potrei ___ domani alle ___. — Per me va bene. — Allora ___."
+          },
+          "model": {
+            "en": "Could you read my draft? — I could read it tomorrow at nine. — That works for me. — Then I will read it tomorrow at nine.",
+            "it": "Potresti leggere la mia bozza? — Potrei leggerla domani alle nove. — Per me va bene. — Allora la leggo domani alle nove."
+          },
+          "rubric": [
+            {
+              "en": "I used potresti for the request and potrei for the offer.",
+              "it": "Ho usato potresti per la richiesta e potrei per l’offerta."
+            },
+            {
+              "en": "I changed the object and time and kept four coherent turns.",
+              "it": "Ho cambiato oggetto e orario e mantenuto quattro turni coerenti."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso2-u04-coordinate-an-outing",
+      "bank": "espresso2-u04",
+      "notes": [
+        {
+          "en": "Before forming the participle, name the replaced noun and its gender/number. The optional past resource reviews auxiliaries; this scene adds pronoun agreement.",
+          "it": "Prima di formare il participio, nomina il nome sostituito e il suo genere/numero. La risorsa facoltativa sul passato ripassa gli ausiliari; questa scena aggiunge la concordanza con il pronome."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What are you doing?",
+          "it": "A: Che cosa stai facendo?"
+        },
+        {
+          "en": "B: I am looking for the theatre address.",
+          "it": "B: Sto cercando l’indirizzo del teatro."
+        },
+        {
+          "en": "A: And the two seats?",
+          "it": "A: E i due posti?"
+        },
+        {
+          "en": "B: I have already reserved them. We meet at seven.",
+          "it": "B: Li ho già prenotati. Ci vediamo alle sette."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "At what time will they meet? Write the number in Italian.",
+          "it": "A che ora si vedono? Scrivi il numero in lettere."
+        },
+        "answers": [
+          "sette"
+        ],
+        "explanation": {
+          "en": "The final line gives alle sette.",
+          "it": "L’ultima battuta indica alle sette."
+        }
+      },
+      "frame": {
+        "en": "I am ___ now. The ___? I have already ___ them.",
+        "it": "Adesso sto ___. I/Le ___? Li/Le ho già ___."
+      },
+      "speaking": {
+        "en": "Say what is happening and what is already done. On the second try replace a masculine plural noun with a feminine plural noun.",
+        "it": "Dì che cosa è in corso e che cosa è già fatto. Al secondo giro sostituisci un nome maschile plurale con uno femminile plurale."
+      },
+      "resource": "auxiliary-drill",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "Which venue are they preparing to visit? Write only the Italian noun. Leave out articles and possessives.",
+            "it": "Per quale luogo stanno organizzando l’uscita? Scrivi solo il nome. Non aggiungere articoli o possessivi."
+          },
+          "answers": [
+            "teatro"
+          ],
+          "explanation": {
+            "en": "They are finding the theatre address and have already booked seats.",
+            "it": "Cercano l’indirizzo del teatro e hanno già prenotato i posti."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Without reading, move the outing to the museum at eight. Say you are looking for the address and have already booked two visits; replace visite with le.",
+            "it": "Senza leggere, sposta l’uscita al museo alle otto. Dì che cerchi l’indirizzo e che le due visite sono già prenotate; riprendi visite con le."
+          },
+          "frame": {
+            "en": "I am looking for ___. The two visits? I have already ___ them. We meet at ___.",
+            "it": "Sto cercando ___. Le due visite? Le ho già ___. Ci vediamo alle ___."
+          },
+          "model": {
+            "en": "I am looking for the museum address. The two visits? I have already booked them. We meet at eight.",
+            "it": "Sto cercando l’indirizzo del museo. Le due visite? Le ho già prenotate. Ci vediamo alle otto."
+          },
+          "rubric": [
+            {
+              "en": "I used sto cercando for the action in progress.",
+              "it": "Ho usato sto cercando per l’azione in corso."
+            },
+            {
+              "en": "I used le… prenotate for visite and changed the venue and time.",
+              "it": "Ho usato le… prenotate per visite e cambiato luogo e ora."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso2-u05-explain-a-delay",
+      "bank": "espresso2-u05",
+      "notes": [
+        {
+          "en": "Ask whether the sentence gives the scene or moves the story forward. Time words help, but meaning decides the tense. The optional A1 listening refreshes finished events.",
+          "it": "Chiediti se la frase descrive la scena o fa avanzare il racconto. Le parole di tempo aiutano, ma è il significato a decidere il tempo verbale. L’ascolto A1 facoltativo ripassa gli eventi conclusi."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Why are you late?",
+          "it": "A: Perché sei in ritardo?"
+        },
+        {
+          "en": "B: I was waiting for the bus when it started raining.",
+          "it": "B: Aspettavo l’autobus quando ha cominciato a piovere."
+        },
+        {
+          "en": "A: How long does it take from the station?",
+          "it": "A: Quanto ci vuole dalla stazione?"
+        },
+        {
+          "en": "B: It takes fifteen minutes on foot.",
+          "it": "B: Ci vogliono quindici minuti a piedi."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "How many minutes does the walk take? Write the number in Italian.",
+          "it": "Quanti minuti dura il percorso a piedi? Scrivi il numero in lettere."
+        },
+        "answers": [
+          "quindici"
+        ],
+        "explanation": {
+          "en": "The answer is ci vogliono quindici minuti.",
+          "it": "La risposta è ci vogliono quindici minuti."
+        }
+      },
+      "frame": {
+        "en": "I was ___ when ___. From ___ it takes ___.",
+        "it": "___ quando ___. Da ___ ci vuole/ci vogliono ___."
+      },
+      "speaking": {
+        "en": "Explain a delay in thirty seconds. Repeat it with a one-hour journey, changing ci vogliono to ci vuole.",
+        "it": "Spiega un ritardo in trenta secondi. Ripetilo con un viaggio di un’ora, cambiando ci vogliono in ci vuole."
+      },
+      "resource": "past-listening",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "Which form of transport was B waiting for? Write only the Italian noun. Leave out articles and possessives.",
+            "it": "Quale mezzo stava aspettando B? Scrivi solo il nome del mezzo. Non aggiungere articoli o possessivi."
+          },
+          "answers": [
+            "autobus"
+          ],
+          "explanation": {
+            "en": "Waiting for the bus and the rain explain the delay.",
+            "it": "L’attesa dell’autobus e la pioggia spiegano il ritardo."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Cover the scene. Say you were waiting for the tram when you lost your umbrella. Add that the walk from the stop takes ten minutes.",
+            "it": "Copri la scena. Racconta che aspettavi il tram quando hai perso l’ombrello. Aggiungi che dalla fermata ci vogliono dieci minuti a piedi."
+          },
+          "frame": {
+            "en": "I was waiting for ___ when I ___. From the stop it takes ___ minutes on foot.",
+            "it": "Aspettavo ___ quando ho ___. Dalla fermata ci vogliono ___ minuti a piedi."
+          },
+          "model": {
+            "en": "I was waiting for the tram when I lost my umbrella. From the stop it takes ten minutes on foot.",
+            "it": "Aspettavo il tram quando ho perso l’ombrello. Dalla fermata ci vogliono dieci minuti a piedi."
+          },
+          "rubric": [
+            {
+              "en": "I distinguished the ongoing wait in the imperfetto from the event in the passato prossimo.",
+              "it": "Ho distinto l’attesa all’imperfetto dall’evento al passato prossimo."
+            },
+            {
+              "en": "I changed the transport, problem and duration and used ci vogliono with minuti.",
+              "it": "Ho cambiato mezzo, imprevisto e durata e usato ci vogliono con minuti."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso2-u06-suggest-a-break",
+      "bank": "espresso2-u06",
+      "notes": [
+        {
+          "en": "Practise instructions as language for an ordinary study break. The optional resource reviews present forms; the imperative and pronoun practice are in this scene.",
+          "it": "Esercita le istruzioni come lingua per una normale pausa dallo studio. La risorsa facoltativa ripassa il presente; l’imperativo e i pronomi si esercitano in questa scena."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: I have another message to read.",
+          "it": "A: Ho un altro messaggio da leggere."
+        },
+        {
+          "en": "B: Read it later. Take a break with me.",
+          "it": "B: Leggilo dopo. Fai una pausa con me."
+        },
+        {
+          "en": "A: Shall I bring the notebook?",
+          "it": "A: Porto il quaderno?"
+        },
+        {
+          "en": "B: No, leave it here. Do not study during the break.",
+          "it": "B: No, lascialo qui. Non studiare durante la pausa."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Where should the notebook stay? Write the Italian word meaning here.",
+          "it": "Dove deve restare il quaderno? Scrivi solo l’avverbio di luogo."
+        },
+        "answers": [
+          "qui",
+          "qua"
+        ],
+        "explanation": {
+          "en": "B says lascialo qui. Qua also means here.",
+          "it": "B dice lascialo qui. Anche qua significa qui."
+        }
+      },
+      "frame": {
+        "en": "Take ___. Leave it ___. Do not ___ now.",
+        "it": "Prendi ___. Lascialo/Lasciala ___. Non ___ adesso."
+      },
+      "speaking": {
+        "en": "Give a friend three study-break instructions. Replace one named object with lo or la on the second try.",
+        "it": "Dai a un amico tre istruzioni per la pausa. Al secondo giro sostituisci un oggetto nominato con lo o la."
+      },
+      "resource": "present-drill",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "What does B suggest instead of continuing to study? Write only the Italian noun. Leave out articles and possessives.",
+            "it": "Che cosa propone B invece di continuare a studiare? Scrivi solo il nome. Non aggiungere articoli o possessivi."
+          },
+          "answers": [
+            "pausa"
+          ],
+          "explanation": {
+            "en": "Taking a break is the main suggestion; the message and notebook are details.",
+            "it": "Fai una pausa è l’invito centrale; il messaggio e il quaderno sono dettagli."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Without reading, give a friend three instructions: turn off the phone, leave the book on the table and do not bring the notebook.",
+            "it": "Senza leggere, dai tre istruzioni a un amico: spegnere il telefono, lasciare il libro sul tavolo e non portare il quaderno."
+          },
+          "frame": {
+            "en": "Turn off ___. Leave it ___. Do not bring ___.",
+            "it": "Spegni ___. Lascialo ___. Non portare ___."
+          },
+          "model": {
+            "en": "Turn off the phone. The book? Leave it on the table. Do not bring the notebook.",
+            "it": "Spegni il telefono. Il libro? Lascialo sul tavolo. Non portare il quaderno."
+          },
+          "rubric": [
+            {
+              "en": "I used informal commands and non + infinitive for the prohibition.",
+              "it": "Ho usato l’imperativo informale e non + infinito per il divieto."
+            },
+            {
+              "en": "I replaced il libro with lo and changed the objects and location.",
+              "it": "Ho ripreso il libro con lo e cambiato oggetti e posizione."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso2-u07-navigate-an-appointment",
+      "bank": "espresso2-u07",
+      "notes": [
+        {
+          "en": "This is a language role-play about reception, not a treatment task. The optional A1 resource refreshes basic verb forms before the formal instructions.",
+          "it": "Questo è un gioco di ruolo linguistico sull’accettazione, non un compito sulle cure. La risorsa A1 facoltativa ripassa le forme verbali di base prima delle istruzioni formali."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Good morning, I have an appointment at ten.",
+          "it": "A: Buongiorno, ho un appuntamento alle dieci."
+        },
+        {
+          "en": "B: Please tell me your surname.",
+          "it": "B: Mi dica il Suo cognome, per favore."
+        },
+        {
+          "en": "A: Costa. Where should I wait?",
+          "it": "A: Costa. Dove aspetto?"
+        },
+        {
+          "en": "B: Wait in the room on the right, please.",
+          "it": "B: Aspetti nella sala a destra, per favore."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Which side is the waiting room on? Complete in Italian: A ___.",
+          "it": "Da quale lato è la sala d’attesa? Completa in italiano: A ___."
+        },
+        "answers": [
+          "destra"
+        ],
+        "explanation": {
+          "en": "The direction is nella sala a destra.",
+          "it": "L’indicazione è nella sala a destra."
+        }
+      },
+      "frame": {
+        "en": "I have an appointment at ___. Please tell me ___. Wait ___.",
+        "it": "Ho un appuntamento alle ___. Mi dica ___. Aspetti ___."
+      },
+      "speaking": {
+        "en": "Play the visitor and receptionist, then change the surname, appointment time and room direction.",
+        "it": "Interpreta la persona in visita e l’addetto all’accettazione, poi cambia cognome, ora e direzione della sala."
+      },
+      "resource": "present-drill",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "What brings A to reception? Write the noun used in the first line. Leave out articles and possessives.",
+            "it": "Quale impegno porta A all’accettazione? Scrivi il nome usato nella prima battuta. Non aggiungere articoli o possessivi."
+          },
+          "answers": [
+            "appuntamento"
+          ],
+          "explanation": {
+            "en": "A has an appointment and asks where to wait.",
+            "it": "A ha un appuntamento e chiede istruzioni per l’attesa."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Cover the scene. Play four turns with the surname Serra, an appointment at eleven and a room on the left. The receptionist uses formal Lei.",
+            "it": "Copri la scena. Interpreta quattro battute con cognome Serra, appuntamento alle undici e sala a sinistra. L’addetto usa Lei."
+          },
+          "frame": {
+            "en": "I have an appointment at ___. — Please tell me ___. — ___. Where should I wait? — Please wait ___.",
+            "it": "Ho un appuntamento alle ___. — Mi dica ___. — ___. Dove aspetto? — Aspetti ___."
+          },
+          "model": {
+            "en": "Good morning, I have an appointment at eleven. — Please tell me your surname. — Serra. Where should I wait? — Please wait in the room on the left.",
+            "it": "Buongiorno, ho un appuntamento alle undici. — Mi dica il Suo cognome. — Serra. Dove aspetto? — Aspetti nella sala a sinistra."
+          },
+          "rubric": [
+            {
+              "en": "I kept the two roles consistent and used mi dica and aspetti for formal Lei.",
+              "it": "Ho mantenuto i due ruoli e usato mi dica e aspetti per Lei."
+            },
+            {
+              "en": "I changed the surname, time and side of the room.",
+              "it": "Ho cambiato cognome, ora e lato della sala."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso2-u08-plan-a-next-step",
+      "bank": "espresso2-u08",
+      "notes": [
+        {
+          "en": "Keep the plan small enough to explain without a script. The optional resource reviews basic verb patterns; the future forms belong to this A2 task.",
+          "it": "Mantieni il progetto abbastanza piccolo da spiegarlo senza copione. La risorsa facoltativa ripassa gli schemi verbali di base; le forme del futuro appartengono a questo compito A2."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What will you do in November?",
+          "it": "A: Che cosa farai a novembre?"
+        },
+        {
+          "en": "B: I will attend an evening course.",
+          "it": "B: Frequenterò un corso serale."
+        },
+        {
+          "en": "A: And if you have time at the weekend?",
+          "it": "A: E se hai tempo nel fine settimana?"
+        },
+        {
+          "en": "B: I will update my CV.",
+          "it": "B: Aggiornerò il curriculum."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What will B update? Write the Italian noun.",
+          "it": "Che cosa aggiornerà B? Scrivi il nome italiano."
+        },
+        "answers": [
+          "curriculum",
+          "il curriculum"
+        ],
+        "explanation": {
+          "en": "B says aggiornerò il curriculum.",
+          "it": "B dice aggiornerò il curriculum."
+        }
+      },
+      "frame": {
+        "en": "Next ___ I will ___. If I ___, I will ___.",
+        "it": "Il prossimo ___ / La prossima ___ ___. Se ___, ___."
+      },
+      "speaking": {
+        "en": "Tell a two-step plan, then change the condition and explain the new result.",
+        "it": "Esponi un progetto in due passi, poi cambia la condizione e spiega la nuova conseguenza."
+      },
+      "resource": "present-drill",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "What activity is planned for November? Complete in Italian: frequentare un ___ serale.",
+            "it": "Quale attività è prevista per novembre? Completa: frequentare un ___ serale."
+          },
+          "answers": [
+            "corso"
+          ],
+          "explanation": {
+            "en": "The evening course is the main plan; updating the CV depends on free time.",
+            "it": "Il corso serale è il progetto principale; il curriculum dipende dal tempo libero."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Without reading, move the plan to December: you will take a photography course. If you have time at the weekend, you will prepare an application.",
+            "it": "Senza leggere, sposta il progetto a dicembre: farai un corso di fotografia. Se hai tempo nel fine settimana, preparerai una candidatura."
+          },
+          "frame": {
+            "en": "In December I will attend ___. If I have time at the weekend, I will ___.",
+            "it": "A dicembre frequenterò ___. Se ho tempo nel fine settimana, ___."
+          },
+          "model": {
+            "en": "In December I will attend a photography course. If I have time at the weekend, I will prepare an application.",
+            "it": "A dicembre frequenterò un corso di fotografia. Se ho tempo nel fine settimana, preparerò una candidatura."
+          },
+          "rubric": [
+            {
+              "en": "I used the future for the two planned outcomes.",
+              "it": "Ho usato il futuro per i due risultati previsti."
+            },
+            {
+              "en": "I kept se ho tempo in the present and changed the month and activities.",
+              "it": "Ho mantenuto se ho tempo al presente e cambiato mese e attività."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso2-u09-tell-an-interruption",
+      "bank": "espresso2-u09",
+      "notes": [
+        {
+          "en": "This pattern uses ho dovuto with verbs such as telefonare or chiamare. Auxiliary choice can differ with other infinitives; check the linked modal lesson before changing the verb.",
+          "it": "Questa struttura usa ho dovuto con verbi come telefonare o chiamare. La scelta dell’ausiliare può cambiare con altri infiniti; controlla la lezione sui modali prima di cambiare verbo."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Why did you call me?",
+          "it": "A: Perché mi hai chiamato?"
+        },
+        {
+          "en": "B: I was about to print the tickets.",
+          "it": "B: Stavo per stampare i biglietti."
+        },
+        {
+          "en": "A: What happened?",
+          "it": "A: Che cosa è successo?"
+        },
+        {
+          "en": "B: The printer stopped working, so I had to ask for help.",
+          "it": "B: La stampante ha smesso di funzionare, quindi ho dovuto chiedere aiuto."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Which machine stopped working? Write the Italian noun.",
+          "it": "Quale macchina ha smesso di funzionare? Scrivi il nome italiano."
+        },
+        "answers": [
+          "stampante",
+          "la stampante"
+        ],
+        "explanation": {
+          "en": "The interruption was a printer problem.",
+          "it": "L’imprevisto riguardava la stampante."
+        }
+      },
+      "frame": {
+        "en": "I was about to ___. Then ___. I had to ___.",
+        "it": "Stavo per ___. Poi ___. Ho dovuto ___."
+      },
+      "speaking": {
+        "en": "Tell the interruption without reading. A partner asks Che cosa è successo? and you add the necessary response.",
+        "it": "Racconta l’interruzione senza leggere. Un compagno chiede Che cosa è successo? e tu aggiungi la risposta necessaria."
+      },
+      "resource": "auxiliary-drill",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "What was planned before the problem? Complete in Italian: stampare i ___.",
+            "it": "Quale attività era prevista prima dell’imprevisto? Completa: stampare i ___."
+          },
+          "answers": [
+            "biglietti"
+          ],
+          "explanation": {
+            "en": "The person was about to print tickets; the problem interrupts that plan.",
+            "it": "La persona stava per stampare i biglietti; il problema interrompe quel progetto."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Cover the scene. Change the planned task to sending an email: the computer turns off and you have to call a colleague. Tell it in the past.",
+            "it": "Copri la scena. Cambia l’attività in inviare una e-mail: il computer si spegne e devi telefonare a un collega. Racconta al passato."
+          },
+          "frame": {
+            "en": "I was about to ___. The computer ___, so I had to ___.",
+            "it": "Stavo per ___. Il computer si è ___, quindi ho dovuto ___."
+          },
+          "model": {
+            "en": "I was about to send an email. The computer turned off, so I had to call a colleague.",
+            "it": "Stavo per inviare una e-mail. Il computer si è spento, quindi ho dovuto telefonare a un collega."
+          },
+          "rubric": [
+            {
+              "en": "I used stavo per + infinitive without saying the planned action was already finished.",
+              "it": "Ho usato stavo per + infinito senza dire che l’azione era già finita."
+            },
+            {
+              "en": "I changed the task and machine and used ho dovuto + infinitive for the necessary response.",
+              "it": "Ho cambiato attività e macchina e usato ho dovuto + infinito per la risposta necessaria."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "missionId": "espresso2-u10-discuss-a-home",
+      "bank": "espresso2-u10",
+      "notes": [
+        {
+          "en": "Learn these opinion patterns as whole sentences before adding other subjunctive triggers. The optional A1 resource refreshes description vocabulary rather than testing the subjunctive.",
+          "it": "Impara queste strutture d’opinione come frasi intere prima di aggiungere altre espressioni con il congiuntivo. La risorsa A1 facoltativa ripassa il lessico descrittivo, non verifica il congiuntivo."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What do you think of this apartment?",
+          "it": "A: Che ne pensi di questo appartamento?"
+        },
+        {
+          "en": "B: I think the kitchen is bright.",
+          "it": "B: Penso che la cucina sia luminosa."
+        },
+        {
+          "en": "A: It is important that it has two bedrooms.",
+          "it": "A: È importante che abbia due camere."
+        },
+        {
+          "en": "B: In my opinion, it is suitable for us.",
+          "it": "B: Secondo me è adatto a noi."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "How many bedrooms are required? Write the number in Italian.",
+          "it": "Quante camere sono necessarie? Scrivi il numero in lettere."
+        },
+        "answers": [
+          "due"
+        ],
+        "explanation": {
+          "en": "The requirement is che abbia due camere.",
+          "it": "Il requisito è che abbia due camere."
+        }
+      },
+      "frame": {
+        "en": "I think it is ___. It is important that it has ___. In my opinion it is ___.",
+        "it": "Penso che sia ___. È importante che abbia ___. Secondo me è ___."
+      },
+      "speaking": {
+        "en": "Discuss two imaginary homes using the three frames. Change the requirement rather than repeating the same description.",
+        "it": "Parla di due case immaginarie usando le tre strutture. Cambia il requisito invece di ripetere la stessa descrizione."
+      },
+      "resource": "club",
+      "skills": {
+        "gist": {
+          "prompt": {
+            "en": "What type of home are they discussing? Write the noun used in the first line. Leave out articles and possessives.",
+            "it": "Di quale tipo di alloggio parlano? Scrivi il nome usato nella prima battuta. Non aggiungere articoli o possessivi."
+          },
+          "answers": [
+            "appartamento"
+          ],
+          "explanation": {
+            "en": "They assess an apartment by expressing an opinion and a requirement.",
+            "it": "Valutano un appartamento esprimendo un’opinione e un requisito."
+          }
+        },
+        "retell": {
+          "prompt": {
+            "en": "Without reading, discuss the study rather than the kitchen: you think it is bright and want it to have a window. Finish with secondo me.",
+            "it": "Senza leggere, parla dello studio, non della cucina: lo pensi luminoso e vuoi che abbia una finestra. Concludi con secondo me."
+          },
+          "frame": {
+            "en": "I think the study is ___. It is important that it has ___. In my opinion it is ___.",
+            "it": "Penso che lo studio sia ___. È importante che abbia ___. Secondo me è ___."
+          },
+          "model": {
+            "en": "I think the study is bright. It is important that it has a window. In my opinion it suits us.",
+            "it": "Penso che lo studio sia luminoso. È importante che abbia una finestra. Secondo me è adatto a noi."
+          },
+          "rubric": [
+            {
+              "en": "I used sia after penso che and abbia after è importante che.",
+              "it": "Ho usato sia dopo penso che e abbia dopo è importante che."
+            },
+            {
+              "en": "I changed the room and requirement and used the indicative after secondo me.",
+              "it": "Ho cambiato stanza e requisito e usato l’indicativo dopo secondo me."
+            }
+          ]
+        }
+      }
     }
   ],
   "resources": [

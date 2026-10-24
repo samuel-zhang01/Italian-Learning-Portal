@@ -2,49 +2,52 @@
 
 A little Italian, every day. Parliamo turns the supplied class materials into short, original practice: notice an idea, retrieve it, then use it in your own Italian.
 
-Live production: **https://italian.samuelzhang.co.uk**. The painted-cardboard and paper-cutout interface is deployed and verified across navigation, lessons, programmes, games, vocabulary and settings. All 49 automated tests and 171 public browser screen/state checks pass, covering English and Italian at four viewport widths. The five deployed files match a clean build of committed source `6cdbc8a`. Release evidence: [`docs/deployment-paper-cutout-2026-10-20.json`](docs/deployment-paper-cutout-2026-10-20.json). The preceding navigation release is retained for rollback.
+Live production: **https://italian.samuelzhang.co.uk**. The last deployed painted-cardboard and paper-cutout release passed 49 automated tests and 171 public browser screen/state checks. Its five deployed files match committed source `6cdbc8a`; release evidence is in [`docs/deployment-paper-cutout-2026-10-20.json`](docs/deployment-paper-cutout-2026-10-20.json). The preceding navigation release is retained for rollback. The book-course expansion below is verified locally and has not been deployed.
+
+The first website enrichment goals are complete locally: cross-site topic discovery, chapter practice and combined-PDF page connections. [`docs/website-enrichment-plan.json`](docs/website-enrichment-plan.json) records the goals; [`docs/website-enrichment-review.json`](docs/website-enrichment-review.json) records acceptance evidence, the scheduling fix and remaining limits. This package passes158 daily tests,4 PDF-export tests, type checking, lint, the static build and isolated EN/IT browser journeys. It has not been deployed.
 
 ## Learn
 
-- **36 five-minute lessons** across foundations, everyday Italian and the two supplied Level 2 revision lessons.
+- **56 five-minute lessons** across the class foundations, everyday Italian, revision and twenty new chapter-transfer missions for Nuovo Espresso Plus 1–2.
 - Fully switchable English and Italian navigation, explanations, feedback and planning. English example translations can be hidden independently.
 - Two recall checks per lesson, an original writing/speaking prompt and a self-check. First attempts remain visible after corrections; writing is self-assessed, not automatically graded.
-- **36 guided sessions** with shorter recipes and a full 30-minute option combining a five-minute recall warm-up, a five-minute core lesson, six minutes of vocabulary, six minutes of listening/reading, six minutes of supported speaking and a two-minute memory trail. Each session stays on one topic after its core lesson is completed.
-- **18 vocabulary banks with 144 words and useful chunks**, example sentences, translations, device pronunciation, reveal-and-recall cards and search.
-- Original four-line scenes, comprehension checks with corrections, plain-language companion notes and sentence frames for every mission. Speaking and vocabulary self-reports record practice rather than language mastery.
+- **56 guided sessions** with shorter recipes and a full 30-minute option combining a five-minute recall warm-up, a five-minute core lesson, six minutes of vocabulary, six minutes of listening/reading, six minutes of supported speaking and a two-minute memory trail. Each session stays on one topic after its core lesson is completed.
+- **38 vocabulary banks with 304 words and useful chunks**, example sentences, translations, device pronunciation, reveal-and-recall cards and search.
+- Original four-line scenes, comprehension checks with corrections, plain-language companion notes and sentence frames for every mission. Twenty book chapters also have optional gist questions and changed-detail retelling with saved drafts and self-checks. Device speech is labelled synthetic; optional support does not add extra XP. Speaking and vocabulary self-reports record practice rather than language mastery.
 - Eleven curated online resources from Rai Scuola, Language Transfer and OnlineItalianClub, each with a bounded A1 task. External activities are optional; original scenes remain available if a player is unavailable.
 - Practice XP, four milestone badges and activity levels. No lost streaks or point deductions for mistakes. Levels are not CEFR assessments.
 - A flexible **5, 10, 15, 20, 30, 45 or 60 minute** daily budget, chosen study days and a rolling seven-day class plan. New users start at 30 minutes; saved plans keep their previous setting. Today combines the active programme’s grammar units and required core lesson within the chosen budget. Started sessions retain their duration and topic. Missed days do not create a penalty or erase work.
 - Delayed recall after one day, then three, seven and fourteen days when successful. A missed recall returns the following day. Reviews count as two estimated minutes; lessons count as five. Guided warm-up credit includes up to five minutes of scheduled reviews, and a newly completed core lesson is counted once. These are effort estimates, not measured time.
 - A notebook of the learner’s own Italian and daily conversations, browser-local progress, mid-lesson and session drafts, and validated JSON backup export/import. Original version-1 backups still load unchanged; optional session and academy records extend that format. Grammar drafts, companion notes, diagnostics, word review dates and programme progress are included.
-- Exact file/page references and optional local PDF connections. Connected PDFs are opened locally and are never uploaded.
+- **Find / Cerca** searches grammar, lessons, programmes, vocabulary and source pages using Italian or English topics, words and book/page queries. Search and filters remain in the URL through reload and back navigation. Opening a page or bank focuses its practice heading.
+- Exact file/page references and optional local PDF connections. Files are matched by SHA-256 locally, so renamed copies still connect. Six recognized student/reference/complete exports map source citations to their physical pages, including Plus 2 starting at page 241 in the combined student books. Connected PDFs remain local and are never uploaded; Disconnect or reload releases the connection.
 
 The portal is a companion to the PDFs, not a worksheet clone or a completed homework service. Original class assignments requiring independent work remain for the student to complete. The material review identified **Nuovo Espresso Plus 1** in Courses 1–2 and **Plus 2** in Course 3; the old original-edition textbook page plan is no longer the main journey.
 
-## A1 academy and source companions
+## Grammar academy and source companions
 
 For a mid-A1 learner, open **Programme**, select the recommended **Supported A1** route, keep **30 minutes** as your budget, then use **Today → Continue today**. Its suggested day has 15 minutes of guided practice and a 15-minute grammar workshop. Read the examples, try each question, use hints as needed, and write a small personal response with the supplied frame. A study day can take multiple sittings.
 
-- **28 grammar units**: 25 core A1 topics and three marked stretch topics. Each has four bilingual teaching sections, three worked examples, six vocabulary entries, eight varied exercises and a personal production task with a model and three checks.
-- **224 original controlled exercises**: choices, gaps, sentence ordering, error repair, transformations and tense checks. Italian accents remain meaningful; common authored variants are accepted. Feedback explains corrections. Hints and corrections cannot improve the saved independent first-try score.
-- **Three study programmes**: a 14-study-day intensive revision, a 28-day supported course, and a 10-day grammar repair course. Each study day has linked grammar and one required application mission. At 60 minutes, a two-unit intensive day has a 30-minute guided session and two 15-minute workshops. Shorter days carry unfinished work forward. Changing programmes restarts the selected day checklist while retaining completed grammar and core lessons.
-- **A2 preparation and tense checks**: twelve saved first-answer questions per mode per date, explanations, weak-topic links and speaking/listening/writing follow-up. Unfinished checks resume on later dates. Starting a new check preserves the previous one, available in collapsed history. These diagnose controlled grammar practice, not CEFR certification. Unsubmitted diagnostic input is not saved; submitted answers are.
+- **55 grammar units**: 32 A1 topics, three marked stretch topics and twenty A2 workshops. Seven new A1 workshops cover locative `ci`, partitive `ne`, impersonal `si`, superlatives, adverbs, dates/numbers and spelling/stress. Each unit has at least four bilingual teaching sections, three worked examples, six vocabulary entries, eight varied exercises and a personal production task with a model and three checks.
+- **440 original controlled exercises**: choices, gaps, sentence ordering, error repair, transformations and tense checks. Italian accents remain meaningful; common authored variants are accepted. Feedback explains corrections. Hints and corrections cannot improve the saved independent first-try score.
+- **Four study programmes**: a 14-study-day intensive revision, a 28-day supported course, a 10-day grammar repair course and an 80-study-day journey through twenty book chapters. The new route adds four distinct personal tasks per chapter: reconstruct, change a detail, transfer to a dialogue, then recall. Each has a saved draft and explicit self-checks; earlier grammar/mission completion cannot complete a new checkpoint. Writing is self-assessed. A study day can span multiple sittings within the chosen time budget. Changing programmes restarts the selected day checklist while retaining completed grammar and core lessons; the three existing programme sequences are unchanged.
+- **A1 foundation and tense checks for A2 preparation**: twelve saved first-answer questions per mode per date, explanations, weak-topic links and speaking/listening/writing follow-up. They retain their existing A1 domains and do not assess all the new book workshops. Unfinished checks resume on later dates. Starting a new check preserves the previous one, available in collapsed history. These diagnose controlled grammar practice, not CEFR certification. Unsubmitted diagnostic input is not saved; submitted answers are.
 - **Personal word bank**: save vocabulary from the searchable catalogue or a grammar unit; reveal before self-rating memory. New/forgotten words return the next day; successful recall gradually moves to three- and seven-day gaps. Ratings are not automatic accuracy scores.
-- **Page companions for all 936 physical pages/slides in 48 files**, including the newly supplied 78-slide `Course 3/Grammar_ A1.pptx`: 730 practice entries and 206 reference entries. Repeated source topics reuse practice patterns; these are 113 distinct original practice patterns, not 936 unique lessons. Covers, instructions, blank and answer-reference pages retain their physical numbering without earning practice completion.
+- **Page companions for 1,609 physical pages/slides in 53 files**: the original 936 class pages, 170 book-index/teacher-guide pages and 503 accessible reader-book pages. There are 730 practice entries and 879 reference pointers. The original practice entries reuse 113 distinct patterns; reference pointers do not claim new lessons or earn page-practice completion. The two native reader conversions contain 240 and 263 physical pages and can be connected as local PDFs. Plus 2’s publisher advertises 264 pages, but its complete set of 26 supplied reader sections ends at 263; the unknown extra page is recorded as a source gap and is not fabricated.
 - Page tasks use original parallel situations. Source inconsistencies about auxiliaries and demonstratives are corrected in the companion. The new deck and 34 sparse older pages were visually reviewed; other pages were reviewed from page-preserving text/OCR. No source homework is answered wholesale.
 
 Grammar and page practice earn points once per exercise/unit/page. Due grammar recall starts with the old answer hidden; an error or hint schedules another day of support, while a later independent success gives a three-day interval. Free writing, speaking and companion responses are explicitly self-checked.
 
-The original 36 mission IDs and version-1 backups remain valid. `grammar.json` and `companion.json` extend `curriculum.json`; raw archives and extraction files stay ignored and private.
+The original 36 mission IDs, 28 grammar units, three programme sequences and version-1 backups remain valid. `grammar.json` and `companion.json` extend `curriculum.json`; raw archives and extraction files stay ignored and private. [`docs/book-course-review.json`](docs/book-course-review.json) distinguishes private capture from selectively reviewed teaching pages. [`docs/book-import-audit.json`](docs/book-import-audit.json) records extraction methods, verified coverage and unavailable source assets. [`docs/book-course-student-audit.json`](docs/book-course-student-audit.json) records the isolated student journey checks.
 
 ## Practice Arcade
 
-Open **Today → Optional practice → Open games** or **More practice & materials → Games**. The separate games area keeps one question on screen, with settings and review history collapsed. The main navigation has four destinations: Today, Programme, Practice and Progress. Practice opens Grammar Lab; the secondary disclosure keeps other existing tools accessible without expanding the main menu.
+Open **Today → Optional practice → Open games** or **More practice & materials → Games**. The separate games area keeps one question on screen, with settings and review history collapsed. The main navigation has five destinations: Today, Programme, Practice, Find and Progress. Practice opens Grammar Lab; the secondary disclosure keeps other existing tools accessible without expanding the main menu.
 
-- **Word hunt** uses the 144 existing vocabulary entries. Choose a bank, recognise an Italian word, or type it from memory. Paired forms retain choices to avoid marking a valid individual form wrong. Save useful words to the personal bank after answering.
-- **Sentence builder** uses 28 existing grammar prompts with tappable word tiles or a typed answer with shuffled word clues. **Grammar detective** draws on 101 existing choice, correction and tense questions. These repackage authored practice; they are not 129 new lessons.
-- **Conversation trail** adds eight original everyday scenes and 24 new questions: café, station, market, introductions, directions, restaurant, routine and invitations. Each turn has a hint, an explanation and its own related grammar lesson. This is supported response selection, not an assessment of spontaneous speaking.
-- Choose **5, 10 or 15 questions**, guided or typed practice, a vocabulary bank, grammar topic or scene. Small pools use fewer questions; conversations keep their three turns in order. Defaults use five questions, conversation helpers and the first ten foundation grammar topics. Past-tense and A1+ material require a broader or specific topic selection.
+- **Word hunt** uses all 304 vocabulary entries, including eight original cards for each of the twenty book chapters. Choose a bank, recognise an Italian word, or type it from memory. Paired forms retain choices to avoid marking a valid individual form wrong. Save useful words to the personal bank after answering.
+- **Sentence builder** uses 54 existing grammar prompts with tappable word tiles or a typed answer with shuffled word clues. **Grammar detective** draws on 175 existing choice, correction and tense questions. These repackage authored practice; they are not 229 new lessons.
+- **Conversation trail** has eighteen original scenes and 54 questions: eight everyday scenes (café, station, market, introductions, directions, restaurant, routine and invitations) and ten A2 chapter scenes covering gifts, memories, favours, outings, delays, advice, appointments, plans, interruptions and housing. Each turn has a hint, an explanation and its own related grammar lesson. This is supported response selection, not an assessment of spontaneous speaking.
+- Choose **5, 10 or 15 questions**, guided or typed practice, a vocabulary bank, grammar topic or scene. Small pools use fewer questions; conversations keep their three turns in order. Defaults use five questions, conversation helpers and the first ten foundation grammar topics. Past-tense and A1+ material require a broader or specific topic selection. A chapter conversation link selects its A2 scene; an unfinished round keeps its saved answers until completed.
 - Answers lock after submission. Hints remain marked; first-attempt evidence is preserved. Mistake replay and due recall are separate controls. Successful recall when due schedules one-, three- and seven-day gaps; early replay cannot postpone the due date. New questions earn two practice XP once, including mistakes. Games do not complete course units or contribute estimated minutes to the scheduled lesson budget.
 - Paused rounds, typed drafts, chosen tiles, settings, per-question memory and the last 30 round scores use the existing browser-local progress record and backup flow. Earlier version-1 backups still load. Device pronunciation is available after answering, with a text fallback if unavailable.
 
@@ -105,6 +108,156 @@ python3 scripts/review_materials.py --source materials/inbox --ocr
 
 Reports go to ignored `data/incoming/source-pages.json`; low-text or OCR pages are flagged for visual checking. The helper accepts only study folders under this repository’s `materials/` or `Organised/`, skips hidden files, symlinks and course-admin folders, and leaves existing reports intact for an empty inbox. The earlier `scripts/audit_course_archive.py` remains available for broader document inventory.
 
+## Books from a shared reader
+
+Sign in through **Browser View: Open Shared Browser** in VS Code, then open the two books. Keep passwords in the browser. Confirm each book’s title, edition and contents from the reader before importing or planning lessons.
+
+Book source files belong under Git-ignored `materials/books/<book-id>/`, using a stable title-and-edition identifier:
+
+```text
+materials/books/<book-id>/
+  manifest.json          # Edition, acquisition date, checksums and coverage
+  index.html             # Generated private landing page; local references only
+  originals/            # Reader-provided downloads, preserving their originals
+    publisher/          # Publisher PDFs and available audio archives
+    reader-native/      # Unchanged, unencrypted XPS reader containers
+    reader-native-pdf/  # Searchable PDFs converted from those containers
+    reader-attachments/ # Ordinary PDF attachments opened by the reader
+  pages/                # Book-page captures when needed
+  interactive/
+    <activity-slug>/    # Sanitized content.html/text, pages and source captions
+    media/              # Verified images/audio/video/PDFs and original VTT/SRT
+      manifest.json     # Query-free source paths, local files, sizes and hashes
+  interactive-static-pilot/ # Bounded parity reports and pilot media
+  interactive-manifest.json # Observed activity inventory and per-page coverage
+  study-index/          # Generated text-only exports for a books-only local server
+    source-pages.json   # Searchable media PDF pages and supplied caption cues
+    catalogue.md        # Original basename → local file, type and checksum
+data/incoming/books/<book-id>/
+  source-pages.json     # Page-preserving text/OCR from the extraction helper
+  native/               # Reader conversion manifests and physical-page extracts
+  interactive-media/   # Canonical media text extracts and provenance catalogue
+    source-pages.json
+    catalogue.md
+  review/               # Private topic mapping and extraction review
+```
+
+Prefer the reader’s available download/export to page capture. Use only the signed-in reader’s available material; retain book content without exporting cookies, account pages, session state or token-bearing request logs. Record missing or inaccessible pages and media explicitly. Verify completeness against the book’s own contents and page count, distinguishing physical file pages from printed page labels. A partial capture is not a complete book import.
+
+For downloaded PDFs, isolate each extraction so it does not replace the class archive report:
+
+```bash
+python3 scripts/review_materials.py \
+  --source materials/books/<book-id>/originals \
+  --output-dir data/incoming/books/<book-id> \
+  --ocr
+```
+
+Visually check sparse or ambiguous pages before citing them. Map verified chapters to existing lessons, identify new outcomes, then extend the bilingual course in prerequisite order with original examples, parallel exercises and delayed recall. Keep existing progress IDs. Record reviewed coverage and unresolved gaps in `docs/material-review.json`; source downloads, page captures and extracts stay private. Publish only `site-dist/` when deployment is authorized.
+
+For these BlinkLearning books, the `.bpdf` assets observed in the signed-in reader are unencrypted XPS ZIP containers with native text. The importer uses the reader’s ordinary HTTP range responses to retain those original assets. PyMuPDF reads the standard XPS format and converts it to searchable PDF without OCR. It does not decode encrypted files or export browser authentication. Ordinary publisher/reader PDF attachments can use `pdftotext` directly. Canvas capture and Italian/English OCR remain fallbacks for image-only material.
+
+With the intended book already open in the shared browser, set `BOOK_READER_ID` to its numeric ID observed in the library/reader. Use that same book and ID throughout each import:
+
+```bash
+node scripts/capture_blink_books.mjs \
+  --book-id nuovo-espresso-plus-1 \
+  --book-title 'NUOVO ESPRESSO PLUS 1' \
+  --reader-id "$BOOK_READER_ID" --native-only
+python3 scripts/extract_blink_native.py \
+  --book-id nuovo-espresso-plus-1 --assemble-book
+```
+
+The capture manifest records each observed section, original asset checksum and reader page count. The native converter checks the archive, retains physical page boundaries and source offsets, and verifies converted page renders. Main-book assembly requires all 26 sections in contents order. Plus 1 matches its verified 240-page extent. Plus 2 supplies 263 pages against an advertised 264; its assembly uses an explicit `--expected-reader-pages 263 --extent-note ...` exception with the exact evidence retained in its private manifest. It adds no guessed page. Video worksheets, solutions and guides remain separate. Native extracts and conversion/coverage evidence live under ignored `data/incoming/books/<book-id>/native/`. Where the reader omits its book title, `--reader-id` binds capture to the numeric book ID observed in the signed-in library.
+
+For the optional raster fallback, omit `--native-only`, then run `python3 scripts/review_book_captures.py --book-id <book-id> --pdf`. OCR text requires checking against the page image; it is not an answer key.
+
+The faster interactive path requests each observed activity’s source HTML and parses it with an inert `DOMParser` in a separate browser with no shared authentication and network requests blocked. Source scripts never execute. The source activity list must match the previously observed reader inventory and numeric `--reader-id`; the intended book must already be open in Browser View. This method has been checked against rendered study pages, including supplied captions. It saves sanitized HTML/text with blank response slots and observed local media, while raw source HTML/JSON and request query variants stay in memory.
+
+Start with a bounded parity pilot using a unique activity title or chapter/title filter, then capture the observed inventory:
+
+```bash
+node scripts/capture_blink_static.mjs \
+  --book-id nuovo-espresso-plus-1 --reader-id "$BOOK_READER_ID" \
+  --activity 'unique source activity title'
+node scripts/capture_blink_static.mjs \
+  --book-id nuovo-espresso-plus-1 --reader-id "$BOOK_READER_ID" \
+  --capture --all
+```
+
+Repeat with the other book’s ID and open reader. If the host supplies Chromium, pass its executable with `--chromium-executable`; otherwise the helper uses the configured/default Playwright executable. Resumed captures verify cached page, caption and media checksums. Capture locks prevent simultaneous writers for the same book.
+
+Original VTT/SRT tracks remain unchanged; derived caption text retains its source provenance. The helper adds supplied captions to the study HTML/text and records clips that still need rendered transcripts. It can preserve an existing, checksum-verified rendered page for those clips. Where a pilot or coverage report identifies missing dynamic content, capture the corresponding ordinary page through the rendered fallback, then rerun the static capture:
+
+```bash
+node scripts/capture_blink_activities.mjs \
+  --book-id nuovo-espresso-plus-1 \
+  --book-title 'NUOVO ESPRESSO PLUS 1' --reader-id "$BOOK_READER_ID" \
+  --activity 'unique source activity title' --reuse-inventory
+```
+
+Both paths remove scripts, feedback, selected answers and account UI without submitting or validating exercises. They retain observed images, audio, video and transcript PDFs with checksums, using ordinary HTTP ranges where needed. Supplied captions and PDF transcript text are source text; no audio/video speech recognition is performed. Missing captions or media remain explicit gaps.
+
+After capture finishes, verify the archive and build its private search/index files:
+
+```bash
+python3 scripts/summarize_book_imports.py \
+  --book-id nuovo-espresso-plus-1 --book-id nuovo-espresso-plus-2 --finalize
+python3 scripts/index_private_book_media.py \
+  --book nuovo-espresso-plus-1 --book nuovo-espresso-plus-2
+```
+
+The summary checks source/derived hashes, page counts, sanitized HTML and local media. The offline indexer requires that finalized evidence, verifies file confinement, SHA-256 and byte counts, and extracts media PDFs by physical page and VTT/SRT by cue identifier and timestamp. It writes canonical extracts under `data/incoming/` and text-only copies under each book’s `study-index/`, with local links that stay within `materials/books`. It copies no binary originals and refuses symlinks, tracked/unignored outputs or overwriting an unmarked handwritten index. Generated HTML has a CSP blocking scripts, network requests, fonts and embeds. Exercise responses stay blank; the index contains links and source metadata.
+
+Open `materials/books/<book-id>/index.html` locally, or serve only the private book folder on localhost:
+
+```bash
+python3 -m http.server 8788 --bind 127.0.0.1 --directory materials/books
+```
+
+Then visit `http://127.0.0.1:8788/<book-id>/index.html`. Keep this private index separate from the public daily app. `python3 scripts/index_private_book_media.py --self-test` validates the indexer with synthetic files only. Capture requires Browser View/Playwright; native conversion and media PDF text use PyMuPDF, ordinary PDF extraction uses Poppler, and optional OCR uses Tesseract with Italian and English language data.
+
+### Private PDF study exports
+
+Start with [`materials/books/exports/index.html`](materials/books/exports/index.html) or, using the books-only localhost server above, `http://127.0.0.1:8788/exports/index.html`. For everyday reading, use the **[combined student books](materials/books/exports/combined-student-books.pdf): 503 pages, about 79 MB**. Plus 1 occupies PDF pages 1–240; Plus 2 starts at PDF page 241. The separate student-book files are byte-exact renamed copies of the approved canonical PDFs. The combined file adds book and section bookmarks.
+
+| Private PDF | Plus 1 pages | Plus 2 pages |
+| --- | ---: | ---: |
+| Student book | 240 | 263 |
+| Reference pack | 416 | 535 |
+| Supplied transcript pack | 150 | 353 |
+| Printable interactive activities | 1,164 | 1,144 |
+| Complete accessible study pack | 1,730 | 2,032 |
+
+Reference packs add video worksheets, lesson/workbook solutions and the teacher guide. Supplied transcript packs combine 103/301 pages of source transcript PDFs with 47/52 newly laid-out pages containing all 40 supplied caption/transcript sidecars per book. Original caption files and their derived text are also retained separately. Source-format warnings identify untimed prose and malformed source timing; no timestamps or spoken words are invented.
+
+The **420 interactive activities contain 873 captured study pages**: 444 in Plus 1 and 429 in Plus 2. These are source activity panes, separate from the 503 student-book PDF pages. Their printable layout uses 2,308 physical PDF pages because questions, source images and supplied transcripts can continue across sheets. These counts describe different representations and overlap; they are not additional textbook pages or new authored portal lessons. Response slots remain blank. Audio/video appear as labelled references to private media, with no embedded audio/video binaries.
+
+The optional [combined complete study pack](materials/books/exports/combined-complete-study-pack.pdf) has 3,762 pages and is about 486 MB. The optional [PDF/caption export ZIP](materials/books/exports/italian-study-pdf-export-kit.zip) is about **1.62 GB**; it contains the separate and combined PDFs, captions and export indexes. It excludes the print cache, browser/session data and audio/video binaries. Student, reference and complete packs repeat some of the same pages. Plus 2's unknown publisher page 264 and Plus 1's 23 unavailable source media assets remain documented gaps; no missing content is fabricated.
+
+After completing and verifying the private source archive, the reproducible export sequence is:
+
+```bash
+node scripts/export_interactive_pdfs.mjs
+python3 scripts/export_book_pdfs.py
+```
+
+The printer uses a separate browser and an allowlisted localhost server for verified local study HTML/images. It needs the installed Browser View/Playwright tooling; `--chromium-executable` can select an installed Chromium. Source scripts and outbound requests stay blocked. The Python assembler uses PyMuPDF, checks input checksums and page counts, writes outputs atomically and reuses checksum-verified PDFs so existing bundle identities remain stable. To prepare student/reference/transcript exports before interactive printing finishes, use `python3 scripts/export_book_pdfs.py --skip-interactive --no-zip`; `--no-zip` also avoids rebuilding the optional large kit.
+
+All PDFs, caption files, private indexes and detailed manifests remain under Git-ignored `materials/books/exports/`; publish only `site-dist/`. [`docs/book-pdf-export-audit.json`](docs/book-pdf-export-audit.json) records safe aggregate counts, hashes, source-preservation checks, offsets, known gaps and validation. Detailed input/output evidence remains in the private `export-manifest.json`, `interactive-print-manifest.json` and `export-kit-manifest.json`. Export verification does not claim that every source exercise has received a teaching review.
+
+## Chapters and scheduled review
+
+Open **Book chapters** from Today or the tools menu to explore all twenty Plus 1/Plus 2 chapters. Each chapter connects its existing core lesson, vocabulary, grammar preparation, four study checkpoints and source PDFs. A2 chapters also link their three-turn conversation. Browsing preserves your current programme and study day. Completion counts, optional game answers and vocabulary self-reports are labelled separately.
+
+**Review queue** brings together due lesson recalls, grammar exercises, saved words and arcade questions. Choose an estimated two-, five- or ten-minute selection. The queue prioritizes recorded difficulties, merges exact duplicates using the latest evidence, and omits items already practised today. Opening it does not award points or change schedules. Each item opens its exact practice target; an unfinished arcade round stays resumable. An unfinished grammar recall keeps its own draft and hint history through reloads, separately from the previous checked answer.
+
+Today uses generated planning metadata; full teaching catalogues load when their sections open. The measured initial JavaScript fell from 2.53 MB to 609 KB (75.93% less; gzip reduced 64.52%). `dev:daily` and `build:daily` regenerate that metadata, and `test:daily` checks freshness and parity against the full catalogues. After a source catalogue edit, run `node scripts/generate_planning_metadata.mjs`. Changes retain version-1 progress and existing IDs.
+
+The completed local review is [`docs/next-learning-enhancement-review.json`](docs/next-learning-enhancement-review.json). The enhancement plan and focused evidence are in [`docs/next-learning-enhancement-plan.json`](docs/next-learning-enhancement-plan.json), [`docs/loading-review.json`](docs/loading-review.json), [`docs/chapter-dashboard-review.json`](docs/chapter-dashboard-review.json) and [`docs/review-queue-review.json`](docs/review-queue-review.json).
+
+Reproduce the new browser checks with `node --experimental-strip-types scripts/audit_chapter_dashboard_browser.mjs`, `scripts/audit_review_queue_browser.mjs` and `scripts/audit_loading_browser.mjs` (use the Node flags for each). They launch disposable browsers and store synthetic evidence under ignored `work/`. `node scripts/measure_daily_loading.mjs after` measures the initial Today assets from a built preview; its localhost timing is not a mobile performance score.
+
 ## Validation and audits
 
 The whole-app review in [`docs/app-audit-2026-10-20.json`](docs/app-audit-2026-10-20.json) identified navigation, answer-contract, continuity and release gaps. The consolidation makes one daily recommendation, shows one programme day at a time, preserves all routes and saved progress, accepts additional authored Italian variants and states whole-sentence instructions consistently. Vocabulary items now have permanent IDs that retain their deployed progress associations.
@@ -113,6 +266,10 @@ The whole-app review in [`docs/app-audit-2026-10-20.json`](docs/app-audit-2026-1
 
 The academy acceptance target is **at least 19/20 checks (9.5/10) in each requested audit**, with no unresolved critical/high finding. These are explicit internal checklists, not measured learner satisfaction or learning outcomes. See `docs/academy-audit.json` for the release summary and `docs/student-audit-academy.json`, `docs/lecturer-audit.json`, `docs/ui-ux-audit.json` for evidence and limitations.
 
+The website enrichment also has standalone disposable-browser checks: `node --experimental-strip-types scripts/audit_discovery_browser.mjs`, `scripts/audit_chapter_browser.mjs` and `scripts/audit_pdf_bundles_browser.mjs` (use the same Node flags for each). Set `PARLIAMO_URL` for the built daily preview. They use synthetic progress, leave the shared book-reader browser intact, and write private screenshots to ignored `work/`. Review records are `docs/discovery-review.json`, `docs/chapter-student-audit.json` and `docs/pdf-bundle-student-audit.json`.
+
+`tests/local-pdfs.test.mjs` checks local SHA matching, combined-file offsets, shared-URL lifetime, cancellation and connection cleanup. `scripts/audit_pdf_bundles_browser.mjs` verifies real renamed combined-book connections, lesson/grammar/companion page links and EN/IT responsive layouts in a disposable browser. `tests/chapter-content.test.mjs` and `tests/chapter-continuity.test.mjs` check original chapter content, stable IDs, legacy bank pinning, optional drafts and bounded daily continuation. `tests/discovery.test.mjs` checks bilingual topic and physical-page search, answer exclusion, URL state and programme-aware grammar continuation. `tests/book-media.test.mjs` checks observed URL handling, complete byte ranges, MIME/size rejection and media cache integrity with synthetic responses and temporary files only.
+
 `tests/academy.test.mjs` checks grammar content and source coverage, prerequisites, all time recipes, programme gates, first attempts and hint evidence, review intervals, diagnostic immutability, word memory and validated backup round trips. `scripts/audit_academy_browser.mjs` exercises all seven time settings, both diagnostics, word review and EN/IT layouts. Run with Node’s TypeScript stripping:
 
 ```bash
@@ -120,7 +277,7 @@ node --experimental-strip-types scripts/audit_academy_browser.mjs
 ```
 
 
-The additional guided-session audit is `scripts/audit_enrichment_browser.mjs`. Run it against an isolated browser-view runtime with `PARLIAMO_CDP_URL` (default `http://127.0.0.1:9224`) and optionally `PARLIAMO_URL`. It completes a full session, checks all 36 scene answers, verifies drafts and badges, and checks EN/IT layouts at 390px and 320px. It uses isolated synthetic learner records.
+The additional guided-session audit is `scripts/audit_enrichment_browser.mjs`. Run it against an isolated browser-view runtime with `PARLIAMO_CDP_URL` (default `http://127.0.0.1:9224`) and optionally `PARLIAMO_URL`. It completes a full session, checks all current scene answers, verifies drafts and badges, and checks EN/IT layouts at 390px and 320px. It uses isolated synthetic learner records.
 
 
 - `tests/learning.test.mjs` checks source bounds, translation coverage, Italian accent handling, scheduling, recall scoring, duplicate completion and backup validation.

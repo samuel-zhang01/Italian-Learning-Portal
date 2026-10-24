@@ -1,0 +1,104 @@
+[
+  {
+    "sha256": "ed2bb6813cd7569a2efabd4dd3f959203a433d7c3fa0943a8004cf2e7527ad84",
+    "pages": 503,
+    "sources": [
+      {
+        "sourceId": "src-1647be2784c9",
+        "sha256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf",
+        "pages": 240,
+        "offset": 0
+      },
+      {
+        "sourceId": "src-580f7558db56",
+        "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4",
+        "pages": 263,
+        "offset": 240
+      }
+    ]
+  },
+  {
+    "sha256": "41941eb71a7489396a0d982d1276446a914b6e75a3ecc0b83781d60fdb9842fb",
+    "pages": 416,
+    "sources": [
+      {
+        "sourceId": "src-1647be2784c9",
+        "sha256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf",
+        "pages": 240,
+        "offset": 0
+      }
+    ]
+  },
+  {
+    "sha256": "26cb77682d8b2ffa49f3f401353336601a28fc2fafe6d08cd91ef246fc6b8993",
+    "pages": 535,
+    "sources": [
+      {
+        "sourceId": "src-580f7558db56",
+        "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4",
+        "pages": 263,
+        "offset": 0
+      },
+      {
+        "sourceId": "src-070c40bad24b",
+        "sha256": "070c40bad24b248f5b07c97b3e5682990fcc262817693389cc003a1664e3f86c",
+        "pages": 166,
+        "offset": 369
+      }
+    ]
+  },
+  {
+    "sha256": "87e70e5d47571116ef30d205570000f6783ddfa339d20f6e4937e808aa273df6",
+    "pages": 1730,
+    "sources": [
+      {
+        "sourceId": "src-1647be2784c9",
+        "sha256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf",
+        "pages": 240,
+        "offset": 0
+      }
+    ]
+  },
+  {
+    "sha256": "fd61b6cbf5d2a9c34026d691cb9b1757b130e638f068ccf012a16a8a3add89ce",
+    "pages": 2032,
+    "sources": [
+      {
+        "sourceId": "src-580f7558db56",
+        "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4",
+        "pages": 263,
+        "offset": 0
+      },
+      {
+        "sourceId": "src-070c40bad24b",
+        "sha256": "070c40bad24b248f5b07c97b3e5682990fcc262817693389cc003a1664e3f86c",
+        "pages": 166,
+        "offset": 369
+      }
+    ]
+  },
+  {
+    "sha256": "ff0c65682efdce87392928c0733039a4997635a905b531c0274079846af8ffc8",
+    "pages": 3762,
+    "sources": [
+      {
+        "sourceId": "src-1647be2784c9",
+        "sha256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf",
+        "pages": 240,
+        "offset": 0
+      },
+      {
+        "sourceId": "src-580f7558db56",
+        "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4",
+        "pages": 263,
+        "offset": 1730
+      },
+      {
+        "sourceId": "src-070c40bad24b",
+        "sha256": "070c40bad24b248f5b07c97b3e5682990fcc262817693389cc003a1664e3f86c",
+        "pages": 166,
+        "offset": 2099
+      }
+    ]
+  }
+]

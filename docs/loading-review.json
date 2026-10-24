@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-24T21:14:22.431473+00:00",
+  "status": "verified-local-loading-and-recovery",
+  "scope": "Compact synchronous planning/progress metadata, real lazy-route requests, local cold-start byte/timing comparison and bilingual failure recovery. No deployment or real-mobile timing claim.",
+  "baselineAppJavaScript": {
+    "bytes": 2528068,
+    "gzipBytes": 482883,
+    "source": "Exact requested built scripts, compressed by the reproducible three-context measurement helper."
+  },
+  "findings": [
+    {
+      "before": "engine.ts → academy-engine.ts → grammar.json forced the complete grammar teaching/exercise payload into synchronous progress hydration.",
+      "after": "academy-engine.ts validates diagnostic IDs using the generated planning metadata."
+    },
+    {
+      "before": "engine.ts → study.ts → chapter-context.ts → arcade-scenes.json forced complete scene dialogue and choices into initial planning.",
+      "after": "chapter-context.ts checks actual scene turn IDs from compact metadata."
+    },
+    {
+      "before": "Today callers needed full grammar and companion arrays for planning.",
+      "after": "dailyStudyPlan accepts structural compact catalogue arrays while preserving existing full-catalogue callers and their inferred return types."
+    }
+  ],
+  "metadata": {
+    "path": "app/learning/planning-metadata.json",
+    "sha256": "d240d2ac4e829b7c8a89f39412666bc4db760d6937526a6b675bc069deacab53",
+    "bytes": 184638,
+    "gzipBytes": 42104,
+    "authoredSourceJSONBytes": {
+      "curriculum.json": 211276,
+      "grammar.json": 774156,
+      "companion.json": 1660858,
+      "enrichment.json": 258328,
+      "arcade-scenes.json": 70847
+    },
+    "totalAuthoredSourceJSONBytes": 2975465,
+    "counts": {
+      "sources": 53,
+      "missions": 56,
+      "grammarUnits": 55,
+      "grammarExerciseIDs": 440,
+      "programmes": 4,
+      "programmeDays": 132,
+      "firstPracticeCompanionPages": 24,
+      "scenes": 18,
+      "sceneTurnIDs": 54,
+      "vocabularyBanks": 38,
+      "vocabularyWordIDs": 304,
+      "knownPersonalWordKeys": 535,
+      "arcadeItemIDs": 587
+    },
+    "omits": [
+      "Lesson teaching, examples and full production models",
+      "Grammar exercise prompts, accepted answers, explanations and hints",
+      "Companion tasks, examples, models and the full source-page catalogue",
+      "Conversation prompts, options, dialogue, answers and feedback",
+      "Personal learner records and all private source files"
+    ]
+  },
+  "reproduction": {
+    "generate": "node scripts/generate_planning_metadata.mjs",
+    "check": "node scripts/generate_planning_metadata.mjs --check",
+    "tests": "node --experimental-strip-types --test tests/planning-metadata.test.mjs",
+    "contentChangeRule": "Regenerate after authored catalogue identity/order changes; the parity test and --check reject stale generated output.",
+    "browserAudit": "node --experimental-strip-types scripts/audit_loading_browser.mjs",
+    "measurement": "Run node scripts/measure_daily_loading.mjs baseline against the baseline build, then rebuild and run node scripts/measure_daily_loading.mjs after. Both use a localhost preview, default port5197."
+  },
+  "compatibility": {
+    "progressVersionUnchanged": 1,
+    "synchronousProgressValidation": true,
+    "missionGrammarSceneAndWordIDsPreserved": true,
+    "savedSessionBankMappingUnchanged": true,
+    "scoringAndReviewIntervalsUnchanged": true,
+    "fullDailyStudyPlanCallersRemainSupported": true,
+    "companionSelection": "Original first practice page per grammar unit; subset preserves source ordering.",
+    "assessmentValidation": "Every existing exercise ID retained; invented diagnostic IDs remain rejected."
+  },
+  "validation": {
+    "metadataTestsPassed": 8,
+    "fullVersusCompactDailyPlanCases": 3696,
+    "existingChapterAndLongCourseTestsPassed": 15,
+    "targetedTypecheck": "passed",
+    "ownedFilesESLint": "passed",
+    "initialEngineImportGraph": "No curriculum.json, grammar.json, companion.json, enrichment.json or arcade-scenes.json reachable through static value imports.",
+    "privateBookFilesOrLearnerDataReadOrChanged": false,
+    "existingLearningAcademyArcadeTestsPassed": 53,
+    "loadingHarnessSyntaxAndESLint": "passed",
+    "coldTodayAndLazyRecoveryBrowser": "passed"
+  },
+  "limits": [
+    "Local timing from disposable Chromium contexts is not a real mobile/network performance score. Exact initial/deferred resource requests and byte reduction are the acceptance measurements.",
+    "JSON projection size and emitted JavaScript bytes measure different things; both are reported separately.",
+    "Full teaching catalogues load with their study routes. Today and synchronous saved-progress hydration remain available without loading those payloads.",
+    "Forced static-script aborts exercise recovery but do not simulate every hosting or network failure.",
+    "Public deployment remains outside this local audit."
+  ],
+  "measurement": {
+    "method": "Three cold disposable Chromium contexts on localhost, with cache disabled by request routing. Initial Today remains fully usable; compressed bytes are computed from the exact requested built scripts.",
+    "baseline": {
+      "initialJavaScriptBytes": 2528068,
+      "initialGzipBytes": 482883,
+      "medianUsableMs": 445,
+      "coldSamples": 3
+    },
+    "after": {
+      "initialJavaScriptBytes": 608582,
+      "initialGzipBytes": 171340,
+      "medianUsableMs": 183,
+      "coldSamples": 3
+    },
+    "javaScriptBytesReducedPercent": 75.93,
+    "gzipBytesReducedPercent": 64.52,
+    "evidence": [
+      {
+        "path": "work/loading-audit/baseline.json",
+        "bytes": 2674,
+        "sha256": "1735b056924d6c9f29a3501812c8bcfb28a7f25e79c7f3d79fc202f4e068732a"
+      },
+      {
+        "path": "work/loading-audit/after.json",
+        "bytes": 2664,
+        "sha256": "41b07c08521da24c8e62807c9ba36f354ff9d25a94ace3437be386b8ad52fe9c"
+      }
+    ],
+    "limitations": "Local timing is not a real mobile/network performance score. Byte reduction and deferred resource requests are the acceptance measurements."
+  },
+  "browserAudit": {
+    "status": "passed",
+    "checkedAt": "2026-10-24T21:13:54.303Z",
+    "script": "scripts/audit_loading_browser.mjs",
+    "report": {
+      "path": "work/loading-browser/report.json",
+      "bytes": 8669,
+      "sha256": "a59b86cafb25738186c5063d02ed79d21f5cd2ea213d9a1ebb751fc81fafd07c"
+    },
+    "isolatedSyntheticContexts": true,
+    "sharedBrowserOrLearnerDataAccessed": false,
+    "coldTodayLanguages": [
+      "en",
+      "it"
+    ],
+    "coldTodayScripts": [
+      "/assets/index-CEn1PUdH.js"
+    ],
+    "coldTodayHydrationAndStartUsable": true,
+    "deferredPayloadCategories": [
+      "grammar",
+      "companion",
+      "enrichment",
+      "scenes"
+    ],
+    "deferredBodyEvidence": [
+      {
+        "category": "grammar",
+        "sha256": "c472ea56639d3b6a19626763ed1c88973dc52bad6888f22f66f782cee6a5374a",
+        "assets": [
+          "/assets/grammar-BtH4sbaC.js"
+        ]
+      },
+      {
+        "category": "companion",
+        "sha256": "ee5d82310ecab63009545bf60c73d575999b2f3fea3441a60c555a25c81a5735",
+        "assets": [
+          "/assets/companion-DPZeYUu6.js"
+        ]
+      },
+      {
+        "category": "enrichment",
+        "sha256": "7ce236ed0097d48496efc44e8ae53bec9927d91cc6077288dec1e581eb90b58f",
+        "assets": [
+          "/assets/enrichment-BCTIhNYJ.js"
+        ]
+      },
+      {
+        "category": "scenes",
+        "sha256": "59949dd6c256c418813a69d040d9e33f83116095ba3d88165cf11373dbdc511c",
+        "assets": [
+          "/assets/arcade-scenes-CBQF13FH.js"
+        ]
+      }
+    ],
+    "directDeepRoutes": [
+      "grammar/noun-gender",
+      "programmes",
+      "companion/src-c62281320322-p2",
+      "discover",
+      "session",
+      "vocabulary/espresso2-u01",
+      "games/espresso2-u01",
+      "chapters/espresso2-u01",
+      "reviews",
+      "words"
+    ],
+    "forcedFailureCases": [
+      {
+        "language": "en",
+        "blockedScripts": [
+          "/assets/academy-D-TWoh7a.js",
+          "/assets/companion-DPZeYUu6.js",
+          "/assets/discovery-index-xM2TX-LE.js",
+          "/assets/grammar-BtH4sbaC.js",
+          "/assets/navigation-BIrD2hfo.js"
+        ],
+        "retryVisible": true,
+        "leftFailureRoute": true,
+        "reloadRecovered": true,
+        "priorDraftsIntact": true,
+        "newDraftResumed": true
+      },
+      {
+        "language": "it",
+        "blockedScripts": [
+          "/assets/academy-D-TWoh7a.js",
+          "/assets/companion-DPZeYUu6.js",
+          "/assets/discovery-index-xM2TX-LE.js",
+          "/assets/grammar-BtH4sbaC.js",
+          "/assets/navigation-BIrD2hfo.js"
+        ],
+        "retryVisible": true,
+        "leftFailureRoute": true,
+        "reloadRecovered": true,
+        "priorDraftsIntact": true,
+        "newDraftResumed": true
+      }
+    ],
+    "unexpectedRuntimeErrors": 0,
+    "expectedInjectedFailureDiagnostics": 14,
+    "externalRequests": 0,
+    "networkMutations": 0,
+    "checks": [
+      {
+        "label": "Cold EN/IT Today is usable and hydrates unfinished progress without requesting full teaching payloads",
+        "languages": 2,
+        "payloadCategories": 4
+      },
+      {
+        "label": "Ten direct lazy-route URLs load their study tools and preserve saved drafts",
+        "routes": 10
+      },
+      {
+        "label": "Forced lazy-JS failures show bilingual recovery; leaving the route and reloading both work without losing drafts",
+        "languages": 2
+      },
+      {
+        "label": "Owned synthetic browsers made no external requests or progress API calls; healthy journeys had no runtime errors"
+      }
+    ],
+    "screenshots": [
+      "work/loading-browser/en-cold-today.png",
+      "work/loading-browser/it-cold-today.png",
+      "work/loading-browser/en-lazy-failure.png",
+      "work/loading-browser/en-recovered-session.png",
+      "work/loading-browser/it-lazy-failure.png",
+      "work/loading-browser/it-recovered-session.png"
+    ],
+    "visualReview": "Both390px failure screenshots inspected: translated explanation, retry button and main navigation remain readable and visible.",
+    "limitations": [
+      "The forced fault aborts static lazy-script requests; it does not simulate every hosting/network failure.",
+      "The recovery button reloads the document, matching the user-facing instruction; synthetic saved work remains browser-local.",
+      "Byte/timing benchmarks are recorded separately; this audit verifies request boundaries and recovery behaviour."
+    ],
+    "finalBuildRerun": "Repeated after the validated grammar-recall draft fix; all ten direct routes and both language failure/reload journeys passed on the final built asset."
+  }
+}

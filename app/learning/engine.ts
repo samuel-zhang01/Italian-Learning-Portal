@@ -274,6 +274,9 @@ export function parseProgress(raw: string, ids: string[]): Progress {
         !validDate(date) ||
         !object(s) ||
         !allowed.has(String(s.missionId)) ||
+        (s.bankId !== undefined && (typeof s.bankId !== "string" || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(s.bankId) || s.bankId.length > 100)) ||
+        [s.gistAnswer, s.retell].some((value) => value !== undefined && (typeof value !== "string" || value.length > 2000)) ||
+        (s.retellChecks !== undefined && (!Array.isArray(s.retellChecks) || s.retellChecks.length > 5 || !s.retellChecks.every((value) => typeof value === "boolean"))) ||
         (s.duration !== undefined &&
           (typeof s.duration !== "number" ||
             ![5, 10, 15, 20, 30].includes(s.duration))) ||

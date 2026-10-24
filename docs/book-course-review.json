@@ -1,0 +1,2950 @@
+{
+  "reviewedOn": "2026-10-24",
+  "scope": "Original companion enhancement grounded in two derived native-reader main-book exports, edition contents and selectively reviewed teacher-guide pages. Captured page completeness and teaching review are reported separately; source exercises and independent homework are not reproduced.",
+  "counts": {
+    "newMissions": 20,
+    "newEnrichments": 20,
+    "newGrammarUnits": 27,
+    "newControlledExercises": 216,
+    "newProgrammeStudyDays": 80,
+    "distinctProgrammePracticeTasks": 80,
+    "newSourceMetadataRecords": 5,
+    "newReferenceCompanions": 673,
+    "totalMissions": 56,
+    "totalGrammarUnits": 55,
+    "totalSources": 53,
+    "totalCompanions": 1609,
+    "practiceCompanionsUnchanged": 730,
+    "newA1GrammarUnits": 7,
+    "newA2GrammarUnits": 20,
+    "totalControlledExercises": 440,
+    "nativeReaderReferenceCompanions": 503,
+    "totalA1Units": 32,
+    "totalA1PlusUnits": 3,
+    "totalA2Units": 20,
+    "referenceCompanions": 879
+  },
+  "baselinePreservation": {
+    "status": "Exact pre-existing objects and order preserved; the original three programme objects and all day arrays are unchanged. The existing companion-only classroom deck metadata was added unchanged to curriculum.sources to unify the catalogues.",
+    "canonicalHashFormat": "SHA-256 of UTF-8 JSON with recursively sorted object keys, compact separators and original array order.",
+    "arrays": {
+      "curriculum.missions": {
+        "count": 36,
+        "sha256": "ed1d30019b4b0747cb6ebd73e7dc9e86f2ea6127bdcf81862a1cbd2b7039e5cd"
+      },
+      "curriculum.sources": {
+        "count": 47,
+        "sha256": "7641670943e064ae3421974662a9528ab8af02589aff11c2414ac71274b02723"
+      },
+      "grammar.units": {
+        "count": 28,
+        "sha256": "c2a7137261a88f91a75413937aee11e0045f06cddcd17d261f3210d444976fba"
+      },
+      "grammar.programmes": {
+        "count": 3,
+        "sha256": "a0d66f886e2d5f134b81fe50e6cc94d50f98038aecc212043da42a0f679bafd6"
+      },
+      "enrichment.banks": {
+        "count": 18,
+        "sha256": "3a8cd2a11f427975d5121804ddbddb1dc231d0bf73bafbb0632db4aff84c91d4"
+      },
+      "enrichment.lessons": {
+        "count": 36,
+        "sha256": "3f8b1ef2b6073c05007b361731f0ad526a4ec001e27aca30e7418f70568b8df7"
+      },
+      "enrichment.resources": {
+        "count": 11,
+        "sha256": "6531a0c6499f9c7df870e7622b179706584d8cb1aa268787e019518d770c6097"
+      },
+      "enrichment.research": {
+        "count": 3,
+        "sha256": "57503f05ee0cfba70f3c037de3a01b7b92cdec651d4c763999ae42ef186917f1"
+      },
+      "companion.sources": {
+        "count": 48,
+        "sha256": "a844dc6c885f79b4f261d8d28f03f2433ddc0085f6dc5b4fdac859a418dc7cf4"
+      },
+      "companion.pages": {
+        "count": 936,
+        "sha256": "fb669a217d1563d3af7d8f7dcd6c1745032e2396ad317d4824a4d93e712333ee"
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "id": "src-8fa57188c2eb",
+      "path": "materials/books/nuovo-espresso-plus-1/originals/publisher/NEPLUS1_indice.pdf",
+      "title": "NEPLUS1_indice.pdf",
+      "course": 1,
+      "pages": 2,
+      "sha256": "8fa57188c2ebe38924bb89947715f4176513587408553f94cbcd22d2017394bb"
+    },
+    {
+      "id": "src-c3791736675a",
+      "path": "materials/books/nuovo-espresso-plus-2/originals/publisher/NESP2_indice.pdf",
+      "title": "NESP2_indice.pdf",
+      "course": 3,
+      "pages": 2,
+      "sha256": "c3791736675a2cf754c1527a6bafc7a7f3ee545d0efd78eb3a69800b8fb916c5"
+    },
+    {
+      "id": "src-070c40bad24b",
+      "path": "materials/books/nuovo-espresso-plus-2/originals/publisher/NEPLUS2_guida-totaleDEF.pdf",
+      "title": "NEPLUS2_guida-totaleDEF.pdf",
+      "course": 3,
+      "pages": 166,
+      "sha256": "070c40bad24b248f5b07c97b3e5682990fcc262817693389cc003a1664e3f86c"
+    },
+    {
+      "id": "src-1647be2784c9",
+      "path": "materials/books/nuovo-espresso-plus-1/originals/reader-native-pdf/nuovo-espresso-plus-1-complete-book.pdf",
+      "title": "nuovo-espresso-plus-1-complete-book.pdf · reader XPS → PDF",
+      "course": 1,
+      "pages": 240,
+      "sha256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf"
+    },
+    {
+      "id": "src-580f7558db56",
+      "path": "materials/books/nuovo-espresso-plus-2/originals/reader-native-pdf/nuovo-espresso-plus-2-accessible-reader-book-263-pages.pdf",
+      "title": "nuovo-espresso-plus-2-accessible-reader-book-263-pages.pdf · reader XPS → PDF",
+      "course": 3,
+      "pages": 263,
+      "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4"
+    }
+  ],
+  "numbering": "All source citations use physical downloaded-PDF pages, including preliminary pages. Student-book printed page numbers in the guide are not substituted.",
+  "sourceCoverage": {
+    "plus1": "All 240 available main-book physical pages captured as a derived reader PDF. Selected chapter teaching paragraphs and all grammar reference pages224–240 were reviewed; actual student-book citations supplement the contents map. Seven original A1 units address verified gaps.",
+    "plus2": "All 26 available main-book reader sections captured as263 physical pages. All ten chapter communication summaries and grammar reference pages248–263 were reviewed; remaining exercises, cultural pages and media were not comprehensively pedagogically reviewed. The publisher advertises264 pages, with the unavailable final page unresolved.",
+    "guidePagesSupportingAuthoredUnits": [
+      16,
+      17,
+      19,
+      20,
+      30,
+      31,
+      34,
+      35,
+      44,
+      45,
+      46,
+      49,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      72,
+      73,
+      75,
+      76,
+      77,
+      79,
+      89,
+      90,
+      91,
+      92,
+      93,
+      101,
+      102,
+      103,
+      104,
+      116,
+      117,
+      118,
+      120,
+      121,
+      132,
+      133,
+      134,
+      135,
+      136,
+      142,
+      143,
+      144,
+      146,
+      147,
+      148
+    ],
+    "newPagesProvidePracticeCompletion": false,
+    "nativeReaderPracticePagesAdded": 0
+  },
+  "chapterSourceMapping": [
+    {
+      "bookId": "nuovo-espresso-plus-1",
+      "unit": 1,
+      "chapterTitle": "Primi contatti",
+      "missionId": "espresso1-u01-confirm-contact",
+      "missionSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            11,
+            14,
+            224,
+            233
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-8fa57188c2eb",
+        "pages": [
+          1
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            11,
+            14,
+            224,
+            233
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso1-u01-notice",
+        "espresso1-u01-change",
+        "espresso1-u01-transfer",
+        "espresso1-u01-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-1",
+      "unit": 2,
+      "chapterTitle": "Io e gli altri",
+      "missionId": "espresso1-u02-introduce-colleague",
+      "missionSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            23,
+            24,
+            26,
+            29
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-8fa57188c2eb",
+        "pages": [
+          1
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            23,
+            24,
+            26,
+            29
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso1-u02-notice",
+        "espresso1-u02-change",
+        "espresso1-u02-transfer",
+        "espresso1-u02-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-1",
+      "unit": 3,
+      "chapterTitle": "Buon appetito!",
+      "missionId": "espresso1-u03-book-a-table",
+      "missionSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            46,
+            49,
+            237
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-8fa57188c2eb",
+        "pages": [
+          1
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            46,
+            49,
+            237
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso1-u03-notice",
+        "espresso1-u03-change",
+        "espresso1-u03-transfer",
+        "espresso1-u03-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-1",
+      "unit": 4,
+      "chapterTitle": "Tempo libero",
+      "missionId": "espresso1-u04-find-common-ground",
+      "missionSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            59,
+            61,
+            234
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-8fa57188c2eb",
+        "pages": [
+          1
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            59,
+            61,
+            234
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso1-u04-notice",
+        "espresso1-u04-change",
+        "espresso1-u04-transfer",
+        "espresso1-u04-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-1",
+      "unit": 5,
+      "chapterTitle": "In albergo",
+      "missionId": "espresso1-u05-choose-a-stay",
+      "missionSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            68,
+            75,
+            236,
+            239
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-8fa57188c2eb",
+        "pages": [
+          1
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            68,
+            75,
+            236,
+            239
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso1-u05-notice",
+        "espresso1-u05-change",
+        "espresso1-u05-transfer",
+        "espresso1-u05-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-1",
+      "unit": 6,
+      "chapterTitle": "Tanti auguri!",
+      "missionId": "espresso1-u06-plan-a-celebration",
+      "missionSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            95,
+            229,
+            234
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-8fa57188c2eb",
+        "pages": [
+          2
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            95,
+            229,
+            234
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso1-u06-notice",
+        "espresso1-u06-change",
+        "espresso1-u06-transfer",
+        "espresso1-u06-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-1",
+      "unit": 7,
+      "chapterTitle": "In giro in città",
+      "missionId": "espresso1-u07-find-an-open-place",
+      "missionSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            100,
+            104,
+            106,
+            107,
+            232
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-8fa57188c2eb",
+        "pages": [
+          2
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            100,
+            104,
+            106,
+            107,
+            232
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso1-u07-notice",
+        "espresso1-u07-change",
+        "espresso1-u07-transfer",
+        "espresso1-u07-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-1",
+      "unit": 8,
+      "chapterTitle": "Italia da scoprire",
+      "missionId": "espresso1-u08-change-the-itinerary",
+      "missionSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            117,
+            119,
+            121,
+            235,
+            236
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-8fa57188c2eb",
+        "pages": [
+          2
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            117,
+            119,
+            121,
+            235,
+            236
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso1-u08-notice",
+        "espresso1-u08-change",
+        "espresso1-u08-transfer",
+        "espresso1-u08-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-1",
+      "unit": 9,
+      "chapterTitle": "Sapori d’Italia",
+      "missionId": "espresso1-u09-plan-the-ingredients",
+      "missionSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            135,
+            139,
+            232,
+            236
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-8fa57188c2eb",
+        "pages": [
+          2
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            135,
+            139,
+            232,
+            236
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso1-u09-notice",
+        "espresso1-u09-change",
+        "espresso1-u09-transfer",
+        "espresso1-u09-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-1",
+      "unit": 10,
+      "chapterTitle": "La famiglia",
+      "missionId": "espresso1-u10-recount-a-celebration",
+      "missionSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            147,
+            149,
+            153,
+            229,
+            235
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-8fa57188c2eb",
+        "pages": [
+          2
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            147,
+            149,
+            153,
+            229,
+            235
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso1-u10-notice",
+        "espresso1-u10-change",
+        "espresso1-u10-transfer",
+        "espresso1-u10-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-2",
+      "unit": 1,
+      "chapterTitle": "In giro per negozi",
+      "missionId": "espresso2-u01-choose-a-gift",
+      "missionSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            17,
+            18,
+            20
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            19,
+            249,
+            250
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-c3791736675a",
+        "pages": [
+          1
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            17,
+            18,
+            20
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            19,
+            249,
+            250
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso2-u01-notice",
+        "espresso2-u01-change",
+        "espresso2-u01-transfer",
+        "espresso2-u01-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-2",
+      "unit": 2,
+      "chapterTitle": "Quando ero piccola",
+      "missionId": "espresso2-u02-remember-a-place",
+      "missionSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            31,
+            35
+          ]
+        },
+        {
+          "id": "src-c3791736675a",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            33,
+            252
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            232
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-c3791736675a",
+        "pages": [
+          1
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            31,
+            35
+          ]
+        },
+        {
+          "id": "src-c3791736675a",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            33,
+            252
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso2-u02-notice",
+        "espresso2-u02-change",
+        "espresso2-u02-transfer",
+        "espresso2-u02-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-2",
+      "unit": 3,
+      "chapterTitle": "Un tipo interessante",
+      "missionId": "espresso2-u03-ask-for-a-favour",
+      "missionSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            44,
+            46
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            55,
+            254,
+            258
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-c3791736675a",
+        "pages": [
+          1
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            44,
+            46
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            55,
+            254,
+            258
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso2-u03-notice",
+        "espresso2-u03-change",
+        "espresso2-u03-transfer",
+        "espresso2-u03-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-2",
+      "unit": 4,
+      "chapterTitle": "Che ne dici?",
+      "missionId": "espresso2-u04-coordinate-an-outing",
+      "missionSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            60,
+            61,
+            62
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            69,
+            252,
+            257,
+            261
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-c3791736675a",
+        "pages": [
+          1
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            60,
+            61,
+            62,
+            67
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            69,
+            252,
+            257,
+            261
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso2-u04-notice",
+        "espresso2-u04-change",
+        "espresso2-u04-transfer",
+        "espresso2-u04-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-2",
+      "unit": 5,
+      "chapterTitle": "Buon viaggio!",
+      "missionId": "espresso2-u05-explain-a-delay",
+      "missionSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            73,
+            75,
+            79
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            83,
+            253,
+            258
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-c3791736675a",
+        "pages": [
+          1
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            73,
+            75,
+            79
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            83,
+            253,
+            258
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso2-u05-notice",
+        "espresso2-u05-change",
+        "espresso2-u05-transfer",
+        "espresso2-u05-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-2",
+      "unit": 6,
+      "chapterTitle": "Stili di vita",
+      "missionId": "espresso2-u06-suggest-a-break",
+      "missionSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            90,
+            91,
+            93
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            103,
+            254,
+            255
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-c3791736675a",
+        "pages": [
+          2
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            89,
+            90,
+            91,
+            93
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            103,
+            254,
+            255
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso2-u06-notice",
+        "espresso2-u06-change",
+        "espresso2-u06-transfer",
+        "espresso2-u06-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-2",
+      "unit": 7,
+      "chapterTitle": "Come va?",
+      "missionId": "espresso2-u07-navigate-an-appointment",
+      "missionSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            101,
+            102,
+            103
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            117,
+            254,
+            255
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-c3791736675a",
+        "pages": [
+          2
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            101,
+            102,
+            103,
+            104
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            117,
+            254,
+            255
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso2-u07-notice",
+        "espresso2-u07-change",
+        "espresso2-u07-transfer",
+        "espresso2-u07-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-2",
+      "unit": 8,
+      "chapterTitle": "Il futuro è dietro l’angolo",
+      "missionId": "espresso2-u08-plan-a-next-step",
+      "missionSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            116,
+            119,
+            121
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            133,
+            255,
+            256,
+            259
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-c3791736675a",
+        "pages": [
+          2
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            116,
+            119,
+            121
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            133,
+            255,
+            256,
+            259
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso2-u08-notice",
+        "espresso2-u08-change",
+        "espresso2-u08-transfer",
+        "espresso2-u08-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-2",
+      "unit": 9,
+      "chapterTitle": "Il colpo di fulmine?",
+      "missionId": "espresso2-u09-tell-an-interruption",
+      "missionSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            133,
+            134,
+            135,
+            136
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            153,
+            251,
+            257
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-c3791736675a",
+        "pages": [
+          2
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            133,
+            134,
+            135,
+            136
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            153,
+            251,
+            257
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso2-u09-notice",
+        "espresso2-u09-change",
+        "espresso2-u09-transfer",
+        "espresso2-u09-recall"
+      ]
+    },
+    {
+      "bookId": "nuovo-espresso-plus-2",
+      "unit": 10,
+      "chapterTitle": "Casa dolce casa",
+      "missionId": "espresso2-u10-discuss-a-home",
+      "missionSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            144,
+            145,
+            147,
+            148
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            167,
+            256,
+            257
+          ]
+        }
+      ],
+      "topicSequenceReference": {
+        "id": "src-c3791736675a",
+        "pages": [
+          2
+        ]
+      },
+      "practiceSourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            144,
+            145,
+            147,
+            148
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            167,
+            256,
+            257
+          ]
+        }
+      ],
+      "coverageStatus": "Verified chapter sequence with selectively reviewed actual student-book teaching pages; original companion practice. Capture completeness does not imply every source activity was pedagogically reviewed.",
+      "practiceIds": [
+        "espresso2-u10-notice",
+        "espresso2-u10-change",
+        "espresso2-u10-transfer",
+        "espresso2-u10-recall"
+      ]
+    }
+  ],
+  "unitSourceMapping": [
+    {
+      "id": "a2-indirect-pronouns",
+      "primaryChapter": 1,
+      "chapterLinks": [
+        1
+      ],
+      "guidePhysicalPages": [
+        16,
+        17
+      ],
+      "outcome": {
+        "en": "Replace a recipient with an indirect pronoun in a short shop conversation.",
+        "it": "Sostituisci il destinatario con un pronome indiretto in un breve dialogo in negozio."
+      },
+      "nativeBookPhysicalPages": [
+        19,
+        250
+      ]
+    },
+    {
+      "id": "a2-comparisons",
+      "primaryChapter": 1,
+      "chapterLinks": [
+        1,
+        10
+      ],
+      "guidePhysicalPages": [
+        19,
+        20,
+        49,
+        147,
+        148
+      ],
+      "outcome": {
+        "en": "Compare two things, two qualities or equal characteristics.",
+        "it": "Confronta due cose, due qualità o caratteristiche uguali."
+      },
+      "nativeBookPhysicalPages": [
+        19,
+        55,
+        167,
+        249
+      ]
+    },
+    {
+      "id": "a2-imperfetto",
+      "primaryChapter": 2,
+      "chapterLinks": [
+        2
+      ],
+      "guidePhysicalPages": [
+        30,
+        31,
+        34,
+        35
+      ],
+      "outcome": {
+        "en": "Describe repeated past routines and the way things used to be.",
+        "it": "Descrivi abitudini passate e com’erano le cose."
+      },
+      "nativeBookPhysicalPages": [
+        33,
+        252
+      ]
+    },
+    {
+      "id": "a2-conditional",
+      "primaryChapter": 3,
+      "chapterLinks": [
+        3
+      ],
+      "guidePhysicalPages": [
+        44,
+        45,
+        46
+      ],
+      "outcome": {
+        "en": "Use the present conditional for a request, a wish and a suggestion.",
+        "it": "Usa il condizionale presente per una richiesta, un desiderio e un consiglio."
+      },
+      "nativeBookPhysicalPages": [
+        55,
+        253,
+        254
+      ]
+    },
+    {
+      "id": "a2-indefinites-farcela",
+      "primaryChapter": 3,
+      "chapterLinks": [
+        3
+      ],
+      "guidePhysicalPages": [
+        44,
+        45
+      ],
+      "outcome": {
+        "en": "Say whether anyone is available and whether you can manage a task.",
+        "it": "Di’ se qualcuno è disponibile e se riesci a svolgere un compito."
+      },
+      "nativeBookPhysicalPages": [
+        55,
+        251,
+        258
+      ]
+    },
+    {
+      "id": "a2-progressive",
+      "primaryChapter": 4,
+      "chapterLinks": [
+        4
+      ],
+      "guidePhysicalPages": [
+        59,
+        60,
+        61
+      ],
+      "outcome": {
+        "en": "Use stare + gerund to describe an action in progress.",
+        "it": "Usa stare + gerundio per descrivere un’azione in corso."
+      },
+      "nativeBookPhysicalPages": [
+        69,
+        257
+      ]
+    },
+    {
+      "id": "a2-pronouns-perfect",
+      "primaryChapter": 4,
+      "chapterLinks": [
+        4
+      ],
+      "guidePhysicalPages": [
+        61,
+        62,
+        63
+      ],
+      "outcome": {
+        "en": "Use direct pronouns with the passato prossimo and with an infinitive.",
+        "it": "Usa i pronomi diretti con il passato prossimo e con un infinito."
+      },
+      "nativeBookPhysicalPages": [
+        69,
+        250,
+        252,
+        261
+      ]
+    },
+    {
+      "id": "a2-relative-clauses",
+      "primaryChapter": 4,
+      "chapterLinks": [
+        4,
+        5
+      ],
+      "guidePhysicalPages": [
+        64,
+        79
+      ],
+      "outcome": {
+        "en": "Identify a person or place using one clear relative clause.",
+        "it": "Identifica una persona o un luogo con una proposizione relativa chiara."
+      },
+      "nativeBookPhysicalPages": [
+        69,
+        83,
+        251
+      ]
+    },
+    {
+      "id": "a2-past-narrative",
+      "primaryChapter": 5,
+      "chapterLinks": [
+        5
+      ],
+      "guidePhysicalPages": [
+        72,
+        73,
+        75,
+        76,
+        77
+      ],
+      "outcome": {
+        "en": "Combine past background with completed events in an original travel story.",
+        "it": "Combina lo sfondo passato con eventi conclusi in un racconto di viaggio originale."
+      },
+      "nativeBookPhysicalPages": [
+        33,
+        83,
+        253,
+        260
+      ]
+    },
+    {
+      "id": "a2-travel-duration",
+      "primaryChapter": 5,
+      "chapterLinks": [
+        5,
+        8
+      ],
+      "guidePhysicalPages": [
+        79,
+        120
+      ],
+      "outcome": {
+        "en": "Distinguish time required in general from the time a person takes.",
+        "it": "Distingui il tempo necessario in generale dal tempo impiegato da una persona."
+      },
+      "nativeBookPhysicalPages": [
+        83,
+        133,
+        258,
+        259
+      ]
+    },
+    {
+      "id": "a2-informal-imperative",
+      "primaryChapter": 6,
+      "chapterLinks": [
+        6
+      ],
+      "guidePhysicalPages": [
+        20,
+        90,
+        91,
+        92,
+        93
+      ],
+      "outcome": {
+        "en": "Use affirmative and negative tu instructions, including a single pronoun.",
+        "it": "Usa istruzioni affermative e negative con tu, anche con un pronome."
+      },
+      "nativeBookPhysicalPages": [
+        19,
+        103,
+        254,
+        255
+      ]
+    },
+    {
+      "id": "a2-servire-quello-che",
+      "primaryChapter": 6,
+      "chapterLinks": [
+        6
+      ],
+      "guidePhysicalPages": [
+        89,
+        91
+      ],
+      "outcome": {
+        "en": "Use servire and quello che to explain a practical need.",
+        "it": "Usa servire e quello che per spiegare una necessità pratica."
+      },
+      "nativeBookPhysicalPages": [
+        103,
+        258
+      ]
+    },
+    {
+      "id": "a2-formal-imperative",
+      "primaryChapter": 7,
+      "chapterLinks": [
+        7
+      ],
+      "guidePhysicalPages": [
+        101,
+        102,
+        103
+      ],
+      "outcome": {
+        "en": "Use formal Lei instructions with affirmative, negative and pronoun forms.",
+        "it": "Usa istruzioni con il Lei formale, nelle forme affermative, negative e con pronomi."
+      },
+      "nativeBookPhysicalPages": [
+        117,
+        254,
+        255
+      ]
+    },
+    {
+      "id": "a2-better-best",
+      "primaryChapter": 7,
+      "chapterLinks": [
+        7
+      ],
+      "guidePhysicalPages": [
+        104
+      ],
+      "outcome": {
+        "en": "Distinguish describing a good thing from doing something well.",
+        "it": "Distingui la descrizione di una cosa buona dal fare bene qualcosa."
+      },
+      "nativeBookPhysicalPages": [
+        117,
+        249
+      ]
+    },
+    {
+      "id": "a2-future",
+      "primaryChapter": 8,
+      "chapterLinks": [
+        8
+      ],
+      "guidePhysicalPages": [
+        116,
+        117,
+        121
+      ],
+      "outcome": {
+        "en": "Use the simple future for plans and a clearly labelled guess about now.",
+        "it": "Usa il futuro semplice per progetti e una supposizione esplicita sul presente."
+      },
+      "nativeBookPhysicalPages": [
+        133,
+        255,
+        256
+      ]
+    },
+    {
+      "id": "a2-real-conditions",
+      "primaryChapter": 8,
+      "chapterLinks": [
+        8
+      ],
+      "guidePhysicalPages": [
+        116,
+        118,
+        120,
+        121
+      ],
+      "outcome": {
+        "en": "Link a possible condition to a practical plan and use andarsene as a fixed expression.",
+        "it": "Collega una condizione possibile a un progetto pratico e usa andarsene come espressione fissa."
+      },
+      "nativeBookPhysicalPages": [
+        133,
+        259
+      ]
+    },
+    {
+      "id": "a2-imminent-story",
+      "primaryChapter": 9,
+      "chapterLinks": [
+        9
+      ],
+      "guidePhysicalPages": [
+        132,
+        133,
+        134
+      ],
+      "outcome": {
+        "en": "Contrast an action in progress with one about to begin and link a short story.",
+        "it": "Distingui un’azione in corso da una che sta per iniziare e collega un breve racconto."
+      },
+      "nativeBookPhysicalPages": [
+        153,
+        257,
+        260,
+        261
+      ]
+    },
+    {
+      "id": "a2-past-modals",
+      "primaryChapter": 9,
+      "chapterLinks": [
+        9
+      ],
+      "guidePhysicalPages": [
+        135,
+        136
+      ],
+      "outcome": {
+        "en": "Use past modal verbs with a stated auxiliary model and clear reflexive placement.",
+        "it": "Usa i verbi modali al passato con un modello di ausiliare indicato e una posizione riflessiva chiara."
+      },
+      "nativeBookPhysicalPages": [
+        153,
+        251,
+        263
+      ]
+    },
+    {
+      "id": "a2-subjunctive-forms",
+      "primaryChapter": 10,
+      "chapterLinks": [
+        10
+      ],
+      "guidePhysicalPages": [
+        142,
+        143,
+        144,
+        147
+      ],
+      "outcome": {
+        "en": "Recognise and form a small set of present subjunctives in housing sentences.",
+        "it": "Riconosci e forma un piccolo gruppo di congiuntivi presenti in frasi sulla casa."
+      },
+      "nativeBookPhysicalPages": [
+        167,
+        256,
+        263
+      ]
+    },
+    {
+      "id": "a2-subjunctive-opinions",
+      "primaryChapter": 10,
+      "chapterLinks": [
+        10
+      ],
+      "guidePhysicalPages": [
+        143,
+        144,
+        146,
+        147,
+        148
+      ],
+      "outcome": {
+        "en": "Choose between a taught che + subjunctive frame and secondo me + indicative.",
+        "it": "Scegli fra un modello studiato con che + congiuntivo e secondo me + indicativo."
+      },
+      "nativeBookPhysicalPages": [
+        167,
+        257,
+        262
+      ]
+    },
+    {
+      "id": "a1-locative-ci",
+      "bookId": "nuovo-espresso-plus-1",
+      "primaryChapter": 7,
+      "chapterLinks": [
+        7
+      ],
+      "nativeBookPhysicalPages": [
+        100,
+        107,
+        232
+      ],
+      "outcome": "Replace an already named destination with ci; distinguish location from the thing being discussed."
+    },
+    {
+      "id": "a1-partitive-ne",
+      "bookId": "nuovo-espresso-plus-1",
+      "primaryChapter": 9,
+      "chapterLinks": [
+        9
+      ],
+      "nativeBookPhysicalPages": [
+        135,
+        139,
+        232
+      ],
+      "outcome": "Retain a stated quantity while replacing the named item with ne; distinguish part of a set from a whole object."
+    },
+    {
+      "id": "a1-impersonal-si",
+      "bookId": "nuovo-espresso-plus-1",
+      "primaryChapter": 9,
+      "chapterLinks": [
+        9
+      ],
+      "nativeBookPhysicalPages": [
+        139,
+        234
+      ],
+      "outcome": "Describe general activities and singular/plural things sold or used, without naming the person acting."
+    },
+    {
+      "id": "a1-superlatives",
+      "bookId": "nuovo-espresso-plus-1",
+      "primaryChapter": 8,
+      "chapterLinks": [
+        8,
+        10
+      ],
+      "nativeBookPhysicalPages": [
+        121,
+        153,
+        229
+      ],
+      "outcome": "Distinguish very high degree from the highest/lowest degree within a stated group."
+    },
+    {
+      "id": "a1-adverbs",
+      "bookId": "nuovo-espresso-plus-1",
+      "primaryChapter": 6,
+      "chapterLinks": [
+        6
+      ],
+      "nativeBookPhysicalPages": [
+        230
+      ],
+      "outcome": "Form common -mente adverbs and distinguish describing a person or thing from describing an action."
+    },
+    {
+      "id": "a1-dates-numbers",
+      "bookId": "nuovo-espresso-plus-1",
+      "primaryChapter": 5,
+      "chapterLinks": [
+        5,
+        1
+      ],
+      "nativeBookPhysicalPages": [
+        239
+      ],
+      "outcome": "Write contracted compound numbers, required -tré accents, dates and agreed ordinal labels."
+    },
+    {
+      "id": "a1-sounds-stress",
+      "bookId": "nuovo-espresso-plus-1",
+      "primaryChapter": 1,
+      "chapterLinks": [
+        1
+      ],
+      "nativeBookPhysicalPages": [
+        224,
+        225
+      ],
+      "outcome": "Recognise letter-pattern and written-stress information; practise spelling without claiming automatic speech assessment."
+    }
+  ],
+  "programme": {
+    "id": "espresso-plus-a1-a2",
+    "chapterCount": 20,
+    "studyDaysPerChapter": 4,
+    "stageKinds": [
+      "notice",
+      "change",
+      "transfer",
+      "recall"
+    ],
+    "freshPractice": "Each day requires its own saved learner output and self-checked criteria, even when linked lessons were completed earlier. Output is self-assessed, not automatically graded.",
+    "budget": "Five-minute personal checkpoint; linked grammar and missions can take multiple sittings within the learner’s selected daily budget. No calendar-duration guarantee.",
+    "prerequisites": "Prerequisite closures allocated in topological order, at most two newly introduced units per day. All original28 plus seven new A1 units are introduced by the end of Plus1; all20 A2 units by the end of Plus2. Revision days reuse previously introduced targets.",
+    "chapterAllocation": [
+      {
+        "bookId": "nuovo-espresso-plus-1",
+        "unit": 1,
+        "missionId": "espresso1-u01-confirm-contact",
+        "dayRange": [
+          1,
+          4
+        ],
+        "newUnitIds": [
+          "noun-gender",
+          "noun-plurals",
+          "definite-articles",
+          "adjective-agreement",
+          "essere",
+          "avere",
+          "questions-negation",
+          "a1-sounds-stress"
+        ],
+        "targetUnitIds": [
+          "essere",
+          "questions-negation",
+          "a1-sounds-stress"
+        ],
+        "practiceIds": [
+          "espresso1-u01-notice",
+          "espresso1-u01-change",
+          "espresso1-u01-transfer",
+          "espresso1-u01-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-1",
+        "unit": 2,
+        "missionId": "espresso1-u02-introduce-colleague",
+        "dayRange": [
+          5,
+          8
+        ],
+        "newUnitIds": [
+          "present-are",
+          "indefinite-articles",
+          "demonstratives"
+        ],
+        "targetUnitIds": [
+          "present-are",
+          "indefinite-articles",
+          "demonstratives"
+        ],
+        "practiceIds": [
+          "espresso1-u02-notice",
+          "espresso1-u02-change",
+          "espresso1-u02-transfer",
+          "espresso1-u02-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-1",
+        "unit": 3,
+        "missionId": "espresso1-u03-book-a-table",
+        "dayRange": [
+          9,
+          12
+        ],
+        "newUnitIds": [
+          "present-ere"
+        ],
+        "targetUnitIds": [
+          "present-ere"
+        ],
+        "practiceIds": [
+          "espresso1-u03-notice",
+          "espresso1-u03-change",
+          "espresso1-u03-transfer",
+          "espresso1-u03-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-1",
+        "unit": 4,
+        "missionId": "espresso1-u04-find-common-ground",
+        "dayRange": [
+          13,
+          16
+        ],
+        "newUnitIds": [
+          "present-ire",
+          "irregular-present",
+          "piacere"
+        ],
+        "targetUnitIds": [
+          "present-ire",
+          "irregular-present",
+          "piacere"
+        ],
+        "practiceIds": [
+          "espresso1-u04-notice",
+          "espresso1-u04-change",
+          "espresso1-u04-transfer",
+          "espresso1-u04-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-1",
+        "unit": 5,
+        "missionId": "espresso1-u05-choose-a-stay",
+        "dayRange": [
+          17,
+          20
+        ],
+        "newUnitIds": [
+          "there-is",
+          "simple-prepositions",
+          "articulated-prepositions",
+          "modal-verbs",
+          "a1-dates-numbers"
+        ],
+        "targetUnitIds": [
+          "there-is",
+          "simple-prepositions",
+          "articulated-prepositions",
+          "modal-verbs",
+          "a1-dates-numbers"
+        ],
+        "practiceIds": [
+          "espresso1-u05-notice",
+          "espresso1-u05-change",
+          "espresso1-u05-transfer",
+          "espresso1-u05-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-1",
+        "unit": 6,
+        "missionId": "espresso1-u06-plan-a-celebration",
+        "dayRange": [
+          21,
+          24
+        ],
+        "newUnitIds": [
+          "reflexive-routine",
+          "time-frequency",
+          "possessives-family",
+          "a1-adverbs"
+        ],
+        "targetUnitIds": [
+          "reflexive-routine",
+          "time-frequency",
+          "possessives-family",
+          "a1-adverbs"
+        ],
+        "practiceIds": [
+          "espresso1-u06-notice",
+          "espresso1-u06-change",
+          "espresso1-u06-transfer",
+          "espresso1-u06-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-1",
+        "unit": 7,
+        "missionId": "espresso1-u07-find-an-open-place",
+        "dayRange": [
+          25,
+          28
+        ],
+        "newUnitIds": [
+          "sapere-conoscere",
+          "a1-locative-ci"
+        ],
+        "targetUnitIds": [
+          "adjective-agreement",
+          "simple-prepositions",
+          "articulated-prepositions",
+          "sapere-conoscere",
+          "a1-locative-ci"
+        ],
+        "practiceIds": [
+          "espresso1-u07-notice",
+          "espresso1-u07-change",
+          "espresso1-u07-transfer",
+          "espresso1-u07-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-1",
+        "unit": 8,
+        "missionId": "espresso1-u08-change-the-itinerary",
+        "dayRange": [
+          29,
+          32
+        ],
+        "newUnitIds": [
+          "past-avere",
+          "past-essere",
+          "present-past-choice",
+          "past-irregular",
+          "a1-superlatives"
+        ],
+        "targetUnitIds": [
+          "past-avere",
+          "past-essere",
+          "present-past-choice",
+          "past-irregular",
+          "a1-superlatives"
+        ],
+        "practiceIds": [
+          "espresso1-u08-notice",
+          "espresso1-u08-change",
+          "espresso1-u08-transfer",
+          "espresso1-u08-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-1",
+        "unit": 9,
+        "missionId": "espresso1-u09-plan-the-ingredients",
+        "dayRange": [
+          33,
+          36
+        ],
+        "newUnitIds": [
+          "quantity-partitives",
+          "direct-pronouns",
+          "a1-partitive-ne",
+          "a1-impersonal-si"
+        ],
+        "targetUnitIds": [
+          "quantity-partitives",
+          "direct-pronouns",
+          "a1-partitive-ne",
+          "a1-impersonal-si"
+        ],
+        "practiceIds": [
+          "espresso1-u09-notice",
+          "espresso1-u09-change",
+          "espresso1-u09-transfer",
+          "espresso1-u09-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-1",
+        "unit": 10,
+        "missionId": "espresso1-u10-recount-a-celebration",
+        "dayRange": [
+          37,
+          40
+        ],
+        "newUnitIds": [],
+        "targetUnitIds": [
+          "possessives-family",
+          "past-essere",
+          "a1-superlatives"
+        ],
+        "practiceIds": [
+          "espresso1-u10-notice",
+          "espresso1-u10-change",
+          "espresso1-u10-transfer",
+          "espresso1-u10-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-2",
+        "unit": 1,
+        "missionId": "espresso2-u01-choose-a-gift",
+        "dayRange": [
+          41,
+          44
+        ],
+        "newUnitIds": [
+          "a2-indirect-pronouns",
+          "a2-comparisons"
+        ],
+        "targetUnitIds": [
+          "a2-indirect-pronouns",
+          "a2-comparisons"
+        ],
+        "practiceIds": [
+          "espresso2-u01-notice",
+          "espresso2-u01-change",
+          "espresso2-u01-transfer",
+          "espresso2-u01-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-2",
+        "unit": 2,
+        "missionId": "espresso2-u02-remember-a-place",
+        "dayRange": [
+          45,
+          48
+        ],
+        "newUnitIds": [
+          "a2-imperfetto"
+        ],
+        "targetUnitIds": [
+          "a2-imperfetto"
+        ],
+        "practiceIds": [
+          "espresso2-u02-notice",
+          "espresso2-u02-change",
+          "espresso2-u02-transfer",
+          "espresso2-u02-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-2",
+        "unit": 3,
+        "missionId": "espresso2-u03-ask-for-a-favour",
+        "dayRange": [
+          49,
+          52
+        ],
+        "newUnitIds": [
+          "a2-conditional",
+          "a2-indefinites-farcela"
+        ],
+        "targetUnitIds": [
+          "a2-conditional",
+          "a2-indefinites-farcela"
+        ],
+        "practiceIds": [
+          "espresso2-u03-notice",
+          "espresso2-u03-change",
+          "espresso2-u03-transfer",
+          "espresso2-u03-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-2",
+        "unit": 4,
+        "missionId": "espresso2-u04-coordinate-an-outing",
+        "dayRange": [
+          53,
+          56
+        ],
+        "newUnitIds": [
+          "a2-progressive",
+          "a2-pronouns-perfect",
+          "a2-relative-clauses"
+        ],
+        "targetUnitIds": [
+          "a2-progressive",
+          "a2-pronouns-perfect",
+          "a2-relative-clauses"
+        ],
+        "practiceIds": [
+          "espresso2-u04-notice",
+          "espresso2-u04-change",
+          "espresso2-u04-transfer",
+          "espresso2-u04-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-2",
+        "unit": 5,
+        "missionId": "espresso2-u05-explain-a-delay",
+        "dayRange": [
+          57,
+          60
+        ],
+        "newUnitIds": [
+          "a2-past-narrative",
+          "a2-travel-duration"
+        ],
+        "targetUnitIds": [
+          "a2-past-narrative",
+          "a2-travel-duration",
+          "a2-relative-clauses"
+        ],
+        "practiceIds": [
+          "espresso2-u05-notice",
+          "espresso2-u05-change",
+          "espresso2-u05-transfer",
+          "espresso2-u05-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-2",
+        "unit": 6,
+        "missionId": "espresso2-u06-suggest-a-break",
+        "dayRange": [
+          61,
+          64
+        ],
+        "newUnitIds": [
+          "a2-informal-imperative",
+          "a2-servire-quello-che"
+        ],
+        "targetUnitIds": [
+          "a2-informal-imperative",
+          "a2-servire-quello-che"
+        ],
+        "practiceIds": [
+          "espresso2-u06-notice",
+          "espresso2-u06-change",
+          "espresso2-u06-transfer",
+          "espresso2-u06-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-2",
+        "unit": 7,
+        "missionId": "espresso2-u07-navigate-an-appointment",
+        "dayRange": [
+          65,
+          68
+        ],
+        "newUnitIds": [
+          "a2-formal-imperative",
+          "a2-better-best"
+        ],
+        "targetUnitIds": [
+          "a2-formal-imperative",
+          "a2-better-best"
+        ],
+        "practiceIds": [
+          "espresso2-u07-notice",
+          "espresso2-u07-change",
+          "espresso2-u07-transfer",
+          "espresso2-u07-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-2",
+        "unit": 8,
+        "missionId": "espresso2-u08-plan-a-next-step",
+        "dayRange": [
+          69,
+          72
+        ],
+        "newUnitIds": [
+          "a2-future",
+          "a2-real-conditions"
+        ],
+        "targetUnitIds": [
+          "a2-future",
+          "a2-real-conditions",
+          "a2-travel-duration"
+        ],
+        "practiceIds": [
+          "espresso2-u08-notice",
+          "espresso2-u08-change",
+          "espresso2-u08-transfer",
+          "espresso2-u08-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-2",
+        "unit": 9,
+        "missionId": "espresso2-u09-tell-an-interruption",
+        "dayRange": [
+          73,
+          76
+        ],
+        "newUnitIds": [
+          "a2-imminent-story",
+          "a2-past-modals"
+        ],
+        "targetUnitIds": [
+          "a2-imminent-story",
+          "a2-past-modals"
+        ],
+        "practiceIds": [
+          "espresso2-u09-notice",
+          "espresso2-u09-change",
+          "espresso2-u09-transfer",
+          "espresso2-u09-recall"
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-2",
+        "unit": 10,
+        "missionId": "espresso2-u10-discuss-a-home",
+        "dayRange": [
+          77,
+          80
+        ],
+        "newUnitIds": [
+          "a2-subjunctive-forms",
+          "a2-subjunctive-opinions"
+        ],
+        "targetUnitIds": [
+          "a2-subjunctive-forms",
+          "a2-subjunctive-opinions",
+          "a2-comparisons"
+        ],
+        "practiceIds": [
+          "espresso2-u10-notice",
+          "espresso2-u10-change",
+          "espresso2-u10-transfer",
+          "espresso2-u10-recall"
+        ]
+      }
+    ],
+    "diagnosticScope": "The A1 readiness check retains its12 existing foundation domains. It does not comprehensively assess all32 A1 units or the20 A2 units; unit practice and self-assessed chapter responses are separate evidence."
+  },
+  "limits": [
+    "A1 readiness and tense diagnostics retain their A1 scope; new A2 lesson completion does not imply an A2 assessment result.",
+    "The present subjunctive is an introductory final-chapter extension, not general subjunctive mastery.",
+    "Optional existing A1 resources support prerequisite refreshes in A2 enrichment.",
+    "Source worksheets, solutions and independent homework are not reproduced; learner tasks and models are original.",
+    "All accessible main-book pages are captured privately; pedagogical review and original task coverage remain selective.",
+    "Plus2 publisher extent264 differs from the263 accessible reader pages; no missing page content or blank page is inferred."
+  ],
+  "privateExclusions": [
+    "materials/books/** originals, reader captures, media and per-book manifests",
+    "data/incoming/books/** page-preserving extracts and visual-review artifacts",
+    "work/book-authoring/** authoring fragments and integration baseline",
+    "Existing private archives, credentials, local databases, backups and learner progress"
+  ],
+  "validation": {
+    "objectPreservation": "pass",
+    "prerequisiteOrder": "pass",
+    "newUnitsPerDayMaximum": 2,
+    "fullDailyTests": {
+      "status": "pass",
+      "command": "npm run test:daily",
+      "tests": 65,
+      "failures": 0
+    },
+    "typecheck": {
+      "status": "pass",
+      "command": "npm run typecheck"
+    },
+    "independentContentReview": "Author and separate reviewer checked grammar, accepted-answer bounds, natural Italian, dialogue roles and task/model turn counts. Findings corrected before integration.",
+    "focusedLint": {
+      "status": "pass",
+      "command": "npx eslint tests/learning.test.mjs tests/academy.test.mjs"
+    },
+    "sourceMetadata": "Five newly catalogued PDF records verified: three publisher support PDFs and two derived reader exports. Actual derived-PDF hashes, complete-book extraction hashes, final manifests and physical page extents agree.",
+    "independentReviewCorrections": [
+      "Aligned every requested dialogue turn count with its model and preserved the buyer/helper speaker roles.",
+      "Added the Plus 2 contents citation for locative ci rather than attributing it only to imperfect-guide pages.",
+      "Used idiomatic fai una pausa and kept the Italian recall question entirely in Italian.",
+      "Kept the Plus 1 production examples within their intended chapter grammar; the family model distinguishes one relative from a plural group."
+    ],
+    "nativeSourceChecksums": "Both actual derived-PDF file hashes match their final manifests and page-preserving complete-book extracts.",
+    "nativeSectionOffsets": "Each book’s26 section ranges partition its actual physical pages exactly, without gaps or padding.",
+    "nativeBookReview": "Relevant main-book chapter content and complete grammar-reference text reviewed; source facts remain distinct from original portal explanations.",
+    "sevenA1Units": {
+      "exactNativePdfChecksum": true,
+      "completeBilingualFields": true,
+      "distinctEnglishFrames": true,
+      "uniqueIdsAcrossExistingAndNew": true,
+      "acyclicPrerequisites": true,
+      "validMissionLinks": true,
+      "sourcePageBounds": true,
+      "everyAcceptedReorderPreservesAllTokens": true,
+      "exerciseKinds": [
+        "choice",
+        "correct",
+        "gap",
+        "reorder",
+        "transform"
+      ]
+    }
+  },
+  "nativeReaderCapture": {
+    "capturedMainBookPages": 503,
+    "books": [
+      {
+        "bookId": "nuovo-espresso-plus-1",
+        "sourceId": "src-1647be2784c9",
+        "path": "materials/books/nuovo-espresso-plus-1/originals/reader-native-pdf/nuovo-espresso-plus-1-complete-book.pdf",
+        "sha256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf",
+        "capturedPages": 240,
+        "availableMainBookSections": 26,
+        "captureStatus": "complete",
+        "derivedFrom": "Ordinary unencrypted reader XPS converted to PDF; this is a derived reader export, not an original publisher PDF.",
+        "publisherExtentPages": 240,
+        "extentDiscrepancyPages": 0,
+        "extentNote": "All 26 accessible main-book sections are assembled in reader contents order.",
+        "printedPageLabelsExhaustivelyVerified": false,
+        "selectivelyReviewedPhysicalPages": [
+          11,
+          14,
+          23,
+          24,
+          26,
+          29,
+          46,
+          49,
+          59,
+          61,
+          68,
+          75,
+          95,
+          100,
+          104,
+          106,
+          107,
+          117,
+          119,
+          121,
+          135,
+          139,
+          147,
+          149,
+          153,
+          224,
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240
+        ],
+        "reviewGranularity": "Relevant teaching paragraphs and chapter summaries; complete grammar reference text. Presence in this list does not claim every exercise or media item on the page was pedagogically reviewed.",
+        "nativeTextVisualReviewFlags": 3,
+        "sections": [
+          {
+            "section": "intro e mappa dell'Italia",
+            "section_slug": "intro-e-mappa-dell-italia",
+            "start_page": 1,
+            "end_page": 6,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 1 | Primi contatti",
+            "section_slug": "lezione-1-primi-contatti",
+            "start_page": 7,
+            "end_page": 18,
+            "pages": 12
+          },
+          {
+            "section": "Lezione 2 | Io e gli altri",
+            "section_slug": "lezione-2-io-e-gli-altri",
+            "start_page": 19,
+            "end_page": 32,
+            "pages": 14
+          },
+          {
+            "section": "Facciamo il punto 1",
+            "section_slug": "facciamo-il-punto-1",
+            "start_page": 33,
+            "end_page": 38,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 3 | Buon appetito!",
+            "section_slug": "lezione-3-buon-appetito",
+            "start_page": 39,
+            "end_page": 52,
+            "pages": 14
+          },
+          {
+            "section": "Lezione 4 | Tempo libero",
+            "section_slug": "lezione-4-tempo-libero",
+            "start_page": 53,
+            "end_page": 64,
+            "pages": 12
+          },
+          {
+            "section": "Lezione 5 | In albergo",
+            "section_slug": "lezione-5-in-albergo",
+            "start_page": 65,
+            "end_page": 78,
+            "pages": 14
+          },
+          {
+            "section": "Facciamo il punto 2",
+            "section_slug": "facciamo-il-punto-2",
+            "start_page": 79,
+            "end_page": 84,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 6 | Tanti auguri!",
+            "section_slug": "lezione-6-tanti-auguri",
+            "start_page": 85,
+            "end_page": 98,
+            "pages": 14
+          },
+          {
+            "section": "Lezione 7 | In giro in città",
+            "section_slug": "lezione-7-in-giro-in-citta",
+            "start_page": 99,
+            "end_page": 110,
+            "pages": 12
+          },
+          {
+            "section": "Lezione 8 | Italia da scoprire",
+            "section_slug": "lezione-8-italia-da-scoprire",
+            "start_page": 111,
+            "end_page": 124,
+            "pages": 14
+          },
+          {
+            "section": "Facciamo il punto 3",
+            "section_slug": "facciamo-il-punto-3",
+            "start_page": 125,
+            "end_page": 130,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 9 | Sapori d'Italia",
+            "section_slug": "lezione-9-sapori-d-italia",
+            "start_page": 131,
+            "end_page": 142,
+            "pages": 12
+          },
+          {
+            "section": "Lezione 10 | La famiglia",
+            "section_slug": "lezione-10-la-famiglia",
+            "start_page": 143,
+            "end_page": 156,
+            "pages": 14
+          },
+          {
+            "section": "Facciamo il punto 4",
+            "section_slug": "facciamo-il-punto-4",
+            "start_page": 157,
+            "end_page": 162,
+            "pages": 6
+          },
+          {
+            "section": "Esercizi LEZIONE 1",
+            "section_slug": "esercizi-lezione-1",
+            "start_page": 163,
+            "end_page": 169,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 2",
+            "section_slug": "esercizi-lezione-2",
+            "start_page": 170,
+            "end_page": 175,
+            "pages": 6
+          },
+          {
+            "section": "Esercizi LEZIONE 3",
+            "section_slug": "esercizi-lezione-3",
+            "start_page": 176,
+            "end_page": 181,
+            "pages": 6
+          },
+          {
+            "section": "Esercizi LEZIONE 4",
+            "section_slug": "esercizi-lezione-4",
+            "start_page": 182,
+            "end_page": 186,
+            "pages": 5
+          },
+          {
+            "section": "Esercizi LEZIONE 5",
+            "section_slug": "esercizi-lezione-5",
+            "start_page": 187,
+            "end_page": 192,
+            "pages": 6
+          },
+          {
+            "section": "Esercizi LEZIONE 6",
+            "section_slug": "esercizi-lezione-6",
+            "start_page": 193,
+            "end_page": 198,
+            "pages": 6
+          },
+          {
+            "section": "Esercizi LEZIONE 7",
+            "section_slug": "esercizi-lezione-7",
+            "start_page": 199,
+            "end_page": 205,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 8",
+            "section_slug": "esercizi-lezione-8",
+            "start_page": 206,
+            "end_page": 212,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 9",
+            "section_slug": "esercizi-lezione-9",
+            "start_page": 213,
+            "end_page": 217,
+            "pages": 5
+          },
+          {
+            "section": "Esercizi LEZIONE 10",
+            "section_slug": "esercizi-lezione-10",
+            "start_page": 218,
+            "end_page": 223,
+            "pages": 6
+          },
+          {
+            "section": "Grammatica",
+            "section_slug": "grammatica",
+            "start_page": 224,
+            "end_page": 240,
+            "pages": 17
+          }
+        ]
+      },
+      {
+        "bookId": "nuovo-espresso-plus-2",
+        "sourceId": "src-580f7558db56",
+        "path": "materials/books/nuovo-espresso-plus-2/originals/reader-native-pdf/nuovo-espresso-plus-2-accessible-reader-book-263-pages.pdf",
+        "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4",
+        "capturedPages": 263,
+        "availableMainBookSections": 26,
+        "captureStatus": "complete-accessible-reader",
+        "derivedFrom": "Ordinary unencrypted reader XPS converted to PDF; this is a derived reader export, not an original publisher PDF.",
+        "publisherExtentPages": 264,
+        "extentDiscrepancyPages": 1,
+        "extentNote": "All 26 accessible native main-book sections total 263 pages in reader contents order. The grammar section has 16 pages, numbered 248 through 263; the official TOC lists the irregular-verb table at 263, while the publisher product page advertises 264 pages. No accessible section supplies page 264. Its contents or whether it is blank are unknown; no page has been added or inferred.",
+        "printedPageLabelsExhaustivelyVerified": false,
+        "selectivelyReviewedPhysicalPages": [
+          19,
+          33,
+          55,
+          69,
+          83,
+          103,
+          117,
+          133,
+          153,
+          167,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263
+        ],
+        "reviewGranularity": "Relevant teaching paragraphs and chapter summaries; complete grammar reference text. Presence in this list does not claim every exercise or media item on the page was pedagogically reviewed.",
+        "nativeTextVisualReviewFlags": 4,
+        "sections": [
+          {
+            "section": "intro e mappa dell'Italia",
+            "section_slug": "intro-e-mappa-dell-italia",
+            "start_page": 1,
+            "end_page": 6,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 1 | In giro per negozi",
+            "section_slug": "lezione-1-in-giro-per-negozi",
+            "start_page": 7,
+            "end_page": 22,
+            "pages": 16
+          },
+          {
+            "section": "Lezione 2 | Quando ero piccola",
+            "section_slug": "lezione-2-quando-ero-piccola",
+            "start_page": 23,
+            "end_page": 36,
+            "pages": 14
+          },
+          {
+            "section": "Facciamo il punto 1",
+            "section_slug": "facciamo-il-punto-1",
+            "start_page": 37,
+            "end_page": 42,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 3 | Un tipo interessante",
+            "section_slug": "lezione-3-un-tipo-interessante",
+            "start_page": 43,
+            "end_page": 58,
+            "pages": 16
+          },
+          {
+            "section": "Lezione 4 | Che ne dici?",
+            "section_slug": "lezione-4-che-ne-dici",
+            "start_page": 59,
+            "end_page": 72,
+            "pages": 14
+          },
+          {
+            "section": "Lezione 5 | Buon viaggio!",
+            "section_slug": "lezione-5-buon-viaggio",
+            "start_page": 73,
+            "end_page": 86,
+            "pages": 14
+          },
+          {
+            "section": "Facciamo il punto 2",
+            "section_slug": "facciamo-il-punto-2",
+            "start_page": 87,
+            "end_page": 92,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 6 | Stili di vita",
+            "section_slug": "lezione-6-stili-di-vita",
+            "start_page": 93,
+            "end_page": 106,
+            "pages": 14
+          },
+          {
+            "section": "Lezione 7 | Come va?",
+            "section_slug": "lezione-7-come-va",
+            "start_page": 107,
+            "end_page": 120,
+            "pages": 14
+          },
+          {
+            "section": "Lezione 8 | Il futuro è dietro l'angolo",
+            "section_slug": "lezione-8-il-futuro-e-dietro-l-angolo",
+            "start_page": 121,
+            "end_page": 136,
+            "pages": 16
+          },
+          {
+            "section": "Facciamo il punto 3",
+            "section_slug": "facciamo-il-punto-3",
+            "start_page": 137,
+            "end_page": 142,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 9 | Il colpo di fulmine?",
+            "section_slug": "lezione-9-il-colpo-di-fulmine",
+            "start_page": 143,
+            "end_page": 156,
+            "pages": 14
+          },
+          {
+            "section": "Lezione 10 | Casa dolce casa",
+            "section_slug": "lezione-10-casa-dolce-casa",
+            "start_page": 157,
+            "end_page": 170,
+            "pages": 14
+          },
+          {
+            "section": "Facciamo il punto 4",
+            "section_slug": "facciamo-il-punto-4",
+            "start_page": 171,
+            "end_page": 176,
+            "pages": 6
+          },
+          {
+            "section": "Esercizi LEZIONE 1",
+            "section_slug": "esercizi-lezione-1",
+            "start_page": 177,
+            "end_page": 183,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 2",
+            "section_slug": "esercizi-lezione-2",
+            "start_page": 184,
+            "end_page": 190,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 3",
+            "section_slug": "esercizi-lezione-3",
+            "start_page": 191,
+            "end_page": 197,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 4",
+            "section_slug": "esercizi-lezione-4",
+            "start_page": 198,
+            "end_page": 204,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 5",
+            "section_slug": "esercizi-lezione-5",
+            "start_page": 205,
+            "end_page": 211,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 6",
+            "section_slug": "esercizi-lezione-6",
+            "start_page": 212,
+            "end_page": 219,
+            "pages": 8
+          },
+          {
+            "section": "Esercizi LEZIONE 7",
+            "section_slug": "esercizi-lezione-7",
+            "start_page": 220,
+            "end_page": 226,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 8",
+            "section_slug": "esercizi-lezione-8",
+            "start_page": 227,
+            "end_page": 233,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 9",
+            "section_slug": "esercizi-lezione-9",
+            "start_page": 234,
+            "end_page": 240,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 10",
+            "section_slug": "esercizi-lezione-10",
+            "start_page": 241,
+            "end_page": 247,
+            "pages": 7
+          },
+          {
+            "section": "Grammatica",
+            "section_slug": "grammatica",
+            "start_page": 248,
+            "end_page": 263,
+            "pages": 16
+          }
+        ]
+      }
+    ],
+    "privacy": "PDFs, native XPS sections, extracts, media and capture manifests remain in ignored private study folders. App data contains metadata, page pointers and original learning content.",
+    "textLimitations": "Native text retains layout and font/ligature extraction defects. Printed labels were not exhaustively verified; citations use assembled physical PDF positions and verified section offsets. Some extracted Plus2 grammar footers retain a Plus1 label; section identity, verified reader order and A2 chapter contents establish the source mapping rather than that footer.",
+    "reviewAndCaptureAreDistinct": true,
+    "publisherExtentDiscrepancy": {
+      "bookId": "nuovo-espresso-plus-2",
+      "publisherPages": 264,
+      "accessibleReaderPages": 263,
+      "unknownPublisherPage": 264,
+      "paddedPages": 0,
+      "status": "All available 26 reader sections are captured; no accessible section supplies page264. Its content or whether it is blank is unknown."
+    }
+  },
+  "remainingLearningGaps": [
+    {
+      "topic": "Detailed plural-spelling families and further irregular nouns",
+      "nativeRefs": [
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            226
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            248
+          ]
+        }
+      ],
+      "status": "The original noun-plurals unit covers common endings and unchanged nouns; complete -ca/-co/-cia/-gia patterns and the expanded body-noun list remain partial."
+    },
+    {
+      "topic": "A2 nonlocative ci and noun alterations",
+      "nativeRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            33,
+            248,
+            250
+          ]
+        }
+      ],
+      "status": "The new ci unit teaches destinations. Ci penso and -ino/-one alterations are captured but not presented as fully taught by that locative unit."
+    },
+    {
+      "topic": "Auxiliary alternation with cominciare/finire and ne with past-participle agreement",
+      "nativeRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            55,
+            69,
+            252
+          ]
+        }
+      ],
+      "status": "General auxiliary and direct-pronoun work is present; these additional systems are not comprehensively covered by the existing bounded units."
+    },
+    {
+      "topic": "Additional imperative and adjective constructions",
+      "nativeRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            103,
+            117,
+            167,
+            248,
+            254,
+            255
+          ]
+        }
+      ],
+      "status": "Tu and Lei are taught; full voi commands, all short-command consonant doubling, and the bello paradigm remain partial."
+    },
+    {
+      "topic": "Formal writing, causal connectors and further chapter vocabulary",
+      "nativeRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            133,
+            260
+          ]
+        }
+      ],
+      "status": "The future-plan mission is bounded; it does not claim full coverage of letters, employment documents, bisogna or siccome/perché."
+    },
+    {
+      "topic": "Listening and pronunciation evidence",
+      "nativeRefs": [
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            224,
+            225
+          ]
+        }
+      ],
+      "status": "Written recognition, original speaking prompts and self-checks are provided. Archiving media does not establish listening comprehension, transcription accuracy or automatically scored pronunciation."
+    }
+  ]
+}

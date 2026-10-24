@@ -679,6 +679,1069 @@
           "unitId": "piacere"
         }
       ]
+    },
+    {
+      "title": {
+        "en": "Gifts for two people",
+        "it": "Un regalo per due persone"
+      },
+      "intro": {
+        "en": "Choose a scarf for your brother and gloves for your sister. Use indirect pronouns and compare features while keeping track of each recipient.",
+        "it": "Scegli una sciarpa per tuo fratello e dei guanti per tua sorella. Usa i pronomi indiretti e confronta le caratteristiche, senza cambiare destinatario."
+      },
+      "unitIds": [
+        "a2-indirect-pronouns",
+        "a2-comparisons"
+      ],
+      "turns": [
+        {
+          "id": "espresso2-u01-recipient",
+          "unitId": "a2-indirect-pronouns",
+          "prompt": {
+            "en": "The scarf is for your brother. Choose the reply to «Che cosa gli regali?»",
+            "it": "La sciarpa è per tuo fratello. Completa la risposta a «Che cosa gli regali?»"
+          },
+          "options": [
+            "Gli regalo una sciarpa.",
+            "Le regalo una sciarpa.",
+            "Mi regala una sciarpa."
+          ],
+          "answer": "Gli regalo una sciarpa.",
+          "hint": {
+            "en": "The recipient is masculine singular: to him.",
+            "it": "Il destinatario è maschile singolare: a lui."
+          },
+          "explanation": {
+            "en": "Gli replaces to my brother; regalo keeps I as the giver.",
+            "it": "Gli riprende a mio fratello; regalo resta alla prima persona."
+          }
+        },
+        {
+          "id": "espresso2-u01-compare",
+          "unitId": "a2-comparisons",
+          "prompt": {
+            "en": "The green scarf weighs less than the red one. Which comparison expresses that fact?",
+            "it": "La sciarpa verde pesa meno di quella rossa. Quale confronto esprime questo fatto?"
+          },
+          "options": [
+            "La sciarpa verde è più leggera di quella rossa.",
+            "La sciarpa verde è più pesante di quella rossa.",
+            "La sciarpa verde è leggera di quella rossa."
+          ],
+          "answer": "La sciarpa verde è più leggera di quella rossa.",
+          "hint": {
+            "en": "Use più + adjective + di; leggera means light in weight.",
+            "it": "Usa più + aggettivo + di; leggera significa che pesa poco."
+          },
+          "explanation": {
+            "en": "Più leggera di expresses the lower weight; the adjective agrees with sciarpa.",
+            "it": "Più leggera di esprime il peso minore; l’aggettivo concorda con sciarpa."
+          }
+        },
+        {
+          "id": "espresso2-u01-sister",
+          "unitId": "a2-indirect-pronouns",
+          "prompt": {
+            "en": "Now choose gloves for your sister. Say “I am giving her these gloves”.",
+            "it": "Ora scegli i guanti per tua sorella. Vuoi dire «I am giving her these gloves»."
+          },
+          "options": [
+            "Le regalo questi guanti.",
+            "Gli regalo questi guanti.",
+            "Le regala questi guanti."
+          ],
+          "answer": "Le regalo questi guanti.",
+          "hint": {
+            "en": "To your sister becomes le; the speaker is still the giver.",
+            "it": "A tua sorella diventa le; chi parla è ancora la persona che regala."
+          },
+          "explanation": {
+            "en": "Le marks the female recipient, and questi agrees with guanti.",
+            "it": "Le indica la destinataria e questi concorda con guanti."
+          }
+        }
+      ],
+      "id": "espresso2-u01",
+      "level": "A2",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 1,
+      "missionId": "espresso2-u01-choose-a-gift",
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            17,
+            18,
+            20
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            19,
+            249,
+            250
+          ]
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "The courtyard in earlier days",
+        "it": "Il cortile di una volta"
+      },
+      "intro": {
+        "en": "A friend asks about the place where you played as a child. Describe the setting and a shared habit using noi.",
+        "it": "Un’amica chiede com’era il luogo in cui giocavi da piccolo. Descrivi lo sfondo e un’abitudine con noi."
+      },
+      "unitIds": [
+        "a2-imperfetto"
+      ],
+      "turns": [
+        {
+          "id": "espresso2-u02-setting",
+          "unitId": "a2-imperfetto",
+          "prompt": {
+            "en": "Someone asks «Com’era il cortile quando eri piccolo?» Describe it during that past period.",
+            "it": "Ti chiedono «Com’era il cortile quando eri piccolo?» Rispondi descrivendo quel periodo."
+          },
+          "options": [
+            "Era grande e tranquillo.",
+            "È grande e tranquillo.",
+            "Sarà grande e tranquillo."
+          ],
+          "answer": "Era grande e tranquillo.",
+          "hint": {
+            "en": "Com’era asks for a description in the past.",
+            "it": "La domanda com’era richiede una descrizione al passato."
+          },
+          "explanation": {
+            "en": "Era is the imperfetto of essere; it describes the memory’s setting.",
+            "it": "Era è l’imperfetto di essere; descrive lo sfondo del ricordo."
+          }
+        },
+        {
+          "id": "espresso2-u02-habit",
+          "unitId": "a2-imperfetto",
+          "prompt": {
+            "en": "You mean yourself and your sister: every afternoon you played in that courtyard. Complete “Noi…”.",
+            "it": "Parli di te e di tua sorella: ogni pomeriggio giocavate in quel cortile. Completa «Noi…»."
+          },
+          "options": [
+            "Ci giocavamo ogni pomeriggio.",
+            "Ci giocavo ogni pomeriggio.",
+            "Ci giocheremo ogni pomeriggio."
+          ],
+          "answer": "Ci giocavamo ogni pomeriggio.",
+          "hint": {
+            "en": "With noi the imperfetto ends in -vamo; ci refers back to the courtyard.",
+            "it": "Con noi l’imperfetto finisce in -vamo; ci riprende il cortile."
+          },
+          "explanation": {
+            "en": "Giocavamo expresses the two people’s past habit; ci avoids repeating the place.",
+            "it": "Giocavamo esprime l’abitudine passata di due persone; ci evita di ripetere il luogo."
+          }
+        },
+        {
+          "id": "espresso2-u02-feature",
+          "unitId": "a2-imperfetto",
+          "prompt": {
+            "en": "Your friend asks «C’era una fontana?» In your memory there was a tree instead. Choose the correction.",
+            "it": "L’amica chiede «C’era una fontana?» Nel tuo ricordo c’era invece un albero. Scegli la correzione."
+          },
+          "options": [
+            "No, c’era un albero.",
+            "No, c’erano un albero.",
+            "No, ci sarà un albero."
+          ],
+          "answer": "No, c’era un albero.",
+          "hint": {
+            "en": "Un albero is singular, and the memory remains in the past.",
+            "it": "Un albero è singolare e il ricordo rimane al passato."
+          },
+          "explanation": {
+            "en": "C’era describes one thing being present during that period.",
+            "it": "C’era descrive la presenza di una sola cosa in quel periodo."
+          }
+        }
+      ],
+      "id": "espresso2-u02",
+      "level": "A2",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 2,
+      "missionId": "espresso2-u02-remember-a-place",
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            31,
+            35
+          ]
+        },
+        {
+          "id": "src-c3791736675a",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            33,
+            252
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            232
+          ]
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "A favour with an alternative",
+        "it": "Un favore con un’alternativa"
+      },
+      "intro": {
+        "en": "You need to send a draft. Ask for help politely and accept that the other person can help only later.",
+        "it": "Devi inviare una bozza. Chiedi aiuto gentilmente e accetta che la persona possa aiutarti solo più tardi."
+      },
+      "unitIds": [
+        "a2-conditional",
+        "a2-indefinites-farcela"
+      ],
+      "turns": [
+        {
+          "id": "espresso2-u03-request",
+          "unitId": "a2-conditional",
+          "prompt": {
+            "en": "You are addressing a friend using tu. Politely ask them to read the draft.",
+            "it": "Parli a un amico, usando tu. Vuoi chiedere gentilmente di leggere la bozza."
+          },
+          "options": [
+            "Potresti leggere la mia bozza?",
+            "Potrei leggere la mia bozza?",
+            "Potrebbero leggere la mia bozza?"
+          ],
+          "answer": "Potresti leggere la mia bozza?",
+          "hint": {
+            "en": "Potresti addresses tu; potrei describes what I could do.",
+            "it": "Potresti si rivolge a tu; potrei parla della possibilità di io."
+          },
+          "explanation": {
+            "en": "The conditional potresti makes the request to your friend polite.",
+            "it": "Il condizionale potresti rende cortese la richiesta rivolta all’amico."
+          }
+        },
+        {
+          "id": "espresso2-u03-limit",
+          "unitId": "a2-indefinites-farcela",
+          "prompt": {
+            "en": "Now play the friend: you cannot manage the work today, but you can tomorrow. Complete “Oggi non…, ma domani sì”.",
+            "it": "Ora sei l’amico: oggi non riesci a finire il lavoro, ma domani sì. Completa «Oggi non…, ma domani sì»."
+          },
+          "options": [
+            "Oggi non ce la faccio, ma domani sì.",
+            "Oggi non ce lo faccio, ma domani sì.",
+            "Oggi non ce la fai, ma domani sì."
+          ],
+          "answer": "Oggi non ce la faccio, ma domani sì.",
+          "hint": {
+            "en": "Farcela keeps ce la; the speaker uses faccio.",
+            "it": "Farcela mantiene ce la; chi parla usa faccio."
+          },
+          "explanation": {
+            "en": "Non ce la faccio expresses the speaker’s limit rather than the other person’s.",
+            "it": "Non ce la faccio esprime il limite di chi parla, senza attribuirlo all’altra persona."
+          }
+        },
+        {
+          "id": "espresso2-u03-offer",
+          "unitId": "a2-conditional",
+          "prompt": {
+            "en": "Offer an alternative in the first person: tomorrow at nine you could read the draft.",
+            "it": "Offri un’alternativa in prima persona: domani alle nove puoi leggere la bozza."
+          },
+          "options": [
+            "Potrei leggerla domani alle nove.",
+            "Potresti leggerla domani alle nove.",
+            "Potremmo leggerle ieri alle nove."
+          ],
+          "answer": "Potrei leggerla domani alle nove.",
+          "hint": {
+            "en": "Use potrei to offer what you can do; la refers to the draft.",
+            "it": "Usa potrei per offrire ciò che puoi fare tu; la riprende la bozza."
+          },
+          "explanation": {
+            "en": "Potrei leggerla keeps both the helper’s first-person role and the feminine singular object.",
+            "it": "Potrei leggerla mantiene sia la persona che offre aiuto sia l’oggetto singolare femminile."
+          }
+        }
+      ],
+      "id": "espresso2-u03",
+      "level": "A2",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 3,
+      "missionId": "espresso2-u03-ask-for-a-favour",
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            44,
+            46
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            55,
+            254,
+            258
+          ]
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Before a museum visit",
+        "it": "Prima della visita al museo"
+      },
+      "intro": {
+        "en": "You are organising a visit for two people. Distinguish what you are doing now from what you have already booked.",
+        "it": "Stai organizzando una visita per due persone. Distingui ciò che fai ora da ciò che hai già prenotato."
+      },
+      "unitIds": [
+        "a2-progressive",
+        "a2-pronouns-perfect",
+        "a2-relative-clauses"
+      ],
+      "turns": [
+        {
+          "id": "espresso2-u04-progress",
+          "unitId": "a2-progressive",
+          "prompt": {
+            "en": "A friend asks «Che cosa stai facendo?» Right now you are looking for the museum address.",
+            "it": "Un’amica chiede «Che cosa stai facendo?» In questo momento cerchi l’indirizzo del museo."
+          },
+          "options": [
+            "Sto cercando l’indirizzo del museo.",
+            "Sto cercare l’indirizzo del museo.",
+            "Stai cercando l’indirizzo del museo."
+          ],
+          "answer": "Sto cercando l’indirizzo del museo.",
+          "hint": {
+            "en": "For io use sto + the gerund ending in -ando.",
+            "it": "Per io usa sto + gerundio in -ando."
+          },
+          "explanation": {
+            "en": "Sto cercando marks the responder’s action in progress.",
+            "it": "Sto cercando segnala l’azione in corso di chi risponde."
+          }
+        },
+        {
+          "id": "espresso2-u04-booked",
+          "unitId": "a2-pronouns-perfect",
+          "prompt": {
+            "en": "Your friend asks «Le due visite sono prenotate?» Yes: you booked them yesterday. Replace visite with a pronoun.",
+            "it": "L’amica chiede «Le due visite sono prenotate?» Sì: le hai prenotate ieri. Sostituisci visite con un pronome."
+          },
+          "options": [
+            "Le ho già prenotate.",
+            "Li ho già prenotati.",
+            "Le ho già prenotato."
+          ],
+          "answer": "Le ho già prenotate.",
+          "hint": {
+            "en": "Visite is feminine plural: check both the pronoun and participle.",
+            "it": "Visite è femminile plurale: controlla pronome e participio."
+          },
+          "explanation": {
+            "en": "Le… prenotate correctly refers to visite; già shows the task is complete.",
+            "it": "Le… prenotate riprende correttamente visite; già indica che il lavoro è fatto."
+          }
+        },
+        {
+          "id": "espresso2-u04-identify",
+          "unitId": "a2-relative-clauses",
+          "prompt": {
+            "en": "There are two museums. Identify the one that opens at nine in one sentence.",
+            "it": "Ci sono due musei. Vuoi identificare quello che apre alle nove con una sola frase."
+          },
+          "options": [
+            "È il museo che apre alle nove.",
+            "È il museo chi apre alle nove.",
+            "È il museo cui apre alle nove."
+          ],
+          "answer": "È il museo che apre alle nove.",
+          "hint": {
+            "en": "The museum is the subject of apre: use che without a preposition.",
+            "it": "Il museo è il soggetto di apre: usa che senza preposizione."
+          },
+          "explanation": {
+            "en": "Che links the museum to the feature that identifies it.",
+            "it": "Che collega il museo alla caratteristica che lo distingue."
+          }
+        }
+      ],
+      "id": "espresso2-u04",
+      "level": "A2",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 4,
+      "missionId": "espresso2-u04-coordinate-an-outing",
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            60,
+            61,
+            62
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            69,
+            252,
+            257,
+            261
+          ]
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Explaining a late arrival",
+        "it": "Spiegare un arrivo in ritardo"
+      },
+      "intro": {
+        "en": "A colleague asks why you are late. Distinguish an ongoing action from an event and give the journey time.",
+        "it": "Un collega chiede perché sei in ritardo. Distingui un’azione in corso dall’evento e indica la durata del percorso."
+      },
+      "unitIds": [
+        "a2-past-narrative",
+        "a2-travel-duration"
+      ],
+      "turns": [
+        {
+          "id": "espresso2-u05-background",
+          "unitId": "a2-past-narrative",
+          "prompt": {
+            "en": "You mean that you were already waiting when the rain started. Choose the account with a background action and an event.",
+            "it": "Vuoi dire che eri già in attesa quando è iniziata la pioggia. Scegli il racconto con sfondo ed evento."
+          },
+          "options": [
+            "Aspettavo il tram quando ha cominciato a piovere.",
+            "Aspetto il tram quando ha cominciato a piovere.",
+            "Aspetterò il tram quando ha cominciato a piovere."
+          ],
+          "answer": "Aspettavo il tram quando ha cominciato a piovere.",
+          "hint": {
+            "en": "Aspettavo is the background; ha cominciato is the event.",
+            "it": "Aspettavo è lo sfondo; ha cominciato è l’evento."
+          },
+          "explanation": {
+            "en": "The imperfetto presents the wait already in progress, and the passato prossimo introduces the change.",
+            "it": "L’imperfetto presenta l’attesa già in corso e il passato prossimo introduce il cambiamento."
+          }
+        },
+        {
+          "id": "espresso2-u05-duration",
+          "unitId": "a2-travel-duration",
+          "prompt": {
+            "en": "Your colleague asks «Quanto ci vuole a piedi?» The required time is twenty minutes.",
+            "it": "Il collega chiede «Quanto ci vuole a piedi?» Il tempo necessario è venti minuti."
+          },
+          "options": [
+            "Ci vogliono venti minuti.",
+            "Ci vuole venti minuti.",
+            "Ci voglio venti minuti."
+          ],
+          "answer": "Ci vogliono venti minuti.",
+          "hint": {
+            "en": "Venti minuti is plural: use vogliono.",
+            "it": "Venti minuti è plurale: usa vogliono."
+          },
+          "explanation": {
+            "en": "Ci vogliono agrees with the plural amount of time.",
+            "it": "Ci vogliono concorda con la quantità plurale di tempo."
+          }
+        },
+        {
+          "id": "espresso2-u05-personal",
+          "unitId": "a2-travel-duration",
+          "prompt": {
+            "en": "Describe the time you personally usually take: ten minutes. Complete “Io…”.",
+            "it": "Parla del tempo che impieghi tu di solito: dieci minuti. Completa «Io…»."
+          },
+          "options": [
+            "Ci metto dieci minuti.",
+            "Ci mette dieci minuti.",
+            "Ci mettiamo dieci minuti."
+          ],
+          "answer": "Ci metto dieci minuti.",
+          "hint": {
+            "en": "With metterci the verb follows the person: io metto.",
+            "it": "Con metterci il verbo segue la persona: io metto."
+          },
+          "explanation": {
+            "en": "Ci metto gives the time the speaker takes; ci vogliono describes the time required.",
+            "it": "Ci metto indica il tempo impiegato da chi parla; ci vogliono descrive il tempo necessario."
+          }
+        }
+      ],
+      "id": "espresso2-u05",
+      "level": "A2",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 5,
+      "missionId": "espresso2-u05-explain-a-delay",
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            73,
+            75,
+            79
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            83,
+            253,
+            258
+          ]
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "A break without distractions",
+        "it": "Una pausa senza distrazioni"
+      },
+      "intro": {
+        "en": "Help a friend take a break. Give informal instructions and distinguish what is needed from what can stay on the table.",
+        "it": "Aiuta un amico a fare una pausa. Dai istruzioni informali e distingui quello che serve da quello che può restare sul tavolo."
+      },
+      "unitIds": [
+        "a2-informal-imperative",
+        "a2-servire-quello-che"
+      ],
+      "turns": [
+        {
+          "id": "espresso2-u06-open",
+          "unitId": "a2-informal-imperative",
+          "prompt": {
+            "en": "You are addressing a friend: the window is closed. Use an affirmative imperative to tell them to open it, replacing finestra with a pronoun.",
+            "it": "Parli a un amico: la finestra è chiusa. Usa un imperativo affermativo per dirgli di aprirla, sostituendo finestra con un pronome."
+          },
+          "options": [
+            "Aprila, per favore.",
+            "Aprilo, per favore.",
+            "La apri, per favore."
+          ],
+          "answer": "Aprila, per favore.",
+          "hint": {
+            "en": "In an affirmative command the pronoun follows the verb; finestra needs la.",
+            "it": "Nell’imperativo affermativo il pronome segue il verbo; finestra richiede la."
+          },
+          "explanation": {
+            "en": "Apri + la becomes aprila; the pronoun refers to the window.",
+            "it": "Apri + la diventa aprila; il pronome riprende la finestra."
+          }
+        },
+        {
+          "id": "espresso2-u06-leave",
+          "unitId": "a2-informal-imperative",
+          "prompt": {
+            "en": "The phone must stay on. Give a negative tu command using the infinitive with the pronoun attached at the end.",
+            "it": "Il telefono deve restare acceso. Dai un divieto a tu usando l’infinito e il pronome alla fine."
+          },
+          "options": [
+            "Non spegnerlo.",
+            "Non spegnerla.",
+            "Non spegnilo."
+          ],
+          "answer": "Non spegnerlo.",
+          "hint": {
+            "en": "For the prohibition use non + infinitive; telefono is masculine.",
+            "it": "Per il divieto usa non + infinito; telefono è maschile."
+          },
+          "explanation": {
+            "en": "Non spegnerlo keeps the infinitive in the prohibition and uses lo for the phone.",
+            "it": "Non spegnerlo mantiene l’infinito nel divieto e usa lo per il telefono."
+          }
+        },
+        {
+          "id": "espresso2-u06-needed",
+          "unitId": "a2-servire-quello-che",
+          "prompt": {
+            "en": "Your friend asks «Che cosa ti serve?» You need just one notebook.",
+            "it": "L’amico chiede «Che cosa ti serve?» Hai bisogno di un solo quaderno."
+          },
+          "options": [
+            "Mi serve un quaderno.",
+            "Mi servono un quaderno.",
+            "Ti serve un quaderno."
+          ],
+          "answer": "Mi serve un quaderno.",
+          "hint": {
+            "en": "I am the person who needs it; the needed object is singular.",
+            "it": "La persona che ha bisogno è io; la cosa necessaria è singolare."
+          },
+          "explanation": {
+            "en": "Mi identifies who needs it; serve agrees with un quaderno.",
+            "it": "Mi indica a chi serve; serve concorda con un quaderno."
+          }
+        }
+      ],
+      "id": "espresso2-u06",
+      "level": "A2",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 6,
+      "missionId": "espresso2-u06-suggest-a-break",
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            90,
+            91,
+            93
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            103,
+            254,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Changing an appointment",
+        "it": "Cambiare un appuntamento"
+      },
+      "intro": {
+        "en": "Play a receptionist addressing a visitor with formal Lei. Ask for the surname, invite the visitor to sit and compare appointment times.",
+        "it": "Interpreta un addetto all’accettazione che parla con Lei. Chiedi il cognome, invita a sedersi e valuta un orario migliore."
+      },
+      "unitIds": [
+        "a2-formal-imperative",
+        "a2-better-best"
+      ],
+      "turns": [
+        {
+          "id": "espresso2-u07-surname",
+          "unitId": "a2-formal-imperative",
+          "prompt": {
+            "en": "You are the receptionist. Ask for the surname with a polite instruction addressed to formal Lei.",
+            "it": "Sei l’addetto. Chiedi il cognome con un’istruzione cortese rivolta a Lei."
+          },
+          "options": [
+            "Mi dica il Suo cognome, per favore.",
+            "Dimmi il tuo cognome, per favore.",
+            "Ditemi il vostro cognome, per favore."
+          ],
+          "answer": "Mi dica il Suo cognome, per favore.",
+          "hint": {
+            "en": "Formal Lei needs dica; dimmi and ditemi address different grammatical persons.",
+            "it": "Lei richiede dica; dimmi e ditemi si rivolgono ad altre persone grammaticali."
+          },
+          "explanation": {
+            "en": "Mi dica is a formal command; Suo maintains the chosen register.",
+            "it": "Mi dica è un imperativo formale; Suo mantiene il registro scelto."
+          }
+        },
+        {
+          "id": "espresso2-u07-seat",
+          "unitId": "a2-formal-imperative",
+          "prompt": {
+            "en": "Now invite the same person to sit near the door, keeping formal Lei.",
+            "it": "Ora invita la stessa persona a sedersi vicino alla porta, mantenendo Lei."
+          },
+          "options": [
+            "Si accomodi vicino alla porta.",
+            "Accomodati vicino alla porta.",
+            "Accomodatevi vicino alla porta."
+          ],
+          "answer": "Si accomodi vicino alla porta.",
+          "hint": {
+            "en": "With formal Lei the reflexive pronoun precedes the command.",
+            "it": "Con Lei il pronome riflessivo precede l’imperativo formale."
+          },
+          "explanation": {
+            "en": "Si accomodi formally addresses one person.",
+            "it": "Si accomodi si rivolge formalmente a una sola persona."
+          }
+        },
+        {
+          "id": "espresso2-u07-better",
+          "unitId": "a2-better-best",
+          "prompt": {
+            "en": "The visitor can come more easily at eleven than at nine. Say that eleven is the better time.",
+            "it": "Il visitatore può venire più facilmente alle undici che alle nove. Dice che l’orario delle undici è migliore."
+          },
+          "options": [
+            "L’orario delle undici è migliore per me.",
+            "L’orario delle undici è più migliore per me.",
+            "L’orario delle undici è migliori per me."
+          ],
+          "answer": "L’orario delle undici è migliore per me.",
+          "hint": {
+            "en": "Migliore is already a comparative and agrees with singular orario.",
+            "it": "Migliore è già un comparativo e concorda con orario singolare."
+          },
+          "explanation": {
+            "en": "Do not add più to migliore; plural migliori would not agree with orario.",
+            "it": "Non si aggiunge più a migliore; la forma plurale migliori non concorderebbe con orario."
+          }
+        }
+      ],
+      "id": "espresso2-u07",
+      "level": "A2",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 7,
+      "missionId": "espresso2-u07-navigate-an-appointment",
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            101,
+            102,
+            103
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            117,
+            254,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "A plan for next year",
+        "it": "Un progetto per l’anno prossimo"
+      },
+      "intro": {
+        "en": "You and a friend make concrete plans. Use the future and a real condition, keeping noi when you mean both of you.",
+        "it": "Tu e un’amica fate progetti concreti. Usa il futuro e una condizione reale, mantenendo noi quando parlate di entrambe."
+      },
+      "unitIds": [
+        "a2-future",
+        "a2-real-conditions"
+      ],
+      "turns": [
+        {
+          "id": "espresso2-u08-future",
+          "unitId": "a2-future",
+          "prompt": {
+            "en": "You mean yourself and your friend: next year you will leave in September. Use noi in the future.",
+            "it": "Parli di te e dell’amica: l’anno prossimo partirete a settembre. Usa noi al futuro."
+          },
+          "options": [
+            "Partiremo a settembre.",
+            "Partirò a settembre.",
+            "Partiremmo a settembre."
+          ],
+          "answer": "Partiremo a settembre.",
+          "hint": {
+            "en": "The noi future ends in -remo; -remmo belongs to the conditional.",
+            "it": "Il futuro di noi finisce in -remo; -remmo appartiene al condizionale."
+          },
+          "explanation": {
+            "en": "Partiremo keeps the requested plural subject and future tense.",
+            "it": "Partiremo mantiene il soggetto plurale e il futuro richiesti."
+          }
+        },
+        {
+          "id": "espresso2-u08-condition",
+          "unitId": "a2-real-conditions",
+          "prompt": {
+            "en": "Use se + present with a future result: if you have time, you will send the application tonight.",
+            "it": "Vuoi usare se + presente e una conseguenza al futuro: hai tempo, quindi invii la candidatura stasera."
+          },
+          "options": [
+            "Se ho tempo, invierò la candidatura stasera.",
+            "Se avrò tempo, invierei la candidatura stasera.",
+            "Se ho tempo, ho inviato la candidatura ieri."
+          ],
+          "answer": "Se ho tempo, invierò la candidatura stasera.",
+          "hint": {
+            "en": "The task asks for ho in the condition and invierò in the result.",
+            "it": "Il compito richiede ho nella condizione e invierò nella conseguenza."
+          },
+          "explanation": {
+            "en": "The sentence keeps a possible present condition and a future result.",
+            "it": "La frase mantiene una condizione possibile al presente e un risultato futuro."
+          }
+        },
+        {
+          "id": "espresso2-u08-shared",
+          "unitId": "a2-future",
+          "prompt": {
+            "en": "The course is also a plan for both of you. Complete “Noi… un corso serale”.",
+            "it": "Anche il corso è un progetto per entrambe. Completa «Noi… un corso serale»."
+          },
+          "options": [
+            "Frequenteremo un corso serale.",
+            "Frequenterò un corso serale.",
+            "Frequenteresti un corso serale."
+          ],
+          "answer": "Frequenteremo un corso serale.",
+          "hint": {
+            "en": "Check both the future tense and first-person plural.",
+            "it": "Controlla sia il futuro sia la prima persona plurale."
+          },
+          "explanation": {
+            "en": "Frequenteremo presents the shared plan of noi.",
+            "it": "Frequenteremo presenta il progetto condiviso di noi."
+          }
+        }
+      ],
+      "id": "espresso2-u08",
+      "level": "A2",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 8,
+      "missionId": "espresso2-u08-plan-a-next-step",
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            116,
+            119,
+            121
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            133,
+            255,
+            256,
+            259
+          ]
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "An interrupted plan",
+        "it": "Un piano interrotto"
+      },
+      "intro": {
+        "en": "Recount an unexpected problem and the necessary response. Stavo per introduces an imminent action; past modals explain what was necessary or impossible.",
+        "it": "Racconta un imprevisto e la risposta necessaria. Stavo per presenta un’azione imminente; i modali al passato spiegano ciò che è stato necessario o impossibile."
+      },
+      "unitIds": [
+        "a2-imminent-story",
+        "a2-past-modals"
+      ],
+      "turns": [
+        {
+          "id": "espresso2-u09-imminent",
+          "unitId": "a2-imminent-story",
+          "prompt": {
+            "en": "You were about to send the document, but the computer turned off before you sent it. Describe the imminent plan.",
+            "it": "Stavi per inviare il documento, ma il computer si è spento prima dell’invio. Descrivi il progetto imminente."
+          },
+          "options": [
+            "Stavo per inviare il documento.",
+            "Ho già inviato il documento.",
+            "Sto per inviare il documento."
+          ],
+          "answer": "Stavo per inviare il documento.",
+          "hint": {
+            "en": "The scene is in the past, and the document had not yet been sent.",
+            "it": "La scena è al passato e l’invio non era ancora avvenuto."
+          },
+          "explanation": {
+            "en": "Stavo per + infinitive expresses past imminence without claiming the action was completed.",
+            "it": "Stavo per + infinito esprime l’imminenza nel passato senza affermare che l’azione sia stata completata."
+          }
+        },
+        {
+          "id": "espresso2-u09-movement",
+          "unitId": "a2-past-modals",
+          "prompt": {
+            "en": "You and Marco are two men who had to leave the office. Tell it in the past, explicitly using essere with dovere + uscire.",
+            "it": "Tu e Marco siete due uomini. Dovete lasciare l’ufficio. Racconta al passato usando esplicitamente essere con dovere + uscire."
+          },
+          "options": [
+            "Siamo dovuti uscire dall’ufficio.",
+            "Siamo dovute uscire dall’ufficio.",
+            "Sono dovuto uscire dall’ufficio."
+          ],
+          "answer": "Siamo dovuti uscire dall’ufficio.",
+          "hint": {
+            "en": "The task specifies essere: masculine plural noi needs siamo and dovuti.",
+            "it": "Il compito fissa essere: con noi maschile plurale servono siamo e dovuti."
+          },
+          "explanation": {
+            "en": "Siamo dovuti uscire uses the specified auxiliary and agrees the participle with the two men.",
+            "it": "Siamo dovuti uscire segue l’ausiliare richiesto e accorda il participio ai due uomini."
+          }
+        },
+        {
+          "id": "espresso2-u09-unable",
+          "unitId": "a2-past-modals",
+          "prompt": {
+            "en": "Now speak only for yourself: you were unable to finish the document. Use potere in the passato prossimo.",
+            "it": "Ora parli solo di te: non ti è stato possibile finire il documento. Usa potere al passato prossimo."
+          },
+          "options": [
+            "Non ho potuto finire il documento.",
+            "Non ho potuto finito il documento.",
+            "Non hai potuto finire il documento."
+          ],
+          "answer": "Non ho potuto finire il documento.",
+          "hint": {
+            "en": "The modal uses the participle potuto, followed by the infinitive finire.",
+            "it": "Il modale usa il participio potuto, seguito da finire all’infinito."
+          },
+          "explanation": {
+            "en": "Ho potuto + infinitive keeps the first person and the past-modal construction.",
+            "it": "Ho potuto + infinito mantiene la prima persona e la costruzione del modale al passato."
+          }
+        }
+      ],
+      "id": "espresso2-u09",
+      "level": "A2",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 9,
+      "missionId": "espresso2-u09-tell-an-interruption",
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            133,
+            134,
+            135,
+            136
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            153,
+            251,
+            257
+          ]
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "A home that suits us",
+        "it": "Una casa adatta a noi"
+      },
+      "intro": {
+        "en": "Assess a home with the introductory frames penso che sia and è importante che abbia. Distinguish them from secondo me è.",
+        "it": "Valuta una casa con le strutture introduttive penso che sia ed è importante che abbia. Distingui queste formule da secondo me è."
+      },
+      "unitIds": [
+        "a2-subjunctive-forms",
+        "a2-subjunctive-opinions"
+      ],
+      "turns": [
+        {
+          "id": "espresso2-u10-opinion",
+          "unitId": "a2-subjunctive-opinions",
+          "prompt": {
+            "en": "Express an opinion about the kitchen using penso che and the introductory subjunctive form of essere.",
+            "it": "Esprimi un’opinione sulla cucina usando penso che e la forma introduttiva del congiuntivo di essere."
+          },
+          "options": [
+            "Penso che la cucina sia luminosa.",
+            "Penso che la cucina è luminosa.",
+            "Penso che la cucina siano luminosa."
+          ],
+          "answer": "Penso che la cucina sia luminosa.",
+          "hint": {
+            "en": "After penso che this task asks for sia; cucina is singular.",
+            "it": "Dopo penso che il compito richiede sia; cucina è singolare."
+          },
+          "explanation": {
+            "en": "Sia is the requested present-subjunctive form for the singular subject la cucina.",
+            "it": "Sia è la forma richiesta del congiuntivo presente per il soggetto singolare la cucina."
+          }
+        },
+        {
+          "id": "espresso2-u10-requirement",
+          "unitId": "a2-subjunctive-forms",
+          "prompt": {
+            "en": "The requirement is a balcony. Complete “È importante che l’appartamento…” using avere in the subjunctive.",
+            "it": "Il requisito è un balcone. Completa «È importante che l’appartamento…» con avere al congiuntivo."
+          },
+          "options": [
+            "È importante che l’appartamento abbia un balcone.",
+            "È importante che l’appartamento ha un balcone.",
+            "È importante che l’appartamento abbiamo un balcone."
+          ],
+          "answer": "È importante che l’appartamento abbia un balcone.",
+          "hint": {
+            "en": "For a singular subject use abbia rather than abbiamo.",
+            "it": "Per un soggetto singolare usa abbia, non abbiamo."
+          },
+          "explanation": {
+            "en": "Abbia completes the introductory è importante che frame with avere.",
+            "it": "Abbia completa la struttura introduttiva è importante che con avere."
+          }
+        },
+        {
+          "id": "espresso2-u10-conclude",
+          "unitId": "a2-subjunctive-opinions",
+          "prompt": {
+            "en": "Finish with secondo me, without che. Which sentence uses the appropriate mood?",
+            "it": "Concludi con secondo me, senza che. Quale frase usa il modo adatto?"
+          },
+          "options": [
+            "Secondo me è adatto a noi.",
+            "Secondo me sia adatto a noi.",
+            "Secondo me abbia adatto a noi."
+          ],
+          "answer": "Secondo me è adatto a noi.",
+          "hint": {
+            "en": "Secondo me does not by itself introduce a subjunctive subordinate clause.",
+            "it": "Secondo me non introduce da solo una subordinata con il congiuntivo."
+          },
+          "explanation": {
+            "en": "Secondo me è uses the indicative; it differs from penso che sia.",
+            "it": "Secondo me è usa l’indicativo; è diverso da penso che sia."
+          }
+        }
+      ],
+      "id": "espresso2-u10",
+      "level": "A2",
+      "bookId": "nuovo-espresso-plus-2",
+      "chapter": 10,
+      "missionId": "espresso2-u10-discuss-a-home",
+      "sourceRefs": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            144,
+            145,
+            147,
+            148
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            167,
+            256,
+            257
+          ]
+        }
+      ]
     }
   ]
 }

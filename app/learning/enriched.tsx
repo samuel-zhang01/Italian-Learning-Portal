@@ -1,17 +1,19 @@
-import { useState, type ComponentType } from "react";
+import { Rewards } from "./daily-overview";
+export { Rewards, SessionPreview, SessionNotebook } from "./daily-overview";
+import { useEffect, useRef, useState, type ComponentType } from "react";
 import data from "./enrichment.json";
 import grammar from "./grammar.json";
 import companion from "./companion.json";
 import { dueReviews, isCorrect } from "./engine";
+import { chapterContext, sessionVocabularyBank } from "./chapter-context";
+import { focusStudyHeading } from "./navigation";
 import {
   emptySession,
-  dailyRecipe,
   dailyStudyPlan,
   learningRewards,
   sessionLayout,
   sessionActivities,
   sessionDone,
-  sessionMission,
 } from "./study";
 import type {
   Enrichment,
@@ -52,123 +54,6 @@ const labels = (t: Translate): Record<SessionActivity, string> => ({
   speak: t("Your little conversation", "La tua piccola conversazione"),
   exit: t("Leave a memory trail", "Lascia una traccia"),
 });
-
-export function SessionPreview({
-  p,
-  t,
-  text,
-  today,
-  save,
-  go,
-  missions,
-}: Props & { missions: Mission[] }) {
-  const plan = dailyStudyPlan(p, missions, grammar.units as GrammarUnit[],
-    grammar.programmes as Programme[], companion.pages as PageCompanion[], today);
-  const readyToFinish = plan.dayReady;
-  const next = readyToFinish ? undefined : plan.next;
-  const count = plan.blocks.filter((block) => block.completed).length;
-  return (
-    <section className="session-preview" aria-label={t("Today’s next step", "Il prossimo passo di oggi")}>
-      <div>
-        <p className="eyebrow">
-          {plan.programme
-            ? `${text(plan.programme.title)} · ${t("Day", "Giorno")} ${Math.min((p.academy?.programme?.day ?? 0) + 1, plan.programme.days.length)}`
-            : t("YOUR DAILY PRACTICE", "LA TUA PRATICA QUOTIDIANA")}
-        </p>
-        <h2>{next ? text(next.detail) : readyToFinish ? t("Your study day is ready to finish", "Il giorno di studio è pronto da completare") : t("Today’s practice is complete", "La pratica di oggi è completata")}</h2>
-        <p>
-          {next
-            ? `${text(next.title)} · ${t(`about ${next.minutes} minutes`, `circa ${next.minutes} minuti`)}. ${t("Your work saves as you go.", "Il lavoro si salva mentre procedi.")}`
-            : readyToFinish
-              ? t("The required lessons and grammar are complete. Save this programme day; any remaining practice is optional.", "Le lezioni e la grammatica richieste sono completate. Salva questo giorno del percorso; la pratica rimanente è facoltativa.")
-              : t("You can stop here. Come back for your next session.", "Puoi fermarti qui. Torna per la prossima sessione.")}
-        </p>
-        {(next || readyToFinish) && (
-          <button className="button primary today-primary-action" onClick={() => {
-            if (next?.route === "session") save((state) => ({
-              ...state, sessions: { ...state.sessions,
-                [today]: state.sessions?.[today] ?? emptySession(plan.mission.id, plan.duration),
-              },
-            }));
-            go(next?.route ?? "programmes");
-          }}>
-            {next ? t("Continue today", "Continua oggi") : t("Finish this study day", "Completa questo giorno")} →
-          </button>
-        )}
-        <div className="session-meta">
-          <span>{count}/{plan.blocks.length} {t("blocks complete", "attività completate")}</span>
-          <button className="text-button" onClick={() => go("plan")}>
-            {p.plan.minutes} {t("min today · change", "min oggi · modifica")}
-          </button>
-        </div>
-        {!plan.programme && (
-          <button className="text-button programme-suggestion" onClick={() => go("programmes")}>
-            {t("Want a steady route? Try supported A1", "Vuoi un percorso regolare? Prova A1 guidato")} →
-          </button>
-        )}
-      </div>
-      <div className="paper-collage" aria-hidden="true">
-        <span className="collage-sun" />
-        <div className="collage-note">
-          <span>un po’ ogni giorno</span>
-          <strong>
-            ciao<span>!</span>
-          </strong>
-          <i />
-          <small>little by little.</small>
-        </div>
-        <svg className="collage-book" viewBox="0 0 260 200" fill="none">
-          <defs>
-            <filter
-              id="collage-painted-stock"
-              x="0"
-              y="0"
-              width="100%"
-              height="100%"
-              colorInterpolationFilters="sRGB"
-            >
-              <feImage
-                href={new URL("./painted-cardboard.webp", import.meta.url).href}
-                x="0"
-                y="0"
-                width="260"
-                height="200"
-                preserveAspectRatio="xMidYMid slice"
-                result="grain"
-              />
-              <feBlend
-                in="grain"
-                in2="SourceGraphic"
-                mode="soft-light"
-                result="paint"
-              />
-              <feComposite in="paint" in2="SourceGraphic" operator="in" />
-            </filter>
-          </defs>
-          <g filter="url(#collage-painted-stock)">
-            <path d="M20 58 113 82 137 181 7 147Z" fill="var(--orange)" />
-            <path d="m137 181 108-33-3-97-104 32Z" fill="var(--green)" />
-            <path
-              d="M27 48c46-11 80 4 110 35l-9 90c-34-24-67-37-111-35Z"
-              fill="var(--green)"
-            />
-            <path
-              d="M137 83c31-33 61-46 101-46l7 101c-44-1-82 11-117 35Z"
-              fill="var(--paper)"
-            />
-            <path
-              d="M137 83c37-21 64-30 94-31M136 98c36-22 65-31 97-32M134 113c37-22 66-31 100-32M132 128c37-22 68-32 103-32M131 143c39-22 69-32 106-32M129 158c39-22 71-32 110-32"
-              stroke="var(--ochre)"
-              strokeWidth=".8"
-            />
-            <path d="m137 83-9 90" stroke="var(--ochre)" />
-          </g>
-        </svg>
-        <span className="collage-caption">PARLIAMO · OGNI GIORNO</span>
-      </div>
-    </section>
-  );
-}
 
 function WordCards({
   bank,
@@ -273,15 +158,16 @@ export function DailySession({
   missions,
   Audio,
 }: Props & { missions: Mission[]; Audio: Audio }) {
-  const day = programmeDay(p);
-  const plannedDuration = dailyRecipe(
-    p.plan.minutes,
-    day?.unitIds.length ?? 0,
-  ).session;
-  const m = sessionMission(p, missions, today, day?.missionIds);
+  const plan = dailyStudyPlan(p, missions, grammar.units as GrammarUnit[],
+    grammar.programmes as Programme[], companion.pages as PageCompanion[], today);
+  const plannedDuration = plan.duration;
+  const m = plan.mission;
   const extra = lessons.find((x) => x.missionId === m.id)!;
-  const bank = banks.find((b) => b.id === extra.bank)!;
-  const session = p.sessions?.[today] ?? emptySession(m.id, plannedDuration);
+  const savedSession = p.sessions?.[today];
+  const bank = banks.find((b) => b.id === sessionVocabularyBank(savedSession, m.id, extra.bank))
+    ?? banks.find((b) => b.id === extra.bank)!;
+  const session = savedSession ?? emptySession(m.id, plannedDuration, bank.id);
+  const chapter = chapterContext(m.id);
   const done = sessionDone(p, today);
   const duration = session.duration ?? 30;
   const stages = sessionActivities(duration);
@@ -294,6 +180,7 @@ export function DailySession({
     () => stages.find((a) => !done.includes(a)) ?? stages.at(-1)!,
   );
   const [feedback, setFeedback] = useState<"correct" | "wrong" | null>(null);
+  const [gistFeedback, setGistFeedback] = useState<"correct" | "wrong" | null>(null);
   const [selfChecked, setSelfChecked] = useState(false);
   const titles = labels(t);
   const due = dueReviews(p, today);
@@ -302,9 +189,10 @@ export function DailySession({
       ...state,
       sessions: {
         ...state.sessions,
-        [today]: fn(
-          state.sessions?.[today] ?? emptySession(m.id, plannedDuration),
-        ),
+        [today]: fn({
+          ...(state.sessions?.[today] ?? emptySession(m.id, plannedDuration, bank.id)),
+          bankId: bank.id,
+        }),
       },
     }));
   const finish = (activity: SessionActivity) => {
@@ -326,10 +214,17 @@ export function DailySession({
       </button>
       <p className="eyebrow">
         {t(
-          `MID-A1 · ABOUT ${duration} MINUTES · YOUR PACE`,
-          `A1 INTERMEDIO · CIRCA ${duration} MINUTI · AL TUO RITMO`,
+          `${chapter?.level ?? "A1"} · ABOUT ${duration} MINUTES · YOUR PACE`,
+          `${chapter?.level ?? "A1"} · CIRCA ${duration} MINUTI · AL TUO RITMO`,
         )}
       </p>
+      {chapter && (
+        <div className="chapter-links support-box">
+          <strong>Nuovo Espresso Plus {chapter.book} · {t("Chapter", "Capitolo")} {chapter.chapter}</strong>
+          <p><button className="text-button" onClick={() => go(`vocabulary/${chapter.bankId}`)}>{t("Chapter vocabulary", "Lessico del capitolo")} →</button>{" "}
+            {chapter.sceneId && <button className="text-button" onClick={() => go(`games/${chapter.sceneId}`)}>{t("Try the A2 conversation", "Prova la conversazione A2")} →</button>}</p>
+        </div>
+      )}
       <h1>{text(m.title)}</h1>
       <p>
         {text(m.goal)}{" "}
@@ -512,6 +407,9 @@ export function DailySession({
           )}
           {active === "vocab" && (
             <>
+              {savedSession && bank.id !== extra.bank && (
+                <p className="hint">{t("This saved session keeps the cards you started with. The chapter vocabulary is available separately above.", "Questa sessione conserva le carte con cui hai iniziato. Il lessico del capitolo è disponibile separatamente qui sopra.")}</p>
+              )}
               <p>
                 {text(bank.title)} · {Math.min(attempted, wordTarget)}/
                 {wordTarget} {t("cards practised", "carte provate")}
@@ -548,6 +446,7 @@ export function DailySession({
           )}
           {active === "input" && (
             <>
+              <p className="hint">{t("Original portal scene · the play buttons use your device’s Italian voice. Voice availability and pronunciation vary by device; you can read both parts aloud.", "Scena originale del portale · i pulsanti usano la voce italiana del dispositivo. Disponibilità e pronuncia variano; puoi leggere entrambe le parti ad alta voce.")}</p>
               <p>
                 {t(
                   "Listen once with the text covered. Catch the situation, not every word. Open the scene, read line by line, then listen again. No audio? Read both parts aloud.",
@@ -563,6 +462,17 @@ export function DailySession({
                   t={t}
                 />
               </p>
+              {extra.skills && (
+                <div className="support-box chapter-gist">
+                  <h3>{t("First listen: the situation", "Primo ascolto: la situazione")}</h3>
+                  <p>{t("Try the gist before opening the text. This is optional practice; using the scene for support is welcome.", "Prova a cogliere il senso prima di aprire il testo. È una pratica facoltativa; puoi usare la scena come aiuto.")}</p>
+                  <label className="field">{text(extra.skills.gist.prompt)}
+                    <input lang="it" maxLength={2000} value={session.gistAnswer ?? ""} onChange={(event) => { setGistFeedback(null); update((s) => ({ ...s, gistAnswer: event.target.value })); }} />
+                  </label>
+                  <button className="button secondary" disabled={!session.gistAnswer?.trim()} onClick={() => setGistFeedback(isCorrect(session.gistAnswer ?? "", extra.skills!.gist.answers) ? "correct" : "wrong")}>{t("Check the situation", "Controlla la situazione")}</button>
+                  {gistFeedback && <p role="status" className={`feedback ${gistFeedback === "correct" ? "correct" : "incorrect"}`}>{gistFeedback === "correct" ? text(extra.skills.gist.explanation) : t("Listen once more, or open the scene and find the situation. Your draft is saved.", "Ascolta di nuovo, oppure apri la scena e trova la situazione. La bozza è salvata.")}</p>}
+                </div>
+              )}
               <details className="scene">
                 <summary>
                   {t(
@@ -643,6 +553,7 @@ export function DailySession({
                     "Pratica online facoltativa · se resta tempo",
                   )}
                 </summary>
+                {chapter?.level === "A2" && <p className="hint">{t("These external links offer A1 foundation revision. The chapter scene above is your A2 practice.", "Questi link esterni offrono ripasso delle basi A1. La scena del capitolo qui sopra è la pratica A2.")}</p>}
                 <ResourceCard resource={resource} text={text} t={t} />
                 <p className="hint">
                   {t(
@@ -719,6 +630,20 @@ export function DailySession({
                   "Salvata come pratica, senza voto automatico di grammatica o pronuncia.",
                 )}
               </p>
+              {extra.skills && (
+                <details className="chapter-retell">
+                  <summary>{t("If time remains: change the story", "Se resta tempo: cambia la storia")}</summary>
+                  <p>{text(extra.skills.retell.prompt)}</p>
+                  <p lang="it">{extra.skills.retell.frame.it}</p>
+                  {p.translations && <p lang="en" className="hint">{extra.skills.retell.frame.en}</p>}
+                  <label className="field">{t("My changed story", "La mia storia cambiata")}
+                    <textarea lang="it" maxLength={2000} value={session.retell ?? ""} onChange={(event) => update((s) => ({ ...s, retell: event.target.value, retellChecks: [] }))} />
+                  </label>
+                  <details><summary>{t("Compare with one possible response", "Confronta una possibile risposta")}</summary><p lang="it">{extra.skills.retell.model.it}</p>{p.translations && <p lang="en">{extra.skills.retell.model.en}</p>}</details>
+                  {extra.skills.retell.rubric.map((criterion, i) => <label className="self-check" key={i}><input type="checkbox" checked={session.retellChecks?.[i] ?? false} onChange={(event) => update((s) => ({ ...s, retellChecks: extra.skills!.retell.rubric.map((_, j) => j === i ? event.target.checked : (s.retellChecks?.[j] ?? false)) }))} />{text(criterion)}</label>)}
+                  <p className="hint" role="status">{session.retell?.trim() && extra.skills.retell.rubric.every((_, i) => session.retellChecks?.[i]) ? t("Draft and self-checks saved. This records your practice, with no automatic language grade or extra XP.", "Bozza e autoverifiche salvate. Registrano la pratica, senza voto automatico sulla lingua o XP aggiuntivi.") : t("Your draft saves as you write. Compare one phrase, then use the self-checks.", "La bozza si salva mentre scrivi. Confronta una frase, poi usa le autoverifiche.")}</p>
+                </details>
+              )}
             </>
           )}
           {active === "exit" && (
@@ -811,10 +736,20 @@ export function VocabularyView({
   t,
   text,
   go,
+  today,
   Audio,
-}: Props & { Audio: Audio }) {
-  const [selected, setSelected] = useState(banks[0].id);
-  const [query, setQuery] = useState("");
+  bankId,
+}: Props & { Audio: Audio; bankId?: string }) {
+  const chapter = chapterContext(p.sessions?.[today]?.missionId ?? programmeDay(p)?.missionIds[0] ?? "");
+  const [selected, setSelected] = useState(() => banks.find((bank) => bank.id === bankId)?.id
+    ?? banks.find((bank) => bank.id === chapter?.bankId)?.id ?? banks[0].id);
+  const [query, setQuery] = useState(() => typeof window === "undefined" ? "" : new URLSearchParams(window.location.hash.split("?")[1] ?? "").get("q") ?? "");
+  const bankHeading = useRef<HTMLHeadingElement>(null);
+  useEffect(() => bankId ? focusStudyHeading(bankHeading.current) : undefined, [bankId]);
+  const remember = (id: string, value: string) => {
+    const params = new URLSearchParams(); if (value.trim()) params.set("q", value);
+    window.history.replaceState(window.history.state, "", `#vocabulary/${id}${params.size ? `?${params}` : ""}`);
+  };
   const bank = banks.find((b) => b.id === selected)!;
   const needle = query.trim().toLocaleLowerCase();
   const shown = banks.filter(
@@ -829,8 +764,8 @@ export function VocabularyView({
     <div className="workspace">
       <p className="eyebrow">
         {t(
-          "144 WORDS & USEFUL CHUNKS · A1 SUPPORT",
-          "144 PAROLE ED ESPRESSIONI UTILI · AIUTO A1",
+          `${banks.reduce((sum, b) => sum + b.words.length, 0)} WORDS & USEFUL CHUNKS · ${banks.some((b) => b.level === "A2") ? "A1–A2" : "A1"}`,
+          `${banks.reduce((sum, b) => sum + b.words.length, 0)} PAROLE ED ESPRESSIONI UTILI · ${banks.some((b) => b.level === "A2") ? "A1–A2" : "A1"}`,
         )}
       </p>
       <h1>{t("Words you can use today.", "Parole da usare oggi.")}</h1>
@@ -868,16 +803,19 @@ export function VocabularyView({
                 ),
             );
             if (match) setSelected(match.id);
+            remember(match?.id ?? selected, e.target.value);
           }}
         />
       </label>
+      <details className="vocabulary-chooser" open={Boolean(query.trim())}>
+        <summary>{t(`Browse ${banks.length} vocabulary topics`, `Esplora ${banks.length} argomenti di lessico`)}</summary>
       <div className="bank-choices">
         {shown.map((b) => (
           <button
             className="button secondary"
             aria-pressed={b.id === selected}
             key={b.id}
-            onClick={() => setSelected(b.id)}
+            onClick={() => { setSelected(b.id); remember(b.id, query); focusStudyHeading(bankHeading.current); }}
           >
             {text(b.title)}
           </button>
@@ -891,6 +829,7 @@ export function VocabularyView({
           )}
         </p>
       )}
+      </details>
       <div className="support-box">
         <button className="button primary" onClick={() => go("words")}>
           {t(
@@ -906,7 +845,8 @@ export function VocabularyView({
           )}
         </p>
       </div>
-      <h2>{text(bank.title)}</h2>
+      <h2 ref={bankHeading} tabIndex={-1} className="vocabulary-topic-heading">{text(bank.title)}</h2>
+      {bank.chapter && <p className="hint">{bank.level} · Nuovo Espresso Plus {bank.bookId?.endsWith("2") ? "2" : "1"} · {t("Chapter", "Capitolo")} {bank.chapter}{" "}<button className="text-button" onClick={() => go(`lesson/${bank.missionId}`)}>{t("Open the chapter lesson", "Apri la lezione del capitolo")} →</button></p>}
       <WordCards key={bank.id} bank={bank} t={t} Audio={Audio} />
       <details>
         <summary>
@@ -1010,88 +950,6 @@ export function ResourceLibrary({ t, text }: Pick<Props, "t" | "text">) {
           {t("Links reviewed", "Link controllati")} {data.reviewedOn}
         </p>
       </details>
-    </section>
-  );
-}
-export function Rewards({ p, t }: Pick<Props, "p" | "t">) {
-  const r = learningRewards(p);
-  const titles = [
-    t("First words", "Prime parole"),
-    t("Memory comeback", "Ritorno della memoria"),
-    t("Daily explorer", "Esploratore del giorno"),
-    t("Seven adventures", "Sette avventure"),
-  ];
-  return (
-    <section className="rewards">
-      <h2>{t("Your practice passport", "Il tuo passaporto di pratica")}</h2>
-      <p>
-        {r.xp} XP · {t("Level", "Livello")} {r.level} · {r.completeDays}{" "}
-        {t("full sessions", "sessioni complete")}
-      </p>
-      <div className="badge-row">
-        {titles.map((title, i) => (
-          <span className={r.badges[i] ? "earned" : ""} key={title}>
-            {r.badges[i] ? "✦" : "◇"} {title} ·{" "}
-            {r.badges[i]
-              ? t("earned", "ottenuto")
-              : t("to discover", "da scoprire")}
-          </span>
-        ))}
-      </div>
-      <p className="hint">
-        {t(
-          "10 XP per new core lesson · 3 per scheduled review · 5 per daily quest · 2 per new grammar exercise · 15 per completed grammar unit · 5 per companion page. Repeating a completed quest adds no extra points. Levels celebrate practice; they do not measure language level. No streak to lose.",
-          "10 XP per nuova lezione base · 3 per ripasso programmato · 5 per missione quotidiana · 2 per nuovo esercizio di grammatica · 15 per unità di grammatica completata · 5 per pagina del compagno. Ripetere una missione completata non aggiunge punti. I livelli celebrano la pratica; non misurano il livello linguistico. Nessuna serie da perdere.",
-        )}
-      </p>
-    </section>
-  );
-}
-
-export function SessionNotebook({
-  p,
-  t,
-  text,
-  missions,
-}: Pick<Props, "p" | "t" | "text"> & { missions: Mission[] }) {
-  const entries = Object.entries(p.sessions ?? {}).sort(([a], [b]) =>
-    b.localeCompare(a),
-  );
-  if (!entries.length) return null;
-  return (
-    <section className="session-notebook">
-      <h2>{t("My daily conversations", "Le mie conversazioni quotidiane")}</h2>
-      <p className="hint">
-        {t(
-          "Your latest 30 sessions. All sessions are included in your progress backup. Writing and speaking are self-checked.",
-          "Le ultime 30 sessioni. Tutte le sessioni sono incluse nel backup dei progressi. Scrittura e conversazione sono autoverificate.",
-        )}
-      </p>
-      {entries.slice(0, 30).map(([date, s]) => {
-        const m = missions.find((m) => m.id === s.missionId);
-        return (
-          <details key={date}>
-            <summary>
-              {date} · {m ? text(m.title) : s.missionId} ·{" "}
-              {sessionDone(p, date).length}/
-              {sessionActivities(s.duration ?? 30).length}
-            </summary>
-            {[
-              [t("My warm-up", "Il mio riscaldamento"), s.warmup],
-              [t("My conversation", "La mia conversazione"), s.speaking],
-              [t("My memory trail", "La mia traccia"), s.exit],
-            ].map(
-              ([label, value]) =>
-                value.trim() && (
-                  <div key={label}>
-                    <h3>{label}</h3>
-                    <blockquote lang="it">{value}</blockquote>
-                  </div>
-                ),
-            )}
-          </details>
-        );
-      })}
     </section>
   );
 }

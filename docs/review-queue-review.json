@@ -1,0 +1,82 @@
+{
+  "reviewedOn": "2026-10-24",
+  "status": "passed focused selector tests and integrated synthetic browser verification",
+  "scope": "A bilingual optional review plan from existing lesson, grammar, personal-word and arcade evidence. The selector reads saved records; the established practice engines own grading, credit and schedules.",
+  "implemented": [
+    "A pure compact-metadata selector retains only known records, existing due dates and latest recorded attempts. It prioritises overdue mistakes and offers capped 2, 5 or 10 minute plans.",
+    "Exact grammar-exercise and normalised-word aliases are deduplicated across tools. Newer evidence supersedes older aliases, including newer future-due evidence. Same-day completions or reviews suppress repeats.",
+    "Core lessons remain due-only. Historical word lapse totals are not presented as evidence of the latest failure; personal word recall is explicitly self-assessed.",
+    "The hub keeps its time choice in the URL, focuses the heading and opens the specific practice target. Merely opening the hub, changing a budget or opening a practice target does not mutate learner records.",
+    "Integrated targeted grammar recall preserves ordinary lesson stage, exercise index, production and first-attempt evidence. A separate pending recall draft survives reload until checked.",
+    "Integrated arcade review requires explicit start and preserves any unrelated unfinished round. Exact personal-word review never silently substitutes another due word."
+  ],
+  "verification": {
+    "focusedSelectorTests": {
+      "command": "node --test tests/review-queue.test.mjs",
+      "passed": 8,
+      "coverage": [
+        "Mixed record fixtures and deterministic ordering",
+        "Existing core due dates and latest review outcomes",
+        "Grammar intervals, hints and supported answers",
+        "Exact cross-tool deduplication and newer future-due evidence",
+        "Today exclusions and stale or unknown IDs",
+        "Personal-word self-rating limits and English recall cues",
+        "Budget caps and deep-frozen nonmutation"
+      ]
+    },
+    "ownedFileSyntaxAndLint": "passed",
+    "gitDiffCheck": "passed",
+    "parentIntegratedChecks": "Parent reported full typecheck, lint, daily build and 185 daily tests passed after the grammar pending-draft fix.",
+    "browser": {
+      "status": "passed",
+      "target": "http://127.0.0.1:5197/",
+      "isolation": "Owned standalone headless Chromium and disposable contexts with synthetic localStorage only. No shared CDP, logged-in tabs, existing profile, learner databases or backups accessed.",
+      "workflowGroups": 15,
+      "nonGrammarGroups": 13,
+      "rebuiltGrammarGroups": 2,
+      "layouts": [
+        { "language": "en", "width": 390, "height": 844, "scope": "all targeted review workflows" },
+        { "language": "it", "width": 320, "height": 844, "scope": "all targeted review workflows" },
+        { "language": "en", "width": 320, "height": 844, "scope": "Today mixed-due optional review CTA" },
+        { "language": "en", "width": 1440, "height": 1000, "scope": "mixed review hub layout" }
+      ],
+      "observations": [
+        "The mixed fixture produced five due items from all four tools. Budget selection matched the pure selector, survived reload and browser Back, and left raw stored progress unchanged.",
+        "Today’s optional review CTA wrapped inside 320px in English and Italian without horizontal overflow. Opening it did not alter records.",
+        "An incorrect core recall scheduled tomorrow once. Reloading and entering the correction did not add another review log or alter the original completion credit.",
+        "The requested personal word was the second of two due words, rather than the default first word. Revealing was nonmutating; self-rating changed only that word. Reload showed it already reviewed, without substituting the other word.",
+        "An unrelated arcade round and its draft remained byte-equivalent when another review was requested. Explicitly starting the requested review created exactly one requested item. Wrong feedback survived reload; finish produced one history record, retained original first evidence and prevented same-day restart.",
+        "Target a2-imperfetto-2 started blank instead of exposing the previous submitted answer. An unsubmitted recall draft survived reload separately from ordinary answers. Checking a wrong answer appended one attempt and retained its original attempt, exerciseIndex 6, production output and rubric. Reload showed Already checked today; opening the full unit returned to Use it.",
+        "No uncaught page errors or blocked write/off-origin requests were observed. All inspected layouts had document width equal to viewport width."
+      ],
+      "visualReview": {
+        "method": "Viewed viewport-height screenshots, including the 320px Italian hub, 320px English Today CTA, 1440px English hub and 320px Italian grammar feedback.",
+        "finding": "Controls and correction text wrap within the phone panels; desktop cards retain clear titles and actions. No clipping or horizontal overflow observed in these samples."
+      },
+      "runtimePageErrors": [],
+      "forbiddenRequests": [],
+      "evidenceFiles": [
+        "work/review-queue-audit/browser-report-non-grammar.json",
+        "work/review-queue-audit/browser-report-grammar.json"
+      ],
+      "screenshotDirectory": "work/review-queue-audit/",
+      "screenshotCount": 9,
+      "reusableHarness": "scripts/audit_review_queue_browser.mjs",
+      "rerunCommand": "PARLIAMO_URL=http://127.0.0.1:5197 node scripts/audit_review_queue_browser.mjs"
+    }
+  },
+  "resolvedDuringIntegration": [
+    {
+      "finding": "Independent review identified that unsubmitted grammar recall was labelled saved but reloaded blank while overwriting the ordinary answer.",
+      "owner": "Parent integration",
+      "resolution": "Validated optional recallDrafts store pending answer/date/hint separately. The rebuilt preview passed pre-submit reload and ordinary-answer preservation in both languages."
+    }
+  ],
+  "limitations": [
+    "Synthetic Chromium samples verify the listed routes and layouts; they do not measure learning outcomes, estimate proficiency or exercise a real learner profile.",
+    "Time budgets use deterministic per-item estimates rather than measured personal completion time.",
+    "Exact duplicate exercises and words merge; related topics with different exercise IDs remain distinct practice.",
+    "The browser audit did not simulate the midnight boundary. Parent engine regression tests cover pending recall draft dates and retained hint evidence.",
+    "No remote deployment or real-user study was part of this review."
+  ]
+}

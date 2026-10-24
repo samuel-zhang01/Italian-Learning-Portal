@@ -1,15 +1,19 @@
 import type {
-  Mission,
-  GrammarUnit,
-  Programme,
-  PageCompanion,
   Pair,
   Progress,
   SessionActivity,
   StudySession,
 } from "./types.ts";
+import type { PlanningMission, PlanningPage, PlanningProgramme, PlanningUnit } from "./planning-types.ts";
 
-import { academyXP, getGrammarDraft, grammarReviewQueue } from "./academy-engine.ts";
+import {
+  academyXP,
+  getGrammarDraft,
+  getProgrammePracticeDraft,
+  grammarReviewQueue,
+  programmeDayReady,
+} from "./academy-engine.ts";
+import { chapterContext, chapterConversationComplete } from "./chapter-context.ts";
 
 export const SESSION_MINUTES: Record<SessionActivity, number> = {
   warmup: 5,
@@ -44,6 +48,11 @@ export function sessionLayout(minutes = 30): Record<SessionActivity, number> {
 }
 export const sessionActivities = (minutes = 30) =>
   SESSION_ORDER.filter((key) => sessionLayout(minutes)[key] > 0);
+// A saved duration must name an actual activity layout. Reserving transfer
+// time can leave 25 minutes, which has no separate layout or backup value.
+export function sessionDuration(minutes: number) {
+  return [30, 20, 15, 10, 5].find((duration) => duration <= minutes) ?? 5;
+}
 export function dailyRecipe(minutes: number, unitCount = 0) {
   const grammarMinutes =
     unitCount > 0 && minutes >= 10
@@ -62,7 +71,7 @@ export function dailyRecipe(minutes: number, unitCount = 0) {
   const workshopCount = unitCount
     ? Math.min(unitCount, Math.max(1, Math.floor(grammarMinutes / 15)))
     : 1;
-  const session = Math.min(30, minutes - grammarMinutes);
+  const session = sessionDuration(minutes - grammarMinutes);
   const extra = minutes - session - grammarMinutes;
   return {
     session,
@@ -79,9 +88,11 @@ export function dailyRecipe(minutes: number, unitCount = 0) {
 export const emptySession = (
   missionId: string,
   minutes = 30,
+  bankId = chapterContext(missionId)?.bankId,
 ): StudySession => ({
-  duration: Math.min(30, minutes),
+  duration: sessionDuration(minutes),
   missionId,
+  ...(bankId ? { bankId } : {}),
   done: [],
   warmup: "",
   recalled: [],
@@ -89,7 +100,7 @@ export const emptySession = (
   speaking: "",
   exit: "",
 });
-export function sessionMission(
+export function sessionMission<Mission extends Pick<PlanningMission, "id" | "course">>(
   p: Progress,
   missions: Mission[],
   date: string,
@@ -183,7 +194,12 @@ export type DailyStudyBlock = {
 };
 
 // Today and its checklist use the same selection and completion rules.
-export function dailyStudyPlan(
+export function dailyStudyPlan<
+  Mission extends PlanningMission,
+  GrammarUnit extends PlanningUnit,
+  Programme extends PlanningProgramme,
+  PageCompanion extends PlanningPage,
+>(
   p: Progress,
   missions: Mission[],
   units: GrammarUnit[],
@@ -192,9 +208,31 @@ export function dailyStudyPlan(
   date: string,
 ) {
   const programme = programmes.find((item) => item.id === p.academy?.programme?.id);
-  const day = programme?.days[p.academy?.programme?.day ?? 0];
+  const dayIndex = p.academy?.programme?.day ?? 0;
+  const day = programme?.days[dayIndex];
+  const practice = programme ? getProgrammePracticeDraft(p, programme, dayIndex) : undefined;
+  const linkedWorkDone = Boolean(day && day.unitIds.every((id) => p.academy?.grammar[id]?.completed)
+    && day.missionIds.every((id) => p.completed[id]));
+  const linkedWorkDoneToday = Boolean(day && (day.unitIds.some((id) => p.academy?.grammar[id]?.completed === date)
+    || day.missionIds.some((id) => p.completed[id]?.date === date)));
+  const practiceDoneToday = Object.values(p.academy?.programme?.practice ?? {})
+    .some((draft) => draft.completed === date);
+  // At five minutes, transfer waits for the next sitting if today's required
+  // work already used the block. Longer sittings reserve its own five minutes.
+  const includePractice = Boolean(day?.practice && (practice?.completed === date
+    || (!practice?.completed && (p.plan.minutes > 5
+      || (linkedWorkDone && !linkedWorkDoneToday && !practiceDoneToday && !p.sessions?.[date])))));
+  const practiceBlock: DailyStudyBlock | undefined = includePractice ? {
+    route: "programmes",
+    title: { en: "Daily personal practice", it: "Pratica personale del giorno" },
+    detail: day!.title,
+    minutes: 5,
+    completed: Boolean(practice?.completed),
+  } : undefined;
   const mission = sessionMission(p, missions, date, day?.missionIds);
-  const recipe = dailyRecipe(p.plan.minutes, day?.unitIds.length ?? 0);
+  const chapter = chapterContext(mission.id);
+  const mainBudget = p.plan.minutes - (practiceBlock?.minutes ?? 0);
+  const recipe = dailyRecipe(Math.max(5, mainBudget), day?.unitIds.length ?? 0);
   const duration = p.sessions?.[date] ? (p.sessions[date].duration ?? 30) : recipe.session;
   const programmeUnits = (day?.unitIds ?? [])
     .map((id) => units.find((unit) => unit.id === id))
@@ -251,7 +289,12 @@ export function dailyStudyPlan(
         completed: Boolean(getGrammarDraft(p, workshop.id).completed),
       };
     }),
-    ...(recipe.tense ? [{
+    ...(recipe.tense && chapter?.sceneId ? [{
+      route: `games/${chapter.sceneId}`,
+      title: { en: "Chapter conversation", it: "Conversazione del capitolo" },
+      detail: mission.title, minutes: recipe.tense,
+      completed: chapterConversationComplete(p, chapter.sceneId, date),
+    }] : recipe.tense ? [{
       route: "tense", title: { en: "Tense check", it: "Controllo dei tempi" },
       detail: { en: "Present or past?", it: "Presente o passato?" }, minutes: recipe.tense,
       completed: Object.entries(p.academy?.assessments ?? {}).some(([key, run]) =>
@@ -264,14 +307,16 @@ export function dailyStudyPlan(
       completed: Boolean(p.academy?.companion[page.id]?.completed),
     }] : []),
   ];
-  let remaining = p.plan.minutes;
-  const blocks = planned.flatMap((block) => {
+  let remaining = mainBudget;
+  const mainBlocks = planned.flatMap((block) => {
     const minutes = Math.min(block.minutes, remaining);
     remaining -= minutes;
     return minutes > 0 ? [{ ...block, minutes }] : [];
   });
+  const blocks = practiceBlock
+    ? linkedWorkDone ? [practiceBlock, ...mainBlocks] : [...mainBlocks, practiceBlock]
+    : mainBlocks;
   const next = blocks.find((block) => !block.completed);
-  const dayReady = Boolean(day && day.unitIds.every((id) => p.academy?.grammar[id]?.completed)
-    && day.missionIds.every((id) => p.completed[id]));
+  const dayReady = Boolean(programme && programmeDayReady(p, programme, dayIndex));
   return { programme, day, mission, duration, blocks, next, dayReady };
 }

@@ -1,14 +1,11 @@
 "use client";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { lazy, Suspense, useEffect, useRef, useState, type ReactNode } from "react";
 import curriculum from "./curriculum.json";
-import companionData from "./companion.json";
-import { GrammarLab, ProgrammeView, CompanionView } from "./academy";
-import { ArcadeEntry, PracticeArcade } from "./arcade";
-import {
-  DailyItinerary,
-  AssessmentView,
-  PersonalWords,
-} from "./practice-tools";
+import { planningSources, planningReviewCatalogue } from "./planning-data";
+import { selectReviewQueue } from "./review-queue";
+import { createLocalPdfStore, localPdfPageHref, type LocalPdfResult } from "./local-pdfs";
+import { LearningRouteBoundary } from "./lazy-boundary";
+import { ArcadeEntry, DailyItinerary, Rewards, SessionNotebook, SessionPreview } from "./daily-overview";
 import {
   STORAGE_KEY,
   addDays,
@@ -25,23 +22,31 @@ import {
   schedule,
 } from "./engine";
 import type { Draft, Mission, Pair, Progress, Source } from "./types";
-import {
-  DailySession,
-  ResourceLibrary,
-  Rewards,
-  SessionNotebook,
-  SessionPreview,
-  VocabularyView,
-} from "./enriched";
+import "./academy.css";
+import "./arcade.css";
+import "./practice-tools.css";
 import "./portal.css";
 import "./paper-cutout.css";
+
+const DiscoveryView = lazy(() => import("./discovery").then((module) => ({ default: module.DiscoveryView })));
+const GrammarLab = lazy(() => import("./academy").then((module) => ({ default: module.GrammarLab })));
+const ProgrammeView = lazy(() => import("./academy").then((module) => ({ default: module.ProgrammeView })));
+const CompanionView = lazy(() => import("./academy").then((module) => ({ default: module.CompanionView })));
+const PracticeArcade = lazy(() => import("./arcade").then((module) => ({ default: module.PracticeArcade })));
+const AssessmentView = lazy(() => import("./practice-tools").then((module) => ({ default: module.AssessmentView })));
+const PersonalWords = lazy(() => import("./practice-tools").then((module) => ({ default: module.PersonalWords })));
+const DailySession = lazy(() => import("./enriched").then((module) => ({ default: module.DailySession })));
+const ResourceLibrary = lazy(() => import("./enriched").then((module) => ({ default: module.ResourceLibrary })));
+const VocabularyView = lazy(() => import("./enriched").then((module) => ({ default: module.VocabularyView })));
+const ChapterDashboard = lazy(() => import("./chapters").then((module) => ({ default: module.ChapterDashboard })));
+const ReviewHub = lazy(() => import("./review-hub").then((module) => ({ default: module.ReviewHub })));
 
 const missions = curriculum.missions as Mission[];
 const sources = Array.from(
   new Map(
     [
       ...(curriculum.sources as Source[]),
-      ...(companionData.sources as Source[]),
+      ...(planningSources as Source[]),
     ].map((s) => [s.id, s]),
   ).values(),
 );
@@ -85,6 +90,7 @@ function Icon({ name, size = 20 }: { name: string; size?: number }) {
     folder: (
       <path d="M3 7V5a2 2 0 0 1 2-2h5l3 4h6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
     ),
+    search: <><circle cx="10" cy="10" r="6" /><path d="m15 15 6 6" /></>,
     arrow: <path d="M4 12h16m-6-6 6 6-6 6" />,
     check: <path d="m5 12 4 4L19 6" />,
     clock: (
@@ -134,13 +140,19 @@ export default function Portal() {
   const [storageError, setStorageError] = useState(false);
   const [loadError, setLoadError] = useState(false);
   const [route, setRoute] = useState("today");
+  const routePath = route.split("?")[0];
   const [notice, setNotice] = useState("");
   const [pdfs, setPdfs] = useState<Record<string, string>>({});
+  const [pdfPageOffsets, setPdfPageOffsets] = useState<Record<string, number>>({});
+  const [pdfStore] = useState(() => createLocalPdfStore(sources));
+  const [pdfResults, setPdfResults] = useState<LocalPdfResult[]>([]);
+  const [pdfStatus, setPdfStatus] = useState<Pair | null>(null);
+  const [checkingPdfs, setCheckingPdfs] = useState(false);
   const [today, setToday] = useState(dayKey);
   const heading = useRef<HTMLElement>(null);
   const toolsMenu = useRef<HTMLDetailsElement>(null);
   const current = useRef(p);
-  const pdfRefs = useRef<Record<string, string>>({});
+  const pdfOperation = useRef(0);
   const t: Translate = (en, it) => (p.language === "en" ? en : it);
   const text = (x: Pair) => x[p.language];
   // Browser storage is hydrated after SSR; rendering a loading state prevents overwriting saved work.
@@ -183,9 +195,10 @@ export default function Portal() {
       clearInterval(clock);
       window.removeEventListener("hashchange", routeChange);
       window.removeEventListener("storage", sync);
-      Object.values(pdfRefs.current).forEach(URL.revokeObjectURL);
+      pdfOperation.current += 1;
+      pdfStore.clear();
     };
-  }, []);
+  }, [pdfStore]);
   useEffect(() => {
     document.documentElement.lang = p.language;
     document.title =
@@ -194,11 +207,13 @@ export default function Portal() {
         : "Parliamo — A little Italian, every day";
   }, [p.language]);
   useEffect(() => {
-    heading.current?.focus({ preventScroll: true });
-    window.scrollTo({ top: 0 });
+    if (!["grammar", "companion", "discover", "chapters", "reviews"].includes(routePath.split("/")[0])) {
+      heading.current?.focus({ preventScroll: true });
+      window.scrollTo({ top: 0 });
+    }
     if (toolsMenu.current) toolsMenu.current.open = false;
     window.speechSynthesis?.cancel();
-  }, [route]);
+  }, [route, routePath]);
   function save(update: (state: Progress) => Progress) {
     if (loadError) return;
     let base = current.current;
@@ -222,21 +237,23 @@ export default function Portal() {
     }
   }
   const go = (target: string) => {
-    if (target === route) {
+    if (target === initialRoute()) {
       heading.current?.focus();
       return;
     }
     window.location.hash = target;
   };
   const due = dueReviews(p, today);
+  const reviewQueue = selectReviewQueue(p, planningReviewCatalogue, today, 5);
   const next = nextMission(p, missions);
   const completed = Object.keys(p.completed).length;
   const minutes = dailyMinutes(p, today);
-  const selected = missions.find((m) => m.id === route.split("/")[1]);
+  const selected = missions.find((m) => m.id === routePath.split("/")[1]);
   const nav = [
     ["today", "sun", t("Today", "Oggi")],
     ["programmes", "calendar", t("Programme", "Percorso")],
     ["grammar", "book", t("Practice", "Pratica")],
+    ["discover", "search", t("Find", "Cerca")],
     ["progress", "chart", t("Progress", "Progressi")],
   ];
   function exportProgress() {
@@ -255,23 +272,33 @@ export default function Portal() {
     );
   }
   async function attachPdfs(files: FileList | null) {
-    if (!files) return;
-    const next = { ...pdfRefs.current };
-    for (const f of Array.from(files)) {
-      if (!f.name.toLowerCase().endsWith(".pdf")) continue;
-      if (next[f.name]) URL.revokeObjectURL(next[f.name]);
-      next[f.name] = URL.createObjectURL(f);
+    if (!files?.length) return;
+    const selectedFiles = Array.from(files);
+    const operation = ++pdfOperation.current;
+    setCheckingPdfs(true);
+    setPdfResults([]);
+    setPdfStatus(null);
+    const results: LocalPdfResult[] = [];
+    for (const file of selectedFiles) {
+      const result = await pdfStore.connect(file);
+      if (operation !== pdfOperation.current || result.status === "cancelled") return;
+      results.push(result);
+      setPdfs(pdfStore.snapshot());
+      setPdfPageOffsets(pdfStore.offsets());
     }
-    pdfRefs.current = next;
-    setPdfs(next);
-    setNotice(
-      t(
-        "PDFs connected for this session. They stay on your device.",
-        "PDF collegati per questa sessione. Restano sul tuo dispositivo.",
-      ),
-    );
+    setPdfResults(results);
+    setCheckingPdfs(false);
   }
-  const shared = { p, t, text, save, go, today };
+  function disconnectPdf(sourceId: string) {
+    pdfOperation.current += 1;
+    pdfStore.disconnect(sourceId);
+    setPdfs(pdfStore.snapshot());
+    setPdfPageOffsets(pdfStore.offsets());
+    setPdfResults([]);
+    setCheckingPdfs(false);
+    setPdfStatus({ en: "PDF disconnected for this tab.", it: "PDF scollegato per questa scheda." });
+  }
+  const shared = { p, t, text, save, go, today, pdfs, pdfPageOffsets };
   if (!ready)
     return (
       <div className="daily-app">
@@ -314,7 +341,7 @@ export default function Portal() {
             <button
               key={id}
               onClick={() => go(id)}
-              aria-current={(route === id || (id === "grammar" && ["grammar", "games", "vocabulary", "words", "tense", "readiness"].includes(route.split("/")[0]))) ? "page" : undefined}
+                aria-current={(routePath === id || (id === "programmes" && routePath.split("/")[0] === "chapters") || (id === "grammar" && ["grammar", "games", "vocabulary", "words", "tense", "readiness", "reviews"].includes(routePath.split("/")[0]))) ? "page" : undefined}
             >
               <Icon name={icon} />
               <span>{label}</span>
@@ -392,6 +419,8 @@ export default function Portal() {
             aria-label={t("Study tools", "Strumenti di studio")}
           >
             {[
+              ["chapters", t("Book chapters", "Capitoli dei libri")],
+              ["reviews", t("Review queue", "Ripasso del giorno")],
               ["games", t("Games", "Giochi")],
               ["grammar", t("Grammar lab", "Grammatica")],
               ["vocabulary", t("Vocabulary cards", "Carte lessico")],
@@ -405,7 +434,7 @@ export default function Portal() {
             ].map(([id, label]) => (
               <button
                 key={id}
-                aria-current={route.split("/")[0] === id ? "page" : undefined}
+                aria-current={routePath.split("/")[0] === id ? "page" : undefined}
                 onClick={() => go(id)}
               >
                 {label}
@@ -413,7 +442,12 @@ export default function Portal() {
             ))}
           </nav>
         </details>
-        {route === "today" && (
+        <LearningRouteBoundary key={routePath} t={t}>
+        <Suspense fallback={<section className="workspace" role="status" aria-live="polite"><p>{t("Opening your practice…", "Apertura della pratica…")}</p></section>}>
+        {routePath === "discover" && <DiscoveryView key={route} {...shared} />}
+        {(routePath === "chapters" || routePath.startsWith("chapters/")) && <ChapterDashboard key={route} {...shared} chapterId={routePath.split("/")[1]} />}
+        {routePath === "reviews" && <ReviewHub key={route} {...shared} />}
+        {routePath === "today" && (
           <div className="workspace today-workspace">
             <div className="today-intro">
               <p className="eyebrow">
@@ -431,6 +465,8 @@ export default function Portal() {
               </p>
             )}
             <SessionPreview {...shared} missions={missions} />
+            {reviewQueue.totalDue > 0 && <p className="today-review-link"><button className="text-button" onClick={() => go("reviews?minutes=5")}>{t(`${reviewQueue.totalDue} reviews ready · choose a short optional session`, `${reviewQueue.totalDue} ripassi pronti · scegli una breve sessione facoltativa`)} →</button></p>}
+            <p className="today-chapter-link"><button className="text-button" onClick={() => go("chapters")}>{t("Explore the twenty book chapters", "Esplora i venti capitoli dei libri")} →</button></p>
             <details className="today-disclosure">
               <summary>{t("Today’s checklist", "Le attività di oggi")}</summary>
               <DailyItinerary {...shared} />
@@ -439,6 +475,7 @@ export default function Portal() {
               <summary>{t("Optional practice · games, reviews & short lessons", "Pratica facoltativa · giochi, ripassi e brevi lezioni")}</summary>
               <ArcadeEntry {...shared} />
               <div className="optional-practice-links">
+                <button className="button secondary" onClick={() => go("reviews")}>{t("Review across my practice", "Ripassa tutte le attività")} →</button>
                 <button className="button secondary" disabled={!due.length} onClick={() => go(`review/${due[0]}`)}>
                   {due.length ? t(`Review ${due.length} due lessons`, `Ripassa ${due.length} lezioni`) : t("No lesson reviews due", "Nessun ripasso in scadenza")}
                 </button>
@@ -458,23 +495,23 @@ export default function Portal() {
             </details>
           </div>
         )}
-        {(route === "grammar" || route.startsWith("grammar/")) && (
-          <GrammarLab key={route} {...shared} unitId={route.split("/")[1]} />
+        {(routePath === "grammar" || routePath.startsWith("grammar/")) && (
+          <GrammarLab key={route} {...shared} unitId={routePath.split("/")[1]} />
         )}
-        {route === "programmes" && <ProgrammeView {...shared} />}
-        {(route === "companion" || route.startsWith("companion/")) && (
-          <CompanionView key={route} {...shared} pageId={route.split("/")[1]} />
+        {routePath === "programmes" && <ProgrammeView {...shared} />}
+        {(routePath === "companion" || routePath.startsWith("companion/")) && (
+          <CompanionView key={route} {...shared} pageId={routePath.split("/")[1]} />
         )}
-        {route === "readiness" && (
+        {routePath === "readiness" && (
           <AssessmentView key="readiness" {...shared} />
         )}
-        {route === "tense" && (
+        {routePath === "tense" && (
           <AssessmentView key="tense" {...shared} mode="tense" />
         )}
-        {route === "words" && <PersonalWords {...shared} />}
-        {route === "games" && <PracticeArcade {...shared} />}
-        {route === "path" && <PathView {...shared} />}
-        {route === "session" && (
+        {routePath === "words" && <PersonalWords key={route} {...shared} />}
+        {(routePath === "games" || routePath.startsWith("games/")) && <PracticeArcade key={route} {...shared} sceneId={routePath.split("/")[1]} />}
+        {routePath === "path" && <PathView {...shared} />}
+        {routePath === "session" && (
           <DailySession
             key={today}
             {...shared}
@@ -482,11 +519,11 @@ export default function Portal() {
             Audio={Listen}
           />
         )}
-        {route === "vocabulary" && (
-          <VocabularyView {...shared} Audio={Listen} />
+        {(routePath === "vocabulary" || routePath.startsWith("vocabulary/")) && (
+          <VocabularyView key={route} {...shared} Audio={Listen} bankId={routePath.split("/")[1]} />
         )}
-        {route === "plan" && <PlanView {...shared} />}
-        {route === "progress" && (
+        {routePath === "plan" && <PlanView {...shared} />}
+        {routePath === "progress" && (
           <ProgressView
             {...shared}
             exportProgress={exportProgress}
@@ -505,17 +542,20 @@ export default function Portal() {
             }}
           />
         )}
-        {route === "materials" && (
-          <Materials {...shared} pdfs={pdfs} attachPdfs={attachPdfs} />
+        {routePath === "materials" && (
+          <Materials {...shared} attachPdfs={attachPdfs} disconnectPdf={disconnectPdf} pdfResults={pdfResults} pdfStatus={pdfStatus} checkingPdfs={checkingPdfs} />
         )}
-        {route.startsWith("lesson/") && selected && (
-          <LessonView key={selected.id} {...shared} m={selected} pdfs={pdfs} />
+        {routePath.startsWith("lesson/") && selected && (
+          <LessonView key={selected.id} {...shared} m={selected} />
         )}
-        {route.startsWith("review/") && selected && (
+        {routePath.startsWith("review/") && selected && (
           <ReviewView key={selected.id} {...shared} m={selected} />
         )}
         {![
           "today",
+          "discover",
+          "chapters",
+          "reviews",
           "session",
           "vocabulary",
           "path",
@@ -529,13 +569,16 @@ export default function Portal() {
           "tense",
           "words",
           "games",
-        ].includes(route) &&
+        ].includes(routePath) &&
           !(
-            (route.startsWith("lesson/") || route.startsWith("review/")) &&
+            (routePath.startsWith("lesson/") || routePath.startsWith("review/")) &&
             selected
           ) &&
-          !route.startsWith("grammar/") &&
-          !route.startsWith("companion/") && (
+          !routePath.startsWith("grammar/") &&
+          !routePath.startsWith("companion/") &&
+          !routePath.startsWith("vocabulary/") &&
+          !routePath.startsWith("games/") &&
+          !routePath.startsWith("chapters/") && (
             <div className="workspace">
               <h1>
                 {t("Let’s find your next step", "Troviamo il prossimo passo")}
@@ -545,6 +588,8 @@ export default function Portal() {
               </button>
             </div>
           )}
+        </Suspense>
+        </LearningRouteBoundary>
       </main>
       <div className="notice" role="status">
         {notice}
@@ -783,8 +828,8 @@ function PlanView(props: Shared) {
         </h2>
         <p>
           {t(
-            "Try the 14-study-day intensive A1 review, the 28-day supported route, or the 10-day grammar repair programme. Study days wait for you; missed days do not erase progress.",
-            "Prova il ripasso A1 intensivo di 14 giorni di studio, il percorso guidato di 28 giorni o il programma di ripasso grammaticale di 10 giorni. I giorni di studio ti aspettano; un’assenza non cancella i progressi.",
+            "Choose the 14-study-day A1 review, the 28-day supported route, the 10-day grammar repair course or the 80-study-day journey through both books. Study days wait for you; missed days do not erase progress.",
+            "Scegli il ripasso A1 di 14 giorni di studio, il percorso guidato di 28 giorni, il ripasso grammaticale di 10 giorni o il percorso di 80 giorni attraverso entrambi i libri. I giorni di studio ti aspettano; un’assenza non cancella i progressi.",
           )}
         </p>
         <button className="button primary" onClick={() => go("programmes")}>
@@ -1031,10 +1076,12 @@ function SourceNote({
   m,
   t,
   pdfs,
+  pdfPageOffsets = {},
 }: {
   m: Mission;
   t: Translate;
   pdfs: Record<string, string>;
+  pdfPageOffsets?: Record<string, number>;
 }) {
   return (
     <details className="source-note">
@@ -1063,16 +1110,17 @@ function SourceNote({
                 : t("PDF pages", "Pagine PDF")}
               : {ref.pages.join(", ")}
             </p>
-            {pdfs[s.title] && (
+            {pdfs[s.id] && (
               <a
                 className="text-button"
-                href={`${pdfs[s.title]}#page=${ref.pages[0]}`}
+                href={localPdfPageHref(pdfs[s.id], ref.pages[0], pdfPageOffsets[s.id])}
                 target="_blank"
                 rel="noreferrer"
               >
                 {t("Open connected PDF", "Apri il PDF collegato")} ↗
               </a>
             )}
+            {pdfs[s.id] && pdfPageOffsets[s.id] > 0 && <p className="hint">{t("Pages in your connected export", "Pagine nell’esportazione collegata")}: {ref.pages.map((page) => page + pdfPageOffsets[s.id]).join(", ")}</p>}
           </div>
         );
       })}
@@ -1140,7 +1188,8 @@ function LessonView({
   go,
   today,
   pdfs,
-}: Shared & { m: Mission; pdfs: Record<string, string> }) {
+  pdfPageOffsets = {},
+}: Shared & { m: Mission; pdfs: Record<string, string>; pdfPageOffsets?: Record<string, number> }) {
   const d = p.drafts[m.id] || emptyDraft();
   const [feedback, setFeedback] = useState<string | null>(null);
   const [confidence, setConfidence] = useState(2);
@@ -1252,7 +1301,7 @@ function LessonView({
             )}
           </button>
         </div>
-        <SourceNote m={m} t={t} pdfs={pdfs} />
+        <SourceNote m={m} t={t} pdfs={pdfs} pdfPageOffsets={pdfPageOffsets} />
       </div>
     );
   return (
@@ -1587,7 +1636,7 @@ function LessonView({
           </>
         )}
       </article>
-      <SourceNote m={m} t={t} pdfs={pdfs} />
+      <SourceNote m={m} t={t} pdfs={pdfs} pdfPageOffsets={pdfPageOffsets} />
     </div>
   );
 }
@@ -2139,10 +2188,20 @@ function Materials({
   text,
   go,
   pdfs,
+  pdfPageOffsets = {},
   attachPdfs,
+  disconnectPdf,
+  pdfResults,
+  pdfStatus,
+  checkingPdfs,
 }: Shared & {
   pdfs: Record<string, string>;
+  pdfPageOffsets?: Record<string, number>;
   attachPdfs: (files: FileList | null) => void;
+  disconnectPdf: (sourceId: string) => void;
+  pdfResults: LocalPdfResult[];
+  pdfStatus: Pair | null;
+  checkingPdfs: boolean;
 }) {
   const [filter, setFilter] = useState(1);
   return (
@@ -2185,8 +2244,8 @@ function Materials({
           <h2>{t("Bring your own PDF alongside", "Affianca il tuo PDF")}</h2>
           <p>
             {t(
-              "Connect your local PDFs to open them at the cited page. They are never uploaded, and the connection lasts until you reload this page.",
-              "Collega i PDF locali per aprirli alla pagina citata. Non vengono caricati online e il collegamento dura fino a quando ricarichi questa pagina.",
+              "Connect your source PDF or a recognized combined book export, even if you renamed it. Chapter links open at the right page in that file. Files stay on your device; connections last until you disconnect or reload.",
+              "Collega il PDF della fonte o un’esportazione combinata riconosciuta, anche se l’hai rinominata. I collegamenti dei capitoli aprono la pagina corretta nel file. I file restano sul tuo dispositivo; i collegamenti durano fino allo scollegamento o alla ricarica.",
             )}
           </p>
         </div>
@@ -2196,10 +2255,49 @@ function Materials({
             type="file"
             accept="application/pdf,.pdf"
             multiple
-            onChange={(e) => attachPdfs(e.target.files)}
+            disabled={checkingPdfs}
+            onChange={(e) => {
+              void attachPdfs(e.target.files);
+              e.target.value = "";
+            }}
           />
         </label>
       </div>
+      {pdfResults.filter((result) => (result.sourceIds?.length ?? 0) > 1).map((result) => <p className="hint" key={result.name}>{result.name}: {t(`${result.sourceIds!.length} source references connected. Page links adjust automatically.`, `${result.sourceIds!.length} fonti collegate. I collegamenti alle pagine si adattano automaticamente.`)}</p>)}
+      <div role="status" aria-live="polite">
+        {checkingPdfs
+          ? t("Checking selected PDFs…", "Controllo dei PDF selezionati…")
+          : pdfStatus
+            ? text(pdfStatus)
+            : pdfResults.length > 0
+              ? t(
+                  `${pdfResults.filter((result) => result.status === "matched").length} matched · ${pdfResults.filter((result) => result.status === "unmatched").length} unmatched · ${pdfResults.filter((result) => result.status === "error").length} unreadable`,
+                  `${pdfResults.filter((result) => result.status === "matched").length} riconosciuti · ${pdfResults.filter((result) => result.status === "unmatched").length} non riconosciuti · ${pdfResults.filter((result) => result.status === "error").length} illeggibili`,
+                )
+              : null}
+      </div>
+      {pdfResults.filter((result) => result.status === "unmatched" || result.status === "error").map((result, index) => (
+        <p className="hint" key={`${result.name}:${index}`} style={{ overflowWrap: "anywhere" }}>
+          {result.name}: {result.status === "unmatched"
+            ? t("No source match. Select the exact source PDF.", "Nessuna fonte corrispondente. Seleziona il PDF esatto della fonte.")
+            : t("Could not read this file. Try selecting it again.", "Impossibile leggere il file. Prova a selezionarlo di nuovo.")}
+        </p>
+      ))}
+      {Object.keys(pdfs).length > 0 && (
+        <section aria-label={t("Connected PDFs", "PDF collegati")}>
+          <h3>{t("Connected in this tab", "Collegati in questa scheda")}</h3>
+          <ul>
+            {sources.filter((source) => pdfs[source.id]).map((source) => (
+              <li key={source.id} style={{ overflowWrap: "anywhere" }}>
+                <a href={localPdfPageHref(pdfs[source.id], 1, pdfPageOffsets[source.id])} target="_blank" rel="noreferrer">{source.title}</a>{" · "}
+                <button className="text-button" onClick={() => disconnectPdf(source.id)} aria-label={t(`Disconnect ${source.title}`, `Scollega ${source.title}`)}>
+                  {t("Disconnect", "Scollega")}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
       <div className="source-context">
         <div>
           <h3>{t("The edition matters", "L’edizione conta")}</h3>
@@ -2266,10 +2364,10 @@ function Materials({
                     ? t("slides", "diapositive")
                     : t("PDF pages", "pagine PDF")}
                 </p>
-                {pdfs[s.title] && (
+                {pdfs[s.id] && (
                   <a
                     className="text-button"
-                    href={pdfs[s.title]}
+                    href={localPdfPageHref(pdfs[s.id], 1, pdfPageOffsets[s.id])}
                     target="_blank"
                     rel="noreferrer"
                   >

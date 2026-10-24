@@ -134,6 +134,7 @@ export type SessionActivity =
   | "core";
 export type StudySession = {
   missionId: string;
+  bankId?: string;
   duration?: number;
   done: SessionActivity[];
   warmup: string;
@@ -141,10 +142,18 @@ export type StudySession = {
   inputAnswer: string;
   speaking: string;
   exit: string;
+  gistAnswer?: string;
+  retell?: string;
+  retellChecks?: boolean[];
 };
 export type VocabularyBank = {
   id: string;
   title: Pair;
+  level?: "A1" | "A2";
+  missionId?: string;
+  bookId?: string;
+  chapter?: number;
+  sourceRefs?: { id: string; pages: number[] }[];
   // Existing values retain their original arcade IDs; never renumber on reorder.
   words: { id: string; term: Pair; example: Pair }[];
 };
@@ -157,6 +166,10 @@ export type Enrichment = {
   frame: Pair;
   speaking: Pair;
   resource: string;
+  skills?: {
+    gist: Check;
+    retell: { prompt: Pair; frame: Pair; model: Pair; rubric: Pair[] };
+  };
 };
 export type OnlineResource = {
   id: string;
@@ -181,7 +194,7 @@ export type GrammarExercise = {
 export type GrammarUnit = {
   id: string;
   title: Pair;
-  level: "A1" | "A1-plus";
+  level: "A1" | "A1-plus" | "A2";
   summary: Pair;
   prerequisites: string[];
   missionIds: string[];
@@ -201,6 +214,7 @@ export type Programme = {
     unitIds: string[];
     missionIds: string[];
     outcome: Pair;
+    practice?: { prompt: Pair; model: Pair; rubric: Pair[] };
   }[];
 };
 export type PageCompanion = {
@@ -226,6 +240,7 @@ export type GrammarDraft = {
   attempts: Record<string, GrammarAttempt[]>;
   hints: string[];
   hintDates?: Record<string, string>;
+  recallDrafts?: Record<string, { date: string; answer: string; hintUsed: boolean }>;
   output: string;
   rubric: number[];
   modelSeen: boolean;
@@ -252,6 +267,12 @@ export type WordMemory = {
   due: string;
   lastDate: string;
 };
+export type ProgrammePracticeDraft = {
+  output: string;
+  rubric: number[];
+  modelSeen: boolean;
+  completed?: string;
+};
 export type AcademyProgress = {
   grammar: Record<string, GrammarDraft>;
   companion: Record<string, CompanionDraft>;
@@ -260,6 +281,7 @@ export type AcademyProgress = {
     started: string;
     day: number;
     completed: Record<string, string>;
+    practice?: Record<string, ProgrammePracticeDraft>;
   } | null;
   assessments: Record<string, ReadinessRun>;
   words: Record<string, WordMemory>;

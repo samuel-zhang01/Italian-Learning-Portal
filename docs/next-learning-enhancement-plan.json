@@ -1,0 +1,56 @@
+{
+  "createdAt": "2026-10-24T21:06:25.568760+00:00",
+  "scope": "Local continuation of the completed website enrichment: quicker Today loading, twenty-chapter navigation and evidence-based scheduled review.",
+  "status": "complete locally",
+  "goals": [
+    {
+      "id": "reduce-initial-loading",
+      "status": "complete",
+      "acceptance": [
+        "Cold Today JavaScript materially smaller than measured baseline.",
+        "Full exercise/companion catalogues load on relevant route entry.",
+        "Compact plans exactly match full-catalogue plans.",
+        "Failed route loading offers recovery without losing saved work."
+      ]
+    },
+    {
+      "id": "twenty-chapter-dashboard",
+      "status": "complete",
+      "acceptance": [
+        "All twenty chapters link existing core, vocabulary, grammar and four route checkpoints.",
+        "Prerequisite-aware next step preserves selected programme and day.",
+        "Recorded completions remain distinct from self-reported vocabulary and optional practice.",
+        "Local PDFs open at exact physical pages, including combined-file offsets."
+      ]
+    },
+    {
+      "id": "unified-scheduled-review",
+      "status": "complete",
+      "acceptance": [
+        "Read-only queue covers known due lessons, grammar, words and arcade records.",
+        "Latest dated evidence resolves exact duplicates; today’s completed items stay out.",
+        "Estimated two-, five- and ten-minute choices respect their caps.",
+        "Exact-target routes preserve first attempts, unfinished work, schedules and scoring."
+      ]
+    },
+    {
+      "id": "acceptance-and-privacy",
+      "status": "complete",
+      "acceptance": [
+        "Daily tests, typecheck, lint and static build pass.",
+        "EN/IT desktop and phone journeys pass with synthetic progress.",
+        "Private exports remain ignored and absent from site-dist.",
+        "No real learner progress or shared browser session accessed."
+      ]
+    }
+  ],
+  "publication": "Local build only; no release made.",
+  "evidence": [
+    "docs/loading-review.json",
+    "docs/chapter-dashboard-review.json",
+    "docs/review-queue-review.json"
+  ],
+  "previousCompletedPhase": "docs/website-enrichment-plan.json",
+  "completedAt": "2026-10-24T21:15:14.787852+00:00",
+  "review": "docs/next-learning-enhancement-review.json"
+}

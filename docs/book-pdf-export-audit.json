@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-24T18:53:38.864887+00:00",
+  "status": "verified-private-exports-with-documented-source-gaps",
+  "scope": "Safe aggregate evidence for private PDF exports; source text, account/session data and learner records are excluded.",
+  "published": false,
+  "evidenceManifests": [
+    {
+      "path": "materials/books/exports/export-manifest.json",
+      "bytes": 919020,
+      "sha256": "ced0176e51336a6b1ba985de85627bc018d99ee6ef155c3c7f34cdcf1639fb7b"
+    },
+    {
+      "path": "materials/books/exports/interactive-print-manifest.json",
+      "bytes": 266628,
+      "sha256": "8572815a6cd851de1a99f62e67220b2105f74d1253699f3b5a55b6b08a557cd2"
+    },
+    {
+      "path": "materials/books/exports/export-kit-manifest.json",
+      "bytes": 347,
+      "sha256": "77d3563b5e8bc044def8e4dc0b2f80ac90dba32042428add3b435e6094e9daec"
+    }
+  ],
+  "books": [
+    {
+      "bookId": "nuovo-espresso-plus-1",
+      "publisherStudentPages": 240,
+      "accessibleStudentPages": 240,
+      "canonicalSource": {
+        "path": "materials/books/nuovo-espresso-plus-1/originals/reader-native-pdf/nuovo-espresso-plus-1-complete-book.pdf",
+        "bytes": 38526585,
+        "sha256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf",
+        "pages": 240
+      },
+      "studentCopyByteExact": true,
+      "exports": {
+        "student": {
+          "path": "materials/books/exports/nuovo-espresso-plus-1-student-book.pdf",
+          "bytes": 38526585,
+          "sha256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf",
+          "pages": 240
+        },
+        "reference": {
+          "path": "materials/books/exports/nuovo-espresso-plus-1-reference-pack.pdf",
+          "bytes": 50427380,
+          "sha256": "41941eb71a7489396a0d982d1276446a914b6e75a3ecc0b83781d60fdb9842fb",
+          "pages": 416,
+          "bookmarks": 41
+        },
+        "captions": {
+          "path": "materials/books/exports/nuovo-espresso-plus-1-source-captions.pdf",
+          "bytes": 776685,
+          "sha256": "55d21224dbe8105c093db602fa63d65c6cec8ab5872b250372115fcff3a096b8",
+          "pages": 47,
+          "bookmarks": 40
+        },
+        "transcripts": {
+          "path": "materials/books/exports/nuovo-espresso-plus-1-supplied-transcripts.pdf",
+          "bytes": 9168378,
+          "sha256": "8a71997a686ee30fa32f59a3ff760356e83b32b9838c1d45aa01cc29a5278e77",
+          "pages": 150,
+          "bookmarks": 142
+        },
+        "interactive": {
+          "path": "materials/books/exports/nuovo-espresso-plus-1-interactive-activities.pdf",
+          "bytes": 102127095,
+          "sha256": "83ed269a36cc982083785bfeef2526400c074f10f1c7fdae38dc50b9b0060598",
+          "pages": 1164
+        },
+        "complete": {
+          "path": "materials/books/exports/nuovo-espresso-plus-1-complete-study-pack.pdf",
+          "bytes": 161711324,
+          "sha256": "87e70e5d47571116ef30d205570000f6783ddfa339d20f6e4937e808aa273df6",
+          "pages": 1730,
+          "bookmarks": 428
+        }
+      },
+      "referenceComposition": {
+        "studentPages": 240,
+        "videoWorksheetPages": 20,
+        "solutionPages": 39,
+        "guidePages": 117
+      },
+      "transcriptComposition": {
+        "sourcePDFs": 100,
+        "sourcePDFPages": 103,
+        "sourceCaptionFiles": 40,
+        "captionPDFPages": 47,
+        "formatCounts": {
+          "webvtt": 39,
+          "supplied-plain-transcript": 1
+        },
+        "warningCounts": {
+          "untimed-source-block": 1,
+          "noncanonical-timestamp-width": 2,
+          "missing-webvtt-header": 1
+        },
+        "recoveredUntimedBlocks": 21,
+        "noncanonicalTimingCues": 2
+      },
+      "interactive": {
+        "observedActivities": 207,
+        "capturedStudyPages": 444,
+        "printedPhysicalPages": 1164
+      },
+      "gaps": {
+        "unavailableObservedMedia": 23,
+        "publisherExtentDiscrepancy": 0
+      }
+    },
+    {
+      "bookId": "nuovo-espresso-plus-2",
+      "publisherStudentPages": 264,
+      "accessibleStudentPages": 263,
+      "canonicalSource": {
+        "path": "materials/books/nuovo-espresso-plus-2/originals/reader-native-pdf/nuovo-espresso-plus-2-accessible-reader-book-263-pages.pdf",
+        "bytes": 40552770,
+        "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4",
+        "pages": 263
+      },
+      "studentCopyByteExact": true,
+      "exports": {
+        "student": {
+          "path": "materials/books/exports/nuovo-espresso-plus-2-student-book.pdf",
+          "bytes": 40552770,
+          "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4",
+          "pages": 263
+        },
+        "reference": {
+          "path": "materials/books/exports/nuovo-espresso-plus-2-reference-pack.pdf",
+          "bytes": 59690383,
+          "sha256": "26cb77682d8b2ffa49f3f401353336601a28fc2fafe6d08cd91ef246fc6b8993",
+          "pages": 535,
+          "bookmarks": 41
+        },
+        "captions": {
+          "path": "materials/books/exports/nuovo-espresso-plus-2-source-captions.pdf",
+          "bytes": 843074,
+          "sha256": "26156a9610e5cd8743a2f5f27f358dc19edd83aeb1afc601c34391fb2c01ada3",
+          "pages": 52,
+          "bookmarks": 40
+        },
+        "transcripts": {
+          "path": "materials/books/exports/nuovo-espresso-plus-2-supplied-transcripts.pdf",
+          "bytes": 4430490,
+          "sha256": "0649b5e9870e9a301df4dbaeaa6756454f69051ea09e71a90822071f5506a370",
+          "pages": 353,
+          "bookmarks": 127
+        },
+        "interactive": {
+          "path": "materials/books/exports/nuovo-espresso-plus-2-interactive-activities.pdf",
+          "bytes": 260392327,
+          "sha256": "76eefba69f4439f549d77db032ffe0b3b385fd542985a125e1db6b2da679aab6",
+          "pages": 1144
+        },
+        "complete": {
+          "path": "materials/books/exports/nuovo-espresso-plus-2-complete-study-pack.pdf",
+          "bytes": 324506938,
+          "sha256": "fd61b6cbf5d2a9c34026d691cb9b1757b130e638f068ccf012a16a8a3add89ce",
+          "pages": 2032,
+          "bookmarks": 418
+        }
+      },
+      "referenceComposition": {
+        "studentPages": 263,
+        "videoWorksheetPages": 20,
+        "solutionPages": 86,
+        "guidePages": 166
+      },
+      "transcriptComposition": {
+        "sourcePDFs": 85,
+        "sourcePDFPages": 301,
+        "sourceCaptionFiles": 40,
+        "captionPDFPages": 52,
+        "formatCounts": {
+          "webvtt": 40
+        },
+        "warningCounts": {
+          "untimed-source-block": 1,
+          "reversed-source-timing": 1
+        },
+        "recoveredUntimedBlocks": 2,
+        "noncanonicalTimingCues": 0
+      },
+      "interactive": {
+        "observedActivities": 213,
+        "capturedStudyPages": 429,
+        "printedPhysicalPages": 1144
+      },
+      "gaps": {
+        "unavailableObservedMedia": 0,
+        "publisherExtentDiscrepancy": 1
+      }
+    }
+  ],
+  "combinedStudent": {
+    "path": "materials/books/exports/combined-student-books.pdf",
+    "bytes": 79076920,
+    "sha256": "ed2bb6813cd7569a2efabd4dd3f959203a433d7c3fa0943a8004cf2e7527ad84",
+    "pages": 503,
+    "bookmarks": 54,
+    "offsets": [
+      {
+        "startPage": 1,
+        "endPage": 240,
+        "pages": 240,
+        "sourceSHA256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf"
+      },
+      {
+        "startPage": 241,
+        "endPage": 503,
+        "pages": 263,
+        "sourceSHA256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4"
+      }
+    ],
+    "recommendedEverydayReading": true
+  },
+  "combinedComplete": {
+    "path": "materials/books/exports/combined-complete-study-pack.pdf",
+    "bytes": 486218850,
+    "sha256": "ff0c65682efdce87392928c0733039a4997635a905b531c0274079846af8ffc8",
+    "pages": 3762,
+    "bookmarks": 848,
+    "offsets": [
+      {
+        "startPage": 1,
+        "endPage": 1730,
+        "pages": 1730,
+        "sourceSHA256": "87e70e5d47571116ef30d205570000f6783ddfa339d20f6e4937e808aa273df6"
+      },
+      {
+        "startPage": 1731,
+        "endPage": 3762,
+        "pages": 2032,
+        "sourceSHA256": "fd61b6cbf5d2a9c34026d691cb9b1757b130e638f068ccf012a16a8a3add89ce"
+      }
+    ]
+  },
+  "exportKit": {
+    "path": "materials/books/exports/italian-study-pdf-export-kit.zip",
+    "bytes": 1620002465,
+    "sha256": "811dcd2405b5cf202e2a8ebf60ac18de435699d4d9217cf7f5fc20a82d4a2bc6",
+    "entries": 178,
+    "optional": true,
+    "excludes": [
+      "_print-cache",
+      "audio/video binaries",
+      "browser/session data"
+    ]
+  },
+  "totals": {
+    "studentBookPages": 503,
+    "observedActivities": 420,
+    "capturedStudyPages": 873,
+    "printedInteractivePhysicalPages": 2308,
+    "pdfExports": 14,
+    "exportManifestArtifacts": 172,
+    "originalCaptionCopies": 80,
+    "derivedCaptionTextCopies": 80,
+    "sourceTranscriptPDFs": 185,
+    "sourceTranscriptPDFPhysicalPages": 404,
+    "unavailableObservedMedia": 23
+  },
+  "verification": {
+    "recordedInputFiles": 355,
+    "recordedOutputArtifacts": 172,
+    "indexFiles": 2,
+    "uniqueFilesChecksumAndSizeVerified": 527,
+    "canonicalSourcePDFsUnchanged": true,
+    "individualStudentCopiesByteExact": true,
+    "pdfPageCountsVerified": 14,
+    "pdfActiveActionsAndEmbeddedFilesAudit": "passed",
+    "boundaryPixelMatches": [
+      {
+        "bookId": "nuovo-espresso-plus-1",
+        "sourcePage": 1,
+        "combinedPage": 1,
+        "renderScale": 1,
+        "pixelIdentical": true
+      },
+      {
+        "bookId": "nuovo-espresso-plus-1",
+        "sourcePage": 240,
+        "combinedPage": 240,
+        "renderScale": 1,
+        "pixelIdentical": true
+      },
+      {
+        "bookId": "nuovo-espresso-plus-2",
+        "sourcePage": 1,
+        "combinedPage": 241,
+        "renderScale": 1,
+        "pixelIdentical": true
+      },
+      {
+        "bookId": "nuovo-espresso-plus-2",
+        "sourcePage": 263,
+        "combinedPage": 503,
+        "renderScale": 1,
+        "pixelIdentical": true
+      }
+    ],
+    "syntheticTests": {
+      "command": "python3 -m unittest discover -s tests -p 'test_export_book_pdfs.py'",
+      "passed": 4,
+      "scope": [
+        "Page order and nested bookmarks without changing inputs",
+        "Byte-exact copy, mismatched checksum and symlink rejection",
+        "Active PDF action rejection",
+        "Unicode wrapping preserves nonspace characters"
+      ]
+    },
+    "pdfBundleCatalogue": "app/learning/pdf-bundles.json",
+    "bundleOffsetsUseZeroBasedPhysicalOffsets": true
+  },
+  "privateBoundary": {
+    "root": "materials/books/exports/",
+    "gitIgnored": true,
+    "sourcePDFsMutated": false,
+    "sourceRawTextIncludedInThisAudit": false,
+    "audioVideoEmbeddedInPDFs": false,
+    "audioVideoBinariesIncludedInZIP": false,
+    "browserSessionDataIncluded": false,
+    "learnerDataReadOrChanged": false,
+    "publicBuildRoot": "site-dist/"
+  },
+  "limitations": [
+    "Student, reference and complete packs overlap; their page counts must not be summed as distinct learning material.",
+    "Captured study pages are source activity panes; printed physical page counts depend on layout.",
+    "Plus 2 supplies 263 accessible student pages against a publisher extent of 264. The unknown page has not been inferred or padded.",
+    "Plus 1 retains 23 unavailable observed source media assets as explicit gaps; no replacement content is fabricated.",
+    "Original source captions retain untimed prose and malformed timing with explicit recovery warnings. No timestamps or spoken words have been invented.",
+    "Export/integrity checks do not establish pedagogical review of every source exercise or learner outcomes.",
+    "Website enrichment is in progress and tracked separately in docs/website-enrichment-plan.json."
+  ]
+}

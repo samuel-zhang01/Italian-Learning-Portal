@@ -117,6 +117,6 @@ test("word IDs preserve every deployed association after reorder and insertion",
       ],
     });
     for (const item of reordered.slice(1))
-      assert.equal(item.answers[0], legacyWordIds[item.id]);
+      assert.equal(item.answers[0], current.get(item.id));
   }
 });

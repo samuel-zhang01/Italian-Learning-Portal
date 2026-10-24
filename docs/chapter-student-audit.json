@@ -1,0 +1,494 @@
+{
+  "generator": "scripts/audit_chapter_browser.mjs",
+  "reviewedOn": "2026-10-24",
+  "status": "passed",
+  "preview": "http://127.0.0.1:5197",
+  "method": "Owned headless Chromium and fresh disposable browser context. Browser View extension is used only to locate Playwright; no shared CDP connection, profile or learner state is accessed.",
+  "sandboxException": "Existing explicit browser-view allowNoSandbox configuration honoured for this isolated root-host test.",
+  "workflowGroupsPassed": 10,
+  "checks": [
+    {
+      "label": "New A2 session displays the chapter bank and pins it on visible card practice"
+    },
+    {
+      "label": "A started version-one session without bankId keeps its old bank, recalled cards and pinned bank after update/reload"
+    },
+    {
+      "label": "Optional gist supports a wrong attempt, correction and persisted drafts over reload without credit"
+    },
+    {
+      "label": "Optional retell draft and criteria persist, edit resets both criteria, and no XP or minutes are added"
+    },
+    {
+      "label": "Chapter vocabulary deep link selects and focuses its bank, then returns to the same session"
+    },
+    {
+      "label": "Three A2 turns plus visible mistake repair complete the chapter extra; wrong-first/hint evidence survives reload without repeated XP"
+    },
+    {
+      "label": "Opening a chapter conversation intent preserves an unrelated active round, first answer, index and draft"
+    },
+    {
+      "label": "All seven budgets match planned/session duration via Today and direct entry, reload as valid backups, and preserve an older 15-minute session",
+      "browserCases": 15
+    },
+    {
+      "label": "EN/IT input, retelling, chapter vocabulary and A2 conversation fit 320, 390 and 1440 pixel viewports",
+      "layoutChecks": 24
+    },
+    {
+      "label": "Disposable contexts produced no runtime errors, external requests or network mutations"
+    }
+  ],
+  "measurements": [
+    {
+      "name": "chapter-input",
+      "language": "en",
+      "width": 320,
+      "viewport": 320,
+      "document": 320,
+      "title": "Tell what interrupted your plan",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-retell",
+      "language": "en",
+      "width": 320,
+      "viewport": 320,
+      "document": 320,
+      "title": "Tell what interrupted your plan",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-vocabulary",
+      "language": "en",
+      "width": 320,
+      "viewport": 320,
+      "document": 320,
+      "title": "Words you can use today.",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-conversation",
+      "language": "en",
+      "width": 320,
+      "viewport": 320,
+      "document": 320,
+      "title": "You were about to send the document, but the computer turned off before you sent it. Describe the imminent plan.",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-input",
+      "language": "it",
+      "width": 320,
+      "viewport": 320,
+      "document": 320,
+      "title": "Racconta che cosa ha interrotto il programma",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-retell",
+      "language": "it",
+      "width": 320,
+      "viewport": 320,
+      "document": 320,
+      "title": "Racconta che cosa ha interrotto il programma",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-vocabulary",
+      "language": "it",
+      "width": 320,
+      "viewport": 320,
+      "document": 320,
+      "title": "Parole da usare oggi.",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-conversation",
+      "language": "it",
+      "width": 320,
+      "viewport": 320,
+      "document": 320,
+      "title": "Stavi per inviare il documento, ma il computer si è spento prima dell’invio. Descrivi il progetto imminente.",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-input",
+      "language": "en",
+      "width": 390,
+      "viewport": 390,
+      "document": 390,
+      "title": "Choose a gift for someone else",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-retell",
+      "language": "en",
+      "width": 390,
+      "viewport": 390,
+      "document": 390,
+      "title": "Choose a gift for someone else",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-vocabulary",
+      "language": "en",
+      "width": 390,
+      "viewport": 390,
+      "document": 390,
+      "title": "Words you can use today.",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-conversation",
+      "language": "en",
+      "width": 390,
+      "viewport": 390,
+      "document": 390,
+      "title": "The scarf is for your brother. Choose the reply to «Che cosa gli regali?»",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-input",
+      "language": "it",
+      "width": 390,
+      "viewport": 390,
+      "document": 390,
+      "title": "Scegli un regalo per un’altra persona",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-retell",
+      "language": "it",
+      "width": 390,
+      "viewport": 390,
+      "document": 390,
+      "title": "Scegli un regalo per un’altra persona",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-vocabulary",
+      "language": "it",
+      "width": 390,
+      "viewport": 390,
+      "document": 390,
+      "title": "Parole da usare oggi.",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-conversation",
+      "language": "it",
+      "width": 390,
+      "viewport": 390,
+      "document": 390,
+      "title": "La sciarpa è per tuo fratello. Completa la risposta a «Che cosa gli regali?»",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-input",
+      "language": "en",
+      "width": 1440,
+      "viewport": 1440,
+      "document": 1440,
+      "title": "Discuss a home with reasons",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-retell",
+      "language": "en",
+      "width": 1440,
+      "viewport": 1440,
+      "document": 1440,
+      "title": "Discuss a home with reasons",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-vocabulary",
+      "language": "en",
+      "width": 1440,
+      "viewport": 1440,
+      "document": 1440,
+      "title": "Words you can use today.",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-conversation",
+      "language": "en",
+      "width": 1440,
+      "viewport": 1440,
+      "document": 1440,
+      "title": "Express an opinion about the kitchen using penso che and the introductory subjunctive form of essere.",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-input",
+      "language": "it",
+      "width": 1440,
+      "viewport": 1440,
+      "document": 1440,
+      "title": "Parla di una casa con delle ragioni",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-retell",
+      "language": "it",
+      "width": 1440,
+      "viewport": 1440,
+      "document": 1440,
+      "title": "Parla di una casa con delle ragioni",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-vocabulary",
+      "language": "it",
+      "width": 1440,
+      "viewport": 1440,
+      "document": 1440,
+      "title": "Parole da usare oggi.",
+      "overflowingControls": []
+    },
+    {
+      "name": "chapter-conversation",
+      "language": "it",
+      "width": 1440,
+      "viewport": 1440,
+      "document": 1440,
+      "title": "Esprimi un’opinione sulla cucina usando penso che e la forma introduttiva del congiuntivo di essere.",
+      "overflowingControls": []
+    }
+  ],
+  "durationChecks": [
+    {
+      "dailyBudget": 5,
+      "entry": "today",
+      "expected": 5,
+      "saved": 5,
+      "plannedMinutes": 5,
+      "reloadValid": true
+    },
+    {
+      "dailyBudget": 5,
+      "entry": "session",
+      "expected": 5,
+      "saved": 5,
+      "plannedMinutes": 5,
+      "reloadValid": true
+    },
+    {
+      "dailyBudget": 10,
+      "entry": "today",
+      "expected": 5,
+      "saved": 5,
+      "plannedMinutes": 10,
+      "reloadValid": true
+    },
+    {
+      "dailyBudget": 10,
+      "entry": "session",
+      "expected": 5,
+      "saved": 5,
+      "plannedMinutes": 10,
+      "reloadValid": true
+    },
+    {
+      "dailyBudget": 15,
+      "entry": "today",
+      "expected": 5,
+      "saved": 5,
+      "plannedMinutes": 15,
+      "reloadValid": true
+    },
+    {
+      "dailyBudget": 15,
+      "entry": "session",
+      "expected": 5,
+      "saved": 5,
+      "plannedMinutes": 15,
+      "reloadValid": true
+    },
+    {
+      "dailyBudget": 20,
+      "entry": "today",
+      "expected": 5,
+      "saved": 5,
+      "plannedMinutes": 20,
+      "reloadValid": true
+    },
+    {
+      "dailyBudget": 20,
+      "entry": "session",
+      "expected": 5,
+      "saved": 5,
+      "plannedMinutes": 20,
+      "reloadValid": true
+    },
+    {
+      "dailyBudget": 30,
+      "entry": "today",
+      "expected": 15,
+      "saved": 15,
+      "plannedMinutes": 30,
+      "reloadValid": true
+    },
+    {
+      "dailyBudget": 30,
+      "entry": "session",
+      "expected": 15,
+      "saved": 15,
+      "plannedMinutes": 30,
+      "reloadValid": true
+    },
+    {
+      "dailyBudget": 45,
+      "entry": "today",
+      "expected": 20,
+      "saved": 20,
+      "plannedMinutes": 45,
+      "reloadValid": true
+    },
+    {
+      "dailyBudget": 45,
+      "entry": "session",
+      "expected": 20,
+      "saved": 20,
+      "plannedMinutes": 45,
+      "reloadValid": true
+    },
+    {
+      "dailyBudget": 60,
+      "entry": "today",
+      "expected": 20,
+      "saved": 20,
+      "plannedMinutes": 60,
+      "reloadValid": true
+    },
+    {
+      "dailyBudget": 60,
+      "entry": "session",
+      "expected": 20,
+      "saved": 20,
+      "plannedMinutes": 60,
+      "reloadValid": true
+    },
+    {
+      "dailyBudget": 60,
+      "entry": "legacy saved session",
+      "expected": 15,
+      "saved": 15,
+      "reloadValid": true
+    }
+  ],
+  "screenshots": [
+    "work/chapter-student-audit/en-390-legacy-bank-preserved.png",
+    "work/chapter-student-audit/en-390-a2-three-turn-round.png",
+    "work/chapter-student-audit/en-390-a2-conversation-completed.png",
+    "work/chapter-student-audit/en-390-existing-round-preserved.png",
+    "work/chapter-student-audit/en-320-chapter-input.png",
+    "work/chapter-student-audit/en-320-chapter-retell.png",
+    "work/chapter-student-audit/en-320-chapter-vocabulary.png",
+    "work/chapter-student-audit/en-320-chapter-conversation.png",
+    "work/chapter-student-audit/it-320-chapter-input.png",
+    "work/chapter-student-audit/it-320-chapter-retell.png",
+    "work/chapter-student-audit/it-320-chapter-vocabulary.png",
+    "work/chapter-student-audit/it-320-chapter-conversation.png",
+    "work/chapter-student-audit/en-390-chapter-input.png",
+    "work/chapter-student-audit/en-390-chapter-retell.png",
+    "work/chapter-student-audit/en-390-chapter-vocabulary.png",
+    "work/chapter-student-audit/en-390-chapter-conversation.png",
+    "work/chapter-student-audit/it-390-chapter-input.png",
+    "work/chapter-student-audit/it-390-chapter-retell.png",
+    "work/chapter-student-audit/it-390-chapter-vocabulary.png",
+    "work/chapter-student-audit/it-390-chapter-conversation.png",
+    "work/chapter-student-audit/en-1440-chapter-input.png",
+    "work/chapter-student-audit/en-1440-chapter-retell.png",
+    "work/chapter-student-audit/en-1440-chapter-vocabulary.png",
+    "work/chapter-student-audit/en-1440-chapter-conversation.png",
+    "work/chapter-student-audit/it-1440-chapter-input.png",
+    "work/chapter-student-audit/it-1440-chapter-retell.png",
+    "work/chapter-student-audit/it-1440-chapter-vocabulary.png",
+    "work/chapter-student-audit/it-1440-chapter-conversation.png"
+  ],
+  "fixtures": [
+    {
+      "missionId": "espresso2-u01-choose-a-gift",
+      "programme": "espresso-plus-a1-a2",
+      "studyDay": 43,
+      "language": "en",
+      "purpose": "Validated synthetic learner placed at a chapter application day; no real progress or prerequisite completions are read"
+    },
+    {
+      "missionId": "espresso2-u01-choose-a-gift",
+      "programme": "espresso-plus-a1-a2",
+      "studyDay": 43,
+      "language": "en",
+      "purpose": "Validated synthetic learner placed at a chapter application day; no real progress or prerequisite completions are read"
+    },
+    {
+      "missionId": "espresso2-u01-choose-a-gift",
+      "programme": "espresso-plus-a1-a2",
+      "studyDay": 43,
+      "language": "en",
+      "purpose": "Validated synthetic learner placed at a chapter application day; no real progress or prerequisite completions are read"
+    },
+    {
+      "missionId": "espresso2-u01-choose-a-gift",
+      "programme": "espresso-plus-a1-a2",
+      "studyDay": 43,
+      "language": "en",
+      "purpose": "Validated synthetic learner placed at a chapter application day; no real progress or prerequisite completions are read"
+    },
+    {
+      "missionId": "espresso2-u09-tell-an-interruption",
+      "programme": "espresso-plus-a1-a2",
+      "studyDay": 75,
+      "language": "en",
+      "purpose": "Validated synthetic learner placed at a chapter application day; no real progress or prerequisite completions are read"
+    },
+    {
+      "missionId": "espresso2-u09-tell-an-interruption",
+      "programme": "espresso-plus-a1-a2",
+      "studyDay": 75,
+      "language": "it",
+      "purpose": "Validated synthetic learner placed at a chapter application day; no real progress or prerequisite completions are read"
+    },
+    {
+      "missionId": "espresso2-u01-choose-a-gift",
+      "programme": "espresso-plus-a1-a2",
+      "studyDay": 43,
+      "language": "en",
+      "purpose": "Validated synthetic learner placed at a chapter application day; no real progress or prerequisite completions are read"
+    },
+    {
+      "missionId": "espresso2-u01-choose-a-gift",
+      "programme": "espresso-plus-a1-a2",
+      "studyDay": 43,
+      "language": "it",
+      "purpose": "Validated synthetic learner placed at a chapter application day; no real progress or prerequisite completions are read"
+    },
+    {
+      "missionId": "espresso2-u10-discuss-a-home",
+      "programme": "espresso-plus-a1-a2",
+      "studyDay": 79,
+      "language": "en",
+      "purpose": "Validated synthetic learner placed at a chapter application day; no real progress or prerequisite completions are read"
+    },
+    {
+      "missionId": "espresso2-u10-discuss-a-home",
+      "programme": "espresso-plus-a1-a2",
+      "studyDay": 79,
+      "language": "it",
+      "purpose": "Validated synthetic learner placed at a chapter application day; no real progress or prerequisite completions are read"
+    }
+  ],
+  "runtimeErrors": [],
+  "networkMutations": [],
+  "externalRequests": [],
+  "limits": [
+    "Synthetic programme positions isolate chapter flows; this is not a human completion of all eighty days.",
+    "Responsive layouts were tested at desktop-emulated viewport widths, not physical phones.",
+    "Device speech audio quality and pronunciation were not assessed; public authored scenes and optional tasks were exercised without publisher audio.",
+    "Core persistence flows use chapter 1; responsive checks additionally sample chapters 9 and 10 rather than every chapter.",
+    "No production site, shared reader session, real learner progress, local database or backup was accessed."
+  ]
+}

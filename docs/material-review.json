@@ -455,5 +455,65 @@
     "source_coverage_evidence": "docs/source-coverage.json",
     "external_resources": 11,
     "scope_note": "This refresh supersedes the earlier page-coverage limitation; historical47-source review remains above. Page companions are original parallel practice, not reproduced source worksheets or teacher-reviewed answer keys."
+  },
+  "book_course_refresh": {
+    "reviewed_on": "2026-10-24",
+    "review": "docs/book-course-review.json",
+    "new_original_missions": 20,
+    "new_original_grammar_units": 27,
+    "new_controlled_exercises": 216,
+    "programme_id": "espresso-plus-a1-a2",
+    "study_day_checkpoints": 80,
+    "baseline": "All original mission, grammar, vocabulary, source and programme objects remain unchanged.",
+    "source_review": "Verified edition chapter maps and selectively reviewed physical teacher-guide/student-book pages; full private capture and selective teaching review are recorded separately.",
+    "private_sources": "materials/books/ and data/incoming/books/ are Git-ignored; raw book text, PDFs and media are excluded from site-dist/.",
+    "remaining_limits": [
+      "Original exercises and homework remain private source material; published companion tasks are original.",
+      "Writing/speaking checkpoints are self-assessed, not automatic grading or CEFR certification.",
+      "Present subjunctive is introductory; A1 diagnostics do not assess the A2 extension.",
+      "Reader media acquisition and transcription gaps are recorded in each private book coverage summary."
+    ]
+  },
+  "website_enrichment": {
+    "reviewed_on": "2026-10-24",
+    "scope": "Original companion additions for all twenty verified book chapters, bilingual discovery, chapter continuation and local combined-PDF addressing. This does not claim a new exhaustive publisher-content teaching review.",
+    "new_chapter_banks": 20,
+    "new_original_vocabulary_cards": 160,
+    "total_vocabulary_banks": 38,
+    "total_vocabulary_cards": 304,
+    "optional_chapter_gist_and_retell_packs": 20,
+    "new_a2_conversation_scenes": 10,
+    "new_a2_conversation_turns": 30,
+    "total_conversation_scenes": 18,
+    "total_conversation_turns": 54,
+    "content_review": "docs/chapter-content-review.json",
+    "source_export_review": "docs/book-pdf-export-audit.json",
+    "acceptance_plan": "docs/website-enrichment-plan.json",
+    "preservation": "Original 18 banks/144 word IDs, 36 core enrichments and 8 scenes match recorded baseline hashes; all existing mission, unit, source and programme-day IDs remain valid. Older started chapter sessions retain their original bank.",
+    "limits": [
+      "Original portal writing uses the verified chapter topics and exact citations; it is not the publisher vocabulary list or audio.",
+      "Retelling is self-assessed; optional gist/retell drafts do not create extra completion credit.",
+      "Plus 2 has 263 accessible native pages versus 264 advertised; Plus 1 has 23 unavailable observed source media assets.",
+      "Browser acceptance and final build evidence are recorded separately from the linguistic/source review."
+    ]
+  },
+  "chapter_and_review_navigation": {
+    "reviewed_on": "2026-10-24",
+    "scope": "Navigation and scheduling over the existing original companion material; no new publisher extraction or new exercise bank in this batch.",
+    "chapter_count": 20,
+    "review_sources": [
+      "Scheduled core lessons",
+      "Recorded grammar attempts",
+      "Saved personal words",
+      "Recorded arcade attempts"
+    ],
+    "initial_catalogue_projection": "Generated lightweight planning metadata, checked for exact planner parity and freshness.",
+    "progress_version": 1,
+    "teaching_content_and_source_ids": "unchanged",
+    "reports": [
+      "docs/loading-review.json",
+      "docs/chapter-dashboard-review.json",
+      "docs/review-queue-review.json"
+    ]
   }
 }

@@ -2,20 +2,29 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import grammarData from "./grammar.json";
 import companionData from "./companion.json";
 import { exercisePrompt, modelAnswerMismatch } from "./learning-utils";
+import { localPdfPageHref } from "./local-pdfs";
+import { grammarSearchText, normaliseSearch, preferredGrammarUnitId } from "./discovery-index";
+import { catalogueParams, catalogueRoute, focusStudyHeading, replaceCatalogueParams } from "./navigation";
 import {
   checkGrammarAnswer,
   completeCompanion,
   completeGrammarUnit,
   completeProgrammeDay,
+  completeProgrammePractice,
   getCompanionDraft,
   getGrammarDraft,
+  getGrammarRecallDraft,
+  getProgrammePracticeDraft,
   grammarScore,
   grammarReviewQueue,
+  programmeDayReady,
   selectProgramme,
   saveWord,
   wordKey,
   updateCompanionDraft,
   updateGrammarDraft,
+  updateGrammarRecallDraft,
+  updateProgrammePracticeDraft,
 } from "./academy-engine";
 import type {
   PageCompanion,
@@ -36,6 +45,8 @@ type Shared = {
   save: (update: (state: Progress) => Progress) => void;
   go: (route: string) => void;
   today: string;
+  pdfs?: Record<string, string>;
+  pdfPageOffsets?: Record<string, number>;
 };
 const units = grammarData.units as GrammarUnit[];
 const programmes = grammarData.programmes as Programme[];
@@ -92,20 +103,27 @@ function ItalianExample({
 
 export function GrammarLab(props: Shared & { unitId?: string }) {
   const { p, t, text, go, unitId, today } = props;
-  const [query, setQuery] = useState("");
-  const [filter, setFilter] = useState<PracticeFilter>("all");
+  const params = catalogueParams();
+  const [query, setQuery] = useState(() => (params.get("q") ?? "").slice(0, 200));
+  const [filter, setFilter] = useState<PracticeFilter>(["repair", "tense", "due"].includes(params.get("filter") ?? "") ? params.get("filter") as PracticeFilter : "all");
+  const catalogueHeading = useRef<HTMLHeadingElement>(null);
   const reviewQueue = grammarReviewQueue(p, units, today);
   const selected = unitById(unitId ?? "");
+  useEffect(() => selected ? undefined : focusStudyHeading(catalogueHeading.current), [selected]);
+  const openUnit = (id: string) => go(catalogueRoute(`grammar/${id}`, { q: query, filter }));
+  const changeSearch = (nextQuery: string, nextFilter = filter) => {
+    setQuery(nextQuery.slice(0, 200)); setFilter(nextFilter);
+    replaceCatalogueParams({ q: nextQuery, filter: nextFilter });
+  };
+  if (selected && params.get("review") === "1")
+    return <GrammarReview key={`${selected.id}:${params.get("exercise")}`} {...props} unit={selected} exerciseId={params.get("exercise") ?? ""} />;
   if (selected)
     return <UnitLesson key={selected.id} {...props} unit={selected} />;
   const matches = (unit: GrammarUnit) => {
-    const needle = query.trim().toLocaleLowerCase();
+    const needle = normaliseSearch(query);
     const draft = getGrammarDraft(p, unit.id);
     return (
-      (!needle ||
-        `${unit.title.en} ${unit.title.it} ${unit.summary.en} ${unit.summary.it} ${unit.words.map((word) => `${word.en} ${word.it}`).join(" ")}`
-          .toLocaleLowerCase()
-          .includes(needle)) &&
+      (!needle || grammarSearchText(unit).includes(needle)) &&
       (filter === "all" ||
         (filter === "due" &&
           reviewQueue.some((item) => item.unit.id === unit.id)) ||
@@ -142,11 +160,11 @@ export function GrammarLab(props: Shared & { unitId?: string }) {
         <div>
           <p className="eyebrow">
             {t(
-              "YOUR A1 GRAMMAR WORKSHOP",
-              "IL TUO LABORATORIO DI GRAMMATICA A1",
+              "YOUR GRAMMAR WORKSHOP",
+              "IL TUO LABORATORIO DI GRAMMATICA",
             )}
           </p>
-          <h1>{t("Make the sentence yours.", "Fai tua la frase.")}</h1>
+          <h1 ref={catalogueHeading} tabIndex={-1} className="study-focus-heading">{t("Make the sentence yours.", "Fai tua la frase.")}</h1>
           <p>
             {t(
               "Understand the pattern, practise with support, then use it in your own life. Start with one topic; every draft stays here for your next visit.",
@@ -157,9 +175,7 @@ export function GrammarLab(props: Shared & { unitId?: string }) {
             <button
               className="button primary"
               onClick={() =>
-                go(
-                  `grammar/${units.find((unit) => !grammarScore(p, unit).completed)?.id ?? units[0]?.id}`,
-                )
+                openUnit(preferredGrammarUnitId(p, units, programmes) ?? units[0]?.id)
               }
             >
               {t(
@@ -214,7 +230,8 @@ export function GrammarLab(props: Shared & { unitId?: string }) {
           <input
             type="search"
             value={query}
-            onChange={(event) => setQuery(event.target.value)}
+            maxLength={200}
+            onChange={(event) => changeSearch(event.target.value)}
             placeholder={t(
               "Try articles, past, essere…",
               "Prova articoli, passato, essere…",
@@ -239,7 +256,7 @@ export function GrammarLab(props: Shared & { unitId?: string }) {
             <button
               key={id}
               aria-pressed={filter === id}
-              onClick={() => setFilter(id)}
+              onClick={() => changeSearch(query, id)}
             >
               {label}
             </button>
@@ -285,7 +302,7 @@ export function GrammarLab(props: Shared & { unitId?: string }) {
                 <span className="tag">
                   {unit.level === "A1-plus"
                     ? t("A1 → A2 bridge", "Ponte A1 → A2")
-                    : "A1"}
+                    : unit.level}
                 </span>
                 <span className="academy-status">
                   {score.completed
@@ -296,7 +313,7 @@ export function GrammarLab(props: Shared & { unitId?: string }) {
                 </span>
               </div>
               <h2>
-                <button onClick={() => go(`grammar/${unit.id}`)}>
+                <button onClick={() => openUnit(unit.id)}>
                   {text(unit.title)} <span aria-hidden="true">↗</span>
                 </button>
               </h2>
@@ -309,7 +326,7 @@ export function GrammarLab(props: Shared & { unitId?: string }) {
                       {index > 0 && " · "}
                       <button
                         className="text-button"
-                        onClick={() => go(`grammar/${item.id}`)}
+                        onClick={() => openUnit(item.id)}
                       >
                         {text(item.title)}
                       </button>
@@ -367,6 +384,30 @@ export function GrammarLab(props: Shared & { unitId?: string }) {
   );
 }
 
+function GrammarReview(props: Shared & { unit: GrammarUnit; exerciseId: string }) {
+  const { p, t, text, go, today, unit, exerciseId } = props;
+  const exercise = unit.exercises.find((item) => item.id === exerciseId);
+  // Eligibility is captured on entry so checking an answer keeps its feedback
+  // visible. Opening a review never changes the ordinary lesson draft position.
+  const [eligible] = useState(() => grammarReviewQueue(p, [unit], today).some((item) => item.exercise.id === exerciseId));
+  const heading = useRef<HTMLHeadingElement>(null);
+  useEffect(() => eligible ? undefined : focusStudyHeading(heading.current), [eligible]);
+  const checkedToday = getGrammarDraft(p, unit.id).attempts[exerciseId]?.some((attempt) => attempt.date === today);
+  return <div className="workspace academy">
+    <button className="text-button" onClick={() => go("reviews")}>← {t("Back to review queue", "Torna al ripasso del giorno")}</button>
+    <p className="eyebrow">{t("ONE SCHEDULED RECALL", "UN RIPASSO PROGRAMMATO")}</p>
+    <h1 ref={heading} tabIndex={-1}>{text(unit.title)}</h1>
+    {exercise && eligible ? <ExerciseCard {...props} exercise={exercise} recall /> : <section className="panel" role="status">
+      <h2>{checkedToday ? t("Already checked today", "Già controllato oggi") : t("This exercise is not due now", "Questo esercizio non è da ripassare ora")}</h2>
+      <p>{t("Return to your queue for the next scheduled item, or open the lesson for extra practice.", "Torna all’elenco per il prossimo ripasso programmato oppure apri la lezione per altra pratica.")}</p>
+    </section>}
+    <div className="button-row">
+      <button className="button primary" onClick={() => go("reviews")}>{t("Return to my review queue", "Torna al mio ripasso")}</button>
+      <button className="button secondary" onClick={() => go(`grammar/${unit.id}`)}>{t("Open the full lesson", "Apri la lezione completa")}</button>
+    </div>
+  </div>;
+}
+
 function UnitLesson({
   p,
   t,
@@ -375,6 +416,8 @@ function UnitLesson({
   go,
   today,
   unit,
+  pdfs,
+  pdfPageOffsets,
 }: Shared & { unit: GrammarUnit }) {
   const draft = getGrammarDraft(p, unit.id);
   const score = grammarScore(p, unit);
@@ -383,6 +426,8 @@ function UnitLesson({
   );
   const [mode, setMode] = useState<PracticeFilter>("all");
   const [notice, setNotice] = useState("");
+  const unitHeading = useRef<HTMLHeadingElement>(null);
+  useEffect(() => focusStudyHeading(unitHeading.current), [unit.id]);
   const stageHeading = useRef<HTMLHeadingElement>(null);
   const changeStage = (next: typeof stage) => {
     setStage(next);
@@ -423,7 +468,10 @@ function UnitLesson({
     <div className="workspace academy">
       <button
         className="text-button academy-back"
-        onClick={() => go("grammar")}
+        onClick={() => {
+          const params = catalogueParams();
+          go(catalogueRoute("grammar", { q: params.get("q") ?? "", filter: params.get("filter") ?? "all" }));
+        }}
       >
         ← {t("All grammar topics", "Tutti gli argomenti di grammatica")}
       </button>
@@ -432,9 +480,12 @@ function UnitLesson({
           <p className="eyebrow">
             {unit.level === "A1-plus"
               ? t("A1 → A2 BRIDGE", "PONTE A1 → A2")
-              : t("A1 · GUIDED GRAMMAR", "A1 · GRAMMATICA GUIDATA")}
+              : t(
+                  `${unit.level} · GUIDED GRAMMAR`,
+                  `${unit.level} · GRAMMATICA GUIDATA`,
+                )}
           </p>
-          <h1>{text(unit.title)}</h1>
+          <h1 ref={unitHeading} tabIndex={-1} className="study-focus-heading">{text(unit.title)}</h1>
           <p>{text(unit.summary)}</p>
         </div>
         <div className="academy-unit-progress">
@@ -570,7 +621,7 @@ function UnitLesson({
                 ))}
               </section>
             )}
-            <UnitSources unit={unit} t={t} go={go} />
+            <UnitSources unit={unit} t={t} go={go} pdfs={pdfs} pdfPageOffsets={pdfPageOffsets} />
           </aside>
         </div>
       )}
@@ -973,7 +1024,7 @@ function UnitLesson({
                 </li>
               </ol>
             </section>
-            <UnitSources unit={unit} t={t} go={go} />
+            <UnitSources unit={unit} t={t} go={go} pdfs={pdfs} pdfPageOffsets={pdfPageOffsets} />
             <section>
               <button
                 className="academy-side-link"
@@ -986,11 +1037,17 @@ function UnitLesson({
                 onClick={() => go("readiness")}
               >
                 {t(
-                  "Explore the A2 preparation check",
-                  "Esplora la verifica di preparazione A2",
+                  "Check my A1 foundations",
+                  "Verifica le mie basi A1",
                 )}{" "}
                 →
               </button>
+              <p className="hint">
+                {t(
+                  "This diagnostic covers A1 foundations. A2 topics are practised in their own lessons.",
+                  "Questa verifica riguarda le basi A1. Gli argomenti A2 si esercitano nelle rispettive lezioni.",
+                )}
+              </p>
             </section>
           </aside>
         </div>
@@ -1003,10 +1060,14 @@ function UnitSources({
   unit,
   t,
   go,
+  pdfs,
+  pdfPageOffsets = {},
 }: {
   unit: GrammarUnit;
   t: Translate;
   go: Shared["go"];
+  pdfs?: Record<string, string>;
+  pdfPageOffsets?: Record<string, number>;
 }) {
   return (
     <section>
@@ -1032,6 +1093,11 @@ function UnitSources({
                 {t("Pages / slides", "Pagine / diapositive")}:{" "}
                 {ref.pages.join(", ")}
               </small>
+              {pdfs?.[ref.id] && (
+                <a className="text-button" href={localPdfPageHref(pdfs[ref.id], ref.pages[0], pdfPageOffsets[ref.id])} target="_blank" rel="noreferrer">
+                  {t("Open connected PDF", "Apri il PDF collegato")} ↗
+                </a>
+              )}
               {page && (
                 <button
                   className="text-button"
@@ -1063,13 +1129,14 @@ function ExerciseCard({
   recall?: boolean;
 }) {
   const draft = getGrammarDraft(p, unit.id);
+  const pendingRecall = getGrammarRecallDraft(p, unit.id, exercise.id, today);
   const [recallAnswer, setRecallAnswer] = useState<string | undefined>(
-    recall ? "" : undefined,
+    recall ? pendingRecall?.answer ?? "" : undefined,
   );
   const answer = recallAnswer ?? draft.answers[exercise.id] ?? "";
   const attempts = draft.attempts[exercise.id] ?? [];
   const last = attempts.at(-1);
-  const [recallHintUsed, setRecallHintUsed] = useState(false);
+  const [recallHintUsed, setRecallHintUsed] = useState(recall && !!pendingRecall?.hintUsed);
   const hintUsed = recall
     ? recallHintUsed || draft.hintDates?.[exercise.id] === today
     : draft.hints.includes(exercise.id);
@@ -1084,7 +1151,7 @@ function ExerciseCard({
     const bounded = value.slice(0, 500);
     if (recall) setRecallAnswer(bounded);
     save((state) =>
-      updateGrammarDraft(state, unit.id, {
+      recall ? updateGrammarRecallDraft(state, unit.id, exercise.id, bounded, today, hintUsed) : updateGrammarDraft(state, unit.id, {
         answers: {
           ...getGrammarDraft(state, unit.id).answers,
           [exercise.id]: bounded,
@@ -1217,8 +1284,8 @@ function ExerciseCard({
             setShowHint(!showHint);
             if (!showHint && recall) setRecallHintUsed(true);
             if (!showHint)
-              save((state) =>
-                updateGrammarDraft(state, unit.id, {
+              save((state) => {
+                const updated = updateGrammarDraft(state, unit.id, {
                   hints: Array.from(
                     new Set([
                       ...getGrammarDraft(state, unit.id).hints,
@@ -1229,8 +1296,9 @@ function ExerciseCard({
                     ...getGrammarDraft(state, unit.id).hintDates,
                     [exercise.id]: today,
                   },
-                }),
-              );
+                });
+                return recall ? updateGrammarRecallDraft(updated, unit.id, exercise.id, answer, today, true) : updated;
+              });
           }}
         >
           {showHint
@@ -1346,6 +1414,94 @@ function ExerciseCard({
   );
 }
 
+function ProgrammePractice({
+  p, t, text, save, today, programme, index,
+}: Shared & { programme: Programme; index: number }) {
+  const practice = programme.days[index]?.practice;
+  const draft = getProgrammePracticeDraft(p, programme, index);
+  const [modelOpen, setModelOpen] = useState(draft.modelSeen);
+  if (!practice) return null;
+  const editable = p.academy?.programme?.id === programme.id
+    && p.academy.programme.day === index && !draft.completed;
+  const ready = draft.output.trim().split(/\s+/).length >= 3
+    && practice.rubric.every((_, criterion) => draft.rubric.includes(criterion));
+  const patch = (value: Parameters<typeof updateProgrammePracticeDraft>[3]) =>
+    save((state) => updateProgrammePracticeDraft(state, programme, index, value));
+  return (
+    <section className="academy-sheet" aria-label={t("Daily personal practice", "Pratica personale del giorno")}>
+      <p className="eyebrow">{t("YOUR WORDS · SELF-ASSESSED", "LE TUE PAROLE · AUTOVALUTAZIONE")}</p>
+      <h4>{t("Use it in a new situation · about 5 minutes", "Usalo in una nuova situazione · circa 5 minuti")}</h4>
+      <p className="academy-task">{text(practice.prompt)}</p>
+      <label className="field">
+        {t("My response for this study day", "La mia risposta per questo giorno di studio")}
+        <textarea
+          rows={5}
+          lang="it"
+          maxLength={2000}
+          readOnly={!editable}
+          value={draft.output}
+          onChange={(event) => patch({ output: event.target.value, rubric: [] })}
+          placeholder={t("Write in Italian using your own details.", "Scrivi in italiano usando i tuoi dettagli.")}
+        />
+      </label>
+      <p className="academy-save-note">
+        {editable
+          ? t("Your draft saves in this browser. Write at least three words, then check each point yourself.", "La bozza si salva in questo browser. Scrivi almeno tre parole, poi controlla ogni punto.")
+          : !draft.completed
+            ? t("Select this programme and finish earlier study days to save your response here.", "Scegli questo percorso e completa i giorni precedenti per salvare qui la tua risposta.")
+            : t("Your completed response is saved for this study day.", "La risposta completata è salvata per questo giorno di studio.")}
+      </p>
+      <fieldset className="academy-checklist" disabled={!editable}>
+        <legend>{t("I checked my own writing", "Ho controllato il mio testo")}</legend>
+        {practice.rubric.map((criterion, criterionIndex) => (
+          <label key={criterionIndex}>
+            <input
+              type="checkbox"
+              checked={draft.rubric.includes(criterionIndex)}
+              onChange={(event) => patch({
+                rubric: event.target.checked
+                  ? [...draft.rubric, criterionIndex]
+                  : draft.rubric.filter((item) => item !== criterionIndex),
+              })}
+            />
+            <span>{text(criterion)}</span>
+          </label>
+        ))}
+      </fieldset>
+      <button
+        className="text-button"
+        aria-expanded={modelOpen}
+        onClick={() => {
+          setModelOpen(!modelOpen);
+          if (!modelOpen && editable) patch({ modelSeen: true });
+        }}
+      >
+        {modelOpen ? t("Hide a possible response", "Nascondi una risposta possibile")
+          : t("Show a possible response", "Mostra una risposta possibile")}
+      </button>
+      {modelOpen && (
+        <div className="academy-model">
+          <ItalianExample pair={practice.model} showEnglish={p.translations} />
+          <p>{t("Compare the pattern, then use your own details.", "Confronta la struttura, poi usa i tuoi dettagli.")}</p>
+        </div>
+      )}
+      <p role="status">
+        {draft.completed
+          ? t("✓ Saved as self-assessed. Writing is not automatically graded.", "✓ Salvato come autovalutazione. Il testo non riceve una valutazione automatica.")
+          : t("You assess this response yourself. Writing is not automatically graded.", "Valuti tu questa risposta. Il testo non riceve una valutazione automatica.")}
+      </p>
+      <button
+        className="button secondary"
+        disabled={!editable || !ready}
+        onClick={() => save((state) => completeProgrammePractice(state, programme, index, today))}
+      >
+        {draft.completed ? t("✓ Personal practice saved", "✓ Pratica personale salvata")
+          : t("Save my self-assessed practice", "Salva la mia pratica autovalutata")}
+      </button>
+    </section>
+  );
+}
+
 export function ProgrammeView({ p, t, text, save, go, today }: Shared) {
   const [viewedId, setViewedId] = useState(
     p.academy?.programme?.id ?? "supported-a1",
@@ -1368,10 +1524,10 @@ export function ProgrammeView({ p, t, text, save, go, today }: Shared) {
       <div className="academy-intro">
         <div>
           <p className="eyebrow">
-            {t("A CLEAR ROUTE THROUGH A1", "UN PERCORSO CHIARO NELL’A1")}
+            {t("A CLEAR STUDY ROUTE", "UN PERCORSO DI STUDIO CHIARO")}
           </p>
           <h1>
-            {t("Your A1 programme.", "Il tuo percorso A1.")}
+            {t("Your study programme.", "Il tuo percorso di studio.")}
           </h1>
           <p>
             {t(
@@ -1396,11 +1552,7 @@ export function ProgrammeView({ p, t, text, save, go, today }: Shared) {
             {selected ? t("MY PROGRAMME", "IL MIO PERCORSO") : programme.id === "supported-a1" ? t("RECOMMENDED FOR MID-A1", "CONSIGLIATO PER A1 INTERMEDIO") : t("PROGRAMME PREVIEW", "ANTEPRIMA DEL PERCORSO")}
           </p>
           <h2>{text(programme.title)}</h2>
-          <p>{programme.id === "supported-a1"
-            ? t("One grammar topic a day, with examples and supported practice. Allow 30–45 minutes; split a day whenever you need.", "Un tema di grammatica al giorno, con esempi e pratica guidata. Prevedi 30–45 minuti; dividi un giorno quando serve.")
-            : programme.id === "intensive-a1"
-              ? t("A faster review of A1 before A2. Allow 45–60 minutes, and repeat a day if the basics need more practice.", "Un ripasso A1 più rapido prima dell’A2. Prevedi 45–60 minuti e ripeti un giorno se le basi richiedono più pratica.")
-              : t("Ten focused study days to revisit common grammar gaps. Use the hints and repeat the parts you need.", "Dieci giorni di studio per ripassare le lacune grammaticali più comuni. Usa gli aiuti e ripeti le parti utili.")}</p>
+          <p>{text(programme.summary)}</p>
 
         </div>
         <div>
@@ -1445,7 +1597,7 @@ export function ProgrammeView({ p, t, text, save, go, today }: Shared) {
         </div>
       </section>
       <details className="programme-options">
-        <summary>{t("Compare the 3 programmes", "Confronta i 3 percorsi")}</summary>
+        <summary>{t(`Compare the ${programmes.length} programmes`, `Confronta i ${programmes.length} percorsi`)}</summary>
         <p className="hint">{t("Changing programme starts a new day checklist. Completed lessons and grammar stay saved.", "Cambiare percorso avvia un nuovo elenco di giorni. Le lezioni e la grammatica completate restano salvate.")}</p>
       <div
         className="academy-programme-choices"
@@ -1491,6 +1643,7 @@ export function ProgrammeView({ p, t, text, save, go, today }: Shared) {
           const allMissions = day.missionIds.every((id) =>
             Boolean(p.completed[id]),
           );
+          const ready = programmeDayReady(p, programme, index);
           return (
             <li
               key={`${programme.id}:${index}`}
@@ -1536,14 +1689,19 @@ export function ProgrammeView({ p, t, text, save, go, today }: Shared) {
                     </button>
                   ))}
                 </div>
+                {day.practice && (
+                  <ProgrammePractice
+                    key={`${programme.id}:${index}`}
+                    {...{ p, t, text, save, go, today, programme, index }}
+                  />
+                )}
                 <div className="academy-day-action">
                   <button
                     className="button secondary"
                     disabled={
                       !selected ||
                       active?.day !== index ||
-                      !allUnits ||
-                      !allMissions ||
+                      !ready ||
                       Boolean(finished)
                     }
                     onClick={() => {
@@ -1582,6 +1740,11 @@ export function ProgrammeView({ p, t, text, save, go, today }: Shared) {
                               "Complete the linked grammar units and daily applications first.",
                               "Completa prima le unità di grammatica e le applicazioni collegate.",
                             )
+                          : !ready
+                            ? t(
+                                "Complete this day's personal practice and self-check first.",
+                                "Completa prima la pratica personale e l'autovalutazione di questo giorno.",
+                              )
                           : finished
                             ? t(
                                 "Return to any activity whenever you like.",
@@ -1611,14 +1774,20 @@ export function ProgrammeView({ p, t, text, save, go, today }: Shared) {
         </ol>
       </details>
       <button className="text-button" onClick={() => go("readiness")}>
-        {t("Optional: check my A2 preparation", "Facoltativo: verifica la preparazione per l’A2")} →
+        {t("Optional: check my A1 foundations", "Facoltativo: verifica le mie basi A1")} →
       </button>
+      <p className="hint">
+        {t(
+          "This diagnostic covers A1 foundations. A2 topics are practised in their own lessons.",
+          "Questa verifica riguarda le basi A1. Gli argomenti A2 si esercitano nelle rispettive lezioni.",
+        )}
+      </p>
     </div>
   );
 }
 
 export function CompanionView(props: Shared & { pageId?: string }) {
-  const { p, t, text, save, go, today, pageId } = props;
+  const { p, t, text, save, go, today, pageId, pdfs, pdfPageOffsets = {} } = props;
   const routePage = pages.find((page) => page.id === pageId);
   const [sourceId, setSourceId] = useState(
     routePage?.sourceId ?? sources[0]?.id ?? "",
@@ -1626,9 +1795,12 @@ export function CompanionView(props: Shared & { pageId?: string }) {
   const [selectedPageId, setSelectedPageId] = useState(
     routePage?.id ?? pages.find((page) => page.sourceId === sourceId)?.id ?? "",
   );
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(() => (catalogueParams().get("q") ?? "").slice(0, 200));
   const [notice, setNotice] = useState("");
+  const catalogueHeading = useRef<HTMLHeadingElement>(null);
+  const pageHeading = useRef<HTMLHeadingElement>(null);
   const page = routePage ?? pages.find((item) => item.id === selectedPageId);
+  useEffect(() => focusStudyHeading(pageId ? pageHeading.current : catalogueHeading.current), [pageId, page?.id]);
   const selectedSource = sources.find(
     (source) => source.id === (page?.sourceId ?? sourceId),
   );
@@ -1649,14 +1821,14 @@ export function CompanionView(props: Shared & { pageId?: string }) {
     const first = pages.find((item) => item.sourceId === id);
     if (first) {
       setSelectedPageId(first.id);
-      go(`companion/${first.id}`);
+      go(catalogueRoute(`companion/${first.id}`, {}));
     }
     setNotice("");
   };
   const choosePage = (id: string) => {
     setSelectedPageId(id);
     setNotice("");
-    go(`companion/${id}`);
+    go(catalogueRoute(`companion/${id}`, { q: query }));
   };
   const draft = page ? getCompanionDraft(p, page.id) : null;
   const index = page ? sourcePages.indexOf(page) : -1;
@@ -1674,7 +1846,7 @@ export function CompanionView(props: Shared & { pageId?: string }) {
               "MATERIALE DEL CORSO → PRATICA PERSONALE",
             )}
           </p>
-          <h1>
+          <h1 ref={catalogueHeading} tabIndex={-1} className="study-focus-heading">
             {t("A companion for every page.", "Un compagno per ogni pagina.")}
           </h1>
           <p>
@@ -1711,7 +1883,11 @@ export function CompanionView(props: Shared & { pageId?: string }) {
           <input
             type="search"
             value={query}
-            onChange={(event) => setQuery(event.target.value)}
+            maxLength={200}
+            onChange={(event) => {
+              setQuery(event.target.value);
+              replaceCatalogueParams({ q: event.target.value });
+            }}
             placeholder={t(
               "Page number or topic…",
               "Numero di pagina o argomento…",
@@ -1790,7 +1966,12 @@ export function CompanionView(props: Shared & { pageId?: string }) {
                     : t("Original practice", "Pratica originale")}
               </span>
             </div>
-            <h2>{text(page.focus)}</h2>
+            <h2 ref={pageHeading} tabIndex={-1} className="study-focus-heading">{text(page.focus)}</h2>
+            {pdfs?.[page.sourceId] && (
+              <a className="text-button" href={localPdfPageHref(pdfs[page.sourceId], page.page, pdfPageOffsets[page.sourceId])} target="_blank" rel="noreferrer">
+                {t("Open connected PDF at this page", "Apri il PDF collegato a questa pagina")} ↗
+              </a>
+            )}
             <p className="academy-task">{text(page.task)}</p>
             {page.kind === "needs-review" ? (
               <div className="academy-hint">

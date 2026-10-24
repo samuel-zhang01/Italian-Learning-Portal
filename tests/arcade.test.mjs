@@ -35,7 +35,7 @@ const item = (p) =>
 const valid = (p) => parseProgress(JSON.stringify(p), ids);
 const pair = (x) => assert.ok(x?.en?.trim() && x?.it?.trim());
 
-test("arcade catalogue has unique bilingual items, bounded grammar links and 24 original conversation turns", () => {
+test("arcade catalogue has unique bilingual items, bounded grammar links and 54 original conversation turns", () => {
   assert.equal(new Set(arcadeItems.map((x) => x.id)).size, arcadeItems.length);
   for (const x of arcadeItems) {
     [x.title, x.prompt, x.hint, x.explanation].forEach(pair);
@@ -60,8 +60,8 @@ test("arcade catalogue has unique bilingual items, bounded grammar links and 24 
       );
     }
   }
-  assert.equal(arcadeScenes.length, 8);
-  assert.equal(arcadeItems.filter((x) => x.mode === "conversation").length, 24);
+  assert.equal(arcadeScenes.length, 18);
+  assert.equal(arcadeItems.filter((x) => x.mode === "conversation").length, 54);
   for (const scene of arcadeScenes) {
     pair(scene.intro);
     assert.equal(scene.turns.length, 3);

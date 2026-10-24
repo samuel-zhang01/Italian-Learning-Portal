@@ -6,15 +6,15 @@ import type {
   GrammarUnit,
   Pair,
   Programme,
+  ProgrammePracticeDraft,
   Progress,
   ReadinessRun,
 } from "./types.ts";
 import { addDays, isCorrect, normalise, validDate } from "./learning-utils.ts";
-import grammar from "./grammar.json" with { type: "json" };
+import { planningAssessmentIds } from "./planning-data.ts";
+import type { ProgrammeRequirements } from "./planning-types.ts";
 
-const knownAssessmentIds = new Set(
-  grammar.units.flatMap((unit) => unit.exercises.map((exercise) => exercise.id)),
-);
+const knownAssessmentIds = new Set(planningAssessmentIds);
 
 export const emptyAcademy = (): AcademyProgress => ({
   grammar: {},
@@ -63,6 +63,9 @@ export function checkGrammarAnswer(
   )
     return p;
   const draft = getGrammarDraft(p, unit.id);
+  const recallDrafts = { ...draft.recallDrafts };
+  delete recallDrafts[exerciseId];
+  const clearPending = draft.recallDrafts ? { recallDrafts } : {};
   const history = draft.attempts[exerciseId] ?? [];
   const correct = isCorrect(answer, exercise.answers);
   const freshRecall =
@@ -71,6 +74,7 @@ export function checkGrammarAnswer(
     history.at(-1)!.date < options.today;
   const assisted =
     options.hintUsed ||
+    (!!options.independentRecall && !!getGrammarRecallDraft(p, unit.id, exerciseId, options.today)?.hintUsed) ||
     draft.hintDates?.[exerciseId] === options.today ||
     (!freshRecall &&
       (draft.hints.includes(exerciseId) || history.some((a) => !a.correct)));
@@ -80,15 +84,30 @@ export function checkGrammarAnswer(
     history.at(-1)?.answer === answer &&
     history.at(-1)?.assisted === assisted
   )
-    return p;
+    return draft.recallDrafts?.[exerciseId] ? updateGrammarDraft(p, unit.id, clearPending) : p;
   const next = [...history, { answer, correct, assisted, date: options.today }];
   const bounded = next.length > 12 ? [next[0], ...next.slice(-11)] : next;
   return updateGrammarDraft(p, unit.id, {
+    ...clearPending,
     answers: { ...draft.answers, [exerciseId]: answer },
     attempts: { ...draft.attempts, [exerciseId]: bounded },
     hints: assisted
       ? Array.from(new Set([...draft.hints, exerciseId]))
       : draft.hints,
+  });
+}
+export function getGrammarRecallDraft(p: Progress, unitId: string, exerciseId: string, today: string) {
+  const draft = getGrammarDraft(p, unitId);
+  const pending = draft.recallDrafts?.[exerciseId];
+  const last = draft.attempts[exerciseId]?.at(-1);
+  return pending && pending.date <= today && (!last || pending.date > last.date) ? pending : undefined;
+}
+export function updateGrammarRecallDraft(p: Progress, unitId: string, exerciseId: string, answer: string, today: string, hintUsed = false): Progress {
+  if (!validDate(today) || !knownAssessmentIds.has(exerciseId) || answer.length > 500) return p;
+  const draft = getGrammarDraft(p, unitId);
+  const pending = getGrammarRecallDraft(p, unitId, exerciseId, today);
+  return updateGrammarDraft(p, unitId, {
+    recallDrafts: { ...draft.recallDrafts, [exerciseId]: { date: today, answer, hintUsed: hintUsed || !!pending?.hintUsed } },
   });
 }
 export function grammarScore(p: Progress, unit: GrammarUnit) {
@@ -172,15 +191,89 @@ export function selectProgramme(
 }
 export function programmeDayReady(
   p: Progress,
-  programme: Programme,
+  programme: ProgrammeRequirements,
   index: number,
 ) {
   const day = programme.days[index];
   return (
     !!day &&
     day.unitIds.every((id) => p.academy?.grammar[id]?.completed) &&
-    day.missionIds.every((id) => p.completed[id])
+    day.missionIds.every((id) => p.completed[id]) &&
+    (!day.practice || !!getProgrammePracticeDraft(p, programme, index).completed)
   );
+}
+export const getProgrammePracticeDraft = (
+  p: Progress,
+  programme: Pick<Programme, "id">,
+  index: number,
+): ProgrammePracticeDraft =>
+  (p.academy?.programme?.id === programme.id
+    ? p.academy.programme.practice?.[String(index)]
+    : undefined) ?? { output: "", rubric: [], modelSeen: false };
+
+export function updateProgrammePracticeDraft(
+  p: Progress,
+  programme: Programme,
+  index: number,
+  patch: Partial<Pick<ProgrammePracticeDraft, "output" | "rubric" | "modelSeen">>,
+): Progress {
+  const active = p.academy?.programme;
+  const practice = programme.days[index]?.practice;
+  const draft = getProgrammePracticeDraft(p, programme, index);
+  if (
+    !p.academy ||
+    active?.id !== programme.id ||
+    index !== active.day ||
+    !practice ||
+    draft.completed
+  ) return p;
+  const next: ProgrammePracticeDraft = {
+    output: patch.output === undefined ? draft.output : patch.output,
+    rubric: patch.rubric === undefined ? draft.rubric : patch.rubric,
+    modelSeen: patch.modelSeen === undefined ? draft.modelSeen : patch.modelSeen,
+  };
+  if (
+    typeof next.output !== "string" || next.output.length > 2000 ||
+    typeof next.modelSeen !== "boolean" ||
+    !Array.isArray(next.rubric) || next.rubric.length > 10 ||
+    new Set(next.rubric).size !== next.rubric.length ||
+    !next.rubric.every((value) => Number.isInteger(value) && value >= 0
+      && value < practice.rubric.length && value < 10)
+  ) return p;
+  return {
+    ...p,
+    academy: {
+      ...p.academy,
+      programme: { ...active, practice: { ...active.practice, [index]: next } },
+    },
+  };
+}
+
+export function completeProgrammePractice(
+  p: Progress,
+  programme: Programme,
+  index: number,
+  today: string,
+): Progress {
+  const active = p.academy?.programme;
+  const practice = programme.days[index]?.practice;
+  const draft = getProgrammePracticeDraft(p, programme, index);
+  if (
+    !p.academy || active?.id !== programme.id || index !== active.day ||
+    !practice || draft.completed || !validDate(today) ||
+    draft.output.trim().split(/\s+/).length < 3 ||
+    !practice.rubric.every((_, i) => draft.rubric.includes(i))
+  ) return p;
+  return {
+    ...p,
+    academy: {
+      ...p.academy,
+      programme: {
+        ...active,
+        practice: { ...active.practice, [index]: { ...draft, completed: today } },
+      },
+    },
+  };
 }
 export function completeProgrammeDay(
   p: Progress,
@@ -225,6 +318,9 @@ export function academyMinutes(p: Progress, date: string) {
   const pages = Object.values(a.companion).filter(
     (d) => d.completed === date,
   ).length;
+  const practices = Object.values(a.programme?.practice ?? {}).filter(
+    (draft) => draft.completed === date,
+  ).length;
   const checks = Object.values(a.assessments).reduce(
     (sum, run) =>
       sum +
@@ -234,7 +330,7 @@ export function academyMinutes(p: Progress, date: string) {
     0,
   );
   // Eight controlled questions plus reading and personal production form a 15-minute workshop.
-  return attempted + units * 7 + pages * 5 + checks;
+  return attempted + units * 7 + pages * 5 + practices * 5 + checks;
 }
 export function academyXP(p: Progress) {
   const a = p.academy;
@@ -250,11 +346,11 @@ export function academyXP(p: Progress) {
     Object.values(a.companion).filter((d) => d.completed).length * 5
   );
 }
-export function grammarReviewQueue(
+export function grammarReviewQueue<Unit extends { id: string; exercises: { id: string }[] }>(
   p: Progress,
-  units: GrammarUnit[],
+  units: Unit[],
   today: string,
-) {
+): { unit: Unit; exercise: Unit["exercises"][number] }[] {
   return units.flatMap((unit) =>
     unit.exercises
       .filter((e) => {
@@ -264,7 +360,7 @@ export function grammarReviewQueue(
         const gap = last.correct && !last.assisted ? 3 : 1;
         return addDays(last.date, gap) <= today;
       })
-      .map((exercise) => ({ unit, exercise })),
+      .map((exercise) => ({ unit, exercise: exercise as Unit["exercises"][number] })),
   );
 }
 // A bounded mixed check is a diagnostic snapshot, not an A2 certificate.
@@ -501,6 +597,11 @@ export function validateAcademy(
         ))
     )
       throw new Error("grammar-hint-date");
+    if (d.recallDrafts !== undefined && (!object(d.recallDrafts)
+      || Object.keys(d.recallDrafts).length > 200
+      || !Object.entries(d.recallDrafts).every(([eid, pending]) => id(eid) && knownAssessmentIds.has(eid)
+        && object(pending) && validDate(pending.date) && string(pending.answer, 500) && typeof pending.hintUsed === "boolean")))
+      throw new Error("grammar-recall-draft");
     for (const [eid, answer] of Object.entries(d.answers))
       if (!id(eid) || !string(answer, 500)) throw new Error("grammar-answer");
     for (const [eid, rows] of Object.entries(d.attempts))
@@ -543,6 +644,22 @@ export function validateAcademy(
       ))
   )
     throw new Error("programme");
+  if (programme !== null && programme.practice !== undefined) {
+    if (!object(programme.practice) || Object.keys(programme.practice).length > 366)
+      throw new Error("programme-practice");
+    for (const [key, draft] of Object.entries(programme.practice)) {
+      if (
+        !/^(0|[1-9]\d{0,2})$/.test(key) || !integer(Number(key), 0, 365) ||
+        !object(draft) || !string(draft.output) ||
+        !Array.isArray(draft.rubric) || draft.rubric.length > 10 ||
+        new Set(draft.rubric).size !== draft.rubric.length ||
+        !draft.rubric.every((value) => integer(value, 0, 9)) ||
+        typeof draft.modelSeen !== "boolean" ||
+        (draft.completed !== undefined && (!validDate(draft.completed)
+          || draft.output.trim().split(/\s+/).length < 3))
+      ) throw new Error("programme-practice");
+    }
+  }
   for (const [key, r] of Object.entries(value.assessments)) {
     if (
       !/^\d{4}-\d{2}-\d{2}:(readiness|tense)$/.test(key) ||

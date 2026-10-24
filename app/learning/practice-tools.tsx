@@ -1,7 +1,8 @@
+export { DailyItinerary } from "./daily-overview";
 import { useState } from "react";
+import { catalogueParams } from "./navigation";
 import grammar from "./grammar.json";
 import enrichment from "./enrichment.json";
-import companion from "./companion.json";
 import {
   answerAssessment,
   assessmentItems,
@@ -12,15 +13,9 @@ import {
   wordKey,
 } from "./academy-engine";
 import { exercisePrompt, modelAnswerMismatch } from "./learning-utils";
-import { dailyStudyPlan } from "./study";
-import curriculum from "./curriculum.json";
-import { dailyMinutes } from "./engine";
 import type {
   GrammarUnit,
-  Mission,
-  PageCompanion,
   Pair,
-  Programme,
   Progress,
   VocabularyBank,
 } from "./types";
@@ -35,45 +30,7 @@ type Props = {
   today: string;
 };
 const units = grammar.units as GrammarUnit[];
-const programmes = grammar.programmes as Programme[];
 const banks = enrichment.banks as VocabularyBank[];
-
-export function DailyItinerary({ p, t, text, go, today }: Props) {
-  const plan = dailyStudyPlan(p, curriculum.missions as Mission[], units, programmes,
-    companion.pages as PageCompanion[], today);
-  return (
-    <section className="study-itinerary">
-      <p className="hint">
-        {t("Follow the blocks in order. Pause whenever you need; unfinished work stays saved.",
-          "Segui le attività in ordine. Fermati quando serve; il lavoro incompleto resta salvato.")}
-      </p>
-      <ol className="itinerary-blocks">
-        {plan.blocks.map((block, index) => (
-          <li key={block.route}>
-            <span className="itinerary-number">{block.completed ? "✓" : index + 1}</span>
-            <div>
-              <strong>{text(block.title)} · {block.minutes} min</strong>
-              <p>{text(block.detail)}</p>
-              <button className="text-button" onClick={() => go(block.route)}>
-                {block.completed ? t("Revisit", "Rivedi") : t("Open this block", "Apri questa attività")} →
-              </button>
-            </div>
-          </li>
-        ))}
-      </ol>
-      <p className="hint">
-        {Math.max(0, p.plan.minutes - dailyMinutes(p, today))}{" "}
-        {t("estimated minutes remaining. Times are a guide, not a stopwatch.",
-          "minuti stimati rimasti. I tempi sono indicativi, non un cronometro.")}
-      </p>
-      {plan.programme && (
-        <button className="text-button" onClick={() => go("programmes")}>
-          {t("See my programme day", "Vedi il giorno del percorso")} →
-        </button>
-      )}
-    </section>
-  );
-}
 
 export function AssessmentView({
   p,
@@ -457,6 +414,7 @@ const catalogue = Array.from(
   ).values(),
 );
 export function PersonalWords({ p, t, save, today, go }: Props) {
+  const requestedWord = catalogueParams().get("word");
   const [query, setQuery] = useState("");
   const [visible, setVisible] = useState(24);
   const [revealed, setRevealed] = useState<string | null>(null);
@@ -467,7 +425,7 @@ export function PersonalWords({ p, t, save, today, go }: Props) {
   const due = saved
     .filter(([, w]) => (!w.due || w.due <= today) && w.lastDate !== today)
     .sort(([, a], [, b]) => a.due.localeCompare(b.due));
-  const card = due[0];
+  const card = requestedWord === null ? due[0] : due.find(([key]) => key === requestedWord);
   const shown = catalogue.filter((w) =>
     `${w.term.it} ${w.term.en}`
       .toLocaleLowerCase()
@@ -479,6 +437,10 @@ export function PersonalWords({ p, t, save, today, go }: Props) {
         {t("A PERSONAL POCKET DICTIONARY", "UN DIZIONARIO TASCABILE PERSONALE")}
       </p>
       <h1>{t("Words that stay with you.", "Parole che restano con te.")}</h1>
+      {requestedWord !== null && <div className="button-row">
+        <button className="text-button" onClick={() => go("reviews")}>← {t("Back to review queue", "Torna al ripasso del giorno")}</button>
+        <button className="text-button" onClick={() => go("words")}>{t("Review all my words", "Ripassa tutte le mie parole")}</button>
+      </div>}
       <p>
         {t(
           "Save a few words or useful phrases. Recall the Italian before revealing it, then rate your memory. New words return tomorrow; successful recalls gradually space out to three and seven days. “Again” brings a word back tomorrow.",
@@ -538,6 +500,10 @@ export function PersonalWords({ p, t, save, today, go }: Props) {
               </>
             )}
           </>
+        ) : requestedWord !== null ? (
+          <p role="status">{p.academy?.words[requestedWord]?.lastDate === today
+            ? t("This word has been reviewed today. Return to your queue for another item.", "Hai ripassato questa parola oggi. Torna all’elenco per un altro ripasso.")
+            : t("This word is not due now. Your other words remain in your review queue.", "Questa parola non è da ripassare ora. Le altre parole restano nell’elenco dei ripassi.")}</p>
         ) : (
           <>
             <h2>

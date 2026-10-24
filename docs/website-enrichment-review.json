@@ -1,0 +1,109 @@
+{
+  "reviewedAt": "2026-10-24T19:09:49.268692+00:00",
+  "status": "verified locally",
+  "published": false,
+  "scope": "Completed first website enrichment goals after private PDF export: discovery, all twenty chapter banks and skill extensions, A2 conversations, daily continuity and local combined-source citations.",
+  "implementation": {
+    "discovery": "Find/Cerca searches bilingual topics, vocabulary terms, programmes and source pages; query/filter URLs survive opening, Back and reload. Opened tasks and vocabulary banks receive focus.",
+    "chapterContent": {
+      "newBanks": 20,
+      "newCards": 160,
+      "totalBanks": 38,
+      "totalCards": 304,
+      "newA2Scenes": 10,
+      "newA2Turns": 30,
+      "totalScenes": 18,
+      "totalTurns": 54,
+      "optionalGistRetellPacks": 20
+    },
+    "dailyContinuity": "Started sessions retain the original vocabulary bank and duration; new chapter sessions use their chapter cards. Daily A2 extras select their scene. Grammar continuation prefers eligible unfinished active-programme units.",
+    "pdfConnections": "Six frozen SHA-verified export identities map registered source PDFs to physical pages. Combined student Book 2 uses offset240. One bundle URL can serve multiple sources; releasing one source preserves other connections.",
+    "assessment": "Existing credit/first-attempt rules remain. Optional gist/retell state is saved without extra XP/minutes; retelling is self-assessed. Conversation repair preserves the first mistake."
+  },
+  "defectsFixed": [
+    "Formal grammar terms such as imperfetto were absent from search metadata.",
+    "Returning from grammar and source-page results reset query/filter context; selected source tasks could remain below the phone viewport.",
+    "Book chapters previously reused generic vocabulary banks and the A2 extension lacked chapter conversations.",
+    "Personal-practice time reservation could generate unsupported duration25; Today and direct session entry could disagree. A shared supported-layout duration and shared plan now prevent invalid saved progress."
+  ],
+  "verification": {
+    "dailyTests": {
+      "command": "npm run test:daily",
+      "passed": 158,
+      "failed": 0
+    },
+    "pdfExportTests": {
+      "command": "python3 -m unittest tests/test_export_book_pdfs.py",
+      "passed": 4,
+      "failed": 0
+    },
+    "typecheck": "passed",
+    "lint": "passed",
+    "buildDaily": "passed",
+    "jsonAndWhitespace": "passed",
+    "programmeDayBudgetCases": 924,
+    "discoveryBrowser": {
+      "workflowGroups": 16,
+      "evidence": "docs/discovery-review.json",
+      "reusableRunnerRerun": "passed against final built preview"
+    },
+    "chapterBrowser": {
+      "workflowGroups": 10,
+      "durationCases": 15,
+      "responsiveStates": 24,
+      "evidence": "docs/chapter-student-audit.json"
+    },
+    "combinedPdfBrowser": {
+      "workflowGroups": 11,
+      "responsiveStates": 48,
+      "evidence": "docs/pdf-bundle-student-audit.json"
+    },
+    "browserIsolation": "Disposable owned Chromium and synthetic learner state; no shared book session, real learner records, databases or backups accessed.",
+    "visualReview": "Reviewed phone discovery, focused source companion, selected vocabulary cards, gist/retell and A2 conversation screenshots; automated responsive checks cover EN/IT320/390/1440.",
+    "independentReview": "All160 new term/example pairs,20 skill packs and30 A2 turns reviewed; three wording refinements applied. Independent integration review found the duration regression, then verified all924 fixed combinations."
+  },
+  "privacy": {
+    "checkedAt": "2026-10-24T19:01:55.766189+00:00",
+    "privateFiles": 7725,
+    "ignoredFiles": 7725,
+    "trackedPrivateFiles": 0,
+    "publicFiles": [
+      {
+        "path": "site-dist/assets/index-BAcoMpZH.js",
+        "bytes": 2528068,
+        "sha256": "50ffe1cd34898be4df40e099acd0f4014f42f65f3ea37265d63d24795f82aa80"
+      },
+      {
+        "path": "site-dist/assets/index-BTcNHdQx.css",
+        "bytes": 80669,
+        "sha256": "6b9233ca27000e6625bbc802ac3a9580284d5c63e77f3a9e330de67e02ed0a25"
+      },
+      {
+        "path": "site-dist/assets/painted-cardboard-CX92yXJi.webp",
+        "bytes": 61440,
+        "sha256": "2267856e5f4e1c2f9388fa4fe7cc1eff3746b3354407287574e42dd51533c2db"
+      },
+      {
+        "path": "site-dist/favicon.svg",
+        "bytes": 712,
+        "sha256": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7"
+      },
+      {
+        "path": "site-dist/index.html",
+        "bytes": 744,
+        "sha256": "471f4a228e490ccdbda5266c85193256199f839308e6b2851e9e373f18c6a201"
+      }
+    ],
+    "publicContainsSourcePdfsOrArchives": false,
+    "scope": "Only supplied private study roots and static daily output checked; no credential/browser-state or learner database access."
+  },
+  "exports": "docs/book-pdf-export-audit.json",
+  "preservation": "Original18 banks/144 word IDs,36 core enrichments and8 scenes retain their recorded hashes. Existing mission/unit/source/programme IDs and version-one backup format remain valid. No progress reset or deployment performed.",
+  "limitations": [
+    "Plus2 advertises264 pages; its accessible native sections contain263. Plus1 retains23 unavailable observed source-media assets. No source gaps are fabricated.",
+    "The complete private export is an archive of accessible sources, not an exhaustive teaching review or a human completion of the80-day journey.",
+    "Browser workflows use desktop Chromium emulation; physical devices, Safari/Firefox and assistive-technology certification are outside this pass.",
+    "Device speech and optional external players depend on the learner device/service; pronunciation quality is not assessed.",
+    "The app still imports its large catalogues in one client bundle (about492KB gzipped JavaScript); deferred loading needs a separate data/planning refactor and cold-load benchmark."
+  ]
+}

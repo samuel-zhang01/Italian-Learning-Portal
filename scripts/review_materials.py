@@ -58,11 +58,15 @@ def extract(path: Path, ocr: bool) -> list[dict]:
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source',type=Path,default=ROOT/'materials'/'inbox')
+    parser.add_argument('--output-dir',type=Path,default=OUT,help='Report folder inside data/incoming/; use a separate folder for each book')
     parser.add_argument('--ocr',action='store_true',help='OCR sparse pages; also render slides through LibreOffice')
     args=parser.parse_args()
     source=args.source.resolve()
     if not any(source.is_relative_to(a) and not a.is_symlink() for a in ALLOWED):
         parser.error('Choose a source inside this repository’s materials/ or Organised/ folder.')
+    output=args.output_dir.resolve()
+    if not output.is_relative_to(OUT):
+        parser.error('Choose an output folder inside this repository’s data/incoming/.')
     paths=list(files(source)) if source.is_dir() else []
     if not paths:
         parser.error('No PDFs or presentations found. Existing reports were left untouched.')
@@ -78,11 +82,20 @@ def main():
         except (subprocess.SubprocessError, OSError, zipfile.BadZipFile, ET.ParseError) as error:
             record['error']=type(error).__name__  # Do not emit raw document/tool output.
         records.append(record)
-    OUT.mkdir(parents=True,exist_ok=True)
-    dest=OUT/'source-pages.json';temporary=OUT/'source-pages.tmp'
-    temporary.write_text(json.dumps(records,ensure_ascii=False,indent=2)+'\n')
-    temporary.replace(dest)
-    summary={'files':len(records),'pages':sum(len(r.get('pages',[])) for r in records),'pages_needing_visual_review':sum(p['needs_visual_review'] for r in records for p in r.get('pages',[])),'failed_files':[r['path'] for r in records if 'error' in r],'report':'data/incoming/source-pages.json'}
+    output.mkdir(parents=True,exist_ok=True)
+    dest=output/'source-pages.json'
+    # A unique file avoids following a pre-existing source-pages.tmp symlink.
+    # NamedTemporaryFile also keeps document text private (mode 0600).
+    temporary=None
+    try:
+        with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8',dir=output,prefix='.source-pages-',suffix='.tmp',delete=False) as report:
+            temporary=Path(report.name)
+            report.write(json.dumps(records,ensure_ascii=False,indent=2)+'\n')
+        temporary.replace(dest)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
+    summary={'files':len(records),'pages':sum(len(r.get('pages',[])) for r in records),'pages_needing_visual_review':sum(p['needs_visual_review'] for r in records for p in r.get('pages',[])),'failed_files':[r['path'] for r in records if 'error' in r],'report':dest.relative_to(ROOT).as_posix()}
     print(json.dumps(summary,ensure_ascii=False,indent=2))
     return bool(summary['failed_files'])
 

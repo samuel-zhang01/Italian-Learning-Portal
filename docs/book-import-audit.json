@@ -1,0 +1,676 @@
+{
+  "reviewedAt": "2026-10-24T17:49:46.905268+00:00",
+  "scope": "Two user-authorized signed-in Italian study books. Coverage is measured against observed accessible source inventories; unavailable source assets remain explicit. No deployment or repository commit was performed.",
+  "methods": [
+    "Native unencrypted XPS assets retained through ordinary reader HTTP range responses and converted to searchable PDF with PyMuPDF.",
+    "Page-preserving PDF text extraction; canvas capture and Italian/English OCR retained as a fallback.",
+    "Observed activity URLs matched to the reader inventory, then parsed in an inert detached DOM without executing publisher scripts.",
+    "All response fields blanked; source feedback, scripts and account UI excluded.",
+    "Observed images, audio, videos, transcript PDFs and supplied caption files archived with byte counts and SHA-256 checksums.",
+    "Malformed supplied captions retain all source text with explicit untimed/noncanonical provenance, without invented timing or speech transcription."
+  ],
+  "books": [
+    {
+      "id": "nuovo-espresso-plus-1",
+      "title": "NUOVO ESPRESSO PLUS 1",
+      "status": "verified-with-gaps",
+      "canonicalPDF": {
+        "path": "materials/books/nuovo-espresso-plus-1/originals/reader-native-pdf/nuovo-espresso-plus-1-complete-book.pdf",
+        "bytes": 38526585,
+        "sha256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf",
+        "status": "complete",
+        "pages": 240,
+        "expectedPublisherPages": 240,
+        "expectedReaderPages": 240,
+        "publisher_extent_discrepancy_pages": 0,
+        "extent_note": null,
+        "sectionOffsets": [
+          {
+            "section": "intro e mappa dell'Italia",
+            "section_slug": "intro-e-mappa-dell-italia",
+            "source": "originals/reader-native/intro-e-mappa-dell-italia.bpdf",
+            "section_pdf": "originals/reader-native-pdf/intro-e-mappa-dell-italia.pdf",
+            "start_page": 1,
+            "end_page": 6,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 1 | Primi contatti",
+            "section_slug": "lezione-1-primi-contatti",
+            "source": "originals/reader-native/lezione-1-primi-contatti.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-1-primi-contatti.pdf",
+            "start_page": 7,
+            "end_page": 18,
+            "pages": 12
+          },
+          {
+            "section": "Lezione 2 | Io e gli altri",
+            "section_slug": "lezione-2-io-e-gli-altri",
+            "source": "originals/reader-native/lezione-2-io-e-gli-altri.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-2-io-e-gli-altri.pdf",
+            "start_page": 19,
+            "end_page": 32,
+            "pages": 14
+          },
+          {
+            "section": "Facciamo il punto 1",
+            "section_slug": "facciamo-il-punto-1",
+            "source": "originals/reader-native/facciamo-il-punto-1.bpdf",
+            "section_pdf": "originals/reader-native-pdf/facciamo-il-punto-1.pdf",
+            "start_page": 33,
+            "end_page": 38,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 3 | Buon appetito!",
+            "section_slug": "lezione-3-buon-appetito",
+            "source": "originals/reader-native/lezione-3-buon-appetito.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-3-buon-appetito.pdf",
+            "start_page": 39,
+            "end_page": 52,
+            "pages": 14
+          },
+          {
+            "section": "Lezione 4 | Tempo libero",
+            "section_slug": "lezione-4-tempo-libero",
+            "source": "originals/reader-native/lezione-4-tempo-libero.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-4-tempo-libero.pdf",
+            "start_page": 53,
+            "end_page": 64,
+            "pages": 12
+          },
+          {
+            "section": "Lezione 5 | In albergo",
+            "section_slug": "lezione-5-in-albergo",
+            "source": "originals/reader-native/lezione-5-in-albergo.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-5-in-albergo.pdf",
+            "start_page": 65,
+            "end_page": 78,
+            "pages": 14
+          },
+          {
+            "section": "Facciamo il punto 2",
+            "section_slug": "facciamo-il-punto-2",
+            "source": "originals/reader-native/facciamo-il-punto-2.bpdf",
+            "section_pdf": "originals/reader-native-pdf/facciamo-il-punto-2.pdf",
+            "start_page": 79,
+            "end_page": 84,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 6 | Tanti auguri!",
+            "section_slug": "lezione-6-tanti-auguri",
+            "source": "originals/reader-native/lezione-6-tanti-auguri.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-6-tanti-auguri.pdf",
+            "start_page": 85,
+            "end_page": 98,
+            "pages": 14
+          },
+          {
+            "section": "Lezione 7 | In giro in città",
+            "section_slug": "lezione-7-in-giro-in-citta",
+            "source": "originals/reader-native/lezione-7-in-giro-in-citta.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-7-in-giro-in-citta.pdf",
+            "start_page": 99,
+            "end_page": 110,
+            "pages": 12
+          },
+          {
+            "section": "Lezione 8 | Italia da scoprire",
+            "section_slug": "lezione-8-italia-da-scoprire",
+            "source": "originals/reader-native/lezione-8-italia-da-scoprire.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-8-italia-da-scoprire.pdf",
+            "start_page": 111,
+            "end_page": 124,
+            "pages": 14
+          },
+          {
+            "section": "Facciamo il punto 3",
+            "section_slug": "facciamo-il-punto-3",
+            "source": "originals/reader-native/facciamo-il-punto-3.bpdf",
+            "section_pdf": "originals/reader-native-pdf/facciamo-il-punto-3.pdf",
+            "start_page": 125,
+            "end_page": 130,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 9 | Sapori d'Italia",
+            "section_slug": "lezione-9-sapori-d-italia",
+            "source": "originals/reader-native/lezione-9-sapori-d-italia.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-9-sapori-d-italia.pdf",
+            "start_page": 131,
+            "end_page": 142,
+            "pages": 12
+          },
+          {
+            "section": "Lezione 10 | La famiglia",
+            "section_slug": "lezione-10-la-famiglia",
+            "source": "originals/reader-native/lezione-10-la-famiglia.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-10-la-famiglia.pdf",
+            "start_page": 143,
+            "end_page": 156,
+            "pages": 14
+          },
+          {
+            "section": "Facciamo il punto 4",
+            "section_slug": "facciamo-il-punto-4",
+            "source": "originals/reader-native/facciamo-il-punto-4.bpdf",
+            "section_pdf": "originals/reader-native-pdf/facciamo-il-punto-4.pdf",
+            "start_page": 157,
+            "end_page": 162,
+            "pages": 6
+          },
+          {
+            "section": "Esercizi LEZIONE 1",
+            "section_slug": "esercizi-lezione-1",
+            "source": "originals/reader-native/esercizi-lezione-1.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-1.pdf",
+            "start_page": 163,
+            "end_page": 169,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 2",
+            "section_slug": "esercizi-lezione-2",
+            "source": "originals/reader-native/esercizi-lezione-2.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-2.pdf",
+            "start_page": 170,
+            "end_page": 175,
+            "pages": 6
+          },
+          {
+            "section": "Esercizi LEZIONE 3",
+            "section_slug": "esercizi-lezione-3",
+            "source": "originals/reader-native/esercizi-lezione-3.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-3.pdf",
+            "start_page": 176,
+            "end_page": 181,
+            "pages": 6
+          },
+          {
+            "section": "Esercizi LEZIONE 4",
+            "section_slug": "esercizi-lezione-4",
+            "source": "originals/reader-native/esercizi-lezione-4.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-4.pdf",
+            "start_page": 182,
+            "end_page": 186,
+            "pages": 5
+          },
+          {
+            "section": "Esercizi LEZIONE 5",
+            "section_slug": "esercizi-lezione-5",
+            "source": "originals/reader-native/esercizi-lezione-5.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-5.pdf",
+            "start_page": 187,
+            "end_page": 192,
+            "pages": 6
+          },
+          {
+            "section": "Esercizi LEZIONE 6",
+            "section_slug": "esercizi-lezione-6",
+            "source": "originals/reader-native/esercizi-lezione-6.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-6.pdf",
+            "start_page": 193,
+            "end_page": 198,
+            "pages": 6
+          },
+          {
+            "section": "Esercizi LEZIONE 7",
+            "section_slug": "esercizi-lezione-7",
+            "source": "originals/reader-native/esercizi-lezione-7.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-7.pdf",
+            "start_page": 199,
+            "end_page": 205,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 8",
+            "section_slug": "esercizi-lezione-8",
+            "source": "originals/reader-native/esercizi-lezione-8.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-8.pdf",
+            "start_page": 206,
+            "end_page": 212,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 9",
+            "section_slug": "esercizi-lezione-9",
+            "source": "originals/reader-native/esercizi-lezione-9.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-9.pdf",
+            "start_page": 213,
+            "end_page": 217,
+            "pages": 5
+          },
+          {
+            "section": "Esercizi LEZIONE 10",
+            "section_slug": "esercizi-lezione-10",
+            "source": "originals/reader-native/esercizi-lezione-10.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-10.pdf",
+            "start_page": 218,
+            "end_page": 223,
+            "pages": 6
+          },
+          {
+            "section": "Grammatica",
+            "section_slug": "grammatica",
+            "source": "originals/reader-native/grammatica.bpdf",
+            "section_pdf": "originals/reader-native-pdf/grammatica.pdf",
+            "start_page": 224,
+            "end_page": 240,
+            "pages": 17
+          }
+        ]
+      },
+      "nativeSections": 38,
+      "nativeSectionPages": 299,
+      "interactive": {
+        "discoveredActivities": 207,
+        "attemptedActivities": 207,
+        "textCompleteActivities": 207,
+        "fullyCapturedActivities": 202,
+        "capturedPages": 444
+      },
+      "mediaFiles": 1198,
+      "mediaBytes": 1768267503,
+      "mediaMIMECounts": {
+        "image/png": 82,
+        "image/jpg": 825,
+        "audio/mpeg": 100,
+        "application/pdf": 100,
+        "video/mp4": 51,
+        "text/vtt": 40
+      },
+      "unavailableMediaFiles": 23,
+      "captionDerivatives": 40,
+      "captionSourceRecovery": {
+        "filesWithWarnings": 3,
+        "recoveredUntimedBlocks": 21,
+        "noncanonicalTimingCues": 2,
+        "suppliedPlainTranscripts": 1
+      },
+      "integrityFailures": 0,
+      "verifiedFiles": 2841,
+      "privateManifest": "materials/books/nuovo-espresso-plus-1/manifest.json",
+      "privateIndex": "materials/books/nuovo-espresso-plus-1/index.html"
+    },
+    {
+      "id": "nuovo-espresso-plus-2",
+      "title": "NUOVO ESPRESSO PLUS 2",
+      "status": "verified-with-gaps",
+      "canonicalPDF": {
+        "path": "materials/books/nuovo-espresso-plus-2/originals/reader-native-pdf/nuovo-espresso-plus-2-accessible-reader-book-263-pages.pdf",
+        "bytes": 40552770,
+        "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4",
+        "status": "complete-accessible-reader",
+        "pages": 263,
+        "expectedPublisherPages": 264,
+        "expectedReaderPages": 263,
+        "publisher_extent_discrepancy_pages": 1,
+        "extent_note": "All 26 accessible native main-book sections total 263 pages in reader contents order. The grammar section has 16 pages, numbered 248 through 263; the official TOC lists the irregular-verb table at 263, while the publisher product page advertises 264 pages. No accessible section supplies page 264. Its contents or whether it is blank are unknown; no page has been added or inferred.",
+        "sectionOffsets": [
+          {
+            "section": "intro e mappa dell'Italia",
+            "section_slug": "intro-e-mappa-dell-italia",
+            "source": "originals/reader-native/intro-e-mappa-dell-italia.bpdf",
+            "section_pdf": "originals/reader-native-pdf/intro-e-mappa-dell-italia.pdf",
+            "start_page": 1,
+            "end_page": 6,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 1 | In giro per negozi",
+            "section_slug": "lezione-1-in-giro-per-negozi",
+            "source": "originals/reader-native/lezione-1-in-giro-per-negozi.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-1-in-giro-per-negozi.pdf",
+            "start_page": 7,
+            "end_page": 22,
+            "pages": 16
+          },
+          {
+            "section": "Lezione 2 | Quando ero piccola",
+            "section_slug": "lezione-2-quando-ero-piccola",
+            "source": "originals/reader-native/lezione-2-quando-ero-piccola.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-2-quando-ero-piccola.pdf",
+            "start_page": 23,
+            "end_page": 36,
+            "pages": 14
+          },
+          {
+            "section": "Facciamo il punto 1",
+            "section_slug": "facciamo-il-punto-1",
+            "source": "originals/reader-native/facciamo-il-punto-1.bpdf",
+            "section_pdf": "originals/reader-native-pdf/facciamo-il-punto-1.pdf",
+            "start_page": 37,
+            "end_page": 42,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 3 | Un tipo interessante",
+            "section_slug": "lezione-3-un-tipo-interessante",
+            "source": "originals/reader-native/lezione-3-un-tipo-interessante.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-3-un-tipo-interessante.pdf",
+            "start_page": 43,
+            "end_page": 58,
+            "pages": 16
+          },
+          {
+            "section": "Lezione 4 | Che ne dici?",
+            "section_slug": "lezione-4-che-ne-dici",
+            "source": "originals/reader-native/lezione-4-che-ne-dici.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-4-che-ne-dici.pdf",
+            "start_page": 59,
+            "end_page": 72,
+            "pages": 14
+          },
+          {
+            "section": "Lezione 5 | Buon viaggio!",
+            "section_slug": "lezione-5-buon-viaggio",
+            "source": "originals/reader-native/lezione-5-buon-viaggio.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-5-buon-viaggio.pdf",
+            "start_page": 73,
+            "end_page": 86,
+            "pages": 14
+          },
+          {
+            "section": "Facciamo il punto 2",
+            "section_slug": "facciamo-il-punto-2",
+            "source": "originals/reader-native/facciamo-il-punto-2.bpdf",
+            "section_pdf": "originals/reader-native-pdf/facciamo-il-punto-2.pdf",
+            "start_page": 87,
+            "end_page": 92,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 6 | Stili di vita",
+            "section_slug": "lezione-6-stili-di-vita",
+            "source": "originals/reader-native/lezione-6-stili-di-vita.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-6-stili-di-vita.pdf",
+            "start_page": 93,
+            "end_page": 106,
+            "pages": 14
+          },
+          {
+            "section": "Lezione 7 | Come va?",
+            "section_slug": "lezione-7-come-va",
+            "source": "originals/reader-native/lezione-7-come-va.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-7-come-va.pdf",
+            "start_page": 107,
+            "end_page": 120,
+            "pages": 14
+          },
+          {
+            "section": "Lezione 8 | Il futuro è dietro l'angolo",
+            "section_slug": "lezione-8-il-futuro-e-dietro-l-angolo",
+            "source": "originals/reader-native/lezione-8-il-futuro-e-dietro-l-angolo.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-8-il-futuro-e-dietro-l-angolo.pdf",
+            "start_page": 121,
+            "end_page": 136,
+            "pages": 16
+          },
+          {
+            "section": "Facciamo il punto 3",
+            "section_slug": "facciamo-il-punto-3",
+            "source": "originals/reader-native/facciamo-il-punto-3.bpdf",
+            "section_pdf": "originals/reader-native-pdf/facciamo-il-punto-3.pdf",
+            "start_page": 137,
+            "end_page": 142,
+            "pages": 6
+          },
+          {
+            "section": "Lezione 9 | Il colpo di fulmine?",
+            "section_slug": "lezione-9-il-colpo-di-fulmine",
+            "source": "originals/reader-native/lezione-9-il-colpo-di-fulmine.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-9-il-colpo-di-fulmine.pdf",
+            "start_page": 143,
+            "end_page": 156,
+            "pages": 14
+          },
+          {
+            "section": "Lezione 10 | Casa dolce casa",
+            "section_slug": "lezione-10-casa-dolce-casa",
+            "source": "originals/reader-native/lezione-10-casa-dolce-casa.bpdf",
+            "section_pdf": "originals/reader-native-pdf/lezione-10-casa-dolce-casa.pdf",
+            "start_page": 157,
+            "end_page": 170,
+            "pages": 14
+          },
+          {
+            "section": "Facciamo il punto 4",
+            "section_slug": "facciamo-il-punto-4",
+            "source": "originals/reader-native/facciamo-il-punto-4.bpdf",
+            "section_pdf": "originals/reader-native-pdf/facciamo-il-punto-4.pdf",
+            "start_page": 171,
+            "end_page": 176,
+            "pages": 6
+          },
+          {
+            "section": "Esercizi LEZIONE 1",
+            "section_slug": "esercizi-lezione-1",
+            "source": "originals/reader-native/esercizi-lezione-1.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-1.pdf",
+            "start_page": 177,
+            "end_page": 183,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 2",
+            "section_slug": "esercizi-lezione-2",
+            "source": "originals/reader-native/esercizi-lezione-2.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-2.pdf",
+            "start_page": 184,
+            "end_page": 190,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 3",
+            "section_slug": "esercizi-lezione-3",
+            "source": "originals/reader-native/esercizi-lezione-3.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-3.pdf",
+            "start_page": 191,
+            "end_page": 197,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 4",
+            "section_slug": "esercizi-lezione-4",
+            "source": "originals/reader-native/esercizi-lezione-4.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-4.pdf",
+            "start_page": 198,
+            "end_page": 204,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 5",
+            "section_slug": "esercizi-lezione-5",
+            "source": "originals/reader-native/esercizi-lezione-5.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-5.pdf",
+            "start_page": 205,
+            "end_page": 211,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 6",
+            "section_slug": "esercizi-lezione-6",
+            "source": "originals/reader-native/esercizi-lezione-6.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-6.pdf",
+            "start_page": 212,
+            "end_page": 219,
+            "pages": 8
+          },
+          {
+            "section": "Esercizi LEZIONE 7",
+            "section_slug": "esercizi-lezione-7",
+            "source": "originals/reader-native/esercizi-lezione-7.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-7.pdf",
+            "start_page": 220,
+            "end_page": 226,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 8",
+            "section_slug": "esercizi-lezione-8",
+            "source": "originals/reader-native/esercizi-lezione-8.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-8.pdf",
+            "start_page": 227,
+            "end_page": 233,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 9",
+            "section_slug": "esercizi-lezione-9",
+            "source": "originals/reader-native/esercizi-lezione-9.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-9.pdf",
+            "start_page": 234,
+            "end_page": 240,
+            "pages": 7
+          },
+          {
+            "section": "Esercizi LEZIONE 10",
+            "section_slug": "esercizi-lezione-10",
+            "source": "originals/reader-native/esercizi-lezione-10.bpdf",
+            "section_pdf": "originals/reader-native-pdf/esercizi-lezione-10.pdf",
+            "start_page": 241,
+            "end_page": 247,
+            "pages": 7
+          },
+          {
+            "section": "Grammatica",
+            "section_slug": "grammatica",
+            "source": "originals/reader-native/grammatica.bpdf",
+            "section_pdf": "originals/reader-native-pdf/grammatica.pdf",
+            "start_page": 248,
+            "end_page": 263,
+            "pages": 16
+          }
+        ]
+      },
+      "nativeSections": 38,
+      "nativeSectionPages": 369,
+      "interactive": {
+        "discoveredActivities": 213,
+        "attemptedActivities": 213,
+        "textCompleteActivities": 213,
+        "fullyCapturedActivities": 213,
+        "capturedPages": 429
+      },
+      "mediaFiles": 859,
+      "mediaBytes": 1969678431,
+      "mediaMIMECounts": {
+        "image/png": 603,
+        "text/vtt": 40,
+        "video/mp4": 50,
+        "image/jpg": 2,
+        "application/pdf": 85,
+        "audio/mpeg": 79
+      },
+      "unavailableMediaFiles": 0,
+      "captionDerivatives": 40,
+      "captionSourceRecovery": {
+        "filesWithWarnings": 1,
+        "recoveredUntimedBlocks": 2,
+        "noncanonicalTimingCues": 0,
+        "suppliedPlainTranscripts": 0
+      },
+      "integrityFailures": 0,
+      "verifiedFiles": 2507,
+      "privateManifest": "materials/books/nuovo-espresso-plus-2/manifest.json",
+      "privateIndex": "materials/books/nuovo-espresso-plus-2/index.html"
+    }
+  ],
+  "totals": {
+    "mainBookPages": 503,
+    "observedActivities": 420,
+    "textCompleteActivities": 420,
+    "interactivePages": 873,
+    "downloadedMediaFiles": 2057,
+    "unavailableSourceMedia": 23
+  },
+  "remainingSourceGaps": [
+    "Plus 1: 21 source images return403; one image path and one supplied caption return404. A representative image also fails in the ordinary reader.",
+    "Plus 2: the publisher advertises264 physical pages, while all26 accessible main-book sections end at263; the unknown page is not inferred.",
+    "Plus 1 publisher audio ZIPs require separate publisher access; observed reader audio is archived. The Plus 2 official guide is retained as an alternate to the separate reader guide attachment."
+  ],
+  "privateBoundary": {
+    "sourceTrees": [
+      "materials/books/",
+      "data/incoming/books/"
+    ],
+    "gitIgnored": true,
+    "trackedPlaceholderOnly": "materials/books/.gitkeep",
+    "publicBuildRoot": "site-dist/",
+    "publicBuildFiles": 5,
+    "learnerDataReadOrChanged": false,
+    "browserSessionExported": false,
+    "published": false,
+    "finalAudit": {
+      "checkedAt": "2026-10-24T17:53:44.216993+00:00",
+      "status": "passed",
+      "ignoredPrivateFiles": 6562,
+      "unignoredPrivateFiles": 0,
+      "trackedPrivateFiles": 0,
+      "symlinks": 0,
+      "specialFiles": 0,
+      "publicBuildFiles": 5,
+      "canonicalPDFs": [
+        {
+          "book": "nuovo-espresso-plus-1",
+          "sha256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf",
+          "pages": 240
+        },
+        {
+          "book": "nuovo-espresso-plus-2",
+          "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4",
+          "pages": 263
+        }
+      ],
+      "diffWhitespaceCheck": "passed",
+      "captionRepairsComplete": true,
+      "privateIndexesComplete": true,
+      "finalBuildComplete": true
+    }
+  },
+  "validation": {
+    "dailyTests": 112,
+    "applicationTests": 69,
+    "mediaTests": 35,
+    "captionTests": 8,
+    "typecheck": "passed",
+    "lint": "passed",
+    "dailyBuild": "passed",
+    "browserReport": "docs/book-course-student-audit.json",
+    "courseReport": "docs/book-course-review.json"
+  },
+  "interpretation": [
+    "Native section PDFs, the assembled main book, media attachments and publisher ZIPs contain overlapping representations; their counts are not distinct textbook content.",
+    "Capturing every accessible source page does not mean every exercise was pedagogically reviewed. The public course contains original companion practice."
+  ],
+  "privateIndex": {
+    "root": "materials/books/index.html",
+    "localPreview": "http://127.0.0.1:5198/",
+    "activityLinks": 420,
+    "verifiedLocalLandingAndCatalogueLinks": 4548,
+    "mediaPDFs": 185,
+    "mediaPDFPhysicalPages": 404,
+    "captionOriginals": 80,
+    "readableTimedCues": 2013,
+    "untimedSourceBlocks": 23,
+    "noncanonicalTimingCues": 2,
+    "preservedEmptyTimedBlocks": 2,
+    "captionWarningFiles": 4,
+    "audioSpeechTranscriptionPerformed": false,
+    "browserSmoke": {
+      "status": "passed",
+      "rootCards": 2,
+      "bookIndexes": 2,
+      "audioMetadataDecoded": true,
+      "audioDurationSeconds": 16.932667,
+      "externalNetworkRequests": 0,
+      "runtimeErrors": 0,
+      "audioPlayback": {
+        "muted": true,
+        "timeAdvanced": true,
+        "elapsedSeconds": 0.610053
+      }
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "reviewedOn": "2026-10-24",
+  "scope": "Bilingual chapter dashboard for the existing Nuovo Espresso Plus 1 and 2 practice",
+  "implementation": {
+    "component": "app/learning/chapters.tsx",
+    "pureModel": "app/learning/chapter-dashboard.ts",
+    "overviewRoute": "chapters",
+    "detailRoute": "chapters/<existing chapter bank ID>",
+    "chapterCount": 20,
+    "checkpointsPerChapter": 4,
+    "sourceOfMappings": "Existing chapter bank book/chapter/mission metadata; original chapter mission source references; existing four-stage blocks in espresso-plus-a1-a2; existing linked grammar and A2 scene IDs",
+    "loading": "Full catalogues are imported only by the dashboard component, which the portal loads lazily. The pure model imports types only."
+  },
+  "evidenceContract": {
+    "recorded": [
+      "Saved core mission completion",
+      "Saved linked grammar-unit completion",
+      "Explicit saved route-day completion in the currently selected book programme"
+    ],
+    "separatePracticeEvidence": [
+      "Cards self-reported remembered in saved sessions",
+      "Latest vocabulary game replies, including supported answers",
+      "Saved optional gist and changed-story drafts",
+      "Latest A2 scene replies, including supported answers"
+    ],
+    "noInferences": "Self-reports, drafts and game answers never complete a lesson, grammar unit or route checkpoint. A1 diagnostics are not presented as A2 assessment. Introductory present-subjunctive scope remains explicit."
+  },
+  "progressPreservation": {
+    "writesProgress": false,
+    "changesActiveProgramme": false,
+    "changesSavedDay": false,
+    "stableIds": "Uses the existing twenty bank IDs, twenty mission IDs, ten scene IDs, grammar IDs and eighty route-day indices. No content IDs or saved objects are rewritten.",
+    "recommendation": "Traverse unfinished prerequisites before linked grammar, then the core lesson and the existing route. Open the programme page without auto-selecting a programme or jumping its saved day."
+  },
+  "sourcePolicy": {
+    "physicalPages": "Exact existing mission references, bounded against source page counts; combined PDF connection offsets are applied only to the opened link.",
+    "classification": "Reader PDF, contents index, teacher support and class source are labelled separately.",
+    "privateFiles": "No raw book text or binaries are added. Source PDFs stay in ignored local folders; links use memory-only connected PDF URLs."
+  },
+  "validation": {
+    "tests": "tests/chapter-dashboard.test.mjs",
+    "status": "Eight focused model tests, focused ESLint, typecheck and diff checks passed. Six isolated browser workflow groups and twelve responsive layout checks passed after root integration.",
+    "visualReview": {
+      "status": "passed",
+      "observed": "EN and IT 320-pixel next-action cards, the 390-pixel connected-source panel, the desktop overview and the Italian 320-pixel chapter detail were visually inspected. Controls and text fit their containers; book, source-role and recorded-versus-self-report labels remain distinct.",
+      "screenshots": [
+        "work/chapter-dashboard-audit/en-320-next-step.png",
+        "work/chapter-dashboard-audit/it-320-next-step.png",
+        "work/chapter-dashboard-audit/en-390-connected-reader-page-offsets.png",
+        "work/chapter-dashboard-audit/en-1440-overview.png",
+        "work/chapter-dashboard-audit/it-320-chapter-detail.png"
+      ]
+    },
+    "browser": {
+      "status": "passed",
+      "generator": "scripts/audit_chapter_dashboard_browser.mjs",
+      "reviewedOn": "2026-10-24",
+      "preview": "http://127.0.0.1:5197",
+      "method": "Owned disposable headless Chromium with validated synthetic progress; no shared CDP/profile or real learner state.",
+      "sandboxException": "Existing explicit browser-view allowNoSandbox config used on this root host.",
+      "workflowGroupsPassed": 6,
+      "checks": [
+        {
+          "label": "Twenty chapters, book filter URL and reload work without replacing the active programme/day"
+        },
+        {
+          "label": "Chapter prerequisite, core, vocabulary and A2 conversation links are exact, focused and programme-preserving"
+        },
+        {
+          "label": "Recorded core/grammar/checkpoint completion stays distinct from full vocabulary reports, supported replies and saved drafts"
+        },
+        {
+          "label": "Actual locally matched combined PDF produces chapter reader links at exact cited physical page +240, with separate teacher-support labels",
+          "physicalPages": [
+            19,
+            249,
+            250
+          ],
+          "offset": 240
+        },
+        {
+          "label": "EN/IT overview and chapter detail fit 320, 390 and 1440 pixel viewports",
+          "layoutChecks": 12
+        },
+        {
+          "label": "No runtime errors, external requests or network mutations occurred"
+        }
+      ],
+      "layouts": [
+        {
+          "name": "overview",
+          "language": "en",
+          "width": 320,
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "name": "chapter-detail",
+          "language": "en",
+          "width": 320,
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "name": "overview",
+          "language": "en",
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "overflowingControls": []
+        },
+        {
+          "name": "chapter-detail",
+          "language": "en",
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "overflowingControls": []
+        },
+        {
+          "name": "overview",
+          "language": "en",
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "overflowingControls": []
+        },
+        {
+          "name": "chapter-detail",
+          "language": "en",
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "overflowingControls": []
+        },
+        {
+          "name": "overview",
+          "language": "it",
+          "width": 320,
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "name": "chapter-detail",
+          "language": "it",
+          "width": 320,
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "name": "overview",
+          "language": "it",
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "overflowingControls": []
+        },
+        {
+          "name": "chapter-detail",
+          "language": "it",
+          "width": 390,
+          "viewport": 390,
+          "document": 390,
+          "overflowingControls": []
+        },
+        {
+          "name": "overview",
+          "language": "it",
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "overflowingControls": []
+        },
+        {
+          "name": "chapter-detail",
+          "language": "it",
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "overflowingControls": []
+        }
+      ],
+      "screenshots": [
+        "work/chapter-dashboard-audit/en-390-recorded-and-self-report-evidence.png",
+        "work/chapter-dashboard-audit/en-390-connected-reader-page-offsets.png",
+        "work/chapter-dashboard-audit/en-320-overview.png",
+        "work/chapter-dashboard-audit/en-320-chapter-detail.png",
+        "work/chapter-dashboard-audit/en-320-next-step.png",
+        "work/chapter-dashboard-audit/en-390-overview.png",
+        "work/chapter-dashboard-audit/en-390-chapter-detail.png",
+        "work/chapter-dashboard-audit/en-390-next-step.png",
+        "work/chapter-dashboard-audit/en-1440-overview.png",
+        "work/chapter-dashboard-audit/en-1440-chapter-detail.png",
+        "work/chapter-dashboard-audit/en-1440-next-step.png",
+        "work/chapter-dashboard-audit/it-320-overview.png",
+        "work/chapter-dashboard-audit/it-320-chapter-detail.png",
+        "work/chapter-dashboard-audit/it-320-next-step.png",
+        "work/chapter-dashboard-audit/it-390-overview.png",
+        "work/chapter-dashboard-audit/it-390-chapter-detail.png",
+        "work/chapter-dashboard-audit/it-390-next-step.png",
+        "work/chapter-dashboard-audit/it-1440-overview.png",
+        "work/chapter-dashboard-audit/it-1440-chapter-detail.png",
+        "work/chapter-dashboard-audit/it-1440-next-step.png"
+      ],
+      "runtimeErrors": [],
+      "blockedRequests": [],
+      "limits": [
+        "Synthetic evidence isolates dashboard behavior; it does not represent a human completion of all chapters.",
+        "Viewport emulation, not physical phones.",
+        "The existing combined PDF was locally matched for exact link offsets; this does not repeat full PDF export/content verification.",
+        "Publisher media and pronunciation were not exercised.",
+        "No production site, shared reader, local learner database or backups were accessed."
+      ]
+    }
+  }
+}

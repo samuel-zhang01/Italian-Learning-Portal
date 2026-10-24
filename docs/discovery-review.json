@@ -1,0 +1,132 @@
+{
+  "reviewedOn": "2026-10-24",
+  "status": "passed focused checks and targeted integrated browser verification",
+  "scope": "Cross-site bilingual material discovery and catalogue navigation continuity. No changes to grammar IDs, progress schema or answer grading. Combined-PDF offsets are owned by the parent integration.",
+  "sourceInspectionFindings": [
+    {
+      "finding": "The previous grammar index omitted formal topic terms: imperfetto returned no cards despite its authored unit.",
+      "resolution": "Topic IDs, bilingual teaching metadata and explicit aliases are searchable; answers/models are excluded from result projections."
+    },
+    {
+      "finding": "Opening a grammar search result then returning cleared the past query, increasing 9 results to 55.",
+      "resolution": "Query and filter are encoded in catalogue/detail URLs and restored on mount."
+    },
+    {
+      "finding": "Selecting native Plus1 page135 cleared the filter, displayed240 rows and left the task at y1163/1290 on an844px phone viewport.",
+      "resolution": "Companion query persists in its URL; the selected page heading receives focus and is scrolled into view."
+    }
+  ],
+  "implemented": [
+    "DiscoveryView searches grammar, short lessons, programme metadata, vocabulary-bank metadata, source catalogues and public companion metadata.",
+    "Result cards identify material type, available level and bounded physical source-page references; reference pages explicitly carry no practice credit.",
+    "Grammar primary continuation prefers an unfinished active-programme unit whose prerequisites are completed, then retains the global fallback.",
+    "Input changes replace the current history entry without remounting on every keystroke; opening a result uses ordinary hash navigation.",
+    "Vocabulary word terms are searchable in both languages, while result cards show only bank metadata. Subjunctive aliases were checked against actual unit IDs."
+  ],
+  "verification": {
+    "focusedTests": {
+      "command": "node --experimental-strip-types --test tests/discovery.test.mjs",
+      "passed": 7,
+      "failed": 0
+    },
+    "ownedFileEslint": "passed",
+    "typecheck": "passed after renaming pure helpers to discovery-index.ts to avoid component module shadowing",
+    "gitDiffCheck": "passed",
+    "browser": {
+      "status": "passed",
+      "target": "http://127.0.0.1:5197/",
+      "isolation": "Standalone owned headless Chromium with fresh synthetic contexts; no shared CDP, logged-in book tabs, existing profile, learner databases or backups accessed.",
+      "workflowGroups": 16,
+      "phoneWorkflowGroups": 10,
+      "desktopAndVocabularyDeepLinkGroups": 3,
+      "chosenBankFocusSamples": 3,
+      "testedLanguageWidths": [
+        {
+          "language": "en",
+          "width": 390,
+          "height": 844
+        },
+        {
+          "language": "it",
+          "width": 320,
+          "height": 844
+        },
+        {
+          "language": "en",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "runtimePageErrors": [],
+      "observations": [
+        "Typing retains input focus; discovery q/kind/level survive reload and browser Back in both UI languages.",
+        "Discovery Plus 1 135 opens native source companion135 with its heading focused at y24 on both phone widths.",
+        "Grammar imperfetto with the tense filter retains all3 results through unit opening, return and reload.",
+        "Companion q135 retains one result after selecting its page and reloading; task heading remains focused and visible.",
+        "With15 explicitly synthetic prerequisite completions, grammar continuation selects active-programme a2-imperfetto instead of the unrelated first globally unfinished unit.",
+        "English scarf and Italian sciarpa searches open vocabulary/espresso2-u01, the matching chapter bank.",
+        "Desktop discovery has two columns and no document overflow; chosen-bank headings/cards fit all3 sampled widths."
+      ],
+      "evidenceFiles": [
+        "work/discovery-audit/browser-report.json",
+        "work/discovery-audit/desktop-vocabulary-report.json",
+        "work/discovery-audit/vocabulary-focus-report.json"
+      ],
+      "screenshots": [
+        "en-390-discovery-source.png",
+        "it-320-discovery-source.png",
+        "en-390-companion-focus.png",
+        "it-320-companion-focus.png",
+        "en-1440-discovery.png",
+        "en-390-vocabulary-chapter-focus.png",
+        "it-320-vocabulary-chapter-focus.png",
+        "en-1440-vocabulary-chapter-focus.png"
+      ],
+      "visuallyReviewedScreenshots": [
+        "en-390-discovery-source.png",
+        "it-320-companion-focus.png",
+        "en-1440-discovery.png",
+        "en-390-vocabulary-chapter-focus.png",
+        "it-320-vocabulary-chapter-focus.png",
+        "en-1440-vocabulary-chapter-focus.png"
+      ],
+      "auditScriptAdjustment": "Initial heading focus is checked before the IT button is clicked; retaining focus on a clicked language control is expected. The first probe stopped on that audit-only assumption; the corrected complete run passed.",
+      "applicationFailures": []
+    },
+    "reusableBrowserAudit": {
+      "script": "scripts/audit_discovery_browser.mjs",
+      "command": "node --experimental-strip-types scripts/audit_discovery_browser.mjs",
+      "rootRerunAfterConsolidation": "passed all 16 workflow groups against the final built preview",
+      "evidence": "work/discovery-browser/browser-report.json"
+    }
+  },
+  "limitations": [
+    "Browser verification is a targeted Chromium sample, not a full repeat of the earlier42-route audit, physical-device/screen-reader certification or real learner study.",
+    "Programme continuation uses explicitly synthetic prerequisite completions to isolate selection behavior; the full80-day programme was not completed.",
+    "Large catalogue/bundle loading remains a separately deferred performance task. This package retains existing JSON imports.",
+    "Programme result links open the programme view and never change the active programme automatically.",
+    "The search normalizer folds accents only for discovery. Italian answer grading remains unchanged.",
+    "Combined-PDF connection/offset/disconnect behavior is verified separately by the parent; these discovery browser checks did not reopen private PDFs."
+  ],
+  "verifiedAt": "2026-10-24T19:00:23.514350+00:00",
+  "reusableBrowserAudit": {
+    "script": "scripts/audit_discovery_browser.mjs",
+    "command": "PARLIAMO_URL=http://127.0.0.1:5197 node --experimental-strip-types scripts/audit_discovery_browser.mjs",
+    "defaultEvidenceDirectory": "work/discovery-browser",
+    "configuration": [
+      "PARLIAMO_URL",
+      "BROWSER_EXECUTABLE_PATH",
+      "DISCOVERY_REPORT_DIR (must remain inside ignored work/)"
+    ],
+    "coverage": "Consolidates the previously verified16 phone/desktop discovery, catalogue continuity, programme continuation and vocabulary focus/deep-link workflow groups.",
+    "isolation": "Launches its own Chromium process and fresh contexts; never connects to shared CDP. Uses validated synthetic progress and rejects network mutations/external requests.",
+    "output": "Viewport-height screenshots and aggregate browser-report.json under ignored work/; does not overwrite the manually reviewed audit or its screenshots.",
+    "validation": {
+      "nodeCheck": "passed",
+      "eslint": "passed",
+      "gitDiffCheck": "passed",
+      "consolidatedBrowserRunnerExecuted": false
+    },
+    "note": "The constituent flows were exercised in the completed integrated audit. Consolidation received syntax/lint checks without repeating those browser workflows."
+  }
+}

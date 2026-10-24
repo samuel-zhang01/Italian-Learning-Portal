@@ -1,0 +1,123 @@
+{
+  "completedAt": "2026-10-24T21:15:14.787852+00:00",
+  "status": "passed locally",
+  "plan": "docs/next-learning-enhancement-plan.json",
+  "outcomes": {
+    "loading": {
+      "method": "Three cold disposable Chromium contexts on localhost, with cache disabled by request routing. Initial Today remains fully usable; compressed bytes are computed from the exact requested built scripts.",
+      "baseline": {
+        "initialJavaScriptBytes": 2528068,
+        "initialGzipBytes": 482883,
+        "medianUsableMs": 445,
+        "coldSamples": 3
+      },
+      "after": {
+        "initialJavaScriptBytes": 608582,
+        "initialGzipBytes": 171340,
+        "medianUsableMs": 183,
+        "coldSamples": 3
+      },
+      "javaScriptBytesReducedPercent": 75.93,
+      "gzipBytesReducedPercent": 64.52,
+      "evidence": [
+        {
+          "path": "work/loading-audit/baseline.json",
+          "bytes": 2674,
+          "sha256": "1735b056924d6c9f29a3501812c8bcfb28a7f25e79c7f3d79fc202f4e068732a"
+        },
+        {
+          "path": "work/loading-audit/after.json",
+          "bytes": 2664,
+          "sha256": "41b07c08521da24c8e62807c9ba36f354ff9d25a94ace3437be386b8ad52fe9c"
+        }
+      ],
+      "limitations": "Local timing is not a real mobile/network performance score. Byte reduction and deferred resource requests are the acceptance measurements."
+    },
+    "chapterDashboard": {
+      "chapters": 20,
+      "books": 2,
+      "linkedStudyCheckpoints": 80,
+      "bilingual": true,
+      "browserWorkflowGroupsPassed": 6,
+      "responsiveLayoutChecksPassed": 12,
+      "report": "docs/chapter-dashboard-review.json"
+    },
+    "reviewQueue": {
+      "sources": [
+        "lesson",
+        "grammar",
+        "word",
+        "arcade"
+      ],
+      "estimatedTimeChoicesMinutes": [
+        2,
+        5,
+        10
+      ],
+      "browserWorkflowGroupsPassed": 15,
+      "report": "docs/review-queue-review.json"
+    },
+    "recallDraftFix": "An optional validated per-exercise pending recall draft keeps unfinished text and hint use through reload/midnight. Typing leaves prior checked answers and lesson position intact. Checking consumes the pending draft; the next scheduled recall starts fresh."
+  },
+  "validation": {
+    "dailyTestsPassed": 185,
+    "dailyTestsFailed": 0,
+    "typecheck": "passed",
+    "lint": "passed",
+    "buildDaily": "passed",
+    "diffCheck": "passed",
+    "fullVersusCompactPlannerCases": 3696,
+    "loadingDeepRoutesPassed": 10,
+    "loadingFailureRecoveryLanguages": [
+      "en",
+      "it"
+    ],
+    "existingDiscoveryBrowserChecksPassed": 16,
+    "existingGuidedChapterBrowserGroupsPassed": 10
+  },
+  "preservation": {
+    "progressVersion": 1,
+    "oldBackupsAccepted": true,
+    "missionAndExerciseIDsPreserved": true,
+    "firstAttemptsPreserved": true,
+    "currentProgrammeAndDayPreserved": true,
+    "unfinishedArcadeRoundsPreserved": true,
+    "realLearnerDataAccessed": false,
+    "sharedSignedInBrowserAccessed": false
+  },
+  "privacy": {
+    "privateFolders": [
+      "materials/books",
+      "data/incoming"
+    ],
+    "privateStudyFiles": 7725,
+    "ignoredPrivateStudyFiles": 7725,
+    "trackedPrivateSourceFiles": 0,
+    "builtFileCount": 20,
+    "builtSuffixes": [
+      ".css",
+      ".html",
+      ".js",
+      ".svg",
+      ".webp"
+    ]
+  },
+  "publication": {
+    "published": false,
+    "buildFolder": "site-dist/",
+    "scope": "Local implementation and verified static build."
+  },
+  "limits": [
+    "Cold-start timings were measured on localhost, not a physical mobile network.",
+    "Grammar and page-companion chunks remain large when their study sections are first opened.",
+    "Review durations are estimates. Personal word ratings and written/spoken production remain self-assessed.",
+    "Software and browser checks do not establish learning outcomes or certify a CEFR level."
+  ],
+  "evidence": [
+    "docs/loading-review.json",
+    "docs/chapter-dashboard-review.json",
+    "docs/review-queue-review.json",
+    "docs/discovery-review.json",
+    "docs/chapter-student-audit.json"
+  ]
+}

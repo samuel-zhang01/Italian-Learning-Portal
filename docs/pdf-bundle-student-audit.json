@@ -1,0 +1,355 @@
+{
+  "checkedAt": "2026-10-24T18:57:25.842Z",
+  "status": "passed",
+  "target": "http://127.0.0.1:5197",
+  "isolation": "Owned disposable browser and validated synthetic learner state; no shared browser/profile or real learner records accessed",
+  "checks": [
+    {
+      "label": "Renamed real 503-page combined PDF connects both books with one live local object URL",
+      "offsets": [
+        0,
+        240
+      ]
+    },
+    {
+      "label": "Core lesson citations add the Book 2 offset",
+      "sourcePage": 19,
+      "exportedPage": 259
+    },
+    {
+      "label": "Grammar citations add the same offset",
+      "sourcePage": 19,
+      "exportedPage": 259
+    },
+    {
+      "label": "Page companion 33 opens physical page 273 in combined books"
+    },
+    {
+      "label": "Disconnecting Book 1 retains Book 2 and its live shared URL"
+    },
+    {
+      "label": "Individual replacement resets Book 2 to page 1 and releases the unused bundle once"
+    },
+    {
+      "label": "A same-name incorrect PDF cannot replace a recognized file"
+    },
+    {
+      "label": "PDF bytes, names, object URLs and connections never enter synthetic progress storage"
+    },
+    {
+      "label": "Reload releases all PDF connections without changing progress"
+    },
+    {
+      "label": "48 EN/IT phone and desktop route layouts fit, with all five main destinations visible"
+    },
+    {
+      "label": "No uploads, external requests or browser runtime errors occurred"
+    }
+  ],
+  "layouts": [
+    {
+      "language": "en",
+      "width": 320,
+      "route": "today",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "route": "programmes",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "route": "grammar",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "route": "discover",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "route": "progress",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "route": "vocabulary/espresso2-u10",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "route": "games/espresso2-u10",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 320,
+      "route": "materials",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "route": "today",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "route": "programmes",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "route": "grammar",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "route": "discover",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "route": "progress",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "route": "vocabulary/espresso2-u10",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "route": "games/espresso2-u10",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 390,
+      "route": "materials",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "route": "today",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "route": "programmes",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "route": "grammar",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "route": "discover",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "route": "progress",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "route": "vocabulary/espresso2-u10",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "route": "games/espresso2-u10",
+      "overflow": 0
+    },
+    {
+      "language": "en",
+      "width": 1440,
+      "route": "materials",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 320,
+      "route": "today",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 320,
+      "route": "programmes",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 320,
+      "route": "grammar",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 320,
+      "route": "discover",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 320,
+      "route": "progress",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 320,
+      "route": "vocabulary/espresso2-u10",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 320,
+      "route": "games/espresso2-u10",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 320,
+      "route": "materials",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 390,
+      "route": "today",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 390,
+      "route": "programmes",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 390,
+      "route": "grammar",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 390,
+      "route": "discover",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 390,
+      "route": "progress",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 390,
+      "route": "vocabulary/espresso2-u10",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 390,
+      "route": "games/espresso2-u10",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 390,
+      "route": "materials",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 1440,
+      "route": "today",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 1440,
+      "route": "programmes",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 1440,
+      "route": "grammar",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 1440,
+      "route": "discover",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 1440,
+      "route": "progress",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 1440,
+      "route": "vocabulary/espresso2-u10",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 1440,
+      "route": "games/espresso2-u10",
+      "overflow": 0
+    },
+    {
+      "language": "it",
+      "width": 1440,
+      "route": "materials",
+      "overflow": 0
+    }
+  ],
+  "errors": [],
+  "forbiddenRequests": [],
+  "screenshots": [
+    "work/pdf-bundle-browser/en-390-combined-connected.png",
+    "work/pdf-bundle-browser/en-390-offset-companion.png",
+    "work/pdf-bundle-browser/en-320-materials.png",
+    "work/pdf-bundle-browser/en-390-materials.png",
+    "work/pdf-bundle-browser/en-1440-materials.png",
+    "work/pdf-bundle-browser/it-320-materials.png",
+    "work/pdf-bundle-browser/it-390-materials.png",
+    "work/pdf-bundle-browser/it-1440-materials.png"
+  ],
+  "limitations": [
+    "The ordinary 503-page student bundle and a canonical individual replacement were exercised in the browser; the larger reference/complete aliases are covered by hash/page metadata and store tests.",
+    "PDF citation hrefs, local blob reads and boundary renders verify addressing; browser PDF viewer pagination and third-party PDF viewers are not controlled by this app."
+  ]
+}

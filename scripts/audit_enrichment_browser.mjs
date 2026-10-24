@@ -176,7 +176,7 @@ try {
       .waitFor();
   }
   ok(
-    "all 36 enrichment scenes accept their authored comprehension answers in the browser",
+    `all ${content.lessons.length} enrichment scenes accept their authored comprehension answers in the browser`,
   );
   for (const width of [390, 320]) {
     await page.setViewportSize({ width, height: 844 });

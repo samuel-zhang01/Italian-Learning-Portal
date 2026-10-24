@@ -1,0 +1,172 @@
+.chapter-dashboard {
+  max-width: 1160px;
+}
+.chapter-dashboard > section,
+.chapter-book-filter {
+  margin: 28px 0;
+}
+.chapter-dashboard .chapter-goal {
+  max-width: 76ch;
+  font-size: 17px;
+}
+.chapter-back {
+  margin-bottom: 22px;
+}
+.chapter-next,
+.chapter-overview-summary {
+  border-left: 4px solid var(--green);
+}
+.chapter-next > .hint,
+.chapter-overview-summary > .hint {
+  margin: 16px 0 0;
+}
+.chapter-overview-summary strong {
+  font-size: 26px;
+  color: var(--green);
+}
+.chapter-book-filter,
+.chapter-source-pages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.chapter-book-filter [aria-pressed="true"] {
+  background: var(--green);
+  color: var(--paper);
+}
+.chapter-cards,
+.chapter-practice-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.chapter-card,
+.chapter-practice-links > article {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.chapter-card h3 {
+  font-size: 21px;
+}
+.chapter-card > .button,
+.chapter-practice-links .button {
+  align-self: flex-start;
+  margin-top: auto;
+}
+.chapter-recorded-evidence,
+.chapter-practice-evidence dl {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 22px;
+}
+.chapter-recorded-evidence > div,
+.chapter-practice-evidence dl > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.chapter-recorded-evidence dt,
+.chapter-practice-evidence dt {
+  color: var(--muted);
+}
+.chapter-recorded-evidence dd,
+.chapter-practice-evidence dd {
+  margin: 0;
+  text-align: right;
+}
+.chapter-card .chapter-recorded-evidence {
+  font-size: 13px;
+}
+.chapter-practice-evidence {
+  margin-top: 20px;
+  padding: 16px 0;
+  border-block: 1px solid var(--line);
+}
+.chapter-practice-evidence summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.chapter-practice-evidence[open] summary {
+  margin-bottom: 18px;
+}
+.chapter-grammar-list {
+  list-style: none;
+  padding: 0;
+}
+.chapter-grammar-list li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.chapter-grammar-list li > span {
+  color: var(--muted);
+  font-size: 13px;
+}
+.chapter-checkpoints {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  padding: 0;
+  gap: 14px;
+}
+.chapter-checkpoints li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid var(--line);
+  padding: 18px;
+}
+.chapter-checkpoints .eyebrow {
+  margin-bottom: 0;
+}
+.chapter-checkpoints li > span:last-child {
+  color: var(--muted);
+  font-size: 13px;
+}
+.chapter-sources > article {
+  margin-bottom: 18px;
+}
+.chapter-sources h3,
+.chapter-dashboard button,
+.chapter-dashboard a {
+  overflow-wrap: anywhere;
+}
+.chapter-source-pages {
+  margin-bottom: 16px;
+}
+.chapter-source-pages > span {
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+}
+.chapter-source-pages .button {
+  text-decoration: none;
+}
+@media (max-width: 680px) {
+  .chapter-cards,
+  .chapter-practice-links,
+  .chapter-checkpoints {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .chapter-dashboard .button {
+    max-width: 100%;
+    white-space: normal;
+    text-align: left;
+  }
+  .chapter-recorded-evidence > div,
+  .chapter-practice-evidence dl > div {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .chapter-recorded-evidence dd,
+  .chapter-practice-evidence dd {
+    text-align: left;
+  }
+}

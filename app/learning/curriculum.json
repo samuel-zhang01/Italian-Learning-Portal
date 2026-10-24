@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-10-18",
+  "reviewedOn": "2026-10-24",
   "missions": [
     {
       "id": "say-hello",
@@ -3792,6 +3792,2434 @@
           ]
         }
       ]
+    },
+    {
+      "id": "espresso1-u01-confirm-contact",
+      "course": 1,
+      "title": {
+        "en": "Check a new contact",
+        "it": "Controlla un nuovo contatto"
+      },
+      "goal": {
+        "en": "Ask for a name again and confirm a fictional email address.",
+        "it": "Chiedi di ripetere un nome e conferma un indirizzo email inventato."
+      },
+      "rule": {
+        "en": "Come si scrive? asks for the spelling. Come, scusi? asks someone to repeat in a formal exchange. Use Qual è il Suo indirizzo e-mail? for a formal contact question; qual has no apostrophe.",
+        "it": "Come si scrive? serve per chiedere lo spelling. Come, scusi? serve per chiedere di ripetere in uno scambio formale. Usa Qual è il Suo indirizzo e-mail? per chiedere un contatto in modo formale; qual non ha apostrofo."
+      },
+      "examples": [
+        {
+          "en": "My surname is Mori. — How do you spell it?",
+          "it": "Il mio cognome è Mori. — Come si scrive?"
+        },
+        {
+          "en": "What is your email address? — It is ada@example.org.",
+          "it": "Qual è il Suo indirizzo e-mail? — È ada@example.org."
+        }
+      ],
+      "words": [
+        {
+          "en": "surname",
+          "it": "cognome"
+        },
+        {
+          "en": "how do you spell it?",
+          "it": "come si scrive?"
+        },
+        {
+          "en": "at sign",
+          "it": "chiocciola"
+        },
+        {
+          "en": "dot",
+          "it": "punto"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete the spelling question: Come si ___?",
+            "it": "Completa la domanda per lo spelling: Come si ___?"
+          },
+          "answers": [
+            "scrive"
+          ],
+          "explanation": {
+            "en": "Come si scrive? asks how a name or word is written.",
+            "it": "Come si scrive? chiede come si scrive un nome o una parola."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Write the missing word, without an apostrophe: ___ è il Suo indirizzo e-mail?",
+            "it": "Scrivi la parola mancante, senza apostrofo: ___ è il Suo indirizzo e-mail?"
+          },
+          "answers": [
+            "qual"
+          ],
+          "explanation": {
+            "en": "Qual è is written without an apostrophe.",
+            "it": "Qual è si scrive senza apostrofo."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Ask formally for repetition: Come, ___?",
+          "it": "Chiedi di ripetere in modo formale: Come, ___?"
+        },
+        "answers": [
+          "scusi"
+        ],
+        "explanation": {
+          "en": "Scusi keeps the exchange formal; scusa addresses tu.",
+          "it": "Scusi mantiene il registro formale; scusa si rivolge a tu."
+        }
+      },
+      "output": {
+        "en": "Write a three-line formal exchange: give an invented surname, ask for spelling, and confirm an example.org email address.",
+        "it": "Scrivi uno scambio formale di tre battute: indica un cognome inventato, chiedi lo spelling e conferma un indirizzo email con example.org."
+      },
+      "model": {
+        "en": "My surname is Neri. — How do you spell it? — N-E-R-I. My email address is neri@example.org.",
+        "it": "Il mio cognome è Neri. — Come si scrive? — N-E-R-I. Il mio indirizzo e-mail è neri@example.org."
+      },
+      "rubric": [
+        {
+          "en": "I asked for spelling with come si scrive.",
+          "it": "Ho chiesto lo spelling con come si scrive."
+        },
+        {
+          "en": "I kept the contact details clear and the register consistent.",
+          "it": "Ho indicato chiaramente i contatti e mantenuto un registro coerente."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            11,
+            14,
+            224,
+            233
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u02-introduce-colleague",
+      "course": 1,
+      "title": {
+        "en": "Introduce someone to the group",
+        "it": "Presenta qualcuno al gruppo"
+      },
+      "goal": {
+        "en": "Introduce a colleague and connect their job, workplace and languages.",
+        "it": "Presenta una collega o un collega collegando professione, luogo di lavoro e lingue."
+      },
+      "rule": {
+        "en": "Introduce a person with Questo è… or Questa è…. Use lavora in + a country and parla + a language without an article in these simple statements. A direct question uses parli for tu: Che lingue parli?",
+        "it": "Presenta una persona con Questo è… o Questa è…. Usa lavora in + un paese e parla + una lingua senza articolo in queste frasi semplici. Nella domanda diretta usa parli con tu: Che lingue parli?"
+      },
+      "examples": [
+        {
+          "en": "This is Marta. She works in Spain and speaks Italian.",
+          "it": "Questa è Marta. Lavora in Spagna e parla italiano."
+        },
+        {
+          "en": "This is Bruno. He is a teacher. What languages do you speak, Bruno?",
+          "it": "Questo è Bruno. È insegnante. Che lingue parli, Bruno?"
+        }
+      ],
+      "words": [
+        {
+          "en": "colleague",
+          "it": "collega"
+        },
+        {
+          "en": "language",
+          "it": "lingua"
+        },
+        {
+          "en": "office",
+          "it": "ufficio"
+        },
+        {
+          "en": "to introduce someone",
+          "it": "presentare qualcuno"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Introduce a woman: ___ è Livia.",
+            "it": "Presenta una donna: ___ è Livia."
+          },
+          "answers": [
+            "questa"
+          ],
+          "explanation": {
+            "en": "Questa agrees with the woman you are introducing.",
+            "it": "Questa concorda con la donna che presenti."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete with a preposition: Lavora ___ Germania.",
+            "it": "Completa con una preposizione: Lavora ___ Germania."
+          },
+          "answers": [
+            "in"
+          ],
+          "explanation": {
+            "en": "Use in before Germania in this workplace statement.",
+            "it": "Usa in prima di Germania in questa frase sul luogo di lavoro."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Ask a new friend: Che lingue ___? Use parlare with tu.",
+          "it": "Chiedi a una nuova conoscenza: Che lingue ___? Usa parlare con tu."
+        },
+        "answers": [
+          "parli"
+        ],
+        "explanation": {
+          "en": "The tu form is parli; parla describes lui or lei.",
+          "it": "La forma di tu è parli; parla descrive lui o lei."
+        }
+      },
+      "output": {
+        "en": "Introduce an invented colleague in two sentences, then ask them which languages they speak.",
+        "it": "Presenta una collega o un collega inventato in due frasi, poi chiedi quali lingue parla."
+      },
+      "model": {
+        "en": "This is Dario. He is a cook and works in France. What languages do you speak, Dario?",
+        "it": "Questo è Dario. È cuoco e lavora in Francia. Che lingue parli, Dario?"
+      },
+      "rubric": [
+        {
+          "en": "I used questo or questa consistently for the person.",
+          "it": "Ho usato questo o questa in modo coerente con la persona."
+        },
+        {
+          "en": "I changed from parla/lavora in the introduction to parli in the direct question.",
+          "it": "Sono passato da parla/lavora nella presentazione a parli nella domanda diretta."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            23,
+            24,
+            26,
+            29
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u03-book-a-table",
+      "course": 1,
+      "title": {
+        "en": "Make a clear table reservation",
+        "it": "Prenota un tavolo con chiarezza"
+      },
+      "goal": {
+        "en": "Give the number of diners and a time, then confirm a restaurant booking.",
+        "it": "Indica il numero di persone e l’ora, poi conferma una prenotazione al ristorante."
+      },
+      "rule": {
+        "en": "Vorrei prenotare un tavolo is a useful polite request. Add per + the number of people and alle + most clock times: per tre persone, alle otto. Confirm the details before ending the call.",
+        "it": "Vorrei prenotare un tavolo è una richiesta gentile utile. Aggiungi per + il numero di persone e alle + quasi tutte le ore: per tre persone, alle otto. Conferma i dettagli prima di terminare la telefonata."
+      },
+      "examples": [
+        {
+          "en": "I would like to book a table for four people.",
+          "it": "Vorrei prenotare un tavolo per quattro persone."
+        },
+        {
+          "en": "For Saturday at nine, under the name Sala.",
+          "it": "Per sabato alle nove, a nome Sala."
+        }
+      ],
+      "words": [
+        {
+          "en": "to book",
+          "it": "prenotare"
+        },
+        {
+          "en": "table",
+          "it": "tavolo"
+        },
+        {
+          "en": "people",
+          "it": "persone"
+        },
+        {
+          "en": "under the name",
+          "it": "a nome"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete the booking: un tavolo ___ cinque persone.",
+            "it": "Completa la prenotazione: un tavolo ___ cinque persone."
+          },
+          "answers": [
+            "per"
+          ],
+          "explanation": {
+            "en": "Per introduces the number of diners.",
+            "it": "Per introduce il numero di persone."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete the time: sabato ___ venti.",
+            "it": "Completa l’ora: sabato ___ venti."
+          },
+          "answers": [
+            "alle"
+          ],
+          "explanation": {
+            "en": "Use alle before venti when stating the clock time.",
+            "it": "Usa alle prima di venti per indicare l’ora."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete the polite request with the given verb: ___ prenotare. Use volere.",
+          "it": "Completa la richiesta gentile con il verbo indicato: ___ prenotare. Usa volere."
+        },
+        "answers": [
+          "vorrei"
+        ],
+        "explanation": {
+          "en": "Vorrei is the polite chunk used in this reservation.",
+          "it": "Vorrei è la formula gentile usata in questa prenotazione."
+        }
+      },
+      "output": {
+        "en": "Write a brief reservation with a day, a time, a number of people and an invented surname.",
+        "it": "Scrivi una breve prenotazione con un giorno, un’ora, un numero di persone e un cognome inventato."
+      },
+      "model": {
+        "en": "Good evening, I would like to book a table for three people for Friday at eight, under the name Fiori.",
+        "it": "Buonasera, vorrei prenotare un tavolo per tre persone per venerdì alle otto, a nome Fiori."
+      },
+      "rubric": [
+        {
+          "en": "I made a polite request with vorrei prenotare.",
+          "it": "Ho fatto una richiesta gentile con vorrei prenotare."
+        },
+        {
+          "en": "My day, time, surname and number of diners are clear.",
+          "it": "Il giorno, l’ora, il cognome e il numero di persone sono chiari."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            46,
+            49,
+            237
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u04-find-common-ground",
+      "course": 1,
+      "title": {
+        "en": "Find something you both enjoy",
+        "it": "Trova un interesse in comune"
+      },
+      "goal": {
+        "en": "Respond naturally when you share a preference or a dislike.",
+        "it": "Rispondi in modo naturale quando condividi un gusto o un’antipatia."
+      },
+      "rule": {
+        "en": "After Mi piace leggere, say Anche a me to agree. After Non mi piace correre, say Neanche a me to share the dislike. A me sì and A me no express a different preference. Keep piace with an infinitive.",
+        "it": "Dopo Mi piace leggere, usa Anche a me per essere d’accordo. Dopo Non mi piace correre, usa Neanche a me per condividere l’antipatia. A me sì e A me no esprimono un gusto diverso. Usa piace con un infinito."
+      },
+      "examples": [
+        {
+          "en": "I like drawing. — So do I.",
+          "it": "Mi piace disegnare. — Anche a me."
+        },
+        {
+          "en": "I do not like dancing. — Neither do I.",
+          "it": "Non mi piace ballare. — Neanche a me."
+        }
+      ],
+      "words": [
+        {
+          "en": "so do I",
+          "it": "anche a me"
+        },
+        {
+          "en": "neither do I",
+          "it": "neanche a me"
+        },
+        {
+          "en": "to draw",
+          "it": "disegnare"
+        },
+        {
+          "en": "to dance",
+          "it": "ballare"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Agree with a positive preference: Mi piace leggere. — ___ a me.",
+            "it": "Condividi un gusto positivo: Mi piace leggere. — ___ a me."
+          },
+          "answers": [
+            "anche"
+          ],
+          "explanation": {
+            "en": "Anche a me adds your positive preference.",
+            "it": "Anche a me aggiunge il tuo gusto positivo."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Share the dislike: Non mi piace sciare. — ___ a me.",
+            "it": "Condividi l’antipatia: Non mi piace sciare. — ___ a me."
+          },
+          "answers": [
+            "neanche",
+            "nemmeno",
+            "neppure"
+          ],
+          "explanation": {
+            "en": "Neanche a me means that you do not like it either; nemmeno and neppure also work.",
+            "it": "Neanche a me indica che non piace neppure a te; sono possibili anche nemmeno e neppure."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Choose piace or piacciono: Mi ___ nuotare.",
+          "it": "Scegli piace o piacciono: Mi ___ nuotare."
+        },
+        "answers": [
+          "piace"
+        ],
+        "explanation": {
+          "en": "An infinitive such as nuotare takes singular piace.",
+          "it": "Un infinito come nuotare richiede piace al singolare."
+        }
+      },
+      "output": {
+        "en": "Write two short exchanges: agree with one positive preference and one dislike. Then add one different preference.",
+        "it": "Scrivi due brevi scambi: condividi un gusto positivo e un’antipatia. Poi aggiungi un gusto diverso."
+      },
+      "model": {
+        "en": "I like singing. — So do I. I do not like running. — Neither do I. But I like swimming.",
+        "it": "Mi piace cantare. — Anche a me. Non mi piace correre. — Neanche a me. Però mi piace nuotare."
+      },
+      "rubric": [
+        {
+          "en": "I matched anche/neanche to the positive or negative statement.",
+          "it": "Ho scelto anche/neanche secondo la frase positiva o negativa."
+        },
+        {
+          "en": "I used piace before an infinitive.",
+          "it": "Ho usato piace prima di un infinito."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            59,
+            61,
+            234
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u05-choose-a-stay",
+      "course": 1,
+      "title": {
+        "en": "Choose a place to stay",
+        "it": "Scegli un alloggio"
+      },
+      "goal": {
+        "en": "Check dates and one essential facility, then explain your choice.",
+        "it": "Controlla le date e un servizio essenziale, poi spiega la tua scelta."
+      },
+      "rule": {
+        "en": "Use dal… al… for dates with the article: dal tre al sei giugno. Ask about a single facility with C’è…? and several with Ci sono…?. Give a simple reason with Scelgo… perché….",
+        "it": "Usa dal… al… per le date con l’articolo: dal tre al sei giugno. Chiedi di un servizio singolo con C’è…? e di più elementi con Ci sono…?. Motiva la scelta con Scelgo… perché…."
+      },
+      "examples": [
+        {
+          "en": "Do you have a room from the third to the sixth of June?",
+          "it": "Avete una camera dal tre al sei giugno?"
+        },
+        {
+          "en": "I choose this hotel because there is a kitchen.",
+          "it": "Scelgo questo albergo perché c’è una cucina."
+        }
+      ],
+      "words": [
+        {
+          "en": "kitchen",
+          "it": "cucina"
+        },
+        {
+          "en": "lift",
+          "it": "ascensore"
+        },
+        {
+          "en": "room",
+          "it": "camera"
+        },
+        {
+          "en": "because",
+          "it": "perché"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete the date range: ___ quattro al sette maggio.",
+            "it": "Completa l’intervallo di date: ___ quattro al sette maggio."
+          },
+          "answers": [
+            "dal"
+          ],
+          "explanation": {
+            "en": "Dal joins da + il at the start of this date range.",
+            "it": "Dal unisce da + il all’inizio di questo intervallo di date."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete the question about one lift: ___ un ascensore?",
+            "it": "Completa la domanda su un solo ascensore: ___ un ascensore?"
+          },
+          "answers": [
+            "c’è",
+            "c'è"
+          ],
+          "explanation": {
+            "en": "Use c’è for one thing; ci sono introduces plural things.",
+            "it": "Usa c’è per un elemento; ci sono introduce più elementi."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Introduce a reason: Scelgo questa camera ___ è tranquilla.",
+          "it": "Introduci una ragione: Scelgo questa camera ___ è tranquilla."
+        },
+        "answers": [
+          "perché"
+        ],
+        "explanation": {
+          "en": "Perché explains the reason for choosing the room.",
+          "it": "Perché introduce il motivo della scelta."
+        }
+      },
+      "output": {
+        "en": "Invent a short stay: give a date range, ask about a facility and explain your choice.",
+        "it": "Inventa un breve soggiorno: indica un intervallo di date, chiedi un servizio e spiega la scelta."
+      },
+      "model": {
+        "en": "I need a room from the eighth to the tenth of May. Is there a lift? I choose this hotel because the room is quiet.",
+        "it": "Cerco una camera dall’otto al dieci maggio. C’è un ascensore? Scelgo questo albergo perché la camera è tranquilla."
+      },
+      "rubric": [
+        {
+          "en": "I gave a clear start and end date.",
+          "it": "Ho indicato chiaramente la data iniziale e quella finale."
+        },
+        {
+          "en": "I asked about a facility and linked my choice to a reason.",
+          "it": "Ho chiesto un servizio e collegato la scelta a una ragione."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            68,
+            75,
+            236,
+            239
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u06-plan-a-celebration",
+      "course": 1,
+      "title": {
+        "en": "Fit a celebration around a routine",
+        "it": "Organizza una festa tra gli impegni"
+      },
+      "goal": {
+        "en": "Give the time of a celebration and check whether a friend is free.",
+        "it": "Indica l’ora di una festa e controlla se un’amica o un amico è libero."
+      },
+      "rule": {
+        "en": "Possessives agree with the event noun: la mia festa, il tuo compleanno. To ask about a routine, keep the reflexive pronoun with its person: A che ora ti alzi? Io mi alzo….",
+        "it": "I possessivi concordano con il nome dell’evento: la mia festa, il tuo compleanno. Per chiedere un’abitudine, concorda il pronome riflessivo con la persona: A che ora ti alzi? Io mi alzo…."
+      },
+      "examples": [
+        {
+          "en": "My party is on Saturday at six.",
+          "it": "La mia festa è sabato alle sei."
+        },
+        {
+          "en": "What time do you get up on Sunday? — I get up at nine.",
+          "it": "A che ora ti alzi domenica? — Mi alzo alle nove."
+        }
+      ],
+      "words": [
+        {
+          "en": "party",
+          "it": "festa"
+        },
+        {
+          "en": "birthday",
+          "it": "compleanno"
+        },
+        {
+          "en": "to get up",
+          "it": "alzarsi"
+        },
+        {
+          "en": "invitation",
+          "it": "invito"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Choose mia or mio: La ___ festa è venerdì.",
+            "it": "Scegli mia o mio: La ___ festa è venerdì."
+          },
+          "answers": [
+            "mia"
+          ],
+          "explanation": {
+            "en": "Mia agrees with feminine singular festa.",
+            "it": "Mia concorda con festa, femminile singolare."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete the question to a friend: A che ora ___ alzi?",
+            "it": "Completa la domanda a un amico: A che ora ___ alzi?"
+          },
+          "answers": [
+            "ti"
+          ],
+          "explanation": {
+            "en": "Use ti with the tu form alzi.",
+            "it": "Usa ti con la forma alzi di tu."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Answer for yourself: Io ___ alzo alle sette.",
+          "it": "Rispondi per te: Io ___ alzo alle sette."
+        },
+        "answers": [
+          "mi"
+        ],
+        "explanation": {
+          "en": "Use mi with io: mi alzo.",
+          "it": "Usa mi con io: mi alzo."
+        }
+      },
+      "output": {
+        "en": "Invite an invented friend to a celebration, give a time, then ask one question about their routine the next day.",
+        "it": "Invita un’amica o un amico inventato a una festa, indica un’ora e fai una domanda sulle sue abitudini del giorno dopo."
+      },
+      "model": {
+        "en": "My party is on Friday at seven. Are you coming? What time do you get up on Saturday?",
+        "it": "La mia festa è venerdì alle sette. Vieni? A che ora ti alzi sabato?"
+      },
+      "rubric": [
+        {
+          "en": "My possessive agrees with the event noun.",
+          "it": "Il possessivo concorda con il nome dell’evento."
+        },
+        {
+          "en": "I used ti with the question to tu and gave a clear event time.",
+          "it": "Ho usato ti nella domanda con tu e indicato chiaramente l’ora dell’evento."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            95,
+            229,
+            234
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u07-find-an-open-place",
+      "course": 1,
+      "title": {
+        "en": "Find somewhere that is still open",
+        "it": "Trova un posto ancora aperto"
+      },
+      "goal": {
+        "en": "Ask whether a place exists nearby, locate it and check its opening time.",
+        "it": "Chiedi se un luogo esiste nelle vicinanze, trovalo e controlla l’orario di apertura."
+      },
+      "rule": {
+        "en": "C’è una farmacia qui vicino? asks whether there is one. Dov’è la farmacia? asks for the location of a known place. A che ora apre? checks the opening time. Ci vado means I go there and avoids repeating the place.",
+        "it": "C’è una farmacia qui vicino? chiede se ce n’è una. Dov’è la farmacia? chiede dove si trova un luogo già noto. A che ora apre? controlla l’orario di apertura. Ci vado evita di ripetere il luogo."
+      },
+      "examples": [
+        {
+          "en": "Is there a bookshop nearby? — Yes, beside the bank.",
+          "it": "C’è una libreria qui vicino? — Sì, accanto alla banca."
+        },
+        {
+          "en": "What time does the bookshop open? — At nine. I go there on Saturday.",
+          "it": "A che ora apre la libreria? — Alle nove. Ci vado sabato."
+        }
+      ],
+      "words": [
+        {
+          "en": "nearby",
+          "it": "qui vicino"
+        },
+        {
+          "en": "open",
+          "it": "aperto"
+        },
+        {
+          "en": "closed",
+          "it": "chiuso"
+        },
+        {
+          "en": "beside",
+          "it": "accanto a"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Ask whether a bank exists nearby: ___ una banca qui vicino?",
+            "it": "Chiedi se esiste una banca nelle vicinanze: ___ una banca qui vicino?"
+          },
+          "answers": [
+            "c’è",
+            "c'è"
+          ],
+          "explanation": {
+            "en": "C’è una…? asks about the presence of one place.",
+            "it": "C’è una…? chiede se un luogo è presente."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete the time question: A che ora ___ il museo? Use aprire.",
+            "it": "Completa la domanda sull’ora: A che ora ___ il museo? Usa aprire."
+          },
+          "answers": [
+            "apre"
+          ],
+          "explanation": {
+            "en": "Apre is the present form for il museo.",
+            "it": "Apre è la forma del presente riferita al museo."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Avoid repeating al mercato: Vado al mercato sabato. → ___ vado sabato.",
+          "it": "Evita di ripetere al mercato: Vado al mercato sabato. → ___ vado sabato."
+        },
+        "answers": [
+          "ci"
+        ],
+        "explanation": {
+          "en": "Ci stands for the destination already mentioned.",
+          "it": "Ci riprende la destinazione già nominata."
+        }
+      },
+      "output": {
+        "en": "Write three questions to find a shop: ask whether one is nearby, where it is and what time it opens. Add when you will go using ci vado.",
+        "it": "Scrivi tre domande per trovare un negozio: chiedi se ce n’è uno vicino, dov’è e a che ora apre. Aggiungi quando ci vai usando ci vado."
+      },
+      "model": {
+        "en": "Is there a bakery nearby? Where is the bakery? What time does it open? I go there tomorrow.",
+        "it": "C’è un panificio qui vicino? Dov’è il panificio? A che ora apre? Ci vado domani."
+      },
+      "rubric": [
+        {
+          "en": "I distinguished asking if a place exists from asking its location.",
+          "it": "Ho distinto la domanda sull’esistenza da quella sulla posizione."
+        },
+        {
+          "en": "I checked an opening time and used ci for the destination.",
+          "it": "Ho controllato un orario di apertura e usato ci per la destinazione."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            100,
+            104,
+            106,
+            107,
+            232
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u08-change-the-itinerary",
+      "course": 1,
+      "title": {
+        "en": "Explain a change to your trip",
+        "it": "Spiega un cambiamento al viaggio"
+      },
+      "goal": {
+        "en": "Tell how the weather changed one day of an invented trip.",
+        "it": "Racconta come il tempo ha cambiato una giornata di un viaggio inventato."
+      },
+      "rule": {
+        "en": "Use passato prossimo for completed trip events: abbiamo visitato, siamo andati/e. The auxiliary belongs to the verb, and with essere the participle agrees with the subject. Non… niente says that you did not do or buy anything.",
+        "it": "Usa il passato prossimo per eventi conclusi di un viaggio: abbiamo visitato, siamo andati/e. L’ausiliare dipende dal verbo e con essere il participio concorda con il soggetto. Non… niente indica che non hai fatto o comprato nulla."
+      },
+      "examples": [
+        {
+          "en": "Yesterday it rained, so we visited a museum.",
+          "it": "Ieri ha piovuto, quindi abbiamo visitato un museo."
+        },
+        {
+          "en": "Sara and Eva went to the market, but they did not buy anything.",
+          "it": "Sara ed Eva sono andate al mercato, ma non hanno comprato niente."
+        }
+      ],
+      "words": [
+        {
+          "en": "rain",
+          "it": "pioggia"
+        },
+        {
+          "en": "museum",
+          "it": "museo"
+        },
+        {
+          "en": "trip",
+          "it": "viaggio"
+        },
+        {
+          "en": "nothing / not anything",
+          "it": "niente"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Use visitare: Ieri abbiamo ___ una mostra. Write only the participle.",
+            "it": "Usa visitare: Ieri abbiamo ___ una mostra. Scrivi solo il participio."
+          },
+          "answers": [
+            "visitato"
+          ],
+          "explanation": {
+            "en": "Visitare forms its regular participle in -ato: visitato.",
+            "it": "Visitare forma il participio regolare in -ato: visitato."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete the participle: Sara ed Eva sono ___ al mare. Use andare.",
+            "it": "Completa il participio: Sara ed Eva sono ___ al mare. Usa andare."
+          },
+          "answers": [
+            "andate"
+          ],
+          "explanation": {
+            "en": "With essere, the participle agrees with Sara ed Eva: andate.",
+            "it": "Con essere il participio concorda con Sara ed Eva: andate."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete the negative statement: Non ho comprato ___. (I did not buy anything.)",
+          "it": "Completa la frase negativa: Non ho comprato ___."
+        },
+        "answers": [
+          "niente",
+          "nulla"
+        ],
+        "explanation": {
+          "en": "Non… niente and non… nulla both express not anything.",
+          "it": "Non… niente e non… nulla esprimono entrambi l’assenza di acquisti."
+        }
+      },
+      "output": {
+        "en": "Invent two sentences about a trip: the weather changed your plan, and you explain what you did or did not do.",
+        "it": "Inventa due frasi su un viaggio: il tempo ha cambiato il programma e spieghi che cosa hai fatto o non hai fatto."
+      },
+      "model": {
+        "en": "On Monday it rained, so I visited a castle. Afterwards I went to the market, but I did not buy anything.",
+        "it": "Lunedì ha piovuto, quindi ho visitato un castello. Poi sono andato al mercato, ma non ho comprato niente."
+      },
+      "rubric": [
+        {
+          "en": "I used an appropriate auxiliary and checked agreement with essere.",
+          "it": "Ho usato l’ausiliare adatto e controllato la concordanza con essere."
+        },
+        {
+          "en": "I connected the weather with a change and used a clear past-time expression.",
+          "it": "Ho collegato il tempo a un cambiamento e usato un’espressione temporale chiara."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            117,
+            119,
+            121,
+            235,
+            236
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u09-plan-the-ingredients",
+      "course": 1,
+      "title": {
+        "en": "Shop for a shared meal",
+        "it": "Fai la spesa per un pasto insieme"
+      },
+      "goal": {
+        "en": "Turn an ingredient list into a quantity-based shopping exchange.",
+        "it": "Trasforma una lista di ingredienti in uno scambio sulla spesa con le quantità."
+      },
+      "rule": {
+        "en": "Use a measure with di: un chilo di patate. Ne replaces an ingredient already mentioned, while the amount stays: Quante mele? Ne prendo quattro. With a mass noun you can state the measure after ne: Di pane ne prendo mezzo chilo.",
+        "it": "Usa una misura con di: un chilo di patate. Ne sostituisce un ingrediente già nominato, mentre la quantità resta: Quante mele? Ne prendo quattro. Con un nome non numerabile puoi indicare la misura dopo ne: Di pane ne prendo mezzo chilo."
+      },
+      "examples": [
+        {
+          "en": "For dinner I buy half a kilo of tomatoes.",
+          "it": "Per cena compro mezzo chilo di pomodori."
+        },
+        {
+          "en": "How many lemons do you take? — I take two.",
+          "it": "Quanti limoni prendi? — Ne prendo due."
+        }
+      ],
+      "words": [
+        {
+          "en": "half a kilo",
+          "it": "mezzo chilo"
+        },
+        {
+          "en": "bottle",
+          "it": "bottiglia"
+        },
+        {
+          "en": "ingredient",
+          "it": "ingrediente"
+        },
+        {
+          "en": "portion",
+          "it": "porzione"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete the measure: un litro ___ latte.",
+            "it": "Completa la misura: un litro ___ latte."
+          },
+          "answers": [
+            "di"
+          ],
+          "explanation": {
+            "en": "Di connects the unit of measure with the ingredient.",
+            "it": "Di collega l’unità di misura all’ingrediente."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Replace mele: Quante mele compri? ___ compro sei.",
+            "it": "Sostituisci mele: Quante mele compri? ___ compro sei."
+          },
+          "answers": [
+            "ne"
+          ],
+          "explanation": {
+            "en": "Ne replaces mele; sei gives the quantity.",
+            "it": "Ne sostituisce mele; sei indica la quantità."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Use ne to answer without repeating limoni: Quanti limoni prendi? ___ prendo tre.",
+          "it": "Usa ne per non ripetere limoni: Quanti limoni prendi? ___ prendo tre."
+        },
+        "answers": [
+          "ne"
+        ],
+        "explanation": {
+          "en": "Ne keeps the already mentioned ingredient implicit while retaining the quantity.",
+          "it": "Ne riprende l’ingrediente già nominato e mantiene la quantità."
+        }
+      },
+      "output": {
+        "en": "Write a shopping exchange for an invented meal: give one measured quantity, ask about a countable ingredient, then answer with ne and a number.",
+        "it": "Scrivi uno scambio sulla spesa per un pasto inventato: indica una quantità misurata, chiedi di un ingrediente numerabile e rispondi con ne e un numero."
+      },
+      "model": {
+        "en": "I buy a kilo of potatoes. How many onions do you buy? — I buy three.",
+        "it": "Compro un chilo di patate. Quante cipolle compri? — Ne compro tre."
+      },
+      "rubric": [
+        {
+          "en": "I used di after a measure.",
+          "it": "Ho usato di dopo una misura."
+        },
+        {
+          "en": "I kept the quantity when I replaced the ingredient with ne.",
+          "it": "Ho mantenuto la quantità sostituendo l’ingrediente con ne."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            135,
+            139,
+            232,
+            236
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso1-u10-recount-a-celebration",
+      "course": 1,
+      "title": {
+        "en": "Tell the story of a family celebration",
+        "it": "Racconta una festa in famiglia"
+      },
+      "goal": {
+        "en": "Identify relatives and explain how they prepared for an event.",
+        "it": "Presenta dei parenti e racconta come si sono preparati per un evento."
+      },
+      "rule": {
+        "en": "A singular unmodified family noun normally omits the article with a possessive: mia sorella, mio fratello. A plural keeps it: le mie sorelle. Reflexive verbs use essere in the passato prossimo: si è preparata, si sono preparati/e.",
+        "it": "Un nome di parentela singolare senza modifiche di solito non ha l’articolo con il possessivo: mia sorella, mio fratello. Il plurale lo mantiene: le mie sorelle. I verbi riflessivi usano essere al passato prossimo: si è preparata, si sono preparati/e."
+      },
+      "examples": [
+        {
+          "en": "My sister got ready at home.",
+          "it": "Mia sorella si è preparata a casa."
+        },
+        {
+          "en": "My cousins got up early for the wedding.",
+          "it": "Le mie cugine si sono alzate presto per il matrimonio."
+        }
+      ],
+      "words": [
+        {
+          "en": "relative",
+          "it": "parente"
+        },
+        {
+          "en": "cousin (female)",
+          "it": "cugina"
+        },
+        {
+          "en": "wedding",
+          "it": "matrimonio"
+        },
+        {
+          "en": "to get ready",
+          "it": "prepararsi"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete the auxiliary: Mia sorella si ___ preparata presto.",
+            "it": "Completa l’ausiliare: Mia sorella si ___ preparata presto."
+          },
+          "answers": [
+            "è"
+          ],
+          "explanation": {
+            "en": "Prepararsi is reflexive and takes essere: si è preparata.",
+            "it": "Prepararsi è riflessivo e richiede essere: si è preparata."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete the participle: Le mie cugine si sono ___. Use prepararsi.",
+            "it": "Completa il participio: Le mie cugine si sono ___. Usa prepararsi."
+          },
+          "answers": [
+            "preparate"
+          ],
+          "explanation": {
+            "en": "Preparate agrees with the feminine plural subject le mie cugine.",
+            "it": "Preparate concorda con il soggetto femminile plurale le mie cugine."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Write the article needed before a plural family noun: ___ miei fratelli.",
+          "it": "Scrivi l’articolo necessario prima del nome di parentela plurale: ___ miei fratelli."
+        },
+        "answers": [
+          "i"
+        ],
+        "explanation": {
+          "en": "Plural family nouns retain the article with possessives: i miei fratelli.",
+          "it": "I nomi di parentela plurali mantengono l’articolo con i possessivi: i miei fratelli."
+        }
+      },
+      "output": {
+        "en": "Invent a family celebration. Introduce one relative and a group of relatives, and tell one completed preparation action for each.",
+        "it": "Inventa una festa in famiglia. Presenta un parente e un gruppo di parenti e racconta un’azione di preparazione conclusa per ciascuno."
+      },
+      "model": {
+        "en": "Yesterday we celebrated my aunt’s birthday. My sister got ready at six. My brothers got up early and prepared a cake.",
+        "it": "Ieri abbiamo festeggiato il compleanno di mia zia. Mia sorella si è preparata alle sei. I miei fratelli si sono alzati presto e hanno preparato una torta."
+      },
+      "rubric": [
+        {
+          "en": "I checked the article with singular and plural family nouns.",
+          "it": "Ho controllato l’articolo con i nomi di parentela singolari e plurali."
+        },
+        {
+          "en": "I used essere and matching participles for completed reflexive actions.",
+          "it": "Ho usato essere e participi concordati per le azioni riflessive concluse."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-8fa57188c2eb",
+          "pages": [
+            2
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            147,
+            149,
+            153,
+            229,
+            235
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u01-choose-a-gift",
+      "course": 3,
+      "title": {
+        "en": "Choose a gift for someone else",
+        "it": "Scegli un regalo per un’altra persona"
+      },
+      "goal": {
+        "en": "Compare two clothing gifts and say which one the recipient likes.",
+        "it": "Confronta due capi da regalare e indica quale piace alla persona che riceve il regalo."
+      },
+      "rule": {
+        "en": "Compare two things with più/meno + adjective + di: questa sciarpa è più leggera di quella. With piacere, gli means to him and le means to her. Keep the verb singular for one item and plural for several: le piace la sciarpa, le piacciono i guanti.",
+        "it": "Confronta due cose con più/meno + aggettivo + di: questa sciarpa è più leggera di quella. Con piacere, gli significa a lui e le significa a lei. Usa il singolare per un oggetto e il plurale per più oggetti: le piace la sciarpa, le piacciono i guanti."
+      },
+      "examples": [
+        {
+          "en": "This scarf is warmer than that one.",
+          "it": "Questa sciarpa è più calda di quella."
+        },
+        {
+          "en": "It is for Giulia: she likes green gloves.",
+          "it": "È per Giulia: le piacciono i guanti verdi."
+        }
+      ],
+      "words": [
+        {
+          "en": "scarf",
+          "it": "sciarpa"
+        },
+        {
+          "en": "gloves",
+          "it": "guanti"
+        },
+        {
+          "en": "light / lightweight",
+          "it": "leggero"
+        },
+        {
+          "en": "warm",
+          "it": "caldo"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Use the pronoun meaning to Giulia: A Giulia piace il cappello. → ___ piace il cappello.",
+            "it": "Usa il pronome che significa a Giulia: A Giulia piace il cappello. → ___ piace il cappello."
+          },
+          "answers": [
+            "le"
+          ],
+          "explanation": {
+            "en": "Le replaces a Giulia as the indirect object.",
+            "it": "Le sostituisce a Giulia come complemento indiretto."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete the comparison between two bags: Questa borsa è meno pesante ___ quella.",
+            "it": "Completa il confronto fra due borse: Questa borsa è meno pesante ___ quella."
+          },
+          "answers": [
+            "di"
+          ],
+          "explanation": {
+            "en": "Di introduces the second object in this comparison.",
+            "it": "Di introduce il secondo oggetto in questo confronto."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Choose piace or piacciono: A Leo ___ i guanti blu.",
+          "it": "Scegli piace o piacciono: A Leo ___ i guanti blu."
+        },
+        "answers": [
+          "piacciono"
+        ],
+        "explanation": {
+          "en": "The things liked are plural: i guanti.",
+          "it": "Le cose che piacciono sono plurali: i guanti."
+        }
+      },
+      "output": {
+        "en": "Choose a gift for an invented person. Compare two items and say what the recipient likes using gli or le.",
+        "it": "Scegli un regalo per una persona inventata. Confronta due oggetti e indica che cosa piace alla persona usando gli o le."
+      },
+      "model": {
+        "en": "The red hat is lighter than the blue one. It is for Paolo: he likes the colour red. I choose the red hat.",
+        "it": "Il cappello rosso è più leggero di quello blu. È per Paolo: gli piace il rosso. Scelgo il cappello rosso."
+      },
+      "rubric": [
+        {
+          "en": "I used di to compare two items and checked adjective agreement.",
+          "it": "Ho usato di per confrontare due oggetti e controllato la concordanza dell’aggettivo."
+        },
+        {
+          "en": "I chose gli or le for the recipient and piace/piacciono for the item.",
+          "it": "Ho scelto gli o le per il destinatario e piace/piacciono per l’oggetto."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            17,
+            18,
+            20
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            19,
+            249,
+            250
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u02-remember-a-place",
+      "course": 3,
+      "title": {
+        "en": "Describe a place you used to know",
+        "it": "Descrivi un luogo di un tempo"
+      },
+      "goal": {
+        "en": "Recall the atmosphere of a childhood place and a repeated activity there.",
+        "it": "Ricorda l’atmosfera di un luogo dell’infanzia e un’attività che vi si ripeteva."
+      },
+      "rule": {
+        "en": "Use the imperfect for a past description or repeated habit: era tranquillo, giocavamo spesso. It does not present the activity as one completed event. Use ci to avoid repeating a place already mentioned: andavo al parco → ci andavo.",
+        "it": "Usa l’imperfetto per una descrizione o un’abitudine passata: era tranquillo, giocavamo spesso. Non presenta l’attività come un unico evento concluso. Usa ci per non ripetere un luogo già nominato: andavo al parco → ci andavo."
+      },
+      "examples": [
+        {
+          "en": "The courtyard was small, but we played there every afternoon.",
+          "it": "Il cortile era piccolo, ma ci giocavamo ogni pomeriggio."
+        },
+        {
+          "en": "As a child I often went to the library.",
+          "it": "Da bambina andavo spesso in biblioteca."
+        }
+      ],
+      "words": [
+        {
+          "en": "courtyard",
+          "it": "cortile"
+        },
+        {
+          "en": "as a child",
+          "it": "da piccolo/a"
+        },
+        {
+          "en": "every afternoon",
+          "it": "ogni pomeriggio"
+        },
+        {
+          "en": "memory",
+          "it": "ricordo"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Use essere in the imperfect: Da bambino il mio quartiere ___ tranquillo.",
+            "it": "Usa essere all’imperfetto: Da bambino il mio quartiere ___ tranquillo."
+          },
+          "answers": [
+            "era"
+          ],
+          "explanation": {
+            "en": "Era describes the neighbourhood’s past state.",
+            "it": "Era descrive una caratteristica passata del quartiere."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Use giocare with noi in the imperfect: Ogni sabato ___ fuori.",
+            "it": "Usa giocare con noi all’imperfetto: Ogni sabato ___ fuori."
+          },
+          "answers": [
+            "giocavamo"
+          ],
+          "explanation": {
+            "en": "Giocavamo presents a repeated activity for noi.",
+            "it": "Giocavamo presenta un’attività abituale con noi."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Replace al parco: Da piccola andavo al parco. → Da piccola ___ andavo spesso.",
+          "it": "Sostituisci al parco: Da piccola andavo al parco. → Da piccola ___ andavo spesso."
+        },
+        "answers": [
+          "ci"
+        ],
+        "explanation": {
+          "en": "Ci refers back to the park.",
+          "it": "Ci riprende il parco."
+        }
+      },
+      "output": {
+        "en": "Describe a real or invented childhood place in three sentences: one description, one repeated habit and one sentence using ci.",
+        "it": "Descrivi un luogo dell’infanzia reale o inventato in tre frasi: una descrizione, un’abitudine e una frase con ci."
+      },
+      "model": {
+        "en": "The garden was quiet. We read under a tree every Sunday. We often went there with our grandfather.",
+        "it": "Il giardino era silenzioso. Leggevamo sotto un albero ogni domenica. Ci andavamo spesso con nostro nonno."
+      },
+      "rubric": [
+        {
+          "en": "I used the imperfect for the description and repeated habits.",
+          "it": "Ho usato l’imperfetto per la descrizione e le abitudini."
+        },
+        {
+          "en": "Ci clearly refers to the place I introduced.",
+          "it": "Ci riprende chiaramente il luogo che ho presentato."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            31,
+            35
+          ]
+        },
+        {
+          "id": "src-c3791736675a",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            33,
+            252
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            232
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u03-ask-for-a-favour",
+      "course": 3,
+      "title": {
+        "en": "Ask for a favour with a clear limit",
+        "it": "Chiedi un favore con un limite chiaro"
+      },
+      "goal": {
+        "en": "Make a polite request, explain a difficulty and offer a manageable alternative.",
+        "it": "Fai una richiesta gentile, spiega una difficoltà e proponi un’alternativa fattibile."
+      },
+      "rule": {
+        "en": "Potresti + infinitive makes a polite request to tu; potrei offers something from io. Vorrei expresses a wish. Non ce la faccio means I cannot manage it; add a + infinitive for the task: non ce la faccio a finire.",
+        "it": "Potresti + infinito serve per una richiesta gentile con tu; potrei propone qualcosa con io. Vorrei esprime un desiderio. Non ce la faccio indica una difficoltà a riuscire; aggiungi a + infinito per l’attività: non ce la faccio a finire."
+      },
+      "examples": [
+        {
+          "en": "Could you check this short message?",
+          "it": "Potresti controllare questo breve messaggio?"
+        },
+        {
+          "en": "I cannot manage to finish now. I could help you after six.",
+          "it": "Non ce la faccio a finire adesso. Potrei aiutarti dopo le sei."
+        }
+      ],
+      "words": [
+        {
+          "en": "favour",
+          "it": "favore"
+        },
+        {
+          "en": "to check",
+          "it": "controllare"
+        },
+        {
+          "en": "to manage / succeed",
+          "it": "farcela"
+        },
+        {
+          "en": "after six",
+          "it": "dopo le sei"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Ask tu politely using potere: ___ leggere queste due righe?",
+            "it": "Fai una richiesta gentile con tu usando potere: ___ leggere queste due righe?"
+          },
+          "answers": [
+            "potresti"
+          ],
+          "explanation": {
+            "en": "Potresti addresses tu with the present conditional.",
+            "it": "Potresti si rivolge a tu con il condizionale presente."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Offer help using potere with io: ___ aiutarti domani.",
+            "it": "Proponi un aiuto usando potere con io: ___ aiutarti domani."
+          },
+          "answers": [
+            "potrei"
+          ],
+          "explanation": {
+            "en": "Potrei is the io conditional form.",
+            "it": "Potrei è la forma del condizionale con io."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete the fixed expression with fare: Non ce la ___ a finire oggi.",
+          "it": "Completa l’espressione con fare: Non ce la ___ a finire oggi."
+        },
+        "answers": [
+          "faccio"
+        ],
+        "explanation": {
+          "en": "Non ce la faccio means I cannot manage.",
+          "it": "Non ce la faccio significa che non riesco."
+        }
+      },
+      "output": {
+        "en": "Write a four-line exchange: ask a small favour, explain a time limit, then offer and accept an alternative.",
+        "it": "Scrivi uno scambio di quattro battute: chiedi un piccolo favore, spiega un limite di tempo, poi proponi e accetta un’alternativa."
+      },
+      "model": {
+        "en": "Could you read my email? — I cannot manage now. I could read it tonight. — That is fine with me. — Perfect, then I will read it tonight.",
+        "it": "Potresti leggere la mia e-mail? — Adesso non ce la faccio. Potrei leggerla stasera. — Per me va bene. — Perfetto, allora la leggo stasera."
+      },
+      "rubric": [
+        {
+          "en": "I used potresti for the request and potrei for my offer.",
+          "it": "Ho usato potresti per la richiesta e potrei per la mia proposta."
+        },
+        {
+          "en": "The alternative clearly respects the stated time limit.",
+          "it": "L’alternativa rispetta chiaramente il limite di tempo indicato."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            44,
+            46
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            55,
+            254,
+            258
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u04-coordinate-an-outing",
+      "course": 3,
+      "title": {
+        "en": "Explain what is ready for an outing",
+        "it": "Spiega che cosa è pronto per un’uscita"
+      },
+      "goal": {
+        "en": "Distinguish a task happening now from a preparation already completed.",
+        "it": "Distingui un’attività in corso da una preparazione già conclusa."
+      },
+      "rule": {
+        "en": "Sto + gerund describes an action happening now: sto cercando. With direct pronouns before passato prossimo, the participle agrees with lo/la/li/le: i posti → li ho prenotati; le sedie → le ho prenotate. Già marks something already done.",
+        "it": "Sto + gerundio descrive un’azione in corso: sto cercando. Con i pronomi diretti prima del passato prossimo, il participio concorda con lo/la/li/le: i posti → li ho prenotati; le sedie → le ho prenotate. Già indica qualcosa di già fatto."
+      },
+      "examples": [
+        {
+          "en": "I am checking the timetable now.",
+          "it": "Adesso sto controllando l’orario."
+        },
+        {
+          "en": "The seats? I have already reserved them.",
+          "it": "I posti? Li ho già prenotati."
+        }
+      ],
+      "words": [
+        {
+          "en": "seat / place",
+          "it": "posto"
+        },
+        {
+          "en": "timetable",
+          "it": "orario"
+        },
+        {
+          "en": "already",
+          "it": "già"
+        },
+        {
+          "en": "not yet",
+          "it": "non ancora"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Use cercare: Sto ___ l’indirizzo adesso.",
+            "it": "Usa cercare: Sto ___ l’indirizzo adesso."
+          },
+          "answers": [
+            "cercando"
+          ],
+          "explanation": {
+            "en": "Cercare forms the gerund cercando.",
+            "it": "Cercare forma il gerundio cercando."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Agree with i posti: Li ho già ___. Use prenotare.",
+            "it": "Concorda con i posti: Li ho già ___. Usa prenotare."
+          },
+          "answers": [
+            "prenotati"
+          ],
+          "explanation": {
+            "en": "Li is masculine plural, so prenotati agrees with it.",
+            "it": "Li è maschile plurale, quindi prenotati concorda con il pronome."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Agree with le sedie: Le ho ___. Use prenotare.",
+          "it": "Concorda con le sedie: Le ho ___. Usa prenotare."
+        },
+        "answers": [
+          "prenotate"
+        ],
+        "explanation": {
+          "en": "Le refers to feminine plural sedie, so use prenotate.",
+          "it": "Le riprende sedie, femminile plurale, quindi usa prenotate."
+        }
+      },
+      "output": {
+        "en": "Write three planning messages: say what you are doing now, what you have already booked and what is not ready yet.",
+        "it": "Scrivi tre messaggi organizzativi: indica che cosa stai facendo, che cosa hai già prenotato e che cosa non è ancora pronto."
+      },
+      "model": {
+        "en": "I am checking the address. The seats? I have already booked them. I have not yet bought the water.",
+        "it": "Sto controllando l’indirizzo. I posti? Li ho già prenotati. Non ho ancora comprato l’acqua."
+      },
+      "rubric": [
+        {
+          "en": "I used stare + gerund for the action happening now.",
+          "it": "Ho usato stare + gerundio per l’azione in corso."
+        },
+        {
+          "en": "The participle agrees with the direct pronoun before ho.",
+          "it": "Il participio concorda con il pronome diretto prima di ho."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            60,
+            61,
+            62
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            69,
+            252,
+            257,
+            261
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u05-explain-a-delay",
+      "course": 3,
+      "title": {
+        "en": "Explain a travel delay",
+        "it": "Spiega un ritardo in viaggio"
+      },
+      "goal": {
+        "en": "Give background, explain a completed disruption and state the journey duration.",
+        "it": "Descrivi lo sfondo, spiega un imprevisto concluso e indica la durata del viaggio."
+      },
+      "rule": {
+        "en": "Use the imperfect for background and passato prossimo for the event that changes it: aspettavo… quando è arrivato…. Duration agrees with the time expression: ci vuole un’ora, ci vogliono due ore.",
+        "it": "Usa l’imperfetto per lo sfondo e il passato prossimo per l’evento che lo cambia: aspettavo… quando è arrivato…. La durata concorda con l’espressione di tempo: ci vuole un’ora, ci vogliono due ore."
+      },
+      "examples": [
+        {
+          "en": "I was waiting at the stop when the bus arrived.",
+          "it": "Aspettavo alla fermata quando è arrivato l’autobus."
+        },
+        {
+          "en": "It takes forty minutes to get to the hotel.",
+          "it": "Per arrivare all’albergo ci vogliono quaranta minuti."
+        }
+      ],
+      "words": [
+        {
+          "en": "delay",
+          "it": "ritardo"
+        },
+        {
+          "en": "stop",
+          "it": "fermata"
+        },
+        {
+          "en": "journey",
+          "it": "tragitto"
+        },
+        {
+          "en": "to take time",
+          "it": "volerci"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Give the background using aspettare with io in the imperfect: ___ alla fermata quando è arrivato il bus.",
+            "it": "Descrivi lo sfondo usando aspettare con io all’imperfetto: ___ alla fermata quando è arrivato il bus."
+          },
+          "answers": [
+            "aspettavo"
+          ],
+          "explanation": {
+            "en": "Aspettavo describes what was already in progress.",
+            "it": "Aspettavo descrive ciò che era già in corso."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Choose vuole or vogliono: Ci ___ trenta minuti.",
+            "it": "Scegli vuole o vogliono: Ci ___ trenta minuti."
+          },
+          "answers": [
+            "vogliono"
+          ],
+          "explanation": {
+            "en": "Trenta minuti is plural, so use ci vogliono.",
+            "it": "Trenta minuti è plurale, quindi usa ci vogliono."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Use arrivare for the completed event: Il bus è ___ alle dieci.",
+          "it": "Usa arrivare per l’evento concluso: Il bus è ___ alle dieci."
+        },
+        "answers": [
+          "arrivato"
+        ],
+        "explanation": {
+          "en": "Arrivare uses essere here; arrivato agrees with il bus.",
+          "it": "Arrivare usa essere in questa frase; arrivato concorda con il bus."
+        }
+      },
+      "output": {
+        "en": "Write a three-sentence travel message: describe what you were doing, what happened and how long the remaining journey takes.",
+        "it": "Scrivi un messaggio di viaggio di tre frasi: descrivi che cosa facevi, che cosa è successo e quanto dura il tragitto rimasto."
+      },
+      "model": {
+        "en": "I was waiting for the train. It arrived twenty minutes late. It takes an hour to get to the hotel.",
+        "it": "Aspettavo il treno. È arrivato con venti minuti di ritardo. Per arrivare all’albergo ci vuole un’ora."
+      },
+      "rubric": [
+        {
+          "en": "I distinguished ongoing background from a completed event.",
+          "it": "Ho distinto lo sfondo in corso da un evento concluso."
+        },
+        {
+          "en": "Ci vuole/ci vogliono agrees with my duration expression.",
+          "it": "Ci vuole/ci vogliono concorda con la mia espressione di durata."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            73,
+            75,
+            79
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            83,
+            253,
+            258
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u06-suggest-a-break",
+      "course": 3,
+      "title": {
+        "en": "Suggest a pause to a friend",
+        "it": "Suggerisci una pausa a un amico"
+      },
+      "goal": {
+        "en": "Give two simple informal suggestions and one clear negative instruction.",
+        "it": "Dai due semplici suggerimenti informali e un’istruzione negativa chiara."
+      },
+      "rule": {
+        "en": "Use the tu imperative for a direct suggestion: guarda, prendi, apri. The negative form uses non + infinitive: non lavorare. A pronoun joins an affirmative imperative: guarda + lo → guardalo. In the negative, non guardarlo and non lo guardare both work.",
+        "it": "Usa l’imperativo con tu per un suggerimento diretto: guarda, prendi, apri. La forma negativa usa non + infinito: non lavorare. Un pronome si unisce all’imperativo affermativo: guarda + lo → guardalo. Nel negativo sono possibili non guardarlo e non lo guardare."
+      },
+      "examples": [
+        {
+          "en": "Open the window and take a break.",
+          "it": "Apri la finestra e fai una pausa."
+        },
+        {
+          "en": "The message? Read it later. Do not read it now.",
+          "it": "Il messaggio? Leggilo dopo. Non leggerlo adesso."
+        }
+      ],
+      "words": [
+        {
+          "en": "break",
+          "it": "pausa"
+        },
+        {
+          "en": "window",
+          "it": "finestra"
+        },
+        {
+          "en": "later",
+          "it": "dopo"
+        },
+        {
+          "en": "right away",
+          "it": "subito"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Give a tu suggestion using aprire: ___ la finestra.",
+            "it": "Dai un suggerimento con tu usando aprire: ___ la finestra."
+          },
+          "answers": [
+            "apri"
+          ],
+          "explanation": {
+            "en": "Apri is the tu imperative of aprire.",
+            "it": "Apri è l’imperativo di aprire con tu."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Give a negative tu instruction using lavorare: Non ___ adesso.",
+            "it": "Dai un’istruzione negativa con tu usando lavorare: Non ___ adesso."
+          },
+          "answers": [
+            "lavorare"
+          ],
+          "explanation": {
+            "en": "Negative tu commands use the infinitive after non.",
+            "it": "L’imperativo negativo con tu usa l’infinito dopo non."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Replace il messaggio with lo in the affirmative tu command: Leggi il messaggio. → ___.",
+          "it": "Sostituisci il messaggio con lo nell’imperativo affermativo con tu: Leggi il messaggio. → ___."
+        },
+        "answers": [
+          "leggilo"
+        ],
+        "explanation": {
+          "en": "The pronoun joins the affirmative imperative: leggi + lo → leggilo.",
+          "it": "Il pronome si unisce all’imperativo affermativo: leggi + lo → leggilo."
+        }
+      },
+      "output": {
+        "en": "Write a friendly three-line suggestion for a study break: two affirmative instructions and one negative instruction. Use one attached pronoun.",
+        "it": "Scrivi un consiglio amichevole di tre battute per una pausa dallo studio: due istruzioni affermative e una negativa. Usa un pronome unito al verbo."
+      },
+      "model": {
+        "en": "Open the window. The new message? Read it later. Do not work during the break.",
+        "it": "Apri la finestra. Il nuovo messaggio? Leggilo dopo. Non lavorare durante la pausa."
+      },
+      "rubric": [
+        {
+          "en": "I used tu imperative forms and non + infinitive for the negative.",
+          "it": "Ho usato l’imperativo con tu e non + infinito per il negativo."
+        },
+        {
+          "en": "I attached a pronoun to an affirmative imperative with a clear referent.",
+          "it": "Ho unito un pronome a un imperativo affermativo con un riferimento chiaro."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            90,
+            91,
+            93
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            103,
+            254,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u07-navigate-an-appointment",
+      "course": 3,
+      "title": {
+        "en": "Follow a formal appointment exchange",
+        "it": "Segui uno scambio formale per una visita"
+      },
+      "goal": {
+        "en": "Describe a simple symptom in a role-play and follow formal reception instructions.",
+        "it": "Descrivi un sintomo semplice in un gioco di ruolo e segui istruzioni formali all’accettazione."
+      },
+      "rule": {
+        "en": "Address someone formally with Lei imperative forms such as aspetti and entri. Pronouns precede a formal imperative: mi dica, si accomodi. Keep a symptom statement separate from an instruction: ho mal di testa describes; aspetti qui directs.",
+        "it": "Rivolgiti formalmente a qualcuno con l’imperativo di Lei: aspetti, entri. I pronomi precedono l’imperativo formale: mi dica, si accomodi. Distingui una descrizione da un’istruzione: ho mal di testa descrive; aspetti qui indica che cosa fare."
+      },
+      "examples": [
+        {
+          "en": "Please tell me your name, then wait here.",
+          "it": "Mi dica il Suo nome, poi aspetti qui."
+        },
+        {
+          "en": "I have a headache. — Please come in and take a seat.",
+          "it": "Ho mal di testa. — Entri e si accomodi."
+        }
+      ],
+      "words": [
+        {
+          "en": "appointment",
+          "it": "appuntamento"
+        },
+        {
+          "en": "reception desk",
+          "it": "accettazione"
+        },
+        {
+          "en": "headache",
+          "it": "mal di testa"
+        },
+        {
+          "en": "waiting room",
+          "it": "sala d’attesa"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Use the formal Lei imperative of aspettare: ___ qui, per favore.",
+            "it": "Usa l’imperativo formale con Lei di aspettare: ___ qui, per favore."
+          },
+          "answers": [
+            "aspetti"
+          ],
+          "explanation": {
+            "en": "Aspetti is the formal command; aspetta addresses tu.",
+            "it": "Aspetti è l’istruzione formale; aspetta si rivolge a tu."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete the formal instruction: ___ dica il Suo nome. (Tell me your name.)",
+            "it": "Completa l’istruzione formale: ___ dica il Suo nome."
+          },
+          "answers": [
+            "mi"
+          ],
+          "explanation": {
+            "en": "Mi comes before the formal imperative dica.",
+            "it": "Mi precede l’imperativo formale dica."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Use the formal Lei imperative of entrare: Prego, ___.",
+          "it": "Usa l’imperativo formale con Lei di entrare: Prego, ___."
+        },
+        "answers": [
+          "entri"
+        ],
+        "explanation": {
+          "en": "Entri keeps the exchange formal.",
+          "it": "Entri mantiene il registro formale."
+        }
+      },
+      "output": {
+        "en": "Write a four-line reception role-play: request a name, describe an invented symptom, then give two formal directions about where to wait or sit.",
+        "it": "Scrivi un gioco di ruolo di quattro battute all’accettazione: chiedi il nome, descrivi un sintomo inventato e dai due indicazioni formali su dove aspettare o sedersi."
+      },
+      "model": {
+        "en": "Please tell me your name. — I am Ada Neri. I have a headache. — Please wait in this room and take a seat. — Thank you.",
+        "it": "Mi dica il Suo nome. — Sono Ada Neri. Ho mal di testa. — Aspetti in questa sala e si accomodi, per favore. — Grazie."
+      },
+      "rubric": [
+        {
+          "en": "I used formal imperative forms consistently.",
+          "it": "Ho usato coerentemente le forme dell’imperativo formale."
+        },
+        {
+          "en": "I placed mi or si before the formal verb and kept the role-play clear.",
+          "it": "Ho messo mi o si prima del verbo formale e mantenuto chiaro il gioco di ruolo."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            101,
+            102,
+            103
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            117,
+            254,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u08-plan-a-next-step",
+      "course": 3,
+      "title": {
+        "en": "Set a next step with a real condition",
+        "it": "Decidi il prossimo passo con una condizione reale"
+      },
+      "goal": {
+        "en": "State a future work or study plan and connect it to a realistic condition.",
+        "it": "Esprimi un progetto futuro di lavoro o studio e collegalo a una condizione realistica."
+      },
+      "rule": {
+        "en": "The future simple expresses a plan: studierò, lavorerò, farò. For a realistic condition you can use se + present and a future result: Se ho tempo, scriverò…. Do not use the conditional after se in this pattern.",
+        "it": "Il futuro semplice esprime un progetto: studierò, lavorerò, farò. Per una condizione realistica puoi usare se + presente e una conseguenza al futuro: Se ho tempo, scriverò…. In questa struttura non usare il condizionale dopo se."
+      },
+      "examples": [
+        {
+          "en": "Next month I will study Italian every Tuesday.",
+          "it": "Il mese prossimo studierò italiano ogni martedì."
+        },
+        {
+          "en": "If I finish the course, I will send an application.",
+          "it": "Se finisco il corso, invierò una candidatura."
+        }
+      ],
+      "words": [
+        {
+          "en": "next month",
+          "it": "il mese prossimo"
+        },
+        {
+          "en": "application",
+          "it": "candidatura"
+        },
+        {
+          "en": "to send",
+          "it": "inviare"
+        },
+        {
+          "en": "condition",
+          "it": "condizione"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Use studiare with io in the future: Il mese prossimo ___ italiano.",
+            "it": "Usa studiare con io al futuro: Il mese prossimo ___ italiano."
+          },
+          "answers": [
+            "studierò"
+          ],
+          "explanation": {
+            "en": "Studierò has the future ending -ò; keep the accent.",
+            "it": "Studierò ha la desinenza del futuro -ò; conserva l’accento."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Introduce the realistic condition: ___ ho tempo, scriverò il messaggio.",
+            "it": "Introduci la condizione realistica: ___ ho tempo, scriverò il messaggio."
+          },
+          "answers": [
+            "se"
+          ],
+          "explanation": {
+            "en": "Se introduces the condition; ho is present and scriverò is the future result.",
+            "it": "Se introduce la condizione; ho è al presente e scriverò è la conseguenza al futuro."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Use fare with io in the future: Domani ___ una domanda.",
+          "it": "Usa fare con io al futuro: Domani ___ una domanda."
+        },
+        "answers": [
+          "farò"
+        ],
+        "explanation": {
+          "en": "Fare has the future stem far-: farò.",
+          "it": "Fare ha il tema futuro far-: farò."
+        }
+      },
+      "output": {
+        "en": "Write a small work or study plan: one future action, one realistic condition with se and one concrete time expression.",
+        "it": "Scrivi un piccolo progetto di lavoro o studio: un’azione futura, una condizione realistica con se e un’espressione di tempo concreta."
+      },
+      "model": {
+        "en": "On Monday I will update my CV. If I have time, I will also write an application. I will send it on Tuesday.",
+        "it": "Lunedì aggiornerò il curriculum. Se ho tempo, scriverò anche una candidatura. La invierò martedì."
+      },
+      "rubric": [
+        {
+          "en": "I used future forms with the correct endings and accents.",
+          "it": "Ho usato le forme del futuro con desinenze e accenti corretti."
+        },
+        {
+          "en": "My se clause and result express a clear realistic condition.",
+          "it": "La frase con se e la conseguenza esprimono una condizione realistica chiara."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            116,
+            119,
+            121
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            133,
+            255,
+            256,
+            259
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u09-tell-an-interruption",
+      "course": 3,
+      "title": {
+        "en": "Tell what interrupted your plan",
+        "it": "Racconta che cosa ha interrotto il programma"
+      },
+      "goal": {
+        "en": "Explain what you were about to do and what you had to do instead.",
+        "it": "Spiega che cosa stavi per fare e che cosa hai dovuto fare invece."
+      },
+      "rule": {
+        "en": "Stavo per + infinitive means I was about to do something; it does not say the action was completed. Add a completed interruption, then ho dovuto + infinitive for a necessary response: stavo per scrivere, ma… ho dovuto telefonare.",
+        "it": "Stavo per + infinito indica un’azione imminente; non dice che l’azione sia stata compiuta. Aggiungi un imprevisto concluso e poi ho dovuto + infinito per una risposta necessaria: stavo per scrivere, ma… ho dovuto telefonare."
+      },
+      "examples": [
+        {
+          "en": "I was about to send the email when the computer stopped working.",
+          "it": "Stavo per inviare l’e-mail quando il computer ha smesso di funzionare."
+        },
+        {
+          "en": "I had to call the office.",
+          "it": "Ho dovuto chiamare l’ufficio."
+        }
+      ],
+      "words": [
+        {
+          "en": "to be about to",
+          "it": "stare per"
+        },
+        {
+          "en": "interruption",
+          "it": "interruzione"
+        },
+        {
+          "en": "instead",
+          "it": "invece"
+        },
+        {
+          "en": "to have to call",
+          "it": "dover chiamare"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete the imminent-action expression: Stavo ___ uscire.",
+            "it": "Completa l’espressione di azione imminente: Stavo ___ uscire."
+          },
+          "answers": [
+            "per"
+          ],
+          "explanation": {
+            "en": "Stare per + infinitive describes an action about to happen.",
+            "it": "Stare per + infinito descrive un’azione imminente."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Use dovere in the past: Ho ___ telefonare al collega.",
+            "it": "Usa dovere al passato: Ho ___ telefonare al collega."
+          },
+          "answers": [
+            "dovuto"
+          ],
+          "explanation": {
+            "en": "Ho dovuto telefonare expresses a completed necessity to call.",
+            "it": "Ho dovuto telefonare esprime una necessità riferita a un evento passato."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Use stare with io in the imperfect: ___ per iniziare quando è suonato il telefono.",
+          "it": "Usa stare con io all’imperfetto: ___ per iniziare quando è suonato il telefono."
+        },
+        "answers": [
+          "stavo"
+        ],
+        "explanation": {
+          "en": "Stavo gives the imminent background before the completed interruption.",
+          "it": "Stavo descrive lo sfondo imminente prima dell’imprevisto concluso."
+        }
+      },
+      "output": {
+        "en": "Invent a three-sentence interruption story: an action about to happen, an interruption and a necessary response with ho dovuto.",
+        "it": "Inventa un racconto di tre frasi: un’azione imminente, un’interruzione e una risposta necessaria con ho dovuto."
+      },
+      "model": {
+        "en": "I was about to start the meeting. The screen stopped working. I had to call a colleague.",
+        "it": "Stavo per iniziare la riunione. Lo schermo ha smesso di funzionare. Ho dovuto chiamare una collega."
+      },
+      "rubric": [
+        {
+          "en": "I used stavo per + infinitive without claiming the planned action finished.",
+          "it": "Ho usato stavo per + infinito senza affermare che l’azione prevista sia finita."
+        },
+        {
+          "en": "I separated the interruption from my necessary response.",
+          "it": "Ho distinto l’interruzione dalla risposta necessaria."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            133,
+            134,
+            135,
+            136
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            153,
+            251,
+            257
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espresso2-u10-discuss-a-home",
+      "course": 3,
+      "title": {
+        "en": "Discuss a home with reasons",
+        "it": "Parla di una casa con delle ragioni"
+      },
+      "goal": {
+        "en": "Express an opinion and a requirement about an imagined home.",
+        "it": "Esprimi un’opinione e un requisito su una casa immaginata."
+      },
+      "rule": {
+        "en": "In these guided patterns, penso che and è importante che introduce the present subjunctive: penso che sia tranquilla; è importante che abbia due camere. Secondo me introduces a statement in the indicative: secondo me è tranquilla.",
+        "it": "In queste strutture guidate, penso che ed è importante che introducono il congiuntivo presente: penso che sia tranquilla; è importante che abbia due camere. Secondo me introduce una frase all’indicativo: secondo me è tranquilla."
+      },
+      "examples": [
+        {
+          "en": "I think the house is bright.",
+          "it": "Penso che la casa sia luminosa."
+        },
+        {
+          "en": "It is important that it has a balcony. In my opinion, the kitchen is small.",
+          "it": "È importante che abbia un balcone. Secondo me la cucina è piccola."
+        }
+      ],
+      "words": [
+        {
+          "en": "bright",
+          "it": "luminoso"
+        },
+        {
+          "en": "balcony",
+          "it": "balcone"
+        },
+        {
+          "en": "requirement",
+          "it": "requisito"
+        },
+        {
+          "en": "in my opinion",
+          "it": "secondo me"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Use essere in the present subjunctive: Penso che la stanza ___ tranquilla.",
+            "it": "Usa essere al congiuntivo presente: Penso che la stanza ___ tranquilla."
+          },
+          "answers": [
+            "sia"
+          ],
+          "explanation": {
+            "en": "Penso che introduces the guided subjunctive pattern: sia.",
+            "it": "Penso che introduce la struttura guidata con il congiuntivo: sia."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Use avere in the present subjunctive: È importante che la casa ___ due camere.",
+            "it": "Usa avere al congiuntivo presente: È importante che la casa ___ due camere."
+          },
+          "answers": [
+            "abbia"
+          ],
+          "explanation": {
+            "en": "È importante che introduces the requirement with abbia.",
+            "it": "È importante che introduce il requisito con abbia."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Choose è or sia after secondo me: Secondo me la cucina ___ grande.",
+          "it": "Scegli è o sia dopo secondo me: Secondo me la cucina ___ grande."
+        },
+        "answers": [
+          "è"
+        ],
+        "explanation": {
+          "en": "Secondo me takes the indicative here: è. Keep the accent.",
+          "it": "Secondo me richiede qui l’indicativo: è. Conserva l’accento."
+        }
+      },
+      "output": {
+        "en": "Describe an imagined home in three sentences: one opinion with penso che, one requirement with è importante che and one statement with secondo me.",
+        "it": "Descrivi una casa immaginata in tre frasi: un’opinione con penso che, un requisito con è importante che e una frase con secondo me."
+      },
+      "model": {
+        "en": "I think the apartment is quiet. It is important that it has a bright kitchen. In my opinion the living room is comfortable.",
+        "it": "Penso che l’appartamento sia tranquillo. È importante che abbia una cucina luminosa. Secondo me il soggiorno è comodo."
+      },
+      "rubric": [
+        {
+          "en": "I used sia/abbia after the guided che expressions.",
+          "it": "Ho usato sia/abbia dopo le espressioni guidate con che."
+        },
+        {
+          "en": "I used the indicative after secondo me and gave a clear requirement.",
+          "it": "Ho usato l’indicativo dopo secondo me e indicato un requisito chiaro."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-070c40bad24b",
+          "pages": [
+            144,
+            145,
+            147,
+            148
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            167,
+            256,
+            257
+          ]
+        }
+      ]
     }
   ],
   "sources": [
@@ -4170,6 +6598,54 @@
       "course": 3,
       "pages": 20,
       "sha256": "579689db998e7d4bae3c219d292d8fa72ed84e072c6ac5ff64b7c8611cf99e05"
+    },
+    {
+      "id": "src-2c59b3929a33",
+      "path": "Course 3/Grammar_ A1.pptx",
+      "title": "Grammar_ A1.pptx",
+      "course": 3,
+      "pages": 78,
+      "sha256": "2c59b3929a334786d08bc844d9bb3d9c35d5df8fa4628e053db9597cb90afd40"
+    },
+    {
+      "id": "src-8fa57188c2eb",
+      "path": "materials/books/nuovo-espresso-plus-1/originals/publisher/NEPLUS1_indice.pdf",
+      "title": "NEPLUS1_indice.pdf",
+      "course": 1,
+      "pages": 2,
+      "sha256": "8fa57188c2ebe38924bb89947715f4176513587408553f94cbcd22d2017394bb"
+    },
+    {
+      "id": "src-c3791736675a",
+      "path": "materials/books/nuovo-espresso-plus-2/originals/publisher/NESP2_indice.pdf",
+      "title": "NESP2_indice.pdf",
+      "course": 3,
+      "pages": 2,
+      "sha256": "c3791736675a2cf754c1527a6bafc7a7f3ee545d0efd78eb3a69800b8fb916c5"
+    },
+    {
+      "id": "src-070c40bad24b",
+      "path": "materials/books/nuovo-espresso-plus-2/originals/publisher/NEPLUS2_guida-totaleDEF.pdf",
+      "title": "NEPLUS2_guida-totaleDEF.pdf",
+      "course": 3,
+      "pages": 166,
+      "sha256": "070c40bad24b248f5b07c97b3e5682990fcc262817693389cc003a1664e3f86c"
+    },
+    {
+      "id": "src-1647be2784c9",
+      "path": "materials/books/nuovo-espresso-plus-1/originals/reader-native-pdf/nuovo-espresso-plus-1-complete-book.pdf",
+      "title": "nuovo-espresso-plus-1-complete-book.pdf · reader XPS → PDF",
+      "course": 1,
+      "pages": 240,
+      "sha256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf"
+    },
+    {
+      "id": "src-580f7558db56",
+      "path": "materials/books/nuovo-espresso-plus-2/originals/reader-native-pdf/nuovo-espresso-plus-2-accessible-reader-book-263-pages.pdf",
+      "title": "nuovo-espresso-plus-2-accessible-reader-book-263-pages.pdf · reader XPS → PDF",
+      "course": 3,
+      "pages": 263,
+      "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4"
     }
   ]
 }

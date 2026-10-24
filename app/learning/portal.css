@@ -2233,6 +2233,14 @@ html {
   gap: 8px;
   margin: 24px 0;
 }
+.vocabulary-chooser { margin: 18px 0; }
+.vocabulary-chooser summary { cursor: pointer; font-weight: 650; }
+.vocabulary-topic-heading { scroll-margin-top: 130px; }
+.chapter-links p { display: flex; flex-wrap: wrap; gap: 10px; }
+.chapter-gist { margin: 18px 0; }
+.chapter-retell { margin: 20px 0 0; }
+.chapter-retell summary { cursor: pointer; font-weight: 650; }
+.chapter-retell .field { margin-top: 14px; }
 .bank-choices button[aria-pressed="true"] {
   background: var(--lime);
   border-color: var(--green);

@@ -129,5 +129,60 @@
     "student": "docs/student-audit-academy.json",
     "lecturer": "docs/lecturer-audit.json",
     "uiUx": "docs/ui-ux-audit.json"
+  },
+  "book_course_refresh": {
+    "date": "2026-10-24",
+    "report": "docs/book-course-student-audit.json",
+    "method": "Separate disposable browser and synthetic learner records; shared signed-in book session untouched.",
+    "workflow_groups_passed": 9,
+    "en_it_viewport_checks_passed": 42,
+    "automated_daily_tests_passed": 112,
+    "tested": [
+      "Programme selection, saved daily transfer drafts, model exposure, self-check completion and next-day gating",
+      "New A2 wrong-first answer, reload, exercise completion, production and source references",
+      "English/Italian layouts at 320, 390 and 1440 pixels",
+      "Corrected English scaffolds with Italian targets preserved",
+      "New A1 corrections and accents; verified240/263-page local PDF matching, exact physical-page links, replacement/disconnect/reload and zero uploads"
+    ],
+    "limits": [
+      "Not a human completion of all eighty study days.",
+      "Linked prerequisite completions were seeded only for isolated gating scenarios.",
+      "No learner progress or local databases were read or changed."
+    ],
+    "targeted_followup_groups_passed": 12,
+    "application_tests": 69,
+    "media_import_tests": 35,
+    "caption_import_tests": 8
+  },
+  "website_enrichment_audit": {
+    "date": "2026-10-24",
+    "status": "passed locally; not published",
+    "review": "docs/website-enrichment-review.json",
+    "daily_tests": 158,
+    "pdf_export_tests": 4,
+    "programme_day_budget_cases": 924,
+    "browser_reports": [
+      "docs/discovery-review.json",
+      "docs/chapter-student-audit.json",
+      "docs/pdf-bundle-student-audit.json"
+    ],
+    "key_regression_fixed": "Unsupported25-minute sessions after reserving personal-practice time could fail progress reload; shared valid session layouts now agree across Today and direct entry.",
+    "preservation": "Existing learner IDs, first attempts, saved durations, started-session banks and version-one backups remain valid; QA uses disposable synthetic learner contexts."
+  },
+  "chapter_and_review_navigation_audit": {
+    "date": "2026-10-24",
+    "status": "passed locally; not published",
+    "review": "docs/next-learning-enhancement-review.json",
+    "dailyTestsPassed": 185,
+    "chapterWorkflowGroupsPassed": 6,
+    "chapterResponsiveLayoutsPassed": 12,
+    "reviewWorkflowGroupsPassed": 15,
+    "coldLazyDeepRoutesPassed": 10,
+    "failureRecoveryLanguages": [
+      "en",
+      "it"
+    ],
+    "keyFix": "Unsubmitted grammar recalls now resume from a separate validated pending draft, retaining hint use across midnight and preserving previous checked answers, first-attempt evidence, ordinary exercise position and production drafts.",
+    "preservation": "Synthetic disposable browsers only; all existing source IDs and version-one backups retained."
   }
 }

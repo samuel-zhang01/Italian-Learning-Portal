@@ -1,0 +1,71 @@
+{
+  "reviewedOn": "2026-10-24",
+  "scope": "Original chapter vocabulary, optional gist/changed-detail retelling, and bounded A2 conversation choices for the maintained daily portal.",
+  "counts": {
+    "newChapterBanks": 20,
+    "newVocabularyCards": 160,
+    "chapterSkillPacks": 20,
+    "newA2Scenes": 10,
+    "newA2Turns": 30,
+    "totalBanks": 38,
+    "totalVocabularyCards": 304,
+    "totalScenes": 18,
+    "totalConversationTurns": 54
+  },
+  "baselinePreservation": {
+    "originalBanksSHA256": "8a64a42519b43ac415737ce55779358d65a417351dc79cb6b0af1758649bc488",
+    "originalCoreEnrichmentsSHA256": "470e1129822135c609631b6d3ca17178728909cf809557c277920ac5fc0ee0bb",
+    "originalScenesSHA256": "ce4ee39707acaa7f1867a46dce0619ed1f7e223415ec0bb7025e58d972bc8f23",
+    "existingChapterTeachingSHA256": "776d5fa32863d46cb9d7c54ec7680c40e17515ad7ce11cbd825f72633d0103a5"
+  },
+  "sourceGrounding": "Each chapter bank and A2 scene reuses the existing verified mission source IDs and physical-page references for topic grounding. Vocabulary, examples, scenes and transfer outcomes are original portal writing; no claim is made that this is the publisher’s word list or audio transcript.",
+  "assessmentLimits": [
+    "Gist answers are explicitly witnessed by the unchanged original portal dialogue.",
+    "Retelling changes details and is self-assessed with two bilingual criteria.",
+    "Conversation choices assess a bounded authored reply, not unrestricted Italian.",
+    "Device speech is optional synthetic listening support, not a publisher recording or pronunciation assessment.",
+    "The final subjunctive chapter introduces only the specified forms and opinion frames; it does not certify A2 mastery."
+  ],
+  "progress": "All 18 original banks, 144 original word IDs, 36 original enrichments and 8 original scenes are unchanged. Only the 20 previously added book enrichments change bank and gain optional skills. Session bank pinning and legacy fallbacks are integrated separately by the application owner.",
+  "validation": {
+    "contentTests": "tests/chapter-content.test.mjs",
+    "browserStatus": "Awaiting integrated EN/IT student journeys; no browser test is claimed by this content review.",
+    "focusedContentTestsPassed": 7,
+    "checkedOn": "2026-10-24"
+  },
+  "independentLanguageReview": {
+    "reviewedOn": "2026-10-24",
+    "reviewer": "Independent collaborating agent",
+    "scope": {
+      "newVocabularyCards": 160,
+      "newVocabularyBanks": 20,
+      "gistAndRetellPacks": 20,
+      "newA2ConversationScenes": 10,
+      "newA2ConversationTurns": 30
+    },
+    "method": "Read each new Italian/English term and contextual example; compare every new gist against its existing four-line portal scene; check retelling models against requested changed details; inspect conversation prompts, distractors, hints and explanations.",
+    "result": "No blocking Italian grammar/agreement error, unsupported gist fact or second correct conversation choice was found within the task’s stated tense, register and grammatical-form constraints. Retelling models satisfy their changed-detail prompts.",
+    "refinementsVerified": [
+      {
+        "location": "espresso1-u06 vocabulary card 5",
+        "change": "The English gloss for prima now includes first, matching its contextual example.",
+        "status": "resolved"
+      },
+      {
+        "location": "espresso1-u08 optional retelling prompt",
+        "change": "The Italian instruction now says to use noi for the group actions, removing the ambiguous per noi wording.",
+        "status": "resolved"
+      },
+      {
+        "location": "Bare-noun gist prompts",
+        "change": "Applicable noun prompts explicitly exclude articles and possessives, clarifying the accepted short-answer form.",
+        "status": "resolved"
+      }
+    ],
+    "limits": [
+      "This bounded linguistic review covers original portal writing, not all publisher exercises or every source page.",
+      "A2 subjunctive work remains an introduction to specified frames, not evidence of general subjunctive mastery or CEFR certification.",
+      "This review does not claim integrated browser acceptance or measured learning outcomes."
+    ]
+  }
+}

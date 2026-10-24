@@ -1,0 +1,78 @@
+{
+  "createdAt": "2026-10-24T18:37:14.105671+00:00",
+  "scope": "Enrich the maintained daily website across discovery, vocabulary, conversations, chapter skills, continuation and private source access. Keep the current visual system and existing progress valid.",
+  "pdfExportPhase": "complete; validated student, reference, transcript, interactive and complete study packs remain private",
+  "goals": [
+    {
+      "id": "topic-discovery",
+      "status": "complete",
+      "outcome": "Find topics across the course and retain browsing context when opening material.",
+      "acceptance": [
+        "Italian and English grammar terms locate the appropriate units.",
+        "Book title and physical page queries find labelled source companions.",
+        "Search/filter survives opening a result, back navigation and reload.",
+        "Selected page tasks receive useful focus at phone widths."
+      ]
+    },
+    {
+      "id": "chapter-content",
+      "status": "complete",
+      "outcome": "Give all20 book chapters their own vocabulary and listening/speaking extensions, and add A2 conversation practice.",
+      "acceptance": [
+        "20 new vocabulary banks with160 original bilingual contextual cards.",
+        "10 original A2 conversation scenes with30 bounded turns.",
+        "20 optional original chapter gist/retelling tasks.",
+        "Existing144 word IDs,56 mission IDs,55 grammar IDs and programme day IDs remain valid."
+      ]
+    },
+    {
+      "id": "daily-continuity",
+      "status": "complete",
+      "outcome": "Make daily work, grammar continuation and vocabulary follow the active chapter.",
+      "acceptance": [
+        "Started sessions retain their chosen vocabulary bank across content changes and backup reloads.",
+        "Level labels and programme counts reflect actual selected material.",
+        "Grammar continuation prefers the active programme and available prerequisites.",
+        "Daily time budgets and credit rules remain bounded."
+      ]
+    },
+    {
+      "id": "local-pdf-bundles",
+      "status": "complete",
+      "outcome": "Open book citations at the right physical page in individual or combined private PDF exports.",
+      "acceptance": [
+        "SHA-based bundle matching works despite renaming.",
+        "Book2 source pages in combined student PDF use offset240.",
+        "Shared object URLs are revoked only after their last connection is released.",
+        "PDF bytes and object URLs never enter progress storage or uploads."
+      ]
+    },
+    {
+      "id": "acceptance-and-privacy",
+      "status": "complete",
+      "outcome": "Validate the complete enriched site with synthetic learner state and private-source boundaries.",
+      "acceptance": [
+        "Daily tests, type checking, lint and static build pass.",
+        "Key new flows work in EN/IT at320,390 and1440 pixels.",
+        "Source exports remain Git-ignored and absent from public build.",
+        "No real learner databases, backups or browser progress are read or changed."
+      ]
+    }
+  ],
+  "deferred": [
+    "Deferred loading of large catalogues: requires a separate planning-data refactor and cold-load benchmark.",
+    "Human language-learning outcomes and CEFR certification are not inferred from software checks."
+  ],
+  "published": false,
+  "updatedAt": "2026-10-24T19:09:49.268692+00:00",
+  "evidence": [
+    "docs/book-pdf-export-audit.json",
+    "docs/chapter-content-review.json",
+    "docs/discovery-review.json",
+    "docs/chapter-student-audit.json",
+    "docs/pdf-bundle-student-audit.json"
+  ],
+  "status": "complete locally",
+  "completedAt": "2026-10-24T19:09:49.268692+00:00",
+  "review": "docs/website-enrichment-review.json"
+}
