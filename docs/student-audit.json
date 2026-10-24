@@ -184,5 +184,13 @@
     ],
     "keyFix": "Unsubmitted grammar recalls now resume from a separate validated pending draft, retaining hint use across midnight and preserving previous checked answers, first-attempt evidence, ordinary exercise position and production drafts.",
     "preservation": "Synthetic disposable browsers only; all existing source IDs and version-one backups retained."
+  },
+  "book_learning_publication": {
+    "published": true,
+    "url": "https://italian.samuelzhang.co.uk/",
+    "sourceRevision": "f4fcd99d560ea53ea0986495d37877c2469a741f",
+    "release": "20261024T223416Z-book-learning",
+    "verifiedAt": "2026-10-24T22:37:39.847065+00:00",
+    "report": "docs/deployment-book-learning-2026-10-24.json"
   }
 }

@@ -1,0 +1,356 @@
+{
+  "release": "20261024T223416Z-book-learning",
+  "releaseDirectory": "/data/italian/releases/20261024T223416Z-book-learning",
+  "sourceRevision": "f4fcd99d560ea53ea0986495d37877c2469a741f",
+  "previousReleaseDirectory": "/data/italian/releases/20261020T225700Z-paper-cutout",
+  "artifactHashes": {
+    "assets/academy-D-TWoh7a.js": "f11c9d1f3cf76373d1b00b517286d5e8717363afbc7012c4746f8d57e6ade8db",
+    "assets/arcade-D5Z4qoMw.js": "94c1dbc9ca79313a502c0d98420494cc7263659ad46cbdc763a6e846512a5a62",
+    "assets/arcade-scenes-CBQF13FH.js": "9acbc31d1846c8e67351a57d44894c6d524d8c249b3493a90ef01397d54eeadb",
+    "assets/chapters-CfwLknyS.css": "a8b87bb143e0bb4e4e55347a1c8d78dafba41aaba93c7059fde8c2d1332183ff",
+    "assets/chapters-UfFSACkZ.js": "47b2a8a43cb14982f04030f3cedc3c6f3f20e5fd02de85b3c3f329eca3574b05",
+    "assets/companion-DPZeYUu6.js": "ff3fd8051c6fdd56068a2d887b42d9d83d33e8243a21943ef40b141a7961a0e7",
+    "assets/discovery-CqVupXD1.js": "bafc93e08433f4e612e69498a6ee67b6bc7b25d60668a9d5430f3b368f0a0a76",
+    "assets/discovery-index-xM2TX-LE.js": "48862b4dab41ee9fe499246f1f7da66603b1c218d4f88eba14d7f034dcaa35df",
+    "assets/enriched-CuLrW9hl.js": "4a237221e947730acd17622b3e8fc7d019ef9c63a00ab39d1797e0b7f4105c26",
+    "assets/enrichment-BCTIhNYJ.js": "114336d760c177edbc62b83a685be9c35685cd70ce814b64237a35bff7dbc247",
+    "assets/grammar-BtH4sbaC.js": "b6dbfdbc420121edfef6c1f4d936c0f49b96437f9afa6dd96f6445c1adcbbdd5",
+    "assets/index-BTcNHdQx.css": "6b9233ca27000e6625bbc802ac3a9580284d5c63e77f3a9e330de67e02ed0a25",
+    "assets/index-CEn1PUdH.js": "ac657615c99f026ee79879ec678b95b36fc1ceb1492b1f956e2f3b8897b3f196",
+    "assets/navigation-BIrD2hfo.js": "f417bc8c9b74837a553bf75a11e4933a2d5a13467930fde19b195448d0d0f256",
+    "assets/painted-cardboard-CX92yXJi.webp": "2267856e5f4e1c2f9388fa4fe7cc1eff3746b3354407287574e42dd51533c2db",
+    "assets/practice-tools-6miu37Di.js": "3e3eb15aa3e2e6407eb7a5a06c37c6c6eb0a18deb5aeae62ad2d7c23957947a2",
+    "assets/review-hub-C0Sh_F8c.css": "e0d5c02b9b6e9f87a95ef873518983f70a779d2537782d05da904e0d2693f146",
+    "assets/review-hub-CEjLxmNP.js": "1ff42848a91e1c644ad7cd8af0a706b3fcd3111b0410f991890c4872e7a2ab18",
+    "favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "index.html": "476921d660ab11f2454763285131443793aed22c3a69cb761bc24adb43871e1e"
+  },
+  "remoteHashVerification": "passed",
+  "url": "https://italian.samuelzhang.co.uk/",
+  "cleanCheckoutBuild": "identical artifacts",
+  "scope": "Only20 site-dist files uploaded; current symlink switched atomically; previous release retained.",
+  "privacy": {
+    "privateStudyFilesPublished": false,
+    "realLearnerDataAccessed": false
+  },
+  "status": "deployed-and-verified",
+  "activatedAt": "2026-10-24T22:34:20.723661+00:00",
+  "publicHttpsVerification": {
+    "passed": true,
+    "tlsValidation": true,
+    "method": "Fresh genuine Chromium page and same-origin browser fetches; canonical HTML asset references plus exact SHA-256 for every non-HTML asset.",
+    "results": [
+      {
+        "path": "assets/academy-D-TWoh7a.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-D5Z4qoMw.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-scenes-CBQF13FH.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-CfwLknyS.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-UfFSACkZ.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/companion-DPZeYUu6.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-CqVupXD1.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-index-xM2TX-LE.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enriched-CuLrW9hl.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enrichment-BCTIhNYJ.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/grammar-BtH4sbaC.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-BTcNHdQx.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-CEn1PUdH.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/navigation-BIrD2hfo.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/painted-cardboard-CX92yXJi.webp",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-tools-6miu37Di.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-C0Sh_F8c.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-CEjLxmNP.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "favicon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "currentAssetReferences": true
+      }
+    ],
+    "blockedRequests": []
+  },
+  "verifiedAt": "2026-10-24T22:37:39.847065+00:00",
+  "requiredChecks": {
+    "test:daily": "185 passed, zero failed/skipped",
+    "typecheck": "passed",
+    "lint": "passed",
+    "build:daily": "passed"
+  },
+  "hostedCI": {
+    "sourceRevision": "f4fcd99d560ea53ea0986495d37877c2469a741f",
+    "runId": 40138960566,
+    "conclusion": "success",
+    "url": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/40138960566"
+  },
+  "liveBrowserVerification": {
+    "workflowChecksPassed": 28,
+    "checks": [
+      {
+        "label": "Cold Today renders in a fresh verified-TLS context",
+        "language": "en",
+        "width": 390,
+        "height": 844,
+        "tlsProtocol": "QUIC"
+      },
+      {
+        "label": "Twenty chapters, persistent A2 filter and focused chapter detail load",
+        "language": "en",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "label": "Chapter vocabulary deep route loads and survives reload",
+        "language": "en",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "label": "A2 game deep route loads the exact three-turn scene without starting it",
+        "language": "en",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "label": "Bilingual discovery filters survive reload and load the exact lazy grammar route",
+        "language": "en",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "label": "Unified 2/5/10-minute review choices are URL-backed and nonmutating",
+        "language": "en",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "label": "Known due grammar target opens exactly; unsubmitted draft survives reload separately from original evidence",
+        "language": "en",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "label": "Cold Today renders in a fresh verified-TLS context",
+        "language": "en",
+        "width": 1440,
+        "height": 1000,
+        "tlsProtocol": "QUIC"
+      },
+      {
+        "label": "Twenty chapters, persistent A2 filter and focused chapter detail load",
+        "language": "en",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "label": "Chapter vocabulary deep route loads and survives reload",
+        "language": "en",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "label": "A2 game deep route loads the exact three-turn scene without starting it",
+        "language": "en",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "label": "Bilingual discovery filters survive reload and load the exact lazy grammar route",
+        "language": "en",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "label": "Unified 2/5/10-minute review choices are URL-backed and nonmutating",
+        "language": "en",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "label": "Known due grammar target opens exactly; unsubmitted draft survives reload separately from original evidence",
+        "language": "en",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "label": "Cold Today renders in a fresh verified-TLS context",
+        "language": "it",
+        "width": 320,
+        "height": 844,
+        "tlsProtocol": "QUIC"
+      },
+      {
+        "label": "Twenty chapters, persistent A2 filter and focused chapter detail load",
+        "language": "it",
+        "width": 320,
+        "height": 844
+      },
+      {
+        "label": "Chapter vocabulary deep route loads and survives reload",
+        "language": "it",
+        "width": 320,
+        "height": 844
+      },
+      {
+        "label": "A2 game deep route loads the exact three-turn scene without starting it",
+        "language": "it",
+        "width": 320,
+        "height": 844
+      },
+      {
+        "label": "Bilingual discovery filters survive reload and load the exact lazy grammar route",
+        "language": "it",
+        "width": 320,
+        "height": 844
+      },
+      {
+        "label": "Unified 2/5/10-minute review choices are URL-backed and nonmutating",
+        "language": "it",
+        "width": 320,
+        "height": 844
+      },
+      {
+        "label": "Known due grammar target opens exactly; unsubmitted draft survives reload separately from original evidence",
+        "language": "it",
+        "width": 320,
+        "height": 844
+      },
+      {
+        "label": "Cold Today renders in a fresh verified-TLS context",
+        "language": "it",
+        "width": 1440,
+        "height": 1000,
+        "tlsProtocol": "TLS 1.3"
+      },
+      {
+        "label": "Twenty chapters, persistent A2 filter and focused chapter detail load",
+        "language": "it",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "label": "Chapter vocabulary deep route loads and survives reload",
+        "language": "it",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "label": "A2 game deep route loads the exact three-turn scene without starting it",
+        "language": "it",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "label": "Bilingual discovery filters survive reload and load the exact lazy grammar route",
+        "language": "it",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "label": "Unified 2/5/10-minute review choices are URL-backed and nonmutating",
+        "language": "it",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "label": "Known due grammar target opens exactly; unsubmitted draft survives reload separately from original evidence",
+        "language": "it",
+        "width": 1440,
+        "height": 1000
+      }
+    ],
+    "syntheticProgressOnly": true,
+    "noFormsSubmitted": true,
+    "tlsValidation": true,
+    "unexpectedRuntimeErrors": 0,
+    "unexpectedBlockedRequests": 0,
+    "failedResources": 0,
+    "expectedBlockedAnalyticsCount": 0,
+    "report": "work/release-browser/browser-report.json",
+    "reportSHA256": "9e8b3527a741a3b377d4a0f443370658f6e32b37a3ded45fa1a708fc20976931"
+  },
+  "verificationAdjustment": {
+    "initialAttempt": "Uploaded matching files, then automatically restored the previous release when the Python HTTP client received Cloudflare1010/403.",
+    "diagnosis": "The previous release also rejected that client; a fresh real Chromium browser returned200 with certificate verification enabled.",
+    "resolution": "Verified canonical public HTML and all19 non-HTML asset hashes using genuine Chromium browser fetches. No access-rule, TLS or nginx changes."
+  },
+  "rollback": "Atomically restore previousReleaseDirectory at /data/italian/current inside the existing static-site container.",
+  "sourceAcceptance": "docs/next-learning-enhancement-review.json",
+  "limitations": [
+    "Public Chromium checks use synthetic state; no physical-device or human learning-outcome study.",
+    "Private book exports remain local; learners connect their own PDFs in Materials."
+  ]
+}

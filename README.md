@@ -2,9 +2,9 @@
 
 A little Italian, every day. Parliamo turns the supplied class materials into short, original practice: notice an idea, retrieve it, then use it in your own Italian.
 
-Live production: **https://italian.samuelzhang.co.uk**. The last deployed painted-cardboard and paper-cutout release passed 49 automated tests and 171 public browser screen/state checks. Its five deployed files match committed source `6cdbc8a`; release evidence is in [`docs/deployment-paper-cutout-2026-10-20.json`](docs/deployment-paper-cutout-2026-10-20.json). The preceding navigation release is retained for rollback. The book-course expansion below is verified locally and has not been deployed.
+Live production: **https://italian.samuelzhang.co.uk**. The book course, twenty-chapter dashboard, unified review queue and faster initial loading are deployed. All 20 website files match a clean build of committed source `f4fcd99`; 185 daily tests and hosted CI passed, along with public EN/IT browser checks. Release evidence is in [`docs/deployment-book-learning-2026-10-24.json`](docs/deployment-book-learning-2026-10-24.json). The previous paper-cutout release is retained for rollback.
 
-The first website enrichment goals are complete locally: cross-site topic discovery, chapter practice and combined-PDF page connections. [`docs/website-enrichment-plan.json`](docs/website-enrichment-plan.json) records the goals; [`docs/website-enrichment-review.json`](docs/website-enrichment-review.json) records acceptance evidence, the scheduling fix and remaining limits. This package passes158 daily tests,4 PDF-export tests, type checking, lint, the static build and isolated EN/IT browser journeys. It has not been deployed.
+The website enrichment goals are complete and published: bilingual topic discovery, original chapter practice, local combined-PDF page connections, chapter navigation and scheduled review. [`docs/website-enrichment-plan.json`](docs/website-enrichment-plan.json) and [`docs/next-learning-enhancement-plan.json`](docs/next-learning-enhancement-plan.json) preserve the scoped goals and acceptance evidence. Private captures and PDF exports remain Git-ignored and are excluded from the public release.
 
 ## Learn
 

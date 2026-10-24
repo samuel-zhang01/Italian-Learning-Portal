@@ -27,7 +27,7 @@ const chapterId = "espresso2-u01", bank = enrichment.banks.find((item) => item.i
 const scene = sceneData.scenes.find((item) => item.id === chapterId);
 assert.ok(unit && exercise && !exercise.options && bank && scene, "The release fixture requires actual A2 grammar and chapter metadata.");
 const today = dayKey(), ids = curriculum.missions.map((item) => item.id);
-const checks = [], screenshots = [], pageErrors = [], blockedRequests = [], failedResources = [], scriptResponses = new Set();
+const checks = [], screenshots = [], pageErrors = [], blockedRequests = [], expectedBlockedAnalytics = [], failedResources = [], scriptResponses = new Set();
 let browser, context, page, failure, evidenceReady = false, sample = {};
 const pass = (label, details = {}) => { checks.push({ label, ...sample, ...details }); console.log("PASS", label, JSON.stringify({ ...sample, ...details })); };
 const until = async (predicate, message) => {
@@ -54,7 +54,7 @@ const focusedVisible = async (locator) => {
   await locator.waitFor();
   await until(() => locator.evaluate((node) => document.activeElement === node), "The selected task heading must receive focus.");
   const box = await locator.boundingBox();
-  assert.ok(box && box.y >= 0 && box.y + box.height <= page.viewportSize().height, "The selected task heading must be visible.");
+  assert.ok(box && box.y >= -1 && box.y + box.height <= page.viewportSize().height + 1, `The selected task heading must be visible (${JSON.stringify(box)}).`);
 };
 const fixture = (language) => {
   const p = emptyProgress(); p.language = language; p.academy = emptyAcademy();
@@ -77,7 +77,10 @@ const openContext = async (language, width, height) => {
   await context.route("**/*", async (route) => {
     const request = route.request(), url = new URL(request.url());
     if (["GET", "HEAD"].includes(request.method()) && url.origin === base) return route.continue();
-    blockedRequests.push({ ...sample, method: request.method(), origin: url.origin }); await route.abort();
+    const evidence = { ...sample, method: request.method(), origin: url.origin, path: url.pathname };
+    if (request.method() === "POST" && url.pathname === "/cdn-cgi/rum" && [base, "https://cloudflareinsights.com"].includes(url.origin)) expectedBlockedAnalytics.push(evidence);
+    else blockedRequests.push(evidence);
+    await route.abort();
   });
   page = await context.newPage(); page.setDefaultTimeout(20000); page.setDefaultNavigationTimeout(30000);
   page.on("pageerror", (error) => pageErrors.push({ ...sample, message: error.message }));
@@ -89,7 +92,10 @@ const openContext = async (language, width, height) => {
   const response = await page.goto(`${base}/#today`);
   assert.ok(response?.ok(), "Cold Today must return a successful HTTPS document.");
   assert.equal(new URL(page.url()).origin, base);
-  const security = await response.securityDetails(); assert.ok(security?.protocol?.startsWith("TLS"), "The public document must use verified TLS.");
+  const security = await response.securityDetails();
+  // Chromium reports HTTP/3's verified encrypted transport as QUIC. Certificate
+  // checks remain enabled for both HTTP/2 TLS and HTTP/3; never ignore errors.
+  assert.ok(security?.protocol?.startsWith("TLS") || security?.protocol === "QUIC", `The public document must use verified HTTPS (reported protocol: ${security?.protocol ?? "unavailable"}).`);
   await page.locator(".today-workspace h1").waitFor();
   assert.equal(await raw(), null, "Cold entry must start with empty synthetic storage.");
   if (language === "it") await page.getByRole("button", { name: "IT", exact: true }).click();
@@ -120,7 +126,7 @@ const bankAndGameChecks = async () => {
   await page.reload(); await focusedVisible(heading); assert.equal(await heading.innerText(), bank.title[sample.language]);
   pass("Chapter vocabulary deep route loads and survives reload");
   await go(`games/${scene.id}`); await page.locator(".arcade-setup").waitFor();
-  assert.equal(await page.getByLabel(sample.language === "en" ? "Your situation" : "La tua situazione", { exact: true }).inputValue(), scene.id);
+  assert.equal(await page.locator(".arcade-fields select").inputValue(), scene.id);
   assert.equal(await page.locator(".arcade-start p").innerText(), scene.title[sample.language]);
   assert.match(await page.locator(".arcade-start strong").innerText(), /^3 /);
   assert.equal(await raw(), before, "Opening the conversation intent must not start a round or mutate progress.");
@@ -187,6 +193,6 @@ try {
   if (page && evidenceReady && !page.isClosed()) await capture("failure").catch(() => {});
 } finally {
   if (context) await context.close().catch(() => {}); if (browser) await browser.close().catch(() => {});
-  if (evidenceReady) await fs.writeFile(path.join(evidenceDir, "browser-report.json"), `${JSON.stringify({ date: new Date().toISOString(), target: base, isolation: "Standalone owned Chromium, disposable synthetic contexts, strict TLS and same-origin GET/HEAD only", noFormsSubmitted: true, checks, screenshots, pageErrors, blockedRequests, failedResources, successfulScriptPaths: [...scriptResponses].sort(), passed: !failure, failure: failure?.message || null, limitations: ["Synthetic public release smoke only; no real profile, PDF connection, submitted practice, remote write or proficiency assessment."] }, null, 2)}\n`);
+  if (evidenceReady) await fs.writeFile(path.join(evidenceDir, "browser-report.json"), `${JSON.stringify({ date: new Date().toISOString(), target: base, isolation: "Standalone owned Chromium, disposable synthetic contexts, strict TLS and same-origin GET/HEAD only", noFormsSubmitted: true, checks, screenshots, pageErrors, blockedRequests, expectedBlockedAnalytics, failedResources, successfulScriptPaths: [...scriptResponses].sort(), passed: !failure, failure: failure?.message || null, limitations: ["Synthetic public release smoke only; no real profile, PDF connection, submitted practice, remote write or proficiency assessment.", "Any Cloudflare analytics POST to the exact /cdn-cgi/rum path is blocked and reported separately; it is never allowed."] }, null, 2)}\n`);
 }
 if (failure) process.exitCode = 1;

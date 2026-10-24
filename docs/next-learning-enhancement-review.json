@@ -103,9 +103,12 @@
     ]
   },
   "publication": {
-    "published": false,
-    "buildFolder": "site-dist/",
-    "scope": "Local implementation and verified static build."
+    "published": true,
+    "url": "https://italian.samuelzhang.co.uk/",
+    "sourceRevision": "f4fcd99d560ea53ea0986495d37877c2469a741f",
+    "release": "20261024T223416Z-book-learning",
+    "verifiedAt": "2026-10-24T22:37:39.847065+00:00",
+    "report": "docs/deployment-book-learning-2026-10-24.json"
   },
   "limits": [
     "Cold-start timings were measured on localhost, not a physical mobile network.",
@@ -119,5 +122,13 @@
     "docs/review-queue-review.json",
     "docs/discovery-review.json",
     "docs/chapter-student-audit.json"
-  ]
+  ],
+  "deployment": {
+    "published": true,
+    "url": "https://italian.samuelzhang.co.uk/",
+    "sourceRevision": "f4fcd99d560ea53ea0986495d37877c2469a741f",
+    "release": "20261024T223416Z-book-learning",
+    "verifiedAt": "2026-10-24T22:37:39.847065+00:00",
+    "report": "docs/deployment-book-learning-2026-10-24.json"
+  }
 }

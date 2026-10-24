@@ -1,7 +1,7 @@
 {
   "reviewedAt": "2026-10-24T19:09:49.268692+00:00",
   "status": "verified locally",
-  "published": false,
+  "published": true,
   "scope": "Completed first website enrichment goals after private PDF export: discovery, all twenty chapter banks and skill extensions, A2 conversations, daily continuity and local combined-source citations.",
   "implementation": {
     "discovery": "Find/Cerca searches bilingual topics, vocabulary terms, programmes and source pages; query/filter URLs survive opening, Back and reload. Opened tasks and vocabulary banks receive focus.",
@@ -105,5 +105,13 @@
     "Browser workflows use desktop Chromium emulation; physical devices, Safari/Firefox and assistive-technology certification are outside this pass.",
     "Device speech and optional external players depend on the learner device/service; pronunciation quality is not assessed.",
     "The app still imports its large catalogues in one client bundle (about492KB gzipped JavaScript); deferred loading needs a separate data/planning refactor and cold-load benchmark."
-  ]
+  ],
+  "deployment": {
+    "published": true,
+    "url": "https://italian.samuelzhang.co.uk/",
+    "sourceRevision": "f4fcd99d560ea53ea0986495d37877c2469a741f",
+    "release": "20261024T223416Z-book-learning",
+    "verifiedAt": "2026-10-24T22:37:39.847065+00:00",
+    "report": "docs/deployment-book-learning-2026-10-24.json"
+  }
 }

@@ -63,7 +63,7 @@
     "Deferred loading of large catalogues: requires a separate planning-data refactor and cold-load benchmark.",
     "Human language-learning outcomes and CEFR certification are not inferred from software checks."
   ],
-  "published": false,
+  "published": true,
   "updatedAt": "2026-10-24T19:09:49.268692+00:00",
   "evidence": [
     "docs/book-pdf-export-audit.json",
@@ -74,5 +74,13 @@
   ],
   "status": "complete locally",
   "completedAt": "2026-10-24T19:09:49.268692+00:00",
-  "review": "docs/website-enrichment-review.json"
+  "review": "docs/website-enrichment-review.json",
+  "deployment": {
+    "published": true,
+    "url": "https://italian.samuelzhang.co.uk/",
+    "sourceRevision": "f4fcd99d560ea53ea0986495d37877c2469a741f",
+    "release": "20261024T223416Z-book-learning",
+    "verifiedAt": "2026-10-24T22:37:39.847065+00:00",
+    "report": "docs/deployment-book-learning-2026-10-24.json"
+  }
 }

@@ -515,5 +515,13 @@
       "docs/chapter-dashboard-review.json",
       "docs/review-queue-review.json"
     ]
+  },
+  "book_learning_publication": {
+    "published": true,
+    "url": "https://italian.samuelzhang.co.uk/",
+    "sourceRevision": "f4fcd99d560ea53ea0986495d37877c2469a741f",
+    "release": "20261024T223416Z-book-learning",
+    "verifiedAt": "2026-10-24T22:37:39.847065+00:00",
+    "report": "docs/deployment-book-learning-2026-10-24.json"
   }
 }
