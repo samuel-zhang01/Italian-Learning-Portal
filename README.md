@@ -2,7 +2,7 @@
 
 A little Italian, every day. Parliamo turns the supplied class materials into short, original practice: notice an idea, retrieve it, then use it in your own Italian.
 
-Live production: **https://italian.samuelzhang.co.uk**. The book course, twenty-chapter dashboard, unified review queue and faster initial loading are deployed. All 20 website files match a clean build of committed source `f4fcd99`; 185 daily tests and hosted CI passed, along with public EN/IT browser checks. Release evidence is in [`docs/deployment-book-learning-2026-10-24.json`](docs/deployment-book-learning-2026-10-24.json). The previous paper-cutout release is retained for rollback.
+Live production: **https://italian.samuelzhang.co.uk**. The expanded lessons, A2 chapter checks, weekly report, private listening, backup merging, offline study and responsive layout fixes are deployed. All 30 website files match a clean build of committed source `02a881a`; 225 daily tests and hosted CI passed, alongside 474 local layout checks and public EN/IT browser and offline checks. Release evidence is in [`docs/deployment-learning-enhancements-2026-10-25.json`](docs/deployment-learning-enhancements-2026-10-25.json). The previous book-learning release is retained for rollback.
 
 The website enrichment goals are complete and published: bilingual topic discovery, original chapter practice, local combined-PDF page connections, chapter navigation and scheduled review. [`docs/website-enrichment-plan.json`](docs/website-enrichment-plan.json) and [`docs/next-learning-enhancement-plan.json`](docs/next-learning-enhancement-plan.json) preserve the scoped goals and acceptance evidence. Private captures and PDF exports remain Git-ignored and are excluded from the public release.
 

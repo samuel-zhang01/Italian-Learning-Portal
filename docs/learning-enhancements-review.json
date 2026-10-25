@@ -1,6 +1,6 @@
 {
   "reviewedOn": "2026-10-25",
-  "status": "validated-awaiting-publication",
+  "status": "published-and-verified",
   "scope": "Six requested learning enhancements and responsive UI repairs for the maintained daily app.",
   "changes": {
     "content": "Append-only 10 grammar workshops with 80 original exercises and 11 bilingual missions/guided sessions. Totals: 65 workshops, 520 exercises, 67 missions. Existing IDs, programmes and original content remain stable.",
@@ -12,15 +12,52 @@
     "layout": "Wrapping header/navigation, bounded content and controls, responsive session stages, separated back button and metadata, and focused activity headings after explicit navigation. Supplemental Plus 2 sessions display A2."
   },
   "validation": {
-    "dailyTests": {"passed": 225, "failed": 0},
+    "dailyTests": {
+      "passed": 225,
+      "failed": 0
+    },
     "typecheck": "passed",
     "lint": "passed",
     "productionBuild": "passed; 30 public files",
-    "responsiveBrowser": {"checks": 474, "failed": 0, "languages": ["en", "it"], "normalWidths": [320, 390, 768, 900, 1280, 1888], "additionalModes": ["doubled text", "CSS zoom 2"], "screenshots": 16},
-    "newContentBrowser": {"workflowGroups": 6, "phoneLayoutChecks": 43, "screenshots": 24},
-    "chapterAndWeeklyBrowser": {"workflowGroups": 18, "finalCopyGroups": 2},
-    "privateListeningAndBackupBrowser": {"workflowGroups": 7, "generatedAudioEndpoint": "Single section pauses at 0.9 seconds; repeat and object URL cleanup verified."},
-    "offlineBrowser": {"workflowGroups": 6, "controlledReleaseUpdateGroups": 3, "result": "Offline routes and unfinished work survive reload and explicit release update."},
+    "responsiveBrowser": {
+      "checks": 474,
+      "failed": 0,
+      "languages": [
+        "en",
+        "it"
+      ],
+      "normalWidths": [
+        320,
+        390,
+        768,
+        900,
+        1280,
+        1888
+      ],
+      "additionalModes": [
+        "doubled text",
+        "CSS zoom 2"
+      ],
+      "screenshots": 16
+    },
+    "newContentBrowser": {
+      "workflowGroups": 6,
+      "phoneLayoutChecks": 43,
+      "screenshots": 24
+    },
+    "chapterAndWeeklyBrowser": {
+      "workflowGroups": 18,
+      "finalCopyGroups": 2
+    },
+    "privateListeningAndBackupBrowser": {
+      "workflowGroups": 7,
+      "generatedAudioEndpoint": "Single section pauses at 0.9 seconds; repeat and object URL cleanup verified."
+    },
+    "offlineBrowser": {
+      "workflowGroups": 6,
+      "controlledReleaseUpdateGroups": 3,
+      "result": "Offline routes and unfinished work survive reload and explicit release update."
+    },
     "browserMethod": "Owned isolated Chromium contexts with synthetic progress and generated audio; shared logged-in browser and real learner data untouched.",
     "privacy": "Private source files remain ignored and excluded from the build; local audio/transcripts and connected PDFs are not uploaded or cached by the offline worker."
   },
@@ -40,5 +77,13 @@
     "Private audio, transcripts and listening drafts are tab-local and clear on route leave or reload; they are not included in progress backups.",
     "Home-screen installation availability varies by browser/platform; native installation on every platform was not tested.",
     "Downloaded offline clients stay on their selected release until an explicit update. A server rollback alone does not replace an already downloaded client."
-  ]
+  ],
+  "publication": {
+    "url": "https://italian.samuelzhang.co.uk/",
+    "release": "20261025T220519Z-learning-enhancements",
+    "sourceRevision": "02a881a68d07c757ba4200577e181303efe9caef",
+    "report": "docs/deployment-learning-enhancements-2026-10-25.json",
+    "publicBrowserGroupsPassed": 28,
+    "publicOfflineGroupsPassed": 6
+  }
 }

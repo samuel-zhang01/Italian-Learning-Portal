@@ -1,0 +1,268 @@
+{
+  "release": "20261025T220519Z-learning-enhancements",
+  "releaseDirectory": "/data/italian/releases/20261025T220519Z-learning-enhancements",
+  "sourceRevision": "02a881a68d07c757ba4200577e181303efe9caef",
+  "previousReleaseDirectory": "/data/italian/releases/20261024T223416Z-book-learning",
+  "artifactHashes": {
+    "app-icon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "assets/academy-8WYjJTi-.js": "8b036006c66ecb87b7adb1fbe520b00197947b2d2af3c738af404849d8c6badc",
+    "assets/arcade-DOkAMhcu.js": "e1468355d440a996f584cd7543e5ba423add62567ca8f323aa1aa455c5c1abd9",
+    "assets/arcade-scenes-CBQF13FH.js": "9acbc31d1846c8e67351a57d44894c6d524d8c249b3493a90ef01397d54eeadb",
+    "assets/backup-transfer-ZQnUZdgZ.css": "592a44651b526292fcb66338c9cb095490cdbd079a68a806ac8e51de92ca93df",
+    "assets/backup-transfer-anCuY4P1.js": "5c7aceae2d84ccd6d7de0b4f515fc06d7cb42845683ce6554983c77d7935ce81",
+    "assets/chapters-2lo5UCTr.js": "5615900afd38491515617067b22dff63f9e370268b834fd387978cc537a4cf14",
+    "assets/chapters-CfwLknyS.css": "a8b87bb143e0bb4e4e55347a1c8d78dafba41aaba93c7059fde8c2d1332183ff",
+    "assets/companion-C1a_aWou.js": "33aa69d5d1375c72457af4c77918b335158497b6fa7efcdfa02f499683129bb5",
+    "assets/discovery-BocEnFLK.js": "7ffea586191b730d8c1a62d518c6cff6ae647515d98af1d1301b17342276121e",
+    "assets/discovery-index-xM2TX-LE.js": "48862b4dab41ee9fe499246f1f7da66603b1c218d4f88eba14d7f034dcaa35df",
+    "assets/enriched-DKKZrzW8.js": "d30b3d0f0a81dd34652d249d34f59bb7fc149b61e6a863fd085a810761ee7776",
+    "assets/enrichment-Dtx20r_x.js": "56c7f5d9b49944e69ea7aa366ac7dee952024d11e4d3b3d75aade63b61490596",
+    "assets/grammar-Bq3N2BdT.js": "9bf7757d3bc56f43f0275902a87f10b4b40f79932b3371a38a187ba936024d91",
+    "assets/index-BVZJJICw.css": "73ce6beb9c36bbc0acf3fc264322139fc0fa114903ba260b751f7ed0bae8cf4c",
+    "assets/index-vqxaf3OP.js": "6ff89fa37fb76ca4824c48ab2aff8a8401eac4ed66d644c3ef1f584c0e41e9ad",
+    "assets/learning-insights-BLQTf6f8.css": "a8d4ba17b735c4f737b8ada17e847a45272bce7a81b6c425c1e6cdac44ae4dd0",
+    "assets/learning-insights-DicRQMRK.js": "1a6aae96890ab8161508eb3a87af8cd7d1d69af8e7f74cbe83288324ce6e3adb",
+    "assets/listening-CGS3gx3G.css": "f0c67dca2cb2853dd62ed06ddf2da31869f2f4a4a722141fb56524369cc1d448",
+    "assets/listening-kzOM08DQ.js": "accfc92d59e2257d163f990f12ec78a52731c39a2f1a00f3bcd00b62e16bcc03",
+    "assets/navigation-BIrD2hfo.js": "f417bc8c9b74837a553bf75a11e4933a2d5a13467930fde19b195448d0d0f256",
+    "assets/offline-BriDy8bE.js": "e98be874ec8d821422b6e80edd2abb0789bc0ce4c8c70aad6467d246fa7cbe61",
+    "assets/painted-cardboard-CX92yXJi.webp": "2267856e5f4e1c2f9388fa4fe7cc1eff3746b3354407287574e42dd51533c2db",
+    "assets/practice-tools-CNHbxLCV.js": "a70bda58c33db63a6e4bf29086dd828d85bd5eb4ce5fcd054ce09970d2660bda",
+    "assets/review-hub-C0Sh_F8c.css": "e0d5c02b9b6e9f87a95ef873518983f70a779d2537782d05da904e0d2693f146",
+    "assets/review-hub-CjZb-d1l.js": "0a7dbd8051e636727941a7982f45731f38abb2df2a9ea553e6b09f2c36a13b2b",
+    "favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "index.html": "f72528f69fbe9efabbdc2d8e71c7e98599917947ea70fcb7fa78d30269ec27c3",
+    "manifest.webmanifest": "12b91f0ec01c070bfffcfa31bea3df6fce59caa7666cd4be77b80b5822448d2a",
+    "offline-worker.js": "0c354572deea09bec5084f38772ba7c3c8098c4c40d56f144c18ccf99232644f"
+  },
+  "remoteHashVerification": "passed",
+  "url": "https://italian.samuelzhang.co.uk/",
+  "cleanCheckoutBuild": "identical artifacts",
+  "scope": "Only 30 site-dist files uploaded; current symlink switched atomically; previous release retained.",
+  "privacy": {
+    "privateStudyFilesPublished": false,
+    "realLearnerDataAccessed": false
+  },
+  "status": "deployed-and-verified",
+  "activatedAt": "2026-10-25T22:05:22.876215+00:00",
+  "publicHttpsVerification": {
+    "passed": true,
+    "tlsValidation": true,
+    "method": "Fresh genuine Chromium page and same-origin browser fetches; canonical HTML asset references plus exact SHA-256 for every non-HTML asset.",
+    "results": [
+      {
+        "path": "app-icon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/academy-8WYjJTi-.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-DOkAMhcu.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-scenes-CBQF13FH.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/backup-transfer-ZQnUZdgZ.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/backup-transfer-anCuY4P1.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-2lo5UCTr.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-CfwLknyS.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/companion-C1a_aWou.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-BocEnFLK.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-index-xM2TX-LE.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enriched-DKKZrzW8.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enrichment-Dtx20r_x.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/grammar-Bq3N2BdT.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-BVZJJICw.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-vqxaf3OP.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/learning-insights-BLQTf6f8.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/learning-insights-DicRQMRK.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/listening-CGS3gx3G.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/listening-kzOM08DQ.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/navigation-BIrD2hfo.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/offline-BriDy8bE.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/painted-cardboard-CX92yXJi.webp",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-tools-CNHbxLCV.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-C0Sh_F8c.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-CjZb-d1l.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "favicon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "manifest.webmanifest",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "offline-worker.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "currentAssetReferences": true
+      }
+    ],
+    "blockedRequests": []
+  },
+  "validation": {
+    "dailyTestsPassed": 225,
+    "typecheck": "passed",
+    "lint": "passed",
+    "responsiveBrowserChecksPassed": 474,
+    "newContentPhoneLayoutChecksPassed": 43,
+    "sourceCi": {
+      "runId": 40238341355,
+      "conclusion": "success",
+      "url": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/40238341355"
+    },
+    "publicBrowser": {
+      "passed": true,
+      "workflowGroups": 28,
+      "errors": [],
+      "failedResources": [],
+      "unexpectedBlockedRequests": [],
+      "languages": [
+        "en",
+        "it"
+      ],
+      "widths": [
+        320,
+        390,
+        1440
+      ],
+      "method": "Standalone owned Chromium, disposable synthetic contexts, strict TLS and same-origin GET/HEAD only"
+    },
+    "publicOffline": {
+      "checks": [
+        {
+          "lang": "en",
+          "check": "Explicit complete public download",
+          "assetCount": 29
+        },
+        {
+          "lang": "en",
+          "check": "Offline reload, eight lazy routes and pending draft preserved"
+        },
+        {
+          "lang": "en",
+          "check": "Recheck and removal preserve progress"
+        },
+        {
+          "lang": "it",
+          "check": "Explicit complete public download",
+          "assetCount": 29
+        },
+        {
+          "lang": "it",
+          "check": "Offline reload, eight lazy routes and pending draft preserved"
+        },
+        {
+          "lang": "it",
+          "check": "Recheck and removal preserve progress"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "review": "docs/learning-enhancements-review.json",
+  "rollbackNote": "Previous release retained. Downloaded offline clients remain pinned to their selected release until explicit update; server rollback does not replace their downloaded cache."
+}
