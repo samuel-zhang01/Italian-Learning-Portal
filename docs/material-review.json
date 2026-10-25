@@ -523,5 +523,21 @@
     "release": "20261024T223416Z-book-learning",
     "verifiedAt": "2026-10-24T22:37:39.847065+00:00",
     "report": "docs/deployment-book-learning-2026-10-24.json"
+  },
+  "book_gap_supplements": {
+    "reviewed_on": "2026-10-25",
+    "review": "docs/book-gap-content-review.json",
+    "new_grammar_units": 10,
+    "new_controlled_exercises": 80,
+    "new_missions": 11,
+    "new_guided_enrichments": 11,
+    "new_reference_topic_links": 19,
+    "verified_native_sources": [
+      "src-1647be2784c9",
+      "src-580f7558db56"
+    ],
+    "selectively_reviewed_physical_pages": 14,
+    "existing_content_and_programmes_preserved": true,
+    "remaining_limits": "Bounded plural/alteration models, cominciare/finire and countable ne practice; one short formal enquiry. Complete CV writing, other lexical/grammar systems and independently assessed listening/pronunciation remain outside this supplement."
   }
 }

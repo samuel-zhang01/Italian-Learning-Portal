@@ -1,0 +1,39 @@
+.learning-insights { overflow-wrap: anywhere; }
+.learning-insights h1:focus, .learning-insights h2:focus { outline-offset: 5px; }
+.insights-navigation, .insights-accent-keys { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 22px 0; }
+.insights-topic-grid, .insights-report-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin: 30px 0; }
+.insights-topic-grid article, .insights-report-grid section { min-width: 0; margin: 0; }
+.learning-insights .panel h2 { font-size: 1.4rem; line-height: 1.3; }
+.learning-insights .panel p { line-height: 1.7; }
+.learning-insights progress { width: 100%; margin: 10px 0 24px; accent-color: var(--green, #183d2d); }
+.insights-diagnostic-question label { display: grid; gap: 10px; font-weight: 600; }
+.insights-diagnostic-question input { box-sizing: border-box; width: 100%; min-width: 0; padding: 14px; font: inherit; color: inherit; background: #fffdf5; border: 1px solid #b6a98a; border-radius: 2px; }
+.insights-diagnostic-question > .button.primary { display: block; margin-top: 24px; }
+.insights-accent-keys { gap: 8px; }
+.insights-accent-keys .button { min-width: 42px; padding: 9px 13px; }
+.insights-hint { padding: 14px 18px; border-left: 3px solid #8e562a; background: #f5edd9; }
+.insights-diagnostic-feedback { border-left: 4px solid #ba5c32; }
+.insights-limit { border-left: 4px solid #b85d27; }
+.insights-catch-up, .insights-history, .insights-next-steps { margin: 38px 0; }
+.insights-catch-up article, .insights-next-steps article { margin: 20px 0; }
+.insights-catch-up ol { padding-left: 22px; }
+.insights-catch-up li { margin: 14px 0; }
+.insights-catch-up li span { display: block; font-size: .85rem; color: #6a675b; }
+.insights-first-answers { margin-top: 28px; }
+.insights-first-answers summary { cursor: pointer; font-weight: 600; }
+.insights-first-answers article { border-top: 1px solid #d9ceb8; padding-top: 20px; margin-top: 20px; }
+.insights-first-answers h3 { font-size: 1rem; font-family: inherit; line-height: 1.6; }
+.insights-report-grid dl { margin: 18px 0; }
+.insights-report-grid dl div { display: grid; grid-template-columns: 1fr auto; gap: 16px; padding: 12px 0; border-bottom: 1px solid #d9ceb8; }
+.insights-report-grid dt { font-weight: 400; }
+.insights-report-grid dd { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; }
+.insights-next-week { margin: 36px 0; }
+.insights-next-week li { margin: 20px 0; }
+.insights-next-week li strong { display: block; }
+.learning-insights .button, .learning-insights .text-button { max-width: 100%; white-space: normal; }
+@media (max-width: 700px) {
+  .insights-topic-grid, .insights-report-grid { grid-template-columns: 1fr; gap: 20px; }
+  .learning-insights .panel { padding: 22px 18px; }
+  .insights-navigation { align-items: stretch; }
+  .insights-navigation .button { width: 100%; }
+}

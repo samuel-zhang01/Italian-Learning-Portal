@@ -1,3 +1,5 @@
+import type { A2DiagnosticState } from "./a2-diagnostic-model.ts";
+
 export type Pair = { en: string; it: string };
 export type Language = keyof Pair;
 export type Source = {
@@ -63,6 +65,7 @@ export type Progress = {
   sessions?: Record<string, StudySession>;
   academy?: AcademyProgress;
   arcade?: ArcadeProgress;
+  diagnostics?: A2DiagnosticState;
 };
 export type ArcadeMode = "words" | "builder" | "detective" | "conversation";
 export type ArcadeSettings = {

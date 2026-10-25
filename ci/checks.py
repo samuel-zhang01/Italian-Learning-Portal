@@ -38,7 +38,7 @@ def main():
     expected = {'lint': 'eslint .',
                 'typecheck': 'tsc --noEmit',
                 'build:daily': 'node scripts/generate_planning_metadata.mjs && vite build --config vite.static.config.ts && cp public/favicon.svg site-dist/favicon.svg',
-                'test:daily': 'node scripts/generate_planning_metadata.mjs --check && node --experimental-strip-types --test tests/learning.test.mjs tests/academy.test.mjs tests/arcade.test.mjs tests/answer-contract.test.mjs tests/long-course.test.mjs tests/local-pdfs.test.mjs tests/book-media.test.mjs tests/blink-study-captions.test.mjs tests/discovery.test.mjs tests/chapter-content.test.mjs tests/chapter-continuity.test.mjs tests/planning-metadata.test.mjs tests/chapter-dashboard.test.mjs tests/review-queue.test.mjs'}
+                'test:daily': 'node scripts/generate_planning_metadata.mjs --check && node --experimental-strip-types --test tests/learning.test.mjs tests/academy.test.mjs tests/arcade.test.mjs tests/answer-contract.test.mjs tests/long-course.test.mjs tests/local-pdfs.test.mjs tests/book-media.test.mjs tests/blink-study-captions.test.mjs tests/discovery.test.mjs tests/chapter-content.test.mjs tests/chapter-continuity.test.mjs tests/planning-metadata.test.mjs tests/chapter-dashboard.test.mjs tests/review-queue.test.mjs tests/book-gaps.test.mjs tests/learning-insights.test.mjs tests/listening.test.mjs tests/backup-merge.test.mjs tests/offline-build.test.mjs'}
     require(all(package['scripts'].get(key) == value for key, value in expected.items()), 'Maintained command changed')
     require(not any(key in package['scripts'] for name in expected for key in ('pre'+name, 'post'+name)),
             'New lifecycle script requires review')
@@ -59,7 +59,7 @@ def main():
               for name in ('tests', 'pass', 'fail', 'cancelled', 'skipped', 'todo')}
     require(all(len(value) == 1 for value in totals.values()), 'Node test accounting missing or ambiguous')
     totals = {name: int(value[0]) for name, value in totals.items()}
-    require(all(code == 0 for code in outcomes.values()) and totals['tests'] >= 185
+    require(all(code == 0 for code in outcomes.values()) and totals['tests'] >= 225
             and totals['pass'] == totals['tests'] and all(totals[key] == 0 for key in ('fail', 'cancelled', 'skipped', 'todo')),
             'All maintained daily commands and tests must pass without skips')
     output = work/'site-dist'
@@ -68,7 +68,7 @@ def main():
             and any(path.suffix == '.js' for path in artifacts)
             and any(path.suffix == '.css' for path in artifacts), 'Daily deployment artifacts missing')
     require(not any(path.is_symlink() for path in output.rglob('*'))
-            and all(path.suffix in {'.html', '.svg', '.webp', '.js', '.css'} for path in artifacts),
+            and all(path.suffix in {'.html', '.svg', '.webp', '.js', '.css', '.webmanifest'} for path in artifacts),
             'Unexpected daily deployment content')
     preserve()
     print(json.dumps({'maintained_commands': outcomes, 'node_tests': totals, 'accepted': True,

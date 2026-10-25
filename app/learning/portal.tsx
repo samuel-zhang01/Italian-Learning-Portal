@@ -27,6 +27,7 @@ import "./arcade.css";
 import "./practice-tools.css";
 import "./portal.css";
 import "./paper-cutout.css";
+import "./responsive.css";
 
 const DiscoveryView = lazy(() => import("./discovery").then((module) => ({ default: module.DiscoveryView })));
 const GrammarLab = lazy(() => import("./academy").then((module) => ({ default: module.GrammarLab })));
@@ -39,6 +40,11 @@ const DailySession = lazy(() => import("./enriched").then((module) => ({ default
 const ResourceLibrary = lazy(() => import("./enriched").then((module) => ({ default: module.ResourceLibrary })));
 const VocabularyView = lazy(() => import("./enriched").then((module) => ({ default: module.VocabularyView })));
 const ChapterDashboard = lazy(() => import("./chapters").then((module) => ({ default: module.ChapterDashboard })));
+const BackupTransfer = lazy(() => import("./backup-transfer").then(module => ({ default: module.BackupTransfer })));
+const OfflineStudy = lazy(() => import("./offline").then(module => ({ default: module.OfflineStudy })));
+const A2DiagnosticView = lazy(() => import("./learning-insights").then(module => ({ default: module.A2DiagnosticView })));
+const WeeklyLearningReport = lazy(() => import("./learning-insights").then(module => ({ default: module.WeeklyLearningReport })));
+const ListeningView = lazy(() => import("./listening").then(module => ({ default: module.ListeningView })));
 const ReviewHub = lazy(() => import("./review-hub").then((module) => ({ default: module.ReviewHub })));
 
 const missions = curriculum.missions as Mission[];
@@ -341,7 +347,7 @@ export default function Portal() {
             <button
               key={id}
               onClick={() => go(id)}
-                aria-current={(routePath === id || (id === "programmes" && routePath.split("/")[0] === "chapters") || (id === "grammar" && ["grammar", "games", "vocabulary", "words", "tense", "readiness", "reviews"].includes(routePath.split("/")[0]))) ? "page" : undefined}
+                aria-current={(routePath === id || (id === "today" && routePath === "session") || (id === "progress" && routePath === "weekly") || (id === "programmes" && routePath.split("/")[0] === "chapters") || (id === "grammar" && ["grammar", "games", "vocabulary", "words", "tense", "readiness", "reviews", "diagnostics", "listening"].includes(routePath.split("/")[0]))) ? "page" : undefined}
             >
               <Icon name={icon} />
               <span>{label}</span>
@@ -420,6 +426,10 @@ export default function Portal() {
           >
             {[
               ["chapters", t("Book chapters", "Capitoli dei libri")],
+              ["diagnostics", t("A2 chapter checks", "Controlli dei capitoli A2")],
+              ["listening", t("Private listening", "Ascolto personale")],
+              ["weekly", t("Weekly learning report", "Resoconto settimanale")],
+              ["offline", t("Offline study", "Studio offline")],
               ["reviews", t("Review queue", "Ripasso del giorno")],
               ["games", t("Games", "Giochi")],
               ["grammar", t("Grammar lab", "Grammatica")],
@@ -444,6 +454,10 @@ export default function Portal() {
         </details>
         <LearningRouteBoundary key={routePath} t={t}>
         <Suspense fallback={<section className="workspace" role="status" aria-live="polite"><p>{t("Opening your practice…", "Apertura della pratica…")}</p></section>}>
+        {routePath === "offline" && <OfflineStudy t={t} />}
+        {routePath === "diagnostics" && <A2DiagnosticView key={route} {...shared} />}
+        {routePath === "weekly" && <WeeklyLearningReport {...shared} />}
+        {routePath === "listening" && <ListeningView {...shared} />}
         {routePath === "discover" && <DiscoveryView key={route} {...shared} />}
         {(routePath === "chapters" || routePath.startsWith("chapters/")) && <ChapterDashboard key={route} {...shared} chapterId={routePath.split("/")[1]} />}
         {routePath === "reviews" && <ReviewHub key={route} {...shared} />}
@@ -490,6 +504,7 @@ export default function Portal() {
             <details className="today-disclosure">
               <summary>{t("This week & my progress", "Questa settimana e i progressi")}</summary>
               <WeekStrip {...shared} />
+              <button className="text-button" onClick={() => go("weekly")}>{t("Read my weekly learning report", "Leggi il resoconto settimanale")} →</button>
               <p>{minutes}/{p.plan.minutes} {t("estimated minutes today", "minuti stimati oggi")} · {completed}/{missions.length} {t("lessons complete", "lezioni completate")}</p>
               <button className="text-button" onClick={() => go("progress")}>{t("Open my progress", "Apri i progressi")} →</button>
             </details>
@@ -553,6 +568,10 @@ export default function Portal() {
         )}
         {![
           "today",
+          "offline",
+          "diagnostics",
+          "weekly",
+          "listening",
           "discover",
           "chapters",
           "reviews",
@@ -1825,7 +1844,6 @@ function ProgressView({
   restore: (p: Progress) => boolean;
   loadError: boolean;
 }) {
-  const [pending, setPending] = useState<Progress | null>(null);
   const [message, setMessage] = useState("");
   const [reset, setReset] = useState(false);
   const entries = Object.entries(p.completed);
@@ -2000,111 +2018,7 @@ function ProgressView({
               <Icon name="download" />
               {t("Export progress", "Esporta progressi")}
             </button>
-            <label className="file-button">
-              {t(
-                "Choose a backup to restore",
-                "Scegli un backup da ripristinare",
-              )}
-              <input
-                type="file"
-                accept=".json,application/json"
-                onChange={async (e) => {
-                  const file = e.target.files?.[0];
-                  if (!file) return;
-                  setPending(null);
-                  try {
-                    if (file.size > 8_000_000) throw new Error();
-                    setPending(parseProgress(await file.text(), ids));
-                    setMessage("");
-                  } catch {
-                    setMessage(
-                      t(
-                        "This is not a valid Parliamo backup. Your current progress is unchanged.",
-                        "Questo non è un backup Parliamo valido. I progressi attuali non sono cambiati.",
-                      ),
-                    );
-                  }
-                  e.target.value = "";
-                }}
-              />
-            </label>
-            {pending && (
-              <div className="restore-preview">
-                <h3>
-                  {t(
-                    "Review before restoring",
-                    "Controlla prima di ripristinare",
-                  )}
-                </h3>
-                <p>
-                  {Object.keys(pending.completed).length}{" "}
-                  {t(
-                    "completed lessons in this backup. Restoring replaces the progress currently saved here.",
-                    "lezioni completate in questo backup. Il ripristino sostituisce i progressi salvati qui.",
-                  )}
-                </p>
-                <p>
-                  {
-                    Object.values(pending.academy?.grammar ?? {}).filter(
-                      (d) => d.completed,
-                    ).length
-                  }{" "}
-                  {t("grammar units", "unità di grammatica")} ·{" "}
-                  {
-                    Object.values(pending.academy?.companion ?? {}).filter(
-                      (d) => d.completed,
-                    ).length
-                  }{" "}
-                  {t("companion pages", "pagine del compagno")} ·{" "}
-                  {
-                    Object.values(pending.academy?.words ?? {}).filter(
-                      (w) => w.starred,
-                    ).length
-                  }{" "}
-                  {t(
-                    "saved words. Drafts and notes are also included.",
-                    "parole salvate. Sono incluse anche bozze e note.",
-                  )}
-                  {pending.arcade && (
-                    <>
-                      {" "}
-                      {Object.keys(pending.arcade.records).length}{" "}
-                      {t(
-                        "game questions, game settings and any paused round are included.",
-                        "domande dei giochi, impostazioni e l’eventuale giro in pausa sono inclusi.",
-                      )}
-                    </>
-                  )}
-                </p>
-                <div className="button-row">
-                  <button
-                    className="button primary"
-                    onClick={() => {
-                      if (restore(pending)) {
-                        setPending(null);
-                        setMessage(
-                          t("Progress restored.", "Progressi ripristinati."),
-                        );
-                      } else
-                        setMessage(
-                          t(
-                            "Storage is unavailable. The backup was not applied.",
-                            "L’archiviazione non è disponibile. Il backup non è stato applicato.",
-                          ),
-                        );
-                    }}
-                  >
-                    {t("Replace & restore", "Sostituisci e ripristina")}
-                  </button>
-                  <button
-                    className="text-button"
-                    onClick={() => setPending(null)}
-                  >
-                    {t("Cancel", "Annulla")}
-                  </button>
-                </div>
-              </div>
-            )}
+            <BackupTransfer current={p} ids={ids} t={t} apply={restore} mergeDisabled={loadError} />
             <p role="status">{message}</p>
             <details className="privacy-note">
               <summary>

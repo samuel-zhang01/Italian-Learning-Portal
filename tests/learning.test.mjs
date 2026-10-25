@@ -34,7 +34,7 @@ const doneDraft = () => ({
 });
 test("all lessons have bilingual teaching, distinct retrieval and exact source pages", () => {
   assert.equal(new Set(ids).size, missions.length);
-  assert.equal(missions.length, 56);
+  assert.equal(missions.length, 67);
   const bilingual = (x) => {
     if (Array.isArray(x)) x.forEach(bilingual);
     else if (x && typeof x === "object") {

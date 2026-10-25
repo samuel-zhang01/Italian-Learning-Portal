@@ -35,7 +35,7 @@ const boundedSources = (refs, label) => {
 test("chapter additions preserve every deployed bank, core enrichment and original conversation object", () => {
   const baseline = review.baselinePreservation;
   assert.equal(digest(enrichment.banks.slice(0, 18)), baseline.originalBanksSHA256);
-  assert.equal(digest(enrichment.lessons.filter((lesson) => !lesson.missionId.startsWith("espresso"))), baseline.originalCoreEnrichmentsSHA256);
+  assert.equal(digest(enrichment.lessons.slice(0, 36)), baseline.originalCoreEnrichmentsSHA256);
   assert.equal(digest(scenes.slice(0, 8)), baseline.originalScenesSHA256);
   const chapterTeaching = lessons.map((lesson) => Object.fromEntries(Object.entries(lesson)
     .filter(([key]) => !["bank", "skills"].includes(key))));

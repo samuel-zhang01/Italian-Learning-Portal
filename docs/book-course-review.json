@@ -2873,7 +2873,16 @@
           ]
         }
       ],
-      "status": "The original noun-plurals unit covers common endings and unchanged nouns; complete -ca/-co/-cia/-gia patterns and the expanded body-noun list remain partial."
+      "status": "Added original spelling-pattern practice with explicit exceptions and the six specified feminine body-plural models. The lessons teach bounded learned forms, not an exhaustive prediction of every Italian plural.",
+      "supplementalUnitIds": [
+        "a1-plural-spelling",
+        "a2-irregular-body-nouns"
+      ],
+      "supplementalMissionIds": [
+        "book1-plural-inventory",
+        "book2-puppet-description"
+      ],
+      "reviewedOn": "2026-10-25"
     },
     {
       "topic": "A2 nonlocative ci and noun alterations",
@@ -2887,7 +2896,16 @@
           ]
         }
       ],
-      "status": "The new ci unit teaches destinations. Ci penso and -ino/-one alterations are captured but not presented as fully taught by that locative unit."
+      "status": "Added pensare a → ci with finite/modal placement and transparent literal -ino/-ina/-one/-ona formations. Other senses of ci, lexicalised alterations and affective/register differences remain outside these small units.",
+      "supplementalUnitIds": [
+        "a2-nonlocative-ci",
+        "a2-noun-alterations"
+      ],
+      "supplementalMissionIds": [
+        "book2-think-about-a-plan",
+        "book2-model-size"
+      ],
+      "reviewedOn": "2026-10-25"
     },
     {
       "topic": "Auxiliary alternation with cominciare/finire and ne with past-participle agreement",
@@ -2901,7 +2919,16 @@
           ]
         }
       ],
-      "status": "General auxiliary and direct-pronoun work is present; these additional systems are not comprehensively covered by the existing bounded units."
+      "status": "Added actor/task versus event constructions with cominciare/finire and partitive ne agreement for explicit countable quantities, including one item. Other alternating verbs and broader ne agreement contexts remain separate topics.",
+      "supplementalUnitIds": [
+        "a2-auxiliary-alternation",
+        "a2-ne-perfect-agreement"
+      ],
+      "supplementalMissionIds": [
+        "book2-event-timeline",
+        "book2-past-quantities"
+      ],
+      "reviewedOn": "2026-10-25"
     },
     {
       "topic": "Additional imperative and adjective constructions",
@@ -2918,7 +2945,18 @@
           ]
         }
       ],
-      "status": "Tu and Lei are taught; full voi commands, all short-command consonant doubling, and the bello paradigm remain partial."
+      "status": "Added regular/irregular voi commands with both declared negative-pronoun positions, all five short tu-command families with the gli exception, and the pre-noun bello paradigm contrasted with ordinary post-noun agreement. Longer clitic combinations remain outside the bounded unit.",
+      "supplementalUnitIds": [
+        "a2-plural-imperative",
+        "a2-short-command-pronouns",
+        "a2-bello-forms"
+      ],
+      "supplementalMissionIds": [
+        "book2-group-instructions",
+        "book2-quick-help",
+        "book2-beautiful-places"
+      ],
+      "reviewedOn": "2026-10-25"
     },
     {
       "topic": "Formal writing, causal connectors and further chapter vocabulary",
@@ -2931,7 +2969,15 @@
           ]
         }
       ],
-      "status": "The future-plan mission is bounded; it does not claim full coverage of letters, employment documents, bisogna or siccome/perché."
+      "status": "Added invariant bisogna + infinitive, common perché/siccome cause ordering, consequence contrast and one original formal enquiry with coherent Lei/La/Le. Complete employment documents, CV composition and exhaustive chapter vocabulary remain partial.",
+      "supplementalUnitIds": [
+        "a2-bisogna-causal"
+      ],
+      "supplementalMissionIds": [
+        "book2-plan-with-a-reason",
+        "book2-formal-enquiry"
+      ],
+      "reviewedOn": "2026-10-25"
     },
     {
       "topic": "Listening and pronunciation evidence",
@@ -2946,5 +2992,36 @@
       ],
       "status": "Written recognition, original speaking prompts and self-checks are provided. Archiving media does not establish listening comprehension, transcription accuracy or automatically scored pronunciation."
     }
-  ]
+  ],
+  "gapContentEnhancement": {
+    "reviewedOn": "2026-10-25",
+    "report": "docs/book-gap-content-review.json",
+    "newGrammarUnits": 10,
+    "newControlledExercises": 80,
+    "newMissions": 11,
+    "newEnrichments": 11,
+    "newReferenceTopicLinks": 19,
+    "preservation": "All prior55 units,56 missions,56 enrichments, banks and four programme/day arrays retain their exact objects and order.",
+    "verifiedPhysicalPages": {
+      "src-1647be2784c9": [
+        226
+      ],
+      "src-580f7558db56": [
+        33,
+        55,
+        69,
+        103,
+        117,
+        133,
+        167,
+        248,
+        250,
+        252,
+        254,
+        255,
+        260
+      ]
+    },
+    "assessmentLimit": "Practice and self-checks extend the bounded topics; no full-book teaching-completeness, CEFR certification or automatic pronunciation assessment is claimed."
+  }
 }

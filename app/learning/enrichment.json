@@ -7734,6 +7734,558 @@
           ]
         }
       }
+    },
+    {
+      "missionId": "book1-plural-inventory",
+      "bank": "espresso1-u05",
+      "notes": [
+        {
+          "en": "The optional resource refreshes a related foundation. Use this lesson and its linked grammar for the new book topic; the resource is not evidence that it teaches every form here.",
+          "it": "La risorsa facoltativa ripassa un fondamento collegato. Per il nuovo tema del libro usa questa lezione e la grammatica collegata; la risorsa non dimostra di insegnare ogni forma qui presente."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: How many suitcases do the friends have?",
+          "it": "A: Quante valigie hanno le amiche?"
+        },
+        {
+          "en": "B: They have two red suitcases.",
+          "it": "B: Hanno due valigie rosse."
+        },
+        {
+          "en": "A: And the shirts?",
+          "it": "A: E le camicie?"
+        },
+        {
+          "en": "B: There are four shirts in the suitcases.",
+          "it": "B: Nelle valigie ci sono quattro camicie."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "How many shirts are packed? Write the number in Italian.",
+          "it": "Quante camicie sono in valigia? Scrivi il numero in lettere."
+        },
+        "answers": [
+          "quattro"
+        ],
+        "explanation": {
+          "en": "B counts four shirts.",
+          "it": "B conta quattro camicie."
+        }
+      },
+      "frame": {
+        "en": "They have two ___ and four ___. The ___ are ___.",
+        "it": "Hanno due ___ e quattro ___. Le / Gli ___ sono ___."
+      },
+      "speaking": {
+        "en": "Cover the scene and change the inventory to three suitcases and six shirts.",
+        "it": "Copri la scena e cambia l’inventario in tre valigie e sei camicie."
+      },
+      "resource": "articles-drill"
+    },
+    {
+      "missionId": "book2-puppet-description",
+      "bank": "espresso2-u07",
+      "notes": [
+        {
+          "en": "The optional resource refreshes a related foundation. Use this lesson and its linked grammar for the new book topic; the resource is not evidence that it teaches every form here.",
+          "it": "La risorsa facoltativa ripassa un fondamento collegato. Per il nuovo tema del libro usa questa lezione e la grammatica collegata; la risorsa non dimostra di insegnare ogni forma qui presente."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What are the puppet’s arms like?",
+          "it": "A: Come sono le braccia del pupazzo?"
+        },
+        {
+          "en": "B: They are short and yellow.",
+          "it": "B: Sono corte e gialle."
+        },
+        {
+          "en": "A: And the hands?",
+          "it": "A: E le mani?"
+        },
+        {
+          "en": "B: They are large and blue.",
+          "it": "B: Sono grandi e blu."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What colour are the puppet’s arms? Write the feminine plural adjective.",
+          "it": "Di che colore sono le braccia del pupazzo? Scrivi l’aggettivo al femminile plurale."
+        },
+        "answers": [
+          "gialle"
+        ],
+        "explanation": {
+          "en": "The arms are described as corte e gialle.",
+          "it": "Le braccia sono descritte come corte e gialle."
+        }
+      },
+      "frame": {
+        "en": "The arms are ___. The ears are ___. The hands are ___.",
+        "it": "Le braccia sono ___. Le orecchie sono ___. Le mani sono ___."
+      },
+      "speaking": {
+        "en": "Give a partner three details for a new puppet. Ask them to repeat the details before drawing.",
+        "it": "Dai a un compagno tre dettagli per un nuovo pupazzo. Chiedigli di ripeterli prima di disegnare."
+      },
+      "resource": "articles-drill"
+    },
+    {
+      "missionId": "book2-think-about-a-plan",
+      "bank": "espresso2-u02",
+      "notes": [
+        {
+          "en": "The optional resource refreshes a related foundation. Use this lesson and its linked grammar for the new book topic; the resource is not evidence that it teaches every form here.",
+          "it": "La risorsa facoltativa ripassa un fondamento collegato. Per il nuovo tema del libro usa questa lezione e la grammatica collegata; la risorsa non dimostra di insegnare ogni forma qui presente."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What do you think about the Saturday workshop?",
+          "it": "A: Che cosa pensi del laboratorio di sabato?"
+        },
+        {
+          "en": "B: I need to think about that proposal.",
+          "it": "B: Devo pensare a quella proposta."
+        },
+        {
+          "en": "A: Will you think about it tonight?",
+          "it": "A: Ci pensi stasera?"
+        },
+        {
+          "en": "B: Yes, I will think about it after dinner.",
+          "it": "B: Sì, ci penso dopo cena."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "When will B think about the proposal? Complete in Italian: dopo ___.",
+          "it": "Quando B penserà alla proposta? Completa in italiano: dopo ___."
+        },
+        "answers": [
+          "cena"
+        ],
+        "explanation": {
+          "en": "B gives the time dopo cena.",
+          "it": "B indica il momento dopo cena."
+        }
+      },
+      "frame": {
+        "en": "The proposal is ___. Are you thinking about it? Yes, I will think about it ___.",
+        "it": "La proposta è ___. Ci pensi? Sì, ci penso ___."
+      },
+      "speaking": {
+        "en": "Change the proposal and decision time, keeping the topic clear before using ci.",
+        "it": "Cambia proposta e momento della decisione, mantenendo chiaro l’argomento prima di usare ci."
+      },
+      "resource": "present-drill"
+    },
+    {
+      "missionId": "book2-model-size",
+      "bank": "espresso2-u02",
+      "notes": [
+        {
+          "en": "The optional resource refreshes a related foundation. Use this lesson and its linked grammar for the new book topic; the resource is not evidence that it teaches every form here.",
+          "it": "La risorsa facoltativa ripassa un fondamento collegato. Per il nuovo tema del libro usa questa lezione e la grammatica collegata; la risorsa non dimostra di insegnare ogni forma qui presente."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What is under the small table?",
+          "it": "A: Che cosa c’è sotto il tavolino?"
+        },
+        {
+          "en": "B: A small male cat.",
+          "it": "B: Un gattino."
+        },
+        {
+          "en": "A: Where is the large book?",
+          "it": "A: Dov’è il librone?"
+        },
+        {
+          "en": "B: It is beside the small table.",
+          "it": "B: È accanto al tavolino."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Where is the large book? Complete: ___ al tavolino.",
+          "it": "Dov’è il librone? Completa: ___ al tavolino."
+        },
+        "answers": [
+          "accanto"
+        ],
+        "explanation": {
+          "en": "The scene places the large book beside the table.",
+          "it": "La scena colloca il librone accanto al tavolino."
+        }
+      },
+      "frame": {
+        "en": "There is a small ___ under ___. The large ___ is beside ___.",
+        "it": "C’è un / una ___ sotto ___. Il / La ___ è accanto a ___."
+      },
+      "speaking": {
+        "en": "Change the positions and describe a different miniature display without adding unlearned noun formations.",
+        "it": "Cambia le posizioni e descrivi un’altra vetrina in miniatura senza aggiungere formazioni nominali non studiate."
+      },
+      "resource": "articles-drill"
+    },
+    {
+      "missionId": "book2-event-timeline",
+      "bank": "espresso2-u03",
+      "notes": [
+        {
+          "en": "The optional resource refreshes a related foundation. Use this lesson and its linked grammar for the new book topic; the resource is not evidence that it teaches every form here.",
+          "it": "La risorsa facoltativa ripassa un fondamento collegato. Per il nuovo tema del libro usa questa lezione e la grammatica collegata; la risorsa non dimostra di insegnare ogni forma qui presente."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: When did you finish the signs?",
+          "it": "A: Quando avete finito i cartelli?"
+        },
+        {
+          "en": "B: We finished them at four.",
+          "it": "B: Li abbiamo finiti alle quattro."
+        },
+        {
+          "en": "A: And when did the workshop end?",
+          "it": "A: E quando è finito il laboratorio?"
+        },
+        {
+          "en": "B: It ended at seven.",
+          "it": "B: È finito alle sette."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "At what time did the workshop end? Write the number in Italian.",
+          "it": "A che ora è finito il laboratorio? Scrivi il numero in lettere."
+        },
+        "answers": [
+          "sette"
+        ],
+        "explanation": {
+          "en": "B separates the signs at four from the workshop ending at seven.",
+          "it": "B distingue i cartelli alle quattro dalla fine del laboratorio alle sette."
+        }
+      },
+      "frame": {
+        "en": "We finished ___ at ___. The ___ ended at ___. Then I started to ___.",
+        "it": "Abbiamo finito ___ alle ___. Il / La ___ è finito / finita alle ___. Poi ho cominciato a ___."
+      },
+      "speaking": {
+        "en": "Tell a fresh event timeline with different tasks and times. Make clear who acts and which event begins or ends.",
+        "it": "Racconta una nuova cronologia con compiti e orari diversi. Chiarisci chi agisce e quale evento inizia o finisce."
+      },
+      "resource": "auxiliary-drill"
+    },
+    {
+      "missionId": "book2-past-quantities",
+      "bank": "espresso2-u04",
+      "notes": [
+        {
+          "en": "The optional resource refreshes a related foundation. Use this lesson and its linked grammar for the new book topic; the resource is not evidence that it teaches every form here.",
+          "it": "La risorsa facoltativa ripassa un fondamento collegato. Per il nuovo tema del libro usa questa lezione e la grammatica collegata; la risorsa non dimostra di insegnare ogni forma qui presente."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: How many envelopes did you buy?",
+          "it": "A: Quante buste hai comprato?"
+        },
+        {
+          "en": "B: I bought eight.",
+          "it": "B: Ne ho comprate otto."
+        },
+        {
+          "en": "A: And how many invitations did you print?",
+          "it": "A: E quanti inviti hai stampato?"
+        },
+        {
+          "en": "B: I printed five.",
+          "it": "B: Ne ho stampati cinque."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "How many invitations were printed? Write the number in Italian.",
+          "it": "Quanti inviti sono stati stampati? Scrivi il numero in lettere."
+        },
+        "answers": [
+          "cinque"
+        ],
+        "explanation": {
+          "en": "The second quantity is five invitations.",
+          "it": "La seconda quantità è cinque inviti."
+        }
+      },
+      "frame": {
+        "en": "The ___? I bought ___ of them. The ___? I printed ___ of them.",
+        "it": "Le / I ___? Ne ho comprate / comprati ___. Le / I ___? Ne ho stampate / stampati ___."
+      },
+      "speaking": {
+        "en": "Change both item types and quantities. Include one feminine singular quantity in the new report.",
+        "it": "Cambia entrambi i tipi di oggetto e le quantità. Includi una quantità femminile singolare nel nuovo resoconto."
+      },
+      "resource": "auxiliary-drill"
+    },
+    {
+      "missionId": "book2-group-instructions",
+      "bank": "espresso2-u07",
+      "notes": [
+        {
+          "en": "The optional resource refreshes a related foundation. Use this lesson and its linked grammar for the new book topic; the resource is not evidence that it teaches every form here.",
+          "it": "La risorsa facoltativa ripassa un fondamento collegato. Per il nuovo tema del libro usa questa lezione e la grammatica collegata; la risorsa non dimostra di insegnare ogni forma qui presente."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What should the visitors do first?",
+          "it": "A: Che cosa devono fare prima i visitatori?"
+        },
+        {
+          "en": "B: Take the folders and open them.",
+          "it": "B: Prendete le cartelle e apritele."
+        },
+        {
+          "en": "A: Where should they wait?",
+          "it": "A: Dove devono aspettare?"
+        },
+        {
+          "en": "B: Wait beside the green door.",
+          "it": "B: Aspettate accanto alla porta verde."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What colour is the waiting-place door? Write the Italian adjective.",
+          "it": "Di che colore è la porta del luogo d’attesa? Scrivi l’aggettivo italiano."
+        },
+        "answers": [
+          "verde"
+        ],
+        "explanation": {
+          "en": "The visitors wait beside the green door.",
+          "it": "I visitatori aspettano accanto alla porta verde."
+        }
+      },
+      "frame": {
+        "en": "Be ___. Take ___ and open it/them. Do not ___.",
+        "it": "Siate ___. Prendete ___ e apritelo / apritele. Non ___."
+      },
+      "speaking": {
+        "en": "Guide a different group with changed objects and a new waiting place.",
+        "it": "Guida un altro gruppo cambiando gli oggetti e il luogo d’attesa."
+      },
+      "resource": "present-drill"
+    },
+    {
+      "missionId": "book2-quick-help",
+      "bank": "espresso2-u06",
+      "notes": [
+        {
+          "en": "The optional resource refreshes a related foundation. Use this lesson and its linked grammar for the new book topic; the resource is not evidence that it teaches every form here.",
+          "it": "La risorsa facoltativa ripassa un fondamento collegato. Per il nuovo tema del libro usa questa lezione e la grammatica collegata; la risorsa non dimostra di insegnare ogni forma qui presente."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Give me the address, please.",
+          "it": "A: Dammi l’indirizzo, per favore."
+        },
+        {
+          "en": "B: It is in Via dei Tigli.",
+          "it": "B: È in via dei Tigli."
+        },
+        {
+          "en": "A: And what should I tell Elio?",
+          "it": "A: E che cosa devo dire a Elio?"
+        },
+        {
+          "en": "B: Tell him the entrance is behind the library.",
+          "it": "B: Digli che l’ingresso è dietro la biblioteca."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Where is the entrance? Complete in Italian: ___ la biblioteca.",
+          "it": "Dov’è l’ingresso? Completa in italiano: ___ la biblioteca."
+        },
+        "answers": [
+          "dietro"
+        ],
+        "explanation": {
+          "en": "The entrance is behind the library.",
+          "it": "L’ingresso è dietro la biblioteca."
+        }
+      },
+      "frame": {
+        "en": "Give me ___. Tell him that ___.",
+        "it": "Dammi ___. Digli che ___."
+      },
+      "speaking": {
+        "en": "Keep the same friend as addressee, but change the object and the information for the other person.",
+        "it": "Mantieni lo stesso amico come destinatario dei comandi, ma cambia l’oggetto e l’informazione per l’altra persona."
+      },
+      "resource": "present-drill"
+    },
+    {
+      "missionId": "book2-beautiful-places",
+      "bank": "espresso2-u10",
+      "notes": [
+        {
+          "en": "The optional resource refreshes a related foundation. Use this lesson and its linked grammar for the new book topic; the resource is not evidence that it teaches every form here.",
+          "it": "La risorsa facoltativa ripassa un fondamento collegato. Per il nuovo tema del libro usa questa lezione e la grammatica collegata; la risorsa non dimostra di insegnare ogni forma qui presente."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What is the new room like?",
+          "it": "A: Com’è la stanza nuova?"
+        },
+        {
+          "en": "B: It has beautiful windows and beautiful shelves.",
+          "it": "B: Ha delle belle finestre e dei begli scaffali."
+        },
+        {
+          "en": "A: And the garden?",
+          "it": "A: E il giardino?"
+        },
+        {
+          "en": "B: It is a beautiful garden. The trees are beautiful too.",
+          "it": "B: È un bel giardino. Anche gli alberi sono belli."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Complete the adjective after the noun: Gli alberi sono ___.",
+          "it": "Completa l’aggettivo dopo il nome: Gli alberi sono ___."
+        },
+        "answers": [
+          "belli"
+        ],
+        "explanation": {
+          "en": "B uses ordinary adjective agreement after alberi.",
+          "it": "B usa la concordanza aggettivale normale dopo alberi."
+        }
+      },
+      "frame": {
+        "en": "There is a beautiful ___. The ___ are beautiful.",
+        "it": "C’è un bel / un bello / un bell’ ___. I / Gli ___ sono belli."
+      },
+      "speaking": {
+        "en": "Change the place and add one feminine noun with bella or belle.",
+        "it": "Cambia il luogo e aggiungi un nome femminile con bella o belle."
+      },
+      "resource": "articles-drill"
+    },
+    {
+      "missionId": "book2-plan-with-a-reason",
+      "bank": "espresso2-u08",
+      "notes": [
+        {
+          "en": "The optional resource refreshes a related foundation. Use this lesson and its linked grammar for the new book topic; the resource is not evidence that it teaches every form here.",
+          "it": "La risorsa facoltativa ripassa un fondamento collegato. Per il nuovo tema del libro usa questa lezione e la grammatica collegata; la risorsa non dimostra di insegnare ogni forma qui presente."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Why are you booking today?",
+          "it": "A: Perché prenotate oggi?"
+        },
+        {
+          "en": "B: Because there are few seats.",
+          "it": "B: Perché ci sono pochi posti."
+        },
+        {
+          "en": "A: What do we need to prepare?",
+          "it": "A: Che cosa bisogna preparare?"
+        },
+        {
+          "en": "B: We need to prepare the documents.",
+          "it": "B: Bisogna preparare i documenti."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What needs preparing? Write the noun used in the scene, with or without its article.",
+          "it": "Che cosa bisogna preparare? Scrivi il nome usato nella scena, con o senza articolo."
+        },
+        "answers": [
+          "documenti",
+          "i documenti"
+        ],
+        "explanation": {
+          "en": "The scene names i documenti.",
+          "it": "La scena nomina i documenti."
+        }
+      },
+      "frame": {
+        "en": "We need to ___. We ___ because ___. Since ___, we ___.",
+        "it": "Bisogna ___. ___ perché ___. Siccome ___, ___."
+      },
+      "speaking": {
+        "en": "Change the shared task and its reason, then say both causal versions without reading.",
+        "it": "Cambia il compito condiviso e il motivo, poi dì entrambe le versioni causali senza leggere."
+      },
+      "resource": "present-drill"
+    },
+    {
+      "missionId": "book2-formal-enquiry",
+      "bank": "espresso2-u08",
+      "notes": [
+        {
+          "en": "The optional resource refreshes a related foundation. Use this lesson and its linked grammar for the new book topic; the resource is not evidence that it teaches every form here.",
+          "it": "La risorsa facoltativa ripassa un fondamento collegato. Per il nuovo tema del libro usa questa lezione e la grammatica collegata; la risorsa non dimostra di insegnare ogni forma qui presente."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Who are you writing to?",
+          "it": "A: A chi scrivi?"
+        },
+        {
+          "en": "B: To the organiser of an evening workshop.",
+          "it": "B: Alla responsabile di un laboratorio serale."
+        },
+        {
+          "en": "A: What information are you asking for?",
+          "it": "A: Quale informazione chiedi?"
+        },
+        {
+          "en": "B: I am asking for the timetable because I work until five.",
+          "it": "B: Chiedo l’orario perché lavoro fino alle cinque."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What information is requested? Write the noun, with or without its article.",
+          "it": "Quale informazione viene richiesta? Scrivi il nome, con o senza articolo."
+        },
+        "answers": [
+          "orario",
+          "l’orario"
+        ],
+        "explanation": {
+          "en": "The writer wants the workshop timetable.",
+          "it": "Chi scrive vuole l’orario del laboratorio."
+        }
+      },
+      "frame": {
+        "en": "Dear ___. I am writing to ask ___. Could you tell me ___? Thank you ___.",
+        "it": "Gentile ___. Le scrivo per chiedere ___. Potrebbe dirmi ___? La ringrazio ___."
+      },
+      "speaking": {
+        "en": "Change the organiser and the requested detail. Read the message aloud, then check that its greeting and closing use the same register.",
+        "it": "Cambia la persona che organizza e il dettaglio richiesto. Leggi il messaggio ad alta voce, poi controlla che apertura e chiusura usino lo stesso registro."
+      },
+      "resource": "present-drill"
     }
   ],
   "resources": [

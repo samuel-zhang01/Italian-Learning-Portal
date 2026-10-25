@@ -1,0 +1,924 @@
+{
+  "reviewedOn": "2026-10-25",
+  "scope": "Original bilingual supplements for the explicitly recorded native-book learning gaps; source text, worksheets and independent homework are not reproduced.",
+  "counts": {
+    "newGrammarUnits": 10,
+    "newA1Units": 1,
+    "newA2Units": 9,
+    "newControlledExercises": 80,
+    "newMissions": 11,
+    "newEnrichments": 11,
+    "newVocabularyBanks": 0,
+    "totalGrammarUnits": 65,
+    "totalMissions": 67,
+    "totalEnrichments": 67,
+    "totalControlledExercises": 520,
+    "totalBanks": 38,
+    "totalBankCards": 304,
+    "existingProgrammeStudyDaysUnchanged": 132
+  },
+  "baselinePreservation": {
+    "canonicalHashFormat": "SHA-256 of UTF-8 compact JSON with recursively sorted object keys, unescaped Unicode and original array order.",
+    "arrays": {
+      "curriculum.missions": {
+        "count": 56,
+        "sha256": "9528e22dd7a39f56fd5f589c4944acdd43897aa354184d64384657160bc09d3b"
+      },
+      "curriculum.sources": {
+        "count": 53,
+        "sha256": "7261d5ad593e85a832f9c0f28071e8d3b31d8612732119eb1ea099ee0096d2ee"
+      },
+      "grammar.units": {
+        "count": 55,
+        "sha256": "859b477624a3435edc9ab374e93377205d0bc9c6a9fda0d60af8997a5ccbe5d3"
+      },
+      "grammar.programmes": {
+        "count": 4,
+        "sha256": "1eb20a9f1512e0b3198d86f0a500d3a80114640f49e32dfff9069cc3f902534c"
+      },
+      "enrichment.banks": {
+        "count": 38,
+        "sha256": "c94935ef81d48f22f4d52cd7a2d47900fc1595a5aa2a697cc8ed43ff6d40c788"
+      },
+      "enrichment.lessons": {
+        "count": 56,
+        "sha256": "fd4b2ada9e6360117b82e611579816b17609b1621cbeb612bbff20b4f6b45d6b"
+      },
+      "enrichment.resources": {
+        "count": 11,
+        "sha256": "6531a0c6499f9c7df870e7622b179706584d8cb1aa268787e019518d770c6097"
+      },
+      "enrichment.research": {
+        "count": 3,
+        "sha256": "57503f05ee0cfba70f3c037de3a01b7b92cdec651d4c763999ae42ef186917f1"
+      }
+    }
+  },
+  "verifiedSources": [
+    {
+      "sourceId": "src-1647be2784c9",
+      "path": "materials/books/nuovo-espresso-plus-1/originals/reader-native-pdf/nuovo-espresso-plus-1-complete-book.pdf",
+      "sha256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf",
+      "physicalPages": 240,
+      "selectivelyReadPhysicalPages": [
+        226
+      ],
+      "extract": "data/incoming/books/nuovo-espresso-plus-1/native/complete-book-pages.json",
+      "verification": "Canonical PDF SHA-256 matched the source catalogue and private page extract; selected teaching text read with no extraction visual-review flags."
+    },
+    {
+      "sourceId": "src-580f7558db56",
+      "path": "materials/books/nuovo-espresso-plus-2/originals/reader-native-pdf/nuovo-espresso-plus-2-accessible-reader-book-263-pages.pdf",
+      "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4",
+      "physicalPages": 263,
+      "selectivelyReadPhysicalPages": [
+        33,
+        55,
+        69,
+        103,
+        117,
+        133,
+        167,
+        248,
+        250,
+        252,
+        254,
+        255,
+        260
+      ],
+      "extract": "data/incoming/books/nuovo-espresso-plus-2/native/complete-book-pages.json",
+      "verification": "Canonical PDF SHA-256 matched the source catalogue and private page extract; selected teaching text read with no extraction visual-review flags."
+    }
+  ],
+  "unitSourceMap": [
+    {
+      "unitId": "a1-plural-spelling",
+      "level": "A1",
+      "missionIds": [
+        "espresso1-u03-book-a-table",
+        "book1-plural-inventory"
+      ],
+      "sourceRefs": [
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            226
+          ]
+        }
+      ]
+    },
+    {
+      "unitId": "a2-irregular-body-nouns",
+      "level": "A2",
+      "missionIds": [
+        "espresso2-u07-navigate-an-appointment",
+        "book2-puppet-description"
+      ],
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "unitId": "a2-nonlocative-ci",
+      "level": "A2",
+      "missionIds": [
+        "espresso2-u02-remember-a-place",
+        "book2-think-about-a-plan"
+      ],
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            33,
+            250
+          ]
+        }
+      ]
+    },
+    {
+      "unitId": "a2-noun-alterations",
+      "level": "A2",
+      "missionIds": [
+        "espresso2-u02-remember-a-place",
+        "book2-model-size"
+      ],
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            33,
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "unitId": "a2-auxiliary-alternation",
+      "level": "A2",
+      "missionIds": [
+        "espresso2-u03-ask-for-a-favour",
+        "book2-event-timeline"
+      ],
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            55,
+            252
+          ]
+        }
+      ]
+    },
+    {
+      "unitId": "a2-ne-perfect-agreement",
+      "level": "A2",
+      "missionIds": [
+        "espresso2-u04-coordinate-an-outing",
+        "book2-past-quantities"
+      ],
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            69,
+            252
+          ]
+        }
+      ]
+    },
+    {
+      "unitId": "a2-plural-imperative",
+      "level": "A2",
+      "missionIds": [
+        "espresso2-u07-navigate-an-appointment",
+        "book2-group-instructions"
+      ],
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            117,
+            254,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "unitId": "a2-short-command-pronouns",
+      "level": "A2",
+      "missionIds": [
+        "espresso2-u06-suggest-a-break",
+        "book2-quick-help"
+      ],
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            103,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "unitId": "a2-bello-forms",
+      "level": "A2",
+      "missionIds": [
+        "espresso2-u10-discuss-a-home",
+        "book2-beautiful-places"
+      ],
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            167,
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "unitId": "a2-bisogna-causal",
+      "level": "A2",
+      "missionIds": [
+        "espresso2-u08-plan-a-next-step",
+        "book2-plan-with-a-reason"
+      ],
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            133,
+            260
+          ]
+        }
+      ]
+    }
+  ],
+  "missionChapterMap": [
+    {
+      "missionId": "book1-plural-inventory",
+      "unitIds": [
+        "a1-plural-spelling"
+      ],
+      "chapterId": "espresso1-u03",
+      "sourceRefs": [
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            226
+          ]
+        }
+      ]
+    },
+    {
+      "missionId": "book2-puppet-description",
+      "unitIds": [
+        "a2-irregular-body-nouns"
+      ],
+      "chapterId": "espresso2-u07",
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "missionId": "book2-think-about-a-plan",
+      "unitIds": [
+        "a2-nonlocative-ci"
+      ],
+      "chapterId": "espresso2-u02",
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            33,
+            250
+          ]
+        }
+      ]
+    },
+    {
+      "missionId": "book2-model-size",
+      "unitIds": [
+        "a2-noun-alterations"
+      ],
+      "chapterId": "espresso2-u02",
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            33,
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "missionId": "book2-event-timeline",
+      "unitIds": [
+        "a2-auxiliary-alternation"
+      ],
+      "chapterId": "espresso2-u03",
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            55,
+            252
+          ]
+        }
+      ]
+    },
+    {
+      "missionId": "book2-past-quantities",
+      "unitIds": [
+        "a2-ne-perfect-agreement"
+      ],
+      "chapterId": "espresso2-u04",
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            69,
+            252
+          ]
+        }
+      ]
+    },
+    {
+      "missionId": "book2-group-instructions",
+      "unitIds": [
+        "a2-plural-imperative"
+      ],
+      "chapterId": "espresso2-u07",
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            117,
+            254,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "missionId": "book2-quick-help",
+      "unitIds": [
+        "a2-short-command-pronouns"
+      ],
+      "chapterId": "espresso2-u06",
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            103,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "missionId": "book2-beautiful-places",
+      "unitIds": [
+        "a2-bello-forms"
+      ],
+      "chapterId": "espresso2-u10",
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            167,
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "missionId": "book2-plan-with-a-reason",
+      "unitIds": [
+        "a2-bisogna-causal"
+      ],
+      "chapterId": "espresso2-u08",
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            133,
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "missionId": "book2-formal-enquiry",
+      "unitIds": [
+        "a2-conditional",
+        "a2-indirect-pronouns",
+        "a2-bisogna-causal"
+      ],
+      "chapterId": "espresso2-u08",
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            133,
+            250
+          ]
+        }
+      ]
+    }
+  ],
+  "placement": "Append-only grammar units, missions and enrichments. Existing four programme objects and every saved day index remain unchanged. Existing chapter mission links expose supplementary grammar in chapter detail; the new missions are available in the ordinary course path. No new mastery or automatic A2-diagnostic claim is made.",
+  "scopeLimits": [
+    "Plural-spelling patterns include stated exceptions and learned forms; they do not predict every Italian noun.",
+    "Body-noun tasks request the common feminine models explicitly and do not reject other documented forms outside those prompts.",
+    "Alterations cover transparent literal-size models, not every lexicalised or affectionate meaning.",
+    "Auxiliary alternation is bounded to cominciare/finire; other alternating verbs still need separate contexts.",
+    "Partitive ne practice covers explicit countable quantities; other senses, mass nouns and broader agreement variation remain outside these tasks.",
+    "Short-command practice covers the five tu families with single pronouns and the gli exception; longer clitic combinations remain a separate topic.",
+    "Formal writing covers one short original enquiry, not a complete employment-letter or CV-writing course.",
+    "Captured media do not establish independently assessed listening or pronunciation. The unknown publisher page264 remains unresolved."
+  ],
+  "privacy": "Canonical PDFs and page extracts were read only in their supplied ignored study folders. Fragment files remain ignored under work/book-authoring. Maintained app JSON contains only original practice and bounded source references.",
+  "validation": {
+    "status": "Eight focused content/source/preservation/progression tests, focused ESLint and diff checks passed. Six isolated browser groups and43 phone layout checks passed on the built local preview.",
+    "tests": "tests/book-gaps.test.mjs",
+    "passed": 8,
+    "manualLanguageReview": "All80 controlled prompts/answers and teaching paragraphs read independently by the root agent. A second agent independently read all11 mission goals, checks, delayed recalls, production prompts and models and found no blocking Italian, role or agreement error. Author review and answer-witness tests checked all11 guided scenes. Nonblocking suggestions to specify bello in isolated gaps and clarify relative-position wording are recorded without changing frozen release content.",
+    "builderTokenFix": "The ne-agreement ordering item uses punctuation-free word tokens while its accepted sentence retains normal final punctuation.",
+    "browser": {
+      "generator": "scripts/audit_book_gaps_browser.mjs",
+      "reviewedOn": "2026-10-25",
+      "status": "passed",
+      "preview": "http://127.0.0.1:5200",
+      "method": "Owned disposable Chromium, local preview, validated synthetic progress; no shared CDP, private profile or real learner data.",
+      "sandboxException": "Existing explicit browser-view allowNoSandbox configuration honoured on this host.",
+      "workflowGroupsPassed": 6,
+      "checks": [
+        {
+          "label": "All ten new workshops open teaching, exact source pages and first practice in EN at320px",
+          "routes": 10,
+          "layoutChecks": 20
+        },
+        {
+          "label": "All ten new workshops open teaching, exact source pages and first practice in IT at320px",
+          "routes": 10,
+          "layoutChecks": 20
+        },
+        {
+          "label": "A new lesson retains wrong-first evidence, corrected recall, unsubmitted answer and production drafts over reload, then schedules tomorrow’s review"
+        },
+        {
+          "label": "A browser-only next-day clock exercises scheduled recall and an actual exported backup preserves new and legacy evidence",
+          "clock": "Owned page Date fixed to the following day; no real waiting or system clock changes"
+        },
+        {
+          "label": "Pinned formal-enquiry guided sessions display A2 in EN and IT without changing the saved programme/day"
+        },
+        {
+          "label": "Owned contexts produced no runtime errors, external requests or network mutations"
+        }
+      ],
+      "layouts": [
+        {
+          "label": "en/a1-plural-spelling/learn",
+          "language": "en",
+          "unitId": "a1-plural-spelling",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a1-plural-spelling/practise",
+          "language": "en",
+          "unitId": "a1-plural-spelling",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-irregular-body-nouns/learn",
+          "language": "en",
+          "unitId": "a2-irregular-body-nouns",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-irregular-body-nouns/practise",
+          "language": "en",
+          "unitId": "a2-irregular-body-nouns",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-nonlocative-ci/learn",
+          "language": "en",
+          "unitId": "a2-nonlocative-ci",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-nonlocative-ci/practise",
+          "language": "en",
+          "unitId": "a2-nonlocative-ci",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-noun-alterations/learn",
+          "language": "en",
+          "unitId": "a2-noun-alterations",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-noun-alterations/practise",
+          "language": "en",
+          "unitId": "a2-noun-alterations",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-auxiliary-alternation/learn",
+          "language": "en",
+          "unitId": "a2-auxiliary-alternation",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-auxiliary-alternation/practise",
+          "language": "en",
+          "unitId": "a2-auxiliary-alternation",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-ne-perfect-agreement/learn",
+          "language": "en",
+          "unitId": "a2-ne-perfect-agreement",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-ne-perfect-agreement/practise",
+          "language": "en",
+          "unitId": "a2-ne-perfect-agreement",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-plural-imperative/learn",
+          "language": "en",
+          "unitId": "a2-plural-imperative",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-plural-imperative/practise",
+          "language": "en",
+          "unitId": "a2-plural-imperative",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-short-command-pronouns/learn",
+          "language": "en",
+          "unitId": "a2-short-command-pronouns",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-short-command-pronouns/practise",
+          "language": "en",
+          "unitId": "a2-short-command-pronouns",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-bello-forms/learn",
+          "language": "en",
+          "unitId": "a2-bello-forms",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-bello-forms/practise",
+          "language": "en",
+          "unitId": "a2-bello-forms",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-bisogna-causal/learn",
+          "language": "en",
+          "unitId": "a2-bisogna-causal",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "en/a2-bisogna-causal/practise",
+          "language": "en",
+          "unitId": "a2-bisogna-causal",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a1-plural-spelling/learn",
+          "language": "it",
+          "unitId": "a1-plural-spelling",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a1-plural-spelling/practise",
+          "language": "it",
+          "unitId": "a1-plural-spelling",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-irregular-body-nouns/learn",
+          "language": "it",
+          "unitId": "a2-irregular-body-nouns",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-irregular-body-nouns/practise",
+          "language": "it",
+          "unitId": "a2-irregular-body-nouns",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-nonlocative-ci/learn",
+          "language": "it",
+          "unitId": "a2-nonlocative-ci",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-nonlocative-ci/practise",
+          "language": "it",
+          "unitId": "a2-nonlocative-ci",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-noun-alterations/learn",
+          "language": "it",
+          "unitId": "a2-noun-alterations",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-noun-alterations/practise",
+          "language": "it",
+          "unitId": "a2-noun-alterations",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-auxiliary-alternation/learn",
+          "language": "it",
+          "unitId": "a2-auxiliary-alternation",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-auxiliary-alternation/practise",
+          "language": "it",
+          "unitId": "a2-auxiliary-alternation",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-ne-perfect-agreement/learn",
+          "language": "it",
+          "unitId": "a2-ne-perfect-agreement",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-ne-perfect-agreement/practise",
+          "language": "it",
+          "unitId": "a2-ne-perfect-agreement",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-plural-imperative/learn",
+          "language": "it",
+          "unitId": "a2-plural-imperative",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-plural-imperative/practise",
+          "language": "it",
+          "unitId": "a2-plural-imperative",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-short-command-pronouns/learn",
+          "language": "it",
+          "unitId": "a2-short-command-pronouns",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-short-command-pronouns/practise",
+          "language": "it",
+          "unitId": "a2-short-command-pronouns",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-bello-forms/learn",
+          "language": "it",
+          "unitId": "a2-bello-forms",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-bello-forms/practise",
+          "language": "it",
+          "unitId": "a2-bello-forms",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-bisogna-causal/learn",
+          "language": "it",
+          "unitId": "a2-bisogna-causal",
+          "stage": "learn",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "it/a2-bisogna-causal/practise",
+          "language": "it",
+          "unitId": "a2-bisogna-causal",
+          "stage": "practise",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "new-lesson-completed-it",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "formal-guided-session-en",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        },
+        {
+          "label": "formal-guided-session-it",
+          "viewport": 320,
+          "document": 320,
+          "overflowingControls": []
+        }
+      ],
+      "screenshots": [
+        "work/book-gap-browser/en-320-a1-plural-spelling.png",
+        "work/book-gap-browser/en-320-a2-irregular-body-nouns.png",
+        "work/book-gap-browser/en-320-a2-nonlocative-ci.png",
+        "work/book-gap-browser/en-320-a2-noun-alterations.png",
+        "work/book-gap-browser/en-320-a2-auxiliary-alternation.png",
+        "work/book-gap-browser/en-320-a2-ne-perfect-agreement.png",
+        "work/book-gap-browser/en-320-a2-plural-imperative.png",
+        "work/book-gap-browser/en-320-a2-short-command-pronouns.png",
+        "work/book-gap-browser/en-320-a2-bello-forms.png",
+        "work/book-gap-browser/en-320-a2-bisogna-causal.png",
+        "work/book-gap-browser/it-320-a1-plural-spelling.png",
+        "work/book-gap-browser/it-320-a2-irregular-body-nouns.png",
+        "work/book-gap-browser/it-320-a2-nonlocative-ci.png",
+        "work/book-gap-browser/it-320-a2-noun-alterations.png",
+        "work/book-gap-browser/it-320-a2-auxiliary-alternation.png",
+        "work/book-gap-browser/it-320-a2-ne-perfect-agreement.png",
+        "work/book-gap-browser/it-320-a2-plural-imperative.png",
+        "work/book-gap-browser/it-320-a2-short-command-pronouns.png",
+        "work/book-gap-browser/it-320-a2-bello-forms.png",
+        "work/book-gap-browser/it-320-a2-bisogna-causal.png",
+        "work/book-gap-browser/it-320-new-lesson-completed.png",
+        "work/book-gap-browser/it-320-new-lesson-scheduled-recall.png",
+        "work/book-gap-browser/en-320-formal-enquiry-a2-session.png",
+        "work/book-gap-browser/it-320-formal-enquiry-a2-session.png"
+      ],
+      "runtimeErrors": [],
+      "forbiddenRequests": [],
+      "limits": [
+        "All ten new grammar teaching routes and first exercises were opened in EN/IT at320px; the browser did not answer all80 new controlled items.",
+        "One new lesson was completed end to end; the remaining new lessons have authored-content/answer-contract tests rather than separate full browser completions.",
+        "Next-day scheduled recall uses the owned page’s simulated Date; no system clock or real learner schedule was changed.",
+        "Viewport emulation, not a physical phone. Device speech and publisher media were not exercised.",
+        "No production site, shared reader, private book files, local learner database or backups were accessed."
+      ]
+    },
+    "visualReview": {
+      "status": "passed",
+      "scope": "EN320 short-command teaching, IT320 new-lesson completion/first-attempt score, and IT320 formal-enquiry A2 session visually inspected. Text and controls fit their containers; language, score and level labels are clear.",
+      "screenshots": [
+        "work/book-gap-browser/en-320-a2-short-command-pronouns.png",
+        "work/book-gap-browser/it-320-new-lesson-completed.png",
+        "work/book-gap-browser/it-320-formal-enquiry-a2-session.png"
+      ]
+    }
+  },
+  "referenceCompanionIntegration": {
+    "newTopicLinks": 19,
+    "classification": "Existing native-reader reference pointers only; no new practice completion and the first936 original class companions unchanged."
+  }
+}

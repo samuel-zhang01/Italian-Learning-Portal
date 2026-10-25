@@ -35671,7 +35671,8 @@
         "it": "Plus 1 · Riferimento grammaticale · pagina fisica 226"
       },
       "unitIds": [
-        "noun-plurals"
+        "noun-plurals",
+        "a1-plural-spelling"
       ],
       "task": {
         "en": "Review the relevant rule on this page in your private book, then open a linked original portal unit and practise with fresh details.",
@@ -36679,7 +36680,9 @@
         "past-avere",
         "past-essere",
         "a2-imperfetto",
-        "a2-past-narrative"
+        "a2-past-narrative",
+        "a2-nonlocative-ci",
+        "a2-noun-alterations"
       ],
       "task": {
         "en": "Review the relevant rule on this page in your private book, then open a linked original portal unit and practise with fresh details.",
@@ -37123,7 +37126,8 @@
       "unitIds": [
         "a2-comparisons",
         "a2-conditional",
-        "a2-indefinites-farcela"
+        "a2-indefinites-farcela",
+        "a2-auxiliary-alternation"
       ],
       "task": {
         "en": "Review the relevant rule on this page in your private book, then open a linked original portal unit and practise with fresh details.",
@@ -37408,7 +37412,8 @@
         "direct-pronouns",
         "a2-progressive",
         "a2-pronouns-perfect",
-        "a2-relative-clauses"
+        "a2-relative-clauses",
+        "a2-ne-perfect-agreement"
       ],
       "task": {
         "en": "Review the relevant rule on this page in your private book, then open a linked original portal unit and practise with fresh details.",
@@ -38096,7 +38101,8 @@
       },
       "unitIds": [
         "a2-informal-imperative",
-        "a2-servire-quello-che"
+        "a2-servire-quello-che",
+        "a2-short-command-pronouns"
       ],
       "task": {
         "en": "Review the relevant rule on this page in your private book, then open a linked original portal unit and practise with fresh details.",
@@ -38379,7 +38385,8 @@
       },
       "unitIds": [
         "a2-formal-imperative",
-        "a2-better-best"
+        "a2-better-best",
+        "a2-plural-imperative"
       ],
       "task": {
         "en": "Review the relevant rule on this page in your private book, then open a linked original portal unit and practise with fresh details.",
@@ -38703,7 +38710,8 @@
       "unitIds": [
         "a2-travel-duration",
         "a2-future",
-        "a2-real-conditions"
+        "a2-real-conditions",
+        "a2-bisogna-causal"
       ],
       "task": {
         "en": "Review the relevant rule on this page in your private book, then open a linked original portal unit and practise with fresh details.",
@@ -39390,7 +39398,8 @@
       "unitIds": [
         "a2-comparisons",
         "a2-subjunctive-forms",
-        "a2-subjunctive-opinions"
+        "a2-subjunctive-opinions",
+        "a2-bello-forms"
       ],
       "task": {
         "en": "Review the relevant rule on this page in your private book, then open a linked original portal unit and practise with fresh details.",
@@ -41013,7 +41022,10 @@
       },
       "unitIds": [
         "adjective-agreement",
-        "noun-plurals"
+        "noun-plurals",
+        "a2-irregular-body-nouns",
+        "a2-noun-alterations",
+        "a2-bello-forms"
       ],
       "task": {
         "en": "Review the relevant rule on this page in your private book, then open a linked original portal unit and practise with fresh details.",
@@ -41061,7 +41073,8 @@
       "unitIds": [
         "direct-pronouns",
         "a2-indirect-pronouns",
-        "a2-pronouns-perfect"
+        "a2-pronouns-perfect",
+        "a2-nonlocative-ci"
       ],
       "task": {
         "en": "Review the relevant rule on this page in your private book, then open a linked original portal unit and practise with fresh details.",
@@ -41111,7 +41124,9 @@
         "past-avere",
         "past-irregular",
         "a2-imperfetto",
-        "a2-pronouns-perfect"
+        "a2-pronouns-perfect",
+        "a2-auxiliary-alternation",
+        "a2-ne-perfect-agreement"
       ],
       "task": {
         "en": "Review the relevant rule on this page in your private book, then open a linked original portal unit and practise with fresh details.",
@@ -41159,7 +41174,8 @@
       "unitIds": [
         "a2-conditional",
         "a2-informal-imperative",
-        "a2-formal-imperative"
+        "a2-formal-imperative",
+        "a2-plural-imperative"
       ],
       "task": {
         "en": "Review the relevant rule on this page in your private book, then open a linked original portal unit and practise with fresh details.",
@@ -41183,7 +41199,9 @@
       "unitIds": [
         "a2-informal-imperative",
         "a2-formal-imperative",
-        "a2-future"
+        "a2-future",
+        "a2-plural-imperative",
+        "a2-short-command-pronouns"
       ],
       "task": {
         "en": "Review the relevant rule on this page in your private book, then open a linked original portal unit and practise with fresh details.",
@@ -41300,7 +41318,8 @@
       },
       "unitIds": [
         "a2-past-narrative",
-        "a2-imminent-story"
+        "a2-imminent-story",
+        "a2-bisogna-causal"
       ],
       "task": {
         "en": "Review the relevant rule on this page in your private book, then open a linked original portal unit and practise with fresh details.",

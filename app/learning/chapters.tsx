@@ -93,6 +93,11 @@ export function ChapterDashboard({ p, t, text, go, today, chapterId, pdfs = {}, 
       <section className="chapter-practice" aria-labelledby="chapter-practice-heading">
         <h2 id="chapter-practice-heading">{t("Practise this chapter", "Esercitati su questo capitolo")}</h2>
         <div className="chapter-practice-links">
+          {selected.book === 2 && <article className="panel">
+            <h3>{t("Chapter memory check", "Controllo di memoria del capitolo")}</h3>
+            <p>{t("Try a few original questions and find specific topics to revisit.", "Prova alcune domande originali e trova gli argomenti da ripassare.")}</p>
+            <button className="button secondary" onClick={() => go(`diagnostics?chapter=${selected.id}`)}>{t("Check this A2 chapter", "Controlla questo capitolo A2")} →</button>
+          </article>}
           <article className="panel">
             <h3>{t("Core lesson", "Lezione base")}</h3>
             <p>{t("Two examples, bounded checks and a short piece of your own Italian.", "Due esempi, domande mirate e una breve produzione in italiano.")}</p>

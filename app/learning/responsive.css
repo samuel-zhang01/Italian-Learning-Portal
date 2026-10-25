@@ -1,0 +1,56 @@
+/* Keep the paper design usable when the browser or learner enlarges it.
+   Container queries follow the actual available space, including CSS zoom. */
+.daily-app { container-type: inline-size; overflow-wrap: anywhere; }
+.daily-app :is(main, .workspace, .study-wrap, section, article, fieldset,
+  .page-intro > *, .session-layout > *, .session-stages > *,
+  .session-stages strong, .session-stages small, .daily-header > *) { min-width: 0; }
+.daily-app :is(input:not([type="radio"]):not([type="checkbox"]), textarea, select, audio) { max-width: 100%; }
+.daily-app :is(button, .button, summary) { white-space: normal; overflow-wrap: anywhere; }
+.daily-app :is(h1, h2, h3, p, li, label) { overflow-wrap: anywhere; }
+.daily-header {
+  height: auto;
+  min-height: 99px;
+  flex-wrap: wrap;
+  padding: 18px max(24px, calc((100% - 1280px) / 2));
+}
+.daily-header nav { flex-wrap: wrap; justify-content: center; }
+.daily-header nav button { flex: 0 1 auto; }
+.daily-header .lang-switch { margin-left: auto; }
+.session-page > .text-button { margin-bottom: 16px; }
+.session-page > h1 { max-width: 24ch; }
+.session-page > p:not(.eyebrow) { max-width: 80ch; }
+.session-stages button { grid-template-columns: 30px minmax(0, 1fr); }
+.session-activity { scroll-margin-top: 24px; }
+.session-activity :is(textarea, input:not([type="checkbox"]):not([type="radio"])) { width: 100%; }
+@container (max-width: 1050px) {
+  .daily-header { gap: 14px; padding-inline: 22px; }
+  .daily-header .wordmark { order: 0; }
+  .daily-header .lang-switch { order: 1; }
+  .daily-header nav { order: 2; width: 100%; gap: 8px; }
+  .daily-header nav button { flex: 1 1 90px; min-width: 0; }
+}
+@container (max-width: 760px) {
+  .session-layout { grid-template-columns: minmax(0, 1fr); }
+  .session-stages { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .session-stages button { grid-template-columns: 22px minmax(0, 1fr); }
+  .session-activity { padding: 22px; }
+  .daily-header nav button { flex-basis: 44px; }
+}
+@container (max-width: 400px) {
+  .daily-header { padding-inline: 16px; }
+  .daily-header nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 6em), 1fr)); gap: 6px; }
+  .daily-header nav button { padding-inline: 4px; }
+  .workspace { padding-inline: 18px; }
+  .session-stages { grid-template-columns: minmax(0, 1fr); }
+  .session-stages button { padding: 12px; }
+}
+@container (max-width: 260px) {
+  .daily-header nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .daily-header .wordmark { font-size: 23px !important; }
+  .daily-header .wordmark small { letter-spacing: 0; }
+  .daily-header .lang-switch { margin-left: 0; }
+  .workspace, .session-activity { padding-inline: 12px; }
+}
+.daily-footer { flex-wrap: wrap; }
+.daily-footer > * { min-width: 0; max-width: 100%; }
+.daily-footer > span { flex-wrap: wrap; }

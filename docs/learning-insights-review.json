@@ -1,0 +1,91 @@
+{
+  "reviewedOn": "2026-10-25",
+  "status": "passed focused tests, integrated isolated browser workflows and final-copy follow-up",
+  "scope": "Original bounded A2 chapter checks, targeted catch-up and an evidence-based rolling weekly report with optional planned-day next steps.",
+  "diagnostics": {
+    "chapters": 10,
+    "questions": 29,
+    "questionsPerChapter": [2, 3, 3, 4, 2, 3, 4, 3, 2, 3],
+    "coverage": "One narrow question for each of 20 existing A2 topics and 9 new supplemental A2 topics. Questions use original parallel details, rather than reproducing book worksheets.",
+    "sourceContext": "All 29 question targets resolve to maintained A2 grammar units. Those units retain their verified source references; each check also links its existing chapter transfer mission.",
+    "persistence": "Optional validated Progress.diagnostics within the existing version 1 backup. No separate local key and no lesson-score or XP mutation.",
+    "firstAttemptPolicy": "One run per chapter/start date. First submissions are immutable. Pending drafts and hint use persist separately. Later-date runs retain earlier first answers, including an unfinished run continued on another day.",
+    "retention": "Maximum 400 saved runs. Starting another run is disabled at the limit with bilingual export guidance. Existing drafts and results remain available and are not automatically deleted.",
+    "catchUp": "Incorrect or hinted samples link the earliest unfinished prerequisite, the sampled grammar unit and the existing chapter transfer task. Missing records are not labelled weaknesses.",
+    "limitsShown": "Checks sample grammar forms; they do not certify CEFR level, assess listening/speaking or establish mastery of a whole chapter."
+  },
+  "weeklyReport": {
+    "window": "Seven calendar dates ending today, inclusive.",
+    "evidence": [
+      "Known lesson completions and one core recall record per lesson/date",
+      "Known grammar first answers per exercise/date, recorded help, same-day repairs and matched later-calendar-day first answers",
+      "Latest dated personal-word self-ratings and latest game records, explicitly labelled as incomplete event histories",
+      "Known self-assessed grammar production completions, actual programme.practice.completed checkpoints and exact known companion self-checks",
+      "Dated diagnostic first answers and recorded hint support"
+    ],
+    "identityBoundary": "Unknown missions, exercises, game items, words, programmes, checkpoint indexes and companion IDs do not contribute. Companion membership is generated from 53 known source extents and parity-tested against all 1609 actual companion IDs.",
+    "delayedEvidence": "A later-day grammar success requires an earlier dated attempt on the same exercise and a correct first answer without recorded support on a later calendar date. Same-day repair alone is never labelled delayed improvement. Core later-day recall requires a matching earlier lesson completion.",
+    "nextSteps": "Existing due practice and the latest unambiguous diagnostic need provide specific links. Up to 3 existing next-step tasks are suggested on planned study weekdays in the next 7 days, respecting plan.start. Suggestions do not mutate dates, schedules or programmes.",
+    "honesty": "No inferred time spent, total weekly events from latest-only records, proficiency level or overall improvement. Empty windows state that no dated evidence is available, without inferring weakness."
+  },
+  "verification": {
+    "focusedTests": {
+      "command": "node --test tests/learning-insights.test.mjs",
+      "passed": 14,
+      "failed": 0,
+      "coverage": [
+        "Original bank identity, bilingual fields, known target/transfer links and accent-sensitive grading",
+        "Idempotent starts, first-answer immutability, saved drafts, hints, ordered submission and later-date continuation",
+        "Malformed imports, stale IDs, invalid dates, text bounds, feedback identity and 400-run retention",
+        "Specific prerequisite catch-up and deep-frozen nonmutation",
+        "Same-day correction versus matched later-day recall",
+        "Legacy programme completed days versus actual known practice checkpoints",
+        "Stale/future identities, latest-only word/game limits and empty weeks",
+        "Version1 progress round-trip, original-backup compatibility and 1609 companion identity parity",
+        "Next-week planned dates, future start dates and no automatic schedule changes"
+      ]
+    },
+    "ownedFileEslint": "passed without warnings",
+    "typecheck": "passed",
+    "gitDiffCheck": "passed",
+    "browser": {
+      "target": "http://127.0.0.1:5200/",
+      "isolation": "Owned standalone headless Chromium and disposable synthetic contexts. No shared CDP, existing learner profile, real learner records, source archive or backup contents accessed.",
+      "workflowGroups": 18,
+      "finalCopyFollowUpGroups": 2,
+      "layouts": [
+        { "language": "en", "width": 390, "height": 844 },
+        { "language": "it", "width": 320, "height": 844 },
+        { "language": "en", "width": 1440, "height": 1000 }
+      ],
+      "observations": [
+        "All 10 chapter samples display. An unfinished check started two dates earlier resumes its prior draft, and a new unsubmitted response survives reload.",
+        "A wrong first answer and feedback survive reload. A second answer with a hint records support. The è accent control and pending accent survive reload; completing the check preserves ordinary academy data, lesson credit and schedules.",
+        "The sampled conditional error links the exact first missing prerequisite grammar/noun-gender. Browser Back restores the diagnostic result and its original wrong answer.",
+        "A known mixed weekly fixture shows 1/2 independent grammar first answers, 1 same-day repair and a matched later-day success, alongside 3 diagnostic first answers including 1 supported answer. Merely opening or reloading the report leaves storage unchanged.",
+        "An empty week explicitly reports absent evidence and no matching later-day success. Optional next-week links appear on planned dates without changing progress.",
+        "At 400 runs, no Start control is offered. Bilingual guidance opens normal backup tools and preserves all 400 records.",
+        "Final rebuilt copy correctly uses “1 supported answer” / “1 risposta aiutata” and neutral later-day count labels in EN at 390px and IT at 320px."
+      ],
+      "runtimeErrors": [],
+      "blockedNetworkRequests": [],
+      "horizontalOverflow": "none in the sampled routes",
+      "screenshots": 16,
+      "visualReview": "Viewed viewport-height screenshots of Italian completion/catch-up and weekly evidence, final Italian singular wording, and desktop weekly cards. Controls and metrics wrap within the sampled panels.",
+      "evidenceFiles": [
+        "work/learning-insights-audit/browser-report.json",
+        "work/learning-insights-audit/browser-report-copy.json"
+      ],
+      "reusableHarness": "scripts/audit_learning_insights_browser.mjs",
+      "rerunCommand": "PARLIAMO_URL=http://127.0.0.1:5200 node scripts/audit_learning_insights_browser.mjs",
+      "copyFollowUpCommand": "INSIGHTS_QA_PHASE=copy PARLIAMO_URL=http://127.0.0.1:5200 node scripts/audit_learning_insights_browser.mjs"
+    }
+  },
+  "limitations": [
+    "Synthetic UI and deterministic fixtures verify the stated paths; no real learner study or measured learning improvement was performed.",
+    "Repeated questions and short grammar samples cannot establish overall A2 competence. Listening, speaking and independent open-ended writing remain outside automatic assessment.",
+    "No complete word/game event history exists in the current progress schema; the report shows only latest dated records and explains possible overlap or trimmed history.",
+    "Only the 10 most recent chapter checks are listed in the UI; all saved runs remain in the normal progress backup.",
+    "Browser checks opened backup guidance but did not download or import a real backup. Backup validation and conflict-preserving merges have separate regression coverage owned by the integration agent."
+  ]
+}

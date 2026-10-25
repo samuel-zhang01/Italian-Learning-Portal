@@ -47,7 +47,7 @@ export function ReviewHub({ p, t, text, go, today }: Props) {
             }}>{value} min</button>)}
           </div>
         </fieldset>
-        <p className="review-queue-status" role="status">{queue.totalDue} {t("due items", "voci da ripassare")} · {queue.items.length} {t("in this plan", "in questo piano")}</p>
+        <p className="review-queue-status" role="status">{queue.totalDue} {(queue.totalDue === 1 ? t("due item", "voce da ripassare") : t("due items", "voci da ripassare"))} · {queue.items.length} {t("in this plan", "in questo piano")}</p>
       </div>
       {first ? <>
         <section className="review-next" aria-label={t("Start your next recall", "Inizia il prossimo ripasso")}>

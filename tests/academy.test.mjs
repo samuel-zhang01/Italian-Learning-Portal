@@ -68,8 +68,8 @@ const pair = (p) =>
   );
 const valid = (p) => parseProgress(JSON.stringify(p), ids);
 
-test("grammar provides 55 substantial bilingual A1/A2 units, six exercise formats and bounded source references", () => {
-  assert.equal(units.length, 55);
+test("grammar provides 65 substantial bilingual A1/A2 units, six exercise formats and bounded source references", () => {
+  assert.equal(units.length, 65);
   assert.equal(new Set(units.map((u) => u.id)).size, units.length);
   const allIds = new Set(),
     kinds = new Set();
@@ -642,7 +642,7 @@ test("new book sources expose bounded metadata and reference pointers while the 
 });
 
 test("A2 units link their verified chapters while foundation diagnostics retain their A1 scope", () => {
-  const added = units.filter((unit) => unit.level === "A2");
+  const added = units.slice(0, 55).filter((unit) => unit.level === "A2");
   assert.equal(added.length, 20);
   assert.equal(added.flatMap((unit) => unit.exercises).length, 160);
   for (const mapping of bookReview.unitSourceMapping.filter((mapping) => mapping.id.startsWith("a2-"))) {
@@ -667,12 +667,12 @@ test("A2 units link their verified chapters while foundation diagnostics retain 
 });
 
 test("seven native-book A1 gap units use exact references and remain separate from the original foundation diagnostic domains", () => {
-  const added = units.filter((unit) => unit.id.startsWith("a1-"));
+  const added = units.slice(0, 55).filter((unit) => unit.id.startsWith("a1-"));
   assert.equal(added.length, 7);
   assert.equal(added.flatMap((unit) => unit.exercises).length, 56);
-  assert.equal(units.filter((unit) => unit.level === "A1").length, 32);
+  assert.equal(units.filter((unit) => unit.level === "A1").length, 33);
   assert.equal(units.filter((unit) => unit.level === "A1-plus").length, 3);
-  assert.equal(units.flatMap((unit) => unit.exercises).length, 440);
+  assert.equal(units.flatMap((unit) => unit.exercises).length, 520);
   for (const unit of added) {
     assert.equal(unit.level, "A1");
     assert.ok(unit.missionIds.length);
@@ -684,7 +684,7 @@ test("seven native-book A1 gap units use exact references and remain separate fr
     }
   }
   assert.ok(units.slice(28, 35).every((unit) => unit.id.startsWith("a1-")));
-  assert.ok(units.slice(35).every((unit) => unit.level === "A2"));
+  assert.ok(units.slice(35, 55).every((unit) => unit.level === "A2"));
 });
 
 test("native reader sources distinguish captured sections, selectively reviewed pages and the unresolved publisher extent", () => {
@@ -712,7 +712,7 @@ test("native reader sources distinguish captured sections, selectively reviewed 
   assert.ok(!pages.some((page) => page.sourceId === "src-580f7558db56" && page.page === 264));
 });
 
-test("the 80 chapter checkpoints introduce prerequisites before use and cover all A1/A2 units with distinct practice", () => {
+test("the unchanged 80 chapter checkpoints introduce prerequisites before use and cover their original 55 units", () => {
   const route = programmes.find((programme) => programme.id === "espresso-plus-a1-a2");
   assert.equal(route.days.length, 80);
   const introduced = new Set();
@@ -727,9 +727,9 @@ test("the 80 chapter checkpoints introduce prerequisites before use and cover al
     assert.deepEqual(Object.keys(day.practice).sort(), ["model", "prompt", "rubric"]);
     [day.practice.prompt, day.practice.model, ...day.practice.rubric].forEach(pair);
     assert.equal(day.practice.rubric.length, 2);
-    if (index === 39) assert.ok(units.filter((unit) => unit.level !== "A2").every((unit) => introduced.has(unit.id)));
+    if (index === 39) assert.ok(units.slice(0, 55).filter((unit) => unit.level !== "A2").every((unit) => introduced.has(unit.id)));
   }
-  assert.deepEqual(introduced, new Set(units.map((unit) => unit.id)));
+  assert.deepEqual(introduced, new Set(units.slice(0, 55).map((unit) => unit.id)));
   for (const language of ["en", "it"]) {
     assert.equal(new Set(route.days.map((day) => day.practice.prompt[language])).size, 80);
     assert.equal(new Set(route.days.map((day) => day.practice.model[language])).size, 80);

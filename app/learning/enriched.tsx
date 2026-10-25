@@ -168,6 +168,7 @@ export function DailySession({
     ?? banks.find((b) => b.id === extra.bank)!;
   const session = savedSession ?? emptySession(m.id, plannedDuration, bank.id);
   const chapter = chapterContext(m.id);
+  const sessionLevel = chapter?.level ?? (m.id.startsWith("book2-") ? "A2" : "A1");
   const done = sessionDone(p, today);
   const duration = session.duration ?? 30;
   const stages = sessionActivities(duration);
@@ -179,6 +180,18 @@ export function DailySession({
   const [active, setActive] = useState<SessionActivity>(
     () => stages.find((a) => !done.includes(a)) ?? stages.at(-1)!,
   );
+  const activityHeading = useRef<HTMLHeadingElement>(null);
+  const requestedActivityFocus = useRef(false);
+  useEffect(() => {
+    if (!requestedActivityFocus.current) return;
+    requestedActivityFocus.current = false;
+    return focusStudyHeading(activityHeading.current);
+  }, [active]);
+  const chooseActivity = (activity: SessionActivity) => {
+    if (activity === active) { focusStudyHeading(activityHeading.current); return; }
+    requestedActivityFocus.current = true;
+    setActive(activity);
+  };
   const [feedback, setFeedback] = useState<"correct" | "wrong" | null>(null);
   const [gistFeedback, setGistFeedback] = useState<"correct" | "wrong" | null>(null);
   const [selfChecked, setSelfChecked] = useState(false);
@@ -198,7 +211,7 @@ export function DailySession({
   const finish = (activity: SessionActivity) => {
     update((s) => ({ ...s, done: Array.from(new Set([...s.done, activity])) }));
     const remaining = stages.find((a) => a !== activity && !done.includes(a));
-    if (remaining) setActive(remaining);
+    if (remaining) chooseActivity(remaining);
   };
   const attempted = bank.words.filter((_, i) =>
     session.recalled.includes(`${bank.id}:${i}`),
@@ -214,8 +227,8 @@ export function DailySession({
       </button>
       <p className="eyebrow">
         {t(
-          `${chapter?.level ?? "A1"} · ABOUT ${duration} MINUTES · YOUR PACE`,
-          `${chapter?.level ?? "A1"} · CIRCA ${duration} MINUTI · AL TUO RITMO`,
+          `${sessionLevel} · ABOUT ${duration} MINUTES · YOUR PACE`,
+          `${sessionLevel} · CIRCA ${duration} MINUTI · AL TUO RITMO`,
         )}
       </p>
       {chapter && (
@@ -256,7 +269,7 @@ export function DailySession({
               key={a}
               aria-pressed={active === a}
               onClick={() => {
-                setActive(a);
+                chooseActivity(a);
                 setFeedback(null);
               }}
             >
@@ -273,7 +286,7 @@ export function DailySession({
             {minutes[active]} MIN · {t("QUEST", "MISSIONE")}{" "}
             {stages.indexOf(active) + 1}
           </p>
-          <h2>{titles[active]}</h2>
+          <h2 ref={activityHeading} tabIndex={-1}>{titles[active]}</h2>
           {active === "warmup" && (
             <>
               <p>
@@ -398,7 +411,7 @@ export function DailySession({
               {done.includes("core") && (
                 <button
                   className="button secondary"
-                  onClick={() => setActive("vocab")}
+                  onClick={() => chooseActivity("vocab")}
                 >
                   {t("Continue to vocabulary", "Continua con il lessico")} →
                 </button>

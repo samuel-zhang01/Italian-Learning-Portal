@@ -16441,6 +16441,2850 @@
           ]
         }
       ]
+    },
+    {
+      "id": "a1-plural-spelling",
+      "title": {
+        "en": "Write the less predictable plurals",
+        "it": "Scrivi i plurali meno prevedibili"
+      },
+      "summary": {
+        "en": "Keep the noun’s sound and stressed vowel while choosing a learned plural spelling.",
+        "it": "Mantieni il suono del nome e la vocale accentata scegliendo una grafia plurale studiata."
+      },
+      "level": "A1",
+      "prerequisites": [
+        "noun-plurals",
+        "definite-articles"
+      ],
+      "missionIds": [
+        "espresso1-u03-book-a-table",
+        "book1-plural-inventory"
+      ],
+      "teaching": [
+        {
+          "en": "Learn a noun together with its plural and article. Feminine nouns such as amica and bottega keep the hard sound with -che and -ghe: amiche, botteghe. This is not a rule that every noun ending in -a is feminine.",
+          "it": "Impara un nome insieme al plurale e all’articolo. Nomi femminili come amica e bottega mantengono il suono duro con -che e -ghe: amiche, botteghe. Non significa che ogni nome in -a sia femminile."
+        },
+        {
+          "en": "With many -co/-go nouns, stress helps: albergo → alberghi, medico → medici. There are exceptions, including amico → amici. Treat these as useful patterns with learned examples, not a rule that predicts every noun.",
+          "it": "Con molti nomi in -co/-go, l’accento aiuta: albergo → alberghi, medico → medici. Ci sono eccezioni, fra cui amico → amici. Sono schemi utili con esempi da imparare, non una regola che prevede ogni nome."
+        },
+        {
+          "en": "In common unstressed -cia/-gia endings, keep i after another vowel: camicie, valigie. After a consonant, it usually drops: arance, spiagge. Look at the letter immediately before -cia or -gia.",
+          "it": "Nelle comuni desinenze -cia/-gia con i non accentata, conserva i dopo un’altra vocale: camicie, valigie. Dopo una consonante di solito cade: arance, spiagge. Guarda la lettera immediatamente prima di -cia o -gia."
+        },
+        {
+          "en": "A stressed i remains: farmacia → farmacie. An unstressed -io usually gives one final i, as in negozio → negozi; a stressed i remains separate in zio → zii. The written examples in this unit have no added stress marks.",
+          "it": "Una i accentata rimane: farmacia → farmacie. Con -io non accentato di solito resta una sola i finale, come in negozio → negozi; la i accentata rimane distinta in zio → zii. Gli esempi scritti di questa unità non aggiungono segni d’accento."
+        },
+        {
+          "en": "After spelling the plural, check its article and any adjective. Spelling work does not replace agreement: una valigia nuova becomes due valigie nuove.",
+          "it": "Dopo aver scritto il plurale, controlla articolo e aggettivi. La grafia non sostituisce la concordanza: una valigia nuova diventa due valigie nuove."
+        }
+      ],
+      "examples": [
+        {
+          "en": "Two friends are waiting outside the bakery.",
+          "it": "Due amiche aspettano fuori dalla panetteria."
+        },
+        {
+          "en": "The small hotels have bright rooms.",
+          "it": "Gli alberghi piccoli hanno camere luminose."
+        },
+        {
+          "en": "I am packing the shirts in two light suitcases.",
+          "it": "Metto le camicie in due valigie leggere."
+        }
+      ],
+      "words": [
+        {
+          "en": "the female friend",
+          "it": "l’amica"
+        },
+        {
+          "en": "the workshop / small shop",
+          "it": "la bottega"
+        },
+        {
+          "en": "the suitcase",
+          "it": "la valigia"
+        },
+        {
+          "en": "the beach",
+          "it": "la spiaggia"
+        },
+        {
+          "en": "the pharmacy",
+          "it": "la farmacia"
+        },
+        {
+          "en": "the uncle",
+          "it": "lo zio"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "a1-plural-spelling-01",
+          "kind": "choice",
+          "prompt": {
+            "en": "Choose the feminine plural: un’amica → due ___.",
+            "it": "Scegli il plurale femminile: un’amica → due ___."
+          },
+          "answers": [
+            "amiche"
+          ],
+          "hint": {
+            "en": "Keep the hard sound.",
+            "it": "Mantieni il suono duro."
+          },
+          "explanation": {
+            "en": "Amiche keeps the hard c with h.",
+            "it": "Amiche mantiene il suono duro della c con h."
+          },
+          "focus": "a1-plural-spelling",
+          "options": [
+            "amiche",
+            "amice",
+            "amichi"
+          ]
+        },
+        {
+          "id": "a1-plural-spelling-02",
+          "kind": "gap",
+          "prompt": {
+            "en": "Write only the plural noun: una bottega → due ___.",
+            "it": "Scrivi solo il nome plurale: una bottega → due ___."
+          },
+          "answers": [
+            "botteghe"
+          ],
+          "hint": {
+            "en": "The hard g needs h before e.",
+            "it": "La g dura richiede h prima di e."
+          },
+          "explanation": {
+            "en": "The feminine plural is botteghe.",
+            "it": "Il plurale femminile è botteghe."
+          },
+          "focus": "a1-plural-spelling"
+        },
+        {
+          "id": "a1-plural-spelling-03",
+          "kind": "choice",
+          "prompt": {
+            "en": "Choose the learned plural: un albergo → tre ___.",
+            "it": "Scegli il plurale studiato: un albergo → tre ___."
+          },
+          "answers": [
+            "alberghi"
+          ],
+          "hint": {
+            "en": "Keep the hard g.",
+            "it": "Mantieni la g dura."
+          },
+          "explanation": {
+            "en": "Albergo has the plural alberghi.",
+            "it": "Albergo ha il plurale alberghi."
+          },
+          "focus": "a1-plural-spelling",
+          "options": [
+            "alberghi",
+            "albergi",
+            "alberghe"
+          ]
+        },
+        {
+          "id": "a1-plural-spelling-04",
+          "kind": "gap",
+          "prompt": {
+            "en": "Write only the noun: due ___ veterinari. (medico)",
+            "it": "Scrivi solo il nome: due ___ veterinari. (medico)"
+          },
+          "answers": [
+            "medici"
+          ],
+          "hint": {
+            "en": "This learned plural uses -ci.",
+            "it": "Questo plurale studiato usa -ci."
+          },
+          "explanation": {
+            "en": "Medico becomes medici, without h.",
+            "it": "Medico diventa medici, senza h."
+          },
+          "focus": "a1-plural-spelling"
+        },
+        {
+          "id": "a1-plural-spelling-05",
+          "kind": "gap",
+          "prompt": {
+            "en": "Use the exception: I miei ___ arrivano alle quattro. (amico)",
+            "it": "Usa l’eccezione: I miei ___ arrivano alle quattro. (amico)"
+          },
+          "answers": [
+            "amici"
+          ],
+          "hint": {
+            "en": "Do not add h to this plural.",
+            "it": "Non aggiungere h a questo plurale."
+          },
+          "explanation": {
+            "en": "Amico has the exceptional plural amici.",
+            "it": "Amico ha il plurale eccezionale amici."
+          },
+          "focus": "a1-plural-spelling"
+        },
+        {
+          "id": "a1-plural-spelling-06",
+          "kind": "transform",
+          "prompt": {
+            "en": "Write these two plural nouns in this order, separated by e: valigia; spiaggia.",
+            "it": "Scrivi questi due nomi al plurale in quest’ordine, separati da e: valigia; spiaggia."
+          },
+          "answers": [
+            "valigie e spiagge"
+          ],
+          "hint": {
+            "en": "Before -gia, one noun has a vowel and the other has a consonant.",
+            "it": "Prima di -gia, un nome ha una vocale e l’altro una consonante."
+          },
+          "explanation": {
+            "en": "Valigie keeps i after i; spiagge drops the unstressed i after g.",
+            "it": "Valigie conserva i dopo i; spiagge perde la i non accentata dopo g."
+          },
+          "focus": "a1-plural-spelling"
+        },
+        {
+          "id": "a1-plural-spelling-07",
+          "kind": "gap",
+          "prompt": {
+            "en": "Write only the plural noun: due ___ aperte. (farmacia)",
+            "it": "Scrivi solo il nome plurale: due ___ aperte. (farmacia)"
+          },
+          "answers": [
+            "farmacie"
+          ],
+          "hint": {
+            "en": "The i is stressed in the singular.",
+            "it": "La i è accentata nel singolare."
+          },
+          "explanation": {
+            "en": "The stressed i remains in farmacie.",
+            "it": "La i accentata rimane in farmacie."
+          },
+          "focus": "a1-plural-spelling"
+        },
+        {
+          "id": "a1-plural-spelling-08",
+          "kind": "choice",
+          "prompt": {
+            "en": "Which line spells both plurals correctly?",
+            "it": "Quale riga scrive correttamente entrambi i plurali?"
+          },
+          "answers": [
+            "gli zii; i negozi"
+          ],
+          "hint": {
+            "en": "Compare stressed and unstressed i.",
+            "it": "Confronta i accentata e non accentata."
+          },
+          "explanation": {
+            "en": "Zii keeps the stressed i; negozi has one final i.",
+            "it": "Zii conserva la i accentata; negozi ha una sola i finale."
+          },
+          "focus": "a1-plural-spelling",
+          "options": [
+            "gli zii; i negozi",
+            "gli zi; i negozii",
+            "gli zii; i negozii"
+          ]
+        }
+      ],
+      "production": {
+        "prompt": {
+          "en": "Invent a packing or travel note with three plural nouns from at least two spelling families. Add an article or agreeing adjective to each.",
+          "it": "Inventa un appunto per una valigia o un viaggio con tre nomi plurali di almeno due gruppi grafici. Aggiungi a ciascuno un articolo o un aggettivo concordato."
+        },
+        "frame": {
+          "en": "I have two ___. The ___ are ___. Nearby there are some ___.",
+          "it": "Ho due ___. Le / Gli ___ sono ___. Vicino ci sono delle / degli ___."
+        },
+        "model": {
+          "en": "I have two green suitcases. The white shirts are in the suitcases. Nearby there are some small workshops.",
+          "it": "Ho due valigie verdi. Le camicie bianche sono nelle valigie. Vicino ci sono delle botteghe piccole."
+        },
+        "rubric": [
+          {
+            "en": "I checked the plural spelling using at least two patterns.",
+            "it": "Ho controllato la grafia del plurale usando almeno due schemi."
+          },
+          {
+            "en": "I checked articles and adjective agreement separately.",
+            "it": "Ho controllato separatamente articoli e concordanza degli aggettivi."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            226
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2-irregular-body-nouns",
+      "title": {
+        "en": "Name the body parts in the plural",
+        "it": "Nomina le parti del corpo al plurale"
+      },
+      "summary": {
+        "en": "Use six common body-noun plurals with the feminine article required by these models.",
+        "it": "Usa sei plurali comuni delle parti del corpo con l’articolo femminile richiesto da questi modelli."
+      },
+      "level": "A2",
+      "prerequisites": [
+        "noun-plurals",
+        "adjective-agreement"
+      ],
+      "missionIds": [
+        "espresso2-u07-navigate-an-appointment",
+        "book2-puppet-description"
+      ],
+      "teaching": [
+        {
+          "en": "Some body nouns change both ending and gender in these common plural models: il braccio → le braccia, il dito → le dita, il ginocchio → le ginocchia. Learn the article with the whole plural.",
+          "it": "Alcuni nomi del corpo cambiano desinenza e genere in questi modelli plurali comuni: il braccio → le braccia, il dito → le dita, il ginocchio → le ginocchia. Impara l’articolo insieme all’intero plurale."
+        },
+        {
+          "en": "For body descriptions in this unit, use il labbro → le labbra and l’orecchio → le orecchie. Some nouns also have other plural forms or meanings; the tasks specify the feminine models rather than treating every alternative as wrong.",
+          "it": "Per le descrizioni del corpo di questa unità usa il labbro → le labbra e l’orecchio → le orecchie. Alcuni nomi hanno anche altri plurali o significati; i compiti indicano i modelli femminili senza considerare sbagliata ogni alternativa."
+        },
+        {
+          "en": "La mano is already feminine in the singular despite ending in -o. Its plural is le mani. Do not infer gender only from the final vowel.",
+          "it": "La mano è già femminile al singolare nonostante finisca in -o. Il plurale è le mani. Non dedurre il genere solo dalla vocale finale."
+        },
+        {
+          "en": "An adjective follows the plural model’s gender and number: braccia lunghe, dita piccole, mani aperte. The examples describe a drawing or puppet.",
+          "it": "L’aggettivo segue genere e numero del modello plurale: braccia lunghe, dita piccole, mani aperte. Gli esempi descrivono un disegno o un pupazzo."
+        }
+      ],
+      "examples": [
+        {
+          "en": "The paper puppet has long arms.",
+          "it": "Il pupazzo di carta ha le braccia lunghe."
+        },
+        {
+          "en": "I colour the ears yellow and the hands blue.",
+          "it": "Coloro le orecchie di giallo e le mani di blu."
+        },
+        {
+          "en": "The figure’s lips are red.",
+          "it": "Le labbra della figura sono rosse."
+        }
+      ],
+      "words": [
+        {
+          "en": "the arm",
+          "it": "il braccio"
+        },
+        {
+          "en": "the finger",
+          "it": "il dito"
+        },
+        {
+          "en": "the knee",
+          "it": "il ginocchio"
+        },
+        {
+          "en": "the lip",
+          "it": "il labbro"
+        },
+        {
+          "en": "the ear",
+          "it": "l’orecchio"
+        },
+        {
+          "en": "the hand",
+          "it": "la mano"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "a2-irregular-body-nouns-01",
+          "kind": "gap",
+          "prompt": {
+            "en": "Use the feminine model after le: il braccio → le ___.",
+            "it": "Usa il modello femminile dopo le: il braccio → le ___."
+          },
+          "answers": [
+            "braccia"
+          ],
+          "hint": {
+            "en": "The ending changes to -a.",
+            "it": "La desinenza diventa -a."
+          },
+          "explanation": {
+            "en": "The requested body plural is le braccia.",
+            "it": "Il plurale del corpo richiesto è le braccia."
+          },
+          "focus": "a2-irregular-body-nouns"
+        },
+        {
+          "id": "a2-irregular-body-nouns-02",
+          "kind": "gap",
+          "prompt": {
+            "en": "Use the feminine model after le: il dito → le ___.",
+            "it": "Usa il modello femminile dopo le: il dito → le ___."
+          },
+          "answers": [
+            "dita"
+          ],
+          "hint": {
+            "en": "Do not use the regular -i model here.",
+            "it": "Qui non usare il modello regolare in -i."
+          },
+          "explanation": {
+            "en": "The requested model is le dita.",
+            "it": "Il modello richiesto è le dita."
+          },
+          "focus": "a2-irregular-body-nouns"
+        },
+        {
+          "id": "a2-irregular-body-nouns-03",
+          "kind": "gap",
+          "prompt": {
+            "en": "Use the feminine model after le: il ginocchio → le ___.",
+            "it": "Usa il modello femminile dopo le: il ginocchio → le ___."
+          },
+          "answers": [
+            "ginocchia"
+          ],
+          "hint": {
+            "en": "The article le selects the feminine plural model.",
+            "it": "L’articolo le seleziona il modello plurale femminile."
+          },
+          "explanation": {
+            "en": "Le ginocchia is the model requested here.",
+            "it": "Le ginocchia è il modello richiesto qui."
+          },
+          "focus": "a2-irregular-body-nouns"
+        },
+        {
+          "id": "a2-irregular-body-nouns-04",
+          "kind": "gap",
+          "prompt": {
+            "en": "For a face, use the feminine plural after le: il labbro → le ___.",
+            "it": "Per un viso, usa il plurale femminile dopo le: il labbro → le ___."
+          },
+          "answers": [
+            "labbra"
+          ],
+          "hint": {
+            "en": "The word means the lips of the face.",
+            "it": "La parola indica le labbra del viso."
+          },
+          "explanation": {
+            "en": "The requested plural is labbra.",
+            "it": "Il plurale richiesto è labbra."
+          },
+          "focus": "a2-irregular-body-nouns"
+        },
+        {
+          "id": "a2-irregular-body-nouns-05",
+          "kind": "choice",
+          "prompt": {
+            "en": "Choose the feminine plural model for the puppet’s ears.",
+            "it": "Scegli il modello plurale femminile per le orecchie del pupazzo."
+          },
+          "answers": [
+            "le orecchie"
+          ],
+          "hint": {
+            "en": "The article and noun must agree.",
+            "it": "Articolo e nome devono concordare."
+          },
+          "explanation": {
+            "en": "Le orecchie is the specified feminine model.",
+            "it": "Le orecchie è il modello femminile specificato."
+          },
+          "focus": "a2-irregular-body-nouns",
+          "options": [
+            "le orecchie",
+            "le orecchi",
+            "la orecchie"
+          ]
+        },
+        {
+          "id": "a2-irregular-body-nouns-06",
+          "kind": "choice",
+          "prompt": {
+            "en": "Choose the plural of la mano.",
+            "it": "Scegli il plurale di la mano."
+          },
+          "answers": [
+            "le mani"
+          ],
+          "hint": {
+            "en": "The noun remains feminine.",
+            "it": "Il nome rimane femminile."
+          },
+          "explanation": {
+            "en": "La mano becomes le mani.",
+            "it": "La mano diventa le mani."
+          },
+          "focus": "a2-irregular-body-nouns",
+          "options": [
+            "le mani",
+            "i mani",
+            "le mane"
+          ]
+        },
+        {
+          "id": "a2-irregular-body-nouns-07",
+          "kind": "gap",
+          "prompt": {
+            "en": "Agree the adjective: Le braccia sono ___. (lungo)",
+            "it": "Concorda l’aggettivo: Le braccia sono ___. (lungo)"
+          },
+          "answers": [
+            "lunghe"
+          ],
+          "hint": {
+            "en": "Feminine plural; keep the hard g.",
+            "it": "Femminile plurale; mantieni la g dura."
+          },
+          "explanation": {
+            "en": "Lunghe agrees with braccia.",
+            "it": "Lunghe concorda con braccia."
+          },
+          "focus": "a2-irregular-body-nouns"
+        },
+        {
+          "id": "a2-irregular-body-nouns-08",
+          "kind": "correct",
+          "prompt": {
+            "en": "Repair only the article and adjective agreement, then write the whole sentence: I mani sono aperti.",
+            "it": "Correggi solo la concordanza di articolo e aggettivo, poi scrivi tutta la frase: I mani sono aperti."
+          },
+          "answers": [
+            "Le mani sono aperte."
+          ],
+          "hint": {
+            "en": "Mani is feminine plural.",
+            "it": "Mani è femminile plurale."
+          },
+          "explanation": {
+            "en": "Use le and aperte with mani.",
+            "it": "Usa le e aperte con mani."
+          },
+          "focus": "a2-irregular-body-nouns"
+        }
+      ],
+      "production": {
+        "prompt": {
+          "en": "Describe an invented puppet with three different body-noun plurals. Give each an adjective or colour.",
+          "it": "Descrivi un pupazzo inventato usando tre diversi nomi plurali del corpo. Aggiungi a ciascuno un aggettivo o un colore."
+        },
+        "frame": {
+          "en": "The puppet has ___ arms, ___ ears and ___ hands.",
+          "it": "Il pupazzo ha le braccia ___, le orecchie ___ e le mani ___."
+        },
+        "model": {
+          "en": "The puppet has short arms, large ears and open hands.",
+          "it": "Il pupazzo ha le braccia corte, le orecchie grandi e le mani aperte."
+        },
+        "rubric": [
+          {
+            "en": "I used the requested feminine plural models and their articles.",
+            "it": "Ho usato i modelli plurali femminili richiesti e i relativi articoli."
+          },
+          {
+            "en": "My adjectives agree with the plural nouns.",
+            "it": "Gli aggettivi concordano con i nomi plurali."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2-nonlocative-ci",
+      "title": {
+        "en": "Think about a topic with ci",
+        "it": "Pensa a un argomento con ci"
+      },
+      "summary": {
+        "en": "Use ci to resume a topic introduced by pensare a, without confusing it with a destination.",
+        "it": "Usa ci per riprendere un argomento introdotto da pensare a, senza confonderlo con una destinazione."
+      },
+      "level": "A2",
+      "prerequisites": [
+        "a1-locative-ci",
+        "present-are"
+      ],
+      "missionIds": [
+        "espresso2-u02-remember-a-place",
+        "book2-think-about-a-plan"
+      ],
+      "teaching": [
+        {
+          "en": "Ci can replace the topic after pensare a: penso al progetto → ci penso. Here it means about it, not there. Keep the topic clear in the preceding sentence.",
+          "it": "Ci può sostituire l’argomento dopo pensare a: penso al progetto → ci penso. Qui significa a quella cosa, non in quel luogo. Mantieni chiaro l’argomento nella frase precedente."
+        },
+        {
+          "en": "Ci does not change when the topic is plural: penso alle proposte → ci penso. The verb changes with the thinker: ci penso, ci pensi, ci pensa, ci pensiamo.",
+          "it": "Ci non cambia se l’argomento è plurale: penso alle proposte → ci penso. Il verbo cambia con chi pensa: ci penso, ci pensi, ci pensa, ci pensiamo."
+        },
+        {
+          "en": "Before a finite verb, place non before ci: non ci penso. In a question, ci still precedes the verb: ci pensate? Do not replace a stated topic with an unexplained pronoun.",
+          "it": "Prima di un verbo coniugato, metti non prima di ci: non ci penso. In una domanda ci precede ancora il verbo: ci pensate? Non sostituire un argomento espresso con un pronome senza riferimento chiaro."
+        },
+        {
+          "en": "With a modal and infinitive, both positions are available: ci devo pensare / devo pensarci. Attached ci removes the final e of pensare. This unit practises pensare a, not every possible meaning of ci.",
+          "it": "Con un modale e un infinito sono possibili entrambe le posizioni: ci devo pensare / devo pensarci. Ci unito all’infinito elimina la e finale di pensare. L’unità esercita pensare a, non ogni possibile significato di ci."
+        }
+      ],
+      "examples": [
+        {
+          "en": "The new timetable? I will think about it this evening.",
+          "it": "Il nuovo orario? Ci penso stasera."
+        },
+        {
+          "en": "We think about those two ideas together.",
+          "it": "Pensiamo a quelle due idee insieme."
+        },
+        {
+          "en": "I need to think about the invitation. I need to think about it calmly.",
+          "it": "Devo pensare all’invito. Devo pensarci con calma."
+        }
+      ],
+      "words": [
+        {
+          "en": "the topic",
+          "it": "l’argomento"
+        },
+        {
+          "en": "the proposal",
+          "it": "la proposta"
+        },
+        {
+          "en": "the invitation",
+          "it": "l’invito"
+        },
+        {
+          "en": "the timetable",
+          "it": "l’orario"
+        },
+        {
+          "en": "to think about",
+          "it": "pensare a"
+        },
+        {
+          "en": "calmly",
+          "it": "con calma"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "a2-nonlocative-ci-01",
+          "kind": "gap",
+          "prompt": {
+            "en": "Replace al progetto: Penso al progetto. → ___ penso.",
+            "it": "Sostituisci al progetto: Penso al progetto. → ___ penso."
+          },
+          "answers": [
+            "ci"
+          ],
+          "hint": {
+            "en": "Resume the topic introduced by a.",
+            "it": "Riprendi l’argomento introdotto da a."
+          },
+          "explanation": {
+            "en": "Ci replaces al progetto.",
+            "it": "Ci sostituisce al progetto."
+          },
+          "focus": "a2-nonlocative-ci"
+        },
+        {
+          "id": "a2-nonlocative-ci-02",
+          "kind": "choice",
+          "prompt": {
+            "en": "Which sentence means “I am thinking about those proposals”?",
+            "it": "Quale frase significa «Penso a quelle proposte»?"
+          },
+          "answers": [
+            "Ci penso."
+          ],
+          "hint": {
+            "en": "A plural topic does not change ci.",
+            "it": "Un argomento plurale non cambia ci."
+          },
+          "explanation": {
+            "en": "Ci can resume alle proposte.",
+            "it": "Ci può riprendere alle proposte."
+          },
+          "focus": "a2-nonlocative-ci",
+          "options": [
+            "Ci penso.",
+            "Le penso.",
+            "Li penso."
+          ]
+        },
+        {
+          "id": "a2-nonlocative-ci-03",
+          "kind": "transform",
+          "prompt": {
+            "en": "Replace all’invito and keep noi: Pensiamo all’invito.",
+            "it": "Sostituisci all’invito e mantieni noi: Pensiamo all’invito."
+          },
+          "answers": [
+            "Ci pensiamo."
+          ],
+          "hint": {
+            "en": "Keep the noi ending.",
+            "it": "Mantieni la desinenza di noi."
+          },
+          "explanation": {
+            "en": "Ci precedes pensiamo.",
+            "it": "Ci precede pensiamo."
+          },
+          "focus": "a2-nonlocative-ci"
+        },
+        {
+          "id": "a2-nonlocative-ci-04",
+          "kind": "correct",
+          "prompt": {
+            "en": "Repair the pronoun order: Ci non penso oggi.",
+            "it": "Correggi l’ordine del pronome: Ci non penso oggi."
+          },
+          "answers": [
+            "Non ci penso oggi."
+          ],
+          "hint": {
+            "en": "Non comes before the pronoun.",
+            "it": "Non precede il pronome."
+          },
+          "explanation": {
+            "en": "The order is non + ci + penso.",
+            "it": "L’ordine è non + ci + penso."
+          },
+          "focus": "a2-nonlocative-ci"
+        },
+        {
+          "id": "a2-nonlocative-ci-05",
+          "kind": "gap",
+          "prompt": {
+            "en": "Ask Luca about the plan: Luca, ci ___? (pensare, tu)",
+            "it": "Chiedi a Luca del progetto: Luca, ci ___? (pensare, tu)"
+          },
+          "answers": [
+            "pensi"
+          ],
+          "hint": {
+            "en": "Use the present tu form.",
+            "it": "Usa la forma tu del presente."
+          },
+          "explanation": {
+            "en": "Pensi agrees with tu.",
+            "it": "Pensi concorda con tu."
+          },
+          "focus": "a2-nonlocative-ci"
+        },
+        {
+          "id": "a2-nonlocative-ci-06",
+          "kind": "transform",
+          "prompt": {
+            "en": "Attach ci to the infinitive: Devo pensare alla proposta.",
+            "it": "Unisci ci all’infinito: Devo pensare alla proposta."
+          },
+          "answers": [
+            "Devo pensarci."
+          ],
+          "hint": {
+            "en": "Drop the final e before attaching ci.",
+            "it": "Togli la e finale prima di unire ci."
+          },
+          "explanation": {
+            "en": "Pensare + ci becomes pensarci.",
+            "it": "Pensare + ci diventa pensarci."
+          },
+          "focus": "a2-nonlocative-ci"
+        },
+        {
+          "id": "a2-nonlocative-ci-07",
+          "kind": "transform",
+          "prompt": {
+            "en": "Put ci before the modal: Devo pensarci.",
+            "it": "Metti ci prima del modale: Devo pensarci."
+          },
+          "answers": [
+            "Ci devo pensare."
+          ],
+          "hint": {
+            "en": "Restore the full infinitive after devo.",
+            "it": "Ripristina l’infinito completo dopo devo."
+          },
+          "explanation": {
+            "en": "Both placements refer to the same topic.",
+            "it": "Entrambe le posizioni riprendono lo stesso argomento."
+          },
+          "focus": "a2-nonlocative-ci"
+        },
+        {
+          "id": "a2-nonlocative-ci-08",
+          "kind": "choice",
+          "prompt": {
+            "en": "In “Il nuovo orario? Ci penso domani”, what does ci replace? Choose the Italian phrase.",
+            "it": "In «Il nuovo orario? Ci penso domani», che cosa sostituisce ci? Scegli l’espressione italiana."
+          },
+          "answers": [
+            "al nuovo orario"
+          ],
+          "hint": {
+            "en": "Recover the topic required by pensare a.",
+            "it": "Recupera l’argomento richiesto da pensare a."
+          },
+          "explanation": {
+            "en": "Ci means al nuovo orario in this context.",
+            "it": "Ci significa al nuovo orario in questo contesto."
+          },
+          "focus": "a2-nonlocative-ci",
+          "options": [
+            "al nuovo orario",
+            "nel nuovo orario",
+            "il nuovo orario"
+          ]
+        }
+      ],
+      "production": {
+        "prompt": {
+          "en": "Invent a decision with a clear topic. Write one full pensare a sentence, then use ci in a question and answer.",
+          "it": "Inventa una decisione con un argomento chiaro. Scrivi una frase completa con pensare a, poi usa ci in una domanda e in una risposta."
+        },
+        "frame": {
+          "en": "We are thinking about ___. Are you thinking about it? Yes, I need to think about it ___.",
+          "it": "Pensiamo a ___. Ci pensi? Sì, devo pensarci ___."
+        },
+        "model": {
+          "en": "We are thinking about the school trip. Are you thinking about it? Yes, I need to think about it this evening.",
+          "it": "Pensiamo alla gita scolastica. Ci pensi? Sì, devo pensarci stasera."
+        },
+        "rubric": [
+          {
+            "en": "The topic replaced by ci is explicit.",
+            "it": "L’argomento sostituito da ci è esplicito."
+          },
+          {
+            "en": "I placed ci before the finite verb or attached it correctly to the infinitive.",
+            "it": "Ho messo ci prima del verbo coniugato oppure l’ho unito correttamente all’infinito."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            33,
+            250
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2-noun-alterations",
+      "title": {
+        "en": "Change the size with a noun ending",
+        "it": "Cambia la dimensione con una desinenza"
+      },
+      "summary": {
+        "en": "Recognise and use a few transparent -ino/-ina and -one/-ona nouns in literal size contexts.",
+        "it": "Riconosci e usa alcuni nomi trasparenti in -ino/-ina e -one/-ona in contesti di dimensione letterale."
+      },
+      "level": "A2",
+      "prerequisites": [
+        "noun-gender",
+        "adjective-agreement"
+      ],
+      "missionIds": [
+        "espresso2-u02-remember-a-place",
+        "book2-model-size"
+      ],
+      "teaching": [
+        {
+          "en": "Some endings can present something as small: gatto → gattino, gatta → gattina. Learn a complete form that people use, rather than adding an ending to any word mechanically.",
+          "it": "Alcune desinenze possono presentare qualcosa come piccolo: gatto → gattino, gatta → gattina. Impara una forma completa effettivamente usata, invece di aggiungere meccanicamente una desinenza a ogni parola."
+        },
+        {
+          "en": "In the literal size contexts here, -one/-ona presents something as large: un librone, una gattona. Keep the article and any adjective aligned with the resulting noun.",
+          "it": "Nei contesti di dimensione letterale qui usati, -one/-ona presenta qualcosa come grande: un librone, una gattona. Mantieni articolo e aggettivi concordati con il nome risultante."
+        },
+        {
+          "en": "For this unit’s familiar forms, compare gattino/gattone and gattina/gattona. Paesino and tavolino are other useful words to learn as whole nouns. The meaning can depend on context and tone.",
+          "it": "Per le forme comuni di questa unità confronta gattino/gattone e gattina/gattona. Paesino e tavolino sono altre parole utili da imparare come nomi interi. Il significato può dipendere dal contesto e dal tono."
+        },
+        {
+          "en": "An apparent suffix does not prove a word is an alteration: tacchino names a turkey, not a small heel. Other meanings, affectionate uses and less transparent formations need separate vocabulary learning.",
+          "it": "Una desinenza apparente non dimostra che una parola sia un alterato: tacchino indica un animale, non un piccolo tacco. Altri significati, usi affettivi e formazioni meno trasparenti richiedono uno studio lessicale distinto."
+        }
+      ],
+      "examples": [
+        {
+          "en": "In the miniature room there is a low small table.",
+          "it": "Nella stanza in miniatura c’è un tavolino basso."
+        },
+        {
+          "en": "The large book does not fit in the bag.",
+          "it": "Il librone non entra nella borsa."
+        },
+        {
+          "en": "I draw a small female cat beside a large female cat.",
+          "it": "Disegno una gattina accanto a una gattona."
+        }
+      ],
+      "words": [
+        {
+          "en": "the small male cat",
+          "it": "il gattino"
+        },
+        {
+          "en": "the small female cat",
+          "it": "la gattina"
+        },
+        {
+          "en": "the large male cat",
+          "it": "il gattone"
+        },
+        {
+          "en": "the large female cat",
+          "it": "la gattona"
+        },
+        {
+          "en": "the small table",
+          "it": "il tavolino"
+        },
+        {
+          "en": "the large book",
+          "it": "il librone"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "a2-noun-alterations-01",
+          "kind": "gap",
+          "prompt": {
+            "en": "Use the learned -ino form: un gatto piccolo → un ___.",
+            "it": "Usa la forma in -ino studiata: un gatto piccolo → un ___."
+          },
+          "answers": [
+            "gattino"
+          ],
+          "hint": {
+            "en": "Keep the double t in gatto.",
+            "it": "Mantieni la doppia t di gatto."
+          },
+          "explanation": {
+            "en": "Gattino is the learned small-cat form.",
+            "it": "Gattino è la forma studiata per il gatto piccolo."
+          },
+          "focus": "a2-noun-alterations"
+        },
+        {
+          "id": "a2-noun-alterations-02",
+          "kind": "gap",
+          "prompt": {
+            "en": "Use the learned -ina form: una gatta piccola → una ___.",
+            "it": "Usa la forma in -ina studiata: una gatta piccola → una ___."
+          },
+          "answers": [
+            "gattina"
+          ],
+          "hint": {
+            "en": "The form remains feminine.",
+            "it": "La forma rimane femminile."
+          },
+          "explanation": {
+            "en": "Use gattina after una.",
+            "it": "Usa gattina dopo una."
+          },
+          "focus": "a2-noun-alterations"
+        },
+        {
+          "id": "a2-noun-alterations-03",
+          "kind": "choice",
+          "prompt": {
+            "en": "In a literal size description, which word presents a large book?",
+            "it": "In una descrizione di dimensione letterale, quale parola presenta un libro grande?"
+          },
+          "answers": [
+            "librone"
+          ],
+          "hint": {
+            "en": "Look for the large-size ending.",
+            "it": "Cerca la desinenza di grande dimensione."
+          },
+          "explanation": {
+            "en": "Librone is the large-book form taught here.",
+            "it": "Librone è la forma per il libro grande studiata qui."
+          },
+          "focus": "a2-noun-alterations",
+          "options": [
+            "librone",
+            "librino",
+            "libretto"
+          ]
+        },
+        {
+          "id": "a2-noun-alterations-04",
+          "kind": "gap",
+          "prompt": {
+            "en": "Use the learned -ona form: una gatta grande → una ___.",
+            "it": "Usa la forma in -ona studiata: una gatta grande → una ___."
+          },
+          "answers": [
+            "gattona"
+          ],
+          "hint": {
+            "en": "Keep feminine agreement.",
+            "it": "Mantieni la concordanza femminile."
+          },
+          "explanation": {
+            "en": "Gattona is the requested large-cat form.",
+            "it": "Gattona è la forma richiesta per la gatta grande."
+          },
+          "focus": "a2-noun-alterations"
+        },
+        {
+          "id": "a2-noun-alterations-05",
+          "kind": "choice",
+          "prompt": {
+            "en": "Which pair contrasts a small male cat and a large male cat?",
+            "it": "Quale coppia contrappone un gatto piccolo e un gatto grande?"
+          },
+          "answers": [
+            "gattino / gattone"
+          ],
+          "hint": {
+            "en": "Keep the noun base and change the size ending.",
+            "it": "Mantieni la base nominale e cambia la desinenza di dimensione."
+          },
+          "explanation": {
+            "en": "The pair uses the two learned masculine forms.",
+            "it": "La coppia usa le due forme maschili studiate."
+          },
+          "focus": "a2-noun-alterations",
+          "options": [
+            "gattino / gattone",
+            "gattina / gattino",
+            "gatto / gatto"
+          ]
+        },
+        {
+          "id": "a2-noun-alterations-06",
+          "kind": "gap",
+          "prompt": {
+            "en": "Complete the learned small-table word: Sul balcone c’è un ___. (tavolo, -ino)",
+            "it": "Completa la parola studiata per un tavolo piccolo: Sul balcone c’è un ___. (tavolo, -ino)"
+          },
+          "answers": [
+            "tavolino"
+          ],
+          "hint": {
+            "en": "Use the complete learned form.",
+            "it": "Usa la forma completa studiata."
+          },
+          "explanation": {
+            "en": "Tavolino is a common small-table noun.",
+            "it": "Tavolino è un nome comune per un tavolo piccolo."
+          },
+          "focus": "a2-noun-alterations"
+        },
+        {
+          "id": "a2-noun-alterations-07",
+          "kind": "correct",
+          "prompt": {
+            "en": "Repair the article agreement: Un gattina dorme.",
+            "it": "Correggi la concordanza dell’articolo: Un gattina dorme."
+          },
+          "answers": [
+            "Una gattina dorme."
+          ],
+          "hint": {
+            "en": "Gattina is feminine.",
+            "it": "Gattina è femminile."
+          },
+          "explanation": {
+            "en": "Una agrees with gattina.",
+            "it": "Una concorda con gattina."
+          },
+          "focus": "a2-noun-alterations"
+        },
+        {
+          "id": "a2-noun-alterations-08",
+          "kind": "choice",
+          "prompt": {
+            "en": "Which statement about tacchino is correct?",
+            "it": "Quale affermazione su tacchino è corretta?"
+          },
+          "answers": [
+            "È il nome di un animale."
+          ],
+          "hint": {
+            "en": "A similar ending need not be a size suffix.",
+            "it": "Una desinenza simile non è necessariamente un suffisso di dimensione."
+          },
+          "explanation": {
+            "en": "Tacchino is not a small tacco.",
+            "it": "Tacchino non è un piccolo tacco."
+          },
+          "focus": "a2-noun-alterations",
+          "options": [
+            "È il nome di un animale.",
+            "È sempre un piccolo tacco.",
+            "È sempre un grande tacco."
+          ]
+        }
+      ],
+      "production": {
+        "prompt": {
+          "en": "Describe a miniature display using two small nouns and one large noun from the lesson. State one size contrast clearly.",
+          "it": "Descrivi una vetrina in miniatura usando due nomi piccoli e un nome grande della lezione. Esprimi chiaramente un contrasto di dimensione."
+        },
+        "frame": {
+          "en": "There is a ___ beside a ___. The ___ is large.",
+          "it": "C’è un / una ___ accanto a un / una ___. Il / La ___ è grande."
+        },
+        "model": {
+          "en": "There is a small female cat beside a small table. The large book is too big for the table.",
+          "it": "C’è una gattina accanto a un tavolino. Il librone è troppo grande per il tavolino."
+        },
+        "rubric": [
+          {
+            "en": "I used learned noun forms in clear literal size contexts.",
+            "it": "Ho usato forme nominali studiate in chiari contesti di dimensione letterale."
+          },
+          {
+            "en": "Articles and adjectives agree with the resulting nouns.",
+            "it": "Articoli e aggettivi concordano con i nomi risultanti."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            33,
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2-auxiliary-alternation",
+      "title": {
+        "en": "Say who began or finished what",
+        "it": "Di’ chi ha cominciato o finito che cosa"
+      },
+      "summary": {
+        "en": "Choose avere or essere in the practised cominciare/finire constructions and check agreement.",
+        "it": "Scegli avere o essere nelle strutture studiate con cominciare/finire e controlla la concordanza."
+      },
+      "level": "A2",
+      "prerequisites": [
+        "past-avere",
+        "past-essere"
+      ],
+      "missionIds": [
+        "espresso2-u03-ask-for-a-favour",
+        "book2-event-timeline"
+      ],
+      "teaching": [
+        {
+          "en": "When a person begins or finishes something, these constructions use avere: ho cominciato il disegno; abbiamo finito la prova. The object is the thing acted on.",
+          "it": "Quando una persona comincia o finisce qualcosa, queste strutture usano avere: ho cominciato il disegno; abbiamo finito la prova. L’oggetto è la cosa su cui si agisce."
+        },
+        {
+          "en": "When an event itself begins or ends, these models use essere: la prova è cominciata; gli incontri sono finiti. The participle agrees with that event’s gender and number.",
+          "it": "Quando un evento stesso comincia o termina, questi modelli usano essere: la prova è cominciata; gli incontri sono finiti. Il participio concorda con il genere e il numero dell’evento."
+        },
+        {
+          "en": "Learn the infinitive constructions too: ho cominciato a disegnare; ho finito di preparare. The prepositions differ: cominciare a, finire di. These models keep avere.",
+          "it": "Impara anche le strutture con l’infinito: ho cominciato a disegnare; ho finito di preparare. Le preposizioni cambiano: cominciare a, finire di. Questi modelli mantengono avere."
+        },
+        {
+          "en": "Do not decide only by whether an object is written. Ho già finito can omit a known task. Ask whether someone finished a task or an event itself ended. Other alternating verbs need their own context.",
+          "it": "Non decidere solo in base alla presenza scritta dell’oggetto. Ho già finito può omettere un compito già noto. Chiediti se qualcuno ha finito un compito oppure se un evento stesso è terminato. Altri verbi con ausiliare variabile richiedono il proprio contesto."
+        }
+      ],
+      "examples": [
+        {
+          "en": "I started the poster after lunch.",
+          "it": "Ho cominciato il cartellone dopo pranzo."
+        },
+        {
+          "en": "The rehearsals ended before sunset.",
+          "it": "Le prove sono finite prima del tramonto."
+        },
+        {
+          "en": "We finished preparing the room at six.",
+          "it": "Abbiamo finito di preparare la sala alle sei."
+        }
+      ],
+      "words": [
+        {
+          "en": "the poster",
+          "it": "il cartellone"
+        },
+        {
+          "en": "the rehearsal",
+          "it": "la prova"
+        },
+        {
+          "en": "the meeting",
+          "it": "l’incontro"
+        },
+        {
+          "en": "the workshop",
+          "it": "il laboratorio"
+        },
+        {
+          "en": "to begin",
+          "it": "cominciare"
+        },
+        {
+          "en": "to finish",
+          "it": "finire"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "a2-auxiliary-alternation-01",
+          "kind": "choice",
+          "prompt": {
+            "en": "You completed a poster: Io ___ finito il cartellone.",
+            "it": "Hai completato un cartellone: Io ___ finito il cartellone."
+          },
+          "answers": [
+            "ho"
+          ],
+          "hint": {
+            "en": "The speaker finished an object.",
+            "it": "Chi parla ha finito un oggetto."
+          },
+          "explanation": {
+            "en": "This transitive construction uses avere.",
+            "it": "Questa struttura transitiva usa avere."
+          },
+          "focus": "a2-auxiliary-alternation",
+          "options": [
+            "ho",
+            "sono",
+            "è"
+          ]
+        },
+        {
+          "id": "a2-auxiliary-alternation-02",
+          "kind": "gap",
+          "prompt": {
+            "en": "The rehearsal itself ended: La prova ___ finita alle sei.",
+            "it": "La prova stessa è terminata: La prova ___ finita alle sei."
+          },
+          "answers": [
+            "è"
+          ],
+          "hint": {
+            "en": "The event is the subject.",
+            "it": "L’evento è il soggetto."
+          },
+          "explanation": {
+            "en": "Use essere when the rehearsal itself ends.",
+            "it": "Usa essere quando la prova stessa finisce."
+          },
+          "focus": "a2-auxiliary-alternation"
+        },
+        {
+          "id": "a2-auxiliary-alternation-03",
+          "kind": "gap",
+          "prompt": {
+            "en": "People began a task: Noi ___ cominciato il cartellone ieri.",
+            "it": "Delle persone hanno iniziato un compito: Noi ___ cominciato il cartellone ieri."
+          },
+          "answers": [
+            "abbiamo"
+          ],
+          "hint": {
+            "en": "Use the noi form of avere.",
+            "it": "Usa la forma noi di avere."
+          },
+          "explanation": {
+            "en": "The object il cartellone belongs to the avere construction.",
+            "it": "L’oggetto il cartellone appartiene alla struttura con avere."
+          },
+          "focus": "a2-auxiliary-alternation"
+        },
+        {
+          "id": "a2-auxiliary-alternation-04",
+          "kind": "gap",
+          "prompt": {
+            "en": "The lessons themselves started: Le lezioni sono ___. (cominciare)",
+            "it": "Le lezioni stesse sono iniziate: Le lezioni sono ___. (cominciare)"
+          },
+          "answers": [
+            "cominciate"
+          ],
+          "hint": {
+            "en": "Agree with feminine plural lezioni.",
+            "it": "Concorda con il femminile plurale lezioni."
+          },
+          "explanation": {
+            "en": "With sono, cominciate agrees with lezioni.",
+            "it": "Con sono, cominciate concorda con lezioni."
+          },
+          "focus": "a2-auxiliary-alternation"
+        },
+        {
+          "id": "a2-auxiliary-alternation-05",
+          "kind": "gap",
+          "prompt": {
+            "en": "Complete the infinitive link: Ho cominciato ___ disegnare.",
+            "it": "Completa il collegamento all’infinito: Ho cominciato ___ disegnare."
+          },
+          "answers": [
+            "a"
+          ],
+          "hint": {
+            "en": "Learn cominciare a + infinitive.",
+            "it": "Impara cominciare a + infinito."
+          },
+          "explanation": {
+            "en": "The preposition is a.",
+            "it": "La preposizione è a."
+          },
+          "focus": "a2-auxiliary-alternation"
+        },
+        {
+          "id": "a2-auxiliary-alternation-06",
+          "kind": "gap",
+          "prompt": {
+            "en": "Complete the infinitive link: Abbiamo finito ___ preparare la sala.",
+            "it": "Completa il collegamento all’infinito: Abbiamo finito ___ preparare la sala."
+          },
+          "answers": [
+            "di"
+          ],
+          "hint": {
+            "en": "Learn finire di + infinitive.",
+            "it": "Impara finire di + infinito."
+          },
+          "explanation": {
+            "en": "The preposition is di.",
+            "it": "La preposizione è di."
+          },
+          "focus": "a2-auxiliary-alternation"
+        },
+        {
+          "id": "a2-auxiliary-alternation-07",
+          "kind": "correct",
+          "prompt": {
+            "en": "Repair the auxiliary and agreement: Gli incontri ha finito alle otto.",
+            "it": "Correggi ausiliare e concordanza: Gli incontri ha finito alle otto."
+          },
+          "answers": [
+            "Gli incontri sono finiti alle otto."
+          ],
+          "hint": {
+            "en": "The meetings themselves ended.",
+            "it": "Gli incontri stessi sono terminati."
+          },
+          "explanation": {
+            "en": "Use sono and masculine plural finiti.",
+            "it": "Usa sono e il maschile plurale finiti."
+          },
+          "focus": "a2-auxiliary-alternation"
+        },
+        {
+          "id": "a2-auxiliary-alternation-08",
+          "kind": "choice",
+          "prompt": {
+            "en": "A known task is omitted. Which reply means “I have already finished [the task]”?",
+            "it": "Un compito noto è sottinteso. Quale risposta significa «Ho già finito [il compito]»?"
+          },
+          "answers": [
+            "Ho già finito."
+          ],
+          "hint": {
+            "en": "An omitted object does not force essere.",
+            "it": "Un oggetto sottinteso non impone essere."
+          },
+          "explanation": {
+            "en": "The task can remain implicit with ho finito.",
+            "it": "Il compito può rimanere implicito con ho finito."
+          },
+          "focus": "a2-auxiliary-alternation",
+          "options": [
+            "Ho già finito.",
+            "Sono già finito.",
+            "È già finito."
+          ]
+        }
+      ],
+      "production": {
+        "prompt": {
+          "en": "Write a short workshop report: one person began or finished a task, one event began or ended, and one action uses cominciare a or finire di.",
+          "it": "Scrivi un breve resoconto di un laboratorio: una persona ha cominciato o finito un compito, un evento è iniziato o finito e un’azione usa cominciare a o finire di."
+        },
+        "frame": {
+          "en": "I have finished ___. The ___ ended ___. Then I started to ___.",
+          "it": "Ho finito ___. La / Le ___ è finita / sono finite ___. Poi ho cominciato a ___."
+        },
+        "model": {
+          "en": "I finished the poster. The rehearsals ended at seven. Then I started to put things away.",
+          "it": "Ho finito il cartellone. Le prove sono finite alle sette. Poi ho cominciato a riordinare."
+        },
+        "rubric": [
+          {
+            "en": "I distinguished the person’s task from the event that begins or ends.",
+            "it": "Ho distinto il compito della persona dall’evento che inizia o finisce."
+          },
+          {
+            "en": "I checked essere agreement and a/di before an infinitive.",
+            "it": "Ho controllato la concordanza con essere e a/di prima di un infinito."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            55,
+            252
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2-ne-perfect-agreement",
+      "title": {
+        "en": "Recall a quantity with ne in the past",
+        "it": "Riprendi una quantità con ne al passato"
+      },
+      "summary": {
+        "en": "Keep a stated quantity while agreeing the participle with the noun resumed by partitive ne.",
+        "it": "Mantieni una quantità espressa e concorda il participio con il nome ripreso dal ne partitivo."
+      },
+      "level": "A2",
+      "prerequisites": [
+        "a1-partitive-ne",
+        "past-irregular"
+      ],
+      "missionIds": [
+        "espresso2-u04-coordinate-an-outing",
+        "book2-past-quantities"
+      ],
+      "teaching": [
+        {
+          "en": "Partitive ne resumes the named kind of thing and leaves the quantity expressed: tre cartoline → ne ho comprate tre. Give the listener a clear noun to recover.",
+          "it": "Il ne partitivo riprende il tipo di cosa nominato e lascia espressa la quantità: tre cartoline → ne ho comprate tre. Fornisci un nome chiaro da recuperare."
+        },
+        {
+          "en": "In these passato prossimo quantity models, the participle agrees with the thing counted: cartoline → comprate; quaderni → comprati. Ne itself stays unchanged.",
+          "it": "In questi modelli quantitativi al passato prossimo, il participio concorda con la cosa contata: cartoline → comprate; quaderni → comprati. Ne rimane invariato."
+        },
+        {
+          "en": "A quantity of one also matters: una cartolina → ne ho comprata una; un quaderno → ne ho comprato uno. Match gender and number to the quantity being expressed.",
+          "it": "Anche una quantità di uno conta: una cartolina → ne ho comprata una; un quaderno → ne ho comprato uno. Abbina genere e numero alla quantità espressa."
+        },
+        {
+          "en": "Keep the order ne + avere + participle + quantity: ne ho stampate quattro. Ne does not replace the number. This unit covers explicit countable quantities, not every use of ne.",
+          "it": "Mantieni l’ordine ne + avere + participio + quantità: ne ho stampate quattro. Ne non sostituisce il numero. Questa unità riguarda quantità numerabili esplicite, non ogni uso di ne."
+        }
+      ],
+      "examples": [
+        {
+          "en": "The postcards? I bought four of them.",
+          "it": "Le cartoline? Ne ho comprate quattro."
+        },
+        {
+          "en": "The notebooks? We used two of them.",
+          "it": "I quaderni? Ne abbiamo usati due."
+        },
+        {
+          "en": "I needed three invitations, but I have printed only one.",
+          "it": "Mi servivano tre inviti, ma ne ho stampato solo uno."
+        }
+      ],
+      "words": [
+        {
+          "en": "the postcard",
+          "it": "la cartolina"
+        },
+        {
+          "en": "the notebook",
+          "it": "il quaderno"
+        },
+        {
+          "en": "the invitation",
+          "it": "l’invito"
+        },
+        {
+          "en": "the photograph",
+          "it": "la fotografia"
+        },
+        {
+          "en": "the envelope",
+          "it": "la busta"
+        },
+        {
+          "en": "the drawing",
+          "it": "il disegno"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "a2-ne-perfect-agreement-01",
+          "kind": "gap",
+          "prompt": {
+            "en": "Cartoline is feminine plural: Ne ho ___ quattro. (comprare)",
+            "it": "Cartoline è femminile plurale: Ne ho ___ quattro. (comprare)"
+          },
+          "answers": [
+            "comprate"
+          ],
+          "hint": {
+            "en": "Use the feminine plural participle.",
+            "it": "Usa il participio femminile plurale."
+          },
+          "explanation": {
+            "en": "Comprate agrees with cartoline.",
+            "it": "Comprate concorda con cartoline."
+          },
+          "focus": "a2-ne-perfect-agreement"
+        },
+        {
+          "id": "a2-ne-perfect-agreement-02",
+          "kind": "gap",
+          "prompt": {
+            "en": "Quaderni is masculine plural: Ne abbiamo ___ due. (usare)",
+            "it": "Quaderni è maschile plurale: Ne abbiamo ___ due. (usare)"
+          },
+          "answers": [
+            "usati"
+          ],
+          "hint": {
+            "en": "Use the masculine plural ending.",
+            "it": "Usa la desinenza maschile plurale."
+          },
+          "explanation": {
+            "en": "Usati agrees with quaderni.",
+            "it": "Usati concorda con quaderni."
+          },
+          "focus": "a2-ne-perfect-agreement"
+        },
+        {
+          "id": "a2-ne-perfect-agreement-03",
+          "kind": "choice",
+          "prompt": {
+            "en": "Which answer refers to one photograph?",
+            "it": "Quale risposta si riferisce a una fotografia?"
+          },
+          "answers": [
+            "Ne ho stampata una."
+          ],
+          "hint": {
+            "en": "One feminine item requires -a.",
+            "it": "Un elemento femminile richiede -a."
+          },
+          "explanation": {
+            "en": "Stampata and una agree with fotografia.",
+            "it": "Stampata e una concordano con fotografia."
+          },
+          "focus": "a2-ne-perfect-agreement",
+          "options": [
+            "Ne ho stampata una.",
+            "Ne ho stampato una.",
+            "Ne ho stampate una."
+          ]
+        },
+        {
+          "id": "a2-ne-perfect-agreement-04",
+          "kind": "gap",
+          "prompt": {
+            "en": "One invitation: Ne ho stampato ___.",
+            "it": "Un invito: Ne ho stampato ___."
+          },
+          "answers": [
+            "uno"
+          ],
+          "hint": {
+            "en": "Invito is masculine.",
+            "it": "Invito è maschile."
+          },
+          "explanation": {
+            "en": "Uno keeps the explicit singular quantity.",
+            "it": "Uno mantiene la quantità singolare esplicita."
+          },
+          "focus": "a2-ne-perfect-agreement"
+        },
+        {
+          "id": "a2-ne-perfect-agreement-05",
+          "kind": "transform",
+          "prompt": {
+            "en": "Replace le buste with ne and keep the quantity: Ho comprato sei buste.",
+            "it": "Sostituisci le buste con ne e mantieni la quantità: Ho comprato sei buste."
+          },
+          "answers": [
+            "Ne ho comprate sei."
+          ],
+          "hint": {
+            "en": "Keep sei and agree the participle.",
+            "it": "Mantieni sei e concorda il participio."
+          },
+          "explanation": {
+            "en": "Ne resumes buste; comprate is feminine plural.",
+            "it": "Ne riprende buste; comprate è femminile plurale."
+          },
+          "focus": "a2-ne-perfect-agreement"
+        },
+        {
+          "id": "a2-ne-perfect-agreement-06",
+          "kind": "correct",
+          "prompt": {
+            "en": "The noun is fotografie. Repair the agreement: Ne ho stampati tre.",
+            "it": "Il nome è fotografie. Correggi la concordanza: Ne ho stampati tre."
+          },
+          "answers": [
+            "Ne ho stampate tre."
+          ],
+          "hint": {
+            "en": "The number tre stays unchanged.",
+            "it": "Il numero tre rimane invariato."
+          },
+          "explanation": {
+            "en": "Stampate agrees with fotografie.",
+            "it": "Stampate concorda con fotografie."
+          },
+          "focus": "a2-ne-perfect-agreement"
+        },
+        {
+          "id": "a2-ne-perfect-agreement-07",
+          "kind": "reorder",
+          "prompt": {
+            "en": "Build the sentence about only four printed photographs. Put solo immediately before quattro.",
+            "it": "Costruisci la frase su solo quattro fotografie stampate. Metti solo immediatamente prima di quattro."
+          },
+          "answers": [
+            "Ne ho stampate solo quattro."
+          ],
+          "hint": {
+            "en": "Keep ne before ho and use the feminine plural participle.",
+            "it": "Mantieni ne prima di ho e usa il participio femminile plurale."
+          },
+          "explanation": {
+            "en": "The order keeps the pronoun, agreement and limited quantity clear.",
+            "it": "L’ordine mantiene chiari pronome, concordanza e quantità limitata."
+          },
+          "focus": "a2-ne-perfect-agreement",
+          "tokens": [
+            "Ne",
+            "ho",
+            "stampate",
+            "solo",
+            "quattro"
+          ]
+        },
+        {
+          "id": "a2-ne-perfect-agreement-08",
+          "kind": "choice",
+          "prompt": {
+            "en": "The drawings are masculine plural. Choose the complete reply to “Quanti disegni avete finito?”",
+            "it": "I disegni sono maschili plurali. Scegli la risposta completa a «Quanti disegni avete finito?»"
+          },
+          "answers": [
+            "Ne abbiamo finiti cinque."
+          ],
+          "hint": {
+            "en": "Keep the quantity and the masculine plural participle.",
+            "it": "Mantieni la quantità e il participio maschile plurale."
+          },
+          "explanation": {
+            "en": "Finiti agrees with disegni.",
+            "it": "Finiti concorda con disegni."
+          },
+          "focus": "a2-ne-perfect-agreement",
+          "options": [
+            "Ne abbiamo finiti cinque.",
+            "Ne abbiamo finite cinque.",
+            "Ne abbiamo finito."
+          ]
+        }
+      ],
+      "production": {
+        "prompt": {
+          "en": "Invent a preparation list. Report two plural quantities and one singular quantity in the past with ne, naming each kind of item first.",
+          "it": "Inventa un elenco di preparativi. Riferisci al passato due quantità plurali e una singolare con ne, nominando prima ogni tipo di oggetto."
+        },
+        "frame": {
+          "en": "The ___? I bought ___ of them. The ___? I used ___ of them.",
+          "it": "Le / I ___? Ne ho comprate / comprati ___. Le / I ___? Ne ho usate / usati ___."
+        },
+        "model": {
+          "en": "The envelopes? I bought six. The notebooks? I used two. The photographs? I printed one.",
+          "it": "Le buste? Ne ho comprate sei. I quaderni? Ne ho usati due. Le fotografie? Ne ho stampata una."
+        },
+        "rubric": [
+          {
+            "en": "Each ne has a clear noun and an explicit quantity.",
+            "it": "Ogni ne ha un nome chiaro e una quantità esplicita."
+          },
+          {
+            "en": "Each participle agrees with the counted noun and quantity.",
+            "it": "Ogni participio concorda con il nome contato e con la quantità."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            69,
+            252
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2-plural-imperative",
+      "title": {
+        "en": "Give clear instructions to a group",
+        "it": "Dai istruzioni chiare a un gruppo"
+      },
+      "summary": {
+        "en": "Use voi commands, three irregular forms and affirmative or negative pronoun placement.",
+        "it": "Usa comandi con voi, tre forme irregolari e la posizione dei pronomi nelle forme affermative o negative."
+      },
+      "level": "A2",
+      "prerequisites": [
+        "a2-informal-imperative"
+      ],
+      "missionIds": [
+        "espresso2-u07-navigate-an-appointment",
+        "book2-group-instructions"
+      ],
+      "teaching": [
+        {
+          "en": "Voi addresses more than one person. Regular commands usually match the present voi form: ascoltate, prendete, aprite, finite. A negative command keeps that form after non.",
+          "it": "Voi si rivolge a più persone. I comandi regolari di solito coincidono con il presente di voi: ascoltate, prendete, aprite, finite. Un comando negativo mantiene quella forma dopo non."
+        },
+        {
+          "en": "Learn three exceptions: essere → siate, avere → abbiate, sapere → sappiate. Compare siete with siate and avete with abbiate so a statement does not replace the intended instruction.",
+          "it": "Impara tre eccezioni: essere → siate, avere → abbiate, sapere → sappiate. Confronta siete con siate e avete con abbiate per non sostituire l’istruzione con un’affermazione."
+        },
+        {
+          "en": "In an affirmative voi command, attach the pronoun: prendete il foglio → prendetelo; sedetevi. Unlike the short tu commands, these full voi forms do not add a doubled consonant.",
+          "it": "In un comando affermativo con voi, unisci il pronome: prendete il foglio → prendetelo; sedetevi. A differenza dei comandi brevi con tu, queste forme complete di voi non aggiungono una consonante doppia."
+        },
+        {
+          "en": "With a negative voi command, both patterns are possible: non lo prendete / non prendetelo; non vi sedete / non sedetevi. The tasks state a position when they require only one form.",
+          "it": "Con un comando negativo con voi sono possibili entrambi gli schemi: non lo prendete / non prendetelo; non vi sedete / non sedetevi. I compiti indicano una posizione quando richiedono una sola forma."
+        }
+      ],
+      "examples": [
+        {
+          "en": "Be ready at the entrance at five.",
+          "it": "Siate pronti all’ingresso alle cinque."
+        },
+        {
+          "en": "Take the maps and open them at the blue page.",
+          "it": "Prendete le mappe e apritele alla pagina blu."
+        },
+        {
+          "en": "Do not sit here: keep the passage clear.",
+          "it": "Non vi sedete qui: lasciate libero il passaggio."
+        }
+      ],
+      "words": [
+        {
+          "en": "the group",
+          "it": "il gruppo"
+        },
+        {
+          "en": "the entrance",
+          "it": "l’ingresso"
+        },
+        {
+          "en": "the map",
+          "it": "la mappa"
+        },
+        {
+          "en": "the passage",
+          "it": "il passaggio"
+        },
+        {
+          "en": "ready",
+          "it": "pronto"
+        },
+        {
+          "en": "to sit down",
+          "it": "sedersi"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "a2-plural-imperative-01",
+          "kind": "gap",
+          "prompt": {
+            "en": "Address several visitors: ___ la porta blu. (aprire, voi)",
+            "it": "Rivolgiti a più visitatori: ___ la porta blu. (aprire, voi)"
+          },
+          "answers": [
+            "aprite"
+          ],
+          "hint": {
+            "en": "Use the full plural form.",
+            "it": "Usa la forma plurale completa."
+          },
+          "explanation": {
+            "en": "Aprite is the voi command.",
+            "it": "Aprite è il comando con voi."
+          },
+          "focus": "a2-plural-imperative"
+        },
+        {
+          "id": "a2-plural-imperative-02",
+          "kind": "choice",
+          "prompt": {
+            "en": "Choose the voi instruction, not a statement: ___ puntuali!",
+            "it": "Scegli l’istruzione con voi, non un’affermazione: ___ puntuali!"
+          },
+          "answers": [
+            "Siate"
+          ],
+          "hint": {
+            "en": "Essere has an irregular imperative.",
+            "it": "Essere ha un imperativo irregolare."
+          },
+          "explanation": {
+            "en": "Siate is the command; siete is the present statement.",
+            "it": "Siate è il comando; siete è il presente dell’affermazione."
+          },
+          "focus": "a2-plural-imperative",
+          "options": [
+            "Siate",
+            "Siete",
+            "Sii"
+          ]
+        },
+        {
+          "id": "a2-plural-imperative-03",
+          "kind": "gap",
+          "prompt": {
+            "en": "Plural instruction: ___ fiducia nel gruppo! (avere)",
+            "it": "Istruzione al plurale: ___ fiducia nel gruppo! (avere)"
+          },
+          "answers": [
+            "abbiate"
+          ],
+          "hint": {
+            "en": "The command differs from avete.",
+            "it": "Il comando è diverso da avete."
+          },
+          "explanation": {
+            "en": "Abbiate is the irregular voi command.",
+            "it": "Abbiate è il comando irregolare con voi."
+          },
+          "focus": "a2-plural-imperative"
+        },
+        {
+          "id": "a2-plural-imperative-04",
+          "kind": "gap",
+          "prompt": {
+            "en": "Plural instruction: ___ che l’ingresso è gratuito. (sapere)",
+            "it": "Istruzione al plurale: ___ che l’ingresso è gratuito. (sapere)"
+          },
+          "answers": [
+            "sappiate"
+          ],
+          "hint": {
+            "en": "Use the learned irregular imperative.",
+            "it": "Usa l’imperativo irregolare studiato."
+          },
+          "explanation": {
+            "en": "Sappiate is the requested plural command.",
+            "it": "Sappiate è il comando plurale richiesto."
+          },
+          "focus": "a2-plural-imperative"
+        },
+        {
+          "id": "a2-plural-imperative-05",
+          "kind": "transform",
+          "prompt": {
+            "en": "Attach lo: Prendete il foglio.",
+            "it": "Unisci lo: Prendete il foglio."
+          },
+          "answers": [
+            "Prendetelo."
+          ],
+          "hint": {
+            "en": "Keep prendete and attach lo.",
+            "it": "Mantieni prendete e unisci lo."
+          },
+          "explanation": {
+            "en": "Prendetelo has no added consonant doubling.",
+            "it": "Prendetelo non aggiunge una consonante doppia."
+          },
+          "focus": "a2-plural-imperative"
+        },
+        {
+          "id": "a2-plural-imperative-06",
+          "kind": "transform",
+          "prompt": {
+            "en": "Turn Sedetevi qui into a negative voi instruction. Either pronoun position is accepted.",
+            "it": "Trasforma Sedetevi qui in un’istruzione negativa con voi. Sono accettate entrambe le posizioni del pronome."
+          },
+          "answers": [
+            "Non sedetevi qui.",
+            "Non vi sedete qui."
+          ],
+          "hint": {
+            "en": "Keep the voi verb form after non.",
+            "it": "Mantieni la forma voi dopo non."
+          },
+          "explanation": {
+            "en": "Both negative pronoun positions are valid.",
+            "it": "Entrambe le posizioni negative del pronome sono valide."
+          },
+          "focus": "a2-plural-imperative"
+        },
+        {
+          "id": "a2-plural-imperative-07",
+          "kind": "transform",
+          "prompt": {
+            "en": "Use a negative voi command with lo attached: Prendetelo.",
+            "it": "Usa un comando negativo con voi e lo unito al verbo: Prendetelo."
+          },
+          "answers": [
+            "Non prendetelo."
+          ],
+          "hint": {
+            "en": "This task specifically requests the attached form.",
+            "it": "Questo compito richiede specificamente la forma unita."
+          },
+          "explanation": {
+            "en": "Non prendetelo is the requested attached-pronoun version.",
+            "it": "Non prendetelo è la versione richiesta con il pronome unito."
+          },
+          "focus": "a2-plural-imperative"
+        },
+        {
+          "id": "a2-plural-imperative-08",
+          "kind": "correct",
+          "prompt": {
+            "en": "Repair the tu/voi mixture while keeping the plural addressees: Voi, sii pronti!",
+            "it": "Correggi la mescolanza tu/voi mantenendo i destinatari plurali: Voi, sii pronti!"
+          },
+          "answers": [
+            "Voi, siate pronti!"
+          ],
+          "hint": {
+            "en": "Use the plural irregular command.",
+            "it": "Usa il comando irregolare plurale."
+          },
+          "explanation": {
+            "en": "Siate matches voi and pronti.",
+            "it": "Siate concorda con voi e pronti."
+          },
+          "focus": "a2-plural-imperative"
+        }
+      ],
+      "production": {
+        "prompt": {
+          "en": "Give an invented visitor group three instructions. Include one irregular command, one attached pronoun and one negative instruction.",
+          "it": "Dai tre istruzioni a un gruppo inventato di visitatori. Includi un comando irregolare, un pronome unito al verbo e un’istruzione negativa."
+        },
+        "frame": {
+          "en": "Be ___. Take ___ and open it/them. Do not ___.",
+          "it": "Siate ___. Prendete ___ e apritelo / apritele. Non ___."
+        },
+        "model": {
+          "en": "Be punctual. Take the maps and open them. Do not sit on the stairs.",
+          "it": "Siate puntuali. Prendete le mappe e apritele. Non vi sedete sulle scale."
+        },
+        "rubric": [
+          {
+            "en": "All instructions address several people consistently.",
+            "it": "Tutte le istruzioni si rivolgono coerentemente a più persone."
+          },
+          {
+            "en": "I checked irregular forms and affirmative/negative pronoun placement.",
+            "it": "Ho controllato forme irregolari e posizione dei pronomi nelle forme affermative o negative."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            117,
+            254,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2-short-command-pronouns",
+      "title": {
+        "en": "Attach pronouns to short commands",
+        "it": "Unisci i pronomi ai comandi brevi"
+      },
+      "summary": {
+        "en": "Use the five short tu command families and recognise the non-doubling exception gli.",
+        "it": "Usa i cinque gruppi di comandi brevi con tu e riconosci l’eccezione senza raddoppiamento con gli."
+      },
+      "level": "A2",
+      "prerequisites": [
+        "a2-informal-imperative"
+      ],
+      "missionIds": [
+        "espresso2-u06-suggest-a-break",
+        "book2-quick-help"
+      ],
+      "teaching": [
+        {
+          "en": "The short tu commands va’, da’, di’, fa’ and sta’ join to an unstressed pronoun or ci/ne. In the practised forms, the first consonant of that pronoun doubles: vacci, dammi, dimmi, fammi, stammi.",
+          "it": "I comandi brevi con tu va’, da’, di’, fa’ e sta’ si uniscono a un pronome atono o a ci/ne. Nelle forme studiate raddoppia la prima consonante del pronome: vacci, dammi, dimmi, fammi, stammi."
+        },
+        {
+          "en": "The apostrophe belongs to the separate short command. It disappears in the joined word: da’ + mi → dammi, not da’mi. Write the joined form as one word.",
+          "it": "L’apostrofo appartiene al comando breve separato. Scompare nella parola unita: da’ + mi → dammi, non da’mi. Scrivi la forma unita come una sola parola."
+        },
+        {
+          "en": "Gli is the exception: di’ + gli → digli; da’ + gli → dagli; fa’ + gli → fagli. Do not write a doubled g in these models.",
+          "it": "Gli è l’eccezione: di’ + gli → digli; da’ + gli → dagli; fa’ + gli → fagli. Non scrivere una g doppia in questi modelli."
+        },
+        {
+          "en": "Keep the addressee tu distinct from the pronoun’s role: dammi means give to me; digli means tell to him. This small unit practises single pronouns; longer pronoun combinations need separate teaching.",
+          "it": "Distingui il destinatario tu dal ruolo del pronome: dammi significa dai a me; digli significa di’ a lui. Questa piccola unità esercita i pronomi singoli; le combinazioni più lunghe richiedono un insegnamento distinto."
+        }
+      ],
+      "examples": [
+        {
+          "en": "Give me the green ribbon, please.",
+          "it": "Dammi il nastro verde, per favore."
+        },
+        {
+          "en": "Tell him the room is upstairs.",
+          "it": "Digli che la sala è al piano di sopra."
+        },
+        {
+          "en": "That shop is nearby: go there on Saturday.",
+          "it": "Quel negozio è vicino: vacci sabato."
+        }
+      ],
+      "words": [
+        {
+          "en": "the ribbon",
+          "it": "il nastro"
+        },
+        {
+          "en": "the address",
+          "it": "l’indirizzo"
+        },
+        {
+          "en": "the route",
+          "it": "il percorso"
+        },
+        {
+          "en": "to give",
+          "it": "dare"
+        },
+        {
+          "en": "to tell",
+          "it": "dire"
+        },
+        {
+          "en": "to stay",
+          "it": "stare"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "a2-short-command-pronouns-01",
+          "kind": "gap",
+          "prompt": {
+            "en": "Join va’ + ci: Quel negozio è aperto: ___ oggi.",
+            "it": "Unisci va’ + ci: Quel negozio è aperto: ___ oggi."
+          },
+          "answers": [
+            "vacci"
+          ],
+          "hint": {
+            "en": "Double the c.",
+            "it": "Raddoppia la c."
+          },
+          "explanation": {
+            "en": "Va’ + ci becomes vacci.",
+            "it": "Va’ + ci diventa vacci."
+          },
+          "focus": "a2-short-command-pronouns"
+        },
+        {
+          "id": "a2-short-command-pronouns-02",
+          "kind": "gap",
+          "prompt": {
+            "en": "Join da’ + mi: ___ il nastro, per favore.",
+            "it": "Unisci da’ + mi: ___ il nastro, per favore."
+          },
+          "answers": [
+            "dammi"
+          ],
+          "hint": {
+            "en": "Double m and remove the apostrophe.",
+            "it": "Raddoppia m e togli l’apostrofo."
+          },
+          "explanation": {
+            "en": "Dammi is one word.",
+            "it": "Dammi è una sola parola."
+          },
+          "focus": "a2-short-command-pronouns"
+        },
+        {
+          "id": "a2-short-command-pronouns-03",
+          "kind": "gap",
+          "prompt": {
+            "en": "Join di’ + mi: ___ l’indirizzo.",
+            "it": "Unisci di’ + mi: ___ l’indirizzo."
+          },
+          "answers": [
+            "dimmi"
+          ],
+          "hint": {
+            "en": "The m doubles after the short command.",
+            "it": "La m raddoppia dopo il comando breve."
+          },
+          "explanation": {
+            "en": "Di’ + mi becomes dimmi.",
+            "it": "Di’ + mi diventa dimmi."
+          },
+          "focus": "a2-short-command-pronouns"
+        },
+        {
+          "id": "a2-short-command-pronouns-04",
+          "kind": "gap",
+          "prompt": {
+            "en": "Join fa’ + mi: ___ vedere la mappa.",
+            "it": "Unisci fa’ + mi: ___ vedere la mappa."
+          },
+          "answers": [
+            "fammi"
+          ],
+          "hint": {
+            "en": "Use a doubled m.",
+            "it": "Usa una m doppia."
+          },
+          "explanation": {
+            "en": "Fa’ + mi becomes fammi.",
+            "it": "Fa’ + mi diventa fammi."
+          },
+          "focus": "a2-short-command-pronouns"
+        },
+        {
+          "id": "a2-short-command-pronouns-05",
+          "kind": "gap",
+          "prompt": {
+            "en": "Join sta’ + mi: ___ vicino mentre proviamo la scena.",
+            "it": "Unisci sta’ + mi: ___ vicino mentre proviamo la scena."
+          },
+          "answers": [
+            "stammi"
+          ],
+          "hint": {
+            "en": "Keep sta- and double m.",
+            "it": "Mantieni sta- e raddoppia m."
+          },
+          "explanation": {
+            "en": "Sta’ + mi becomes stammi.",
+            "it": "Sta’ + mi diventa stammi."
+          },
+          "focus": "a2-short-command-pronouns"
+        },
+        {
+          "id": "a2-short-command-pronouns-06",
+          "kind": "choice",
+          "prompt": {
+            "en": "Choose di’ + gli.",
+            "it": "Scegli di’ + gli."
+          },
+          "answers": [
+            "digli"
+          ],
+          "hint": {
+            "en": "Gli is the exception to doubling.",
+            "it": "Gli è l’eccezione al raddoppiamento."
+          },
+          "explanation": {
+            "en": "Write digli with one g.",
+            "it": "Scrivi digli con una sola g."
+          },
+          "focus": "a2-short-command-pronouns",
+          "options": [
+            "digli",
+            "diggli",
+            "di’gli"
+          ]
+        },
+        {
+          "id": "a2-short-command-pronouns-07",
+          "kind": "gap",
+          "prompt": {
+            "en": "Join da’ + gli: Il nastro è per Elio: ___ quello verde.",
+            "it": "Unisci da’ + gli: Il nastro è per Elio: ___ quello verde."
+          },
+          "answers": [
+            "dagli"
+          ],
+          "hint": {
+            "en": "Do not double g before gli.",
+            "it": "Non raddoppiare g prima di gli."
+          },
+          "explanation": {
+            "en": "Da’ + gli becomes dagli.",
+            "it": "Da’ + gli diventa dagli."
+          },
+          "focus": "a2-short-command-pronouns"
+        },
+        {
+          "id": "a2-short-command-pronouns-08",
+          "kind": "correct",
+          "prompt": {
+            "en": "Repair only the joined command: Faggli vedere il percorso.",
+            "it": "Correggi solo il comando unito: Faggli vedere il percorso."
+          },
+          "answers": [
+            "Fagli vedere il percorso."
+          ],
+          "hint": {
+            "en": "The pronoun is gli.",
+            "it": "Il pronome è gli."
+          },
+          "explanation": {
+            "en": "Fa’ + gli becomes fagli, without consonant doubling.",
+            "it": "Fa’ + gli diventa fagli, senza raddoppiamento della consonante."
+          },
+          "focus": "a2-short-command-pronouns"
+        }
+      ],
+      "production": {
+        "prompt": {
+          "en": "Invent a short exchange asking one friend for help. Include two joined commands from different families, one of them with gli.",
+          "it": "Inventa un breve scambio per chiedere aiuto a un amico. Includi due comandi uniti di gruppi diversi, uno dei quali con gli."
+        },
+        "frame": {
+          "en": "Give me ___. Tell him ___.",
+          "it": "Dammi ___. Digli ___."
+        },
+        "model": {
+          "en": "Give me the address, please. Tell him the entrance is behind the museum.",
+          "it": "Dammi l’indirizzo, per favore. Digli che l’ingresso è dietro il museo."
+        },
+        "rubric": [
+          {
+            "en": "I doubled the consonant where required and removed the separate apostrophe.",
+            "it": "Ho raddoppiato la consonante dove serve ed eliminato l’apostrofo separato."
+          },
+          {
+            "en": "I kept the gli exception and the recipient clear.",
+            "it": "Ho mantenuto l’eccezione con gli e chiaro il destinatario."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            103,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2-bello-forms",
+      "title": {
+        "en": "Put bello before the noun",
+        "it": "Metti bello prima del nome"
+      },
+      "summary": {
+        "en": "Choose the article-like forms of bello before nouns and distinguish normal adjective agreement after the noun.",
+        "it": "Scegli le forme di bello simili agli articoli prima dei nomi e distingui la concordanza normale dopo il nome."
+      },
+      "level": "A2",
+      "prerequisites": [
+        "definite-articles",
+        "adjective-agreement"
+      ],
+      "missionIds": [
+        "espresso2-u10-discuss-a-home",
+        "book2-beautiful-places"
+      ],
+      "teaching": [
+        {
+          "en": "Before a masculine singular noun, bello follows the article pattern: il → bel, lo → bello, l’ → bell’. Compare bel giardino, bello zaino and bell’albero.",
+          "it": "Prima di un nome maschile singolare, bello segue lo schema dell’articolo: il → bel, lo → bello, l’ → bell’. Confronta bel giardino, bello zaino e bell’albero."
+        },
+        {
+          "en": "Before masculine plural nouns, i corresponds to bei and gli to begli: bei quadri, begli scaffali, begli alberi. Listen to the beginning of the following noun.",
+          "it": "Prima dei nomi maschili plurali, a i corrisponde bei e a gli corrisponde begli: bei quadri, begli scaffali, begli alberi. Ascolta l’inizio del nome successivo."
+        },
+        {
+          "en": "Before feminine nouns, use bella before a consonant, bell’ before a vowel, and belle in the plural: bella stanza, bell’idea, belle finestre.",
+          "it": "Prima dei nomi femminili usa bella davanti a consonante, bell’ davanti a vocale e belle al plurale: bella stanza, bell’idea, belle finestre."
+        },
+        {
+          "en": "After the noun, use ordinary adjective forms bello, bella, belli, belle: il giardino è bello; i quadri sono belli. Do not carry bel or bei into that position.",
+          "it": "Dopo il nome usa le normali forme aggettivali bello, bella, belli, belle: il giardino è bello; i quadri sono belli. Non portare bel o bei in quella posizione."
+        }
+      ],
+      "examples": [
+        {
+          "en": "The quiet courtyard has a beautiful tree.",
+          "it": "Il cortile tranquillo ha un bell’albero."
+        },
+        {
+          "en": "Those beautiful shelves are made of wood.",
+          "it": "Quei begli scaffali sono di legno."
+        },
+        {
+          "en": "The pictures are beautiful, but they are too large for the room.",
+          "it": "I quadri sono belli, ma sono troppo grandi per la stanza."
+        }
+      ],
+      "words": [
+        {
+          "en": "the garden",
+          "it": "il giardino"
+        },
+        {
+          "en": "the backpack",
+          "it": "lo zaino"
+        },
+        {
+          "en": "the tree",
+          "it": "l’albero"
+        },
+        {
+          "en": "the picture",
+          "it": "il quadro"
+        },
+        {
+          "en": "the shelf",
+          "it": "lo scaffale"
+        },
+        {
+          "en": "the idea",
+          "it": "l’idea"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "a2-bello-forms-01",
+          "kind": "gap",
+          "prompt": {
+            "en": "Before giardino: un ___ giardino.",
+            "it": "Prima di giardino: un ___ giardino."
+          },
+          "answers": [
+            "bel"
+          ],
+          "hint": {
+            "en": "Think of il giardino.",
+            "it": "Pensa a il giardino."
+          },
+          "explanation": {
+            "en": "Use bel before this masculine singular consonant.",
+            "it": "Usa bel davanti a questa consonante al maschile singolare."
+          },
+          "focus": "a2-bello-forms"
+        },
+        {
+          "id": "a2-bello-forms-02",
+          "kind": "gap",
+          "prompt": {
+            "en": "Before zaino: un ___ zaino.",
+            "it": "Prima di zaino: un ___ zaino."
+          },
+          "answers": [
+            "bello"
+          ],
+          "hint": {
+            "en": "Think of lo zaino.",
+            "it": "Pensa a lo zaino."
+          },
+          "explanation": {
+            "en": "Bello follows the lo pattern before z.",
+            "it": "Bello segue lo schema di lo davanti a z."
+          },
+          "focus": "a2-bello-forms"
+        },
+        {
+          "id": "a2-bello-forms-03",
+          "kind": "choice",
+          "prompt": {
+            "en": "Choose the complete phrase with the vowel-initial noun albero.",
+            "it": "Scegli l’espressione completa con il nome albero, che inizia per vocale."
+          },
+          "answers": [
+            "un bell’albero"
+          ],
+          "hint": {
+            "en": "The masculine singular form elides before a vowel.",
+            "it": "La forma maschile singolare si elide davanti a vocale."
+          },
+          "explanation": {
+            "en": "Bell’ precedes albero.",
+            "it": "Bell’ precede albero."
+          },
+          "focus": "a2-bello-forms",
+          "options": [
+            "un bell’albero",
+            "un bel albero",
+            "un bello albero"
+          ]
+        },
+        {
+          "id": "a2-bello-forms-04",
+          "kind": "gap",
+          "prompt": {
+            "en": "Before quadri: dei ___ quadri.",
+            "it": "Prima di quadri: dei ___ quadri."
+          },
+          "answers": [
+            "bei"
+          ],
+          "hint": {
+            "en": "Think of i quadri.",
+            "it": "Pensa a i quadri."
+          },
+          "explanation": {
+            "en": "Bei is the matching pre-noun form.",
+            "it": "Bei è la forma corrispondente prima del nome."
+          },
+          "focus": "a2-bello-forms"
+        },
+        {
+          "id": "a2-bello-forms-05",
+          "kind": "gap",
+          "prompt": {
+            "en": "Before scaffali: degli ___ scaffali.",
+            "it": "Prima di scaffali: degli ___ scaffali."
+          },
+          "answers": [
+            "begli"
+          ],
+          "hint": {
+            "en": "Think of gli scaffali.",
+            "it": "Pensa a gli scaffali."
+          },
+          "explanation": {
+            "en": "Use begli before s plus consonant.",
+            "it": "Usa begli davanti a s seguita da consonante."
+          },
+          "focus": "a2-bello-forms"
+        },
+        {
+          "id": "a2-bello-forms-06",
+          "kind": "gap",
+          "prompt": {
+            "en": "Before stanza: una ___ stanza.",
+            "it": "Prima di stanza: una ___ stanza."
+          },
+          "answers": [
+            "bella"
+          ],
+          "hint": {
+            "en": "Feminine singular before a consonant.",
+            "it": "Femminile singolare davanti a consonante."
+          },
+          "explanation": {
+            "en": "Bella agrees with stanza.",
+            "it": "Bella concorda con stanza."
+          },
+          "focus": "a2-bello-forms"
+        },
+        {
+          "id": "a2-bello-forms-07",
+          "kind": "choice",
+          "prompt": {
+            "en": "Choose the feminine singular phrase before a vowel.",
+            "it": "Scegli l’espressione femminile singolare davanti a vocale."
+          },
+          "answers": [
+            "una bell’idea"
+          ],
+          "hint": {
+            "en": "Elide the final a of bella.",
+            "it": "Elidi la a finale di bella."
+          },
+          "explanation": {
+            "en": "Bell’ is the form before idea.",
+            "it": "Bell’ è la forma davanti a idea."
+          },
+          "focus": "a2-bello-forms",
+          "options": [
+            "una bell’idea",
+            "una bel idea",
+            "una bello idea"
+          ]
+        },
+        {
+          "id": "a2-bello-forms-08",
+          "kind": "choice",
+          "prompt": {
+            "en": "Which line has the correct feminine plural and the correct adjective after a masculine plural noun?",
+            "it": "Quale riga ha il femminile plurale corretto e l’aggettivo corretto dopo un nome maschile plurale?"
+          },
+          "answers": [
+            "belle finestre; i quadri sono belli"
+          ],
+          "hint": {
+            "en": "The second adjective follows its noun.",
+            "it": "Il secondo aggettivo segue il suo nome."
+          },
+          "explanation": {
+            "en": "Belle precedes finestre; belli is the ordinary form after quadri.",
+            "it": "Belle precede finestre; belli è la forma normale dopo quadri."
+          },
+          "focus": "a2-bello-forms",
+          "options": [
+            "belle finestre; i quadri sono belli",
+            "begli finestre; i quadri sono bei",
+            "belli finestre; i quadri sono bello"
+          ]
+        }
+      ],
+      "production": {
+        "prompt": {
+          "en": "Describe an imagined room or garden. Use three forms of bello before different nouns and one ordinary form after a noun.",
+          "it": "Descrivi una stanza o un giardino immaginario. Usa tre forme di bello prima di nomi diversi e una forma normale dopo un nome."
+        },
+        "frame": {
+          "en": "There is a beautiful ___. I see some beautiful ___. The ___ are beautiful.",
+          "it": "C’è un bel / un bello / un bell’ ___. Vedo dei bei / dei begli ___. I / Gli ___ sono belli."
+        },
+        "model": {
+          "en": "There is a beautiful garden with a beautiful tree. I see some beautiful pictures. The pictures are beautiful.",
+          "it": "C’è un bel giardino con un bell’albero. Vedo dei bei quadri. I quadri sono belli."
+        },
+        "rubric": [
+          {
+            "en": "Before each noun I checked its gender, number and initial sound.",
+            "it": "Prima di ogni nome ho controllato genere, numero e suono iniziale."
+          },
+          {
+            "en": "After the noun I used ordinary adjective agreement.",
+            "it": "Dopo il nome ho usato la concordanza aggettivale normale."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            167,
+            248
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2-bisogna-causal",
+      "title": {
+        "en": "Explain what is needed and why",
+        "it": "Spiega che cosa serve e perché"
+      },
+      "summary": {
+        "en": "Use impersonal bisogna + infinitive and the practised cause/result order with perché or siccome.",
+        "it": "Usa bisogna impersonale + infinito e l’ordine causa/risultato studiato con perché o siccome."
+      },
+      "level": "A2",
+      "prerequisites": [
+        "modal-verbs",
+        "questions-negation"
+      ],
+      "missionIds": [
+        "espresso2-u08-plan-a-next-step",
+        "book2-plan-with-a-reason"
+      ],
+      "teaching": [
+        {
+          "en": "Bisogna + infinitive expresses a general necessity: bisogna prenotare. In this construction bisogna does not change for io, noi or a plural task. To name an actor directly, you can use an appropriate form of dovere instead.",
+          "it": "Bisogna + infinito esprime una necessità generale: bisogna prenotare. In questa struttura bisogna non cambia per io, noi o un compito plurale. Per nominare direttamente chi agisce puoi invece usare una forma adatta di dovere."
+        },
+        {
+          "en": "In the practised pattern with perché, give the result or decision first and the reason after it: chiudo la finestra perché fa freddo. The accented é belongs to perché.",
+          "it": "Nello schema studiato con perché, indica prima il risultato o la decisione e poi il motivo: chiudo la finestra perché fa freddo. La é accentata fa parte di perché."
+        },
+        {
+          "en": "Siccome commonly introduces the reason first: siccome fa freddo, chiudo la finestra. Changing the order should not change which fact is the cause. These are the common patterns practised here, not a ban on every other use of perché.",
+          "it": "Siccome introduce comunemente prima il motivo: siccome fa freddo, chiudo la finestra. Cambiare l’ordine non deve cambiare quale fatto è la causa. Sono gli schemi comuni esercitati qui, non un divieto di ogni altro uso di perché."
+        },
+        {
+          "en": "Compare cause with consequence: piove, quindi restiamo dentro. Perché introduces a reason; quindi introduces a result. This unit keeps bisogna + infinitive separate from bisogna che + subjunctive.",
+          "it": "Confronta causa e conseguenza: piove, quindi restiamo dentro. Perché introduce un motivo; quindi introduce un risultato. L’unità mantiene distinto bisogna + infinito da bisogna che + congiuntivo."
+        }
+      ],
+      "examples": [
+        {
+          "en": "We need to check the address because the office has moved.",
+          "it": "Bisogna controllare l’indirizzo perché l’ufficio si è trasferito."
+        },
+        {
+          "en": "Since the room is small, we need to book two sessions.",
+          "it": "Siccome la sala è piccola, bisogna prenotare due turni."
+        },
+        {
+          "en": "The shop is closed, so we are going tomorrow.",
+          "it": "Il negozio è chiuso, quindi andiamo domani."
+        }
+      ],
+      "words": [
+        {
+          "en": "the reason",
+          "it": "il motivo"
+        },
+        {
+          "en": "the result",
+          "it": "il risultato"
+        },
+        {
+          "en": "the address",
+          "it": "l’indirizzo"
+        },
+        {
+          "en": "the session / shift",
+          "it": "il turno"
+        },
+        {
+          "en": "because",
+          "it": "perché"
+        },
+        {
+          "en": "since / as",
+          "it": "siccome"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "a2-bisogna-causal-01",
+          "kind": "gap",
+          "prompt": {
+            "en": "General necessity: ___ controllare l’indirizzo.",
+            "it": "Necessità generale: ___ controllare l’indirizzo."
+          },
+          "answers": [
+            "bisogna"
+          ],
+          "hint": {
+            "en": "Use the invariant impersonal form.",
+            "it": "Usa la forma impersonale invariabile."
+          },
+          "explanation": {
+            "en": "Bisogna introduces the infinitive.",
+            "it": "Bisogna introduce l’infinito."
+          },
+          "focus": "a2-bisogna-causal"
+        },
+        {
+          "id": "a2-bisogna-causal-02",
+          "kind": "choice",
+          "prompt": {
+            "en": "Choose the general necessity with several tasks.",
+            "it": "Scegli la necessità generale con più compiti."
+          },
+          "answers": [
+            "Bisogna preparare le sedie."
+          ],
+          "hint": {
+            "en": "Plural sedie does not change bisogna.",
+            "it": "Il plurale sedie non cambia bisogna."
+          },
+          "explanation": {
+            "en": "The infinitive follows invariant bisogna.",
+            "it": "L’infinito segue bisogna invariabile."
+          },
+          "focus": "a2-bisogna-causal",
+          "options": [
+            "Bisogna preparare le sedie.",
+            "Bisognano preparare le sedie.",
+            "Bisogniamo preparare le sedie."
+          ]
+        },
+        {
+          "id": "a2-bisogna-causal-03",
+          "kind": "gap",
+          "prompt": {
+            "en": "Keep the decision first and add its reason: Restiamo dentro ___ piove.",
+            "it": "Mantieni prima la decisione e aggiungi il motivo: Restiamo dentro ___ piove."
+          },
+          "answers": [
+            "perché"
+          ],
+          "hint": {
+            "en": "Use the practised result-then-cause connector.",
+            "it": "Usa il connettivo studiato risultato-poi-causa."
+          },
+          "explanation": {
+            "en": "Perché introduces the reason piove.",
+            "it": "Perché introduce il motivo piove."
+          },
+          "focus": "a2-bisogna-causal"
+        },
+        {
+          "id": "a2-bisogna-causal-04",
+          "kind": "gap",
+          "prompt": {
+            "en": "Use the practised cause-first connector: ___ piove, restiamo dentro.",
+            "it": "Usa il connettivo studiato con la causa prima: ___ piove, restiamo dentro."
+          },
+          "answers": [
+            "siccome"
+          ],
+          "hint": {
+            "en": "Start with the reason.",
+            "it": "Inizia dal motivo."
+          },
+          "explanation": {
+            "en": "Siccome introduces the cause before the result.",
+            "it": "Siccome introduce la causa prima del risultato."
+          },
+          "focus": "a2-bisogna-causal"
+        },
+        {
+          "id": "a2-bisogna-causal-05",
+          "kind": "transform",
+          "prompt": {
+            "en": "Keep the same cause and begin with Siccome: Prenoto oggi perché ci sono pochi posti.",
+            "it": "Mantieni la stessa causa e inizia con Siccome: Prenoto oggi perché ci sono pochi posti."
+          },
+          "answers": [
+            "Siccome ci sono pochi posti, prenoto oggi."
+          ],
+          "hint": {
+            "en": "Few seats is still the reason.",
+            "it": "I pochi posti rimangono il motivo."
+          },
+          "explanation": {
+            "en": "The cause moves first without reversing the relationship.",
+            "it": "La causa passa all’inizio senza invertire il rapporto."
+          },
+          "focus": "a2-bisogna-causal"
+        },
+        {
+          "id": "a2-bisogna-causal-06",
+          "kind": "transform",
+          "prompt": {
+            "en": "Keep the same cause and use perché after the decision: Siccome l’ufficio è chiuso, torniamo domani.",
+            "it": "Mantieni la stessa causa e usa perché dopo la decisione: Siccome l’ufficio è chiuso, torniamo domani."
+          },
+          "answers": [
+            "Torniamo domani perché l’ufficio è chiuso."
+          ],
+          "hint": {
+            "en": "The closed office is the reason.",
+            "it": "L’ufficio chiuso è il motivo."
+          },
+          "explanation": {
+            "en": "Perché follows the decision and introduces its cause.",
+            "it": "Perché segue la decisione e introduce la causa."
+          },
+          "focus": "a2-bisogna-causal"
+        },
+        {
+          "id": "a2-bisogna-causal-07",
+          "kind": "choice",
+          "prompt": {
+            "en": "The rain is the cause and staying inside is the result. Choose a consequence connector.",
+            "it": "La pioggia è la causa e restare dentro è il risultato. Scegli un connettivo di conseguenza."
+          },
+          "answers": [
+            "Piove, quindi restiamo dentro."
+          ],
+          "hint": {
+            "en": "Quindi introduces what follows from the cause.",
+            "it": "Quindi introduce ciò che deriva dalla causa."
+          },
+          "explanation": {
+            "en": "The sentence preserves the stated cause/result relationship.",
+            "it": "La frase mantiene il rapporto causa/risultato indicato."
+          },
+          "focus": "a2-bisogna-causal",
+          "options": [
+            "Piove, quindi restiamo dentro.",
+            "Piove perché restiamo dentro.",
+            "Restiamo dentro, quindi piove."
+          ]
+        },
+        {
+          "id": "a2-bisogna-causal-08",
+          "kind": "correct",
+          "prompt": {
+            "en": "Repair only the infinitive construction: Bisogna controlliamo l’orario.",
+            "it": "Correggi solo la struttura con l’infinito: Bisogna controlliamo l’orario."
+          },
+          "answers": [
+            "Bisogna controllare l’orario."
+          ],
+          "hint": {
+            "en": "Use the dictionary verb form after bisogna.",
+            "it": "Usa la forma del dizionario dopo bisogna."
+          },
+          "explanation": {
+            "en": "Controllare is the infinitive required here.",
+            "it": "Controllare è l’infinito richiesto qui."
+          },
+          "focus": "a2-bisogna-causal"
+        }
+      ],
+      "production": {
+        "prompt": {
+          "en": "Invent a small shared task. Express one general necessity, then give the same reason/result relationship once with perché and once with siccome.",
+          "it": "Inventa un piccolo compito condiviso. Esprimi una necessità generale, poi indica lo stesso rapporto motivo/risultato una volta con perché e una volta con siccome."
+        },
+        "frame": {
+          "en": "We need to ___. We ___ because ___. Since ___, we ___.",
+          "it": "Bisogna ___. ___ perché ___. Siccome ___, ___."
+        },
+        "model": {
+          "en": "We need to book early. We are booking today because there are few seats. Since there are few seats, we are booking today.",
+          "it": "Bisogna prenotare presto. Prenotiamo oggi perché ci sono pochi posti. Siccome ci sono pochi posti, prenotiamo oggi."
+        },
+        "rubric": [
+          {
+            "en": "I kept bisogna unchanged and followed it with an infinitive.",
+            "it": "Ho mantenuto bisogna invariato e l’ho seguito con un infinito."
+          },
+          {
+            "en": "The same fact remains the cause in both causal versions.",
+            "it": "Lo stesso fatto rimane la causa in entrambe le versioni causali."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            133,
+            260
+          ]
+        }
+      ]
     }
   ],
   "programmes": [
