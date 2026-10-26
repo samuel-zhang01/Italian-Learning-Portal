@@ -1,0 +1,337 @@
+{
+  "reviewedOn": "2026-10-26",
+  "persona": "Simulated overwhelmed beginner or mid-A1 learner",
+  "method": "Agent inspection of the built local app with fresh validated synthetic progress in owned disposable Chromium contexts. This is simulated learner evidence, not observation of a human learner or a retention study.",
+  "initialPreview": "http://127.0.0.1:5200",
+  "scope": [
+    "Today",
+    "Programme selection",
+    "Guided-session entry and reload",
+    "First lesson and due-review correction affordances",
+    "Empty weekly report"
+  ],
+  "findings": [
+    {
+      "id": "BEGINNER-01",
+      "priority": "P2",
+      "title": "An empty A1 weekly report recommends an A2 chapter check",
+      "reproduction": [
+        "Create fresh course1 progress with no completed lessons, grammar attempts, diagnostics or active programme.",
+        "Open #weekly in EN or IT.",
+        "Inspect Useful next steps and the next-seven-day plan, then open the suggested step."
+      ],
+      "observed": "The report correctly said there was no dated evidence but recommended Choose an A2 chapter check, repeated that suggestion in the next-week plan, and opened #diagnostics with the heading What would help your A2 practice?. The Italian flow matched.",
+      "learningRisk": "The recommended difficulty is unsupported by the saved beginner plan. A novice could interpret the recommendation as the required next task. This is a simulated-persona inference, not a measured real-user outcome.",
+      "beforeEvidence": [
+        "work/learner-audit-beginner/weekly-and-start.json",
+        "work/learner-audit-beginner/en-390-no-evidence-weekly-next-step.png",
+        "work/learner-audit-beginner/it-390-no-evidence-weekly-next-step.png"
+      ],
+      "fix": "When no due review or specific diagnostic catch-up exists, offer Continue today and follow the saved plan. Keep the existing A2-topic link optional; infer no readiness from missing records.",
+      "implementation": "app/learning/weekly-learning-model.ts",
+      "status": "fixed; verified in owned isolated browser against the rebuilt local app",
+      "afterEvidence": [
+        "work/learner-audit-beginner/after/en-390-empty-weekly-neutral-next-step.png",
+        "work/learner-audit-beginner/after/it-390-empty-weekly-neutral-next-step.png"
+      ]
+    },
+    {
+      "id": "BEGINNER-02",
+      "priority": "P2",
+      "title": "Phone session entry stops above a long stage chooser, before the active task",
+      "reproduction": [
+        "Open fresh Today at390×844 in EN or IT.",
+        "Press Continue today.",
+        "Observe the initial viewport before tapping a stage or scrolling."
+      ],
+      "observed": "Scroll remained at0. Six stage buttons occupied y657–1064; the warm-up activity began at1082, its input at1310 and Save at1503. At320px the save button was at1583. Tapping the already selected first stage scrolled correctly, but that extra action was not signposted.",
+      "learningRisk": "Continue initially looks like another contents screen, placing the first usable task below the phone viewport. The original Today primary action itself was visible at y592 EN390 and y626 IT390, so the finding concerns the destination rather than the Today card.",
+      "beforeEvidence": [
+        "work/learner-audit-beginner/observations.json",
+        "work/learner-audit-beginner/weekly-and-start.json",
+        "work/learner-audit-beginner/en-390-session-before-first-task-full.png",
+        "work/learner-audit-beginner/it-390-session-before-first-task-full.png"
+      ],
+      "fix": "On initial entry at phone widths, focus and scroll the existing active-activity heading with the shared cancellable helper. Preserve the existing stage choice, drafts and desktop overview.",
+      "implementation": "app/learning/enriched.tsx",
+      "status": "fixed; verified in owned isolated browser against the rebuilt local app",
+      "afterEvidence": [
+        "work/learner-audit-beginner/after/en-390-today-opens-task.png",
+        "work/learner-audit-beginner/after/it-320-today-opens-task.png"
+      ]
+    }
+  ],
+  "strengthsObserved": [
+    "Today presents one visible primary Continue action at both sampled phone widths.",
+    "The supported A1 programme is the default recommendation and alternatives are behind a disclosure.",
+    "Warm-up instructions include a first-day greeting/name alternative and a small expandable starter.",
+    "Existing activity-heading focus makes the already-selected stage button a working navigation shortcut."
+  ],
+  "preservation": "The fixes change recommendation copy/destination and mobile mount focus only. They select no programme, change no day, write no progress, alter no grading and keep all content IDs.",
+  "tests": {
+    "suite": "tests/learning-insights.test.mjs",
+    "passed": 16,
+    "additionalCoverage": [
+      "Empty A1/A2 plans return to Today without mutation",
+      "Actual due review keeps priority",
+      "Diagnostic practice links use ?practice=1 and preserve completed-unit production/position"
+    ],
+    "focusedLint": "passed",
+    "typecheck": "passed"
+  },
+  "verification": {
+    "generator": "scripts/audit_learner_beginner_browser.mjs",
+    "status": "passed",
+    "preview": "http://127.0.0.1:5200",
+    "date": "2026-10-26",
+    "method": "Simulated agent learner inspection, not real-user observation. Owned disposable Chromium and validated synthetic records; no shared profile/CDP or real learner state.",
+    "workflowGroupsPassed": 9,
+    "checks": [
+      {
+        "label": "EN320: Today entry and two reload states focus the active task and preserve drafts"
+      },
+      {
+        "label": "EN390: Today entry and two reload states focus the active task and preserve drafts"
+      },
+      {
+        "label": "IT320: Today entry and two reload states focus the active task and preserve drafts"
+      },
+      {
+        "label": "IT390: Today entry and two reload states focus the active task and preserve drafts"
+      },
+      {
+        "label": "EN desktop: entry keeps its original overview and scroll position"
+      },
+      {
+        "label": "IT desktop: entry keeps its original overview and scroll position"
+      },
+      {
+        "label": "EN empty A1 weekly report recommends Today and keeps optional A2 checks separate"
+      },
+      {
+        "label": "IT empty A1 weekly report recommends Today and keeps optional A2 checks separate"
+      },
+      {
+        "label": "Sample first lesson and due review provide correction/continue affordances while retaining first errors"
+      }
+    ],
+    "measurements": [
+      {
+        "label": "Today entry",
+        "width": 320,
+        "language": "en",
+        "heading": "Wake up your memory",
+        "focused": true,
+        "top": 0,
+        "bottom": 72,
+        "scrollY": 1159,
+        "viewportHeight": 844,
+        "documentWidth": 320,
+        "viewportWidth": 320
+      },
+      {
+        "label": "Direct reload with pending warm-up",
+        "width": 320,
+        "language": "en",
+        "heading": "Wake up your memory",
+        "focused": true,
+        "top": 0,
+        "bottom": 72,
+        "scrollY": 1159,
+        "viewportHeight": 844,
+        "documentWidth": 320,
+        "viewportWidth": 320
+      },
+      {
+        "label": "Direct reload at next unfinished activity",
+        "width": 320,
+        "language": "en",
+        "heading": "Learn one useful idea",
+        "focused": true,
+        "top": 0,
+        "bottom": 72,
+        "scrollY": 1159,
+        "viewportHeight": 844,
+        "documentWidth": 320,
+        "viewportWidth": 320
+      },
+      {
+        "label": "Today entry",
+        "width": 390,
+        "language": "en",
+        "heading": "Wake up your memory",
+        "focused": true,
+        "top": 0,
+        "bottom": 36,
+        "scrollY": 1137,
+        "viewportHeight": 844,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      {
+        "label": "Direct reload with pending warm-up",
+        "width": 390,
+        "language": "en",
+        "heading": "Wake up your memory",
+        "focused": true,
+        "top": 0,
+        "bottom": 36,
+        "scrollY": 1137,
+        "viewportHeight": 844,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      {
+        "label": "Direct reload at next unfinished activity",
+        "width": 390,
+        "language": "en",
+        "heading": "Learn one useful idea",
+        "focused": true,
+        "top": 0,
+        "bottom": 36,
+        "scrollY": 1137,
+        "viewportHeight": 844,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      {
+        "label": "Today entry",
+        "width": 320,
+        "language": "it",
+        "heading": "Risveglia la memoria",
+        "focused": true,
+        "top": 0,
+        "bottom": 72,
+        "scrollY": 1232,
+        "viewportHeight": 844,
+        "documentWidth": 320,
+        "viewportWidth": 320
+      },
+      {
+        "label": "Direct reload with pending warm-up",
+        "width": 320,
+        "language": "it",
+        "heading": "Risveglia la memoria",
+        "focused": true,
+        "top": 0,
+        "bottom": 72,
+        "scrollY": 1232,
+        "viewportHeight": 844,
+        "documentWidth": 320,
+        "viewportWidth": 320
+      },
+      {
+        "label": "Direct reload at next unfinished activity",
+        "width": 320,
+        "language": "it",
+        "heading": "Impara un’idea utile",
+        "focused": true,
+        "top": 0,
+        "bottom": 72,
+        "scrollY": 1232,
+        "viewportHeight": 844,
+        "documentWidth": 320,
+        "viewportWidth": 320
+      },
+      {
+        "label": "Today entry",
+        "width": 390,
+        "language": "it",
+        "heading": "Risveglia la memoria",
+        "focused": true,
+        "top": 0,
+        "bottom": 36,
+        "scrollY": 1137,
+        "viewportHeight": 844,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      {
+        "label": "Direct reload with pending warm-up",
+        "width": 390,
+        "language": "it",
+        "heading": "Risveglia la memoria",
+        "focused": true,
+        "top": 0,
+        "bottom": 36,
+        "scrollY": 1137,
+        "viewportHeight": 844,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      {
+        "label": "Direct reload at next unfinished activity",
+        "width": 390,
+        "language": "it",
+        "heading": "Impara un’idea utile",
+        "focused": true,
+        "top": 0,
+        "bottom": 36,
+        "scrollY": 1137,
+        "viewportHeight": 844,
+        "documentWidth": 390,
+        "viewportWidth": 390
+      },
+      {
+        "label": "Desktop entry retains overview",
+        "width": 1440,
+        "language": "en",
+        "heading": "Wake up your memory",
+        "focused": false,
+        "top": 591,
+        "bottom": 627,
+        "scrollY": 0,
+        "viewportHeight": 844,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      },
+      {
+        "label": "Desktop entry retains overview",
+        "width": 1440,
+        "language": "it",
+        "heading": "Risveglia la memoria",
+        "focused": false,
+        "top": 591,
+        "bottom": 627,
+        "scrollY": 0,
+        "viewportHeight": 844,
+        "documentWidth": 1440,
+        "viewportWidth": 1440
+      }
+    ],
+    "screenshots": [
+      "work/learner-audit-beginner/after/en-320-today-opens-task.png",
+      "work/learner-audit-beginner/after/en-390-today-opens-task.png",
+      "work/learner-audit-beginner/after/it-320-today-opens-task.png",
+      "work/learner-audit-beginner/after/it-390-today-opens-task.png",
+      "work/learner-audit-beginner/after/en-390-empty-weekly-neutral-next-step.png",
+      "work/learner-audit-beginner/after/it-390-empty-weekly-neutral-next-step.png",
+      "work/learner-audit-beginner/after/en-390-first-lesson-correction.png",
+      "work/learner-audit-beginner/after/en-390-due-review-correction.png"
+    ],
+    "runtimeErrors": [],
+    "forbiddenRequests": [],
+    "limits": [
+      "Phone dimensions are viewport emulation, not physical-device testing.",
+      "No inference about real-user confusion, fatigue, retention or learning improvement.",
+      "A bounded sample of first lesson/review affordances, not a full course completion.",
+      "No production site, private study source, shared browser or learner database was accessed."
+    ]
+  },
+  "limits": [
+    "This bounded agent audit does not establish actual learner confusion or learning improvement.",
+    "No human participant or teacher evaluation was performed.",
+    "No production, shared profile, source archive or real learner data was accessed."
+  ],
+  "visualReview": {
+    "status": "passed",
+    "screenshots": [
+      "work/learner-audit-beginner/after/en-390-today-opens-task.png",
+      "work/learner-audit-beginner/after/it-320-today-opens-task.png",
+      "work/learner-audit-beginner/after/en-390-empty-weekly-neutral-next-step.png",
+      "work/learner-audit-beginner/after/it-390-empty-weekly-neutral-next-step.png"
+    ],
+    "observed": "The phone activity title, instructions, input and save action are visible together on entry. Weekly next-step cards use appropriate bilingual Today copy and fit their containers."
+  },
+  "harnessNote": "A strict0px top-bound check was adjusted to1px tolerance after exact IT320 geometry showed the correctly focused H2 at-0.1875px because scroll alignment uses fractional layout. Exact focus, target and saved-state assertions remain."
+}

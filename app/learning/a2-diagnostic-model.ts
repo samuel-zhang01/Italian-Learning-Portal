@@ -89,7 +89,7 @@ export function diagnosticCatchUp(p: Progress, item: A2DiagnosticItem, units: re
   visit(target.id);
   return [
     ...missing.slice(0, 1).map((unit): CatchUpStep => ({ kind: "prepare", route: `grammar/${unit.id}`, title: unit.title })),
-    { kind: "practise", route: `grammar/${target.id}`, title: target.title },
+    { kind: "practise", route: `grammar/${target.id}?practice=1`, title: target.title },
     { kind: "transfer", route: `lesson/${chapter.missionId}`, title: chapter.title },
   ];
 }

@@ -53,8 +53,8 @@ export function ListeningView({ t }: Props) {
     <h1 ref={heading} tabIndex={-1}>{t("A little listening, at your pace.", "Un po’ di ascolto, al tuo ritmo.")}</h1>
     <p>{t("Choose an audio file from your device, or try an original portal dictation. Your audio, pasted transcript and response stay in this tab and are not uploaded or included in progress backups. Leaving or reloading clears this workspace.", "Scegli un file audio dal dispositivo oppure prova un dettato originale del portale. Audio, trascrizione incollata e risposta restano in questa scheda: non vengono caricati né inclusi nei backup dei progressi. Uscendo o ricaricando, questo spazio si svuota.")}</p>
     <div className="button-row" role="group" aria-label={t("Listening source", "Fonte dell’ascolto")}>
-      <button className="button secondary" aria-pressed={mode === "local"} onClick={() => { setMode("local"); window.speechSynthesis?.cancel(); resetTask(); }}>{t("My local audio", "Il mio audio locale")}</button>
-      <button className="button secondary" aria-pressed={mode === "original"} onClick={() => { sectionActive.current = false; audio.current?.pause(); setRepeating(false); setMode("original"); resetTask(); }}>{t("Original dictation", "Dettato originale")}</button>
+      <button className="button secondary" aria-pressed={mode === "local"} onClick={() => { if (mode === "local") return; setMode("local"); window.speechSynthesis?.cancel(); resetTask(); }}>{t("My local audio", "Il mio audio locale")}</button>
+      <button className="button secondary" aria-pressed={mode === "original"} onClick={() => { if (mode === "original") return; sectionActive.current = false; audio.current?.pause(); setRepeating(false); setMode("original"); resetTask(); }}>{t("Original dictation", "Dettato originale")}</button>
     </div>
     {mode === "local" ? <section className="panel">
       <h2>{t("Bring a recording", "Scegli una registrazione")}</h2>
@@ -97,6 +97,17 @@ export function ListeningView({ t }: Props) {
     </section>}
     <label className="field listening-rate">{t("Playback speed", "Velocità di ascolto")}<select value={rate} onChange={(event) => { const value = Number(event.target.value); setRate(value); if (audio.current) audio.current.playbackRate = value; }}><option value={0.75}>0.75×</option><option value={0.9}>0.9×</option><option value={1}>1×</option></select></label>
     {error && <p role="status" className="feedback">{error === "file" ? t("Choose a nonempty audio file under 500 MB. Your current audio remains connected.", "Scegli un file audio non vuoto sotto 500 MB. L’audio attuale resta collegato.") : error === "decode" ? t("This browser could not read the recording. Try another audio format.", "Il browser non riesce a leggere la registrazione. Prova un altro formato audio.") : error === "voice" ? t("The Italian device voice is unavailable. You can reveal the text and read with a partner.", "La voce italiana del dispositivo non è disponibile. Puoi svelare il testo e leggere con un’altra persona.") : t("Playback did not start. Use the recording’s play control and try again.", "La riproduzione non è iniziata. Usa il comando di ascolto della registrazione e riprova.")}</p>}
+    <details className="listening-routine">
+      <summary>{t("A short listening-to-speaking routine", "Un breve percorso dall’ascolto al parlato")}</summary>
+      <p>{t("For a ten-minute sitting, choose just a few lines. Try these steps with your recording or an original scene; pause whenever you need.", "Per una sessione di dieci minuti, scegli solo poche frasi. Prova questi passi con la tua registrazione o una scena originale; fermati quando serve.")}</p>
+      <ol>
+        <li>{t("Before playing, predict the situation from the title or context.", "Prima di ascoltare, prova a prevedere la situazione dal titolo o dal contesto.")}</li>
+        <li>{t("Listen once with the transcript hidden. Say the main idea in a few words.", "Ascolta una volta con la trascrizione nascosta. Esprimi l’idea principale in poche parole.")}</li>
+        <li>{t("Replay one uncertain detail, such as a time, a place or a verb ending.", "Riascolta un dettaglio incerto, per esempio un orario, un luogo o una desinenza verbale.")}</li>
+        <li>{t("Reveal a line and compare it with what you heard. Choose one useful phrase.", "Svela una frase e confrontala con quello che hai sentito. Scegli un’espressione utile.")}</li>
+        <li>{t("Hide the text. Say or write a short version with one detail changed, then check your meaning. You can use the response box below.", "Nascondi il testo. Racconta o scrivi una breve versione cambiando un dettaglio, poi controlla il senso. Puoi usare lo spazio per la risposta qui sotto.")}</li>
+      </ol>
+    </details>
     <section className="panel">
       <h2>{t("Write what you hear", "Scrivi quello che senti")}</h2>
       <label className="field">{t("My dictation or short summary", "Il mio dettato o breve riassunto")}<textarea lang="it" maxLength={3000} rows={5} value={dictation} onChange={(event) => { setDictation(event.target.value); setChecks([]); }} /></label>

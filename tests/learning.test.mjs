@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
+import { coreRecallFeedback, firstCoreRecallToday } from "../app/learning/review-evidence.ts";
 import {
   addDays,
   completeMission,
@@ -124,6 +125,32 @@ test("reviews space successful recall, bring errors back tomorrow and award cred
   p = recordReview(p, ids[0], false, "2026-10-29");
   assert.equal(p.reviews[ids[0]].due, "2026-10-30");
   assert.equal(p.reviews[ids[0]].interval, 1);
+});
+test("a correction after reload retains today's first recall failure without changing its schedule or credit", () => {
+  let p = completeMission(emptyProgress(), missions[0], doneDraft(), 2, addDays(today, -1));
+  p = recordReview(p, ids[0], false, today);
+  const reloaded = parseProgress(JSON.stringify(p), ids);
+  const before = JSON.stringify(reloaded);
+  assert.equal(firstCoreRecallToday(reloaded, ids[0], today), false);
+  assert.equal(coreRecallFeedback(reloaded, ids[0], today, { date: today, correct: true }, null), "supported");
+  assert.deepEqual(recordReview(reloaded, ids[0], true, today), reloaded);
+  assert.equal(reloaded.reviews[ids[0]].due, addDays(today, 1));
+  assert.equal(reloaded.reviews[ids[0]].attempts, 1);
+  assert.equal(reloaded.reviews[ids[0]].correct, 0);
+  assert.deepEqual(reloaded.reviewLog, [{ id: ids[0], date: today, correct: false }]);
+  assert.equal(JSON.stringify(reloaded), before);
+});
+test("independent recall feedback requires a new scheduled success; earlier or extra practice cannot claim it", () => {
+  let p = completeMission(emptyProgress(), missions[0], doneDraft(), 2, addDays(today, -1));
+  assert.equal(coreRecallFeedback(p, ids[0], today, { date: today, correct: true }, null), "extra");
+  p = recordReview(p, ids[0], true, today);
+  assert.equal(coreRecallFeedback(p, ids[0], today, { date: today, correct: true }, today), "independent");
+  assert.equal(coreRecallFeedback(p, ids[0], today, null, null), "extra", "Reopening a saved successful recall is extra practice.");
+  const tomorrow = addDays(today, 1);
+  assert.equal(firstCoreRecallToday(p, ids[0], tomorrow), null);
+  assert.equal(coreRecallFeedback(p, ids[0], tomorrow, { date: today, correct: false }, today), "extra", "Yesterday's local first attempt cannot contaminate a new date.");
+  assert.equal(coreRecallFeedback(p, ids[0], tomorrow, { date: tomorrow, correct: true }, tomorrow), "independent");
+  assert.equal(firstCoreRecallToday(p, ids[1], today), null, "Another lesson's outcome is not evidence for this recall.");
 });
 test("planning respects chosen days, start date, completed lessons and review allowance", () => {
   let p = emptyProgress();

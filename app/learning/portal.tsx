@@ -3,6 +3,7 @@ import { lazy, Suspense, useEffect, useRef, useState, type ReactNode } from "rea
 import curriculum from "./curriculum.json";
 import { planningSources, planningReviewCatalogue } from "./planning-data";
 import { selectReviewQueue } from "./review-queue";
+import { coreRecallFeedback, firstCoreRecallToday, type LocalRecallAttempt } from "./review-evidence";
 import { createLocalPdfStore, localPdfPageHref, type LocalPdfResult } from "./local-pdfs";
 import { LearningRouteBoundary } from "./lazy-boundary";
 import { ArcadeEntry, DailyItinerary, Rewards, SessionNotebook, SessionPreview } from "./daily-overview";
@@ -1670,12 +1671,15 @@ function ReviewView({
 }: Shared & { m: Mission }) {
   const [answer, setAnswer] = useState("");
   const [feedback, setFeedback] = useState<boolean | null>(null);
-  const [first, setFirst] = useState<boolean | null>(null);
+  const [localFirst, setLocalFirst] = useState<LocalRecallAttempt | null>(null);
+  const first = firstCoreRecallToday(p, m.id, today) ?? (localFirst?.date === today ? localFirst.correct : null);
   const due =
     !!p.reviews[m.id] &&
     p.reviews[m.id].due <= today &&
     p.reviews[m.id].lastDate !== today;
-  const [scheduled, setScheduled] = useState(false);
+  const [scheduledOn, setScheduledOn] = useState<string | null>(null);
+  const scheduled = scheduledOn === today;
+  const recallFeedback = coreRecallFeedback(p, m.id, today, localFirst, scheduledOn);
   if (!p.completed[m.id])
     return (
       <div className="study-wrap">
@@ -1726,10 +1730,10 @@ function ReviewView({
             e.preventDefault();
             const correct = isCorrect(answer, m.review.answers);
             setFeedback(correct);
-            if (first === null) setFirst(correct);
+            if (first === null) setLocalFirst({ date: today, correct });
             if (due && !scheduled) {
               save((s) => recordReview(s, m.id, correct, today));
-              setScheduled(true);
+              setScheduledOn(today);
             }
           }}
         >
@@ -1818,9 +1822,11 @@ function ReviewView({
                 <Icon name="arrow" />
               </button>
               <span>
-                {first
+                {recallFeedback === "independent"
                   ? t("Recalled independently", "Ricordato in autonomia")
-                  : t("Corrected with support", "Corretto con aiuto")}
+                  : recallFeedback === "supported"
+                    ? t("Corrected with support", "Corretto con aiuto")
+                    : t("Extra practice", "Pratica extra")}
               </span>
             </div>
           )}

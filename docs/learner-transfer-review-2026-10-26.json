@@ -1,0 +1,73 @@
+{
+  "reviewedAt": "2026-10-26",
+  "status": "implemented-and-verified",
+  "scope": "Bounded simulated A2 learner audit: ten-minute phone session, original listening, scene comprehension and production scaffolds.",
+  "method": {
+    "browser": "Owned isolated Chromium context on a local existing build at 390×844 pixels; synthetic version-one progress only.",
+    "evidence": "work/learner-audit-transfer/report.json",
+    "privateAssetsAccessed": false,
+    "realLearnersObserved": 0,
+    "learningOutcomesMeasured": false
+  },
+  "findings": [
+    {
+      "id": "selected-source-erases-listening-response",
+      "classification": "Reproduced functional bug",
+      "trigger": "Type a response and reveal a line in Original dictation, then tap the already-selected Original dictation button.",
+      "before": "The mode remains selected but its handler clears the response, transcript reveal and self-checks.",
+      "change": "Both selected source buttons now return without changing task state; an actual source change still resets its task.",
+      "files": ["app/learning/listening.tsx"],
+      "validation": "Focused TypeScript and ESLint pass. Four final-build browser journeys verify both source modes preserve draft, reveal and self-checks in English and Italian at 320/390 pixels; an actual source change still clears its task."
+    },
+    {
+      "id": "short-a2-transfer-path",
+      "classification": "Observed workflow limitation with a design inference",
+      "observation": "The ten-minute session shows two-minute warmup, five-minute core lesson and three-minute vocabulary; its listening/gist and speaking stages are absent. A chapter conversation-game shortcut remains available. The fifteen-minute layout exposes the scene and production stages.",
+      "change": "An optional collapsed bilingual routine in Private listening now guides prediction, a gist-first listen, replay of an uncertain detail, comparison with a revealed line, and a short spoken or written version with one changed detail. It uses the existing tab-local response box.",
+      "limits": "This offers an optional short practice sequence; it does not change the ten-minute daily planner, saved session layouts, scoring or completion evidence. Navigation to Private listening remains in More practice & materials.",
+      "files": ["app/learning/listening.tsx", "app/learning/listening.css"]
+    }
+  ],
+  "positiveObservations": [
+    "The A2 scene has a gist prompt before its hidden transcript, then a separate detail check.",
+    "The production scaffold asks the learner to fill, speak, change a detail, cover the frame and try again; an optional changed-story response has its own model and explicit self-checks.",
+    "The observed phone flows had no horizontal overflow, runtime errors or external/write requests; listening task content did not enter saved progress."
+  ],
+  "researchBoundary": {
+    "reference": {
+      "title": "Teaching L2 Learners How to Listen Does Make a Difference: An Empirical Study",
+      "authors": ["Larry Vandergrift", "Marzieh H. Tafaghodtari"],
+      "year": 2010,
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1467-9922.2009.00559.x",
+      "verified": "Publisher abstract read on 2026-10-26. A semester-long French second-language classroom study with 106 participants compared process-guided listening against the same listening texts and repetitions without that guidance."
+    },
+    "designInference": "Use a compact prediction, monitoring and comparison sequence as optional listening guidance. Adding a changed-detail retell is an application-design inference for connecting this workspace to speaking/writing practice; this cited listening study does not validate that retell feature.",
+    "notEstablished": [
+      "The effect of this portal routine on Italian comprehension, retention or spontaneous speaking.",
+      "Whether a ten-minute solo phone session reproduces the benefits of semester-long teacher-guided classroom instruction.",
+      "The pronunciation quality or availability of a learner’s device speech service."
+    ]
+  },
+  "validation": {
+    "focusedTypeScript": "passed",
+    "focusedESLint": "passed",
+    "browserRegressionScript": "scripts/audit_listening_transfer_browser.mjs",
+    "browserRegression": {
+      "status": "passed",
+      "checkedAt": "2026-10-26T09:56:34.823Z",
+      "buildIndexSHA256": "05398fb5d8e64bc0a1adc932c5a60789dad25b6326f558c47d4878d4783021b8",
+      "contexts": 4,
+      "languages": ["en", "it"],
+      "widths": [320, 390],
+      "selectedSourceContinuity": "Both sources preserve response, reveal and self-checks.",
+      "actualSourceChanges": "Both directions clear the response, reveal and self-checks.",
+      "optionalRoutine": "Collapsed initially, five readable bilingual steps and no horizontal overflow.",
+      "reload": "Ephemeral response and disclosure state clear; saved progress remains byte-equivalent.",
+      "runtimeErrors": 0,
+      "outsideRequests": 0,
+      "writeRequests": 0,
+      "evidence": "work/learner-audit-transfer/regression/report.json"
+    },
+    "existingListeningModelTests": "4 passed"
+  }
+}

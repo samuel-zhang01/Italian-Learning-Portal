@@ -14462,7 +14462,8 @@
             "it": "Usa ottimo e mantieni Questa: Questa è una soluzione molto buona."
           },
           "answers": [
-            "Questa è un’ottima soluzione."
+            "Questa è un’ottima soluzione.",
+            "Questa è una soluzione ottima."
           ],
           "hint": {
             "en": "Make ottimo agree with feminine singular soluzione.",

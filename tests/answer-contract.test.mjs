@@ -80,6 +80,18 @@ test("authored word-order alternatives earn first-attempt credit in grammar and 
   assert.ok(!isCorrect("Lo compro.", exercise("direct-pronouns-5").answers));
 });
 
+test("ottimo before or after the noun satisfies the stated transformation without accepting an agreement error", () => {
+  const unit = grammar.units.find((item) => item.id === "a2-better-best");
+  const item = exercise("a2-better-best-4");
+  for (const answer of ["Questa è un’ottima soluzione.", "Questa è una soluzione ottima."]) {
+    const p = checkGrammarAnswer(emptyProgress(), unit, item.id, answer, { today, hintUsed: false });
+    assert.equal(p.academy.grammar[unit.id].attempts[item.id][0].correct, true);
+    assert.equal(p.academy.grammar[unit.id].attempts[item.id][0].assisted, false);
+  }
+  assert.equal(isCorrect("Questa è una soluzione ottimo.", item.answers), false);
+  assert.equal(isCorrect("Questa è una soluzione ottime.", item.answers), false);
+});
+
 test("every accepted reorder answer retains all supplied words and meaningful accents", () => {
   const tokens = (sentence) => normalise(sentence).split(/\s+/).sort();
   for (const item of grammar.units.flatMap((unit) => unit.exercises)) {

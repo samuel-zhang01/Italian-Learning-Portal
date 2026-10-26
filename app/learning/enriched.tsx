@@ -183,6 +183,10 @@ export function DailySession({
   const activityHeading = useRef<HTMLHeadingElement>(null);
   const requestedActivityFocus = useRef(false);
   useEffect(() => {
+    if (window.matchMedia("(max-width: 680px)").matches)
+      return focusStudyHeading(activityHeading.current);
+  }, []);
+  useEffect(() => {
     if (!requestedActivityFocus.current) return;
     requestedActivityFocus.current = false;
     return focusStudyHeading(activityHeading.current);

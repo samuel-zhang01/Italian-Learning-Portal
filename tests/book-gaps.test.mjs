@@ -24,11 +24,19 @@ const pair = (value, label) => assert.ok(typeof value?.en === "string" && value.
 const lexical = (value) => value.normalize("NFC").toLocaleLowerCase("it").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
 const today = "2026-10-25";
 
-test("gap supplements preserve all prior55 units,56 missions/enrichments, banks, sources and programme objects", () => {
+test("gap supplements preserve prior content apart from the reviewed additive answer correction", () => {
   const documents = { curriculum, grammar, enrichment };
   for (const [path, baseline] of Object.entries(review.baselinePreservation.arrays)) {
     const [name, key] = path.split(".");
-    assert.equal(digest(documents[name][key].slice(0, baseline.count)), baseline.sha256, path);
+    const previous = structuredClone(documents[name][key].slice(0, baseline.count));
+    if (path === "grammar.units") {
+      // The 2026-10-26 learner audit added one valid adjective-position variant.
+      // Keep the historical preservation check strict for every other field.
+      const corrected = previous.find((unit) => unit.id === "a2-better-best")
+        .exercises.find((exercise) => exercise.id === "a2-better-best-4");
+      corrected.answers = corrected.answers.filter((answer) => answer !== "Questa è una soluzione ottima.");
+    }
+    assert.equal(digest(previous), baseline.sha256, path);
   }
   assert.equal(review.baselinePreservation.arrays["grammar.units"].count, 55);
   assert.equal(review.baselinePreservation.arrays["curriculum.missions"].count, 56);

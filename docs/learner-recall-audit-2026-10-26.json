@@ -1,0 +1,100 @@
+{
+  "reviewedOn": "2026-10-26",
+  "perspective": "Returning learner with overdue reviews, previously completed material and newly observed difficulties.",
+  "method": "Reproducible synthetic learner scenarios in owned standalone Chromium. These are software workflow simulations, not empirical learner research or measured retention outcomes.",
+  "target": "http://127.0.0.1:5200/",
+  "status": "Three reproduced findings resolved and verified on rebuilt app",
+  "findings": [
+    {
+      "priority": 1,
+      "finding": "A correction after reload was labelled independent recall despite the saved first failure.",
+      "reproduction": [
+        "Open overdue review/say-hello from the two-minute review queue.",
+        "Submit a wrong first answer. The saved result is incorrect and the next review becomes tomorrow.",
+        "Reload, then enter the correction shown by the earlier feedback.",
+        "Before the fix, the UI displayed Recalled independently / Ricordato in autonomia while the saved first recall remained incorrect."
+      ],
+      "learningRisk": "The feedback could misrepresent remembering after viewing a correction as independent retrieval.",
+      "resolution": "ReviewView derives today's first outcome from saved review evidence. Supported correction, new scheduled independent success and extra practice receive distinct labels. Local attempt and scheduled state are keyed by date.",
+      "files": ["app/learning/review-evidence.ts", "app/learning/portal.tsx"],
+      "verified": "After reload the correction is labelled supported. The original wrong log, tomorrow schedule, one recorded attempt and original completion credit remain unchanged. A genuinely new scheduled correct answer receives independent feedback; repeating it after reload or practising early receives Extra practice.",
+      "status": "resolved"
+    },
+    {
+      "priority": 2,
+      "finding": "A valid adjective-position alternative was recorded as a grammar error.",
+      "reproduction": [
+        "Open grammar/a2-better-best?exercise=a2-better-best-4&review=1 with an overdue known exercise.",
+        "The prompt asks to use ottimo and retain Questa, without fixing adjective position.",
+        "Submit Questa è una soluzione ottima.",
+        "Before the fix, the answer was recorded as incorrect because only Questa è un’ottima soluzione. was accepted."
+      ],
+      "learningRisk": "A learner using the requested form correctly could receive false corrective feedback and a recorded failure.",
+      "resolution": "The existing answer list now accepts the natural post-noun variant as well as the original pre-noun form. The stable exercise ID and prompt remain unchanged. No derived diagnostic asks this transformation.",
+      "files": ["app/learning/grammar.json"],
+      "verified": "The post-noun variant receives correct, unassisted recall feedback in English and Italian. Regression tests retain rejection of ottimo/ottime agreement errors and preserve the original first attempt.",
+      "status": "resolved"
+    },
+    {
+      "priority": 3,
+      "finding": "Diagnostic catch-up reopened old completed production instead of practice on the forgotten topic.",
+      "reproduction": [
+        "Seed a2-conditional and its prerequisites as completed thirty days earlier, with saved writing and solved checks.",
+        "Fail today's conditional diagnostic question.",
+        "Follow the catch-up action labelled Practise this form.",
+        "Before the fix, grammar/a2-conditional opened Use it with the old writing and no exercise card."
+      ],
+      "learningRisk": "A learner seeking repair was sent back to a completed output rather than an opportunity to retrieve the form again.",
+      "resolution": "The parent integration added an explicit ?practice=1 catch-up intent. It opens Practise with blank Due recall when questions are due, otherwise All exercises. Ordinary lesson reopening retains its existing stage and writing.",
+      "files": ["app/learning/a2-diagnostic-model.ts", "app/learning/academy.tsx"],
+      "verified": "Both diagnostic and weekly catch-up actions open the explicit practice route. Due answers begin blank, existing answers/attempts/output remain unchanged, normal reopening still resumes Use it, and a no-due request opens All exercises.",
+      "status": "resolved"
+    }
+  ],
+  "verification": {
+    "initialReproduction": {
+      "languageWidths": ["EN 390px", "IT 320px"],
+      "observations": 6,
+      "evidence": "work/learner-audit-returning/report.json"
+    },
+    "focusedTests": {
+      "command": "node --test tests/learning.test.mjs tests/answer-contract.test.mjs",
+      "passed": 26,
+      "failed": 0,
+      "newRegressions": 3,
+      "coverage": "Saved first-failure correction after reload; scheduled versus extra practice feedback with date boundaries; both adjective positions and invalid agreement."
+    },
+    "parentIntegratedChecks": "Parent reported all 230 daily tests, typecheck and lint passed before browser verification.",
+    "ownedSyntaxAndEslint": "passed",
+    "gitDiffCheck": "passed",
+    "browser": {
+      "status": "passed",
+      "workflowGroups": 21,
+      "sampledLayouts": [
+        { "language": "en", "width": 390, "height": 844 },
+        { "language": "it", "width": 320, "height": 844 },
+        { "language": "en", "width": 1440, "height": 1000 }
+      ],
+      "runtimeErrors": [],
+      "blockedNetworkRequests": [],
+      "screenshots": 9,
+      "visualReview": "Viewed the corrected English phone recall feedback, accepted Italian phone adjective variant, and desktop blank due-practice destination.",
+      "stateAssertions": [
+        "First recall failure, original completion credit, review log and tomorrow schedule survive correction and reload.",
+        "A new scheduled independent success is recorded once; extra practice does not add records or move due dates.",
+        "The accepted adjective alternative retains the original grammar attempt and records correct unassisted recall.",
+        "Diagnostic and weekly catch-up preserve existing production, answers and attempts while opening practice.",
+        "Normal lesson reopening preserves Use it; no-due catch-up opens All exercises."
+      ],
+      "report": "work/learner-audit-returning/verification/browser-report.json",
+      "harness": "scripts/audit_learner_recall_browser.mjs",
+      "rerun": "PARLIAMO_URL=http://127.0.0.1:5200 node scripts/audit_learner_recall_browser.mjs"
+    }
+  },
+  "boundaries": [
+    "Fresh disposable contexts and synthetic localStorage only; no shared CDP, existing browser profile or real learner records were accessed.",
+    "Initial app inspection was read-only. Scoped fixes followed explicit parent authorization; the third fix was owned by the parent integration.",
+    "No deployment, credential access or change to the established scheduling intervals was performed by this audit.",
+    "The audit verifies the stated software paths and evidence labels; it does not establish learning effectiveness or claim an optimal spacing interval."
+  ]
+}

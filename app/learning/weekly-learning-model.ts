@@ -111,8 +111,8 @@ export function deriveWeeklyLearningReport(
       detail: { en: "A recent saved topic check was incorrect or supported. Begin with its specific preparation or practice.", it: "L’ultimo controllo salvato su questo tema era errato o aiutato. Parti dalla relativa preparazione o pratica." } });
   }
   result.activeDays = [...days].sort(); result.hasEvidence = result.activeDays.length > 0;
-  if (!result.nextSteps.length) result.nextSteps.push({ id: "choose-topic", title: { en: "Choose an A2 chapter check", it: "Scegli un controllo su un capitolo A2" }, route: "diagnostics",
-    detail: { en: "Choose a familiar chapter for a small baseline, or use Find to practise something new. No weakness is inferred from missing records.", it: "Scegli un capitolo noto per un piccolo punto di partenza, oppure usa Cerca per un tema nuovo. L’assenza di dati non indica una difficoltà." } });
+  if (!result.nextSteps.length) result.nextSteps.push({ id: "continue-today", title: { en: "Continue today", it: "Continua oggi" }, route: "today",
+    detail: { en: "Follow the next step in your saved study plan. You can pause whenever you need.", it: "Segui il prossimo passo del tuo piano di studio salvato. Puoi fermarti quando serve." } });
   const plannedDays = new Set(p.plan.days.filter((day) => Number.isInteger(day) && day >= 0 && day <= 6));
   const dates = Array.from({ length: 7 }, (_, index) => addDays(today, index + 1)).filter((date) => (!validDate(p.plan.start) || date >= p.plan.start) && plannedDays.has(new Date(`${date}T12:00:00Z`).getUTCDay()));
   result.nextWeekPlan = result.nextSteps.slice(0, Math.min(3, dates.length)).map((step, index) => ({ date: dates[index], step }));

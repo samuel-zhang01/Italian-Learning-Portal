@@ -101,9 +101,18 @@ test("catch-up points to the earliest unfinished prerequisite, sampled topic and
   const p = emptyProgress(); p.academy = emptyAcademy();
   const units = [{ id: "base", title: pair("base"), prerequisites: [], missionIds: [] }, { id: item.unitId, title: pair("topic"), prerequisites: ["base"], missionIds: [chapter.missionId] }];
   const before = JSON.stringify(p); freeze(p);
-  assert.deepEqual(diagnosticCatchUp(p, item, units, chapter).map((step) => step.route), ["grammar/base", `grammar/${item.unitId}`, `lesson/${chapter.missionId}`]);
+  assert.deepEqual(diagnosticCatchUp(p, item, units, chapter).map((step) => step.route), ["grammar/base", `grammar/${item.unitId}?practice=1`, `lesson/${chapter.missionId}`]);
   assert.equal(JSON.stringify(p), before);
   assert.deepEqual(diagnosticCatchUp(p, { ...item, unitId: "stale" }, units, chapter), []);
+  const completed = emptyProgress(); completed.academy = emptyAcademy();
+  completed.academy.grammar.base = { ...getGrammarDraft(completed, "base"), completed: "2026-10-22" };
+  completed.academy.grammar[item.unitId] = { ...getGrammarDraft(completed, item.unitId),
+    exerciseIndex: 5, output: "Una produzione precedente da conservare.", rubric: [0], completed: "2026-10-23" };
+  const completedBefore = JSON.stringify(completed); freeze(completed);
+  const catchUp = diagnosticCatchUp(completed, item, units, chapter);
+  assert.equal(catchUp[0].kind, "practise");
+  assert.equal(catchUp[0].route, `grammar/${item.unitId}?practice=1`);
+  assert.equal(JSON.stringify(completed), completedBefore, "Selecting a practice destination does not replace the existing production, position or completion.");
 });
 
 const catalogue = {
@@ -159,11 +168,36 @@ test("weekly core and latest-only word/game metrics do not invent full event cou
   assert.equal(r.arcade.independentLatestCorrect, 1); assert.equal(JSON.stringify(p), before);
 });
 
-test("empty or invalid-date weekly reports infer no weakness and offer an optional baseline", () => {
+test("empty or invalid-date weekly reports infer no weakness and return to the saved plan", () => {
   const p = progress(); const r = report(freeze(p));
   assert.equal(r.hasEvidence, false); assert.equal(r.activeDays.length, 0);
-  assert.equal(r.nextSteps[0].route, "diagnostics");
+  assert.equal(r.nextSteps[0].id, "continue-today");
+  assert.equal(r.nextSteps[0].route, "today");
+  assert.deepEqual(r.nextSteps[0].title, { en: "Continue today", it: "Continua oggi" });
   assert.deepEqual(deriveWeeklyLearningReport(p, catalogue, "bad-date", emptyA2Diagnostics(), [], []).activeDays, []);
+});
+
+test("no-due weekly suggestions preserve A1/A2 plans and saved drafts without choosing a new diagnostic level", () => {
+  for (const course of [1, 3]) {
+    const p = progress(); p.plan.course = course;
+    p.academy.programme = { id: "known", started: "2026-10-01", day: 1, completed: { "0": "2026-10-01" } };
+    p.drafts.core = { step: 1, answers: ["bozza salvata", ""], checked: [false, false], first: [], output: "", rubric: [false, false], modelSeen: false };
+    const before = JSON.stringify(p); freeze(p);
+    const r = report(p);
+    assert.equal(r.hasEvidence, false);
+    assert.deepEqual(r.nextSteps.map((step) => step.route), ["today"]);
+    assert.ok(r.nextWeekPlan.every(({ step }) => step.route === "today"));
+    assert.equal(JSON.stringify(p), before, `Course ${course}: no changes to the plan, day or draft.`);
+  }
+});
+
+test("an actual due review remains ahead of the neutral weekly fallback", () => {
+  const p = progress();
+  p.completed.core = { date: "2026-10-20", firstCorrect: 1, total: 2, output: "Una frase originale.", supported: false, confidence: 2 };
+  p.reviews.core = { due: "2026-10-24", interval: 3, attempts: 1, correct: 1, lastDate: "2026-10-21" };
+  const before = JSON.stringify(p); freeze(p);
+  assert.equal(report(p).nextSteps[0].route, "review/core");
+  assert.equal(JSON.stringify(p), before);
 });
 
 test("normal version1 progress round-trips diagnostics while old backups remain valid", () => {
@@ -191,7 +225,7 @@ test("next-week suggestions follow planned dates and never mutate the schedule o
   const p = progress(); p.plan = { ...p.plan, start: "2026-10-01", days: [1, 3, 5] };
   const before = JSON.stringify(p); freeze(p);
   const r = report(p); assert.equal(r.nextWeekPlan.length, 1);
-  assert.equal(r.nextWeekPlan[0].date, "2026-10-26"); assert.equal(r.nextWeekPlan[0].step.route, "diagnostics");
+  assert.equal(r.nextWeekPlan[0].date, "2026-10-26"); assert.equal(r.nextWeekPlan[0].step.route, "today");
   assert.equal(JSON.stringify(p), before);
   const none = clone(p); none.plan.days = []; assert.deepEqual(report(none).nextWeekPlan, []);
   none.plan.days = [1, 2, 3]; none.plan.start = "2027-01-01"; assert.deepEqual(report(none).nextWeekPlan, []);

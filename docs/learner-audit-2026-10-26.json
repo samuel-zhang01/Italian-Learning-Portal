@@ -1,0 +1,98 @@
+{
+  "reviewedOn": "2026-10-26",
+  "status": "validated-awaiting-publication",
+  "method": "Three agents simulated a beginner, a returning learner and an A2 learner with a short phone session. They inspected the built app in owned Chromium contexts with synthetic progress. Findings are reproducible product observations, not real-learner outcomes.",
+  "realLearnersObserved": 0,
+  "research": "docs/learning-research-review-2026-10-26.json",
+  "repairs": [
+    {
+      "id": "first-recall-after-reload",
+      "before": "A failed scheduled recall followed by reload and a correct retry displayed independent recall despite the saved first failure.",
+      "after": "Feedback consults today's saved first outcome; corrected work stays supported and unscheduled extra practice stays labelled separately. Dates and first attempts are not overwritten."
+    },
+    {
+      "id": "valid-adjective-position",
+      "before": "The ottimo transformation rejected 'Questa è una soluzione ottima.' despite the prompt allowing that position.",
+      "after": "Both valid adjective positions are accepted in the existing exercise. Its ID and earlier recorded attempts are unchanged."
+    },
+    {
+      "id": "completed-unit-catch-up",
+      "before": "A diagnostic practice link could reopen a completed unit's old production instead of practice.",
+      "after": "The explicit practice link opens the practice stage and uses due recall when eligible. Normal unit reopening retains its saved position; old production and attempts remain intact."
+    },
+    {
+      "id": "beginner-weekly-next-step",
+      "before": "A new A1 learner with no dated evidence received an A2 chapter-check recommendation and an optional scheduled copy of that suggestion.",
+      "after": "The no-specific-evidence fallback opens Today and the existing saved plan. Actual due reviews and specific topic catch-up retain priority; A2 checks remain available by choice."
+    },
+    {
+      "id": "mobile-active-task",
+      "before": "A six-button stage list placed the first session input well below the initial phone screen.",
+      "after": "Phone entry focuses and scrolls to the current activity using the existing cancellable navigation helper, without modifying drafts or stages. Desktop entry remains unchanged."
+    },
+    {
+      "id": "selected-listening-mode",
+      "before": "Tapping the already-selected listening mode cleared the response, transcript reveal and self-checks.",
+      "after": "Selected-mode taps preserve the task; changing modes still starts the different task."
+    }
+  ],
+  "learningImprovement": "Private listening contains an optional collapsed bilingual routine: predict, listen for gist, replay an uncertain detail, compare with text, then retell with a changed detail. This uses the existing tab-local response field and adds no score, upload or proficiency claim.",
+  "preserved": [
+    "Stable lesson/exercise IDs, existing first attempts, writing, active programmes and version-one backups",
+    "Existing review schedules and the distinction between correction and later-day recall",
+    "Private source archives, connected documents and audio stay outside the public release",
+    "The shared authenticated browser and real learner storage are untouched"
+  ],
+  "validation": {
+    "dailyTests": {
+      "passed": 230,
+      "failed": 0
+    },
+    "typecheck": "passed",
+    "lint": "passed",
+    "productionBuild": "passed",
+    "browserRegressions": {
+      "passedWorkflowGroups": 34,
+      "beginner": 9,
+      "returning": 21,
+      "listeningTransfer": 4,
+      "languages": [
+        "en",
+        "it"
+      ],
+      "phoneWidths": [
+        320,
+        390
+      ],
+      "desktopWidth": 1440,
+      "runtimeErrors": 0,
+      "unexpectedNetworkRequests": 0,
+      "reports": [
+        "docs/learner-beginner-audit-2026-10-26.json",
+        "docs/learner-recall-audit-2026-10-26.json",
+        "docs/learner-transfer-review-2026-10-26.json"
+      ]
+    }
+  },
+  "nextImprovementsToEvaluate": [
+    {
+      "priority": 1,
+      "idea": "A short optional listening/speaking session path within an explicitly selected time budget.",
+      "reason": "The existing ten-minute daily layout omits separate input and speaking stages. The optional listening routine helps, but the planner was deliberately preserved in this repair.",
+      "validationNeeded": "Observe whether learners can find and finish it without adding an unwanted second session; preserve ongoing session durations and credit."
+    },
+    {
+      "priority": 2,
+      "idea": "Additional unfamiliar prompts for delayed transfer and focused contrasts between confusable forms.",
+      "reason": "Success on repeated quiz items is limited evidence for using Italian in a changed situation. Interleaving effects depend on task and outcome.",
+      "validationNeeded": "Teacher review of original prompts, then later-day performance on unpractised details; do not use XP as an outcome measure."
+    },
+    {
+      "priority": 3,
+      "idea": "A small real-learner evaluation with teacher or conversation-partner feedback.",
+      "reason": "Agent simulations find interface and scoring defects but cannot establish comprehension, retention or conversational improvement.",
+      "validationNeeded": "Voluntary feedback and a simple later-day recall/short conversation task, with support use recorded separately and no unrequested analytics collection."
+    }
+  ],
+  "limits": "A targeted audit, not a complete accessibility review or systematic literature review. Browser tests do not assess teaching effectiveness, spontaneous speaking or device-voice quality."
+}

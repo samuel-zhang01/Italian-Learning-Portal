@@ -118,7 +118,7 @@ export function GrammarLab(props: Shared & { unitId?: string }) {
   if (selected && params.get("review") === "1")
     return <GrammarReview key={`${selected.id}:${params.get("exercise")}`} {...props} unit={selected} exerciseId={params.get("exercise") ?? ""} />;
   if (selected)
-    return <UnitLesson key={selected.id} {...props} unit={selected} />;
+    return <UnitLesson key={`${selected.id}:${params.get("practice") === "1"}`} {...props} unit={selected} practice={params.get("practice") === "1"} />;
   const matches = (unit: GrammarUnit) => {
     const needle = normaliseSearch(query);
     const draft = getGrammarDraft(p, unit.id);
@@ -416,15 +416,16 @@ function UnitLesson({
   go,
   today,
   unit,
+  practice = false,
   pdfs,
   pdfPageOffsets,
-}: Shared & { unit: GrammarUnit }) {
+}: Shared & { unit: GrammarUnit; practice?: boolean }) {
   const draft = getGrammarDraft(p, unit.id);
   const score = grammarScore(p, unit);
   const [stage, setStage] = useState<"learn" | "practise" | "produce">(
-    draft.output ? "produce" : score.attempted ? "practise" : "learn",
+    practice ? "practise" : draft.output ? "produce" : score.attempted ? "practise" : "learn",
   );
-  const [mode, setMode] = useState<PracticeFilter>("all");
+  const [mode, setMode] = useState<PracticeFilter>(() => practice && grammarReviewQueue(p, [unit], today).length ? "due" : "all");
   const [notice, setNotice] = useState("");
   const unitHeading = useRef<HTMLHeadingElement>(null);
   useEffect(() => focusStudyHeading(unitHeading.current), [unit.id]);

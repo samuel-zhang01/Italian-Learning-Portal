@@ -1,0 +1,79 @@
+{
+  "reviewedOn": "2026-10-26",
+  "scope": "Targeted literature search to inform a simulated learner audit of Parliamo; not a systematic review or an evaluation of the app's learning effectiveness.",
+  "selection": "Prioritise original studies, research syntheses and publisher sources. Combine broad findings with language-specific evidence and recent replication; do not rank methods by publication date alone.",
+  "sources": [
+    {
+      "id": "dunlosky2013",
+      "title": "Improving Students’ Learning With Effective Learning Techniques",
+      "url": "https://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html",
+      "type": "Research review; publisher summary and abstract consulted",
+      "finding": "Practice testing and distributed practice received high utility ratings. Self-explanation and interleaving received more conditional ratings.",
+      "application": "Keep low-stakes recall and later reviews central. Reading explanations remains useful preparation but should not be the sole practice.",
+      "limit": "Broad educational evidence does not validate this app, its timers or an Italian curriculum."
+    },
+    {
+      "id": "kim-webb2022",
+      "title": "The Effects of Spaced Practice on Second Language Learning: A Meta-Analysis",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/lang.12479",
+      "type": "Meta-analysis; publisher abstract consulted",
+      "finding": "Across 48 experiments and 3,411 learners, spacing benefited second-language learning. Longer gaps helped delayed performance relative to shorter gaps; equal and expanding schedules were statistically equivalent.",
+      "application": "Preserve scheduled recall, shorter returns after difficulty and honest records of supported practice.",
+      "limit": "No basis for claiming the portal's exact 1/3/7/14-day schedule is optimal or that everyone needs an expanding schedule."
+    },
+    {
+      "id": "pan-rickard2018",
+      "title": "Transfer of Test-Enhanced Learning: Meta-Analytic Review and Synthesis",
+      "url": "https://pdf.retrievalpractice.org/transfer/Pan_Rickard_2018.pdf",
+      "type": "Meta-analysis; paper abstract and opening sections consulted",
+      "finding": "The review covered 122 experiments and found average transfer benefits from testing, with substantial dependence on the target task, elaborated retrieval and initial performance.",
+      "application": "Follow bounded recall with a short changed-detail response. Keep labels specific to observed recall rather than implying general speaking mastery.",
+      "limit": "This is not direct evidence that a portal retelling prompt improves spontaneous Italian conversation."
+    },
+    {
+      "id": "vandergrift-tafaghodtari2010",
+      "title": "Teaching L2 Learners How to Listen Does Make a Difference: An Empirical Study",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1467-9922.2009.00559.x",
+      "type": "Semester study of 106 French learners in six intact classes; publisher abstract consulted",
+      "finding": "Learners guided through planning, monitoring, evaluation and problem solving outperformed a comparison group listening to the same texts equally often, controlling initial differences.",
+      "application": "Offer a compact listen-for-meaning routine: predict, catch the gist, replay one uncertain detail, compare, then explain what changed.",
+      "limit": "A brief optional interface prompt is a design inference, not a reproduction of the classroom intervention."
+    },
+    {
+      "id": "karatas2025",
+      "title": "Improving second language vocabulary learning and retention by leveraging memory enhancement techniques: A multidomain pedagogical approach",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/13621688211053525",
+      "publication": "Online 2021-10-29; journal issue 2025",
+      "type": "Classroom-laboratory study; publisher abstract consulted",
+      "finding": "48 Turkish university learners studied 64 English words over 17 days. Retrieval with feedback and spaced sessions produced larger gains than the comparison study/cramming regimen on the measured post-tests.",
+      "application": "Keep retrieval, useful feedback and subsequent return together rather than relying on repeated exposure alone.",
+      "limit": "The bundled intervention does not identify one independently optimal component; its results cannot be presented as expected gains for Parliamo users."
+    },
+    {
+      "id": "zheng2026",
+      "title": "Effects of spacing on the acquisition of explicit and implicit vocabulary knowledge: An approximate replication of Nakata and Elgort (2021)",
+      "url": "https://pressto.amu.edu.pl/index.php/ssllt/article/view/49487",
+      "publication": "2026-06-08",
+      "type": "Replication with 69 Japanese learners and 48 pseudowords; publisher abstract consulted",
+      "finding": "Spacing improved measured explicit vocabulary knowledge. Neither schedule produced effective implicit-knowledge development in the semantic-priming measure, and schedules did not differ there.",
+      "application": "Separate word/grammar recall evidence from fluent spontaneous use; retain contextual listening and production alongside quizzes.",
+      "limit": "Pseudoword learning and semantic priming are narrow measures; the null result does not establish that spacing never helps implicit knowledge."
+    },
+    {
+      "id": "interleaving-pragmatics2023",
+      "title": "The effects of interleaved and blocked corpus-based practice on L2 pragmatic development",
+      "url": "https://www.cambridge.org/core/journals/studies-in-second-language-acquisition/article/effects-of-interleaved-and-blocked-corpusbased-practice-on-l2-pragmatic-development/5A4444ED013A13A681076AF3E6F974CB",
+      "type": "Language-learning experiment; publisher results and conclusions consulted",
+      "finding": "Interleaved practice benefited measured pragmatic accuracy, while blocked practice benefited fluency in the studied requests and suggestions.",
+      "application": "Keep a coherent topic within a short lesson; consider deliberate contrast practice for confusable forms after initial instruction.",
+      "limit": "Do not shuffle every exercise or claim that mixed practice is universally superior."
+    }
+  ],
+  "designPriorities": [
+    "Preserve the difference between an independent first attempt and a corrected answer, including after reload.",
+    "Make recommendations appropriate to the learner's actual saved course and programme; missing evidence is not a weakness.",
+    "Make listening purposeful before revealing text, and offer a small transfer task after comprehension.",
+    "Retain bounded review sessions, bilingual support and reversible navigation instead of adding pressure or an unbounded backlog."
+  ],
+  "evaluationNext": "After these usability repairs, an actual learner could compare recall on new prompts several days later and attempt an unfamiliar short conversation with a teacher. Agent simulations and passing browser tests cannot establish learning gains."
+}
