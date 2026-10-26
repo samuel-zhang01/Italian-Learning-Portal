@@ -1,0 +1,105 @@
+{
+  "reviewedOn": "2026-10-26",
+  "scope": "Three original bilingual public scenes for the bounded five/ten-minute listening and speaking route, with separate changed-detail retelling and fresh later-day transfer tasks.",
+  "data": "app/learning/oral-practice-data.ts",
+  "exports": {
+    "named": "oralPracticeScenes",
+    "default": "oralPracticeScenes",
+    "types": ["OralPracticeScene", "OralPracticeChoice", "OralPracticeProduction"],
+    "typeSource": "app/learning/oral-practice-model.ts",
+    "loading": "The data module imports/re-exports model types only. The practice view may import the complete scenes lazily; parsing/scoring uses the separate small identity table."
+  },
+  "counts": {
+    "scenes": 3,
+    "a1Scenes": 2,
+    "a2Scenes": 1,
+    "bilingualDialogueLines": 12,
+    "gistQuestions": 3,
+    "detailQuestions": 3,
+    "bilingualChoiceOptions": 18,
+    "changedDetailRetells": 3,
+    "laterDayTransfers": 3,
+    "bilingualProductionRubricCriteria": 12,
+    "newPrivateSourceCitations": 0
+  },
+  "sceneReview": [
+    {
+      "id": "oral-market",
+      "level": "A1",
+      "publicSituationReused": "A small purchase at a stall; this extends the existing original market situation rather than copying its bread/water dictation.",
+      "gist": {
+        "correctOptionId": "gist-b",
+        "answerWitness": "The initial apple request is unavailable; the buyer explicitly accepts pears.",
+        "distractors": "Buying nothing and reserving apples for tomorrow do not occur."
+      },
+      "detail": {
+        "correctOptionId": "detail-a",
+        "answerWitness": "The final purchase is one kilo; the two-kilo quantity belongs to the earlier request.",
+        "gistExplanationDoesNotRevealDetail": true
+      },
+      "retellChanges": "Tomatoes unavailable; accept two kilos of courgettes at three euros per kilo; six-euro total.",
+      "laterTransferChanges": "A bakery replaces the fruit stall; four requested bread rolls become three available rolls at one euro each; include a polite closing.",
+      "modelRubricCheck": "Both production models state the requested and accepted quantities consistently. The arithmetic is six euros for the retell and three euros for transfer."
+    },
+    {
+      "id": "oral-invitation",
+      "level": "A1",
+      "publicSituationReused": "An invitation to a shared activity; the new scene negotiates a changed day and distinguishes destination from meeting point.",
+      "gist": {
+        "correctOptionId": "gist-c",
+        "answerWitness": "Saturday work prevents the original plan; Sunday is proposed and accepted.",
+        "distractors": "The activity is not cancelled and the Saturday arrangement is not retained."
+      },
+      "detail": {
+        "correctOptionId": "detail-b",
+        "answerWitness": "The speakers meet in front of the library; the park is the eventual destination.",
+        "gistExplanationDoesNotRevealDetail": true
+      },
+      "retellChanges": "An invented friend works Tuesday evening; cinema moves to Wednesday at half past seven, meeting in front of the post office.",
+      "laterTransferChanges": "An invented neighbour is invited for Friday coffee at three; accept Saturday at four, meeting in front of the statue.",
+      "modelRubricCheck": "The immediate and later models preserve their distinct day changes, final times and meeting points. Present-tense arrangements and familiar invitation chunks keep the task bounded."
+    },
+    {
+      "id": "oral-delay",
+      "level": "A2",
+      "publicSituationReused": "An interrupted journey/change of plan; this new account concerns a tram-stop closure and a bus journey to a museum.",
+      "gist": {
+        "correctOptionId": "gist-a",
+        "answerWitness": "The speaker waits for a tram, the stop closes, and she takes a bus to reach the museum.",
+        "distractors": "She does not abandon the visit or wait at the stop until evening."
+      },
+      "detail": {
+        "correctOptionId": "detail-c",
+        "answerWitness": "The final line states arrival at eleven.",
+        "gistExplanationDoesNotRevealDetail": true
+      },
+      "retellChanges": "Nora waits for a train; cancellation is announced; she takes a bus to the cinema and arrives at six.",
+      "laterTransferChanges": "Leo cycles to the sports centre; a chain breaks; he continues on foot, arrives at half past seven and describes his feeling.",
+      "modelRubricCheck": "Background and completed events remain distinct. Feminine Nora/arrivata and masculine Leo/arrivato are consistent. The later model changes person, problem, transport, destination and time."
+    }
+  ],
+  "answerContract": {
+    "stableSceneIds": ["oral-market", "oral-invitation", "oral-delay"],
+    "gistOptionIds": ["gist-a", "gist-b", "gist-c"],
+    "detailOptionIds": ["detail-a", "detail-b", "detail-c"],
+    "scoring": "One authored option is supported for each bounded question. Option IDs and the model identity/scoring table match exactly. Incorrect alternatives do not describe events stated in the scene.",
+    "beforeListening": "Titles and contexts identify the task without naming the final choice, changed day, transport solution or requested detail.",
+    "afterGist": "Each gist explanation confirms the overall decision while withholding the quantity, meeting point or arrival time required by its detail question.",
+    "production": "Frames and possible models support practice. Both immediate retells and later transfers use explicit self-checks, not automatic semantic, grammar or pronunciation grading. Rubrics may name required details, including the market total; they are not evidence of unaided productive accuracy.",
+    "laterDay": "The later task retrieves and adapts a communicative pattern with new supplied details. It is not a second copy of the original scene or a validated measure of retention."
+  },
+  "provenanceAndPrivacy": {
+    "authorship": "All dialogue, choice labels, explanations, prompts, frames and possible models are original portal companion content written for this route.",
+    "existingSituationReference": "app/learning/listening.tsx original market/meeting/delay situations were read for continuity. Their existing IDs and passages were not edited by this content task.",
+    "privateSources": "No private book text, worksheet answers, source recordings, personal details or new book-page citations were added.",
+    "assessmentLimit": "A1/A2 are content bands for these bounded practice topics. The scenes and self-checks do not establish a CEFR level or independently assessed spontaneous speech.",
+    "researchLimit": "The route structure is part of the parent learning-design work. This content review records authored-task checks, not a new efficacy study or real-user learning outcome."
+  },
+  "validation": {
+    "inlineStructuralCheck": "Passed: three unique scenes, twelve bilingual lines, six bounded questions, eighteen options, identity parity, six distinct production tasks and twelve rubric criteria.",
+    "modelAgentChecks": "The model agent reported twelve oral-model tests and eleven backup tests passed, including full-content-to-light-identity parity; targeted TypeScript including this data module passed.",
+    "independentLanguageReview": "A separate agent read all three scenes, choices, explanations, retell/transfer prompts, frames, models and rubrics. No blocking Italian/English, answer-witness, gist leakage or changed-detail inconsistency was found.",
+    "focusedLint": "Passed, together with the focused diff check.",
+    "browser": "Parent UI integration and isolated browser testing remain separate from this content-only review."
+  }
+}

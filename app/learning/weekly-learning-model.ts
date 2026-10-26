@@ -1,6 +1,7 @@
 import { addDays, normalise, validDate } from "./learning-utils.ts";
 import { selectReviewQueue, type ReviewCatalogue } from "./review-queue.ts";
 import { diagnosticCatchUp, type A2DiagnosticChapter, type A2DiagnosticState, type CatchUpUnit } from "./a2-diagnostic-model.ts";
+import { oralPracticeIdentities, oralRunKey } from "./oral-practice-model.ts";
 import type { Pair, Progress } from "./types.ts";
 
 export type WeeklyNextStep = { id: string; title: Pair; detail: Pair; route: string };
@@ -12,6 +13,7 @@ export type WeeklyLearningEvidence = {
   arcade: { latestItems: number; independentLatestCorrect: number; supportedLatest: number };
   selfAssessed: { grammarProductions: number; programmeCheckpoints: number; companionPages: number };
   diagnostics: { checked: number; independentCorrect: number; supported: number; chapters: number };
+  oralPractice: { completedRuns: number; gistFirstChecks: number; detailFirstChecks: number; correctWithoutTextSupport: number; supportedFirstChecks: number; laterDayTransfers: number };
   nextSteps: WeeklyNextStep[]; nextWeekPlan: { date: string; step: WeeklyNextStep }[]; hasEvidence: boolean;
 };
 export type WeeklyReportCatalogue = {
@@ -32,7 +34,9 @@ export function deriveWeeklyLearningReport(
     grammar: { exerciseDays: 0, independentFirstCorrect: 0, supportedFirst: 0, sameDayRepairs: 0, laterDayCorrect: 0, completed: 0 },
     personalWords: { latestReviews: 0 }, arcade: { latestItems: 0, independentLatestCorrect: 0, supportedLatest: 0 },
     selfAssessed: { grammarProductions: 0, programmeCheckpoints: 0, companionPages: 0 },
-    diagnostics: { checked: 0, independentCorrect: 0, supported: 0, chapters: 0 }, nextSteps: [], nextWeekPlan: [], hasEvidence: false,
+    diagnostics: { checked: 0, independentCorrect: 0, supported: 0, chapters: 0 },
+    oralPractice: { completedRuns: 0, gistFirstChecks: 0, detailFirstChecks: 0, correctWithoutTextSupport: 0, supportedFirstChecks: 0, laterDayTransfers: 0 },
+    nextSteps: [], nextWeekPlan: [], hasEvidence: false,
   };
   if (!from) return result;
   const inWeek = (date: string | undefined): date is string => !!date && validDate(date) && date >= from && date <= today;
@@ -98,6 +102,26 @@ export function deriveWeeklyLearningReport(
     }
   }
   result.diagnostics.chapters = checkedChapters.size;
+  for (const [key, run] of Object.entries(p.oralPractice?.runs ?? {})) {
+    if (!Object.hasOwn(oralPracticeIdentities, run.sceneId) || key !== oralRunKey(run.date, run.sceneId)) continue;
+    for (const kind of ["gist", "detail"] as const) {
+      const first = run[kind].first;
+      if (!first || !inWeek(first.date)) continue;
+      days.add(first.date);
+      if (kind === "gist") result.oralPractice.gistFirstChecks++;
+      else result.oralPractice.detailFirstChecks++;
+      result.oralPractice.correctWithoutTextSupport += Number(first.correct && !first.supported);
+      result.oralPractice.supportedFirstChecks += Number(first.supported);
+    }
+    if (run.stage === "complete" && inWeek(run.completed)) {
+      result.oralPractice.completedRuns++; days.add(run.completed);
+    }
+    const transfer = run.transfer;
+    if (run.stage === "complete" && run.completed && past(run.completed) && transfer?.draft.trim()
+      && transfer.checks.every(Boolean) && inWeek(transfer.completed) && transfer.completed > run.completed) {
+      result.oralPractice.laterDayTransfers++; days.add(transfer.completed);
+    }
+  }
   const queue = selectReviewQueue(p, catalogue, today, 5);
   result.nextSteps = queue.items.slice(0, 2).map((item) => ({
     id: item.canonicalId, title: item.title, route: item.route,

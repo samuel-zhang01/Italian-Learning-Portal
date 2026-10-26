@@ -46,6 +46,7 @@ const OfflineStudy = lazy(() => import("./offline").then(module => ({ default: m
 const A2DiagnosticView = lazy(() => import("./learning-insights").then(module => ({ default: module.A2DiagnosticView })));
 const WeeklyLearningReport = lazy(() => import("./learning-insights").then(module => ({ default: module.WeeklyLearningReport })));
 const ListeningView = lazy(() => import("./listening").then(module => ({ default: module.ListeningView })));
+const OralPracticeView = lazy(() => import("./oral-practice").then(module => ({ default: module.OralPracticeView })));
 const ReviewHub = lazy(() => import("./review-hub").then((module) => ({ default: module.ReviewHub })));
 
 const missions = curriculum.missions as Mission[];
@@ -348,7 +349,7 @@ export default function Portal() {
             <button
               key={id}
               onClick={() => go(id)}
-                aria-current={(routePath === id || (id === "today" && routePath === "session") || (id === "progress" && routePath === "weekly") || (id === "programmes" && routePath.split("/")[0] === "chapters") || (id === "grammar" && ["grammar", "games", "vocabulary", "words", "tense", "readiness", "reviews", "diagnostics", "listening"].includes(routePath.split("/")[0]))) ? "page" : undefined}
+                aria-current={(routePath === id || (id === "today" && routePath === "session") || (id === "progress" && routePath === "weekly") || (id === "programmes" && routePath.split("/")[0] === "chapters") || (id === "grammar" && ["grammar", "games", "vocabulary", "words", "tense", "readiness", "reviews", "diagnostics", "listening", "listen-speak"].includes(routePath.split("/")[0]))) ? "page" : undefined}
             >
               <Icon name={icon} />
               <span>{label}</span>
@@ -429,6 +430,7 @@ export default function Portal() {
               ["chapters", t("Book chapters", "Capitoli dei libri")],
               ["diagnostics", t("A2 chapter checks", "Controlli dei capitoli A2")],
               ["listening", t("Private listening", "Ascolto personale")],
+              ["listen-speak", t("Short listening & speaking", "Ascolto e parlato brevi")],
               ["weekly", t("Weekly learning report", "Resoconto settimanale")],
               ["offline", t("Offline study", "Studio offline")],
               ["reviews", t("Review queue", "Ripasso del giorno")],
@@ -459,6 +461,7 @@ export default function Portal() {
         {routePath === "diagnostics" && <A2DiagnosticView key={route} {...shared} />}
         {routePath === "weekly" && <WeeklyLearningReport {...shared} />}
         {routePath === "listening" && <ListeningView {...shared} />}
+        {routePath === "listen-speak" && <OralPracticeView key={route} {...shared} />}
         {routePath === "discover" && <DiscoveryView key={route} {...shared} />}
         {(routePath === "chapters" || routePath.startsWith("chapters/")) && <ChapterDashboard key={route} {...shared} chapterId={routePath.split("/")[1]} />}
         {routePath === "reviews" && <ReviewHub key={route} {...shared} />}
@@ -480,6 +483,7 @@ export default function Portal() {
               </p>
             )}
             <SessionPreview {...shared} missions={missions} />
+            <p className="today-oral-link"><button className="text-button" onClick={() => go("listen-speak?minutes=5")}>{t("Prefer a short listening & speaking session? · 5 or 10 minutes", "Preferisci una breve sessione di ascolto e parlato? · 5 o 10 minuti")} →</button></p>
             {reviewQueue.totalDue > 0 && <p className="today-review-link"><button className="text-button" onClick={() => go("reviews?minutes=5")}>{t(`${reviewQueue.totalDue} reviews ready · choose a short optional session`, `${reviewQueue.totalDue} ripassi pronti · scegli una breve sessione facoltativa`)} →</button></p>}
             <p className="today-chapter-link"><button className="text-button" onClick={() => go("chapters")}>{t("Explore the twenty book chapters", "Esplora i venti capitoli dei libri")} →</button></p>
             <details className="today-disclosure">
@@ -573,6 +577,7 @@ export default function Portal() {
           "diagnostics",
           "weekly",
           "listening",
+          "listen-speak",
           "discover",
           "chapters",
           "reviews",

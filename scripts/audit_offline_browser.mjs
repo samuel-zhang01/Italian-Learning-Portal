@@ -23,10 +23,13 @@ try{for(const lang of ['en','it']){
  assert.ok(paths.includes('/'));assert.ok(paths.some(p=>p.includes('/assets/grammar-')));assert.ok(paths.every(p=>p==='/'||p==='/manifest.webmanifest'||p==='/app-icon.svg'||p==='/favicon.svg'||p.startsWith('/assets/')));
  checks.push({lang,check:'Explicit complete public download',assetCount:paths.length});
  await page.goto(base+'/#session');const draft=page.locator('.session-activity textarea').first();await draft.waitFor();await draft.fill('Synthetic offline draft');
- const before=await page.evaluate(()=>localStorage.getItem('parliamo-daily-v1'));await context.setOffline(true);await page.reload();await draft.waitFor();assert.equal(await draft.inputValue(),'Synthetic offline draft');
- for(const route of ['grammar/a2-imperfetto','chapters','games','vocabulary','diagnostics','weekly','listening','progress']){await page.goto(base+'/#'+route);await page.locator('main h1').first().waitFor();assert.equal(await page.locator('main').getByText('This section could not load.',{exact:true}).count(),0)}
+ let before=await page.evaluate(()=>localStorage.getItem('parliamo-daily-v1'));await context.setOffline(true);await page.reload();await draft.waitFor();assert.equal(await draft.inputValue(),'Synthetic offline draft');
+ for(const route of ['grammar/a2-imperfetto','chapters','games','vocabulary','diagnostics','weekly','listening','listen-speak','progress']){await page.goto(base+'/#'+route);await page.locator('main h1').first().waitFor();assert.equal(await page.locator('main').getByText('This section could not load.',{exact:true}).count(),0)}
  assert.equal(await page.evaluate(()=>localStorage.getItem('parliamo-daily-v1')),before);
- checks.push({lang,check:'Offline reload, eight lazy routes and pending draft preserved'});
+ await page.goto(base+'/#listen-speak?minutes=5');await page.locator('.oral-scene-grid button').first().click();await page.locator('.oral-run').waitFor();
+ await page.locator('.oral-question input[type=radio]').first().check();before=await page.evaluate(()=>localStorage.getItem('parliamo-daily-v1'));
+ await page.reload();await page.locator('.oral-run').waitFor();assert.equal(await page.locator('.oral-question input[type=radio]').first().isChecked(),true);assert.equal(await page.evaluate(()=>localStorage.getItem('parliamo-daily-v1')),before);
+ checks.push({lang,check:'Offline reload, nine lazy routes, guided draft and new oral-practice choice preserved'});
  await context.setOffline(false);await page.goto(base+'/#offline');await page.locator('.offline-study').waitFor();
  await page.getByRole('button',{name:lang==='en'?'Check for an updated download':'Controlla aggiornamenti',exact:true}).click();await page.getByRole('status').filter({hasText:lang==='en'?'Download ready.':'Download pronto.'}).waitFor();
  await page.getByRole('button',{name:lang==='en'?'Remove offline download':'Rimuovi download offline',exact:true}).click();await page.getByRole('status').filter({hasText:lang==='en'?'Offline download removed.':'Download offline rimosso.'}).waitFor();

@@ -1,0 +1,168 @@
+{
+  "reviewedOn": "2026-10-26",
+  "status": "Passed six core browser workflows and a targeted selected-budget visual follow-up on the final build",
+  "scope": "Optional short listen/speak practice with original scenes, saved first comprehension responses, self-assessed changed-detail retelling and a later-day fresh response.",
+  "method": "Design review and reproducible synthetic learner workflows. No empirical learner study, retention experiment or pronunciation evaluation.",
+  "requirementsReview": [
+    {
+      "concern": "Text exposure must remain visible in the evidence after reload.",
+      "acceptance": "Transcript/translation or model exposure is persisted as support for subsequent gist/detail responses in that run. Audio replay alone is not labelled text support. First checked outcomes are immutable."
+    },
+    {
+      "concern": "Scene metadata and gist feedback can accidentally disclose later answers.",
+      "acceptance": "Titles and introductions do not supply the gist answer before listening; gist feedback does not reveal the still-unanswered detail answer."
+    },
+    {
+      "concern": "A reading fallback or successful multiple-choice response is narrower evidence than listening competence.",
+      "acceptance": "Device TTS and fallback reading are labelled. Reading requires explicit text reveal. UI reports first comprehension responses without recorded text support, with no independent-listening, fluency or CEFR claim."
+    },
+    {
+      "concern": "Retelling and delayed prompts can be mistaken for graded speaking or demonstrated improvement.",
+      "acceptance": "Retelling and the fresh later-day response remain explicitly self-assessed. The later response is separate evidence; neither same-day correction nor return alone establishes delayed improvement."
+    },
+    {
+      "concern": "An optional timed choice should not overwrite the learner’s ongoing course.",
+      "acceptance": "Five/ten minute choices are estimates for a pinned run. Existing plan, core progress, active programme and XP do not change. Old sparse version1 backups remain usable."
+    },
+    {
+      "concern": "Local backup handling must preserve first evidence without persisting recordings or raw source payloads.",
+      "acceptance": "Export retains authored-run evidence and drafts. Merge preserves whole overlapping local runs and adds only known nonoverlapping runs; replacement remains explicit. No microphone, recording upload, browser-profile access or network writes."
+    }
+  ],
+  "researchBoundaries": {
+    "priorReview": "docs/learning-research-review-2026-10-26.json",
+    "guidedListening": "A compact predict/listen/check/compare routine is a design inference from broader guided-listening work, rather than a reproduction of a semester classroom intervention.",
+    "retrievalAndSpacing": "The evidence supports testing and distributed practice in studied settings; it does not establish an optimal five/ten-minute route or one-day interval for this app.",
+    "transfer": "A changed-detail response asks for transfer, but passing the software workflow does not demonstrate improved spontaneous Italian conversation.",
+    "speech": "No automatic pronunciation or fluency grading and no microphone collection are part of this route."
+  },
+  "verification": {
+    "status": "passed",
+    "target": "http://127.0.0.1:5200/",
+    "isolation": "Owned standalone Chromium, fresh disposable contexts and synthetic progress/backups only. No shared CDP, browser profile or real learner records.",
+    "fullWorkflowGroups": 6,
+    "fullRunNote": "The six core workflows passed before the final budget-only visual change. They were not needlessly repeated after that styling change.",
+    "finalVisualFollowUpGroups": 1,
+    "fixedBrowserDates": [
+      "2026-10-26",
+      "2026-10-27"
+    ],
+    "verifiedWorkflows": [
+      {
+        "name": "Five-minute optional Today route",
+        "sample": "EN390",
+        "observed": "Hidden transcript/model; saved prediction and selected answer survive reload. A first wrong gist stays wrong and readonly after feedback. Later text/model views do not rewrite it. Retell drafting/support/self-check completion persist and leave ordinary plan/progress unchanged."
+      },
+      {
+        "name": "Ten-minute supported comprehension",
+        "sample": "IT320",
+        "observed": "Transcript support persists through reload, correct gist remains supported and wrong detail remains its first result. Retell edits clear checks; model-use evidence persists. The weekly card shows one completed run, one gist, one detail, zero correct without text support, two supported first responses and zero completed transfers."
+      },
+      {
+        "name": "Later-day fresh response",
+        "sample": "EN390 with browser clock",
+        "observed": "A return query creates no response before the due date. On the next calendar date, a distinct changed-situation prompt accepts a saved draft/model view and self-check completion. Original first results, retell output and completion date remain unchanged; no improvement claim is shown."
+      },
+      {
+        "name": "Local backup privacy",
+        "sample": "EN1440",
+        "observed": "Actual synthetic export contains oral evidence but no audio/recording/transcript/URL fields. Selecting a file is a nonmutating preview. Merge retains the whole conflicting local first-failure run and adds a missing scene; explicit replacement uses the incoming state. A sparse version1 backup without oral data still restores and opens."
+      },
+      {
+        "name": "Keyboard and unavailable voice",
+        "sample": "IT390 then EN interface",
+        "observed": "Voice unavailability is explained. Explicit reading records support. Keyboard checking focuses feedback; Tab reaches Continue; stage change focuses the task heading. Italian scaffolding remains available in the English interface without forcing model use."
+      },
+      {
+        "name": "Complementary layouts and capacity",
+        "sample": "EN320 and IT1440",
+        "observed": "The three-scene catalogue fits the sampled layouts. A synthetic 200-run history preserves records and shows export guidance while existing work remains available."
+      }
+    ],
+    "sampledLanguageWidths": [
+      "EN320",
+      "EN390",
+      "EN1440",
+      "IT320",
+      "IT390",
+      "IT1440"
+    ],
+    "runtimeErrors": [],
+    "blockedNetworkRequests": [],
+    "horizontalOverflow": "None in the nine full-workflow screenshot samples or two final budget samples.",
+    "speechVerification": "One Italian device-voice intent was observed using a deterministic browser stub; a separate unavailable-voice case verified supported reading. No actual audio quality, pronunciation or comprehension was measured.",
+    "screenshots": 11,
+    "visualReview": "Viewed Italian phone completion and weekly evidence, Italian desktop catalogue, and final English320 selected-five/selected-ten screenshots. The final selected button is visibly green with light text.",
+    "parentIntegratedChecks": "Parent reported 245 full tests, typecheck, lint and build passed before full workflow QA; the final style-only build also passed typecheck/lint/build.",
+    "ownedSyntaxAndEslint": "passed",
+    "gitDiffCheck": "passed",
+    "evidenceFiles": [
+      "work/oral-practice-learner-audit/browser-report.json",
+      "work/oral-practice-learner-audit/browser-report-budget.json"
+    ],
+    "harness": "scripts/audit_oral_practice_browser.mjs",
+    "rerun": "PARLIAMO_URL=http://127.0.0.1:5200 node scripts/audit_oral_practice_browser.mjs",
+    "visualFollowUp": "ORAL_QA_PHASE=budget PARLIAMO_URL=http://127.0.0.1:5200 node scripts/audit_oral_practice_browser.mjs",
+    "finalBudgetStyles": [
+      {
+        "minutes": 5,
+        "active": {
+          "selected": true,
+          "foreground": "rgb(255, 246, 227)",
+          "background": "rgb(25, 62, 45)"
+        },
+        "inactive": {
+          "selected": false,
+          "foreground": "rgb(25, 62, 45)",
+          "background": "rgb(255, 246, 227)"
+        },
+        "activeContrast": 11.052295702271824,
+        "inactiveContrast": 11.052295702271824
+      },
+      {
+        "minutes": 10,
+        "active": {
+          "selected": true,
+          "foreground": "rgb(255, 246, 227)",
+          "background": "rgb(25, 62, 45)"
+        },
+        "inactive": {
+          "selected": false,
+          "foreground": "rgb(25, 62, 45)",
+          "background": "rgb(255, 246, 227)"
+        },
+        "activeContrast": 11.052295702271824,
+        "inactiveContrast": 11.052295702271824
+      }
+    ]
+  },
+  "implementationReview": {
+    "content": "Independently read all three original bilingual scenes, gist/detail options and answer witnesses, retell models/rubrics and later-day fresh prompts. No blocking language, consistency or answer-leak issue found.",
+    "evidence": "First checked gist/detail choices are readonly. Correct-answer feedback permits continued practice but never rewrites the first response. Text/model support is monotone within its task and does not retroactively change an earlier unaided response.",
+    "accessibility": "Prebuild review raised feedback focus and Italian-scaffold concerns. The parent focused checked feedback using stable primitive identities, retained transcript-trigger focus after reveal, and kept an Italian frame available in both interface languages.",
+    "selectedBudget": "A later visual review found a global secondary-button rule hiding the selected budget treatment. The parent switched the selected button to the established primary style; the final targeted check measured distinct foreground/background styles and readable contrast for both selections."
+  },
+  "weeklyIntegration": {
+    "files": [
+      "app/learning/weekly-learning-model.ts",
+      "app/learning/learning-insights.tsx",
+      "tests/learning-insights.test.mjs"
+    ],
+    "evidence": "Known scene runs only: actual dated first gist/detail responses, recorded text support, completed runs with self-checked retelling, and fresh self-checked responses completed on a strictly later calendar day.",
+    "boundaries": "Drafts and support views do not become completions. Unknown identities and future events are excluded. The existing report fallback and recommendations are unchanged.",
+    "labels": "The bilingual card separates comprehension choices from self-assessed retelling/transfer and explicitly avoids listening-ability, speaking-improvement or proficiency claims.",
+    "focusedTests": {
+      "command": "node --test tests/learning-insights.test.mjs",
+      "passed": 19,
+      "newOralRegressions": 3,
+      "failed": 0
+    }
+  },
+  "limitations": [
+    "Synthetic workflows verify the stated software behavior; they do not establish learning gains, delayed retention or spontaneous conversation ability.",
+    "The voice API was stubbed for deterministic UI verification, so pronunciation quality, real-device voice availability and acoustic intelligibility remain untested.",
+    "The later-day task uses a new self-assessed response, not a fresh automatically graded listening test.",
+    "All exports, imports and replacements used disposable synthetic backups. No real learner data, microphone recordings or source audio were accessed.",
+    "The 200-run capacity guidance was checked in the browser. Over-capacity backup union rejection has separate model/merge regression coverage."
+  ]
+}

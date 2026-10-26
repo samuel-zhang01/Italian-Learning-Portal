@@ -1,4 +1,5 @@
 import type { A2DiagnosticState } from "./a2-diagnostic-model.ts";
+import type { OralPracticeState } from "./oral-practice-model.ts";
 
 export type Pair = { en: string; it: string };
 export type Language = keyof Pair;
@@ -66,6 +67,7 @@ export type Progress = {
   academy?: AcademyProgress;
   arcade?: ArcadeProgress;
   diagnostics?: A2DiagnosticState;
+  oralPractice?: OralPracticeState;
 };
 export type ArcadeMode = "words" | "builder" | "detective" | "conversation";
 export type ArcadeSettings = {

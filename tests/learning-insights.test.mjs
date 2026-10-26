@@ -12,6 +12,12 @@ import { emptyProgress, parseProgress } from "../app/learning/engine.ts";
 import { emptyAcademy, getGrammarDraft } from "../app/learning/academy-engine.ts";
 import { planningSources } from "../app/learning/planning-data.ts";
 import { isCorrect } from "../app/learning/learning-utils.ts";
+import {
+  advanceOralPractice, checkOralChoice, completeOralPractice, completeOralTransfer,
+  emptyOralPractice, oralPracticeIdentities, oralRunKey, saveOralChoice,
+  saveOralRetell, saveOralTransfer, seeOralTranscript, setOralRetellCheck,
+  setOralTransferCheck, startOralPractice,
+} from "../app/learning/oral-practice-model.ts";
 
 const today = "2026-10-25", chapter = a2DiagnosticChapters[0], item = chapter.items[0];
 const key = diagnosticRunKey(today, chapter.id), begin = () => startA2Diagnostic(emptyA2Diagnostics(), chapter.id, today);
@@ -229,4 +235,60 @@ test("next-week suggestions follow planned dates and never mutate the schedule o
   assert.equal(JSON.stringify(p), before);
   const none = clone(p); none.plan.days = []; assert.deepEqual(report(none).nextWeekPlan, []);
   none.plan.days = [1, 2, 3]; none.plan.start = "2027-01-01"; assert.deepEqual(report(none).nextWeekPlan, []);
+});
+
+const completedOral = (sceneId, budget, date, support = "none") => {
+  let state = startOralPractice(emptyOralPractice(), sceneId, budget, date);
+  const key = oralRunKey(date, sceneId);
+  if (support === "gist") state = seeOralTranscript(state, key);
+  state = saveOralChoice(state, key, "gist", oralPracticeIdentities[sceneId].gist);
+  state = checkOralChoice(state, key, "gist", date); state = advanceOralPractice(state, key);
+  if (budget === 10) {
+    if (support === "detail") state = seeOralTranscript(state, key);
+    state = saveOralChoice(state, key, "detail", oralPracticeIdentities[sceneId].detail);
+    state = checkOralChoice(state, key, "detail", date); state = advanceOralPractice(state, key);
+  }
+  state = saveOralRetell(state, key, "Una risposta originale con un dettaglio cambiato.");
+  state = setOralRetellCheck(state, key, 0, true); state = setOralRetellCheck(state, key, 1, true);
+  state = completeOralPractice(state, key, date);
+  return { state, key };
+};
+
+test("weekly oral evidence separates first comprehension support, completed self-checked retells and later-day transfer", () => {
+  const p = progress(), short = completedOral("oral-market", 5, "2026-10-20", "gist"), longer = completedOral("oral-invitation", 10, "2026-10-22", "detail");
+  let state = short.state;
+  state = saveOralTransfer(state, short.key, "Oggi propongo un altro dettaglio.", today);
+  state = setOralTransferCheck(state, short.key, 0, true, today); state = setOralTransferCheck(state, short.key, 1, true, today);
+  state = completeOralTransfer(state, short.key, today);
+  p.oralPractice = { version: 1, runs: { ...state.runs, ...longer.state.runs } };
+  const before = JSON.stringify(p); freeze(p); const r = report(p);
+  assert.deepEqual(r.oralPractice, { completedRuns: 2, gistFirstChecks: 2, detailFirstChecks: 1, correctWithoutTextSupport: 1, supportedFirstChecks: 2, laterDayTransfers: 1 });
+  assert.deepEqual(r.activeDays, ["2026-10-20", "2026-10-22", today]);
+  assert.equal(r.nextSteps[0].route, "today", "Optional oral practice does not alter the existing recommendation fallback.");
+  assert.equal(JSON.stringify(p), before, "The report never changes core progress, plans or oral evidence.");
+});
+
+test("oral drafts, current support views, unknown identities and future events do not become weekly completions", () => {
+  const p = progress(), run = completedOral("oral-market", 5, today);
+  let pending = startOralPractice(emptyOralPractice(), "oral-delay", 10, today);
+  pending = seeOralTranscript(pending, oralRunKey(today, "oral-delay"));
+  p.oralPractice = pending;
+  assert.deepEqual(report(p).oralPractice, { completedRuns: 0, gistFirstChecks: 0, detailFirstChecks: 0, correctWithoutTextSupport: 0, supportedFirstChecks: 0, laterDayTransfers: 0 });
+  assert.equal(report(p).hasEvidence, false, "Starting a draft or viewing support is not a completed or checked event.");
+  const stale = clone(run.state.runs[run.key]); stale.sceneId = "unknown-scene";
+  const future = completedOral("oral-invitation", 10, "2026-10-26");
+  p.oralPractice = { version: 1, runs: { ...pending.runs, "2026-10-25:unknown-scene": stale, ...future.state.runs } };
+  assert.equal(report(p).oralPractice.completedRuns, 0); assert.equal(report(p).oralPractice.gistFirstChecks, 0);
+});
+
+test("oral report uses actual completion dates and requires a later day for fresh self-checked transfer", () => {
+  const p = progress(), old = completedOral("oral-market", 5, "2026-10-18");
+  let state = saveOralTransfer(old.state, old.key, "Una nuova risposta con un cambio.", "2026-10-22");
+  state = setOralTransferCheck(state, old.key, 0, true, "2026-10-22"); state = setOralTransferCheck(state, old.key, 1, true, "2026-10-22");
+  state = completeOralTransfer(state, old.key, "2026-10-22"); p.oralPractice = state;
+  assert.equal(report(p).oralPractice.completedRuns, 0, "An old run is not a completion in this window.");
+  assert.equal(report(p).oralPractice.laterDayTransfers, 1); assert.deepEqual(report(p).activeDays, ["2026-10-22"]);
+  const invalidSameDay = clone(state); invalidSameDay.runs[old.key].transfer.completed = "2026-10-18";
+  p.oralPractice = invalidSameDay; assert.equal(report(p).oralPractice.laterDayTransfers, 0);
+  assert.equal(report(progress()).oralPractice.completedRuns, 0, "Sparse old backups have no inferred oral evidence.");
 });

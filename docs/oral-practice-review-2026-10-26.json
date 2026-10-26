@@ -1,0 +1,68 @@
+{
+  "reviewedOn": "2026-10-26",
+  "status": "validated-awaiting-publication",
+  "scope": "A dedicated optional five- or ten-minute listening/speaking path with original scenes, saved work and a later-day changed situation.",
+  "entry": "Today has a visible short-session alternative; More practice & materials also links to #listen-speak.",
+  "content": {
+    "originalScenes": 3,
+    "levels": {
+      "A1": 2,
+      "A2": 1
+    },
+    "bilingualDialogueLines": 12,
+    "boundedComprehensionQuestions": 6,
+    "immediateRetellingTasks": 3,
+    "differentLaterDayTasks": 3,
+    "source": "Newly authored public companion practice; no publisher audio, worksheet text or private book extraction added to the app.",
+    "review": "docs/oral-practice-content-review-2026-10-26.json"
+  },
+  "behaviour": [
+    "Five minutes: main-idea comprehension and a changed-detail retelling. Ten minutes also includes a detail check. Times are suggestions, with no countdown or correctness gate.",
+    "A run retains its chosen duration and scene. Choice selections, written drafts and self-checks survive reload; submitted first responses are immutable.",
+    "Opening scene text or a model records support for subsequent first checks. Replaying the device voice is separate. Earlier first checks keep their original support record.",
+    "Italian sentence frames remain visible in either interface language, with optional English translation. Full model use is recorded separately.",
+    "A new situation becomes available from the calendar day after completion. Its draft, model use, self-checks and completion date remain separate from the first task.",
+    "Weekly evidence identifies first comprehension responses, text support, self-checked runs and later-day self-checked responses without inferring speaking improvement.",
+    "The optional path keeps the ordinary plan, active programme, XP and scheduled-minute totals unchanged.",
+    "Version-one backups remain compatible. Oral practice has a bounded optional field; merge keeps whole local overlapping runs and adds missing runs. A union exceeding 200 runs is refused without dropping either backup's work.",
+    "The existing local-audio workspace retains its tab-local privacy rules; its recordings and pasted transcripts are not moved into saved oral practice."
+  ],
+  "reviewRepairs": [
+    "Render the Italian sentence frame in English UI so learners do not need to expose the full model to obtain an Italian scaffold.",
+    "Move keyboard focus to first-check feedback when the Check button is removed, using stable primitive dependencies so subsequent transcript opening retains its own focus.",
+    "Explain the 200-run merged-capacity limit accurately instead of presenting it as a damaged-record validation error.",
+    "Use the existing primary button style for the selected duration; a weaker local selector was overridden by the global secondary-button theme."
+  ],
+  "validation": {
+    "dailyTestsPassed": 245,
+    "typecheck": "passed",
+    "lint": "passed",
+    "productionBuild": "passed",
+    "isolatedLearnerBrowserGroupsPassed": 6,
+    "offlineBrowserGroupsPassed": 6,
+    "offlineScope": "Nine lazy routes, an existing guided-session draft and a new oral-practice choice survive offline reload; cache removal preserves progress.",
+    "finalDurationVisualCheck": "Passed computed colour distinction and selected5/10 screenshots at320px on the final build; six full learner workflows preceded this isolated style correction.",
+    "reports": [
+      "docs/oral-practice-learner-review-2026-10-26.json",
+      "docs/oral-practice-state-review-2026-10-26.json"
+    ],
+    "publicBuildFiles": 32
+  },
+  "researchBasis": "docs/learning-research-review-2026-10-26.json",
+  "realLearnerEvaluation": {
+    "status": "Not performed; agent simulations and browser tests verify behaviour, not learning gains.",
+    "suggestedPersonalTrial": [
+      "Complete one five-minute A1 scene; record whether text or model support was needed and whether the instructions were clear.",
+      "On a later day, try its changed situation before reopening earlier notes, then self-check or discuss it with a teacher/conversation partner.",
+      "Compare which details and forms needed help. Use that feedback to choose further practice; do not treat task length, XP or a single correct choice as fluency evidence."
+    ],
+    "collection": "No analytics, participant recruitment or messaging has been added. Any evaluation requires voluntary learner participation."
+  },
+  "limits": [
+    "The three scenes are a small practice set, not a complete listening/speaking curriculum or a proficiency test.",
+    "Speech synthesis availability and pronunciation quality vary by device; some voices need a network. Browser checks verify playback intent and fallback behaviour, not acoustic quality.",
+    "Changed-detail retelling is scaffolded and self-assessed; the app does not record or automatically grade speech.",
+    "Return tasks use a simple next-day availability rule; the app does not claim an optimal retention interval or a validated adaptive learning algorithm.",
+    "Completed work is retained, with new runs paused at 200. Users should keep progress exports; browser storage can be cleared by the device."
+  ]
+}

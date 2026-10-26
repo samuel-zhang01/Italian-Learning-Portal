@@ -1,4 +1,5 @@
 import { emptyProgress, parseProgress } from "./engine.ts";
+import { MAX_ORAL_RUNS } from "./oral-practice-model.ts";
 import type { Progress } from "./types.ts";
 
 export type BackupConflict = { area: string; key: string };
@@ -19,6 +20,7 @@ export function backupCounts(progress: Progress) {
     words: Object.keys(progress.academy?.words ?? {}).length,
     games: Object.keys(progress.arcade?.records ?? {}).length,
     diagnostics: Object.keys(progress.diagnostics?.runs ?? {}).length,
+    oralPractice: Object.keys(progress.oralPractice?.runs ?? {}).length,
   };
 }
 
@@ -32,6 +34,9 @@ export function backupMergeBase(current: Progress, raw: string | null, ids: stri
 export function mergeProgressBackups(current: Progress, incoming: Progress, ids: string[], updatedAt = new Date().toISOString()): BackupMerge {
   const local = parseProgress(JSON.stringify(current), ids);
   const remote = parseProgress(JSON.stringify(incoming), ids);
+  const oralKeys = new Set([...Object.keys(local.oralPractice?.runs ?? {}), ...Object.keys(remote.oralPractice?.runs ?? {})]);
+  // Refuse the whole merge rather than silently dropping new source runs.
+  if (oralKeys.size > MAX_ORAL_RUNS) throw new Error("oral-practice-merge-capacity");
   const out = clone(local);
   let additions = 0, conflicts = 0;
   const details: BackupConflict[] = [];
@@ -155,6 +160,10 @@ export function mergeProgressBackups(current: Progress, incoming: Progress, ids:
       for (const [id, draft] of Object.entries(run.drafts)) if (id === currentId) missing(own.drafts, { [id]: draft }, "chapter-answer-draft");
       for (const id of run.hints) if (!own.hints.includes(id)) { own.hints.push(id); additions += 1; }
     }
+  }
+  if (remote.oralPractice) {
+    out.oralPractice ??= { version: 1, runs: {} };
+    missing(out.oralPractice.runs, remote.oralPractice.runs, "listening-speaking-run", MAX_ORAL_RUNS);
   }
   out.updatedAt = updatedAt;
   return { progress: parseProgress(JSON.stringify(out), ids), additions, conflicts, details };

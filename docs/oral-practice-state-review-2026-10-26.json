@@ -1,0 +1,78 @@
+{
+  "reviewedAt": "2026-10-26",
+  "status": "model-verified-ui-findings-addressed",
+  "scope": {
+    "model": "app/learning/oral-practice-model.ts",
+    "progressIntegration": ["app/learning/types.ts", "app/learning/engine.ts", "app/learning/backup-merge.ts"],
+    "readOnlyUiReview": ["app/learning/oral-practice.tsx", "app/learning/oral-practice.css", "app/learning/portal.tsx", "app/learning/backup-transfer.tsx"],
+    "tests": "tests/oral-practice.test.mjs"
+  },
+  "savedState": {
+    "field": "Progress.oralPractice",
+    "compatibility": "Optional version-one field; sparse existing backups still load.",
+    "identities": ["oral-market", "oral-invitation", "oral-delay"],
+    "runKey": "date:sceneId",
+    "budget": "Five or ten minutes, pinned when the run starts.",
+    "sequence": "Gist check, detail check for ten-minute runs, changed-detail retelling, completion. Any first-check result permits continuing; correctness is not a completion gate.",
+    "firstEvidence": "The selected choice, correctness, support flag and first-check date are immutable. Draft selections persist before checking. Transcript/model exposure persists and supports later first checks; later support does not rewrite earlier evidence.",
+    "production": "Learner-written notes and two explicit self-checks; editing resets those checks. A completed original response is locked.",
+    "laterTask": "Opens from original completion plus one calendar day; separate draft, checks, model-exposure flag and completion date. Completed later responses are locked.",
+    "dates": "Valid future calendar dates remain import-compatible for clock/timezone differences; chronological relationships and the exact next-day due date are checked. Future tasks do not become due early.",
+    "capacity": "Maximum 200 runs; new starts pause without deleting saved evidence. Existing runs remain editable until completion."
+  },
+  "privacyAndTransfer": {
+    "persisted": "Original public portal-scene identity, bounded learner writing, selected choices, support flags, self-checks and dates.",
+    "excluded": "Audio bytes, local-file metadata, object URLs, pasted source transcripts, browser/session state and arbitrary unknown fields.",
+    "validation": "Exact allowed keys at state/run/check/first/transfer levels, known scene and choice identities, scoring-key agreement, bounded writing, stage order and date consistency.",
+    "backupMerge": "Keep each whole local overlapping run; add incoming new runs. An incoming union above 200 refuses the entire merge before applying any additions. Explicit replacement still uses the existing validated restore path.",
+    "noCreditChanges": "No XP, daily estimated-minute credit or core daily-plan changes are introduced by model completion or transfer."
+  },
+  "uiReview": {
+    "accepted": [
+      "A mismatched or absent run/scene route falls back to the catalogue with a status message.",
+      "A direct early return-task URL shows its opening date and no editable production controls.",
+      "First-check choice controls become read-only and allow continuing after an incorrect first response.",
+      "Completed original and later tasks render saved output without edit controls.",
+      "Original and later model exposure use separate state helpers; transcript opening records support before a first check.",
+      "Local-file listening remains a separate workspace reached by navigation; its media or transcript is not copied into oral-practice state."
+    ],
+    "findingAddressedByRoot": {
+      "problem": "The initial English UI rendered only the English sentence frame, hiding its Italian scaffold unless a learner opened the full model.",
+      "fix": "The shared original/transfer production block now always shows the Italian frame with lang=it and adds the English frame when translations are enabled.",
+      "verification": "Source integration inspected after the root fix; final rendered browser QA is assigned to the oral-practice browser audit."
+    },
+    "additionalFindingsAddressedByRoot": [
+      {
+        "problem": "Feedback focus depended on a first-check object reference. Re-reading stored progress creates a fresh object, so opening transcript support after checking could focus feedback again and pull the reader away from the transcript.",
+        "fix": "Focus now depends on stable primitive check-kind, first-check date and choice identity. Support-only updates do not trigger new first-feedback focus.",
+        "verification": "Final source dependency list inspected; rendered focus and transcript behavior are included in the separate browser audit."
+      },
+      {
+        "problem": "The safe refusal of a merge above 200 distinct runs used generic wording about an invalid current record.",
+        "fix": "The preview now identifies the 200-distinct-run merge limit and explains that all current work is preserved.",
+        "verification": "Final source branch inspected; the existing atomic-capacity test confirms no partial merge or pruning."
+      }
+    ],
+    "nonblockingNotes": [
+      "A model no-op preserves evidence, but the existing portal save wrapper still refreshes updatedAt. This does not create completion or XP."
+    ]
+  },
+  "validation": {
+    "oralPracticeTests": { "passed": 12, "failed": 0 },
+    "existingBackupMergeTests": { "passed": 11, "failed": 0 },
+    "focusedTypeScript": "passed for model, original scene data, engine and backup merge",
+    "focusedESLint": "passed for owned model/integration/test files",
+    "coverage": [
+      "Pinned five/ten-minute flow and advancement after an incorrect first check.",
+      "Pending selection reload, support continuity and immutable first evidence.",
+      "Production edit resets, completion locks and next-day transfer separation.",
+      "Unknown/private-field rejection, bad identities, scoring, dates, order and oversized text.",
+      "Version-one backup compatibility, whole-local-run conflict preservation and input immutability.",
+      "Two-hundred-run pause without pruning and atomic refusal of an overflowing merge.",
+      "Exact agreement between lazy authored choices and compact validation/scoring metadata.",
+      "Unchanged core daily plan, estimated minutes and XP."
+    ],
+    "browserBoundary": "This document does not claim rendered browser outcomes for the new oral-practice view; the separate owned browser audit records those after the coordinated final build."
+  },
+  "learningEvidenceBoundary": "These tests establish state integrity and implementation behavior. A typed choice is a narrow comprehension check; retelling and later tasks are self-assessed. They do not establish independent listening ability, pronunciation accuracy, retention gains or speaking improvement."
+}

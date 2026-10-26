@@ -1,0 +1,33 @@
+.oral-practice { max-width: 1120px; }
+.oral-practice > h1 { max-width: 22ch; }
+.oral-practice > p { max-width: 76ch; }
+.oral-practice .panel { margin: 24px 0; min-width: 0; }
+.oral-budget { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 12px; padding: 16px; border: 1px solid #cbbd9f; }
+.oral-budget legend { padding: 0 8px; font-weight: 700; }
+.oral-scene-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.oral-scene-grid .panel { display: flex; flex-direction: column; gap: 12px; }
+.oral-scene-grid .button { margin-top: auto; }
+.oral-stages { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 24px 0; }
+.oral-stages li { border: 1px solid #cbbd9f; padding: 10px 14px; }
+.oral-stages [aria-current="step"] { color: #fff9eb; background: #193e30; }
+.oral-run h1 { scroll-margin-top: 20px; }
+.oral-run textarea { width: 100%; }
+.oral-player .button-row { align-items: end; flex-wrap: wrap; margin-top: 18px; }
+.oral-player details { margin: 18px 0; }
+.oral-player summary, .oral-history summary, .oral-summary summary { cursor: pointer; padding-block: 12px; }
+.oral-rate { max-width: 180px; }
+.oral-transcript, .oral-model, .oral-frame { padding: 18px; background: #f8f3e7; margin-block: 18px; }
+.oral-transcript p[lang="en"], .oral-model p[lang="en"] { color: #64685a; }
+.oral-question fieldset, .oral-self-check { border: 1px solid #cbbd9f; padding: 16px; margin: 20px 0; }
+.oral-option, .oral-self-check label { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; }
+.oral-option input, .oral-self-check input { margin-top: 5px; flex: 0 0 auto; }
+.oral-option span { min-width: 0; }
+.oral-question fieldset:disabled { opacity: 1; }
+.oral-question .feedback { margin-block: 20px; }
+.oral-saved-output { white-space: pre-wrap; overflow-wrap: anywhere; padding: 18px; background: #f8f3e7; }
+.oral-history { margin: 28px 0; border-block: 1px solid #cbbd9f; padding: 12px; }
+.oral-history li { margin-block: 16px; }
+.oral-first-results li { margin-block: 12px; }
+.oral-practice :is(button, summary, input, textarea, select):focus-visible { outline: 3px solid #8c4f20; outline-offset: 3px; }
+@media (max-width: 850px) { .oral-scene-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .oral-practice .panel { padding: 20px; } .oral-stages { font-size: .88rem; } .oral-stages li { flex: 1 1 80px; padding: 8px; } .oral-practice .button-row { flex-wrap: wrap; } }

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { parseProgress, STORAGE_KEY } from "./engine";
 import { backupCounts, backupMergeBase, mergeProgressBackups } from "./backup-merge";
+import { MAX_ORAL_RUNS } from "./oral-practice-model";
 import type { Progress } from "./types";
 import "./backup-transfer.css";
 
@@ -21,6 +22,7 @@ export function BackupTransfer({ current, ids, t, apply, mergeDisabled = false }
   const previouslySaved = useRef(false);
   useEffect(() => () => { request.current += 1; }, []);
   const base = override?.atCurrent === current ? override.progress : current;
+  const oralMergeOverLimit = !!pending && new Set([...Object.keys(base.oralPractice?.runs ?? {}), ...Object.keys(pending.oralPractice?.runs ?? {})]).size > MAX_ORAL_RUNS;
   const preview = useMemo(() => {
     if (!pending || mergeDisabled) return null;
     try { return mergeProgressBackups(base, pending, ids, base.updatedAt); }
@@ -73,6 +75,7 @@ export function BackupTransfer({ current, ids, t, apply, mergeDisabled = false }
     lessons: t("Completed lessons", "Lezioni completate"), lessonDrafts: t("Lesson drafts", "Bozze delle lezioni"),
     sessions: t("Saved sessions", "Sessioni salvate"), grammar: t("Grammar records", "Schede di grammatica"),
     words: t("Personal words", "Parole personali"), games: t("Game records", "Schede dei giochi"), diagnostics: t("Chapter checks", "Controlli dei capitoli"),
+    oralPractice: t("Listening & speaking runs", "Sessioni di ascolto e parlato"),
   };
   const here = backupCounts(base), incoming = pending && backupCounts(pending);
   return <div className="backup-transfer">
@@ -87,7 +90,7 @@ export function BackupTransfer({ current, ids, t, apply, mergeDisabled = false }
       <table><thead><tr><th scope="col">{t("Saved work", "Lavoro salvato")}</th><th scope="col">{t("Here", "Qui")}</th><th scope="col">{t("Backup", "Backup")}</th></tr></thead><tbody>{Object.entries(labels).map(([key, label]) => <tr key={key}><th scope="row">{label}</th><td>{here[key as keyof typeof here]}</td><td>{incoming[key as keyof typeof incoming]}</td></tr>)}</tbody></table>
       <h4>{t("Merge missing work", "Unisci il lavoro mancante")}</h4>
       <p>{t("Merge adds missing records and nonoverlapping answers. It keeps this browser’s existing first attempts, drafts, review dates, settings and active study day. Different overlapping entries stay here; keep the source backup to retain its alternatives.", "L’unione aggiunge schede mancanti e risposte non sovrapposte. Conserva primi tentativi, bozze, date di ripasso, impostazioni e giorno di studio attivo di questo browser. Le voci sovrapposte diverse restano quelle presenti qui: conserva il backup di origine per mantenere le alternative.")}</p>
-      {preview ? <p role="status">{t(`${preview.additions} missing entries can be added; ${preview.conflicts} differing overlaps will keep the current version.`, `Si possono aggiungere ${preview.additions} voci mancanti; ${preview.conflicts} sovrapposizioni diverse manterranno la versione attuale.`)}</p> : <p>{t("Merge is unavailable until the current saved work can be validated. The replacement option below remains explicit.", "L’unione non è disponibile finché il lavoro attuale non può essere convalidato. La sostituzione qui sotto rimane un’azione esplicita.")}</p>}
+      {preview ? <p role="status">{t(`${preview.additions} missing entries can be added; ${preview.conflicts} differing overlaps will keep the current version.`, `Si possono aggiungere ${preview.additions} voci mancanti; ${preview.conflicts} sovrapposizioni diverse manterranno la versione attuale.`)}</p> : <p role="status">{oralMergeOverLimit && !mergeDisabled ? t(`Together these backups contain more than ${MAX_ORAL_RUNS} distinct listening and speaking sessions. Merge would exceed the storage limit. Keep both backups; no saved work has been removed.`, `Insieme questi backup contengono più di ${MAX_ORAL_RUNS} sessioni distinte di ascolto e parlato. L’unione supererebbe il limite di archiviazione. Conserva entrambi i backup: nessun lavoro salvato è stato eliminato.`) : t("Merge is unavailable until the current saved work can be validated. The replacement option below remains explicit.", "L’unione non è disponibile finché il lavoro attuale non può essere convalidato. La sostituzione qui sotto rimane un’azione esplicita.")}</p>}
       <button className="button primary" disabled={!preview || !preview.additions || mergeDisabled} onClick={() => accept("merge")}>{t("Merge missing work", "Unisci il lavoro mancante")}</button>
       <h4>{t("Replace everything here", "Sostituisci tutto qui")}</h4>
       <p>{t("Replacement discards this browser’s current progress and uses the selected backup’s work and settings instead. It is separate from merge.", "La sostituzione elimina i progressi attuali di questo browser e usa il lavoro e le impostazioni del backup selezionato. È distinta dall’unione.")}</p>
