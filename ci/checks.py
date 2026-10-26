@@ -59,7 +59,7 @@ def main():
               for name in ('tests', 'pass', 'fail', 'cancelled', 'skipped', 'todo')}
     require(all(len(value) == 1 for value in totals.values()), 'Node test accounting missing or ambiguous')
     totals = {name: int(value[0]) for name, value in totals.items()}
-    require(all(code == 0 for code in outcomes.values()) and totals['tests'] >= 245
+    require(all(code == 0 for code in outcomes.values()) and totals['tests'] >= 252
             and totals['pass'] == totals['tests'] and all(totals[key] == 0 for key in ('fail', 'cancelled', 'skipped', 'todo')),
             'All maintained daily commands and tests must pass without skips')
     output = work/'site-dist'

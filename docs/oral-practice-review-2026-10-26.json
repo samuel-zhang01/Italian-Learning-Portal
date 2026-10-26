@@ -34,7 +34,7 @@
     "Use the existing primary button style for the selected duration; a weaker local selector was overridden by the global secondary-button theme."
   ],
   "validation": {
-    "dailyTestsPassed": 245,
+    "dailyTestsPassed": 252,
     "typecheck": "passed",
     "lint": "passed",
     "productionBuild": "passed",
@@ -46,7 +46,9 @@
       "docs/oral-practice-learner-review-2026-10-26.json",
       "docs/oral-practice-state-review-2026-10-26.json"
     ],
-    "publicBuildFiles": 32
+    "publicBuildFiles": 32,
+    "offlineUpdateBrowserChecksPassed": 11,
+    "offlineDeliveryReview": "docs/offline-delivery-review-2026-10-26.json"
   },
   "researchBasis": "docs/learning-research-review-2026-10-26.json",
   "realLearnerEvaluation": {

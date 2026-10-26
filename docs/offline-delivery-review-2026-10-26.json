@@ -1,0 +1,116 @@
+{
+  "reviewedOn": "2026-10-26",
+  "status": "validated-awaiting-publication",
+  "problem": "Two guarded oral-practice deployments restored the previous release after the canonical offline worker returned a stale CDN body. Other public assets matched the tested release.",
+  "observedDelivery": {
+    "canonicalWorker": "HTTP 200; CF-Cache-Status HIT; Cache-Control max-age=14400; SHA-256 matched the prior learner-audit worker",
+    "zoneBrowserCacheTtlSeconds": 14400,
+    "singleUrlPurge": "Registered token returned an authorization failure; no wider credential or zone-wide purge used",
+    "cacheRulesInspection": "Not available with the registered token; no rule-level cause inferred"
+  },
+  "repair": [
+    "A deterministic 16-hex release ID covers the worker template, install manifest, icon, normalized pre-meta HTML and sorted public asset bytes. The emitted HTML and worker identify the same release without a circular hash.",
+    "Download and Check fetch fresh same-origin HTML with a unique query and no-store. Ordinary query fetches bypass the existing service-worker cache; only a validated release tag determines the fixed worker URL.",
+    "Registration uses /offline-worker.js?release=<version>. Fresh network metadata selects the latest version even when a downloaded shell and earlier worker URLs remain cached.",
+    "HTTP, network, invalid metadata, duplicate metadata and unexpected response failures use the existing error state. A failed check cannot silently reuse the older release.",
+    "The active downloaded shell remains pinned until explicit update activation. Recognition and removal accept existing canonical and new queried worker URLs.",
+    "The dedicated Italian origin adds one exact worker location with expires -1. Syntax checking and graceful reload passed; the original configuration is retained for rollback. Inherited security headers and other routes are preserved."
+  ],
+  "originCachePolicy": {
+    "addedDirective": "location = /offline-worker.js { try_files $uri =404; expires -1; }",
+    "syntaxCheck": "passed",
+    "reload": "passed",
+    "verifiedTls": true,
+    "cacheControl": "no-cache",
+    "edgeObservation": "New query responses still advertised max-age=14400; application release discovery does not rely on a successful purge or edge revalidation."
+  },
+  "validation": {
+    "dailyTestsPassed": 252,
+    "typecheck": "passed",
+    "lint": "passed",
+    "productionBuild": "passed",
+    "repeatedBuild": {
+      "release": "7381069831798209",
+      "reproducible": true,
+      "matchingShellAndWorker": true,
+      "publicPrecacheEntries": 31,
+      "hashes": {
+        "index.html": "5b6d5de0eeca1b2ba0dad98bdab5884ef60904bf51d88b420e932aa84dbebcfe",
+        "offline-worker.js": "974060a3aca645b32b4efa75eb14ca9c12585291a71f5ae18b90b15d250c0984",
+        "manifest.webmanifest": "12b91f0ec01c070bfffcfa31bea3df6fce59caa7666cd4be77b80b5822448d2a"
+      }
+    },
+    "freshOfflineBrowserGroups": 6,
+    "updateBrowserChecks": 11,
+    "updateScenarios": [
+      "Previously queried worker with immutable stale worker responses",
+      "Canonical active worker recognized by the current application"
+    ],
+    "updateChecks": [
+      {
+        "scenario": "old-release-query",
+        "check": "Old worker installed and recognized",
+        "canonical": false
+      },
+      {
+        "scenario": "old-release-query",
+        "check": "Downloaded old shell remains pinned online with its old metadata and saved draft"
+      },
+      {
+        "scenario": "old-release-query",
+        "check": "Failed fresh metadata discovery reports an error instead of silently reusing the stale worker"
+      },
+      {
+        "scenario": "old-release-query",
+        "check": "Fresh HTML discovery selects the new immutable query; explicit activation updates shell/cache without changing progress",
+        "release": "2222222222222222"
+      },
+      {
+        "scenario": "old-release-query",
+        "check": "Activated new release and unfinished draft remain available offline"
+      },
+      {
+        "scenario": "old-release-query",
+        "check": "Queried current-release registration is recognized and removed while learner storage is preserved"
+      },
+      {
+        "scenario": "legacy-canonical",
+        "check": "Old worker installed and recognized",
+        "canonical": true
+      },
+      {
+        "scenario": "legacy-canonical",
+        "check": "Downloaded old shell remains pinned online with its old metadata and saved draft"
+      },
+      {
+        "scenario": "legacy-canonical",
+        "check": "Fresh HTML discovery selects the new immutable query; explicit activation updates shell/cache without changing progress",
+        "release": "2222222222222222"
+      },
+      {
+        "scenario": "legacy-canonical",
+        "check": "Activated new release and unfinished draft remain available offline"
+      },
+      {
+        "scenario": "legacy-canonical",
+        "check": "Queried current-release registration is recognized and removed while learner storage is preserved"
+      }
+    ],
+    "runtimeErrors": [],
+    "independentReview": "No remaining blocker after worker-template and manifest bytes were included in release identity."
+  },
+  "privacy": "Owned disposable browsers and synthetic progress only. Public emitted assets remain the cache allowlist. No learner storage, source books, local audio or credentials added to the build or reports.",
+  "migrationLimit": "An actual pre-fix downloaded shell cannot execute the new discovery helper until it receives current application code. If its old update check still serves a cached release, remove the offline download, reload online, then download again. This preserves local progress.",
+  "references": [
+    {
+      "title": "Cloudflare Origin Cache Control",
+      "url": "https://developers.cloudflare.com/cache/concepts/cache-control/",
+      "use": "Origin response cache directives and the distinction between revalidation and caching."
+    },
+    {
+      "title": "Cloudflare purge cached content API",
+      "url": "https://developers.cloudflare.com/api/resources/cache/methods/purge/",
+      "use": "Exact-URL purge scope and Cache Purge permission; accepted API response alone is not delivery verification."
+    }
+  ]
+}

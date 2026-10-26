@@ -1,6 +1,27 @@
 import { useEffect, useState } from "react";
 
 type Props = { t: (en: string, it: string) => string };
+export function offlineWorkerScriptUrl(release: string | null | undefined) {
+  return release && /^[a-f0-9]{16}$/.test(release) ? `/offline-worker.js?release=${release}` : "/offline-worker.js";
+}
+export async function latestOfflineWorkerScriptUrl(currentRelease: string | null | undefined) {
+  // Ordinary query fetches bypass the pinned navigation shell. A new nonce
+  // also avoids reusing an edge-cached response from an earlier release.
+  const response = await fetch(`/?parliamo-offline-release=${crypto.randomUUID()}`, { cache: "no-store", credentials: "same-origin", redirect: "error" });
+  if (!response.ok || !response.headers.get("content-type")?.toLowerCase().includes("text/html")) throw new Error("offline-release-response");
+  const html = await response.text();
+  if (html.length > 1_000_000) throw new Error("offline-release-size");
+  const metas = new DOMParser().parseFromString(html, "text/html").querySelectorAll<HTMLMetaElement>('meta[name="parliamo-offline-version"]');
+  if (metas.length > 1 || (metas.length === 1 && !/^[a-f0-9]{16}$/.test(metas[0].content))) throw new Error("offline-release-metadata");
+  // Successful legacy HTML may not have a release tag. Network failures never
+  // fall back to an old release and pretend an update was checked.
+  return offlineWorkerScriptUrl(metas.length ? metas[0].content : currentRelease);
+}
+export function isOfflineWorkerScript(scriptURL: string | undefined, origin: string) {
+  if (!scriptURL) return false;
+  try { const url = new URL(scriptURL); return url.origin === origin && url.pathname === "/offline-worker.js"; }
+  catch { return false; }
+}
 export function OfflineStudy({ t }: Props) {
   const [registration, setRegistration] = useState<ServiceWorkerRegistration | null>(null);
   const [busy, setBusy] = useState(false);
@@ -11,7 +32,7 @@ export function OfflineStudy({ t }: Props) {
     if (!supported) return;
     let alive = true;
     navigator.serviceWorker.getRegistration("/").then(reg => {
-      if (alive && reg?.active?.scriptURL.endsWith("/offline-worker.js")) {
+      if (alive && reg && isOfflineWorkerScript(reg.active?.scriptURL, window.location.origin)) {
         setRegistration(reg); setStatus("ready"); setUpdate(Boolean(reg.waiting));
       }
     }).catch(() => { if (alive) setStatus("error"); });
@@ -20,7 +41,8 @@ export function OfflineStudy({ t }: Props) {
   async function download() {
     setBusy(true);
     try {
-      const reg = await navigator.serviceWorker.register("/offline-worker.js", { scope: "/", updateViaCache: "none" });
+      const release = document.querySelector<HTMLMetaElement>('meta[name="parliamo-offline-version"]')?.content;
+      const reg = await navigator.serviceWorker.register(await latestOfflineWorkerScriptUrl(release), { scope: "/", updateViaCache: "none" });
       await reg.update();
       const worker = reg.installing;
       if (worker) await new Promise<void>((resolve, reject) => {
@@ -45,7 +67,7 @@ export function OfflineStudy({ t }: Props) {
   async function remove() {
     setBusy(true);
     try {
-      if (registration?.active?.scriptURL.endsWith("/offline-worker.js")) await registration.unregister();
+      if (registration && isOfflineWorkerScript(registration.active?.scriptURL, window.location.origin)) await registration.unregister();
       for (const key of await caches.keys()) if (key.startsWith("parliamo-public-")) await caches.delete(key);
       setRegistration(null); setUpdate(false); setStatus("removed");
     } catch { setStatus("error"); } finally { setBusy(false); }
