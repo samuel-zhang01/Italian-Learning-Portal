@@ -1,6 +1,6 @@
 {
   "reviewedOn": "2026-10-26",
-  "status": "validated-awaiting-publication",
+  "status": "published-and-verified",
   "problem": "Two guarded oral-practice deployments restored the previous release after the canonical offline worker returned a stale CDN body. Other public assets matched the tested release.",
   "observedDelivery": {
     "canonicalWorker": "HTTP 200; CF-Cache-Status HIT; Cache-Control max-age=14400; SHA-256 matched the prior learner-audit worker",
@@ -112,5 +112,12 @@
       "url": "https://developers.cloudflare.com/api/resources/cache/methods/purge/",
       "use": "Exact-URL purge scope and Cache Purge permission; accepted API response alone is not delivery verification."
     }
-  ]
+  ],
+  "deployment": {
+    "release": "20261026T115026Z-oral-practice",
+    "sourceRevision": "eb7dc59bfbbada7c9775d9bca4e169cf0dd956da",
+    "report": "docs/deployment-oral-practice-2026-10-26.json",
+    "publicBrowserGroupsPassed": 28,
+    "publicOfflineGroupsPassed": 6
+  }
 }

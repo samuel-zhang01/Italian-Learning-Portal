@@ -1,6 +1,6 @@
 {
   "reviewedOn": "2026-10-26",
-  "status": "validated-awaiting-publication",
+  "status": "published-and-verified",
   "scope": "A dedicated optional five- or ten-minute listening/speaking path with original scenes, saved work and a later-day changed situation.",
   "entry": "Today has a visible short-session alternative; More practice & materials also links to #listen-speak.",
   "content": {
@@ -66,5 +66,12 @@
     "Changed-detail retelling is scaffolded and self-assessed; the app does not record or automatically grade speech.",
     "Return tasks use a simple next-day availability rule; the app does not claim an optimal retention interval or a validated adaptive learning algorithm.",
     "Completed work is retained, with new runs paused at 200. Users should keep progress exports; browser storage can be cleared by the device."
-  ]
+  ],
+  "deployment": {
+    "release": "20261026T115026Z-oral-practice",
+    "sourceRevision": "eb7dc59bfbbada7c9775d9bca4e169cf0dd956da",
+    "report": "docs/deployment-oral-practice-2026-10-26.json",
+    "publicBrowserGroupsPassed": 28,
+    "publicOfflineGroupsPassed": 6
+  }
 }

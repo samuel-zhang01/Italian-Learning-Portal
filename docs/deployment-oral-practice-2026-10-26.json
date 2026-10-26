@@ -1,0 +1,363 @@
+{
+  "release": "20261026T115026Z-oral-practice",
+  "releaseDirectory": "/data/italian/releases/20261026T115026Z-oral-practice",
+  "sourceRevision": "eb7dc59bfbbada7c9775d9bca4e169cf0dd956da",
+  "previousReleaseDirectory": "/data/italian/releases/20261026T100227Z-learner-audit",
+  "artifactHashes": {
+    "app-icon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "assets/academy-CflKQu81.js": "79784bb0d98d51cf9113a13ac3f35cbacdf900783a67ed5479f7f3ea6e6e1791",
+    "assets/arcade-LnXMZkmx.js": "624b076e5fd27aa7b4befc82f55ac570dd107d59e19455dbfc0a5433b6e82eb9",
+    "assets/arcade-scenes-CBQF13FH.js": "9acbc31d1846c8e67351a57d44894c6d524d8c249b3493a90ef01397d54eeadb",
+    "assets/backup-transfer-CK5E9KbO.js": "6be2ec03bd749f0c23d229a06de17a35f9570041d80798745cf6ff53a17c4534",
+    "assets/backup-transfer-ZQnUZdgZ.css": "592a44651b526292fcb66338c9cb095490cdbd079a68a806ac8e51de92ca93df",
+    "assets/chapters-CfwLknyS.css": "a8b87bb143e0bb4e4e55347a1c8d78dafba41aaba93c7059fde8c2d1332183ff",
+    "assets/chapters-_ksde4Eb.js": "6e2eb1d31cd9267fe82f9d582375de07d9d9763dd9c330f98693d26289700fa3",
+    "assets/companion-C1a_aWou.js": "33aa69d5d1375c72457af4c77918b335158497b6fa7efcdfa02f499683129bb5",
+    "assets/discovery-DNMW0pqS.js": "729974288513aa9682be63aeeeb66712b8f2fc112c290e510e70be184ecd14a2",
+    "assets/discovery-index-xM2TX-LE.js": "48862b4dab41ee9fe499246f1f7da66603b1c218d4f88eba14d7f034dcaa35df",
+    "assets/enriched-aw7Myqqf.js": "9dac619af6e374bd527081f1c50a33baa1bf31a255356d171e5c0d46f15759f4",
+    "assets/enrichment-Dtx20r_x.js": "56c7f5d9b49944e69ea7aa366ac7dee952024d11e4d3b3d75aade63b61490596",
+    "assets/grammar-DZgpOrnv.js": "2a81063ce459698f15fee8fcb4905299e06473c59d82e53316b9eb24ce07c075",
+    "assets/index-BVZJJICw.css": "73ce6beb9c36bbc0acf3fc264322139fc0fa114903ba260b751f7ed0bae8cf4c",
+    "assets/index-_koLwJT4.js": "8fc74ba83490b29fed00e464f072c1703250343b6df19550d865718d6cede152",
+    "assets/learning-insights-BLQTf6f8.css": "a8d4ba17b735c4f737b8ada17e847a45272bce7a81b6c425c1e6cdac44ae4dd0",
+    "assets/learning-insights-Cw87jGG9.js": "b878c0f9da2ee93176b9827327549276f116412e05ffbdcff8ab1a6d35d555b5",
+    "assets/listening-DYa2axRK.css": "9ceef35e541c490ce309e98afced2f1804969343e6dc761c7d075bc997746799",
+    "assets/listening-_S_eGwCT.js": "0377a1438185dcdffb873968f5a34cd9e240232d0d4647e4b9164cc8c7d3d85e",
+    "assets/navigation-BIrD2hfo.js": "f417bc8c9b74837a553bf75a11e4933a2d5a13467930fde19b195448d0d0f256",
+    "assets/offline-D-3jZ930.js": "b7dcc073e5457b78f69c8ff61af25cdc4b7e8a61faeecbdb37c93d99e4bb2bfc",
+    "assets/oral-practice-C9ivmFoo.css": "eacd3820fbc7a6ed4d884233738c6c8028993639102259f75c5da705d3ec97ea",
+    "assets/oral-practice-DISv9RrF.js": "b58f2865bd4ab6d17149c4151036466da12db233ddefdd3173e551c84534739c",
+    "assets/painted-cardboard-CX92yXJi.webp": "2267856e5f4e1c2f9388fa4fe7cc1eff3746b3354407287574e42dd51533c2db",
+    "assets/practice-tools-D2ehQP7S.js": "a8e1a9bbb7b96c1978fd1bdc3536a596e541f8b77aa58a0ebd99c45a778af568",
+    "assets/review-hub-B8nClQKU.js": "526d3b75f7184878798734b5c6acbe434d08087f8a9e04a26124dfa4f1d7f275",
+    "assets/review-hub-C0Sh_F8c.css": "e0d5c02b9b6e9f87a95ef873518983f70a779d2537782d05da904e0d2693f146",
+    "favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "index.html": "5b6d5de0eeca1b2ba0dad98bdab5884ef60904bf51d88b420e932aa84dbebcfe",
+    "manifest.webmanifest": "12b91f0ec01c070bfffcfa31bea3df6fce59caa7666cd4be77b80b5822448d2a",
+    "offline-worker.js": "974060a3aca645b32b4efa75eb14ca9c12585291a71f5ae18b90b15d250c0984"
+  },
+  "remoteHashVerification": "passed",
+  "url": "https://italian.samuelzhang.co.uk/",
+  "cleanCheckoutBuild": "identical artifacts",
+  "scope": "Only 32 site-dist files uploaded; current symlink switched atomically; previous release retained.",
+  "privacy": {
+    "privateStudyFilesPublished": false,
+    "realLearnerDataAccessed": false
+  },
+  "status": "deployed-and-verified",
+  "activatedAt": "2026-10-26T11:50:30.132941+00:00",
+  "publicHttpsVerification": {
+    "passed": true,
+    "tlsValidation": true,
+    "offlineVersion": "7381069831798209",
+    "freshUpdateMetadata": {
+      "status": 200,
+      "version": "7381069831798209",
+      "cacheControl": "no-cache",
+      "edgeCache": "DYNAMIC"
+    },
+    "method": "Fresh genuine Chromium page and same-origin browser fetches; canonical HTML entry references and release metadata plus exact SHA-256 for every non-HTML asset at the URL used by this release, including its release-specific worker query.",
+    "results": [
+      {
+        "path": "app-icon.svg",
+        "deliveredPath": "app-icon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/academy-CflKQu81.js",
+        "deliveredPath": "assets/academy-CflKQu81.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-LnXMZkmx.js",
+        "deliveredPath": "assets/arcade-LnXMZkmx.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-scenes-CBQF13FH.js",
+        "deliveredPath": "assets/arcade-scenes-CBQF13FH.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/backup-transfer-CK5E9KbO.js",
+        "deliveredPath": "assets/backup-transfer-CK5E9KbO.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/backup-transfer-ZQnUZdgZ.css",
+        "deliveredPath": "assets/backup-transfer-ZQnUZdgZ.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-CfwLknyS.css",
+        "deliveredPath": "assets/chapters-CfwLknyS.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-_ksde4Eb.js",
+        "deliveredPath": "assets/chapters-_ksde4Eb.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/companion-C1a_aWou.js",
+        "deliveredPath": "assets/companion-C1a_aWou.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-DNMW0pqS.js",
+        "deliveredPath": "assets/discovery-DNMW0pqS.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-index-xM2TX-LE.js",
+        "deliveredPath": "assets/discovery-index-xM2TX-LE.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enriched-aw7Myqqf.js",
+        "deliveredPath": "assets/enriched-aw7Myqqf.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enrichment-Dtx20r_x.js",
+        "deliveredPath": "assets/enrichment-Dtx20r_x.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/grammar-DZgpOrnv.js",
+        "deliveredPath": "assets/grammar-DZgpOrnv.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-BVZJJICw.css",
+        "deliveredPath": "assets/index-BVZJJICw.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-_koLwJT4.js",
+        "deliveredPath": "assets/index-_koLwJT4.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/learning-insights-BLQTf6f8.css",
+        "deliveredPath": "assets/learning-insights-BLQTf6f8.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/learning-insights-Cw87jGG9.js",
+        "deliveredPath": "assets/learning-insights-Cw87jGG9.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/listening-DYa2axRK.css",
+        "deliveredPath": "assets/listening-DYa2axRK.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/listening-_S_eGwCT.js",
+        "deliveredPath": "assets/listening-_S_eGwCT.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/navigation-BIrD2hfo.js",
+        "deliveredPath": "assets/navigation-BIrD2hfo.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/offline-D-3jZ930.js",
+        "deliveredPath": "assets/offline-D-3jZ930.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/oral-practice-C9ivmFoo.css",
+        "deliveredPath": "assets/oral-practice-C9ivmFoo.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/oral-practice-DISv9RrF.js",
+        "deliveredPath": "assets/oral-practice-DISv9RrF.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/painted-cardboard-CX92yXJi.webp",
+        "deliveredPath": "assets/painted-cardboard-CX92yXJi.webp",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-tools-D2ehQP7S.js",
+        "deliveredPath": "assets/practice-tools-D2ehQP7S.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-B8nClQKU.js",
+        "deliveredPath": "assets/review-hub-B8nClQKU.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-C0Sh_F8c.css",
+        "deliveredPath": "assets/review-hub-C0Sh_F8c.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "favicon.svg",
+        "deliveredPath": "favicon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "manifest.webmanifest",
+        "deliveredPath": "manifest.webmanifest",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "offline-worker.js",
+        "deliveredPath": "offline-worker.js?release=7381069831798209",
+        "status": 200,
+        "hashMatch": true,
+        "cacheControl": "max-age=14400",
+        "edgeCache": "MISS"
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "currentAssetReferences": true,
+        "offlineVersion": "7381069831798209"
+      }
+    ],
+    "blockedRequests": []
+  },
+  "verifiedAt": "2026-10-26T11:53:50.690237+00:00",
+  "validation": {
+    "dailyTestsPassed": 252,
+    "typecheck": "passed",
+    "lint": "passed",
+    "productionBuild": "passed",
+    "sourceCI": {
+      "conclusion": "success",
+      "databaseId": 40317854837,
+      "headSha": "eb7dc59bfbbada7c9775d9bca4e169cf0dd956da",
+      "status": "completed",
+      "updatedAt": "2026-10-26T11:49:57Z",
+      "url": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/40317854837"
+    },
+    "oralPracticeLearnerBrowser": {
+      "groupsPassed": 6,
+      "durationVisualStatesPassed": 2,
+      "report": "docs/oral-practice-learner-review-2026-10-26.json",
+      "scope": "Local feature workflows, followed by selected-duration visual checks; the subsequent cache fix changed only offline delivery and build metadata."
+    },
+    "offlineUpdateBrowser": {
+      "checksPassed": 11,
+      "scenarioCount": 2,
+      "report": "docs/offline-delivery-review-2026-10-26.json"
+    },
+    "publicBrowser": {
+      "groupsPassed": 28,
+      "errors": [],
+      "failedResources": [],
+      "unexpectedBlockedRequests": [],
+      "languages": [
+        "en",
+        "it"
+      ],
+      "widths": [
+        320,
+        390,
+        1440
+      ],
+      "method": "Standalone owned Chromium, disposable synthetic contexts, strict TLS and same-origin GET/HEAD only"
+    },
+    "publicOffline": {
+      "checks": [
+        {
+          "language": "en",
+          "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
+          "version": "7381069831798209",
+          "workerQuery": "?release=7381069831798209",
+          "assetCount": 31
+        },
+        {
+          "language": "en",
+          "check": "Offline reload, nine lazy routes, guided draft and oral choice preserve stored progress"
+        },
+        {
+          "language": "en",
+          "check": "Online current-release recheck and queried-worker removal preserve progress"
+        },
+        {
+          "language": "it",
+          "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
+          "version": "7381069831798209",
+          "workerQuery": "?release=7381069831798209",
+          "assetCount": 31
+        },
+        {
+          "language": "it",
+          "check": "Offline reload, nine lazy routes, guided draft and oral choice preserve stored progress"
+        },
+        {
+          "language": "it",
+          "check": "Online current-release recheck and queried-worker removal preserve progress"
+        }
+      ],
+      "passed": true,
+      "errors": [],
+      "unexpectedBlockedRequests": []
+    }
+  },
+  "priorAttempts": [
+    {
+      "release": "20261026T112220Z-oral-practice",
+      "sourceRevision": "195aaa860453a6b5c28a3d545c79eb7e68079fbb",
+      "status": "rolled-back-after-public-verification-failure",
+      "previousReleaseDirectory": "/data/italian/releases/20261026T100227Z-learner-audit"
+    },
+    {
+      "release": "20261026T112416Z-oral-practice",
+      "sourceRevision": "195aaa860453a6b5c28a3d545c79eb7e68079fbb",
+      "status": "rolled-back-after-public-verification-failure",
+      "previousReleaseDirectory": "/data/italian/releases/20261026T100227Z-learner-audit"
+    }
+  ],
+  "deliveryRepair": {
+    "review": "docs/offline-delivery-review-2026-10-26.json",
+    "workerUrl": "/offline-worker.js?release=7381069831798209",
+    "freshMetadataVerified": true,
+    "originExactWorkerRevalidationRule": "applied; syntax and TLS response verified",
+    "canonicalLegacyWorker": "Earlier canonical URL can remain cached until its existing CDN lifetime ends. Current application downloads and updates use fresh metadata and a release-specific URL.",
+    "singleUrlPurge": "Unavailable with registered token; no wider credentials or zone-wide change used."
+  },
+  "review": "docs/oral-practice-review-2026-10-26.json",
+  "research": "docs/learning-research-review-2026-10-26.json",
+  "rollbackNote": "Previous learner-audit release retained. Current offline downloads remain pinned until explicit activation. For a pre-fix download that still cannot find the new release, remove its offline download, reload online and download again; local progress is preserved."
+}
