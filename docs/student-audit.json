@@ -199,7 +199,7 @@
     "contentReview": "docs/week3-content-review-2026-10-28.json",
     "profileRaceReview": "docs/profile-adversarial-review-2026-10-28.json",
     "profileBrowserCommand": "node scripts/audit_profile_browser.mjs",
-    "observedLocalProfileGroups": 6,
+    "observedLocalProfileGroups": 7,
     "observedBuiltArcadeBrowserGroups": 14,
     "dailyTestsPassed": 279,
     "preservation": "Existing mission IDs, first-attempt records and version-one backups remain valid. New source homework is not completed. Synthetic browser fixtures only.",
@@ -214,6 +214,12 @@
       "uiScore": 10,
       "uiThreshold": 9.5,
       "openCriticalIssues": 0
-    }
+    },
+    "publicProfileGroups": 7,
+    "publicArcadeGroups": 14,
+    "publicOfflineGroups": 6,
+    "published": true,
+    "release": "20261028T162717Z-booster",
+    "deploymentReport": "docs/deployment-booster-2026-10-28.json"
   }
 }

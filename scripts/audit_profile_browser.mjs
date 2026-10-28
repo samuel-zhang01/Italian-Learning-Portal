@@ -32,7 +32,7 @@ const device = async width => {
   await page.locator(".daily-header").waitFor();
   return { context, page };
 };
-const go = async (page, route) => { await page.evaluate(route => { location.hash = route; }, route); await page.locator(route === "profile" ? ".profile-page" : ".reflection textarea").waitFor(); };
+const go = async (page, route) => { await page.evaluate(route => { location.hash = route; }, route); await page.locator(route === "profile" ? ".profile-page" : route === "games" ? ".arcade" : ".reflection textarea").waitFor(); };
 const saved = async page => { await page.waitForFunction(() => document.querySelector(".profile-sync-status")?.textContent === "Saved online"); };
 const notes = page => page.evaluate(() => JSON.parse(localStorage.getItem("parliamo-daily-v1")).notes);
 const edit = async (page, text) => { await go(page, "progress"); await page.locator(".reflection textarea").fill(text); };
@@ -63,6 +63,26 @@ try {
   assert.ok(!storage.includes(pin));
   assert.ok(!a.page.url().includes(pin));
   record("A fresh phone signs in case-insensitively; the PIN is absent from browser storage and URLs, and JavaScript cannot read the session cookie");
+  phase = "game-record-and-draft-transfer";
+  await go(a.page, "games");
+  await a.page.locator("#arcade-game").selectOption("verbs");
+  await a.page.locator("#arcade-focus").selectOption("past");
+  await a.page.locator(".arcade-customise summary").click();
+  await a.page.getByRole("combobox", { name: /^Answer support/ }).selectOption("recall");
+  await a.page.getByRole("button", { name: /Let’s play/ }).click();
+  await a.page.locator("#arcade-answer").fill("sbagliato");
+  await a.page.getByRole("button", { name: "Check answer", exact: true }).click();
+  await a.page.getByRole("button", { name: /Next question/ }).click();
+  await a.page.locator("#arcade-answer").fill("sono");
+  await go(a.page, "profile"); await saved(a.page);
+  const game = await a.page.evaluate(() => JSON.parse(localStorage.getItem("parliamo-daily-v1")).arcade);
+  assert.ok(Object.keys(game.records).length > 0);
+  await b.page.getByRole("button", { name: "Sync now", exact: true }).click(); await saved(b.page);
+  assert.deepEqual(await b.page.evaluate(() => JSON.parse(localStorage.getItem("parliamo-daily-v1")).arcade), game);
+  await go(b.page, "games");
+  assert.equal(await b.page.locator("#arcade-answer").inputValue(), "sono");
+  await go(b.page, "profile"); await saved(b.page);
+  record("A real past-tense round transfers its submitted first attempt, review record, chosen settings and unfinished typed answer to the phone");
   phase = "two-device-conflict";
   await a.context.setOffline(true);
   await edit(a.page, "Computer practice written offline.");
@@ -110,6 +130,7 @@ try {
   record("Refresh resumes the profile without asking for the PIN; no uncaught browser errors");
   await fs.writeFile(`${output}/results.json`, JSON.stringify({ passed: true, checks, uncaughtErrors: errors, live, syntheticDataOnly: true, securityChecks: { httpOnly: true, sameSiteStrict: true, secureInProduction: live, pinAbsentFromStorageAndUrls: true }, limitations: "Chromium synthetic journeys, not physical-device or penetration testing." }, null, 2) + "\n");
 } catch (error) {
-  await fs.writeFile(`${output}/failure.json`, JSON.stringify({ phase, errorName: error.name, completedChecks: checks }, null, 2) + "\n");
+  const safeMessage = String(error.message).replaceAll(pin, "[PIN withheld]").replaceAll(username, "[test profile]").slice(0, 1800);
+  await fs.writeFile(`${output}/failure.json`, JSON.stringify({ phase, errorName: error.name, message: safeMessage, completedChecks: checks }, null, 2) + "\n");
   throw new Error(`Profile browser audit failed during ${phase}; credentials and browser state withheld`);
 } finally { await browser.close(); }

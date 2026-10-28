@@ -1,24 +1,51 @@
 {
-  "passed": true,
-  "checks": [
-    "Creating a profile preserves and uploads existing guest work",
-    "A fresh phone signs in case-insensitively; the PIN is absent from browser storage and URLs, and JavaScript cannot read the session cookie",
-    "Concurrent offline and phone edits require an explicit choice; both recovery downloads are intact and the chosen version reaches the other device",
-    "Expired sign-in retains unsynced work and uploads it after reauthentication",
-    "Sign-out clears only this device; signing back in restores saved work and the other device remains signed in",
-    "Refresh resumes the profile without asking for the PIN; no uncaught browser errors"
-  ],
-  "uncaughtErrors": [],
-  "live": false,
-  "syntheticDataOnly": true,
-  "securityChecks": {
-    "httpOnly": true,
-    "sameSiteStrict": true,
-    "secureInProduction": false,
-    "pinAbsentFromStorageAndUrls": true
-  },
-  "limitations": "Chromium synthetic journeys, not physical-device or penetration testing.",
   "reviewedOn": "2026-10-28",
   "command": "node scripts/audit_profile_browser.mjs",
-  "localTarget": "http://127.0.0.1:5197"
+  "local": {
+    "passed": true,
+    "checks": [
+      "Creating a profile preserves and uploads existing guest work",
+      "A fresh phone signs in case-insensitively; the PIN is absent from browser storage and URLs, and JavaScript cannot read the session cookie",
+      "A real past-tense round transfers its submitted first attempt, review record, chosen settings and unfinished typed answer to the phone",
+      "Concurrent offline and phone edits require an explicit choice; both recovery downloads are intact and the chosen version reaches the other device",
+      "Expired sign-in retains unsynced work and uploads it after reauthentication",
+      "Sign-out clears only this device; signing back in restores saved work and the other device remains signed in",
+      "Refresh resumes the profile without asking for the PIN; no uncaught browser errors"
+    ],
+    "uncaughtErrors": [],
+    "live": false,
+    "syntheticDataOnly": true,
+    "securityChecks": {
+      "httpOnly": true,
+      "sameSiteStrict": true,
+      "secureInProduction": false,
+      "pinAbsentFromStorageAndUrls": true
+    },
+    "limitations": "Chromium synthetic journeys, not physical-device or penetration testing."
+  },
+  "production": {
+    "passed": true,
+    "checks": [
+      "Creating a profile preserves and uploads existing guest work",
+      "A fresh phone signs in case-insensitively; the PIN is absent from browser storage and URLs, and JavaScript cannot read the session cookie",
+      "A real past-tense round transfers its submitted first attempt, review record, chosen settings and unfinished typed answer to the phone",
+      "Concurrent offline and phone edits require an explicit choice; both recovery downloads are intact and the chosen version reaches the other device",
+      "Expired sign-in retains unsynced work and uploads it after reauthentication",
+      "Sign-out clears only this device; signing back in restores saved work and the other device remains signed in",
+      "Refresh resumes the profile without asking for the PIN; no uncaught browser errors"
+    ],
+    "uncaughtErrors": [],
+    "live": true,
+    "syntheticDataOnly": true,
+    "securityChecks": {
+      "httpOnly": true,
+      "sameSiteStrict": true,
+      "secureInProduction": true,
+      "pinAbsentFromStorageAndUrls": true
+    },
+    "limitations": "Chromium synthetic journeys, not physical-device or penetration testing."
+  },
+  "productionCommand": "PARLIAMO_URL=https://italian.samuelzhang.co.uk PROFILE_REPORT_DIR=work/release-booster/profile-public-final node scripts/audit_profile_browser.mjs --live-fixture",
+  "initialHarnessIssue": "An added game-transfer test initially timed out because its exact-label locator did not match the select. Correcting the test locator made all seven local and public groups pass; no application change was needed.",
+  "privacy": "Fresh isolated browsers and disposable synthetic profiles only. PINs and cookie values are never printed or recorded in evidence."
 }
