@@ -1,0 +1,88 @@
+{
+  "reviewedOn": "2026-10-28",
+  "reviewer": "booster_ui agent",
+  "scope": {
+    "implementedHere": "Vocabulary and verb extension of the existing Arcade; compact planning projection; responsive controls.",
+    "independentlyReviewed": "Profile client, three-way merge, IndexedDB store and Python API written by other agents.",
+    "notClaimed": "The feature author is not an independent scorer of the booster UI. Production routing and deployment are verified separately."
+  },
+  "publishedPractice": {
+    "verbs": 50,
+    "verbQuestions": 600,
+    "curatedNouns": 32,
+    "nounQuestions": 64,
+    "wordBankEntries": 328,
+    "newQuestionIds": 664,
+    "oldIdsPreserved": true,
+    "newMainNavigationItems": 0
+  },
+  "boosterEvidence": {
+    "unitCommand": "node --experimental-strip-types --test tests/booster.test.mjs tests/arcade.test.mjs tests/planning-metadata.test.mjs",
+    "unitTestsPassed": 25,
+    "browserCommand": "node --experimental-strip-types scripts/audit_arcade_browser.mjs",
+    "browserCheckGroupsPassed": 14,
+    "browserArtifacts": "work/arcade-browser/results.json and screenshots (synthetic records only)",
+    "viewports": [
+      320,
+      390,
+      1440
+    ],
+    "languages": [
+      "en",
+      "it"
+    ],
+    "checked": [
+      "All five game modes complete a round and produce a valid progress backup.",
+      "A wrong first answer remains unchanged after later correct practice.",
+      "Hints, typed drafts, selected settings and completed answers survive reload.",
+      "Verb difficulty separates present and past; mixed rounds contain both tenses.",
+      "Masculine and feminine essere forms, reflexive pronouns and authored participle alternatives are accepted; wrong auxiliary, person and missing accent remain incorrect.",
+      "A correct feminine answer remains visible as entered instead of being replaced by a masculine model.",
+      "Noun plural recall checks the complete article and noun; saving adds it to the personal word bank.",
+      "The six-person conjugation table and named source references are optional and fit narrow screens.",
+      "No horizontal overflow at tested widths; new primary controls have at least 44px targets.",
+      "Keyboard selection and answering work; feedback receives focus.",
+      "No browser runtime errors in the audited journeys.",
+      "Lightweight planning metadata has the same review identities as the complete catalogue without importing full teaching bodies into initial hydration."
+    ],
+    "typecheck": "passed",
+    "focusedLint": "passed",
+    "diffWhitespaceCheck": "passed"
+  },
+  "independentProfileReview": {
+    "verdict": "Pass for the reviewed implementation after the request-window fixes; this is an engineering review, not a security certification or observed learner study.",
+    "securityRead": [
+      "PIN hashes use a random per-profile salt, scrypt and a separate server-side HMAC pepper.",
+      "API responses and progress exports do not contain raw PINs or PIN hashes.",
+      "Session tokens are random, stored hashed server-side and placed in an HttpOnly, SameSite=Strict, Secure production cookie.",
+      "Writes enforce the configured origin; payload size, schema envelope, authentication attempts and active handler count are bounded.",
+      "Per-account and IP throttles persist in the database; client IP forwarding is accepted only from configured trusted proxies.",
+      "Three-way merging treats related activity records atomically, merges independent changes and exposes overlapping changes for a user decision."
+    ],
+    "findingsResolved": [
+      {
+        "finding": "A learner could type during the first profile PUT and have those edits replaced by the pre-request snapshot.",
+        "repair": "Rebase edits made while joining and leave them marked as saving until the next successful sync."
+      },
+      {
+        "finding": "A learner could type while logout was pending and have that new work cleared after the response.",
+        "repair": "Retain local work, report the expired session and require sign-in before another upload."
+      }
+    ],
+    "regressionCommand": "node --experimental-strip-types --test tests/profile-sync-races.test.mjs",
+    "regressionTestsPassed": 5,
+    "regressionCases": [
+      "Typing while the first join save is delayed survives locally and reaches the server on the next sync.",
+      "Typing while logout is delayed survives locally; the expired state prevents further sync requests.",
+      "Changing a synced profile immediately shows saving and remains saving while its PUT is delayed.",
+      "Typing while IndexedDB stores the merge base remains pending and reaches the server on the next sync.",
+      "Stopping during an IndexedDB write prevents the cancelled operation from republishing a profile link or a false synced state."
+    ],
+    "remainingLimits": [
+      "No production reverse-proxy or TLS assertion is made by this code review.",
+      "The short PIN is protected with hashing and throttling; a short PIN is not equivalent to a high-entropy password.",
+      "Long-term usability and learning outcomes still need real learner observation."
+    ],
+    "scoreNote": "This bounded engineering review does not assign a numeric product score. Separate independent learner/UI rubrics assess the requested thresholds."
+  }
+}

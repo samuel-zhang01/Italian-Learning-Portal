@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-28",
+  "reviewer": "independent profile API implementation agent",
+  "scope": [
+    "app/learning/profile-merge.ts",
+    "app/learning/profile-sync.ts",
+    "app/learning/profile-store.ts",
+    "app/learning/profile.tsx",
+    "app/learning/portal.tsx profile integration"
+  ],
+  "method": "Read-only frontend source review and deterministic executions of the actual sync controller with delayed synthetic HTTP and IndexedDB operations. The implementing agent repaired the findings, then this reviewer reran the reproductions.",
+  "findings": [
+    {
+      "issue": "Typing during the join request could be overwritten by the earlier local snapshot.",
+      "resolution": "Join rebases against the latest local state and preserves new work. Joining another profile pauses when intervening changes need a fresh choice.",
+      "verification": "Typing during join remains present; state reports saving.",
+      "status": "resolved"
+    },
+    {
+      "issue": "Typing during logout could be cleared after the logout response.",
+      "resolution": "Logout compares the state captured before its request and retains intervening local work for a later authenticated upload.",
+      "verification": "Typing during logout remains present; state reports expired rather than claiming it was saved online.",
+      "status": "resolved"
+    },
+    {
+      "issue": "The controller continued to report synced during the autosave debounce window.",
+      "resolution": "New changes immediately report saving, and pending changes made during an upload trigger another save.",
+      "verification": "A dirty debounce interval reports saving.",
+      "status": "resolved"
+    },
+    {
+      "issue": "A delayed IndexedDB completion could relink a stopped controller's previous identity over the newly selected profile.",
+      "resolution": "Generation and stopped guards prevent the late completion from changing the active link.",
+      "verification": "After the delayed Samuel write completes, the newly selected Anna identity remains selected.",
+      "status": "resolved"
+    },
+    {
+      "issue": "Backend throttling errors, username restrictions and optional account privacy copy were inconsistent with frontend presentation.",
+      "resolution": "The UI recognizes try-later, uses the API's username pattern, and explains optional online profile storage.",
+      "verification": "Source review of error handling, username input and privacy copy.",
+      "status": "resolved"
+    },
+    {
+      "issue": "The recovery controls exposed only the local snapshot even though both local and remote pre-resolution snapshots were retained.",
+      "resolution": "The collapsed saved-copies controls expose both the device and online snapshots.",
+      "verification": "Source review confirms separate local and remote recovery downloads.",
+      "status": "resolved"
+    }
+  ],
+  "reproduction": {
+    "command": "node --experimental-strip-types work/profile-adversarial/races.mjs",
+    "synthetic_cases": 4,
+    "passed": 4,
+    "evidence": "work/profile-adversarial/results.json"
+  },
+  "backend_verification": {
+    "command": "python3 -m unittest discover -s tests -p test_profile_api.py -v",
+    "passed": 13,
+    "coverage": [
+      "salted PIN hashes, separate pepper and opaque hashed sessions",
+      "production cookie flags and no-store responses",
+      "cross-device progress and restart persistence",
+      "atomic revision conflicts and cross-tab profile identity guard",
+      "durable account and IP throttles with proxy-header spoof protection",
+      "origin, request type, JSON and body size restrictions",
+      "anonymous and other-profile isolation",
+      "logout, expiry, invalid pepper configuration and large progress round trip"
+    ]
+  },
+  "conclusion": "No remaining blocker in the reproduced frontend races or the tested API contract. Phone and desktop visual usability and production deployment verification are separate review scopes.",
+  "limitations": [
+    "Synthetic records only; no real learner accounts or records were accessed.",
+    "This report does not assign a phone or desktop UI score and is not a security certification.",
+    "Production correctness depends on the documented HTTPS reverse proxy, private service binding, persistent database volume and separately retained pepper."
+  ]
+}

@@ -60,6 +60,7 @@ const state = () =>
 const go = async (route) => {
   await page.goto(`${url}/#${route}`);
   await page.waitForSelector(".daily-header");
+  if (route.startsWith("games")) await page.locator(".arcade").waitFor({ state: "visible" });
 };
 const seed = async (p) => {
   await page.evaluate(
@@ -68,6 +69,7 @@ const seed = async (p) => {
   );
   await page.reload();
   await page.waitForSelector(".daily-header");
+  if (new URL(page.url()).hash.startsWith("#games")) await page.locator(".arcade").waitFor({ state: "visible" });
 };
 const ok = (label) => {
   checks.push(label);
@@ -76,6 +78,7 @@ const ok = (label) => {
 const getItem = (p) =>
   arcadeItemById.get(p.arcade.active.itemIds[p.arcade.active.index]);
 const answerCurrent = async (wrong = false) => {
+  await page.locator(".arcade-question").waitFor({ state: "visible" });
   const p = await state(),
     q = getItem(p),
     r = p.arcade.active;
@@ -124,14 +127,14 @@ try {
   );
   await page.locator(".today-options > summary").click();
   await button("Open games").click();
-  await page.locator(".arcade-mode").first().waitFor({ state: "visible" });
-  assert.equal(await page.locator(".arcade-mode").count(), 4);
+  await page.locator("#arcade-game").waitFor({ state: "visible" });
+  assert.equal(await page.locator("#arcade-game option").count(), 5);
   assert.equal(
     await page.locator(".arcade-customise").getAttribute("open"),
     null,
   );
   ok("Today has one game entry; tool menus and game settings start collapsed");
-  for (const mode of ["words", "builder", "detective", "conversation"]) {
+  for (const mode of ["words", "verbs", "builder", "detective", "conversation"]) {
     const p = { ...emptyProgress(), arcade: emptyArcade() };
     p.arcade.settings.mode = mode;
     await seed(p);
@@ -169,6 +172,43 @@ try {
       `${mode}: complete round, single question, hint/correction evidence, reload and valid backup`,
     );
   }
+  let booster = { ...emptyProgress(), arcade: emptyArcade() };
+  booster.arcade.settings.mode = "verbs";
+  booster.arcade.settings.support = "recall";
+  booster.arcade.settings.verbLevel = "past";
+  booster = startArcadeRound(booster, [arcadeItemById.get("verb:andare:past:0")], today, "female-past", true);
+  await seed(booster);
+  await page.locator("#arcade-answer").fill("sono andata");
+  await page.reload();
+  await page.locator("#arcade-answer").waitFor({ state: "visible" });
+  assert.equal(await page.locator("#arcade-answer").inputValue(), "sono andata");
+  await button("Check answer").click();
+  assert.equal(await page.locator(".arcade-answer").innerText(), "sono andata");
+  assert.equal((await state()).arcade.records["verb:andare:past:0"].last.correct, true);
+  assert.equal(await page.locator(".booster-forms").getAttribute("open"), null);
+  await page.locator(".booster-forms summary").click();
+  assert.equal(await page.locator(".booster-forms tbody tr").count(), 6);
+  await page.locator(".arcade-round-help summary").click();
+  assert.match(await page.locator(".arcade-source-note").innerText(), /original practice/);
+  assert.ok(!/src-[a-f0-9]/.test(await page.locator(".arcade-source-note").innerText()));
+  for (const width of [320, 390, 1440]) {
+    await page.setViewportSize({ width, height: width > 600 ? 1000 : 844 });
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
+    await page.screenshot({ path: `${output}/en-${width}-verb-feedback.png`, fullPage: true });
+  }
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  ok("Typed past tense preserves drafts and accepted feminine answer; six-person reminder and named lesson sources fit phone and desktop");
+  booster = { ...emptyProgress(), arcade: emptyArcade() };
+  booster.arcade.settings.wordFocus = "articles";
+  booster.arcade.settings.support = "recall";
+  booster = startArcadeRound(booster, [arcadeItemById.get("noun:zaino:plural")], today, "noun-plural", true);
+  await seed(booster);
+  await page.locator("#arcade-answer").fill("gli zaini");
+  await button("Check answer").click();
+  assert.equal((await state()).arcade.records["noun:zaino:plural"].last.correct, true);
+  await button("Save this word").click();
+  assert.ok(Object.values((await state()).academy.words).some((word) => word.term.it === "lo zaino" && word.starred));
+  ok("Noun plural recall checks the full article+noun phrase and saves the noun to the personal word bank");
   let p = { ...emptyProgress(), arcade: emptyArcade() };
   p.arcade.settings.mode = "builder";
   p.arcade.settings.support = "recall";
@@ -241,7 +281,7 @@ try {
           `${language}/${width}/settings:${expanded}`,
         );
         const rects = await page
-          .locator(".arcade-mode, .arcade-start .button")
+          .locator("#arcade-game, #arcade-focus, .arcade-start .button")
           .evaluateAll((els) =>
             els.map((el) => {
               const r = el.getBoundingClientRect();
@@ -296,8 +336,8 @@ try {
   await go("games");
   p = { ...emptyProgress(), arcade: emptyArcade() };
   await seed(p);
-  await page.locator(".arcade-mode").nth(0).focus();
-  await page.keyboard.press("Enter");
+  await page.locator("#arcade-game").focus();
+  await page.keyboard.press("Home");
   assert.equal((await state()).arcade.settings.mode, "words");
   await button("Let’s play").focus();
   await page.keyboard.press("Enter");

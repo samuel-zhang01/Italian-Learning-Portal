@@ -1,0 +1,89 @@
+{
+  "reviewedOn": "2026-10-28",
+  "scope": "One private Python/SQLite profile API behind the existing HTTPS site; frontend remains a separate static build.",
+  "status": "implemented-and-locally-tested; deployment owned by parent agent",
+  "files": [
+    "server/profile_api.py",
+    "server/Dockerfile",
+    "server/README.md",
+    "tests/test_profile_api.py",
+    "tests/profile-api.test.mjs"
+  ],
+  "authentication": {
+    "username": "3\u201332 ASCII letters/digits/_/-, first alphanumeric; case-insensitive identity; preserved display capitalization",
+    "pin": "Six digits; repeated-digit and consecutive ascending/descending sequences refused at registration",
+    "verifier": "scrypt N=32768, r=8, p=3, 32-byte output and a random 16-byte salt per profile; HMAC-SHA256 with a separate private 32-byte pepper precedes scrypt.",
+    "secretHandling": "The PIN is never returned, logged, placed in URLs or stored as plaintext. The pepper file has mode 0600 and is separate from the database; startup never generates or replaces it. The user chooses their real PIN in the app.",
+    "session": "A random 256-bit opaque token; only its SHA-256 digest is stored. HttpOnly, Secure, SameSite=Strict and __Host cookie attributes; 30-day expiry; at most ten sessions per profile.",
+    "throttling": "Durable SQLite limits: five attempts per account per 15 minutes, thirty per client IP per 15 minutes and ten registrations per IP per hour. X-Real-IP is accepted only from configured exact proxy addresses.",
+    "capacity": "At most 100 profiles, a bounded rate table, sixteen simultaneous connections and two simultaneous scrypt operations.",
+    "recovery": "No username-only reset or public account list. A forgotten PIN requires deliberate private operator recovery."
+  },
+  "progress": {
+    "atomicity": "Optimistic integer revisions, an immediate SQLite transaction and a conditional UPDATE. A stale revision returns 409 and leaves the stored record unchanged.",
+    "identityGuard": "GET includes the signed-in username. PUT requires a matching username so a stale open tab cannot write to another profile after the shared cookie changes.",
+    "maximumBytes": 8000000,
+    "validation": "Version1 and required envelope types; bounded JSON depth/members; reject duplicate/reservedprototype keys and nonfinite numbers. Browser performs full activity/catalogue validation.",
+    "restart": "Sessions, throttles and progress persist in the private SQLite volume. The separate pepper must be retained."
+  },
+  "http": {
+    "mutations": "Mutations require the exact same-origin Origin header and JSON content type. No CORS access; cross-site Fetch Metadata is rejected.",
+    "cache": "All responses use no-store, nosniff and same-origin CORP.",
+    "logging": "Request and error logs are suppressed in the service. The proxy location must also disable access logs.",
+    "development": "An explicit development flag permits a separate insecure cookie only with a loopback bind and local HTTP origin."
+  },
+  "tests": {
+    "pythonIntegrationCases": 13,
+    "result": "pass",
+    "nodeWrapper": "tests/profile-api.test.mjs",
+    "scenarios": [
+      "PIN, salt, session and pepper secrecy",
+      "Different salts and hashes for the same PIN across profiles",
+      "Cross-device save and revision conflicts",
+      "Restart persistence",
+      "Cookie identity-switch isolation",
+      "Generic wrong and unknown credential errors",
+      "Account throttling persists after restart",
+      "Untrusted IP headers cannot bypass limits",
+      "Exact trusted proxy forwarding",
+      "Origin, content type and HTTP method guards",
+      "Common PIN and oversized or invalid progress rejection",
+      "Three-megabyte progress round trip",
+      "Per-device logout and session expiry",
+      "Missing or nonprivate pepper rejection",
+      "Concurrent writes cannot both use the same stale revision"
+    ]
+  },
+  "deploymentRequirements": [
+    "Build from server/ only; never include private data or the repository root.",
+    "Resolve the Python base image tag to a digest before production.",
+    "Run as nonroot with a read-only root, bounded resources and dedicated private persistent state.",
+    "Mount the owner-only pepper separately, read-only, and retain it across releases.",
+    "Keep the backend port private and trust only the exact proxy address.",
+    "Preserve the API prefix and original Origin; overwrite X-Real-IP; cap bodies at 8002048 bytes; disable caching and access logs."
+  ],
+  "limitations": [
+    "A short PIN has low entropy. The separate pepper and online attempt limits reduce risk, but compromise of the whole server can expose records and the key.",
+    "No external penetration test or security certification is claimed.",
+    "The server validates a bounded JSON envelope, not linguistic accuracy or genuine activity completion.",
+    "No real learner record or existing database was accessed; all test data is disposable."
+  ],
+  "sources": [
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#scrypt",
+      "supports": "Scrypt workfactor combination andseparatelystoredpepper"
+    },
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#login-throttling",
+      "supports": "Account-based attemptthrottling,genericcredentialerrors,TLS"
+    },
+    {
+      "url": "https://docs.python.org/3/library/hashlib.html#hashlib.scrypt",
+      "supports": "Standard-libraryOpenSSLscrypt API"
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie",
+      "supports": "HostprefixandSecure,HttpOnly,SameSitecookieattributes"
+    }
+  ]
+}

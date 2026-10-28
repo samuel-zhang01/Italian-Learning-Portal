@@ -1,0 +1,273 @@
+{
+  "audit": "Independent adversarial Games/Profile UI acceptance audit",
+  "date": "2026-10-28",
+  "reviewer": "booster_phone_desktop_audit",
+  "base": "http://127.0.0.1:5197",
+  "scope": "Existing Games vocabulary/verb booster and simple cross-device Profile UI; local preview only, isolated headless Chromium contexts. This is not a general product score, real-student learning-outcome study, assistive-technology certification or penetration test.",
+  "rubricDefinedBeforeBrowserEvaluation": "2026-10-28",
+  "scoring": {
+    "method": "19 of 20 equally weighted criteria = 9.5/10; unresolved critical data loss, inaccessible primary action, or runtime crash blocks a pass regardless of count.",
+    "totalCriteria": 20,
+    "passedCriteria": 20,
+    "failedCriteria": 0,
+    "criticalBlockers": 0,
+    "scopedScoreOutOf10": 10,
+    "requiredScoreOutOf10": 9.5,
+    "passes": true
+  },
+  "criteria": [
+    {
+      "id": "UI01",
+      "criterion": "Games and Profile are reachable from the existing navigation within two deliberate actions, without adding a competing main navigation section.",
+      "result": "pass",
+      "evidence": "Browser opened More practice & materials, then Games; repeated for Profile & sync. Five existing main navigation items remain."
+    },
+    {
+      "id": "UI02",
+      "criterion": "Games lobby clearly names the selected game, practice focus, round size and a single primary start action.",
+      "result": "pass",
+      "evidence": "All six lobby captures name game, focus, five-question default and one primary Let’s play/Giochiamo action. Shortened heading verified after review."
+    },
+    {
+      "id": "UI03",
+      "criterion": "Advanced settings, hints, reference tables and source details use progressive disclosure; an initial game screen is not crowded.",
+      "result": "pass",
+      "evidence": "Customise this round and practice trail initially closed; hints opt-in; verb table and activity/source help initially closed. Screenshots inspected."
+    },
+    {
+      "id": "UI04",
+      "criterion": "Words meanings/articles and Verbs present/past/mixed can be selected without navigating away from Games; 5 and 10 question settings are available.",
+      "result": "pass",
+      "evidence": "Selected words/articles, verbs present/past/mixed, round sizes 10 then 5, and guided versus recall through visible native selects."
+    },
+    {
+      "id": "UI05",
+      "criterion": "Starting a round shows one current question and progress, with answer format and person/tense context understandable to an A1 learner.",
+      "result": "pass",
+      "evidence": "Exactly one .arcade-question observed; current/total progress and person plus present/past label shown. Verb answer instructions distinguish auxiliary/participle from subject."
+    },
+    {
+      "id": "UI06",
+      "criterion": "Guided choices and typed answers are usable; the primary check/continue flow does not require precise pointer control.",
+      "result": "pass",
+      "evidence": "Typed recall submitted with Enter; guided article/plural option worked. Action sizes checked across screen matrix."
+    },
+    {
+      "id": "UI07",
+      "criterion": "Incorrect-answer feedback states the correct answer and an explanation without shaming; next action is clear.",
+      "result": "pass",
+      "evidence": "Deliberately wrong typed response showed original answer, model answer, explanation and Next question. Wording was calm and did not claim an unseen alternative answer is necessarily wrong."
+    },
+    {
+      "id": "UI08",
+      "criterion": "Hints and verb reference tables are available when relevant and disclose any supported-answer scoring effect.",
+      "result": "pass",
+      "evidence": "Hint text appeared in role=status; a six-row person table opened after feedback. Five-question completion separated correct without hints and correct with support."
+    },
+    {
+      "id": "UI09",
+      "criterion": "Source context is accessible on demand and does not obscure the exercise.",
+      "result": "pass",
+      "evidence": "Opened Need a different activity? disclosure and read named source/page references plus original-practice attribution. Source text wrapped without overflow."
+    },
+    {
+      "id": "UI10",
+      "criterion": "Keyboard focus reaches fields and primary actions; submitting an answer makes feedback perceivable and next action reachable.",
+      "result": "pass",
+      "evidence": "Answer submission moved focus to .arcade-feedback; next Tab reached Hear the answer. Native fields, selects and buttons remained keyboard operable."
+    },
+    {
+      "id": "UI11",
+      "criterion": "Relevant visible buttons, select controls, inputs and disclosure summaries have at least 44px effective touch height at 320px and 390px.",
+      "result": "pass",
+      "evidence": "Across 30 final real-browser capture states, every measured visible button, select, input and summary had height >=44px; no sub-44px entries."
+    },
+    {
+      "id": "UI12",
+      "criterion": "EN and IT Games lobby/question/feedback and Profile screens at 320px, 390px and 1440px have no horizontal overflow, clipped primary actions or overlapping content.",
+      "result": "pass",
+      "evidence": "No horizontal overflow across EN/IT × 320/390/1440 for lobby, question, feedback, expanded reference table and guest profile. Six extra mocked connected-profile views with maximum-length synthetic username also fit."
+    },
+    {
+      "id": "UI13",
+      "criterion": "Phone and desktop screenshots have readable type, balanced line lengths, recognizable hierarchy and sufficient visual separation.",
+      "result": "pass",
+      "evidence": "Inspected final phone/desktop screenshots: distinct hierarchy, readable body copy and uncramped controls. Profile hints now computed 14px/1.5. One minor narrow-Italian scroll note remains below."
+    },
+    {
+      "id": "UI14",
+      "criterion": "English and Italian labels, instructions, feedback and profile flows remain understandable and avoid unexplained implementation terminology in the primary flow.",
+      "result": "pass",
+      "evidence": "EN/IT capture matrix and profile copy reviewed. Primary flow uses familiar game, hint, PIN and saved-state language; technical hash explanation remains in optional details."
+    },
+    {
+      "id": "UI15",
+      "criterion": "An unfinished round and submitted answers survive reload, and a completed round exposes a comprehensible result/replay path.",
+      "result": "pass",
+      "evidence": "Typed draft survived reload; submitted feedback survived reload; five-question completion returned to lobby with last-round score and practice trail/replay affordance."
+    },
+    {
+      "id": "UI16",
+      "criterion": "Profile creation and sign-in are visibly distinct, fields have labels, PIN and confirmation are masked, and forgotten-PIN limitations are stated before creation.",
+      "result": "pass",
+      "evidence": "Create profile and Sign in toggles visibly distinct. Username/PIN/confirmation have labels. Both PIN inputs are type=password; forgotten PIN cannot be retrieved warning is visible before creation."
+    },
+    {
+      "id": "UI17",
+      "criterion": "A disposable profile can be created and opened on a second fresh browser context, with local-versus-online progress choice explained when applicable.",
+      "result": "pass",
+      "evidence": "Exactly one random disposable local profile was created through UI, then signed into from a separate fresh browser context. Existing local work produced an explicit merge/open choice and records remained after joining."
+    },
+    {
+      "id": "UI18",
+      "criterion": "Saved-online, pending/offline and signed-out states accurately communicate whether it is safe to switch devices; local practice remains available.",
+      "result": "pass",
+      "evidence": "Actual API journey observed Saved online, offline Saved here · waiting for connection, offline local learning, reconnect/sync recovery, and sign-out returning to form. Added sign-out copy now explicitly explains local clearing after online save."
+    },
+    {
+      "id": "UI19",
+      "criterion": "PIN mismatch, invalid credentials and unavailable connection errors are readable, accessible and recoverable without exposing secrets.",
+      "result": "pass",
+      "evidence": "PIN mismatch produced role=alert; one invalid login produced useful retry text and emptied PIN field. Actual offline sync showed readable connection guidance. No PIN was found in synthetic localStorage or readable document cookies."
+    },
+    {
+      "id": "UI20",
+      "criterion": "Observed Games/Profile journeys produce no uncaught browser errors, dead-end controls or broken internal navigation.",
+      "result": "pass",
+      "evidence": "Zero uncaught page errors in 30-screen final matrix and actual UI/API journeys; navigation, replay, disclosures, profile join and reconnect completed. Test-harness expectation correction is documented below."
+    }
+  ],
+  "observed": {
+    "languages": [
+      "en",
+      "it"
+    ],
+    "widths": [
+      320,
+      390,
+      1440
+    ],
+    "phoneHeight": 844,
+    "desktopHeight": 1000,
+    "finalRealBrowserCaptureStates": 30,
+    "extraConnectedProfileLayoutStates": 6,
+    "extraConnectedProfileLayoutMethod": "Intercepted synthetic API responses only; no additional real profile creation or server persistence.",
+    "overflowStates": 0,
+    "sub44pxControlStates": 0,
+    "uncaughtBrowserErrors": [],
+    "actualDisposableProfilesCreated": 1,
+    "actualProductionRequests": 0
+  },
+  "changesVerified": [
+    {
+      "issue": "Profile helper text was too small.",
+      "resolution": "Profile hints increased to 14px; measured in both languages/all widths and inspected in final screenshots."
+    },
+    {
+      "issue": "Sign-out did not state that it clears local profile work after syncing.",
+      "resolution": "Explicit bilingual explanation added; verified in all six connected-profile layouts."
+    },
+    {
+      "issue": "Mobile Games start required more scrolling than necessary.",
+      "resolution": "Lobby heading shortened and mobile setup spacing reduced while retaining main navigation.",
+      "before": [
+        {
+          "screen": "en-320-lobby",
+          "label": "Let’s play →",
+          "top": 813.390625,
+          "bottom": 860.1875
+        },
+        {
+          "screen": "en-390-lobby",
+          "label": "Let’s play →",
+          "top": 815.390625,
+          "bottom": 862.1875
+        },
+        {
+          "screen": "en-1440-lobby",
+          "label": "Let’s play →",
+          "top": 671.484375,
+          "bottom": 718.28125
+        },
+        {
+          "screen": "it-320-lobby",
+          "label": "Giochiamo →",
+          "top": 871.390625,
+          "bottom": 918.1875
+        },
+        {
+          "screen": "it-390-lobby",
+          "label": "Giochiamo →",
+          "top": 815.390625,
+          "bottom": 862.1875
+        },
+        {
+          "screen": "it-1440-lobby",
+          "label": "Giochiamo →",
+          "top": 671.484375,
+          "bottom": 718.28125
+        }
+      ],
+      "after": [
+        {
+          "screen": "en-320-lobby",
+          "label": "Let’s play →",
+          "top": 766.984375,
+          "bottom": 813.78125
+        },
+        {
+          "screen": "en-390-lobby",
+          "label": "Let’s play →",
+          "top": 768.984375,
+          "bottom": 815.78125
+        },
+        {
+          "screen": "en-1440-lobby",
+          "label": "Let’s play →",
+          "top": 612.734375,
+          "bottom": 659.53125
+        },
+        {
+          "screen": "it-320-lobby",
+          "label": "Giochiamo →",
+          "top": 824.984375,
+          "bottom": 871.78125
+        },
+        {
+          "screen": "it-390-lobby",
+          "label": "Giochiamo →",
+          "top": 768.984375,
+          "bottom": 815.78125
+        },
+        {
+          "screen": "it-1440-lobby",
+          "label": "Giochiamo →",
+          "top": 612.734375,
+          "bottom": 659.53125
+        }
+      ]
+    }
+  ],
+  "nonBlockingObservations": [
+    "At 320×844 in Italian, the Games start button begins at y825 and ends at y872, requiring about 28px of vertical scroll to expose it fully. English 320 and both 390px layouts show the complete action by y816. No content is clipped; preserving readable controls and the existing navigation is preferable to further compression.",
+    "Profile saved-state text remains 12px. It is legible, has role=status and is repeated in the footer; a future typography pass could bring it to 14px.",
+    "Source details currently live inside Need a different activity?; they are accessible and readable, but the label does not advertise sources explicitly."
+  ],
+  "harnessNotes": [
+    "Initial exact-label selector did not match a select whose native label included option text. The selector was corrected; no application change was required.",
+    "Final actual API journey assertion originally expected practice to remain in localStorage after sign-out. Source review confirms intentional emptyProgress() after successful online save, and browser had already returned to the form. The assertion expectation was wrong, not evidence of data loss. Explicit sign-out copy was subsequently added and visually verified. No second disposable profile was created to rerun this assertion."
+  ],
+  "limits": [
+    "Desktop Chromium and emulated phone viewport sizes; no physical iOS/Android device or screen reader was used.",
+    "Cross-device tests used two isolated contexts on the local preview/API. Production HTTPS/cookie configuration and infrastructure remain the parent release checks.",
+    "Conflict/recovery downloads, expiry races and API abuse protections are covered by separate parent tests; they are not independently certified by this UI audit."
+  ],
+  "evidenceFiles": {
+    "screenshotsDirectory": "work/booster-ui-adversarial",
+    "criteria": "work/booster-ui-adversarial/criteria.json",
+    "layoutMeasurements": "work/booster-ui-adversarial/measurements.json",
+    "journeys": "work/booster-ui-adversarial/journey-results.json",
+    "connectedProfileMeasurements": "work/booster-ui-adversarial/profile-final-measurements.json"
+  },
+  "privacy": "Only synthetic audit progress was used. PIN existed only in the executing process and password fields; it was not printed or written to disk. No Samuel profile, real learner records, production account, cookies or database contents were inspected."
+}

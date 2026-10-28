@@ -131,7 +131,7 @@ test("light review metadata exactly matches full activity IDs, titles and duplic
     ...(item.word ? { wordKey: wordKey(item.word.term) } : {}),
   }));
   assert.deepEqual(planningReviewCatalogue.arcade, expected);
-  const terms = [...grammar.units.flatMap((unit) => unit.words), ...enrichment.banks.flatMap((bank) => bank.words.map((word) => word.term))];
+  const terms = [...grammar.units.flatMap((unit) => unit.words), ...enrichment.banks.flatMap((bank) => bank.words.map((word) => word.term)), ...read("booster-content").nouns.map((noun) => noun.term)];
   assert.deepEqual(planningReviewCatalogue.words, [...new Map(terms.map((term) => [wordKey(term), { key: wordKey(term), term }])).values()]);
 });
 
@@ -153,7 +153,7 @@ test("the initial progress engine dependency graph contains compact metadata wit
   visit(path.join(root, "app/learning/engine.ts"));
   const names = [...visited].map((file) => path.basename(file));
   assert.ok(names.includes("planning-metadata.json"));
-  for (const full of ["curriculum.json", "grammar.json", "companion.json", "enrichment.json", "arcade-scenes.json"]) {
+  for (const full of ["curriculum.json", "grammar.json", "companion.json", "enrichment.json", "arcade-scenes.json", "booster-content.json"]) {
     assert.ok(!names.includes(full), `${full} must load with its study route, not synchronous progress hydration`);
   }
 });

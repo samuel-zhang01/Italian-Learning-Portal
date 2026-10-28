@@ -1,0 +1,15 @@
+.profile-page { max-width: 760px; }
+.profile-panel { display: grid; gap: 18px; margin: 26px 0; }
+.profile-panel h2, .profile-panel p { margin: 0; }
+.daily-app .profile-panel .hint { font-size: 0.875rem; line-height: 1.5; }
+.profile-panel label { display: grid; gap: 8px; font-weight: 600; }
+.profile-panel input { box-sizing: border-box; width: 100%; min-height: 48px; padding: 10px 12px; font: inherit; border: 1px solid var(--line, #c8ccc4); border-radius: 8px; background: #fff; color: inherit; }
+.profile-panel button, .profile-details button { min-height: 44px; }
+.profile-tabs { display: flex; gap: 8px; }
+.profile-tabs button { flex: 1; padding: 10px; border: 1px solid var(--line, #c8ccc4); border-radius: 8px; background: transparent; color: inherit; font: inherit; }
+.profile-tabs button[aria-pressed="true"] { background: #224b3d; color: white; }
+.profile-details { border-top: 1px solid var(--line, #c8ccc4); padding-top: 16px; }
+.profile-details summary { cursor: pointer; padding: 10px 0; min-height: 44px; box-sizing: border-box; }
+.profile-status-link { font: inherit; color: inherit; border: 0; background: transparent; text-align: right; cursor: pointer; min-height: 44px; }
+.profile-status-link:focus-visible, .profile-panel :focus-visible, .profile-details :focus-visible { outline: 3px solid #a66b29; outline-offset: 3px; }
+@media(max-width: 520px) { .profile-panel .button-row { display: grid; } .profile-status-link { text-align: left; } }

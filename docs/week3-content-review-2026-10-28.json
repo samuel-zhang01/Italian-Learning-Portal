@@ -1,0 +1,372 @@
+{
+  "reviewedOn": "2026-10-28",
+  "purpose": "Extend original bilingual Week 3 practice and the existing Arcade with bounded noun and verb practice. Private class worksheets and book extracts are not published.",
+  "verifiedSources": [
+    {
+      "sourceId": "src-f293d35b1616",
+      "relativePath": "Course 3/Week_3_Il_passato_prossimo.pdf",
+      "sha256": "f293d35b1616561dc25feb0a062f6d7c14b91f511bce5a254efd4e066b936538",
+      "physicalPages": 20,
+      "selectivelyReadPhysicalPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "scope": "All 20 physical pages reviewed through bounded text extraction; sparse grammar tables on pages 7 and 8 and reflection image on page 19 were rendered and visually inspected. Covers and external-media pointers are classified as reference."
+    },
+    {
+      "sourceId": "src-a746533b6323",
+      "relativePath": "Course 3/L2_Week_2_Verbs_revision.pdf",
+      "sha256": "a746533b63239225ff1ec22c67e7a564f213970498049eb018c03d332f47a129",
+      "physicalPages": 17,
+      "selectivelyReadPhysicalPages": [
+        6,
+        12,
+        13,
+        14
+      ],
+      "scope": "Adjacent present-tense and reflexive revision reviewed to choose prerequisites. Independent homework on pages 3 and 17 was not completed."
+    },
+    {
+      "sourceId": "src-25e5c76ace25",
+      "relativePath": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 13 — The Past/PDF_Week_13_The_past.pdf",
+      "sha256": "25e5c76ace254bbab62c72bd06ce2d6aabfeb07f747efb1b27bf582f350f200f",
+      "physicalPages": 16,
+      "selectivelyReadPhysicalPages": [
+        6,
+        12
+      ],
+      "scope": "Earlier formation and irregular-participle review used to avoid duplicating an entire grammar unit."
+    },
+    {
+      "sourceId": "src-61ed8b6b8bf0",
+      "relativePath": "Course 1 — Beginners (Oct 2025–Mar 2026)/Week 06 — The Spare Time/PDF_Week_6__The_spare_time.pdf",
+      "sha256": "61ed8b6b8bf007ea0f3684c9b156b07527bdac468a32003c4d43672635a45485",
+      "physicalPages": 14,
+      "selectivelyReadPhysicalPages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        13
+      ],
+      "scope": "Earlier spare-time present-tense material reviewed selectively in the existing page-preserving class extract."
+    },
+    {
+      "sourceId": "src-1647be2784c9",
+      "relativePath": "materials/books/nuovo-espresso-plus-1/originals/reader-native-pdf/nuovo-espresso-plus-1-complete-book.pdf",
+      "sha256": "1647be2784c9c94c554074a6d4cae04c0ac234edf30c0f2f73df3ca871ccebbf",
+      "physicalPages": 240,
+      "selectivelyReadPhysicalPages": [
+        45,
+        46,
+        68,
+        82,
+        83,
+        84,
+        111,
+        115,
+        116,
+        117,
+        118,
+        121,
+        123,
+        233,
+        234,
+        235,
+        240
+      ],
+      "scope": "Bounded grammar tables and travel contexts reviewed; pages 45/46/68 and 82/83/84 were checked around booking vocabulary. This is not a new full-book page-by-page review."
+    },
+    {
+      "sourceId": "src-580f7558db56",
+      "relativePath": "materials/books/nuovo-espresso-plus-2/originals/reader-native-pdf/nuovo-espresso-plus-2-accessible-reader-book-263-pages.pdf",
+      "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4",
+      "physicalPages": 263,
+      "selectivelyReadPhysicalPages": [
+        8,
+        11,
+        14,
+        20,
+        55,
+        62,
+        64,
+        74,
+        91,
+        96,
+        128,
+        132,
+        252,
+        253
+      ],
+      "scope": "Bounded shopping, travel and grammar passages reviewed; lexical references use physical pages. No source exercise answers are republished."
+    }
+  ],
+  "visualReview": {
+    "sourceId": "src-f293d35b1616",
+    "physicalPages": [
+      7,
+      8,
+      19
+    ],
+    "findings": [
+      "Page 7 is an image conjugation table for essere and avere in the passato prossimo.",
+      "Page 8 has an overbroad intransitive-verb heading; its activity-verb exceptions require explicitly teaching that not every intransitive or movement verb uses essere.",
+      "Page 19 is a reflection graphic, retained as reference with original self-assessment guidance."
+    ]
+  },
+  "baselinePreservation": {
+    "arrays": {
+      "curriculum.missions": {
+        "count": 67,
+        "sha256": "8d48cf4e01978f14e19a0a0f8d07932202d2d3bbaf10e53b5c132d2169082f9c"
+      },
+      "curriculum.sources": {
+        "count": 53,
+        "sha256": "7261d5ad593e85a832f9c0f28071e8d3b31d8612732119eb1ea099ee0096d2ee"
+      },
+      "enrichment.banks": {
+        "count": 38,
+        "sha256": "c94935ef81d48f22f4d52cd7a2d47900fc1595a5aa2a697cc8ed43ff6d40c788"
+      },
+      "enrichment.lessons": {
+        "count": 67,
+        "sha256": "2f777cf14e6e00c007b1377b75335e0d1de90d708be079a5bbb3e09233a8b2b4"
+      },
+      "enrichment.resources": {
+        "count": 11,
+        "sha256": "6531a0c6499f9c7df870e7622b179706584d8cb1aa268787e019518d770c6097"
+      },
+      "enrichment.research": {
+        "count": 3,
+        "sha256": "57503f05ee0cfba70f3c037de3a01b7b92cdec651d4c763999ae42ef186917f1"
+      },
+      "grammar.units": {
+        "count": 65,
+        "sha256": "c004ff3d26c6d7f8bfab98496194f636bc81b342276fc7bc04df270a2be20bb8"
+      },
+      "grammar.programmes": {
+        "count": 4,
+        "sha256": "1eb20a9f1512e0b3198d86f0a500d3a80114640f49e32dfff9069cc3f902534c"
+      },
+      "companion.sources": {
+        "count": 53,
+        "sha256": "6f63da1a591ee4ad0e7923241a160a678c38ab2d99dea811ea83169d6e8d6c30"
+      },
+      "companion.pages": {
+        "count": 1609,
+        "sha256": "216ae9934a1bc1446e77f5beb39509f54de1be280037b3f750a41123f736c5f8"
+      }
+    },
+    "allowedAdditionsToExistingObjects": {
+      "grammar.units": {
+        "past-avere": [
+          "week3-journey-auxiliaries"
+        ],
+        "past-irregular": [
+          "week3-irregular-story"
+        ],
+        "past-essere": [
+          "week3-reflexive-morning"
+        ]
+      }
+    },
+    "policy": "All prior IDs, object fields, ordering, examples and answers remain unchanged except the three explicitly listed additive grammar mission links."
+  },
+  "missionSourceMap": [
+    {
+      "missionId": "week3-journey-auxiliaries",
+      "bankId": "week3-journey",
+      "unitId": "past-avere",
+      "physicalPages": [
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "outcome": "Contrast ho viaggiato / ho camminato with sono arrivato/a / sono tornato/a in a three-sentence journey."
+    },
+    {
+      "missionId": "week3-irregular-story",
+      "bankId": "week3-story",
+      "unitId": "past-irregular",
+      "physicalPages": [
+        12,
+        13,
+        15
+      ],
+      "outcome": "Use letto, scritto, preso and fatto in short completed-action sentences, including subject changes and time expressions."
+    },
+    {
+      "missionId": "week3-reflexive-morning",
+      "bankId": "week3-morning",
+      "unitId": "past-essere",
+      "physicalPages": [
+        4,
+        5,
+        17,
+        18
+      ],
+      "outcome": "Retain the reflexive pronoun, select essere, agree the participle and place non in a morning-routine account."
+    }
+  ],
+  "companionCoverage": {
+    "sourceId": "src-f293d35b1616",
+    "physicalPages": 20,
+    "practicePages": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "referencePages": [
+      1,
+      2,
+      3,
+      11,
+      19,
+      20
+    ],
+    "independentHomeworkPages": [
+      3,
+      20
+    ],
+    "newPracticePages": 14,
+    "newReferencePages": 6,
+    "totalPracticePages": 744,
+    "priorPracticePagesUnchanged": 730,
+    "totalPhysicalPages": 1629,
+    "priorPhysicalPagesUnchanged": 1609
+  },
+  "contentTotals": {
+    "missions": 70,
+    "guidedLessons": 70,
+    "banks": 41,
+    "bankWords": 328,
+    "grammarUnits": 65,
+    "sources": 54,
+    "newMissions": 3,
+    "newGuidedLessons": 3,
+    "newBanks": 3,
+    "newBankWords": 24,
+    "boosterVerbs": 50,
+    "boosterNouns": 32,
+    "generatedVerbPersonTenseItems": 600,
+    "generatedNounItems": 64
+  },
+  "boosterAuthoring": {
+    "file": "app/learning/booster-content.json",
+    "presentOrder": [
+      "io",
+      "tu",
+      "lui/lei",
+      "noi",
+      "voi",
+      "loro"
+    ],
+    "levels": [
+      "A1",
+      "A2"
+    ],
+    "practiceTenses": [
+      "present",
+      "passato prossimo",
+      "mixed"
+    ],
+    "sourcePolicy": "Each entry has exact source page pointers. The catalogue provides original examples and authored conjugation data, derived from reviewed forms and rules; it does not claim that every source prints every six-person form. Book grammar references support regular pattern transfer.",
+    "nounPolicy": "32 nouns have explicit grammatical gender, article, plural, original translated example and sources. Collega has separate male and female entries; estetista is explicitly the feminine entry. These curated article cards supplement existing vocabulary banks.",
+    "auxiliaryPolicy": "The past prompt includes an authored use context. Finire is constrained to finishing il lavoro and uses avere; its note contrasts the intransitive essere use. Conoscere explains getting acquainted in the completed past. Reflexives include their pronoun and use essere.",
+    "variantPolicy": "Gender-unspecified essere forms accept both masculine and feminine endings; named subjects in authored mission checks disambiguate agreement. Vedere accepts visto and veduto. Accented è remains distinct from e.",
+    "scope": "50 selected useful verbs, not an exhaustive course concordance. Modals and ambiguous motion-verb uses such as correre/salire/passare are deliberately not generated from a single auxiliary. No imperfect, remote past or subjunctive claim is made for these drills."
+  },
+  "teachingCorrectionsAndChoices": [
+    "Do not turn the source’s broad intransitive heading into an all-intransitives-use-essere rule. Teach activity counterexamples camminare, nuotare, viaggiare and dormire.",
+    "Use contextual subject cues for agreement; do not reject a reasonable gender variant when io/tu/noi/voi/loro does not specify it.",
+    "Retain both parts of the passato prossimo and all reflexive pronouns in full-form questions.",
+    "Keep original parallel practice separate from the supplied auxiliary worksheet and film homework.",
+    "Re-use three existing grammar units instead of introducing near-duplicate units; provide three new five-minute outcomes and six-line guided scenes.",
+    "Each new bank contains eight words or chunks. The new course vocabulary is supplemented by common scaffolding such as subito and a piedi in original examples."
+  ],
+  "externalGrammarChecks": [
+    {
+      "publisher": "Treccani",
+      "title": "Passato prossimo — Enciclopedia dell’Italiano",
+      "url": "https://www.treccani.it/enciclopedia/passato-prossimo_%28Enciclopedia-dell%27Italiano%29/",
+      "checkedFor": "Compound-tense construction and use."
+    },
+    {
+      "publisher": "Treccani",
+      "title": "Verbi ausiliari — Enciclopedia dell’Italiano",
+      "url": "https://www.treccani.it/enciclopedia/verbi-ausiliari_%28Enciclopedia-dell%27Italiano%29/",
+      "checkedFor": "Auxiliary selection depends on verb and use; reflexive constructions use essere."
+    },
+    {
+      "publisher": "Treccani",
+      "title": "Accordo (prontuario) — Enciclopedia dell’Italiano",
+      "url": "https://www.treccani.it/enciclopedia/accordo-prontuario_%28Enciclopedia-dell%27Italiano%29/",
+      "checkedFor": "Subject agreement with essere; avoiding an unrestricted never-agree-with-avere claim."
+    },
+    {
+      "publisher": "Treccani",
+      "title": "Participio — Enciclopedia dell’Italiano",
+      "url": "https://www.treccani.it/enciclopedia/participio_%28Enciclopedia-dell%27Italiano%29/",
+      "checkedFor": "Regular/irregular participles and valid participial alternatives."
+    }
+  ],
+  "scopeLimits": [
+    "Raw source PDFs, class identities, extracted text, lexical evidence and rendered pages remain ignored private working material.",
+    "The external class-video pointer is optional and is not claimed to have been watched or availability-verified.",
+    "The 600 generated tense prompts are controlled retrieval practice, not 600 separately authored lessons or evidence of spontaneous speaking mastery.",
+    "These content checks do not certify mobile usability, desktop usability, network synchronisation or authentication; those need separate live user-journey audits.",
+    "Existing 30–60 minute study scaffolding consumes the new mission, bank and guided-scene data. This content change does not introduce another navigation system."
+  ],
+  "validation": {
+    "status": "passed content-focused and existing-content regression checks",
+    "testFile": "tests/week3-content.test.mjs",
+    "independentAudit": "Parent agent coordinates separate learner and UI adversarial review; no unobserved score is assigned here.",
+    "commands": [
+      {
+        "command": "node --experimental-strip-types --test tests/week3-content.test.mjs tests/book-gaps.test.mjs",
+        "passed": 15,
+        "failed": 0
+      },
+      {
+        "command": "node --experimental-strip-types --test tests/learning.test.mjs tests/academy.test.mjs tests/arcade.test.mjs tests/answer-contract.test.mjs tests/long-course.test.mjs tests/local-pdfs.test.mjs tests/chapter-content.test.mjs tests/chapter-continuity.test.mjs tests/chapter-dashboard.test.mjs tests/discovery.test.mjs tests/planning-metadata.test.mjs",
+        "passed": 137,
+        "failed": 0
+      }
+    ],
+    "historicalContractUpdates": "Existing global totals now include Week 3. Historical preservation hashes remain unchanged; only the three enumerated appended grammar mission IDs are stripped when checking prior snapshots. The prior 730 practice pages remain separately asserted."
+  }
+}

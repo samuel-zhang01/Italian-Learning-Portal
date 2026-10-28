@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-10-24",
+  "reviewedOn": "2026-10-28",
   "units": [
     {
       "id": "noun-gender",
@@ -6513,7 +6513,8 @@
         "present-ire"
       ],
       "missionIds": [
-        "yesterday"
+        "yesterday",
+        "week3-journey-auxiliaries"
       ],
       "teaching": [
         {
@@ -6814,7 +6815,8 @@
       ],
       "missionIds": [
         "yesterday",
-        "family-news"
+        "family-news",
+        "week3-reflexive-morning"
       ],
       "teaching": [
         {
@@ -7424,7 +7426,8 @@
       ],
       "missionIds": [
         "yesterday",
-        "family-news"
+        "family-news",
+        "week3-irregular-story"
       ],
       "teaching": [
         {

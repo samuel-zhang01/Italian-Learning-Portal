@@ -69,7 +69,7 @@ export type Progress = {
   diagnostics?: A2DiagnosticState;
   oralPractice?: OralPracticeState;
 };
-export type ArcadeMode = "words" | "builder" | "detective" | "conversation";
+export type ArcadeMode = "words" | "verbs" | "builder" | "detective" | "conversation";
 export type ArcadeSettings = {
   mode: ArcadeMode;
   size: 5 | 10 | 15;
@@ -77,12 +77,16 @@ export type ArcadeSettings = {
   topic: string;
   bank: string;
   scene: string;
+  wordFocus?: "meaning" | "articles";
+  verbLevel?: "present" | "past" | "mixed";
+  verbScope?: "essentials" | "all";
 };
 export type ArcadeItem = {
   id: string;
   mode: ArcadeMode;
   title: Pair;
   prompt: Pair;
+  instruction?: Pair;
   answers: string[];
   hint: Pair;
   explanation: Pair;
@@ -92,6 +96,11 @@ export type ArcadeItem = {
   bankId?: string;
   sceneId?: string;
   word?: { term: Pair; example: Pair };
+  wordFocus?: "meaning" | "articles";
+  verbId?: string;
+  tense?: "present" | "past";
+  level?: "A1" | "A2";
+  sourceRefs?: { id: string; pages: number[] }[];
 };
 export type ArcadeAnswer = {
   answer: string;

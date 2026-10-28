@@ -6,5 +6,7 @@ export default defineConfig({
   publicDir: false,
   optimizeDeps: { entries: ["index.html"] },
   build: { outDir: "site-dist", emptyOutDir: true },
-  server: { host: "127.0.0.1", port: 3000, strictPort: true },
+  server: { host: "127.0.0.1", port: 3000, strictPort: true,
+    proxy: { "/api/profile": "http://127.0.0.1:5198" } },
+  preview: { proxy: { "/api/profile": "http://127.0.0.1:5198" } },
 });

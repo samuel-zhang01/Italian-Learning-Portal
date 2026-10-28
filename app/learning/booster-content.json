@@ -1,0 +1,3593 @@
+{
+  "reviewedOn": "2026-10-28",
+  "verbs": [
+    {
+      "id": "verb:essere",
+      "infinitive": "essere",
+      "meaning": {
+        "en": "to be",
+        "it": "essere"
+      },
+      "level": "A1",
+      "group": "foundations",
+      "present": [
+        "sono",
+        "sei",
+        "è",
+        "siamo",
+        "siete",
+        "sono"
+      ],
+      "pastParticiple": "stato",
+      "auxiliary": "essere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "at home",
+        "it": "a casa"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora is at home.",
+          "it": "Nora è a casa."
+        },
+        "past": {
+          "en": "Nora was at home yesterday.",
+          "it": "Nora è stata a casa ieri."
+        }
+      },
+      "note": {
+        "en": "Use essere here. The past participle agrees with the subject; masculine and feminine answers are accepted when the person is unspecified.",
+        "it": "Qui usa essere. Il participio concorda con il soggetto; le forme maschili e femminili sono accettate quando la persona non è specificata."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:avere",
+      "infinitive": "avere",
+      "meaning": {
+        "en": "to have",
+        "it": "avere"
+      },
+      "level": "A1",
+      "group": "foundations",
+      "present": [
+        "ho",
+        "hai",
+        "ha",
+        "abbiamo",
+        "avete",
+        "hanno"
+      ],
+      "pastParticiple": "avuto",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "a problem",
+        "it": "un problema"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora has a problem.",
+          "it": "Nora ha un problema."
+        },
+        "past": {
+          "en": "Yesterday Nora had a problem.",
+          "it": "Ieri Nora ha avuto un problema."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            7
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:fare",
+      "infinitive": "fare",
+      "meaning": {
+        "en": "to do / make",
+        "it": "fare"
+      },
+      "level": "A1",
+      "group": "daily",
+      "present": [
+        "faccio",
+        "fai",
+        "fa",
+        "facciamo",
+        "fate",
+        "fanno"
+      ],
+      "pastParticiple": "fatto",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "breakfast",
+        "it": "colazione"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora has breakfast early.",
+          "it": "Nora fa colazione presto."
+        },
+        "past": {
+          "en": "Nora had breakfast at eight.",
+          "it": "Nora ha fatto colazione alle otto."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-irregular"
+    },
+    {
+      "id": "verb:andare",
+      "infinitive": "andare",
+      "meaning": {
+        "en": "to go",
+        "it": "andare"
+      },
+      "level": "A1",
+      "group": "travel",
+      "present": [
+        "vado",
+        "vai",
+        "va",
+        "andiamo",
+        "andate",
+        "vanno"
+      ],
+      "pastParticiple": "andato",
+      "auxiliary": "essere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "to Turin",
+        "it": "a Torino"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora goes to Turin.",
+          "it": "Nora va a Torino."
+        },
+        "past": {
+          "en": "Yesterday Nora went to Turin.",
+          "it": "Ieri Nora è andata a Torino."
+        }
+      },
+      "note": {
+        "en": "Use essere here. The past participle agrees with the subject; masculine and feminine answers are accepted when the person is unspecified.",
+        "it": "Qui usa essere. Il participio concorda con il soggetto; le forme maschili e femminili sono accettate quando la persona non è specificata."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            4,
+            8
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:venire",
+      "infinitive": "venire",
+      "meaning": {
+        "en": "to come",
+        "it": "venire"
+      },
+      "level": "A1",
+      "group": "travel",
+      "present": [
+        "vengo",
+        "vieni",
+        "viene",
+        "veniamo",
+        "venite",
+        "vengono"
+      ],
+      "pastParticiple": "venuto",
+      "auxiliary": "essere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "here",
+        "it": "qui"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora comes here on Fridays.",
+          "it": "Nora viene qui il venerdì."
+        },
+        "past": {
+          "en": "Nora came here yesterday.",
+          "it": "Nora è venuta qui ieri."
+        }
+      },
+      "note": {
+        "en": "Use essere here. The past participle agrees with the subject; masculine and feminine answers are accepted when the person is unspecified.",
+        "it": "Qui usa essere. Il participio concorda con il soggetto; le forme maschili e femminili sono accettate quando la persona non è specificata."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:uscire",
+      "infinitive": "uscire",
+      "meaning": {
+        "en": "to go out",
+        "it": "uscire"
+      },
+      "level": "A1",
+      "group": "daily",
+      "present": [
+        "esco",
+        "esci",
+        "esce",
+        "usciamo",
+        "uscite",
+        "escono"
+      ],
+      "pastParticiple": "uscito",
+      "auxiliary": "essere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "out of the house",
+        "it": "di casa"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora goes out at nine.",
+          "it": "Nora esce alle nove."
+        },
+        "past": {
+          "en": "Nora went out at nine.",
+          "it": "Nora è uscita alle nove."
+        }
+      },
+      "note": {
+        "en": "Use essere here. The past participle agrees with the subject; masculine and feminine answers are accepted when the person is unspecified.",
+        "it": "Qui usa essere. Il participio concorda con il soggetto; le forme maschili e femminili sono accettate quando la persona non è specificata."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5,
+            8
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:entrare",
+      "infinitive": "entrare",
+      "meaning": {
+        "en": "to enter / go in",
+        "it": "entrare"
+      },
+      "level": "A1",
+      "group": "travel",
+      "present": [
+        "entro",
+        "entri",
+        "entra",
+        "entriamo",
+        "entrate",
+        "entrano"
+      ],
+      "pastParticiple": "entrato",
+      "auxiliary": "essere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "into the library",
+        "it": "in biblioteca"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora goes into the library.",
+          "it": "Nora entra in biblioteca."
+        },
+        "past": {
+          "en": "Nora went into the library.",
+          "it": "Nora è entrata in biblioteca."
+        }
+      },
+      "note": {
+        "en": "Use essere here. The past participle agrees with the subject; masculine and feminine answers are accepted when the person is unspecified.",
+        "it": "Qui usa essere. Il participio concorda con il soggetto; le forme maschili e femminili sono accettate quando la persona non è specificata."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:partire",
+      "infinitive": "partire",
+      "meaning": {
+        "en": "to leave / depart",
+        "it": "partire"
+      },
+      "level": "A1",
+      "group": "travel",
+      "present": [
+        "parto",
+        "parti",
+        "parte",
+        "partiamo",
+        "partite",
+        "partono"
+      ],
+      "pastParticiple": "partito",
+      "auxiliary": "essere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "for Florence",
+        "it": "per Firenze"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora leaves for Florence today.",
+          "it": "Nora parte per Firenze oggi."
+        },
+        "past": {
+          "en": "Nora left for Florence yesterday.",
+          "it": "Nora è partita per Firenze ieri."
+        }
+      },
+      "note": {
+        "en": "Use essere here. The past participle agrees with the subject; masculine and feminine answers are accepted when the person is unspecified.",
+        "it": "Qui usa essere. Il participio concorda con il soggetto; le forme maschili e femminili sono accettate quando la persona non è specificata."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            6,
+            8
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:arrivare",
+      "infinitive": "arrivare",
+      "meaning": {
+        "en": "to arrive",
+        "it": "arrivare"
+      },
+      "level": "A1",
+      "group": "travel",
+      "present": [
+        "arrivo",
+        "arrivi",
+        "arriva",
+        "arriviamo",
+        "arrivate",
+        "arrivano"
+      ],
+      "pastParticiple": "arrivato",
+      "auxiliary": "essere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "in the city centre",
+        "it": "in centro"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora arrives early.",
+          "it": "Nora arriva presto."
+        },
+        "past": {
+          "en": "Nora arrived early.",
+          "it": "Nora è arrivata presto."
+        }
+      },
+      "note": {
+        "en": "Use essere here. The past participle agrees with the subject; masculine and feminine answers are accepted when the person is unspecified.",
+        "it": "Qui usa essere. Il participio concorda con il soggetto; le forme maschili e femminili sono accettate quando la persona non è specificata."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            8,
+            14
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:tornare",
+      "infinitive": "tornare",
+      "meaning": {
+        "en": "to return",
+        "it": "tornare"
+      },
+      "level": "A1",
+      "group": "travel",
+      "present": [
+        "torno",
+        "torni",
+        "torna",
+        "torniamo",
+        "tornate",
+        "tornano"
+      ],
+      "pastParticiple": "tornato",
+      "auxiliary": "essere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "home",
+        "it": "a casa"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora returns home at six.",
+          "it": "Nora torna a casa alle sei."
+        },
+        "past": {
+          "en": "Nora returned home at six.",
+          "it": "Nora è tornata a casa alle sei."
+        }
+      },
+      "note": {
+        "en": "Use essere here. The past participle agrees with the subject; masculine and feminine answers are accepted when the person is unspecified.",
+        "it": "Qui usa essere. Il participio concorda con il soggetto; le forme maschili e femminili sono accettate quando la persona non è specificata."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            117
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:rientrare",
+      "infinitive": "rientrare",
+      "meaning": {
+        "en": "to come back home",
+        "it": "rientrare"
+      },
+      "level": "A1",
+      "group": "travel",
+      "present": [
+        "rientro",
+        "rientri",
+        "rientra",
+        "rientriamo",
+        "rientrate",
+        "rientrano"
+      ],
+      "pastParticiple": "rientrato",
+      "auxiliary": "essere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "home",
+        "it": "a casa"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora comes home late.",
+          "it": "Nora rientra a casa tardi."
+        },
+        "past": {
+          "en": "Nora came home late.",
+          "it": "Nora è rientrata a casa tardi."
+        }
+      },
+      "note": {
+        "en": "Use essere here. The past participle agrees with the subject; masculine and feminine answers are accepted when the person is unspecified.",
+        "it": "Qui usa essere. Il participio concorda con il soggetto; le forme maschili e femminili sono accettate quando la persona non è specificata."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5,
+            18
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:rimanere",
+      "infinitive": "rimanere",
+      "meaning": {
+        "en": "to stay / remain",
+        "it": "rimanere"
+      },
+      "level": "A1",
+      "group": "daily",
+      "present": [
+        "rimango",
+        "rimani",
+        "rimane",
+        "rimaniamo",
+        "rimanete",
+        "rimangono"
+      ],
+      "pastParticiple": "rimasto",
+      "auxiliary": "essere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "at the office",
+        "it": "in ufficio"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora stays at the office.",
+          "it": "Nora rimane in ufficio."
+        },
+        "past": {
+          "en": "Nora stayed at the office.",
+          "it": "Nora è rimasta in ufficio."
+        }
+      },
+      "note": {
+        "en": "Use essere here. The past participle agrees with the subject; masculine and feminine answers are accepted when the person is unspecified.",
+        "it": "Qui usa essere. Il participio concorda con il soggetto; le forme maschili e femminili sono accettate quando la persona non è specificata."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            8,
+            12,
+            18
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:stare",
+      "infinitive": "stare",
+      "meaning": {
+        "en": "to stay / be",
+        "it": "stare"
+      },
+      "level": "A1",
+      "group": "daily",
+      "present": [
+        "sto",
+        "stai",
+        "sta",
+        "stiamo",
+        "state",
+        "stanno"
+      ],
+      "pastParticiple": "stato",
+      "auxiliary": "essere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "at home",
+        "it": "a casa"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora stays at home today.",
+          "it": "Nora sta a casa oggi."
+        },
+        "past": {
+          "en": "Nora stayed at home yesterday.",
+          "it": "Nora è stata a casa ieri."
+        }
+      },
+      "note": {
+        "en": "Use essere here. The past participle agrees with the subject; masculine and feminine answers are accepted when the person is unspecified.",
+        "it": "Qui usa essere. Il participio concorda con il soggetto; le forme maschili e femminili sono accettate quando la persona non è specificata."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:parlare",
+      "infinitive": "parlare",
+      "meaning": {
+        "en": "to speak / talk",
+        "it": "parlare"
+      },
+      "level": "A1",
+      "group": "social",
+      "present": [
+        "parlo",
+        "parli",
+        "parla",
+        "parliamo",
+        "parlate",
+        "parlano"
+      ],
+      "pastParticiple": "parlato",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "with Luca",
+        "it": "con Luca"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora speaks with Luca.",
+          "it": "Nora parla con Luca."
+        },
+        "past": {
+          "en": "Nora spoke with Luca.",
+          "it": "Nora ha parlato con Luca."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:studiare",
+      "infinitive": "studiare",
+      "meaning": {
+        "en": "to study",
+        "it": "studiare"
+      },
+      "level": "A1",
+      "group": "daily",
+      "present": [
+        "studio",
+        "studi",
+        "studia",
+        "studiamo",
+        "studiate",
+        "studiano"
+      ],
+      "pastParticiple": "studiato",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "Italian",
+        "it": "italiano"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora studies Italian.",
+          "it": "Nora studia italiano."
+        },
+        "past": {
+          "en": "Nora studied Italian this morning.",
+          "it": "Nora ha studiato italiano stamattina."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        },
+        {
+          "id": "src-a746533b6323",
+          "pages": [
+            6,
+            12,
+            13
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:lavorare",
+      "infinitive": "lavorare",
+      "meaning": {
+        "en": "to work",
+        "it": "lavorare"
+      },
+      "level": "A1",
+      "group": "daily",
+      "present": [
+        "lavoro",
+        "lavori",
+        "lavora",
+        "lavoriamo",
+        "lavorate",
+        "lavorano"
+      ],
+      "pastParticiple": "lavorato",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "at the office",
+        "it": "in ufficio"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora works at the office.",
+          "it": "Nora lavora in ufficio."
+        },
+        "past": {
+          "en": "Nora worked at the office yesterday.",
+          "it": "Nora ha lavorato in ufficio ieri."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        },
+        {
+          "id": "src-a746533b6323",
+          "pages": [
+            6,
+            12,
+            13
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:mangiare",
+      "infinitive": "mangiare",
+      "meaning": {
+        "en": "to eat",
+        "it": "mangiare"
+      },
+      "level": "A1",
+      "group": "food",
+      "present": [
+        "mangio",
+        "mangi",
+        "mangia",
+        "mangiamo",
+        "mangiate",
+        "mangiano"
+      ],
+      "pastParticiple": "mangiato",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "a pizza",
+        "it": "una pizza"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora eats a pizza.",
+          "it": "Nora mangia una pizza."
+        },
+        "past": {
+          "en": "Nora ate a pizza.",
+          "it": "Nora ha mangiato una pizza."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            4
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:bere",
+      "infinitive": "bere",
+      "meaning": {
+        "en": "to drink",
+        "it": "bere"
+      },
+      "level": "A1",
+      "group": "food",
+      "present": [
+        "bevo",
+        "bevi",
+        "beve",
+        "beviamo",
+        "bevete",
+        "bevono"
+      ],
+      "pastParticiple": "bevuto",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "a tea",
+        "it": "un tè"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora drinks a tea.",
+          "it": "Nora beve un tè."
+        },
+        "past": {
+          "en": "Nora drank a tea.",
+          "it": "Nora ha bevuto un tè."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            10
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-irregular"
+    },
+    {
+      "id": "verb:prendere",
+      "infinitive": "prendere",
+      "meaning": {
+        "en": "to take",
+        "it": "prendere"
+      },
+      "level": "A1",
+      "group": "travel",
+      "present": [
+        "prendo",
+        "prendi",
+        "prende",
+        "prendiamo",
+        "prendete",
+        "prendono"
+      ],
+      "pastParticiple": "preso",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "the tram",
+        "it": "il tram"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora takes the tram.",
+          "it": "Nora prende il tram."
+        },
+        "past": {
+          "en": "Nora took the tram.",
+          "it": "Nora ha preso il tram."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-irregular"
+    },
+    {
+      "id": "verb:leggere",
+      "infinitive": "leggere",
+      "meaning": {
+        "en": "to read",
+        "it": "leggere"
+      },
+      "level": "A1",
+      "group": "daily",
+      "present": [
+        "leggo",
+        "leggi",
+        "legge",
+        "leggiamo",
+        "leggete",
+        "leggono"
+      ],
+      "pastParticiple": "letto",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "a magazine",
+        "it": "una rivista"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora reads a magazine.",
+          "it": "Nora legge una rivista."
+        },
+        "past": {
+          "en": "Nora read a magazine.",
+          "it": "Nora ha letto una rivista."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-irregular"
+    },
+    {
+      "id": "verb:scrivere",
+      "infinitive": "scrivere",
+      "meaning": {
+        "en": "to write",
+        "it": "scrivere"
+      },
+      "level": "A1",
+      "group": "social",
+      "present": [
+        "scrivo",
+        "scrivi",
+        "scrive",
+        "scriviamo",
+        "scrivete",
+        "scrivono"
+      ],
+      "pastParticiple": "scritto",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "a message",
+        "it": "un messaggio"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora writes a message.",
+          "it": "Nora scrive un messaggio."
+        },
+        "past": {
+          "en": "Nora wrote a message.",
+          "it": "Nora ha scritto un messaggio."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-irregular"
+    },
+    {
+      "id": "verb:vedere",
+      "infinitive": "vedere",
+      "meaning": {
+        "en": "to see",
+        "it": "vedere"
+      },
+      "level": "A1",
+      "group": "social",
+      "present": [
+        "vedo",
+        "vedi",
+        "vede",
+        "vediamo",
+        "vedete",
+        "vedono"
+      ],
+      "pastParticiple": "visto",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "an exhibition",
+        "it": "una mostra"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora sees an exhibition.",
+          "it": "Nora vede una mostra."
+        },
+        "past": {
+          "en": "Nora saw an exhibition.",
+          "it": "Nora ha visto una mostra."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5,
+            12
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-irregular",
+      "pastParticiples": [
+        "visto",
+        "veduto"
+      ]
+    },
+    {
+      "id": "verb:ascoltare",
+      "infinitive": "ascoltare",
+      "meaning": {
+        "en": "to listen to",
+        "it": "ascoltare"
+      },
+      "level": "A1",
+      "group": "daily",
+      "present": [
+        "ascolto",
+        "ascolti",
+        "ascolta",
+        "ascoltiamo",
+        "ascoltate",
+        "ascoltano"
+      ],
+      "pastParticiple": "ascoltato",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "the radio",
+        "it": "la radio"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora listens to the radio.",
+          "it": "Nora ascolta la radio."
+        },
+        "past": {
+          "en": "Nora listened to the radio.",
+          "it": "Nora ha ascoltato la radio."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        },
+        {
+          "id": "src-a746533b6323",
+          "pages": [
+            6,
+            12,
+            13
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:guardare",
+      "infinitive": "guardare",
+      "meaning": {
+        "en": "to watch / look at",
+        "it": "guardare"
+      },
+      "level": "A1",
+      "group": "social",
+      "present": [
+        "guardo",
+        "guardi",
+        "guarda",
+        "guardiamo",
+        "guardate",
+        "guardano"
+      ],
+      "pastParticiple": "guardato",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "a film",
+        "it": "un film"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora watches a film.",
+          "it": "Nora guarda un film."
+        },
+        "past": {
+          "en": "Nora watched a film.",
+          "it": "Nora ha guardato un film."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:comprare",
+      "infinitive": "comprare",
+      "meaning": {
+        "en": "to buy",
+        "it": "comprare"
+      },
+      "level": "A1",
+      "group": "shopping",
+      "present": [
+        "compro",
+        "compri",
+        "compra",
+        "compriamo",
+        "comprate",
+        "comprano"
+      ],
+      "pastParticiple": "comprato",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "a ticket",
+        "it": "un biglietto"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora buys a ticket.",
+          "it": "Nora compra un biglietto."
+        },
+        "past": {
+          "en": "Nora bought a ticket.",
+          "it": "Nora ha comprato un biglietto."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            14
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:vendere",
+      "infinitive": "vendere",
+      "meaning": {
+        "en": "to sell",
+        "it": "vendere"
+      },
+      "level": "A1",
+      "group": "shopping",
+      "present": [
+        "vendo",
+        "vendi",
+        "vende",
+        "vendiamo",
+        "vendete",
+        "vendono"
+      ],
+      "pastParticiple": "venduto",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "a bicycle",
+        "it": "una bicicletta"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora sells a bicycle.",
+          "it": "Nora vende una bicicletta."
+        },
+        "past": {
+          "en": "Nora sold a bicycle.",
+          "it": "Nora ha venduto una bicicletta."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:ricevere",
+      "infinitive": "ricevere",
+      "meaning": {
+        "en": "to receive",
+        "it": "ricevere"
+      },
+      "level": "A1",
+      "group": "social",
+      "present": [
+        "ricevo",
+        "ricevi",
+        "riceve",
+        "riceviamo",
+        "ricevete",
+        "ricevono"
+      ],
+      "pastParticiple": "ricevuto",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "a present",
+        "it": "un regalo"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora receives a present.",
+          "it": "Nora riceve un regalo."
+        },
+        "past": {
+          "en": "Nora received a present.",
+          "it": "Nora ha ricevuto un regalo."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:aprire",
+      "infinitive": "aprire",
+      "meaning": {
+        "en": "to open",
+        "it": "aprire"
+      },
+      "level": "A1",
+      "group": "daily",
+      "present": [
+        "apro",
+        "apri",
+        "apre",
+        "apriamo",
+        "aprite",
+        "aprono"
+      ],
+      "pastParticiple": "aperto",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "the window",
+        "it": "la finestra"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora opens the window.",
+          "it": "Nora apre la finestra."
+        },
+        "past": {
+          "en": "Nora opened the window.",
+          "it": "Nora ha aperto la finestra."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-irregular"
+    },
+    {
+      "id": "verb:chiudere",
+      "infinitive": "chiudere",
+      "meaning": {
+        "en": "to close",
+        "it": "chiudere"
+      },
+      "level": "A1",
+      "group": "daily",
+      "present": [
+        "chiudo",
+        "chiudi",
+        "chiude",
+        "chiudiamo",
+        "chiudete",
+        "chiudono"
+      ],
+      "pastParticiple": "chiuso",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "the door",
+        "it": "la porta"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora closes the door.",
+          "it": "Nora chiude la porta."
+        },
+        "past": {
+          "en": "Nora closed the door.",
+          "it": "Nora ha chiuso la porta."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-irregular"
+    },
+    {
+      "id": "verb:mettere",
+      "infinitive": "mettere",
+      "meaning": {
+        "en": "to put",
+        "it": "mettere"
+      },
+      "level": "A1",
+      "group": "daily",
+      "present": [
+        "metto",
+        "metti",
+        "mette",
+        "mettiamo",
+        "mettete",
+        "mettono"
+      ],
+      "pastParticiple": "messo",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "the book in the bag",
+        "it": "il libro in borsa"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora puts the book in her bag.",
+          "it": "Nora mette il libro in borsa."
+        },
+        "past": {
+          "en": "Nora put the book in her bag.",
+          "it": "Nora ha messo il libro in borsa."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            12,
+            14
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-irregular"
+    },
+    {
+      "id": "verb:preparare",
+      "infinitive": "preparare",
+      "meaning": {
+        "en": "to prepare",
+        "it": "preparare"
+      },
+      "level": "A1",
+      "group": "food",
+      "present": [
+        "preparo",
+        "prepari",
+        "prepara",
+        "prepariamo",
+        "preparate",
+        "preparano"
+      ],
+      "pastParticiple": "preparato",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "dinner",
+        "it": "la cena"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora prepares dinner.",
+          "it": "Nora prepara la cena."
+        },
+        "past": {
+          "en": "Nora prepared dinner.",
+          "it": "Nora ha preparato la cena."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:incontrare",
+      "infinitive": "incontrare",
+      "meaning": {
+        "en": "to meet / run into",
+        "it": "incontrare"
+      },
+      "level": "A1",
+      "group": "social",
+      "present": [
+        "incontro",
+        "incontri",
+        "incontra",
+        "incontriamo",
+        "incontrate",
+        "incontrano"
+      ],
+      "pastParticiple": "incontrato",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "a colleague",
+        "it": "un collega"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora meets a colleague.",
+          "it": "Nora incontra un collega."
+        },
+        "past": {
+          "en": "Nora met a colleague.",
+          "it": "Nora ha incontrato un collega."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5,
+            18
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:visitare",
+      "infinitive": "visitare",
+      "meaning": {
+        "en": "to visit",
+        "it": "visitare"
+      },
+      "level": "A1",
+      "group": "travel",
+      "present": [
+        "visito",
+        "visiti",
+        "visita",
+        "visitiamo",
+        "visitate",
+        "visitano"
+      ],
+      "pastParticiple": "visitato",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "a museum",
+        "it": "un museo"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora visits a museum.",
+          "it": "Nora visita un museo."
+        },
+        "past": {
+          "en": "Nora visited a museum.",
+          "it": "Nora ha visitato un museo."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:organizzare",
+      "infinitive": "organizzare",
+      "meaning": {
+        "en": "to organise",
+        "it": "organizzare"
+      },
+      "level": "A1",
+      "group": "social",
+      "present": [
+        "organizzo",
+        "organizzi",
+        "organizza",
+        "organizziamo",
+        "organizzate",
+        "organizzano"
+      ],
+      "pastParticiple": "organizzato",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "a party",
+        "it": "una festa"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora organises a party.",
+          "it": "Nora organizza una festa."
+        },
+        "past": {
+          "en": "Nora organised a party.",
+          "it": "Nora ha organizzato una festa."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            13
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:camminare",
+      "infinitive": "camminare",
+      "meaning": {
+        "en": "to walk",
+        "it": "camminare"
+      },
+      "level": "A1",
+      "group": "travel",
+      "present": [
+        "cammino",
+        "cammini",
+        "cammina",
+        "camminiamo",
+        "camminate",
+        "camminano"
+      ],
+      "pastParticiple": "camminato",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "in the park",
+        "it": "nel parco"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora walks in the park.",
+          "it": "Nora cammina nel parco."
+        },
+        "past": {
+          "en": "Nora walked in the park.",
+          "it": "Nora ha camminato nel parco."
+        }
+      },
+      "note": {
+        "en": "This activity uses avere. Movement alone does not decide the auxiliary: compare ho viaggiato with sono arrivato/a.",
+        "it": "Questa attività usa avere. Il movimento da solo non determina l’ausiliare: confronta ho viaggiato con sono arrivato/a."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:viaggiare",
+      "infinitive": "viaggiare",
+      "meaning": {
+        "en": "to travel",
+        "it": "viaggiare"
+      },
+      "level": "A1",
+      "group": "travel",
+      "present": [
+        "viaggio",
+        "viaggi",
+        "viaggia",
+        "viaggiamo",
+        "viaggiate",
+        "viaggiano"
+      ],
+      "pastParticiple": "viaggiato",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "by train",
+        "it": "in treno"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora travels by train.",
+          "it": "Nora viaggia in treno."
+        },
+        "past": {
+          "en": "Nora travelled by train.",
+          "it": "Nora ha viaggiato in treno."
+        }
+      },
+      "note": {
+        "en": "This activity uses avere. Movement alone does not decide the auxiliary: compare ho viaggiato with sono arrivato/a.",
+        "it": "Questa attività usa avere. Il movimento da solo non determina l’ausiliare: confronta ho viaggiato con sono arrivato/a."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5,
+            9,
+            14
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:nuotare",
+      "infinitive": "nuotare",
+      "meaning": {
+        "en": "to swim",
+        "it": "nuotare"
+      },
+      "level": "A1",
+      "group": "social",
+      "present": [
+        "nuoto",
+        "nuoti",
+        "nuota",
+        "nuotiamo",
+        "nuotate",
+        "nuotano"
+      ],
+      "pastParticiple": "nuotato",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "in the swimming pool",
+        "it": "in piscina"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora swims in the pool.",
+          "it": "Nora nuota in piscina."
+        },
+        "past": {
+          "en": "Nora swam in the pool.",
+          "it": "Nora ha nuotato in piscina."
+        }
+      },
+      "note": {
+        "en": "This activity uses avere. Movement alone does not decide the auxiliary: compare ho viaggiato with sono arrivato/a.",
+        "it": "Questa attività usa avere. Il movimento da solo non determina l’ausiliare: confronta ho viaggiato con sono arrivato/a."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:dormire",
+      "infinitive": "dormire",
+      "meaning": {
+        "en": "to sleep",
+        "it": "dormire"
+      },
+      "level": "A1",
+      "group": "daily",
+      "present": [
+        "dormo",
+        "dormi",
+        "dorme",
+        "dormiamo",
+        "dormite",
+        "dormono"
+      ],
+      "pastParticiple": "dormito",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "for eight hours",
+        "it": "otto ore"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora sleeps for eight hours.",
+          "it": "Nora dorme otto ore."
+        },
+        "past": {
+          "en": "Nora slept for eight hours.",
+          "it": "Nora ha dormito otto ore."
+        }
+      },
+      "note": {
+        "en": "This activity uses avere. Movement alone does not decide the auxiliary: compare ho viaggiato with sono arrivato/a.",
+        "it": "Questa attività usa avere. Il movimento da solo non determina l’ausiliare: confronta ho viaggiato con sono arrivato/a."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5,
+            9
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:capire",
+      "infinitive": "capire",
+      "meaning": {
+        "en": "to understand",
+        "it": "capire"
+      },
+      "level": "A1",
+      "group": "foundations",
+      "present": [
+        "capisco",
+        "capisci",
+        "capisce",
+        "capiamo",
+        "capite",
+        "capiscono"
+      ],
+      "pastParticiple": "capito",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "the question",
+        "it": "la domanda"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora understands the question.",
+          "it": "Nora capisce la domanda."
+        },
+        "past": {
+          "en": "Nora understood the question.",
+          "it": "Nora ha capito la domanda."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        },
+        {
+          "id": "src-a746533b6323",
+          "pages": [
+            6,
+            12,
+            13
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:finire",
+      "infinitive": "finire",
+      "meaning": {
+        "en": "to finish something",
+        "it": "finire"
+      },
+      "level": "A2",
+      "group": "daily",
+      "present": [
+        "finisco",
+        "finisci",
+        "finisce",
+        "finiamo",
+        "finite",
+        "finiscono"
+      ],
+      "pastParticiple": "finito",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "the work",
+        "it": "il lavoro"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora finishes the work.",
+          "it": "Nora finisce il lavoro."
+        },
+        "past": {
+          "en": "Nora finished the work.",
+          "it": "Nora ha finito il lavoro."
+        }
+      },
+      "note": {
+        "en": "Here you finish the work: finire has an object, so use avere. Compare the different construction il lavoro è finito.",
+        "it": "Qui finisci il lavoro: finire ha un oggetto, quindi usa avere. Confronta la diversa costruzione il lavoro è finito."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        },
+        {
+          "id": "src-a746533b6323",
+          "pages": [
+            6,
+            12,
+            13
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            55,
+            252
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:svegliarsi",
+      "infinitive": "svegliarsi",
+      "meaning": {
+        "en": "to wake up",
+        "it": "svegliarsi"
+      },
+      "level": "A1",
+      "group": "routine",
+      "present": [
+        "mi sveglio",
+        "ti svegli",
+        "si sveglia",
+        "ci svegliamo",
+        "vi svegliate",
+        "si svegliano"
+      ],
+      "pastParticiple": "svegliato",
+      "auxiliary": "essere",
+      "reflexive": true,
+      "pastContext": {
+        "en": "at seven",
+        "it": "alle sette"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora wakes up at seven.",
+          "it": "Nora si sveglia alle sette."
+        },
+        "past": {
+          "en": "Nora woke up at seven.",
+          "it": "Nora si è svegliata alle sette."
+        }
+      },
+      "note": {
+        "en": "Keep the reflexive pronoun before essere: mi sono, ti sei, si è, ci siamo, vi siete, si sono. Then agree the participle with the subject.",
+        "it": "Mantieni il pronome riflessivo prima di essere: mi sono, ti sei, si è, ci siamo, vi siete, si sono. Poi concorda il participio con il soggetto."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            17
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:alzarsi",
+      "infinitive": "alzarsi",
+      "meaning": {
+        "en": "to get up",
+        "it": "alzarsi"
+      },
+      "level": "A1",
+      "group": "routine",
+      "present": [
+        "mi alzo",
+        "ti alzi",
+        "si alza",
+        "ci alziamo",
+        "vi alzate",
+        "si alzano"
+      ],
+      "pastParticiple": "alzato",
+      "auxiliary": "essere",
+      "reflexive": true,
+      "pastContext": {
+        "en": "early",
+        "it": "presto"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora gets up early.",
+          "it": "Nora si alza presto."
+        },
+        "past": {
+          "en": "Nora got up early.",
+          "it": "Nora si è alzata presto."
+        }
+      },
+      "note": {
+        "en": "Keep the reflexive pronoun before essere: mi sono, ti sei, si è, ci siamo, vi siete, si sono. Then agree the participle with the subject.",
+        "it": "Mantieni il pronome riflessivo prima di essere: mi sono, ti sei, si è, ci siamo, vi siete, si sono. Poi concorda il participio con il soggetto."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            8,
+            17
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:vestirsi",
+      "infinitive": "vestirsi",
+      "meaning": {
+        "en": "to get dressed",
+        "it": "vestirsi"
+      },
+      "level": "A1",
+      "group": "routine",
+      "present": [
+        "mi vesto",
+        "ti vesti",
+        "si veste",
+        "ci vestiamo",
+        "vi vestite",
+        "si vestono"
+      ],
+      "pastParticiple": "vestito",
+      "auxiliary": "essere",
+      "reflexive": true,
+      "pastContext": {
+        "en": "in a hurry",
+        "it": "in fretta"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora gets dressed in a hurry.",
+          "it": "Nora si veste in fretta."
+        },
+        "past": {
+          "en": "Nora got dressed in a hurry.",
+          "it": "Nora si è vestita in fretta."
+        }
+      },
+      "note": {
+        "en": "Keep the reflexive pronoun before essere: mi sono, ti sei, si è, ci siamo, vi siete, si sono. Then agree the participle with the subject.",
+        "it": "Mantieni il pronome riflessivo prima di essere: mi sono, ti sei, si è, ci siamo, vi siete, si sono. Poi concorda il participio con il soggetto."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5,
+            17
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:pettinarsi",
+      "infinitive": "pettinarsi",
+      "meaning": {
+        "en": "to comb one’s hair",
+        "it": "pettinarsi"
+      },
+      "level": "A1",
+      "group": "routine",
+      "present": [
+        "mi pettino",
+        "ti pettini",
+        "si pettina",
+        "ci pettiniamo",
+        "vi pettinate",
+        "si pettinano"
+      ],
+      "pastParticiple": "pettinato",
+      "auxiliary": "essere",
+      "reflexive": true,
+      "pastContext": {
+        "en": "before going out",
+        "it": "prima di uscire"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora combs her hair before going out.",
+          "it": "Nora si pettina prima di uscire."
+        },
+        "past": {
+          "en": "Nora combed her hair before going out.",
+          "it": "Nora si è pettinata prima di uscire."
+        }
+      },
+      "note": {
+        "en": "Keep the reflexive pronoun before essere: mi sono, ti sei, si è, ci siamo, vi siete, si sono. Then agree the participle with the subject.",
+        "it": "Mantieni il pronome riflessivo prima di essere: mi sono, ti sei, si è, ci siamo, vi siete, si sono. Poi concorda il participio con il soggetto."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:truccarsi",
+      "infinitive": "truccarsi",
+      "meaning": {
+        "en": "to put on makeup",
+        "it": "truccarsi"
+      },
+      "level": "A1",
+      "group": "routine",
+      "present": [
+        "mi trucco",
+        "ti trucchi",
+        "si trucca",
+        "ci trucchiamo",
+        "vi truccate",
+        "si truccano"
+      ],
+      "pastParticiple": "truccato",
+      "auxiliary": "essere",
+      "reflexive": true,
+      "pastContext": {
+        "en": "for the party",
+        "it": "per la festa"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora puts on makeup for the party.",
+          "it": "Nora si trucca per la festa."
+        },
+        "past": {
+          "en": "Nora put on makeup for the party.",
+          "it": "Nora si è truccata per la festa."
+        }
+      },
+      "note": {
+        "en": "Keep the reflexive pronoun before essere: mi sono, ti sei, si è, ci siamo, vi siete, si sono. Then agree the participle with the subject.",
+        "it": "Mantieni il pronome riflessivo prima di essere: mi sono, ti sei, si è, ci siamo, vi siete, si sono. Poi concorda il participio con il soggetto."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    },
+    {
+      "id": "verb:scegliere",
+      "infinitive": "scegliere",
+      "meaning": {
+        "en": "to choose",
+        "it": "scegliere"
+      },
+      "level": "A2",
+      "group": "shopping",
+      "present": [
+        "scelgo",
+        "scegli",
+        "sceglie",
+        "scegliamo",
+        "scegliete",
+        "scelgono"
+      ],
+      "pastParticiple": "scelto",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "a jacket",
+        "it": "una giacca"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora chooses a jacket.",
+          "it": "Nora sceglie una giacca."
+        },
+        "past": {
+          "en": "Nora chose a jacket.",
+          "it": "Nora ha scelto una giacca."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "unitId": "past-irregular"
+    },
+    {
+      "id": "verb:conoscere",
+      "infinitive": "conoscere",
+      "meaning": {
+        "en": "to know / get acquainted with",
+        "it": "conoscere"
+      },
+      "level": "A2",
+      "group": "social",
+      "present": [
+        "conosco",
+        "conosci",
+        "conosce",
+        "conosciamo",
+        "conoscete",
+        "conoscono"
+      ],
+      "pastParticiple": "conosciuto",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "a new colleague",
+        "it": "una nuova collega"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora knows the new colleague.",
+          "it": "Nora conosce la nuova collega."
+        },
+        "past": {
+          "en": "Nora met the new colleague yesterday.",
+          "it": "Nora ha conosciuto la nuova collega ieri."
+        }
+      },
+      "note": {
+        "en": "In the past example, conoscere means meeting someone for the first time. Long-standing familiarity is normally described differently, for example conoscevo.",
+        "it": "Nell’esempio passato conoscere significa incontrare una persona per la prima volta. Una conoscenza già esistente si descrive normalmente in altro modo, per esempio conoscevo."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        },
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            253
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:prenotare",
+      "infinitive": "prenotare",
+      "meaning": {
+        "en": "to book / reserve",
+        "it": "prenotare"
+      },
+      "level": "A1",
+      "group": "travel",
+      "present": [
+        "prenoto",
+        "prenoti",
+        "prenota",
+        "prenotiamo",
+        "prenotate",
+        "prenotano"
+      ],
+      "pastParticiple": "prenotato",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "a room",
+        "it": "una camera"
+      },
+      "examples": {
+        "present": {
+          "en": "Nora books a room.",
+          "it": "Nora prenota una camera."
+        },
+        "past": {
+          "en": "Nora booked a room.",
+          "it": "Nora ha prenotato una camera."
+        }
+      },
+      "note": {
+        "en": "Use avere in this activity. The example gives the meaning; the practice asks only for the verb form.",
+        "it": "Usa avere in questa attività. L’esempio chiarisce il significato; la pratica richiede solo la forma verbale."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            233,
+            234,
+            235,
+            240
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            82,
+            83,
+            84
+          ]
+        }
+      ],
+      "unitId": "past-avere"
+    },
+    {
+      "id": "verb:dire",
+      "infinitive": "dire",
+      "meaning": {
+        "en": "to say / to tell",
+        "it": "dire"
+      },
+      "level": "A1",
+      "group": "social",
+      "present": [
+        "dico",
+        "dici",
+        "dice",
+        "diciamo",
+        "dite",
+        "dicono"
+      ],
+      "pastParticiple": "detto",
+      "auxiliary": "avere",
+      "reflexive": false,
+      "pastContext": {
+        "en": "hello to Anna",
+        "it": "ciao ad Anna"
+      },
+      "examples": {
+        "present": {
+          "en": "I say hello to Anna.",
+          "it": "Dico ciao ad Anna."
+        },
+        "past": {
+          "en": "Yesterday I said hello to Anna.",
+          "it": "Ieri ho detto ciao ad Anna."
+        }
+      },
+      "note": {
+        "en": "Learn the irregular chunk ho detto. Dire qualcosa a qualcuno means to say something to someone.",
+        "it": "Impara l’espressione irregolare ho detto. Dire qualcosa a qualcuno indica che si comunicano parole a una persona."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            240
+          ]
+        }
+      ],
+      "unitId": "past-irregular"
+    },
+    {
+      "id": "verb:lavarsi",
+      "infinitive": "lavarsi",
+      "meaning": {
+        "en": "to wash oneself",
+        "it": "lavarsi"
+      },
+      "level": "A1",
+      "group": "routine",
+      "present": [
+        "mi lavo",
+        "ti lavi",
+        "si lava",
+        "ci laviamo",
+        "vi lavate",
+        "si lavano"
+      ],
+      "pastParticiple": "lavato",
+      "auxiliary": "essere",
+      "reflexive": true,
+      "pastContext": {
+        "en": "before breakfast",
+        "it": "prima di colazione"
+      },
+      "examples": {
+        "present": {
+          "en": "Giulia washes before breakfast.",
+          "it": "Giulia si lava prima di colazione."
+        },
+        "past": {
+          "en": "Yesterday Giulia washed before breakfast.",
+          "it": "Ieri Giulia si è lavata prima di colazione."
+        }
+      },
+      "note": {
+        "en": "Keep the reflexive pronoun and use essere: mi sono lavato/a. With a body part, use the article: mi sono lavato/a le mani.",
+        "it": "Mantieni il pronome riflessivo e usa essere: mi sono lavato/a. Con una parte del corpo usa l’articolo: mi sono lavato/a le mani."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            17
+          ]
+        },
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            234,
+            235
+          ]
+        }
+      ],
+      "unitId": "past-essere"
+    }
+  ],
+  "nouns": [
+    {
+      "id": "noun:rivista",
+      "term": {
+        "en": "the magazine",
+        "it": "la rivista"
+      },
+      "gender": "f",
+      "plural": "le riviste",
+      "example": {
+        "en": "I read a magazine on the train.",
+        "it": "Ho letto una rivista sul treno."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:campagna",
+      "term": {
+        "en": "the countryside",
+        "it": "la campagna"
+      },
+      "gender": "f",
+      "plural": "le campagne",
+      "example": {
+        "en": "We walked in the countryside.",
+        "it": "Abbiamo camminato in campagna."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:regalo",
+      "term": {
+        "en": "the present / gift",
+        "it": "il regalo"
+      },
+      "gender": "m",
+      "plural": "i regali",
+      "example": {
+        "en": "I received a small present.",
+        "it": "Ho ricevuto un piccolo regalo."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            13,
+            14
+          ]
+        }
+      ],
+      "vocabularyWordId": "word:espresso1-u10:6",
+      "bankId": "espresso1-u10"
+    },
+    {
+      "id": "noun:museo",
+      "term": {
+        "en": "the museum",
+        "it": "il museo"
+      },
+      "gender": "m",
+      "plural": "i musei",
+      "example": {
+        "en": "The museum opens at ten.",
+        "it": "Il museo apre alle dieci."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "vocabularyWordId": "word:espresso1-u08:1",
+      "bankId": "espresso1-u08"
+    },
+    {
+      "id": "noun:biglietto",
+      "term": {
+        "en": "the ticket",
+        "it": "il biglietto"
+      },
+      "gender": "m",
+      "plural": "i biglietti",
+      "example": {
+        "en": "I bought the ticket online.",
+        "it": "Ho comprato il biglietto online."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:treno",
+      "term": {
+        "en": "the train",
+        "it": "il treno"
+      },
+      "gender": "m",
+      "plural": "i treni",
+      "example": {
+        "en": "The train arrived early.",
+        "it": "Il treno è arrivato presto."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:aereo",
+      "term": {
+        "en": "the plane",
+        "it": "l’aereo"
+      },
+      "gender": "m",
+      "plural": "gli aerei",
+      "example": {
+        "en": "The plane leaves in an hour.",
+        "it": "L’aereo parte fra un’ora."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:vacanza",
+      "term": {
+        "en": "the holiday",
+        "it": "la vacanza"
+      },
+      "gender": "f",
+      "plural": "le vacanze",
+      "example": {
+        "en": "The holiday was short.",
+        "it": "La vacanza è stata breve."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            13,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:valigia",
+      "term": {
+        "en": "the suitcase",
+        "it": "la valigia"
+      },
+      "gender": "f",
+      "plural": "le valigie",
+      "example": {
+        "en": "I put the jacket in the suitcase.",
+        "it": "Ho messo la giacca in valigia."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:festa",
+      "term": {
+        "en": "the party",
+        "it": "la festa"
+      },
+      "gender": "f",
+      "plural": "le feste",
+      "example": {
+        "en": "We organised a party.",
+        "it": "Abbiamo organizzato una festa."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "vocabularyWordId": "word:espresso1-u06:0",
+      "bankId": "espresso1-u06"
+    },
+    {
+      "id": "noun:personaggio",
+      "term": {
+        "en": "the character / historical figure",
+        "it": "il personaggio"
+      },
+      "gender": "m",
+      "plural": "i personaggi",
+      "example": {
+        "en": "The character tells a story.",
+        "it": "Il personaggio racconta una storia."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            16,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:esploratore",
+      "term": {
+        "en": "the explorer (male)",
+        "it": "l’esploratore"
+      },
+      "gender": "m",
+      "plural": "gli esploratori",
+      "example": {
+        "en": "The explorer arrived on the island.",
+        "it": "L’esploratore è arrivato sull’isola."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            16,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:estetista-f",
+      "term": {
+        "en": "the beautician (female)",
+        "it": "l’estetista"
+      },
+      "gender": "f",
+      "plural": "le estetiste",
+      "example": {
+        "en": "The beautician opened the shop.",
+        "it": "L’estetista ha aperto il negozio."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            14,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:cena",
+      "term": {
+        "en": "the dinner",
+        "it": "la cena"
+      },
+      "gender": "f",
+      "plural": "le cene",
+      "example": {
+        "en": "Dinner is ready.",
+        "it": "La cena è pronta."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:collega-f",
+      "term": {
+        "en": "the colleague (female)",
+        "it": "la collega"
+      },
+      "gender": "f",
+      "plural": "le colleghe",
+      "example": {
+        "en": "The colleague returned yesterday.",
+        "it": "La collega è tornata ieri."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "vocabularyWordId": "word:work:5",
+      "bankId": "work"
+    },
+    {
+      "id": "noun:collega-m",
+      "term": {
+        "en": "the colleague (male)",
+        "it": "il collega"
+      },
+      "gender": "m",
+      "plural": "i colleghi",
+      "example": {
+        "en": "The colleague wrote a message.",
+        "it": "Il collega ha scritto un messaggio."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:finestra",
+      "term": {
+        "en": "the window",
+        "it": "la finestra"
+      },
+      "gender": "f",
+      "plural": "le finestre",
+      "example": {
+        "en": "I opened the window.",
+        "it": "Ho aperto la finestra."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "vocabularyWordId": "word:espresso2-u06:1",
+      "bankId": "espresso2-u06"
+    },
+    {
+      "id": "noun:porta",
+      "term": {
+        "en": "the door",
+        "it": "la porta"
+      },
+      "gender": "f",
+      "plural": "le porte",
+      "example": {
+        "en": "The door is closed.",
+        "it": "La porta è chiusa."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:libro",
+      "term": {
+        "en": "the book",
+        "it": "il libro"
+      },
+      "gender": "m",
+      "plural": "i libri",
+      "example": {
+        "en": "I put the book on the table.",
+        "it": "Ho messo il libro sul tavolo."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "vocabularyWordId": "word:things:0",
+      "bankId": "things"
+    },
+    {
+      "id": "noun:lettera",
+      "term": {
+        "en": "the letter",
+        "it": "la lettera"
+      },
+      "gender": "f",
+      "plural": "le lettere",
+      "example": {
+        "en": "I wrote a letter to my aunt.",
+        "it": "Ho scritto una lettera a mia zia."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            12
+          ]
+        }
+      ],
+      "vocabularyWordId": "word:espresso1-u01:4",
+      "bankId": "espresso1-u01"
+    },
+    {
+      "id": "noun:bottiglia",
+      "term": {
+        "en": "the bottle",
+        "it": "la bottiglia"
+      },
+      "gender": "f",
+      "plural": "le bottiglie",
+      "example": {
+        "en": "The bottle contains water.",
+        "it": "La bottiglia contiene acqua."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            96
+          ]
+        }
+      ],
+      "vocabularyWordId": "word:espresso1-u09:1",
+      "bankId": "espresso1-u09"
+    },
+    {
+      "id": "noun:parco",
+      "term": {
+        "en": "the park",
+        "it": "il parco"
+      },
+      "gender": "m",
+      "plural": "i parchi",
+      "example": {
+        "en": "I walked in the park.",
+        "it": "Ho camminato nel parco."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:supermercato",
+      "term": {
+        "en": "the supermarket",
+        "it": "il supermercato"
+      },
+      "gender": "m",
+      "plural": "i supermercati",
+      "example": {
+        "en": "The supermarket closes at eight.",
+        "it": "Il supermercato chiude alle otto."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            91
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:negozio",
+      "term": {
+        "en": "the shop",
+        "it": "il negozio"
+      },
+      "gender": "m",
+      "plural": "i negozi",
+      "example": {
+        "en": "The shop sells books.",
+        "it": "Il negozio vende libri."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:giacca",
+      "term": {
+        "en": "the jacket",
+        "it": "la giacca"
+      },
+      "gender": "f",
+      "plural": "le giacche",
+      "example": {
+        "en": "I chose a blue jacket.",
+        "it": "Ho scelto una giacca blu."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:camicia",
+      "term": {
+        "en": "the shirt",
+        "it": "la camicia"
+      },
+      "gender": "f",
+      "plural": "le camicie",
+      "example": {
+        "en": "The shirt is white.",
+        "it": "La camicia è bianca."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:scontrino",
+      "term": {
+        "en": "the receipt",
+        "it": "lo scontrino"
+      },
+      "gender": "m",
+      "plural": "gli scontrini",
+      "example": {
+        "en": "I keep the receipt in my bag.",
+        "it": "Conservo lo scontrino in borsa."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:zaino",
+      "term": {
+        "en": "the backpack",
+        "it": "lo zaino"
+      },
+      "gender": "m",
+      "plural": "gli zaini",
+      "example": {
+        "en": "The backpack is under the table.",
+        "it": "Lo zaino è sotto il tavolo."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:ombrello",
+      "term": {
+        "en": "the umbrella",
+        "it": "l’ombrello"
+      },
+      "gender": "m",
+      "plural": "gli ombrelli",
+      "example": {
+        "en": "I took the umbrella.",
+        "it": "Ho preso l’ombrello."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:appuntamento",
+      "term": {
+        "en": "the appointment",
+        "it": "l’appuntamento"
+      },
+      "gender": "m",
+      "plural": "gli appuntamenti",
+      "example": {
+        "en": "I have an appointment at three.",
+        "it": "Ho un appuntamento alle tre."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            62
+          ]
+        }
+      ],
+      "vocabularyWordId": "word:espresso2-u07:0",
+      "bankId": "espresso2-u07"
+    },
+    {
+      "id": "noun:spettacolo",
+      "term": {
+        "en": "the show",
+        "it": "lo spettacolo"
+      },
+      "gender": "m",
+      "plural": "gli spettacoli",
+      "example": {
+        "en": "The show starts at nine.",
+        "it": "Lo spettacolo comincia alle nove."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-580f7558db56",
+          "pages": [
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noun:prenotazione",
+      "term": {
+        "en": "the booking / reservation",
+        "it": "la prenotazione"
+      },
+      "gender": "f",
+      "plural": "le prenotazioni",
+      "example": {
+        "en": "The booking is for two people.",
+        "it": "La prenotazione è per due persone."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-1647be2784c9",
+          "pages": [
+            45,
+            46,
+            68
+          ]
+        }
+      ],
+      "vocabularyWordId": "word:hotel:2",
+      "bankId": "hotel"
+    }
+  ]
+}

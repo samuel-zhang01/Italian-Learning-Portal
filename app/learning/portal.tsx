@@ -1,5 +1,7 @@
 "use client";
-import { lazy, Suspense, useEffect, useRef, useState, type ReactNode } from "react";
+import { lazy, Suspense, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
+import { createProfileSync, PROFILE_LINK_KEY } from "./profile-sync";
+import { browserProfileStore } from "./profile-store";
 import curriculum from "./curriculum.json";
 import { planningSources, planningReviewCatalogue } from "./planning-data";
 import { selectReviewQueue } from "./review-queue";
@@ -43,6 +45,7 @@ const VocabularyView = lazy(() => import("./enriched").then((module) => ({ defau
 const ChapterDashboard = lazy(() => import("./chapters").then((module) => ({ default: module.ChapterDashboard })));
 const BackupTransfer = lazy(() => import("./backup-transfer").then(module => ({ default: module.BackupTransfer })));
 const OfflineStudy = lazy(() => import("./offline").then(module => ({ default: module.OfflineStudy })));
+const ProfileView = lazy(() => import("./profile").then(module => ({ default: module.ProfileView })));
 const A2DiagnosticView = lazy(() => import("./learning-insights").then(module => ({ default: module.A2DiagnosticView })));
 const WeeklyLearningReport = lazy(() => import("./learning-insights").then(module => ({ default: module.WeeklyLearningReport })));
 const ListeningView = lazy(() => import("./listening").then(module => ({ default: module.ListeningView })));
@@ -160,6 +163,18 @@ export default function Portal() {
   const heading = useRef<HTMLElement>(null);
   const toolsMenu = useRef<HTMLDetailsElement>(null);
   const current = useRef(p);
+  // These callbacks read/write the ref only during later sync operations; creation does not invoke them.
+  // eslint-disable-next-line react-hooks/refs
+  const [profileSync] = useState(() => createProfileSync({
+    ids, store: browserProfileStore(), read: () => current.current,
+    apply: (value) => {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(value));
+      current.current = value; setP(value); setStorageError(false);
+    },
+    link: () => localStorage.getItem(PROFILE_LINK_KEY) || "",
+    setLink: (username) => { if (username) localStorage.setItem(PROFILE_LINK_KEY, username); else localStorage.removeItem(PROFILE_LINK_KEY); },
+  }));
+  const profileState = useSyncExternalStore(profileSync.subscribe, profileSync.snapshot, profileSync.snapshot);
   const pdfOperation = useRef(0);
   const t: Translate = (en, it) => (p.language === "en" ? en : it);
   const text = (x: Pair) => x[p.language];
@@ -187,6 +202,11 @@ export default function Portal() {
       setNotice("");
     };
     const sync = (e: StorageEvent) => {
+      if (e.key === PROFILE_LINK_KEY) {
+        // A shared cookie can switch identity in another tab. Reload the new
+        // device snapshot before accepting any further edits in this tab.
+        profileSync.stop(); window.location.reload(); return;
+      }
       if (e.key !== STORAGE_KEY) return;
       try {
         const s = e.newValue ? parseProgress(e.newValue, ids) : emptyProgress();
@@ -206,7 +226,21 @@ export default function Portal() {
       pdfOperation.current += 1;
       pdfStore.clear();
     };
-  }, [pdfStore]);
+  }, [pdfStore, profileSync]);
+  useEffect(() => {
+    if (!ready || loadError || storageError) return;
+    void profileSync.start();
+    const refresh = () => { if (document.visibilityState === "visible") void profileSync.flush(); };
+    const interval = window.setInterval(refresh, 20000);
+    window.addEventListener("online", refresh);
+    window.addEventListener("focus", refresh);
+    document.addEventListener("visibilitychange", refresh);
+    return () => {
+      clearInterval(interval); window.removeEventListener("online", refresh);
+      window.removeEventListener("focus", refresh); document.removeEventListener("visibilitychange", refresh);
+      profileSync.stop();
+    };
+  }, [ready, loadError, storageError, profileSync]);
   useEffect(() => {
     document.documentElement.lang = p.language;
     document.title =
@@ -240,6 +274,7 @@ export default function Portal() {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
       setStorageError(false);
+      profileSync.changed();
     } catch {
       setStorageError(true);
     }
@@ -433,6 +468,7 @@ export default function Portal() {
               ["listen-speak", t("Short listening & speaking", "Ascolto e parlato brevi")],
               ["weekly", t("Weekly learning report", "Resoconto settimanale")],
               ["offline", t("Offline study", "Studio offline")],
+              ["profile", t("Profile & sync", "Profilo e sincronizzazione")],
               ["reviews", t("Review queue", "Ripasso del giorno")],
               ["games", t("Games", "Giochi")],
               ["grammar", t("Grammar lab", "Grammatica")],
@@ -458,6 +494,9 @@ export default function Portal() {
         <LearningRouteBoundary key={routePath} t={t}>
         <Suspense fallback={<section className="workspace" role="status" aria-live="polite"><p>{t("Opening your practice…", "Apertura della pratica…")}</p></section>}>
         {routePath === "offline" && <OfflineStudy t={t} />}
+        {routePath === "profile" && (loadError || storageError
+          ? <div className="workspace"><h1>{t("Keep your saved work safe", "Conserva il lavoro salvato")}</h1><p>{t("Resolve the device storage warning before connecting a profile. Progress has recovery and backup options.", "Risolvi l’avviso sul salvataggio prima di collegare un profilo. Progressi offre opzioni di recupero e backup.")}</p><button className="button primary" onClick={() => go("progress")}>{t("Open progress & recovery", "Apri progressi e recupero")}</button></div>
+          : <ProfileView sync={profileSync} t={t} go={go} />)}
         {routePath === "diagnostics" && <A2DiagnosticView key={route} {...shared} />}
         {routePath === "weekly" && <WeeklyLearningReport {...shared} />}
         {routePath === "listening" && <ListeningView {...shared} />}
@@ -555,6 +594,7 @@ export default function Portal() {
                 setP(s);
                 setLoadError(false);
                 setStorageError(false);
+                profileSync.changed();
                 return true;
               } catch {
                 return false;
@@ -574,6 +614,7 @@ export default function Portal() {
         {![
           "today",
           "offline",
+          "profile",
           "diagnostics",
           "weekly",
           "listening",
@@ -629,7 +670,7 @@ export default function Portal() {
             )}
           </span>
         </span>
-        <button onClick={() => go("progress")}>
+        <button onClick={() => go(storageError || loadError ? "progress" : "profile")}>
           <span
             className={
               storageError || loadError ? "status-dot warning" : "status-dot"
@@ -638,8 +679,8 @@ export default function Portal() {
           {storageError || loadError
             ? t("Check progress storage", "Controlla il salvataggio")
             : t(
-                "Progress saved on this device",
-                "Progressi salvati su questo dispositivo",
+                profileState.username ? `${profileState.username} · ${profileState.status === "synced" ? "Saved online" : profileState.status === "saving" ? "Saving…" : "Check sync"}` : "Save across devices",
+                profileState.username ? `${profileState.username} · ${profileState.status === "synced" ? "Salvato online" : profileState.status === "saving" ? "Salvataggio…" : "Controlla sincronizzazione"}` : "Salva su più dispositivi",
               )}
         </button>
       </footer>
@@ -1880,10 +1921,11 @@ function ProgressView({
           "Guarda quanta strada hai fatto.",
         )}
         description={t(
-          "Your first attempts, later recall and your own Italian. Progress stays in this browser, on this device.",
-          "I primi tentativi, il ricordo nel tempo e il tuo italiano. I progressi restano in questo browser, su questo dispositivo.",
+          "Your first attempts, later recall and your own Italian. A study profile can keep your progress together across devices.",
+          "I primi tentativi, il ricordo nel tempo e il tuo italiano. Un profilo di studio può riunire i progressi su più dispositivi.",
         )}
       />
+      <button className="button secondary" onClick={() => go("profile")}>{t("Profile & cross-device sync", "Profilo e sincronizzazione tra dispositivi")} →</button>
       <Rewards p={p} t={t} />
       <div className="stats-grid">
         <div>
@@ -2021,8 +2063,8 @@ function ProgressView({
             <h2>{t("Keep your progress safe", "Conserva i tuoi progressi")}</h2>
             <p>
               {t(
-                "Browser storage remembers your plan and work. Clearing site data or switching devices will not carry it over. Export a backup to keep a copy.",
-                "Il browser ricorda il piano e il lavoro. Cancellando i dati del sito o cambiando dispositivo, i progressi non si trasferiscono. Esporta un backup per conservarne una copia.",
+                "Your work saves in this browser. Connect a study profile to carry it between devices, and wait for “Saved online” before switching. Export a backup for an extra copy.",
+                "Il lavoro si salva in questo browser. Collega un profilo di studio per ritrovarlo su altri dispositivi e aspetta «Salvato online» prima di cambiare. Esporta un backup per avere una copia in più.",
               )}
             </p>
             <button className="button secondary full" onClick={exportProgress}>
@@ -2037,8 +2079,8 @@ function ProgressView({
               </summary>
               <p>
                 {t(
-                  "The app uses localStorage, not an account. Your writing is not sent to a server. Each browser has separate progress. Voice playback uses your browser’s speech service. Source PDFs you connect remain on your device.",
-                  "L’app usa localStorage, senza un account. I tuoi testi non vengono inviati a un server. Ogni browser ha progressi separati. L’audio usa il servizio vocale del browser. I PDF collegati restano sul dispositivo.",
+                  "Without a study profile, progress stays in this browser. When you connect a profile, your learning records and writing sync to the private profile service. Your PIN is never included in progress backups. Voice playback uses your browser’s speech service. Connected source PDFs and private audio stay on your device.",
+                  "Senza un profilo di studio, i progressi restano in questo browser. Collegando un profilo, dati di studio e testi si sincronizzano con il servizio privato dei profili. Il PIN non è mai incluso nei backup dei progressi. L’audio usa il servizio vocale del browser. I PDF collegati e l’audio personale restano sul dispositivo.",
                 )}
               </p>
               <p>

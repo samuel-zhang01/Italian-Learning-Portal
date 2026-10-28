@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-10-24",
+  "reviewedOn": "2026-10-28",
   "sources": [
     {
       "id": "src-c62281320322",
@@ -424,6 +424,14 @@
       "course": 3,
       "pages": 263,
       "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4"
+    },
+    {
+      "id": "src-f293d35b1616",
+      "path": "Course 3/Week_3_Il_passato_prossimo.pdf",
+      "title": "Week_3_Il_passato_prossimo.pdf",
+      "course": 3,
+      "pages": 20,
+      "sha256": "f293d35b1616561dc25feb0a062f6d7c14b91f511bce5a254efd4e066b936538"
     }
   ],
   "pages": [
@@ -41401,6 +41409,587 @@
       "model": {
         "en": "I can name the topic I want to practise and write my own example in the portal.",
         "it": "So indicare l’argomento che voglio esercitare e scrivere un mio esempio nel portale."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-f293d35b1616-p1",
+      "sourceId": "src-f293d35b1616",
+      "page": 1,
+      "kind": "reference",
+      "focus": {
+        "en": "Week 3 · Source cover",
+        "it": "Settimana 3 · Copertina della fonte"
+      },
+      "unitIds": [],
+      "task": {
+        "en": "Use this cover to identify the Week 3 class PDF. Start the original portal practice with the journey lesson.",
+        "it": "Usa la copertina per identificare il PDF della terza settimana. Inizia la pratica originale del portale con la lezione sul viaggio."
+      },
+      "model": {
+        "en": "My next practice goal is to tell a short journey in the past.",
+        "it": "Il mio prossimo obiettivo è raccontare un breve viaggio al passato."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-f293d35b1616-p2",
+      "sourceId": "src-f293d35b1616",
+      "page": 2,
+      "kind": "reference",
+      "focus": {
+        "en": "Week 3 · Learning goals",
+        "it": "Settimana 3 · Obiettivi di apprendimento"
+      },
+      "unitIds": [
+        "past-avere",
+        "past-essere",
+        "past-irregular"
+      ],
+      "task": {
+        "en": "Choose one goal before you start: auxiliaries, irregular participles or a short past story. Return to the goal after practising.",
+        "it": "Scegli un obiettivo prima di iniziare: ausiliari, participi irregolari o un breve racconto al passato. Torna all’obiettivo dopo la pratica."
+      },
+      "model": {
+        "en": "Today I want to choose the auxiliary in three travel sentences.",
+        "it": "Oggi voglio scegliere l’ausiliare in tre frasi di viaggio."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-f293d35b1616-p3",
+      "sourceId": "src-f293d35b1616",
+      "page": 3,
+      "kind": "reference",
+      "focus": {
+        "en": "Class correction · independent work",
+        "it": "Correzione in classe · lavoro autonomo"
+      },
+      "unitIds": [
+        "past-avere",
+        "past-essere"
+      ],
+      "task": {
+        "en": "Compare your own previous work with the correction in your private class file. Write down one rule you want to practise; the portal does not reproduce the completed homework.",
+        "it": "Confronta il tuo lavoro precedente con la correzione nel file privato del corso. Annota una regola da esercitare; il portale non riproduce il compito svolto."
+      },
+      "model": {
+        "en": "I will practise agreement with essere using a new invented person.",
+        "it": "Eserciterò l’accordo con essere usando una nuova persona inventata."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-f293d35b1616-p4",
+      "sourceId": "src-f293d35b1616",
+      "page": 4,
+      "kind": "practice",
+      "focus": {
+        "en": "Agreement with essere",
+        "it": "Accordo con essere"
+      },
+      "unitIds": [
+        "past-essere",
+        "past-avere"
+      ],
+      "task": {
+        "en": "Describe Giulia and Anna using arrivare, then describe the same two people using mangiare una pizza. Write two complete past sentences and compare the endings.",
+        "it": "Descrivi Giulia e Anna usando arrivare, poi le stesse persone usando mangiare una pizza. Scrivi due frasi complete al passato e confronta le desinenze."
+      },
+      "model": {
+        "en": "Giulia and Anna arrived at eight. They ate a pizza.",
+        "it": "Giulia e Anna sono arrivate alle otto. Hanno mangiato una pizza."
+      },
+      "checks": [
+        {
+          "en": "I used arrivate for two named women with essere.",
+          "it": "Ho usato arrivate per due donne nominate con essere."
+        },
+        {
+          "en": "I kept mangiato unchanged in this simple avere sentence.",
+          "it": "Ho mantenuto mangiato invariato in questa frase semplice con avere."
+        }
+      ]
+    },
+    {
+      "id": "src-f293d35b1616-p5",
+      "sourceId": "src-f293d35b1616",
+      "page": 5,
+      "kind": "practice",
+      "focus": {
+        "en": "Choose the auxiliary in a useful chunk",
+        "it": "Scegli l’ausiliare in un’espressione utile"
+      },
+      "unitIds": [
+        "past-avere",
+        "past-essere"
+      ],
+      "task": {
+        "en": "Invent two facts about Marco: stay at home and sleep for eight hours. Use rimanere and dormire in the passato prossimo.",
+        "it": "Inventa due fatti su Marco: restare a casa e dormire otto ore. Usa rimanere e dormire al passato prossimo."
+      },
+      "model": {
+        "en": "Marco stayed at home. He slept for eight hours.",
+        "it": "Marco è rimasto a casa. Ha dormito otto ore."
+      },
+      "checks": [
+        {
+          "en": "I learnt è rimasto as a complete chunk.",
+          "it": "Ho imparato è rimasto come espressione completa."
+        },
+        {
+          "en": "I used avere with dormire even though there is no direct object.",
+          "it": "Ho usato avere con dormire anche senza oggetto diretto."
+        }
+      ]
+    },
+    {
+      "id": "src-f293d35b1616-p6",
+      "sourceId": "src-f293d35b1616",
+      "page": 6,
+      "kind": "practice",
+      "focus": {
+        "en": "Build the two-part past form",
+        "it": "Costruisci il passato in due parti"
+      },
+      "unitIds": [
+        "past-avere"
+      ],
+      "task": {
+        "en": "Use noi to say: study Italian, receive a message, sleep eight hours. Build the auxiliary first, then the regular -ato, -uto or -ito participle.",
+        "it": "Usa noi per dire: studiare italiano, ricevere un messaggio, dormire otto ore. Costruisci prima l’ausiliare, poi il participio regolare in -ato, -uto o -ito."
+      },
+      "model": {
+        "en": "We studied Italian. We received a message. We slept for eight hours.",
+        "it": "Abbiamo studiato italiano. Abbiamo ricevuto un messaggio. Abbiamo dormito otto ore."
+      },
+      "checks": [
+        {
+          "en": "All three sentences have abbiamo.",
+          "it": "Tutte e tre le frasi hanno abbiamo."
+        },
+        {
+          "en": "I matched each regular participle to its verb family.",
+          "it": "Ho collegato ogni participio regolare alla famiglia del verbo."
+        }
+      ]
+    },
+    {
+      "id": "src-f293d35b1616-p7",
+      "sourceId": "src-f293d35b1616",
+      "page": 7,
+      "kind": "practice",
+      "focus": {
+        "en": "Essere and avere in the past",
+        "it": "Essere e avere al passato"
+      },
+      "unitIds": [
+        "past-essere",
+        "past-avere"
+      ],
+      "task": {
+        "en": "Use essere to say Giulia was in Verona yesterday, then avere to say she had a free afternoon. Keep the two verbs separate.",
+        "it": "Usa essere per dire che Giulia ieri era a Verona, poi avere per dire che ha avuto un pomeriggio libero. Mantieni separati i due verbi."
+      },
+      "model": {
+        "en": "Yesterday Giulia was in Verona. She had a free afternoon.",
+        "it": "Ieri Giulia è stata a Verona. Ha avuto un pomeriggio libero."
+      },
+      "checks": [
+        {
+          "en": "Essere uses essere: è stata, with feminine agreement.",
+          "it": "Essere usa essere: è stata, con accordo femminile."
+        },
+        {
+          "en": "Avere uses avere: ha avuto.",
+          "it": "Avere usa avere: ha avuto."
+        }
+      ]
+    },
+    {
+      "id": "src-f293d35b1616-p8",
+      "sourceId": "src-f293d35b1616",
+      "page": 8,
+      "kind": "practice",
+      "focus": {
+        "en": "Movement is not an auxiliary rule",
+        "it": "Il movimento non è una regola per l’ausiliare"
+      },
+      "unitIds": [
+        "past-essere",
+        "past-avere"
+      ],
+      "task": {
+        "en": "Tell a mini-trip for Giulia: arrive in Pisa, walk in the centre, return home. Choose the auxiliary for each verb instead of using movement as your only clue.",
+        "it": "Racconta un piccolo viaggio di Giulia: arrivare a Pisa, camminare in centro, tornare a casa. Scegli l’ausiliare per ogni verbo senza basarti solo sul movimento."
+      },
+      "model": {
+        "en": "Giulia arrived in Pisa. She walked in the centre. Then she returned home.",
+        "it": "Giulia è arrivata a Pisa. Ha camminato in centro. Poi è tornata a casa."
+      },
+      "checks": [
+        {
+          "en": "Arrivare and tornare use essere in this story.",
+          "it": "Arrivare e tornare usano essere in questo racconto."
+        },
+        {
+          "en": "Camminare uses avere; not all intransitive verbs use essere.",
+          "it": "Camminare usa avere; non tutti i verbi intransitivi usano essere."
+        }
+      ]
+    },
+    {
+      "id": "src-f293d35b1616-p9",
+      "sourceId": "src-f293d35b1616",
+      "page": 9,
+      "kind": "practice",
+      "focus": {
+        "en": "Activities with avere",
+        "it": "Attività con avere"
+      },
+      "unitIds": [
+        "past-avere"
+      ],
+      "task": {
+        "en": "Say three activities you and a friend finished yesterday: travel by train, swim, sleep. Use noi and the verbs viaggiare, nuotare and dormire.",
+        "it": "Racconta tre attività che tu e un’amica o un amico avete concluso ieri: viaggiare in treno, nuotare, dormire. Usa noi e i verbi viaggiare, nuotare e dormire."
+      },
+      "model": {
+        "en": "Yesterday we travelled by train. We swam for half an hour. We slept well.",
+        "it": "Ieri abbiamo viaggiato in treno. Abbiamo nuotato per mezz’ora. Abbiamo dormito bene."
+      },
+      "checks": [
+        {
+          "en": "I used abbiamo for each activity.",
+          "it": "Ho usato abbiamo per ogni attività."
+        },
+        {
+          "en": "I remembered viaggiato, nuotato and dormito as complete past chunks.",
+          "it": "Ho ricordato viaggiato, nuotato e dormito in espressioni complete al passato."
+        }
+      ]
+    },
+    {
+      "id": "src-f293d35b1616-p10",
+      "sourceId": "src-f293d35b1616",
+      "page": 10,
+      "kind": "practice",
+      "focus": {
+        "en": "An action and its object",
+        "it": "Un’azione e il suo oggetto"
+      },
+      "unitIds": [
+        "past-avere"
+      ],
+      "task": {
+        "en": "Make two past sentences with an object: buy a notebook and meet a friend. Then say what or whom the action affected. This helps with these transitive uses; it is not a rule for all verbs.",
+        "it": "Crea due frasi al passato con un oggetto: comprare un quaderno e incontrare un’amica. Poi indica che cosa o chi riguarda l’azione. Questo aiuta con questi usi transitivi; non è una regola per tutti i verbi."
+      },
+      "model": {
+        "en": "I bought a notebook. I met a friend.",
+        "it": "Ho comprato un quaderno. Ho incontrato un’amica."
+      },
+      "checks": [
+        {
+          "en": "I identified un quaderno and un’amica as the objects.",
+          "it": "Ho individuato un quaderno e un’amica come oggetti."
+        },
+        {
+          "en": "Both complete past forms use avere.",
+          "it": "Entrambe le forme complete al passato usano avere."
+        }
+      ]
+    },
+    {
+      "id": "src-f293d35b1616-p11",
+      "sourceId": "src-f293d35b1616",
+      "page": 11,
+      "kind": "reference",
+      "focus": {
+        "en": "Optional class video",
+        "it": "Video facoltativo del corso"
+      },
+      "unitIds": [
+        "past-avere",
+        "past-essere"
+      ],
+      "task": {
+        "en": "If the class video in your private PDF is available, listen once for a general idea and again for two past-tense chunks. Pause and repeat; do not try to transcribe every word.",
+        "it": "Se il video del corso nel tuo PDF privato è disponibile, ascolta una volta per il senso generale e una seconda volta per due espressioni al passato. Metti in pausa e ripeti; non provare a trascrivere ogni parola."
+      },
+      "model": {
+        "en": "My listening goal is to notice an auxiliary and its participle together.",
+        "it": "Il mio obiettivo di ascolto è riconoscere insieme un ausiliare e il suo participio."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-f293d35b1616-p12",
+      "sourceId": "src-f293d35b1616",
+      "page": 12,
+      "kind": "practice",
+      "focus": {
+        "en": "Irregular participles in everyday uses",
+        "it": "Participi irregolari in usi quotidiani"
+      },
+      "unitIds": [
+        "past-irregular"
+      ],
+      "task": {
+        "en": "Say what you did with a magazine, a message and a window. Use leggere, scrivere and aprire in the past, then change io to noi.",
+        "it": "Racconta che cosa hai fatto con una rivista, un messaggio e una finestra. Usa leggere, scrivere e aprire al passato, poi cambia io in noi."
+      },
+      "model": {
+        "en": "I read a magazine, wrote a message and opened a window. We read a magazine.",
+        "it": "Ho letto una rivista, ho scritto un messaggio e ho aperto una finestra. Abbiamo letto una rivista."
+      },
+      "checks": [
+        {
+          "en": "I used letto, scritto and aperto.",
+          "it": "Ho usato letto, scritto e aperto."
+        },
+        {
+          "en": "Changing io to noi changes ho to abbiamo.",
+          "it": "Passando da io a noi cambio ho in abbiamo."
+        }
+      ]
+    },
+    {
+      "id": "src-f293d35b1616-p13",
+      "sourceId": "src-f293d35b1616",
+      "page": 13,
+      "kind": "practice",
+      "focus": {
+        "en": "When did it happen?",
+        "it": "Quando è successo?"
+      },
+      "unitIds": [
+        "past-avere",
+        "time-frequency"
+      ],
+      "task": {
+        "en": "Invent two completed activities: one yesterday and one last week. Ask and answer Quando? using ieri and la settimana scorsa.",
+        "it": "Inventa due attività concluse: una ieri e una la settimana scorsa. Fai una domanda con Quando? e rispondi usando ieri e la settimana scorsa."
+      },
+      "model": {
+        "en": "When did you visit the museum? I visited it yesterday. Last week I met Anna.",
+        "it": "Quando hai visitato il museo? Ho visitato il museo ieri. La settimana scorsa ho incontrato Anna."
+      },
+      "checks": [
+        {
+          "en": "I used a past form for each completed activity.",
+          "it": "Ho usato una forma al passato per ogni attività conclusa."
+        },
+        {
+          "en": "My time expression clearly answers Quando?",
+          "it": "La mia espressione di tempo risponde chiaramente a Quando?"
+        }
+      ]
+    },
+    {
+      "id": "src-f293d35b1616-p14",
+      "sourceId": "src-f293d35b1616",
+      "page": 14,
+      "kind": "practice",
+      "focus": {
+        "en": "New auxiliary challenge",
+        "it": "Nuova sfida sugli ausiliari"
+      },
+      "unitIds": [
+        "past-avere",
+        "past-essere"
+      ],
+      "task": {
+        "en": "Use fresh details: Giulia returns to Milan; Marco and Paolo swim; Anna stays at home. Write each as a completed action yesterday.",
+        "it": "Usa dettagli nuovi: Giulia torna a Milano; Marco e Paolo nuotano; Anna rimane a casa. Scrivi ogni frase come azione conclusa ieri."
+      },
+      "model": {
+        "en": "Yesterday Giulia returned to Milan. Marco and Paolo swam. Anna stayed at home.",
+        "it": "Ieri Giulia è tornata a Milano. Marco e Paolo hanno nuotato. Anna è rimasta a casa."
+      },
+      "checks": [
+        {
+          "en": "I chose the auxiliary for the actual verb, not just its general meaning.",
+          "it": "Ho scelto l’ausiliare per il verbo preciso, non solo per il significato generale."
+        },
+        {
+          "en": "I matched the auxiliary to one or two people and checked essere agreement.",
+          "it": "Ho concordato l’ausiliare con una o due persone e controllato l’accordo con essere."
+        }
+      ]
+    },
+    {
+      "id": "src-f293d35b1616-p15",
+      "sourceId": "src-f293d35b1616",
+      "page": 15,
+      "kind": "practice",
+      "focus": {
+        "en": "A three-sentence mini-story",
+        "it": "Un piccolo racconto in tre frasi"
+      },
+      "unitIds": [
+        "past-irregular",
+        "past-essere"
+      ],
+      "task": {
+        "en": "Choose a setting: a café, a library or a station. Invent three completed actions for Giulia, using one irregular participle and one essere verb. Link them with prima and poi.",
+        "it": "Scegli un luogo: un bar, una biblioteca o una stazione. Inventa tre azioni concluse di Giulia, usando un participio irregolare e un verbo con essere. Collegale con prima e poi."
+      },
+      "model": {
+        "en": "First Giulia arrived at the library. She read a magazine. Then she wrote a message.",
+        "it": "Prima Giulia è arrivata in biblioteca. Ha letto una rivista. Poi ha scritto un messaggio."
+      },
+      "checks": [
+        {
+          "en": "My three sentences tell one understandable sequence.",
+          "it": "Le mie tre frasi raccontano una sequenza comprensibile."
+        },
+        {
+          "en": "I checked the irregular participle and the essere ending.",
+          "it": "Ho controllato il participio irregolare e la desinenza con essere."
+        }
+      ]
+    },
+    {
+      "id": "src-f293d35b1616-p16",
+      "sourceId": "src-f293d35b1616",
+      "page": 16,
+      "kind": "practice",
+      "focus": {
+        "en": "An invented trip in time",
+        "it": "Un viaggio inventato nel tempo"
+      },
+      "unitIds": [
+        "past-irregular",
+        "past-essere"
+      ],
+      "task": {
+        "en": "Imagine that Marco visits an invented town in another century. Write three actions in the past: arrive, see something and return. Treat it as fiction; historical research is not needed.",
+        "it": "Immagina che Marco visiti una città inventata in un altro secolo. Scrivi tre azioni al passato: arrivare, vedere qualcosa e tornare. È un racconto di fantasia; non serve una ricerca storica."
+      },
+      "model": {
+        "en": "Marco arrived in a small town. He saw a strange market. Then he returned home.",
+        "it": "Marco è arrivato in una piccola città. Ha visto un mercato strano. Poi è tornato a casa."
+      },
+      "checks": [
+        {
+          "en": "I used complete two-part past forms.",
+          "it": "Ho usato forme complete al passato in due parti."
+        },
+        {
+          "en": "My essere participles agree with Marco.",
+          "it": "I miei participi con essere concordano con Marco."
+        }
+      ]
+    },
+    {
+      "id": "src-f293d35b1616-p17",
+      "sourceId": "src-f293d35b1616",
+      "page": 17,
+      "kind": "practice",
+      "focus": {
+        "en": "Reflexive routine: present to past",
+        "it": "Routine riflessiva: dal presente al passato"
+      },
+      "unitIds": [
+        "reflexive-routine",
+        "past-essere"
+      ],
+      "task": {
+        "en": "Change Giulia’s routine into yesterday’s actions: si sveglia alle otto, si alza subito, si veste. Then make the middle sentence negative.",
+        "it": "Trasforma la routine di Giulia nelle azioni di ieri: si sveglia alle otto, si alza subito, si veste. Poi rendi negativa la frase centrale."
+      },
+      "model": {
+        "en": "Yesterday Giulia woke up at eight. She did not get up immediately. Then she got dressed.",
+        "it": "Ieri Giulia si è svegliata alle otto. Non si è alzata subito. Poi si è vestita."
+      },
+      "checks": [
+        {
+          "en": "I kept si and added è before each participle.",
+          "it": "Ho mantenuto si e aggiunto è prima di ogni participio."
+        },
+        {
+          "en": "I used feminine -a endings and placed non before si.",
+          "it": "Ho usato le desinenze femminili in -a e messo non prima di si."
+        }
+      ]
+    },
+    {
+      "id": "src-f293d35b1616-p18",
+      "sourceId": "src-f293d35b1616",
+      "page": 18,
+      "kind": "practice",
+      "focus": {
+        "en": "Use new words in small sentences",
+        "it": "Usa parole nuove in frasi brevi"
+      },
+      "unitIds": [
+        "past-irregular",
+        "past-essere"
+      ],
+      "task": {
+        "en": "Choose three chunks from the new bank: rientrare, una rivista, di fretta, in campagna. Write three short original sentences; use at least one completed past action.",
+        "it": "Scegli tre espressioni dal nuovo lessico: rientrare, una rivista, di fretta, in campagna. Scrivi tre frasi brevi originali; usa almeno un’azione conclusa al passato."
+      },
+      "model": {
+        "en": "Giulia returned home at six. She read a magazine. Yesterday she walked in the countryside.",
+        "it": "Giulia è rientrata a casa alle sei. Ha letto una rivista. Ieri ha camminato in campagna."
+      },
+      "checks": [
+        {
+          "en": "Each chosen word has a useful context.",
+          "it": "Ogni parola scelta ha un contesto utile."
+        },
+        {
+          "en": "I checked the auxiliary and the participle in my past sentences.",
+          "it": "Ho controllato l’ausiliare e il participio nelle frasi al passato."
+        }
+      ]
+    },
+    {
+      "id": "src-f293d35b1616-p19",
+      "sourceId": "src-f293d35b1616",
+      "page": 19,
+      "kind": "reference",
+      "focus": {
+        "en": "Reflect before the next session",
+        "it": "Rifletti prima della prossima sessione"
+      },
+      "unitIds": [
+        "past-avere",
+        "past-essere",
+        "past-irregular"
+      ],
+      "task": {
+        "en": "Choose one label for each skill: need help, practising or ready to try alone. Check auxiliaries, irregular participles and a short story. Pick only one skill to revisit tomorrow.",
+        "it": "Scegli un’etichetta per ogni abilità: serve aiuto, in esercizio o pronto/a a provare da solo/a. Controlla ausiliari, participi irregolari e un breve racconto. Scegli una sola abilità da riprendere domani."
+      },
+      "model": {
+        "en": "I can tell a small story with a model. Tomorrow I will practise three irregular participles without the model.",
+        "it": "So raccontare una piccola storia con un modello. Domani eserciterò tre participi irregolari senza modello."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-f293d35b1616-p20",
+      "sourceId": "src-f293d35b1616",
+      "page": 20,
+      "kind": "reference",
+      "focus": {
+        "en": "Independent film homework",
+        "it": "Compito autonomo sul film"
+      },
+      "unitIds": [
+        "past-irregular",
+        "past-essere"
+      ],
+      "task": {
+        "en": "Complete the film task independently using the instructions in your private class PDF. The portal supplies no answers to those questions. For extra language practice, invent a different three-sentence story in the linked units.",
+        "it": "Svolgi autonomamente il compito sul film seguendo le istruzioni nel PDF privato del corso. Il portale non fornisce risposte a quelle domande. Per altra pratica linguistica, inventa un racconto diverso di tre frasi nelle unità collegate."
+      },
+      "model": {
+        "en": "I will keep my own homework answers separate from the portal’s original practice.",
+        "it": "Terrò separate le mie risposte al compito dalla pratica originale del portale."
       },
       "checks": []
     }

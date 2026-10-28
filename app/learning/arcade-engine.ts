@@ -14,6 +14,9 @@ export const defaultArcadeSettings: ArcadeSettings = {
   topic: "foundations",
   bank: "survival",
   scene: "cafe-stop",
+  wordFocus: "meaning",
+  verbLevel: "present",
+  verbScope: "essentials",
 };
 export const emptyArcade = (): ArcadeProgress => ({
   settings: { ...defaultArcadeSettings },
@@ -54,8 +57,13 @@ export function startArcadeRound(
   const a = p.arcade ?? emptyArcade();
   if (a.active || !validDate(today) || !pool.length || !id || id.length > 100)
     return p;
-  const ordered =
+  let ordered =
     a.settings.mode === "conversation" && !review ? pool : shuffled(pool, id);
+  if (a.settings.mode === "verbs" && a.settings.verbLevel === "mixed" && !review) {
+    const present = ordered.find((item) => item.tense === "present");
+    const past = ordered.find((item) => item.tense === "past");
+    if (present && past) ordered = [present, past, ...ordered.filter((item) => item.id !== present.id && item.id !== past.id)];
+  }
   const itemIds = [...new Set(ordered.map((item) => item.id))].slice(
     0,
     a.settings.mode === "conversation" && !review ? 3 : a.settings.size,
@@ -220,6 +228,7 @@ export function validateArcade(
   const mode = (x: unknown, review = false) =>
     [
       "words",
+      "verbs",
       "builder",
       "detective",
       "conversation",
@@ -249,7 +258,10 @@ export function validateArcade(
     ![s.topic, s.bank, s.scene].every((x) => str(x))
   )
     fail();
-  if (Object.keys(value.records).length > 1000 || value.history.length > 30)
+  if ((s.wordFocus !== undefined && !["meaning", "articles"].includes(String(s.wordFocus)))
+    || (s.verbLevel !== undefined && !["present", "past", "mixed"].includes(String(s.verbLevel)))
+    || (s.verbScope !== undefined && !["essentials", "all"].includes(String(s.verbScope)))) fail();
+  if (Object.keys(value.records).length > 2000 || value.history.length > 30)
     fail();
   for (const [id, r] of Object.entries(value.records)) {
     if (

@@ -539,5 +539,33 @@
     "selectively_reviewed_physical_pages": 14,
     "existing_content_and_programmes_preserved": true,
     "remaining_limits": "Bounded plural/alteration models, cominciare/finire and countable ne practice; one short formal enquiry. Complete CV writing, other lexical/grammar systems and independently assessed listening/pronunciation remain outside this supplement."
+  },
+  "week3_2026_10_28": {
+    "report": "docs/week3-content-review-2026-10-28.json",
+    "source": "Organised/Organised/Course 3/Week_3_Il_passato_prossimo.pdf",
+    "physicalPagesReviewed": 20,
+    "newMissions": 3,
+    "topics": [
+      "Contextual avere/essere contrast",
+      "Irregular participles in everyday stories",
+      "Reflexive passato prossimo"
+    ],
+    "booster": {
+      "verbs": 50,
+      "curatedNouns": 32,
+      "newControlledPrompts": 664
+    },
+    "currentTotals": {
+      "missions": 70,
+      "guidedSessions": 70,
+      "vocabularyBanks": 41,
+      "vocabularyEntries": 328,
+      "sourcePages": 1629
+    },
+    "limits": [
+      "Independent homework stays uncompleted.",
+      "Original practice and curated examples are not copied source worksheets.",
+      "Only selectively reviewed textbook material is cited; no complete textbook teaching review is claimed."
+    ]
   }
 }

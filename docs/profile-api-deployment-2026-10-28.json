@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-28",
+  "scope": "Private profile backend and Italian site's /api/profile/ nginx route only. Static release and Git publication are handled separately.",
+  "status": "deployed and browser-verified",
+  "host": "srv1280812",
+  "release": "20261028-profile-v1-43790499845f",
+  "source_sha256": "0d372027a498e1bed8336f8f8d31122c2f587113f0c15565e7a3f492a664efba",
+  "image": {
+    "tag": "parliamo-profile:20261028-profile-v1-43790499845f",
+    "id": "sha256:1f68aabf04075dc5a66bf73dd73a58a0bc957ed160ce8dcab320c62a16006d8b",
+    "base": "python@sha256:281d39ff02e3b389401586134ff9e6572954687822a58055ec07a60ded4e0b7f",
+    "build_context": "Only Dockerfile and profile_api.py; no repository archive, records or credentials"
+  },
+  "container": {
+    "name": "parliamo-profile-api",
+    "state": "running",
+    "health": "healthy",
+    "network": "others_default",
+    "private_ip_at_verification": "172.20.0.3",
+    "port": 5198,
+    "published_ports": [],
+    "user": "10001:10001",
+    "read_only_root": true,
+    "capabilities_dropped": ["ALL"],
+    "no_new_privileges": true,
+    "memory_bytes": 402653184,
+    "cpus": 1,
+    "pids_limit": 64,
+    "nofile_limit": 256,
+    "temporary_filesystem": "8 MiB, noexec, nosuid, UID/GID 10001, mode 0700",
+    "log_driver": "none",
+    "restart": "unless-stopped",
+    "health_check": "Private loopback GET /api/profile/health every 30 seconds"
+  },
+  "persistence": {
+    "state_directory": "/var/lib/parliamo-profile",
+    "state_permissions": "0700, UID/GID 10001",
+    "pepper_file": "/etc/parliamo-profile/pepper",
+    "pepper_permissions": "0600, UID/GID 10001; parent 0700 root-owned",
+    "pepper_generated_once": true,
+    "pepper_bytes": 32,
+    "pepper_mount": "read-only, separate from state",
+    "release_directory": "/opt/parliamo-profile/releases/20261028-profile-v1-43790499845f",
+    "existing_data_read_or_replaced": false
+  },
+  "proxy": {
+    "container": "others-app-1",
+    "config": "/data/nginx/custom/italian.conf",
+    "location": "^~ /api/profile/",
+    "upstream": "http://parliamo-profile-api:5198",
+    "trusted_proxy_ip": "172.20.0.2",
+    "original_uri_preserved": true,
+    "x_real_ip": "Overwritten with nginx remote_addr; forwarded values from other peers are not trusted by the API",
+    "access_logging": false,
+    "cache": false,
+    "max_request_bytes": 8002048,
+    "connection_limits": {"per_ip": 8, "total": 16},
+    "timeouts_seconds": {"client_body": 15, "connect": 5, "send": 15, "read": 30},
+    "existing_tls_csp_static_routes_preserved": true,
+    "config_before_sha256": "9b12dde113315e471c4716a1d8c57d278ce4480018a8779297950d4ab506cd63",
+    "config_after_sha256": "dbc85c5a572cf2dbd62dc3d77728e8a4683fdb670445cfbfe75f708283290002",
+    "rollback_copy": "/opt/parliamo-profile/releases/20261028-profile-v1-43790499845f/italian.conf.before",
+    "nginx_test": "passed before reload",
+    "nginx_reload": "passed"
+  },
+  "verification": {
+    "private_loopback_health": "200 with {ok:true}",
+    "fresh_isolated_chromium_https_health": "200 with {ok:true}",
+    "url": "https://italian.samuelzhang.co.uk/api/profile/health",
+    "cache_control": "no-store",
+    "csp_and_hsts": "present",
+    "anonymous_logout_cookie_flags": {
+      "host_prefix": true,
+      "http_only": true,
+      "secure": true,
+      "same_site": "Strict",
+      "path": "/",
+      "domain_absent": true,
+      "cleared_with_max_age_zero": true
+    },
+    "browser_evidence": "work/profile-deploy/browser-probe.json",
+    "shared_browser_untouched": true,
+    "profiles_created": 0,
+    "existing_learner_records_accessed": false,
+    "edge_note": "The initial default Python client received the existing Cloudflare 403 behavior. Genuine Chromium same-origin requests succeeded; no edge security rule was changed.",
+    "remaining_integration": "Main release agent performs the live profile and cross-device learning flow after publishing the static release."
+  },
+  "operations": [
+    "Preserve the persistent state and separate pepper across future releases; replacing the pepper invalidates existing PIN verifiers.",
+    "If recreating either proxy or backend changes its private IP, verify the exact trusted proxy address and reload nginx after the healthy backend is available.",
+    "A separately protected operator backup of the new state and pepper is not created by this deployment."
+  ]
+}

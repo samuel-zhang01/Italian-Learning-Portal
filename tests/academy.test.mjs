@@ -154,12 +154,12 @@ test("grammar provides 65 substantial bilingual A1/A2 units, six exercise format
 });
 
 test("every source page has one explicit companion classification; original practice has support and valid grammar links", () => {
-  assert.equal(sources.length, 53);
+  assert.equal(sources.length, 54);
   assert.equal(
     pages.length,
     sources.reduce((n, s) => n + s.pages, 0),
   );
-  assert.equal(pages.length, 1609);
+  assert.equal(pages.length, 1629);
   assert.equal(new Set(pages.map((p) => p.id)).size, pages.length);
   for (const source of sources) {
     assert.match(source.sha256, /^[0-9a-f]{64}$/);
@@ -604,7 +604,17 @@ test("book integration preserves every earlier content object and programme day 
   );
   for (const [path, baseline] of Object.entries(bookReview.baselinePreservation.arrays)) {
     const [document, key] = path.split(".");
-    const preserved = documents[document][key].slice(0, baseline.count);
+    const preserved = structuredClone(documents[document][key].slice(0, baseline.count));
+    if (path === "grammar.units") {
+      const week3Links = new Map([
+        ["past-avere", "week3-journey-auxiliaries"],
+        ["past-irregular", "week3-irregular-story"],
+        ["past-essere", "week3-reflexive-morning"],
+      ]);
+      for (const unit of preserved) {
+        if (week3Links.has(unit.id)) unit.missionIds = unit.missionIds.filter((id) => id !== week3Links.get(unit.id));
+      }
+    }
     const hash = createHash("sha256").update(JSON.stringify(canonical(preserved))).digest("hex");
     assert.equal(hash, baseline.sha256, path);
   }
@@ -620,7 +630,7 @@ test("new book sources expose bounded metadata and reference pointers while the 
   ];
   assert.equal(expected.length, 5);
   const curriculum = read("curriculum");
-  assert.equal(curriculum.sources.length, 53);
+  assert.equal(curriculum.sources.length, 54);
   assert.deepEqual(new Set(curriculum.sources.map((source) => source.id)), new Set(sources.map((source) => source.id)));
   for (const [id, count, path] of expected) {
     const source = sources.find((item) => item.id === id);
@@ -632,7 +642,8 @@ test("new book sources expose bounded metadata and reference pointers while the 
     assert.equal(entries.length, count);
     assert.ok(entries.every((page) => page.kind === "reference" && page.checks.length === 0));
   }
-  assert.equal(pages.filter((page) => page.kind === "practice").length, 730);
+  assert.equal(pages.filter((page) => page.kind === "practice" && page.sourceId !== "src-f293d35b1616").length, 730);
+  assert.equal(pages.filter((page) => page.kind === "practice").length, 744);
   for (const unit of units.filter((item) => item.level === "A2")) {
     for (const ref of unit.sources) {
       for (const page of ref.pages)

@@ -192,5 +192,28 @@
     "release": "20261024T223416Z-book-learning",
     "verifiedAt": "2026-10-24T22:37:39.847065+00:00",
     "report": "docs/deployment-book-learning-2026-10-24.json"
+  },
+  "week3_booster_profiles_2026_10_28": {
+    "learnerReview": "docs/booster-learner-adversarial-2026-10-28.json",
+    "uiReview": "docs/booster-ui-adversarial-2026-10-28.json",
+    "contentReview": "docs/week3-content-review-2026-10-28.json",
+    "profileRaceReview": "docs/profile-adversarial-review-2026-10-28.json",
+    "profileBrowserCommand": "node scripts/audit_profile_browser.mjs",
+    "observedLocalProfileGroups": 6,
+    "observedBuiltArcadeBrowserGroups": 14,
+    "dailyTestsPassed": 279,
+    "preservation": "Existing mission IDs, first-attempt records and version-one backups remain valid. New source homework is not completed. Synthetic browser fixtures only.",
+    "limits": "Internal bounded acceptance reviews; no human learning-outcome study or independent penetration test.",
+    "independentAcceptance": {
+      "learnerCriteriaPassed": 19,
+      "learnerCriteriaTotal": 20,
+      "learnerScore": 9.5,
+      "learnerThreshold": 9,
+      "uiCriteriaPassed": 20,
+      "uiCriteriaTotal": 20,
+      "uiScore": 10,
+      "uiThreshold": 9.5,
+      "openCriticalIssues": 0
+    }
   }
 }

@@ -24,6 +24,8 @@ import {
 import { saveWord, wordKey } from "./academy-engine";
 import { modelAnswerMismatch } from "./learning-utils";
 import { catalogueParams } from "./navigation";
+import { boosterVerbs, pastVerbAnswers, verbPeople } from "./booster-catalogue";
+import { planningSources } from "./planning-data";
 import type {
   ArcadeItem,
   ArcadeMode,
@@ -57,6 +59,12 @@ const modes: {
       en: "Find a useful Italian word or phrase.",
       it: "Trova una parola o una frase utile.",
     },
+  },
+  {
+    id: "verbs",
+    number: "02",
+    title: { en: "Verb booster", it: "Allena i verbi" },
+    description: { en: "Practise a verb for one person: present, past or a mix.", it: "Allena un verbo per una persona: presente, passato o un insieme." },
   },
   {
     id: "builder",
@@ -175,8 +183,8 @@ export function PracticeArcade(props: Props) {
         </p>
         <h1>
           {t(
-            "A little play. A little practice.",
-            "Un po’ di gioco. Un po’ di pratica.",
+            "Words and verbs.",
+            "Parole e verbi.",
           )}
         </h1>
         <p>
@@ -186,35 +194,30 @@ export function PracticeArcade(props: Props) {
           )}
         </p>
       </header>
-      <div
-        className="arcade-modes"
-        role="group"
-        aria-label={t("Choose a game", "Scegli un gioco")}
-      >
-        {modes.map((mode) => (
-          <button
-            key={mode.id}
-            className="arcade-mode"
-            aria-pressed={settings.mode === mode.id}
-            onClick={() => set({ mode: mode.id })}
-          >
-            <span className="arcade-number" aria-hidden="true">
-              {mode.number}
-            </span>
-            <span>
-              <strong>{text(mode.title)}</strong>
-              <span>{text(mode.description)}</span>
-            </span>
-            <span aria-hidden="true">
-              {settings.mode === mode.id ? "●" : "○"}
-            </span>
-          </button>
-        ))}
+      <div className="arcade-game-picker">
+        <label htmlFor="arcade-game">{t("Choose a game", "Scegli un gioco")}</label>
+        <select id="arcade-game" value={settings.mode} onChange={(event) => set({ mode: event.target.value as ArcadeMode })}>
+          {modes.map((mode) => <option key={mode.id} value={mode.id}>{text(mode.title)}</option>)}
+        </select>
+        <p>{text(modes.find((mode) => mode.id === settings.mode)!.description)}</p>
       </div>
       <section
         className="arcade-setup"
         aria-label={t("Round settings", "Impostazioni del giro")}
       >
+        {(settings.mode === "words" || settings.mode === "verbs") && <div className="arcade-focus">
+          <label htmlFor="arcade-focus">{settings.mode === "words" ? t("What to practise", "Cosa allenare") : t("Verb level", "Livello dei verbi")}</label>
+          {settings.mode === "words" ? <select id="arcade-focus" value={settings.wordFocus ?? "meaning"}
+            onChange={(event) => set({ wordFocus: event.target.value as ArcadeSettings["wordFocus"] })}>
+            <option value="meaning">{t("Words and meanings", "Parole e significati")}</option>
+            <option value="articles">{t("Nouns, articles and plurals", "Nomi, articoli e plurali")}</option>
+          </select> : <select id="arcade-focus" value={settings.verbLevel ?? "present"}
+            onChange={(event) => set({ verbLevel: event.target.value as ArcadeSettings["verbLevel"] })}>
+            <option value="present">{t("1 · Present tense", "1 · Presente")}</option>
+            <option value="past">{t("2 · Passato prossimo", "2 · Passato prossimo")}</option>
+            <option value="mixed">{t("3 · Present and past mixed", "3 · Presente e passato insieme")}</option>
+          </select>}
+        </div>}
         <div className="arcade-start">
           <div>
             <strong>
@@ -224,7 +227,11 @@ export function PracticeArcade(props: Props) {
                 : t("questions · no timer", "domande · senza cronometro")}
             </strong>
             <p>
-              {settings.mode === "words"
+              {settings.mode === "words" && settings.wordFocus === "articles"
+                ? t("Singular articles and complete plural noun phrases", "Articoli singolari e nomi plurali con articolo")
+                : settings.mode === "verbs"
+                  ? t(settings.verbScope === "all" ? "A1 + A2 verbs · six people" : "A1 verbs · six people", settings.verbScope === "all" ? "Verbi A1 + A2 · sei persone" : "Verbi A1 · sei persone")
+                  : settings.mode === "words"
                 ? text(
                     arcadeBanks.find((b) => b.id === settings.bank)?.title ?? {
                       en: "All word banks",
@@ -294,7 +301,7 @@ export function PracticeArcade(props: Props) {
                 </select>
               </label>
             )}
-            {settings.mode === "words" && (
+            {settings.mode === "words" && settings.wordFocus !== "articles" && (
               <label>
                 {t("Word bank", "Lessico")}
                 <select
@@ -312,6 +319,14 @@ export function PracticeArcade(props: Props) {
                 </select>
               </label>
             )}
+            {settings.mode === "verbs" && <label>
+              {t("Verb collection", "Raccolta di verbi")}
+              <select value={settings.verbScope ?? "essentials"}
+                onChange={(event) => set({ verbScope: event.target.value as ArcadeSettings["verbScope"] })}>
+                <option value="essentials">{t("A1 · everyday verbs", "A1 · verbi quotidiani")}</option>
+                <option value="all">{t("A1 + A2 · the full collection", "A1 + A2 · la raccolta completa")}</option>
+              </select>
+            </label>}
             {["builder", "detective"].includes(settings.mode) && (
               <label>
                 {t("Grammar topic", "Argomento di grammatica")}
@@ -475,8 +490,10 @@ function ArcadeQuestion({
   const choices =
     !!item.options &&
     (round.support === "guided" ||
-      item.mode !== "words" ||
+      !["words", "verbs"].includes(item.mode) ||
       item.answers[0].includes("/"));
+  const verb = item.verbId ? boosterVerbs.find((entry) => entry.id === item.verbId) : undefined;
+  const spokenAnswer = result?.correct ? result.answer : item.answers[0];
   const finished = round.itemIds.every((id) => round.answers[id]);
   const score = arcadeRoundScore(round);
   useEffect(() => {
@@ -496,7 +513,7 @@ function ArcadeQuestion({
       setSpeechError(true);
       return;
     }
-    const utterance = new SpeechSynthesisUtterance(item.answers[0]);
+    const utterance = new SpeechSynthesisUtterance(spokenAnswer);
     utterance.lang = "it-IT";
     utterance.rate = 0.8;
     utterance.onerror = (event) => {
@@ -530,6 +547,7 @@ function ArcadeQuestion({
         <h1 ref={question} tabIndex={-1}>
           {text(item.prompt)}
         </h1>
+        {item.instruction && <p className="arcade-instruction">{text(item.instruction)}</p>}
         {!result && (
           <>
             {choices ? (
@@ -721,7 +739,7 @@ function ArcadeQuestion({
               </p>
             )}
             <p className="arcade-answer" lang="it">
-              {item.answers[0]}
+              {spokenAnswer}
             </p>
             <p>{text(item.explanation)}</p>
             {item.word && p.language === "en" && (
@@ -749,6 +767,17 @@ function ArcadeQuestion({
                 </button>
               )}
             </div>
+            {verb && <details className="booster-forms">
+              <summary>{t("See all six people", "Vedi tutte le persone")}</summary>
+              <table>
+                <caption>{verb.infinitive} · {item.tense === "past" ? "passato prossimo" : t("present", "presente")}</caption>
+                <thead><tr><th>{t("Person", "Persona")}</th><th>{t("Verb form", "Forma verbale")}</th></tr></thead>
+                <tbody>{verbPeople.map((person, index) => <tr key={person}>
+                  <th scope="row" lang="it">{person}</th>
+                  <td lang="it">{item.tense === "past" ? pastVerbAnswers(verb, index).join(" / ") : verb.present[index]}</td>
+                </tr>)}</tbody>
+              </table>
+            </details>}
             {speechError && (
               <p role="status">
                 {t(
@@ -817,6 +846,10 @@ function ArcadeQuestion({
             {t("Open the related lesson", "Apri la lezione collegata")}
           </button>
         )}
+        {item.sourceRefs?.length ? <p className="arcade-source-note">
+          {t("Practice based on", "Pratica basata su")}: {item.sourceRefs.map((ref) => `${planningSources.find((source) => source.id === ref.id)?.title ?? ref.id}, ${t("p.", "p.")} ${ref.pages.join(", ")}`).join(" · ")}.
+          {" "}{t("The questions and examples here are original practice.", "Le domande e gli esempi qui sono esercizi originali.")}
+        </p> : null}
         {!leaving ? (
           <button className="text-button" onClick={() => setLeaving(true)}>
             {t("End this round early", "Termina questo giro prima")}

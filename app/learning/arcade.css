@@ -5,8 +5,19 @@
 }
 .arcade-intro {
   max-width: 650px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
+.arcade-game-picker { margin: 0 0 20px; }
+.arcade-game-picker label, .arcade-focus label { display: block; margin-bottom: 8px; font-weight: 600; }
+.arcade-game-picker p { margin: 8px 0 0; font-size: 14px; color: var(--muted); }
+.arcade-focus { margin-bottom: 22px; }
+.booster-forms { margin-top: 20px; }
+.booster-forms table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 14px; }
+.booster-forms caption { text-align: left; padding: 10px 0; }
+.booster-forms th, .booster-forms td { padding: 10px 8px; text-align: left; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.booster-forms th:first-child { width: 30%; }
+.arcade-source-note { overflow-wrap: anywhere; }
+.daily-app .arcade-instruction { margin: -14px 0 24px; font-size: 15px; line-height: 1.6; }
 .arcade-intro h1 {
   max-width: 580px;
 }
@@ -263,8 +274,12 @@
 }
 @media (max-width: 600px) {
   .daily-app .arcade {
-    padding-top: 28px;
+    padding-top: 20px;
   }
+  .arcade-intro { margin-bottom: 16px; }
+  .arcade-game-picker { margin-bottom: 16px; }
+  .arcade-focus { margin-bottom: 12px; }
+  .arcade-intro .eyebrow { margin-bottom: 10px; }
   .arcade-modes,
   .arcade-fields {
     grid-template-columns: 1fr;
@@ -282,6 +297,7 @@
   .arcade-question {
     padding: 22px 18px;
   }
+  .arcade-setup { padding-block: 18px; }
   .arcade-roundbar {
     gap: 12px;
   }

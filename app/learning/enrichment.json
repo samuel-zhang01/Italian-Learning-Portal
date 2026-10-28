@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-10-24",
+  "reviewedOn": "2026-10-28",
   "banks": [
     {
       "id": "survival",
@@ -4126,6 +4126,334 @@
           "example": {
             "en": "The apartment is suitable for a family.",
             "it": "L’appartamento è adatto a una famiglia."
+          }
+        }
+      ]
+    },
+    {
+      "id": "week3-journey",
+      "title": {
+        "en": "Week 3 · A small journey",
+        "it": "Settimana 3 · Un piccolo viaggio"
+      },
+      "level": "A1",
+      "missionId": "week3-journey-auxiliaries",
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5,
+            9,
+            13,
+            18
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:week3-journey:0",
+          "term": {
+            "en": "to return home / come back",
+            "it": "rientrare"
+          },
+          "example": {
+            "en": "Giulia returned home at nine.",
+            "it": "Giulia è rientrata a casa alle nove."
+          }
+        },
+        {
+          "id": "word:week3-journey:1",
+          "term": {
+            "en": "to stay / remain",
+            "it": "rimanere"
+          },
+          "example": {
+            "en": "Marco stayed at home yesterday.",
+            "it": "Marco è rimasto a casa ieri."
+          }
+        },
+        {
+          "id": "word:week3-journey:2",
+          "term": {
+            "en": "the countryside",
+            "it": "la campagna"
+          },
+          "example": {
+            "en": "Yesterday we walked in the countryside.",
+            "it": "Ieri abbiamo camminato in campagna."
+          }
+        },
+        {
+          "id": "word:week3-journey:3",
+          "term": {
+            "en": "on foot",
+            "it": "a piedi"
+          },
+          "example": {
+            "en": "Giulia returned home on foot.",
+            "it": "Giulia è tornata a casa a piedi."
+          }
+        },
+        {
+          "id": "word:week3-journey:4",
+          "term": {
+            "en": "to travel",
+            "it": "viaggiare"
+          },
+          "example": {
+            "en": "Last month I travelled by train.",
+            "it": "Il mese scorso ho viaggiato in treno."
+          }
+        },
+        {
+          "id": "word:week3-journey:5",
+          "term": {
+            "en": "to walk",
+            "it": "camminare"
+          },
+          "example": {
+            "en": "We walked for an hour.",
+            "it": "Abbiamo camminato per un’ora."
+          }
+        },
+        {
+          "id": "word:week3-journey:6",
+          "term": {
+            "en": "the day before yesterday",
+            "it": "avantieri"
+          },
+          "example": {
+            "en": "The day before yesterday I visited a museum.",
+            "it": "Avantieri ho visitato un museo."
+          }
+        },
+        {
+          "id": "word:week3-journey:7",
+          "term": {
+            "en": "a month ago",
+            "it": "un mese fa"
+          },
+          "example": {
+            "en": "Marco arrived in Rome a month ago.",
+            "it": "Marco è arrivato a Roma un mese fa."
+          }
+        }
+      ]
+    },
+    {
+      "id": "week3-story",
+      "title": {
+        "en": "Week 3 · Things you did",
+        "it": "Settimana 3 · Cose che hai fatto"
+      },
+      "level": "A1",
+      "missionId": "week3-irregular-story",
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            12,
+            13,
+            18
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:week3-story:0",
+          "term": {
+            "en": "the magazine",
+            "it": "la rivista"
+          },
+          "example": {
+            "en": "I read a magazine on the train.",
+            "it": "Ho letto una rivista in treno."
+          }
+        },
+        {
+          "id": "word:week3-story:1",
+          "term": {
+            "en": "I read",
+            "it": "ho letto"
+          },
+          "example": {
+            "en": "Yesterday I read two pages.",
+            "it": "Ieri ho letto due pagine."
+          }
+        },
+        {
+          "id": "word:week3-story:2",
+          "term": {
+            "en": "I wrote",
+            "it": "ho scritto"
+          },
+          "example": {
+            "en": "I wrote a short message.",
+            "it": "Ho scritto un messaggio breve."
+          }
+        },
+        {
+          "id": "word:week3-story:3",
+          "term": {
+            "en": "I took",
+            "it": "ho preso"
+          },
+          "example": {
+            "en": "This morning I took the bus.",
+            "it": "Stamattina ho preso l’autobus."
+          }
+        },
+        {
+          "id": "word:week3-story:4",
+          "term": {
+            "en": "I made / I did",
+            "it": "ho fatto"
+          },
+          "example": {
+            "en": "I made a cake for Anna.",
+            "it": "Ho fatto una torta per Anna."
+          }
+        },
+        {
+          "id": "word:week3-story:5",
+          "term": {
+            "en": "last week",
+            "it": "la settimana scorsa"
+          },
+          "example": {
+            "en": "Last week we saw a film.",
+            "it": "La settimana scorsa abbiamo visto un film."
+          }
+        },
+        {
+          "id": "word:week3-story:6",
+          "term": {
+            "en": "to meet",
+            "it": "incontrare"
+          },
+          "example": {
+            "en": "I met a friend at the museum.",
+            "it": "Ho incontrato un’amica al museo."
+          }
+        },
+        {
+          "id": "word:week3-story:7",
+          "term": {
+            "en": "the character",
+            "it": "il personaggio"
+          },
+          "example": {
+            "en": "I read a story with a funny character.",
+            "it": "Ho letto una storia con un personaggio simpatico."
+          }
+        }
+      ]
+    },
+    {
+      "id": "week3-morning",
+      "title": {
+        "en": "Week 3 · Morning routine",
+        "it": "Settimana 3 · La routine del mattino"
+      },
+      "level": "A1",
+      "missionId": "week3-reflexive-morning",
+      "sourceRefs": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            5,
+            17,
+            18
+          ]
+        }
+      ],
+      "words": [
+        {
+          "id": "word:week3-morning:0",
+          "term": {
+            "en": "to wake up",
+            "it": "svegliarsi"
+          },
+          "example": {
+            "en": "Giulia woke up at eight.",
+            "it": "Giulia si è svegliata alle otto."
+          }
+        },
+        {
+          "id": "word:week3-morning:1",
+          "term": {
+            "en": "to get up",
+            "it": "alzarsi"
+          },
+          "example": {
+            "en": "Marco got up late.",
+            "it": "Marco si è alzato tardi."
+          }
+        },
+        {
+          "id": "word:week3-morning:2",
+          "term": {
+            "en": "to get dressed",
+            "it": "vestirsi"
+          },
+          "example": {
+            "en": "Giulia got dressed after breakfast.",
+            "it": "Giulia si è vestita dopo colazione."
+          }
+        },
+        {
+          "id": "word:week3-morning:3",
+          "term": {
+            "en": "to comb one’s hair",
+            "it": "pettinarsi"
+          },
+          "example": {
+            "en": "Marco combed his hair before going out.",
+            "it": "Marco si è pettinato prima di uscire."
+          }
+        },
+        {
+          "id": "word:week3-morning:4",
+          "term": {
+            "en": "to put on make-up",
+            "it": "truccarsi"
+          },
+          "example": {
+            "en": "Anna put on make-up in five minutes.",
+            "it": "Anna si è truccata in cinque minuti."
+          }
+        },
+        {
+          "id": "word:week3-morning:5",
+          "term": {
+            "en": "in a hurry",
+            "it": "di fretta"
+          },
+          "example": {
+            "en": "This morning Giulia got dressed in a hurry.",
+            "it": "Stamattina Giulia si è vestita di fretta."
+          }
+        },
+        {
+          "id": "word:week3-morning:6",
+          "term": {
+            "en": "tidy / in order",
+            "it": "in ordine"
+          },
+          "example": {
+            "en": "Yesterday I put the room in order.",
+            "it": "Ieri ho messo in ordine la camera."
+          }
+        },
+        {
+          "id": "word:week3-morning:7",
+          "term": {
+            "en": "immediately",
+            "it": "subito"
+          },
+          "example": {
+            "en": "Marco did not get up immediately.",
+            "it": "Marco non si è alzato subito."
           }
         }
       ]
@@ -8286,6 +8614,219 @@
         "it": "Cambia la persona che organizza e il dettaglio richiesto. Leggi il messaggio ad alta voce, poi controlla che apertura e chiusura usino lo stesso registro."
       },
       "resource": "present-drill"
+    },
+    {
+      "missionId": "week3-journey-auxiliaries",
+      "bank": "week3-journey",
+      "notes": [
+        {
+          "en": "Start small: underline the subject, circle ho/ha/sono/è, then read the participle. Say the two verb parts together.",
+          "it": "Inizia con poco: sottolinea il soggetto, cerchia ho/ha/sono/è, poi leggi il participio. Pronuncia insieme le due parti del verbo."
+        },
+        {
+          "en": "Keep three travel chunks on one card: ho viaggiato, sono arrivato/a, sono tornato/a. Hide the card and rebuild each chunk from the infinitive.",
+          "it": "Tieni tre espressioni di viaggio su una scheda: ho viaggiato, sono arrivato/a, sono tornato/a. Nascondi la scheda e ricostruisci ogni espressione dall’infinito."
+        },
+        {
+          "en": "Do not learn “all movement = essere” or “all verbs without an object = essere”. Ho camminato, ho nuotato and ho dormito are useful counterexamples.",
+          "it": "Non imparare “tutto il movimento = essere” o “tutti i verbi senza oggetto = essere”. Ho camminato, ho nuotato e ho dormito sono controesempi utili."
+        },
+        {
+          "en": "For a longer session, change Giulia to Marco, then to Giulia e Anna. Only the essere participles change with the subject in these examples.",
+          "it": "Per una sessione più lunga, cambia Giulia in Marco, poi in Giulia e Anna. In questi esempi solo i participi con essere cambiano con il soggetto."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What did you do yesterday, Giulia?",
+          "it": "A: Che cosa hai fatto ieri, Giulia?"
+        },
+        {
+          "en": "B: I travelled to Turin by train.",
+          "it": "B: Ho viaggiato fino a Torino in treno."
+        },
+        {
+          "en": "A: What time did you arrive?",
+          "it": "A: A che ora sei arrivata?"
+        },
+        {
+          "en": "B: I arrived at ten. Then I walked in the centre.",
+          "it": "B: Sono arrivata alle dieci. Poi ho camminato in centro."
+        },
+        {
+          "en": "A: Did you return home in the evening?",
+          "it": "A: Sei tornata a casa la sera?"
+        },
+        {
+          "en": "B: Yes, I returned home at nine.",
+          "it": "B: Sì, sono tornata a casa alle nove."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What time did Giulia arrive? Write the time in Italian, with or without alle.",
+          "it": "A che ora è arrivata Giulia? Scrivi l’orario in italiano, con o senza alle."
+        },
+        "answers": [
+          "dieci",
+          "alle dieci"
+        ],
+        "explanation": {
+          "en": "Sono arrivata alle dieci gives the arrival time; alle nove is the return time.",
+          "it": "Sono arrivata alle dieci indica l’arrivo; alle nove indica il ritorno."
+        }
+      },
+      "frame": {
+        "en": "Yesterday ___ travelled by ___. ___ arrived in ___ at ___. Then ___ walked ___.",
+        "it": "Ieri ___ ha viaggiato in ___. È arrivato/a a ___ alle ___. Poi ha camminato ___."
+      },
+      "speaking": {
+        "en": "Tell the trip as Giulia, then as Marco. Keep ha viaggiato and ha camminato; change arrivata/tornata to arrivato/tornato. Finally tell an invented trip in the first person without looking.",
+        "it": "Racconta il viaggio parlando di Giulia, poi di Marco. Mantieni ha viaggiato e ha camminato; cambia arrivata/tornata in arrivato/tornato. Infine racconta un viaggio inventato in prima persona senza guardare."
+      },
+      "resource": "auxiliary-drill"
+    },
+    {
+      "missionId": "week3-irregular-story",
+      "bank": "week3-story",
+      "notes": [
+        {
+          "en": "Practise four chunks first: ho fatto, ho letto, ho scritto, ho preso. Translate the complete action, not just an isolated participle.",
+          "it": "Esercita prima quattro espressioni: ho fatto, ho letto, ho scritto, ho preso. Traduci l’azione completa, non solo un participio isolato."
+        },
+        {
+          "en": "Check two things separately: subject → auxiliary; infinitive → participle. Noi + leggere gives abbiamo + letto.",
+          "it": "Controlla due elementi separati: soggetto → ausiliare; infinito → participio. Noi + leggere dà abbiamo + letto."
+        },
+        {
+          "en": "A noun gives the action a purpose: ho preso il treno; ho letto una rivista; ho scritto un messaggio. Change just the noun before trying a longer story.",
+          "it": "Un nome dà uno scopo all’azione: ho preso il treno; ho letto una rivista; ho scritto un messaggio. Cambia solo il nome prima di provare un racconto più lungo."
+        },
+        {
+          "en": "For a longer session, add visto, aperto, chiuso and messo one at a time. Rimanere is irregular too, but uses essere: Giulia è rimasta a casa.",
+          "it": "Per una sessione più lunga, aggiungi visto, aperto, chiuso e messo uno alla volta. Anche rimanere è irregolare, ma usa essere: Giulia è rimasta a casa."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Did you take the train yesterday?",
+          "it": "A: Ieri hai preso il treno?"
+        },
+        {
+          "en": "B: Yes. On the journey I read a magazine.",
+          "it": "B: Sì. Durante il viaggio ho letto una rivista."
+        },
+        {
+          "en": "A: Did you also write to Anna?",
+          "it": "A: Hai scritto anche ad Anna?"
+        },
+        {
+          "en": "B: Yes, I wrote a short message.",
+          "it": "B: Sì, ho scritto un messaggio breve."
+        },
+        {
+          "en": "A: What did you do in the evening?",
+          "it": "A: Che cosa hai fatto la sera?"
+        },
+        {
+          "en": "B: I made a cake with Marco.",
+          "it": "B: Ho fatto una torta con Marco."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What did the speaker read? Write the Italian noun, with or without an article.",
+          "it": "Che cosa ha letto la persona che parla? Scrivi il nome italiano, con o senza articolo."
+        },
+        "answers": [
+          "rivista",
+          "una rivista",
+          "la rivista"
+        ],
+        "explanation": {
+          "en": "Ho letto una rivista names the reading material. The message was written, not read.",
+          "it": "Ho letto una rivista indica il materiale letto. Il messaggio è stato scritto, non letto."
+        }
+      },
+      "frame": {
+        "en": "Yesterday I took ___. During the journey I read ___. Then I wrote ___. In the evening I made ___.",
+        "it": "Ieri ho preso ___. Durante il viaggio ho letto ___. Poi ho scritto ___. La sera ho fatto ___."
+      },
+      "speaking": {
+        "en": "Use four fingers as prompts: take, read, write, make. Say a past-tense sentence for each. Repeat with noi; change ho to abbiamo and keep the participles.",
+        "it": "Usa quattro dita come promemoria: prendere, leggere, scrivere, fare. Pronuncia una frase al passato per ciascuno. Ripeti con noi; cambia ho in abbiamo e mantieni i participi."
+      },
+      "resource": "past-listening"
+    },
+    {
+      "missionId": "week3-reflexive-morning",
+      "bank": "week3-morning",
+      "notes": [
+        {
+          "en": "Build the verb in three blocks: mi | sono | svegliato/a. The pronoun is part of the answer, not an optional decoration.",
+          "it": "Costruisci il verbo in tre blocchi: mi | sono | svegliato/a. Il pronome è parte della risposta e non è facoltativo."
+        },
+        {
+          "en": "Match persons first: io mi sono; tu ti sei; lui/lei si è; noi ci siamo; voi vi siete; loro si sono. Then add the participle with the right ending.",
+          "it": "Concorda prima le persone: io mi sono; tu ti sei; lui/lei si è; noi ci siamo; voi vi siete; loro si sono. Poi aggiungi il participio con la desinenza corretta."
+        },
+        {
+          "en": "For two named women, use -e: Giulia e Anna si sono alzate. For Marco e Paolo, use -i: si sono alzati. When practising io without a named speaker, either -o or -a can fit.",
+          "it": "Per due donne nominate usa -e: Giulia e Anna si sono alzate. Per Marco e Paolo usa -i: si sono alzati. Quando eserciti io senza indicare chi parla, possono andare bene sia -o sia -a."
+        },
+        {
+          "en": "Add a negative only after the three blocks are secure: non | mi | sono | alzato/a. In a longer session, change the time and add pettinarsi or truccarsi.",
+          "it": "Aggiungi la negazione solo quando i tre blocchi sono sicuri: non | mi | sono | alzato/a. In una sessione più lunga, cambia l’orario e aggiungi pettinarsi o truccarsi."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Giulia, what time did you wake up?",
+          "it": "A: Giulia, a che ora ti sei svegliata?"
+        },
+        {
+          "en": "B: I woke up at eight.",
+          "it": "B: Mi sono svegliata alle otto."
+        },
+        {
+          "en": "A: Did you get up immediately?",
+          "it": "A: Ti sei alzata subito?"
+        },
+        {
+          "en": "B: No, I got up at quarter past eight.",
+          "it": "B: No, mi sono alzata alle otto e un quarto."
+        },
+        {
+          "en": "A: Did you get dressed in a hurry?",
+          "it": "A: Ti sei vestita di fretta?"
+        },
+        {
+          "en": "B: Yes, and then I combed my hair.",
+          "it": "B: Sì, e poi mi sono pettinata."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Did Giulia get up immediately? Answer sì or no.",
+          "it": "Giulia si è alzata subito? Rispondi sì o no."
+        },
+        "answers": [
+          "no"
+        ],
+        "explanation": {
+          "en": "She woke at eight and got up at quarter past eight. Svegliarsi and alzarsi describe different actions.",
+          "it": "Si è svegliata alle otto e si è alzata alle otto e un quarto. Svegliarsi e alzarsi descrivono azioni diverse."
+        }
+      },
+      "frame": {
+        "en": "Yesterday I woke up at ___. I did not get up immediately. Then I got dressed ___ and combed my hair.",
+        "it": "Ieri mi sono svegliato/a alle ___. Non mi sono alzato/a subito. Poi mi sono vestito/a ___ e mi sono pettinato/a."
+      },
+      "speaking": {
+        "en": "Say your three-block forms slowly, then tell the morning without stopping. Change the speaker to Giulia and Anna and check both sono and the -e endings.",
+        "it": "Pronuncia lentamente le forme in tre blocchi, poi racconta la mattina senza fermarti. Cambia il soggetto in Giulia e Anna e controlla sia sono sia le desinenze in -e."
+      },
+      "resource": "auxiliary-drill"
     }
   ],
   "resources": [

@@ -1,0 +1,115 @@
+// Synthetic profiles only. Production writes require the explicit --live-fixture flag.
+import assert from "node:assert/strict";
+import fs from "node:fs/promises";
+import { execFileSync } from "node:child_process";
+import { randomInt, randomUUID } from "node:crypto";
+import { pathToFileURL } from "node:url";
+
+const url = process.env.PARLIAMO_URL || "http://127.0.0.1:5197";
+const live = new URL(url).hostname !== "127.0.0.1";
+assert.ok(!live || (url === "https://italian.samuelzhang.co.uk" && process.argv.includes("--live-fixture")), "Remote synthetic writes require explicit scope");
+const output = process.env.PROFILE_REPORT_DIR || "work/profile-browser";
+await fs.mkdir(output, { recursive: true, mode: 0o700 });
+const username = `audit_${randomUUID().replaceAll("-", "").slice(0, 18)}`;
+let pin;
+do { pin = String(randomInt(100000, 1000000)); } while (new Set(pin).size < 4 || /123|234|345|456|567|678|789|987|876|765|654|543|432|321/.test(pin));
+// This file identifies only our synthetic fixture for private cleanup, never credentials.
+await fs.writeFile(`${output}/fixture.json`, JSON.stringify({ username, url }) + "\n", { mode: 0o600 });
+const extension = execFileSync("browser-view", ["--root"], { encoding: "utf8" }).trim();
+const { chromium } = await import(pathToFileURL(`${extension}/node_modules/playwright-core/index.mjs`).href);
+const config = JSON.parse(await fs.readFile("/root/.config/browser-view/settings.json", "utf8"));
+const browser = await chromium.launch({ executablePath: process.env.BROWSER_EXECUTABLE_PATH || "/root/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome", headless: true, args: config.allowNoSandbox ? ["--no-sandbox"] : [] });
+const checks = [], errors = [];
+let phase = "start";
+const record = label => { checks.push(label); console.log("PASS", label); };
+const contexts = [];
+const device = async width => {
+  const context = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: "reduce" });
+  contexts.push(context);
+  const page = await context.newPage();
+  page.on("pageerror", error => errors.push(error.name));
+  await page.goto(url);
+  await page.locator(".daily-header").waitFor();
+  return { context, page };
+};
+const go = async (page, route) => { await page.evaluate(route => { location.hash = route; }, route); await page.locator(route === "profile" ? ".profile-page" : ".reflection textarea").waitFor(); };
+const saved = async page => { await page.waitForFunction(() => document.querySelector(".profile-sync-status")?.textContent === "Saved online"); };
+const notes = page => page.evaluate(() => JSON.parse(localStorage.getItem("parliamo-daily-v1")).notes);
+const edit = async (page, text) => { await go(page, "progress"); await page.locator(".reflection textarea").fill(text); };
+const login = async (page, create = false) => {
+  await go(page, "profile");
+  if (!create) await page.locator(".profile-tabs").getByRole("button", { name: "Sign in", exact: true }).click();
+  await page.locator('[name="username"]').fill(create ? username : username.toUpperCase());
+  await page.locator('[name="pin"]').fill(pin);
+  if (create) await page.locator('[name="pin-confirmation"]').fill(pin);
+  await page.locator("form.profile-panel").getByRole("button", { name: create ? "Create my profile" : "Sign in", exact: true }).last().click();
+  await saved(page);
+};
+try {
+  const a = await device(1440), b = await device(390);
+  phase = "create-with-local-work";
+  await edit(a.page, "Guest practice before profile creation.");
+  await login(a.page, true);
+  assert.equal(await notes(a.page), "Guest practice before profile creation.");
+  record("Creating a profile preserves and uploads existing guest work");
+  phase = "second-device";
+  await login(b.page);
+  assert.equal(await notes(b.page), "Guest practice before profile creation.");
+  const cookies = await a.context.cookies(url);
+  const cookie = cookies.find(c => c.name === (live ? "__Host-parliamo-profile" : "parliamo-profile-dev"));
+  assert.ok(cookie?.httpOnly && cookie.sameSite === "Strict" && (!live || cookie.secure));
+  assert.equal(await a.page.evaluate(() => document.cookie.includes("parliamo-profile")), false);
+  const storage = await a.page.evaluate(() => JSON.stringify(localStorage));
+  assert.ok(!storage.includes(pin));
+  assert.ok(!a.page.url().includes(pin));
+  record("A fresh phone signs in case-insensitively; the PIN is absent from browser storage and URLs, and JavaScript cannot read the session cookie");
+  phase = "two-device-conflict";
+  await a.context.setOffline(true);
+  await edit(a.page, "Computer practice written offline.");
+  await edit(b.page, "Phone practice saved online.");
+  await go(b.page, "profile"); await saved(b.page);
+  await go(a.page, "profile");
+  await a.context.setOffline(false);
+  await a.page.getByRole("heading", { name: "Two devices changed the same work." }).waitFor();
+  assert.equal(await notes(a.page), "Computer practice written offline.");
+  await a.page.locator(".profile-details summary").click();
+  for (const [label, expected] of [["Download last device copy", "Computer practice written offline."], ["Download last online copy", "Phone practice saved online."]]) {
+    const download = a.page.waitForEvent("download");
+    await a.page.getByRole("button", { name: label, exact: true }).click();
+    const item = await download;
+    const body = JSON.parse(await fs.readFile(await item.path(), "utf8"));
+    assert.equal(body.notes, expected);
+    assert.ok(!JSON.stringify(body).includes(pin));
+  }
+  await a.page.getByRole("button", { name: "Keep this device’s changes", exact: true }).click(); await saved(a.page);
+  await b.page.getByRole("button", { name: "Sync now", exact: true }).click(); await saved(b.page);
+  assert.equal(await notes(b.page), "Computer practice written offline.");
+  record("Concurrent offline and phone edits require an explicit choice; both recovery downloads are intact and the chosen version reaches the other device");
+  phase = "expired-session";
+  await b.context.clearCookies();
+  await edit(b.page, "Work retained after the session expires.");
+  await go(b.page, "profile");
+  await b.page.locator('[name="pin"]').waitFor();
+  assert.equal(await notes(b.page), "Work retained after the session expires.");
+  await login(b.page); await saved(b.page);
+  await a.page.getByRole("button", { name: "Sync now", exact: true }).click(); await saved(a.page);
+  assert.equal(await notes(a.page), "Work retained after the session expires.");
+  record("Expired sign-in retains unsynced work and uploads it after reauthentication");
+  phase = "sign-out-and-return";
+  await a.page.getByRole("button", { name: "Save and sign out of this device", exact: true }).click();
+  await a.page.locator('[name="pin"]').waitFor();
+  assert.equal(await notes(a.page), "");
+  await login(a.page);
+  assert.equal(await notes(a.page), "Work retained after the session expires.");
+  await b.page.getByRole("button", { name: "Sync now", exact: true }).click(); await saved(b.page);
+  record("Sign-out clears only this device; signing back in restores saved work and the other device remains signed in");
+  phase = "refresh";
+  await a.page.reload(); await saved(a.page);
+  assert.equal(await notes(a.page), "Work retained after the session expires.");
+  assert.deepEqual(errors, []);
+  record("Refresh resumes the profile without asking for the PIN; no uncaught browser errors");
+  await fs.writeFile(`${output}/results.json`, JSON.stringify({ passed: true, checks, uncaughtErrors: errors, live, syntheticDataOnly: true, securityChecks: { httpOnly: true, sameSiteStrict: true, secureInProduction: live, pinAbsentFromStorageAndUrls: true }, limitations: "Chromium synthetic journeys, not physical-device or penetration testing." }, null, 2) + "\n");
+} catch (error) {
+  await fs.writeFile(`${output}/failure.json`, JSON.stringify({ phase, errorName: error.name, completedChecks: checks }, null, 2) + "\n");
+  throw new Error(`Profile browser audit failed during ${phase}; credentials and browser state withheld`);
+} finally { await browser.close(); }

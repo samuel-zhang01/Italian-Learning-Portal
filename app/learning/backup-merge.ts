@@ -132,7 +132,7 @@ export function mergeProgressBackups(current: Progress, incoming: Progress, ids:
   }
   if (!local.arcade && remote.arcade) { out.arcade = clone(remote.arcade); additions += 1; }
   else if (out.arcade && remote.arcade) {
-    missing(out.arcade.records, remote.arcade.records, "game-first-attempt-and-schedule", 1000);
+    missing(out.arcade.records, remote.arcade.records, "game-first-attempt-and-schedule", 2000);
     if (!out.arcade.active && remote.arcade.active && !out.arcade.history.some((run) => run.id === remote.arcade!.active!.id)) { out.arcade.active = clone(remote.arcade.active); additions += 1; }
     else if (remote.arcade.active && !same(out.arcade.active, remote.arcade.active)) conflict("paused-game", remote.arcade.active.id);
     const history = new Set(out.arcade.history.map((run) => run.id));

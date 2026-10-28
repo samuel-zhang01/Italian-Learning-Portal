@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "checks": [
+    "Creating a profile preserves and uploads existing guest work",
+    "A fresh phone signs in case-insensitively; the PIN is absent from browser storage and URLs, and JavaScript cannot read the session cookie",
+    "Concurrent offline and phone edits require an explicit choice; both recovery downloads are intact and the chosen version reaches the other device",
+    "Expired sign-in retains unsynced work and uploads it after reauthentication",
+    "Sign-out clears only this device; signing back in restores saved work and the other device remains signed in",
+    "Refresh resumes the profile without asking for the PIN; no uncaught browser errors"
+  ],
+  "uncaughtErrors": [],
+  "live": false,
+  "syntheticDataOnly": true,
+  "securityChecks": {
+    "httpOnly": true,
+    "sameSiteStrict": true,
+    "secureInProduction": false,
+    "pinAbsentFromStorageAndUrls": true
+  },
+  "limitations": "Chromium synthetic journeys, not physical-device or penetration testing.",
+  "reviewedOn": "2026-10-28",
+  "command": "node scripts/audit_profile_browser.mjs",
+  "localTarget": "http://127.0.0.1:5197"
+}

@@ -30,6 +30,15 @@ test("gap supplements preserve prior content apart from the reviewed additive an
     const [name, key] = path.split(".");
     const previous = structuredClone(documents[name][key].slice(0, baseline.count));
     if (path === "grammar.units") {
+      // Week 3 reuses three earlier units; only the new mission links are additive.
+      const week3Links = new Map([
+        ["past-avere", "week3-journey-auxiliaries"],
+        ["past-irregular", "week3-irregular-story"],
+        ["past-essere", "week3-reflexive-morning"],
+      ]);
+      for (const unit of previous) {
+        if (week3Links.has(unit.id)) unit.missionIds = unit.missionIds.filter((id) => id !== week3Links.get(unit.id));
+      }
       // The 2026-10-26 learner audit added one valid adjective-position variant.
       // Keep the historical preservation check strict for every other field.
       const corrected = previous.find((unit) => unit.id === "a2-better-best")
@@ -86,7 +95,8 @@ test("supplement references use actually reviewed bounded native pages and retai
       if (unitIds.includes(item.id)) assert.ok(pointer.unitIds.includes(item.id), `${item.id}: reference topic link`);
     }
   }
-  assert.equal(companion.pages.filter((page) => page.kind === "practice").length, 730);
+  assert.equal(companion.pages.filter((page) => page.kind === "practice").length, 744);
+  assert.equal(companion.pages.filter((page) => page.kind === "practice" && page.sourceId !== "src-f293d35b1616").length, 730);
   assert.ok(!companion.pages.some((page) => page.sourceId === "src-580f7558db56" && page.page === 264));
 });
 

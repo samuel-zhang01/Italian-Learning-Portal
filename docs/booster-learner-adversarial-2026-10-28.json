@@ -1,0 +1,206 @@
+{
+  "auditedOn": "2026-10-28",
+  "auditorRole": "Independent adversarial mid-A1 learner simulation",
+  "target": "http://127.0.0.1:5197",
+  "scope": "New vocabulary/noun/verb Games extension, Week 3 lesson learner journey, local progress and optional profile affordances. Local synthetic data only; no production calls, real learner data or app edits.",
+  "method": {
+    "rubricDefinedBeforeBrowserTesting": true,
+    "rubricEvidence": "work/learner-adversarial/rubric.json",
+    "browser": "Isolated Chromium via installed browser-view Playwright package; configured host no-sandbox exception",
+    "viewports": [
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 1440,
+        "height": 1000
+      }
+    ],
+    "scenarios": "Real UI interactions for play, wrong/correct answers, hints, finish, replay, pause, settings, lesson completion, backup export and replacement. Direct local fixtures only select targeted conjugation items and a dated review."
+  },
+  "acceptance": {
+    "requiredCriteria": 18,
+    "totalCriteria": 20,
+    "independentlyPassed": 19,
+    "notIndependentlyVerified": 1,
+    "failedApplicationCriteria": 0,
+    "normalizedAcceptanceScoreOutOf10": 9.5,
+    "requiredScoreOutOf10": 9,
+    "openCriticalIssues": 0,
+    "result": "pass within bounded learner acceptance scope",
+    "interpretation": "19/20 observable acceptance checks, not a measured human satisfaction score, CEFR outcome, or a claim of perfect app quality."
+  },
+  "criteria": [
+    {
+      "id": "L01",
+      "criterion": "A guest can find Games from Today and start the default five-question round without login.",
+      "status": "pass",
+      "evidence": "Guest reached Games via Today, started five questions, and made no profile API request."
+    },
+    {
+      "id": "L02",
+      "criterion": "Meaning questions explain the requested task, give distinct choices and provide a learnable correction.",
+      "status": "pass",
+      "evidence": "Meaning round has distinct choices and displays expected word plus authored explanatory context after a wrong choice."
+    },
+    {
+      "id": "L03",
+      "criterion": "A hint is available before answering and the resulting correct answer is recorded as supported.",
+      "status": "pass",
+      "evidence": "Hint survives reload and correct hinted answer is clearly scored as supported."
+    },
+    {
+      "id": "L04",
+      "criterion": "A wrong answer is preserved through reload and cannot be rewritten as a first-attempt success.",
+      "status": "pass",
+      "evidence": "Wrong choice is locked, persisted on reload, and retains first.correct=false."
+    },
+    {
+      "id": "L05",
+      "criterion": "A completed five-question round saves an honest independent/support score and offers a clear stopping point.",
+      "status": "pass",
+      "evidence": "Five-question finish reports 3 independent and 1 supported answer after one wrong answer, and saves the round."
+    },
+    {
+      "id": "L06",
+      "criterion": "Replay includes mistakes/hinted answers and does not award repeated XP.",
+      "status": "pass",
+      "evidence": "Replay offered exactly the mistake and hinted item; two successful replays retain initial attempt and create no additional XP-bearing record."
+    },
+    {
+      "id": "L07",
+      "criterion": "A later-day due review is discoverable and advances scheduling without erasing first attempt.",
+      "status": "pass",
+      "evidence": "A dated synthetic due record appears under Recall due, advances beyond today after recall, and retains its first wrong attempt."
+    },
+    {
+      "id": "L08",
+      "criterion": "Articles/plurals asks for and checks the full article+noun, including lo/gli, with a useful explanation.",
+      "status": "pass",
+      "evidence": "Plural lo zaino rejects bare zaini, accepts gli zaini, explains gender and the complete plural."
+    },
+    {
+      "id": "L09",
+      "criterion": "A learner can save a noun to the personal word bank and keep it through reload.",
+      "status": "pass",
+      "evidence": "Save this word persists lo zaino with example in the personal word bank through reload."
+    },
+    {
+      "id": "L10",
+      "criterion": "Present/past/mixed verb levels and A1/A2 scope are reachable, understandable and persistent.",
+      "status": "pass",
+      "evidence": "Present, past and mixed options plus A1/A2 collection and typed-recall support persist across reload."
+    },
+    {
+      "id": "L11",
+      "criterion": "Verb tasks identify the required person and tense and offer a six-person reference after answering.",
+      "status": "pass",
+      "evidence": "Present prompt explicitly specifies voi; feedback offers a six-person conjugation reference."
+    },
+    {
+      "id": "L12",
+      "criterion": "Gender-unspecified past tasks accept correct feminine singular and plural variants.",
+      "status": "pass",
+      "evidence": "Typed sono andata and siamo andate are accepted for gender-unspecified io and noi."
+    },
+    {
+      "id": "L13",
+      "criterion": "Reflexive past tasks require the pronoun, essere and agreement, with useful correction.",
+      "status": "pass",
+      "evidence": "Reflexive task rejects missing mi and accepts mi sono alzata, explaining pronoun + essere + agreement."
+    },
+    {
+      "id": "L14",
+      "criterion": "Typed drafts, hints, submitted answers and selected settings survive pause and reload.",
+      "status": "pass",
+      "evidence": "Typed draft, past setting and hint survive Pause & save → Today reload → Games resume; submitted-answer persistence covered in L04."
+    },
+    {
+      "id": "L15",
+      "criterion": "The new Week 3 lesson explains auxiliary choice in English and helps recover from a wrong answer.",
+      "status": "pass",
+      "evidence": "Week 3 journey provides translated examples, explains activity-verb auxiliary choice, and corrects è to ha while preserving first wrong attempt."
+    },
+    {
+      "id": "L16",
+      "criterion": "Week 3 completion saves original writing, honest first-attempt score, and a future memory check.",
+      "status": "pass",
+      "evidence": "Completion requires original text and both self-checks, saves 1/2 first-attempt recall, writing and a future review, with honest self-assessment language."
+    },
+    {
+      "id": "L17",
+      "criterion": "Equivalent Italian guidance and task completion are available without losing saved English-session work.",
+      "status": "pass",
+      "evidence": "Italian reflexive lesson guidance and both recall checks complete successfully; English journey result remains intact after switching language."
+    },
+    {
+      "id": "L18",
+      "criterion": "Progress backup exports a valid restorable file including booster records and drafts.",
+      "status": "pass",
+      "evidence": "UI export parses as a valid backup. An additional explicit round-trip retains one answered booster record with first-attempt/support evidence, a new active typed draft, and both Week 3 completions. Complete arcade state and completions exactly match before/after UI Replace & restore. Evidence: work/learner-adversarial/backup-result.json."
+    },
+    {
+      "id": "L19",
+      "criterion": "One optional local profile can save records and resume a draft in a second fresh browser context with a masked PIN.",
+      "status": "not-independently-verified",
+      "evidence": "One random local profile was created and a second fresh context signed in with a masked PIN. This auditor did not complete the record-resume assertion because direct localStorage fixture seeding followed by hash-only navigation left React on its previous empty guest state. An intercepted-API reproduction confirmed this harness cause (0 completions without reload, 2 with reload). No application data-loss defect inferred. No second profile was created. Root actual UI-generated two-device evidence separately passed six groups in work/profile-browser/results.json."
+    },
+    {
+      "id": "L20",
+      "criterion": "Core learner controls remain usable at phone and desktop sizes without horizontal overflow or competing required navigation.",
+      "status": "pass",
+      "evidence": "Browser measurements found no horizontal overflow at 390px and 1440px for the resumed verb task. Screenshots actually inspected: desktop verb task, phone verb task, desktop Week 3 explanation, Italian phone completion. One question and clear primary action at a time; secondary controls remain collapsed. Phone content needs normal vertical scrolling."
+    }
+  ],
+  "findings": [
+    {
+      "id": "LEARNER-COPY-01",
+      "severity": "minor",
+      "status": "fixed and rechecked",
+      "finding": "Progress visible saving paragraph unconditionally said switching devices would not carry records over, contradicting the new profile flow.",
+      "fix": "Parent updated EN and IT to explain local saving, optional cross-device profile, waiting for Saved online and retaining an export.",
+      "verification": "Reloaded Progress EN/IT; old contradictory sentence absent; corrected save status guidance present. Evidence: work/learner-adversarial/fixture-diagnosis.json."
+    },
+    {
+      "id": "AUDIT-HARNESS-01",
+      "severity": "test harness only",
+      "status": "diagnosed; not an application defect",
+      "finding": "Profile test injected localStorage while React was mounted, then navigated only by hash. Profile registration correctly read its still-empty React state.",
+      "verification": "Intercepted-only API reproduction received 0 completions without reload and 2 after reload. Did not create another server profile; original actual-user profile integration evidence was supplied separately by root."
+    }
+  ],
+  "separateCrossDeviceEvidence": {
+    "owner": "Root integration runner, not independently executed by this auditor",
+    "path": "work/profile-browser/results.json",
+    "observedResult": "6 groups passed; guest import, fresh phone sign-in, offline conflicting edits and both recovery downloads, expired sign-in recovery, sign-out/relogin isolation, refresh; no uncaught errors.",
+    "scoreTreatment": "Does not increase the independently demonstrated 19/20 score."
+  },
+  "evidence": {
+    "scripts": [
+      "work/learner-adversarial/audit.mjs",
+      "work/learner-adversarial/lesson-audit.mjs",
+      "work/learner-adversarial/profile-audit.mjs",
+      "work/learner-adversarial/verify-copy.mjs",
+      "work/learner-adversarial/backup-audit.mjs"
+    ],
+    "screenshotsActuallyViewed": [
+      "work/learner-adversarial/phase1-final.png",
+      "work/learner-adversarial/verb-resume-390.png",
+      "work/learner-adversarial/week3-it-completion-phone.png",
+      "work/learner-adversarial/week3-en-explanation-desktop.png"
+    ],
+    "syntheticBackup": "work/learner-adversarial/progress-backup.json",
+    "fixtureDiagnosis": "work/learner-adversarial/fixture-diagnosis.json",
+    "privateEvidencePolicy": "work/ is ignored and not published. No PIN or cookie value recorded in report or evidence."
+  },
+  "limitations": [
+    "Automated synthetic learner simulation; no real mid-A1 student interview or learning-outcome study.",
+    "390px browser emulation is not physical iOS/Android testing; desktop Chromium only.",
+    "Direct conjugation samples cover feminine io/noi, voi present, reflexive io and article/plural lo/gli; this is not an independent linguistic audit of every generated form.",
+    "Later-day recall uses a dated synthetic record, not a multi-day real learner study.",
+    "Speech quality and screen-reader behavior were not audited here.",
+    "Profile record-resume was independently incomplete due to the documented harness fixture; root integration covers this with real UI-generated records.",
+    "No production endpoint or infrastructure was exercised by this audit."
+  ]
+}

@@ -20,10 +20,18 @@ export const planningReviewCatalogue = {
   words: [...new Map([
     ...data.grammarWords,
     ...planningBanks.flatMap((bank) => bank.words.map((word) => word.term)),
+    ...data.booster.nouns.map((noun) => noun.term),
   ].map((term) => [normalise(term.it), { key: normalise(term.it), term }])).values()],
   arcade: [
     ...planningBanks.flatMap((bank) => bank.words.map((word) => ({
       id: word.id, title: bank.title, wordKey: normalise(word.term.it),
+    }))),
+    ...data.booster.verbs.flatMap((verb) => ["present", "past"].flatMap((tense) => Array.from({ length: 6 }, (_, person) => ({
+      id: `${verb.id}:${tense}:${person}`, unitId: verb.unitId,
+      title: { en: `${verb.infinitive} · ${verb.meaning.en}`, it: `${verb.infinitive} · ${tense === "present" ? "presente" : "passato prossimo"}` },
+    })))),
+    ...data.booster.nouns.flatMap((noun) => ["article", "plural"].map((task) => ({
+      id: `${noun.id}:${task}`, title: { en: "Nouns & articles", it: "Nomi e articoli" }, wordKey: normalise(noun.term.it),
     }))),
     ...planningUnits.flatMap((unit) => unit.exercises
       .filter((exercise) => ["reorder", "correct", "choice", "tense"].includes(exercise.kind))

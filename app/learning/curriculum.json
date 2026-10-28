@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-10-24",
+  "reviewedOn": "2026-10-28",
   "missions": [
     {
       "id": "say-hello",
@@ -7451,6 +7451,361 @@
           ]
         }
       ]
+    },
+    {
+      "id": "week3-journey-auxiliaries",
+      "course": 3,
+      "title": {
+        "en": "Tell a short journey: ho or sono?",
+        "it": "Racconta un breve viaggio: ho o sono?"
+      },
+      "goal": {
+        "en": "Describe a journey with three useful past-tense chunks, choosing avere or essere.",
+        "it": "Descrivi un viaggio con tre espressioni utili al passato, scegliendo avere o essere."
+      },
+      "rule": {
+        "en": "The passato prossimo has two parts: present avere or essere + a past participle. Learn the auxiliary with the verb: viaggiare → ho viaggiato; arrivare → sono arrivato/a. Movement alone does not tell you which auxiliary to use: camminare and nuotare also use avere. With essere, the participle agrees with the subject: Giulia è arrivata; Marco è arrivato. In these simple avere sentences, the participle stays unchanged.",
+        "it": "Il passato prossimo ha due parti: avere o essere al presente + un participio passato. Impara l’ausiliare insieme al verbo: viaggiare → ho viaggiato; arrivare → sono arrivato/a. Il movimento da solo non indica l’ausiliare: anche camminare e nuotare usano avere. Con essere, il participio concorda con il soggetto: Giulia è arrivata; Marco è arrivato. In queste frasi semplici con avere, il participio non cambia."
+      },
+      "examples": [
+        {
+          "en": "Giulia travelled by train.",
+          "it": "Giulia ha viaggiato in treno."
+        },
+        {
+          "en": "Giulia arrived in Turin at ten.",
+          "it": "Giulia è arrivata a Torino alle dieci."
+        },
+        {
+          "en": "Giulia walked in the park and then returned home.",
+          "it": "Giulia ha camminato nel parco e poi è tornata a casa."
+        }
+      ],
+      "words": [
+        {
+          "en": "to travel → I travelled",
+          "it": "viaggiare → ho viaggiato"
+        },
+        {
+          "en": "to arrive → I arrived",
+          "it": "arrivare → sono arrivato/a"
+        },
+        {
+          "en": "to walk → I walked",
+          "it": "camminare → ho camminato"
+        },
+        {
+          "en": "then",
+          "it": "poi"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Write only the auxiliary: ieri Giulia ___ viaggiato in treno.",
+            "it": "Scrivi solo l’ausiliare: ieri Giulia ___ viaggiato in treno."
+          },
+          "answers": [
+            "ha"
+          ],
+          "explanation": {
+            "en": "Viaggiare uses avere here: Giulia ha viaggiato. Moving does not automatically mean essere.",
+            "it": "Viaggiare usa avere: Giulia ha viaggiato. Il movimento non richiede automaticamente essere."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Write only the participle: Giulia è ___ a Torino. (arrivare)",
+            "it": "Scrivi solo il participio: Giulia è ___ a Torino. (arrivare)"
+          },
+          "answers": [
+            "arrivata"
+          ],
+          "explanation": {
+            "en": "Essere requires agreement with Giulia: arrivata, feminine singular.",
+            "it": "Essere richiede l’accordo con Giulia: arrivata, femminile singolare."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Write only the auxiliary: noi ___ camminato nel parco.",
+          "it": "Scrivi solo l’ausiliare: noi ___ camminato nel parco."
+        },
+        "answers": [
+          "abbiamo"
+        ],
+        "explanation": {
+          "en": "Camminare uses avere: noi abbiamo camminato. The subject chooses abbiamo.",
+          "it": "Camminare usa avere: noi abbiamo camminato. Il soggetto richiede abbiamo."
+        }
+      },
+      "output": {
+        "en": "Invent a trip for Marco or Giulia. Write three short sentences: travel by train, arrive in a city, return home. Start with ieri. Use the examples, then hide them and say your story again.",
+        "it": "Inventa un viaggio per Marco o Giulia. Scrivi tre frasi brevi: viaggiare in treno, arrivare in una città, tornare a casa. Inizia con ieri. Usa gli esempi, poi nascondili e ripeti il racconto."
+      },
+      "model": {
+        "en": "Yesterday Marco travelled by train. He arrived in Parma at nine. Then he returned home.",
+        "it": "Ieri Marco ha viaggiato in treno. È arrivato a Parma alle nove. Poi è tornato a casa."
+      },
+      "rubric": [
+        {
+          "en": "Each completed action has an auxiliary and a participle; viaggiare uses avere.",
+          "it": "Ogni azione conclusa ha un ausiliare e un participio; viaggiare usa avere."
+        },
+        {
+          "en": "Arrivare and tornare use essere, and their endings match my chosen person.",
+          "it": "Arrivare e tornare usano essere e le desinenze concordano con la persona scelta."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            4,
+            5,
+            6,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "week3-irregular-story",
+      "course": 3,
+      "title": {
+        "en": "Three things you did yesterday",
+        "it": "Tre cose che hai fatto ieri"
+      },
+      "goal": {
+        "en": "Build a short account of a finished day using useful irregular participles.",
+        "it": "Costruisci un breve racconto di una giornata conclusa con participi irregolari utili."
+      },
+      "rule": {
+        "en": "Some past participles need to be learnt as chunks: fare → fatto, leggere → letto, scrivere → scritto, prendere → preso. Start with ho fatto / ho letto / ho scritto / ho preso, then change the auxiliary for a new subject: noi abbiamo letto. Use ieri, stamattina or la settimana scorsa to place a finished action in time. These examples use avere; an irregular participle does not decide the auxiliary.",
+        "it": "Alcuni participi passati si imparano come espressioni: fare → fatto, leggere → letto, scrivere → scritto, prendere → preso. Inizia con ho fatto / ho letto / ho scritto / ho preso, poi cambia l’ausiliare con un altro soggetto: noi abbiamo letto. Usa ieri, stamattina o la settimana scorsa per collocare un’azione conclusa nel tempo. Questi esempi usano avere; un participio irregolare non determina l’ausiliare."
+      },
+      "examples": [
+        {
+          "en": "Yesterday I read a magazine.",
+          "it": "Ieri ho letto una rivista."
+        },
+        {
+          "en": "This morning we took the bus.",
+          "it": "Stamattina abbiamo preso l’autobus."
+        },
+        {
+          "en": "Last week Giulia wrote an email and made a cake.",
+          "it": "La settimana scorsa Giulia ha scritto un’e-mail e ha fatto una torta."
+        }
+      ],
+      "words": [
+        {
+          "en": "to read → read (past participle)",
+          "it": "leggere → letto"
+        },
+        {
+          "en": "to write → written",
+          "it": "scrivere → scritto"
+        },
+        {
+          "en": "to take → taken",
+          "it": "prendere → preso"
+        },
+        {
+          "en": "last week",
+          "it": "la settimana scorsa"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete with one participle: ieri ho ___ una rivista. (leggere)",
+            "it": "Completa con un participio: ieri ho ___ una rivista. (leggere)"
+          },
+          "answers": [
+            "letto"
+          ],
+          "explanation": {
+            "en": "Leggere has the irregular participle letto: ho letto.",
+            "it": "Leggere ha il participio irregolare letto: ho letto."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Write the full past form: stamattina noi ___ l’autobus. (prendere)",
+            "it": "Scrivi la forma completa al passato: stamattina noi ___ l’autobus. (prendere)"
+          },
+          "answers": [
+            "abbiamo preso"
+          ],
+          "explanation": {
+            "en": "Noi takes abbiamo; prendere becomes preso. Keep both parts.",
+            "it": "Noi richiede abbiamo; prendere diventa preso. Mantieni entrambe le parti."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Write the full past form: ieri Giulia ___ un’e-mail. (scrivere)",
+          "it": "Scrivi la forma completa al passato: ieri Giulia ___ un’e-mail. (scrivere)"
+        },
+        "answers": [
+          "ha scritto"
+        ],
+        "explanation": {
+          "en": "Giulia takes ha and scrivere has the participle scritto. There is no subject agreement with avere in this sentence.",
+          "it": "Giulia richiede ha e scrivere ha il participio scritto. In questa frase con avere non c’è accordo con il soggetto."
+        }
+      },
+      "output": {
+        "en": "Write three invented actions from yesterday using three different verbs from leggere, scrivere, prendere and fare. Add an object to each verb. Link two sentences with poi. You can describe yourself or an invented person.",
+        "it": "Scrivi tre azioni inventate di ieri usando tre verbi diversi tra leggere, scrivere, prendere e fare. Aggiungi un oggetto a ogni verbo. Collega due frasi con poi. Puoi descrivere te o una persona inventata."
+      },
+      "model": {
+        "en": "Yesterday I took the bus. Then I read a magazine. In the evening I wrote an email.",
+        "it": "Ieri ho preso l’autobus. Poi ho letto una rivista. La sera ho scritto un’e-mail."
+      },
+      "rubric": [
+        {
+          "en": "I used three different verb chunks, with a complete auxiliary + participle each time.",
+          "it": "Ho usato tre espressioni verbali diverse, ogni volta con ausiliare + participio completi."
+        },
+        {
+          "en": "I checked the irregular spellings and included a time expression and an object.",
+          "it": "Ho controllato la grafia dei participi irregolari e aggiunto un’espressione di tempo e un oggetto."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            12,
+            13,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "id": "week3-reflexive-morning",
+      "course": 3,
+      "title": {
+        "en": "Tell yesterday’s morning routine",
+        "it": "Racconta la routine di ieri mattina"
+      },
+      "goal": {
+        "en": "Move a familiar routine into the past while keeping the reflexive pronoun.",
+        "it": "Trasforma una routine familiare al passato mantenendo il pronome riflessivo."
+      },
+      "rule": {
+        "en": "For these reflexive verbs, keep the little pronoun and use essere: mi sveglio → mi sono svegliato/a. The order is pronoun + essere + participle. Match both the pronoun and the auxiliary to the subject: Giulia si è vestita; Marco si è vestito. For a negative sentence, put non first: non mi sono alzato/a presto. Choose -o or -a to describe the speaker; both can be correct when no gender is specified.",
+        "it": "Con questi verbi riflessivi, mantieni il pronome e usa essere: mi sveglio → mi sono svegliato/a. L’ordine è pronome + essere + participio. Concorda pronome e ausiliare con il soggetto: Giulia si è vestita; Marco si è vestito. Nella frase negativa metti non all’inizio: non mi sono alzato/a presto. Scegli -o o -a in base alla persona che parla; entrambe le forme possono essere corrette se il genere non è specificato."
+      },
+      "examples": [
+        {
+          "en": "Yesterday Giulia woke up at seven.",
+          "it": "Ieri Giulia si è svegliata alle sette."
+        },
+        {
+          "en": "Marco did not get up early.",
+          "it": "Marco non si è alzato presto."
+        },
+        {
+          "en": "Giulia and Anna got dressed in a hurry.",
+          "it": "Giulia e Anna si sono vestite di fretta."
+        }
+      ],
+      "words": [
+        {
+          "en": "to wake up",
+          "it": "svegliarsi"
+        },
+        {
+          "en": "to get up",
+          "it": "alzarsi"
+        },
+        {
+          "en": "to get dressed",
+          "it": "vestirsi"
+        },
+        {
+          "en": "in a hurry",
+          "it": "di fretta"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Write the whole verb phrase: ieri Giulia ___ alle sette. (svegliarsi)",
+            "it": "Scrivi tutta l’espressione verbale: ieri Giulia ___ alle sette. (svegliarsi)"
+          },
+          "answers": [
+            "si è svegliata"
+          ],
+          "explanation": {
+            "en": "Keep si, choose è for Giulia, and use the feminine singular ending -a.",
+            "it": "Mantieni si, scegli è per Giulia e usa la desinenza femminile singolare -a."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Write the whole verb phrase: ieri io ___ presto. (alzarsi; the speaker’s gender is unspecified)",
+            "it": "Scrivi tutta l’espressione verbale: ieri io ___ presto. (alzarsi; il genere di chi parla non è specificato)"
+          },
+          "answers": [
+            "mi sono alzato",
+            "mi sono alzata"
+          ],
+          "explanation": {
+            "en": "Io needs mi sono. Alzato and alzata are both accepted because the prompt does not specify the speaker’s gender.",
+            "it": "Io richiede mi sono. Sono accettati alzato e alzata perché la consegna non specifica il genere di chi parla."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Write the whole verb phrase: ieri Marco non ___ di fretta. (vestirsi)",
+          "it": "Scrivi tutta l’espressione verbale: ieri Marco non ___ di fretta. (vestirsi)"
+        },
+        "answers": [
+          "si è vestito"
+        ],
+        "explanation": {
+          "en": "Non is already supplied. Keep si è and use vestito for Marco.",
+          "it": "Non è già presente. Mantieni si è e usa vestito per Marco."
+        }
+      },
+      "output": {
+        "en": "Tell an invented morning in three sentences. Use svegliarsi, alzarsi and vestirsi. Add one time and one negative sentence. Speak as yourself or name Giulia or Marco so the participle endings are clear.",
+        "it": "Racconta una mattina inventata in tre frasi. Usa svegliarsi, alzarsi e vestirsi. Aggiungi un orario e una frase negativa. Parla di te oppure indica Giulia o Marco per rendere chiare le desinenze dei participi."
+      },
+      "model": {
+        "en": "Yesterday Giulia woke up at eight. She did not get up immediately. Then she got dressed in a hurry.",
+        "it": "Ieri Giulia si è svegliata alle otto. Non si è alzata subito. Poi si è vestita di fretta."
+      },
+      "rubric": [
+        {
+          "en": "Every reflexive past form has its pronoun, essere and participle.",
+          "it": "Ogni forma riflessiva al passato ha pronome, essere e participio."
+        },
+        {
+          "en": "The participles match the person; non comes before the reflexive pronoun.",
+          "it": "I participi concordano con la persona; non precede il pronome riflessivo."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-f293d35b1616",
+          "pages": [
+            4,
+            5,
+            17,
+            18
+          ]
+        }
+      ]
     }
   ],
   "sources": [
@@ -7877,6 +8232,14 @@
       "course": 3,
       "pages": 263,
       "sha256": "580f7558db569cd21b352abd1dcea29b012fb43098ebedd5746a3910e3b784c4"
+    },
+    {
+      "id": "src-f293d35b1616",
+      "path": "Course 3/Week_3_Il_passato_prossimo.pdf",
+      "title": "Week_3_Il_passato_prossimo.pdf",
+      "course": 3,
+      "pages": 20,
+      "sha256": "f293d35b1616561dc25feb0a062f6d7c14b91f511bce5a254efd4e066b936538"
     }
   ]
 }

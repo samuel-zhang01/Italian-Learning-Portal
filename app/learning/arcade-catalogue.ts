@@ -9,6 +9,7 @@ import type {
 } from "./types.ts";
 import { exercisePrompt, normalise } from "./learning-utils.ts";
 import { shuffled } from "./arcade-engine.ts";
+import { boosterItems } from "./booster-catalogue.ts";
 
 export const arcadeUnits = grammar.units as GrammarUnit[];
 export const arcadeBanks = enrichment.banks as VocabularyBank[];
@@ -49,6 +50,7 @@ export function wordArcadeItems(bank: VocabularyBank): ArcadeItem[] {
 }
 export const arcadeItems: ArcadeItem[] = [
   ...arcadeBanks.flatMap(wordArcadeItems),
+  ...boosterItems,
   ...arcadeUnits.flatMap((unit) =>
     unit.exercises
       .filter((ex) =>
@@ -92,8 +94,12 @@ export const arcadeItemById = new Map(
 export function arcadePool(settings: ArcadeSettings) {
   return arcadeItems.filter((item) => {
     if (item.mode !== settings.mode) return false;
-    if (item.mode === "words")
-      return settings.bank === "all" || item.bankId === settings.bank;
+    if (item.mode === "words") {
+      if (settings.wordFocus === "articles") return item.wordFocus === "articles";
+      return item.wordFocus !== "articles" && (settings.bank === "all" || item.bankId === settings.bank);
+    }
+    if (item.mode === "verbs") return (settings.verbLevel === "mixed" || item.tense === (settings.verbLevel ?? "present"))
+      && (settings.verbScope === "all" || item.level === "A1");
     if (item.mode === "conversation") return item.sceneId === settings.scene;
     const unit = arcadeUnits.find((u) => u.id === item.unitId);
     if (settings.topic === "foundations")
