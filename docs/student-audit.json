@@ -229,6 +229,13 @@
     "dailyTestsPassed": 308,
     "layoutStates": 144,
     "profileBrowserGroups": 8,
-    "preservation": "Existing course, Games and version-one backups preserved; synthetic browser fixtures only."
+    "preservation": "Existing course, Games and version-one backups preserved; synthetic browser fixtures only.",
+    "published": true,
+    "release": "20261028T205344Z-typed-vocabulary",
+    "deploymentReceipt": "docs/deployment-typed-vocabulary-2026-10-28.json",
+    "publicTypedBrowserGroups": 12,
+    "publicArcadeBrowserGroups": 14,
+    "publicOfflineBrowserGroups": 6,
+    "syntheticProfileRemoved": true
   }
 }

@@ -1,0 +1,505 @@
+{
+  "release": "20261028T205344Z-typed-vocabulary",
+  "releaseDirectory": "/data/italian/releases/20261028T205344Z-typed-vocabulary",
+  "sourceRevision": "185af0aa334267b46e5e26e36237c8a94c29aae9",
+  "previousReleaseDirectory": "/data/italian/releases/20261028T162717Z-booster",
+  "artifactHashes": {
+    "app-icon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "assets/academy-B3RCi5WO.js": "0610a13e8c23f5530c6569c00ee25afe82401b13edc3b929969364889f479148",
+    "assets/arcade-BV4LF-nW.js": "961008ca22a4e904e1acb58ea8396914e1723925e4b4de1576e929c2e092033f",
+    "assets/arcade-scenes-D_GrQAm4.js": "9acbc31d1846c8e67351a57d44894c6d524d8c249b3493a90ef01397d54eeadb",
+    "assets/backup-transfer-DTL-2rXv.js": "e8b161c4ae6c510ec7b6fd8bfa54c11f7a5b99aec8e6cdb8fdc81c78ab84cb1b",
+    "assets/backup-transfer-ZQnUZdgZ.css": "592a44651b526292fcb66338c9cb095490cdbd079a68a806ac8e51de92ca93df",
+    "assets/booster-content-CcOb-fCU.js": "3380433469d8b4d69dd7d27ac19ffe74573a8e883b511da0d62edd8384a31812",
+    "assets/chapters-CfwLknyS.css": "a8b87bb143e0bb4e4e55347a1c8d78dafba41aaba93c7059fde8c2d1332183ff",
+    "assets/chapters-Cs9sChcL.js": "f84fde565f60c14f6575b722bb8470249a2b15961ef836cf8c201ae2c2cfaf12",
+    "assets/companion-C0Ul_92U.js": "4ca2241bd4e60e868bffde49c8710be039f80f100ff5c902fa1f3cfaa897c22b",
+    "assets/discovery-CowTOKLw.js": "9c94eeed0b445e56314720be8c9a8153ccbf96cedaf580f894d6b24228cf5885",
+    "assets/discovery-index-DhGURHV9.js": "ea19169ee45c2d9c45035647da0b33d3b06885b88d987615f57086f512c1c65c",
+    "assets/enriched-D-gz8yik.js": "36c815d69a3f5dbeab1cdd9e19b868d49cf54ec87233ac36a38e1b3c78fc386f",
+    "assets/enrichment-B7Q8f80a.js": "0ab4cec85010b2359ad2ebab556bb16ff0ff56037cd9763fd99b90f0ff9f5b70",
+    "assets/grammar-D44tCaU9.js": "3aa2a2a1394fa6516ab50bbb8575189889fdefa4034f0b9e75d9dc42547f5a28",
+    "assets/index-Cb98mAhk.js": "adc019946659f599e1d560709854c19833af3ac504444c520d718a3acc1875c3",
+    "assets/index-D4eWKb_S.css": "1556f4fb6ee7d25abe02b76ac73c49f900d03ce4e6a190fde925f4c81fd18d4d",
+    "assets/learning-insights-9oVTEvq7.js": "879a1992ae1cb1851cb9cea7b9fb577431623d8e75e1a3980614e5f38bf58077",
+    "assets/learning-insights-BLQTf6f8.css": "a8d4ba17b735c4f737b8ada17e847a45272bce7a81b6c425c1e6cdac44ae4dd0",
+    "assets/listening-DYa2axRK.css": "9ceef35e541c490ce309e98afced2f1804969343e6dc761c7d075bc997746799",
+    "assets/listening-rXnwl2P6.js": "aba3b8806a927976c403530f274f9fe4518d0aa0e88b0fa3130a99dc923c2b8c",
+    "assets/navigation-CcrycXle.js": "f417bc8c9b74837a553bf75a11e4933a2d5a13467930fde19b195448d0d0f256",
+    "assets/offline-Byvp_Adi.js": "0f5c02a81e2098d10271d146635fef3588e709fc8f9ffe37061a2d2a7427765f",
+    "assets/oral-practice-C9ivmFoo.css": "eacd3820fbc7a6ed4d884233738c6c8028993639102259f75c5da705d3ec97ea",
+    "assets/oral-practice-DmvABbzS.js": "630263bbb4c1ec149601ca40b46ffa3351372a1b43980d2f9d1b42b6e9d7e3b3",
+    "assets/painted-cardboard-CX92yXJi.webp": "2267856e5f4e1c2f9388fa4fe7cc1eff3746b3354407287574e42dd51533c2db",
+    "assets/practice-hub-DRt6llda.js": "9b7aed1cdc1be1084b51169ce676d5a51fc5e4892750e16eb59480205a68eee1",
+    "assets/practice-navigation-CqCnP7HC.js": "31355e7ffb46a2d8d9ed9bfd38cfef353cee3e9df57e9aff8a35164e527076c5",
+    "assets/practice-tools-C9MDXR96.js": "d03a8d3167e52ec196949c078c78243ccdd1cc2583dff15f4333d0042da840a1",
+    "assets/profile-C1g0z2YZ.css": "7b860d23ae06ca1a6f26eb34db7b4e84038d648343c46f066323dc2cc4427588",
+    "assets/profile-mBEfaklQ.js": "5cfcb6a5c232d59fc2fefb0cbe25f6223c54423e7ca787a7fbca9950481dedb6",
+    "assets/review-hub-C0Sh_F8c.css": "e0d5c02b9b6e9f87a95ef873518983f70a779d2537782d05da904e0d2693f146",
+    "assets/review-hub-a1Mh8N01.js": "65bb3be886c6463f62f61e539b596fefd63eb0551243bbdbc864d2e72d6dda9a",
+    "assets/vocab-boost-BI6ct51W.js": "42a42c2c1407fd64e7d548f7a634f0a70bc721cade39044463be79a7dc76447f",
+    "assets/vocab-catalogue-a0iLMcec.js": "cbfee837b0cfaa22db65990fa70edcaffccd9bd025dc4873833de6898f72e54a",
+    "favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "index.html": "d1fa320eb0f5b6d82d515f2b52be41349a9750b9b6331ec9287707addb3ad71f",
+    "manifest.webmanifest": "12b91f0ec01c070bfffcfa31bea3df6fce59caa7666cd4be77b80b5822448d2a",
+    "offline-worker.js": "bbcf875aaeebf5e19abe27c9478466dc96b7be207f9a1ae3a6a81845fef8b5e0"
+  },
+  "remoteHashVerification": "passed",
+  "url": "https://italian.samuelzhang.co.uk/",
+  "cleanCheckoutBuild": "identical artifacts",
+  "scope": "Only 39 site-dist files uploaded; current symlink switched atomically; previous release retained.",
+  "privacy": {
+    "privateStudyFilesPublished": false,
+    "realLearnerDataAccessed": false
+  },
+  "status": "public-browser-verified",
+  "activatedAt": "2026-10-28T20:53:58.770550+00:00",
+  "publicHttpsVerification": {
+    "passed": true,
+    "tlsValidation": true,
+    "offlineVersion": "fdfc4f9801daa324",
+    "freshUpdateMetadata": {
+      "status": 200,
+      "version": "fdfc4f9801daa324",
+      "cacheControl": "no-cache",
+      "edgeCache": "DYNAMIC"
+    },
+    "method": "Fresh genuine Chromium page and same-origin browser fetches; canonical HTML entry references and release metadata plus exact SHA-256 for every non-HTML asset at the URL used by this release, including its release-specific worker query.",
+    "results": [
+      {
+        "path": "app-icon.svg",
+        "deliveredPath": "app-icon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/academy-B3RCi5WO.js",
+        "deliveredPath": "assets/academy-B3RCi5WO.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-BV4LF-nW.js",
+        "deliveredPath": "assets/arcade-BV4LF-nW.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-scenes-D_GrQAm4.js",
+        "deliveredPath": "assets/arcade-scenes-D_GrQAm4.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/backup-transfer-DTL-2rXv.js",
+        "deliveredPath": "assets/backup-transfer-DTL-2rXv.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/backup-transfer-ZQnUZdgZ.css",
+        "deliveredPath": "assets/backup-transfer-ZQnUZdgZ.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/booster-content-CcOb-fCU.js",
+        "deliveredPath": "assets/booster-content-CcOb-fCU.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-CfwLknyS.css",
+        "deliveredPath": "assets/chapters-CfwLknyS.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-Cs9sChcL.js",
+        "deliveredPath": "assets/chapters-Cs9sChcL.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/companion-C0Ul_92U.js",
+        "deliveredPath": "assets/companion-C0Ul_92U.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-CowTOKLw.js",
+        "deliveredPath": "assets/discovery-CowTOKLw.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-index-DhGURHV9.js",
+        "deliveredPath": "assets/discovery-index-DhGURHV9.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enriched-D-gz8yik.js",
+        "deliveredPath": "assets/enriched-D-gz8yik.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enrichment-B7Q8f80a.js",
+        "deliveredPath": "assets/enrichment-B7Q8f80a.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/grammar-D44tCaU9.js",
+        "deliveredPath": "assets/grammar-D44tCaU9.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-Cb98mAhk.js",
+        "deliveredPath": "assets/index-Cb98mAhk.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-D4eWKb_S.css",
+        "deliveredPath": "assets/index-D4eWKb_S.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/learning-insights-9oVTEvq7.js",
+        "deliveredPath": "assets/learning-insights-9oVTEvq7.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/learning-insights-BLQTf6f8.css",
+        "deliveredPath": "assets/learning-insights-BLQTf6f8.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/listening-DYa2axRK.css",
+        "deliveredPath": "assets/listening-DYa2axRK.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/listening-rXnwl2P6.js",
+        "deliveredPath": "assets/listening-rXnwl2P6.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/navigation-CcrycXle.js",
+        "deliveredPath": "assets/navigation-CcrycXle.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/offline-Byvp_Adi.js",
+        "deliveredPath": "assets/offline-Byvp_Adi.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/oral-practice-C9ivmFoo.css",
+        "deliveredPath": "assets/oral-practice-C9ivmFoo.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/oral-practice-DmvABbzS.js",
+        "deliveredPath": "assets/oral-practice-DmvABbzS.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/painted-cardboard-CX92yXJi.webp",
+        "deliveredPath": "assets/painted-cardboard-CX92yXJi.webp",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-hub-DRt6llda.js",
+        "deliveredPath": "assets/practice-hub-DRt6llda.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-navigation-CqCnP7HC.js",
+        "deliveredPath": "assets/practice-navigation-CqCnP7HC.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-tools-C9MDXR96.js",
+        "deliveredPath": "assets/practice-tools-C9MDXR96.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/profile-C1g0z2YZ.css",
+        "deliveredPath": "assets/profile-C1g0z2YZ.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/profile-mBEfaklQ.js",
+        "deliveredPath": "assets/profile-mBEfaklQ.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-C0Sh_F8c.css",
+        "deliveredPath": "assets/review-hub-C0Sh_F8c.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-a1Mh8N01.js",
+        "deliveredPath": "assets/review-hub-a1Mh8N01.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/vocab-boost-BI6ct51W.js",
+        "deliveredPath": "assets/vocab-boost-BI6ct51W.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/vocab-catalogue-a0iLMcec.js",
+        "deliveredPath": "assets/vocab-catalogue-a0iLMcec.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "favicon.svg",
+        "deliveredPath": "favicon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "manifest.webmanifest",
+        "deliveredPath": "manifest.webmanifest",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "offline-worker.js",
+        "deliveredPath": "offline-worker.js?release=fdfc4f9801daa324",
+        "status": 200,
+        "hashMatch": true,
+        "cacheControl": "max-age=14400",
+        "edgeCache": "MISS"
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "currentAssetReferences": true,
+        "offlineVersion": "fdfc4f9801daa324"
+      }
+    ],
+    "blockedRequests": []
+  },
+  "verifiedAt": "2026-10-28T20:58:11.769952+00:00",
+  "sourceCI": {
+    "conclusion": "success",
+    "databaseId": 40766960427,
+    "headSha": "185af0aa334267b46e5e26e36237c8a94c29aae9",
+    "status": "completed",
+    "url": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/40766960427"
+  },
+  "validation": {
+    "dailyTestsPassed": 308,
+    "typecheck": "passed",
+    "lint": "passed",
+    "productionBuild": "passed",
+    "cleanBuildPublicFiles": 39,
+    "typedVocabulary": {
+      "groupsPassed": 12,
+      "layoutMatrixStates": 144,
+      "checks": [
+        {
+          "id": "entry",
+          "name": "Practice presents connected vocabulary, verbs and grammar; vocabulary opens directly in typing mode"
+        },
+        {
+          "id": "learning",
+          "name": "Wrong and hinted answers remain honest; drafts/hints survive reload and pause; completion offers a clear stopping point"
+        },
+        {
+          "id": "separate",
+          "name": "Vocabulary and Games retain independent unfinished rounds and typed answers"
+        },
+        {
+          "id": "library",
+          "name": "The expanded library is searchable and paged; new topics open matching cards and saved words appear in the shared word bank"
+        },
+        {
+          "id": "grammar-word",
+          "name": "Saving a grammar-only expression leads to a typed round accepting one valid form, with the extra word catalogue collapsed"
+        },
+        {
+          "id": "review",
+          "name": "The shared review queue opens the scheduled typed word and retains its original first attempt"
+        },
+        {
+          "id": "keyboard",
+          "name": "Keyboard-only answering and continuation work, with focused feedback and a visible focus outline"
+        },
+        {
+          "id": "support",
+          "name": "Accent keys insert correctly; Show the answer records support without independent credit; completion receives focus"
+        },
+        {
+          "id": "profile-error",
+          "name": "Initial and repeated local PIN mismatches focus a visible alert in a short viewport without contacting the profile service"
+        },
+        {
+          "id": "layouts",
+          "name": "EN/IT routes, questions, feedback and completion fit portrait, desktop and short landscape without overflow, clipping or undersized controls"
+        },
+        {
+          "id": "reflow",
+          "name": "200% CSS zoom and a reduced-height keyboard approximation remain scrollable and operable; no physical keyboard claim"
+        },
+        {
+          "id": "runtime",
+          "name": "No uncaught browser errors or profile-service requests in the synthetic guest journeys"
+        }
+      ],
+      "languages": [
+        "en",
+        "it"
+      ],
+      "viewportWidths": [
+        320,
+        360,
+        390,
+        768,
+        844,
+        1440
+      ],
+      "additionalChecks": [
+        "200% CSS zoom/reflow",
+        "Reduced-height keyboard approximation",
+        "Keyboard-only answering",
+        "Initial and repeated profile error visibility"
+      ]
+    },
+    "profile": {
+      "groupsPassed": 8,
+      "checks": [
+        "Creating a profile preserves and uploads existing guest work",
+        "A fresh phone signs in case-insensitively; the PIN is absent from browser storage and URLs, and JavaScript cannot read the session cookie",
+        "A real past-tense round transfers its submitted first attempt, review record, chosen settings and unfinished typed answer to the phone",
+        "Dedicated typed vocabulary transfers its first attempt and unfinished answer while preserving the separate paused verb game",
+        "Concurrent offline and phone edits require an explicit choice; both recovery downloads are intact and the chosen version reaches the other device",
+        "Expired sign-in retains unsynced work and uploads it after reauthentication",
+        "Sign-out clears only this device; signing back in restores saved work and the other device remains signed in",
+        "Refresh resumes the profile without asking for the PIN; no uncaught browser errors"
+      ],
+      "securityChecks": {
+        "httpOnly": true,
+        "sameSiteStrict": true,
+        "secureInProduction": true,
+        "pinAbsentFromStorageAndUrls": true
+      }
+    },
+    "offline": {
+      "groupsPassed": 6,
+      "checks": [
+        {
+          "language": "en",
+          "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
+          "version": "fdfc4f9801daa324",
+          "workerQuery": "?release=fdfc4f9801daa324",
+          "assetCount": 38
+        },
+        {
+          "language": "en",
+          "check": "Offline reload, eleven lazy routes, guided draft and oral choice preserve stored progress"
+        },
+        {
+          "language": "en",
+          "check": "Online current-release recheck and queried-worker removal preserve progress"
+        },
+        {
+          "language": "it",
+          "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
+          "version": "fdfc4f9801daa324",
+          "workerQuery": "?release=fdfc4f9801daa324",
+          "assetCount": 38
+        },
+        {
+          "language": "it",
+          "check": "Offline reload, eleven lazy routes, guided draft and oral choice preserve stored progress"
+        },
+        {
+          "language": "it",
+          "check": "Online current-release recheck and queried-worker removal preserve progress"
+        }
+      ]
+    },
+    "arcade": {
+      "groupsPassed": 14,
+      "checks": [
+        "Today has one game entry; tool menus and game settings start collapsed",
+        "words: complete round, single question, hint/correction evidence, reload and valid backup",
+        "verbs: complete round, single question, hint/correction evidence, reload and valid backup",
+        "builder: complete round, single question, hint/correction evidence, reload and valid backup",
+        "detective: complete round, single question, hint/correction evidence, reload and valid backup",
+        "conversation: complete round, single question, hint/correction evidence, reload and valid backup",
+        "Typed past tense preserves drafts and accepted feminine answer; six-person reminder and named lesson sources fit phone and desktop",
+        "Noun plural recall checks the full article+noun phrase and saves the noun to the personal word bank",
+        "Italian typed builder preserves word clues and draft; accent keyboard inserts Italian characters",
+        "Recall mode keeps necessary choices for paired vocabulary and choice-dependent grammar",
+        "Word saving, pause/resume, cancel early-end and explicit early-end retain submitted practice",
+        "English and Italian at 320, 390 and 1440 pixels fit without overflow; new targets are at least 44px",
+        "Keyboard-only game selection and answering work; feedback receives focus",
+        "No browser runtime errors in audited journeys"
+      ]
+    },
+    "uncaughtBrowserErrors": 0,
+    "uiAcceptance": {
+      "passed": 20,
+      "total": 20,
+      "required": 19,
+      "evidence": "docs/typed-vocabulary-ui-audit-2026-10-28.json",
+      "interpretation": "Bounded observable acceptance checklist, not a real-user satisfaction score."
+    }
+  },
+  "syntheticProfileCleanup": {
+    "deletedSyntheticProfiles": 1,
+    "remainingMatchingProfiles": 0,
+    "remainingMatchingSessions": 0,
+    "otherRecordsRead": false
+  },
+  "backend": {
+    "changed": false,
+    "existingProfileAPI": "Preserved; optional vocabPractice records verified across two isolated browser contexts.",
+    "existingDatabasesAndBackups": "Preserved; only this release audit’s one disposable synthetic profile and its sessions were removed."
+  },
+  "content": {
+    "newOriginalCards": 400,
+    "visibleVocabularyEntries": 728,
+    "visibleThemes": 61,
+    "savedWordPracticeEntries": 976,
+    "countMeaning": "The visible library includes repeated words across original course themes; entry count is not a claim of distinct concepts. Supplemental existing grammar/noun entries are used for saved-word typing."
+  },
+  "reviewDocuments": [
+    "docs/typed-vocabulary-content-review-2026-10-28.json",
+    "docs/typed-vocabulary-engine-review-2026-10-28.json",
+    "docs/typed-vocabulary-ui-audit-2026-10-28.json"
+  ],
+  "limitations": [
+    "Chromium synthetic journeys and emulated viewports; physical iOS/Android devices were not tested.",
+    "CSS zoom/reflow and reduced-height viewport approximate magnification and software keyboard geometry.",
+    "Acceptance checks do not establish learning gains, penetration-test security, or formal accessibility certification.",
+    "Existing production-build large-chunk advisory remains; the build succeeds."
+  ]
+}
