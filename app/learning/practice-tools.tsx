@@ -3,6 +3,8 @@ import { useState } from "react";
 import { catalogueParams } from "./navigation";
 import grammar from "./grammar.json";
 import enrichment from "./enrichment.json";
+import { vocabBanks } from "./vocab-catalogue";
+import { PracticeNavigation } from "./practice-navigation";
 import {
   answerAssessment,
   assessmentItems,
@@ -410,13 +412,15 @@ const catalogue = Array.from(
         u.words.map((term) => ({ term, example: undefined })),
       ),
       ...banks.flatMap((b) => b.words),
+      ...vocabBanks.filter(bank => bank.original).flatMap(bank => bank.words),
     ].map((w) => [wordKey(w.term), w]),
   ).values(),
 );
 export function PersonalWords({ p, t, save, today, go }: Props) {
   const requestedWord = catalogueParams().get("word");
   const [query, setQuery] = useState("");
-  const [visible, setVisible] = useState(24);
+  const [visible, setVisible] = useState(6);
+  const [browsing, setBrowsing] = useState(false);
   const [revealed, setRevealed] = useState<string | null>(null);
   const [message, setMessage] = useState("");
   const saved = Object.entries(p.academy?.words ?? {}).filter(
@@ -433,10 +437,12 @@ export function PersonalWords({ p, t, save, today, go }: Props) {
   );
   return (
     <div className="workspace">
+      <PracticeNavigation active="vocabulary" t={t} go={go} />
       <p className="eyebrow">
         {t("A PERSONAL POCKET DICTIONARY", "UN DIZIONARIO TASCABILE PERSONALE")}
       </p>
       <h1>{t("Words that stay with you.", "Parole che restano con te.")}</h1>
+      <button className="button primary" disabled={!saved.length} onClick={() => go("vocab-boost?bank=saved")}>{t("Type my saved words", "Scrivi le mie parole salvate")} →</button>
       {requestedWord !== null && <div className="button-row">
         <button className="text-button" onClick={() => go("reviews")}>← {t("Back to review queue", "Torna al ripasso del giorno")}</button>
         <button className="text-button" onClick={() => go("words")}>{t("Review all my words", "Ripassa tutte le mie parole")}</button>
@@ -565,7 +571,7 @@ export function PersonalWords({ p, t, save, today, go }: Props) {
         </details>
       )}
       <h2>
-        {t("Choose from the course vocabulary", "Scegli dal lessico del corso")}
+        {t("Add words to my bank", "Aggiungi parole al mio lessico")}
       </h2>
       <label className="field">
         {t("Find a word or phrase", "Trova una parola o frase")}
@@ -574,10 +580,12 @@ export function PersonalWords({ p, t, save, today, go }: Props) {
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
-            setVisible(24);
+            setVisible(6);
           }}
         />
       </label>
+      {!query.trim() && !browsing && <button className="text-button" onClick={() => setBrowsing(true)}>{t("Browse 6 words to save", "Sfoglia 6 parole da salvare")} →</button>}
+      {(query.trim() || browsing) && <>
       <p className="hint">
         {Math.min(visible, shown.length)}/{shown.length}{" "}
         {t(
@@ -606,11 +614,12 @@ export function PersonalWords({ p, t, save, today, go }: Props) {
       {visible < shown.length && (
         <button
           className="button secondary"
-          onClick={() => setVisible((n) => n + 24)}
+          onClick={() => setVisible((n) => n + 6)}
         >
-          {t("Show 24 more words", "Mostra altre 24 parole")}
+          {t("Show 6 more words", "Mostra altre 6 parole")}
         </button>
       )}
+      </>}
       <button className="text-button" onClick={() => go("vocabulary")}>
         {t(
           "Browse the themed banks with audio",

@@ -31,12 +31,15 @@ import "./practice-tools.css";
 import "./portal.css";
 import "./paper-cutout.css";
 import "./responsive.css";
+import "./vocab-boost.css";
 
 const DiscoveryView = lazy(() => import("./discovery").then((module) => ({ default: module.DiscoveryView })));
 const GrammarLab = lazy(() => import("./academy").then((module) => ({ default: module.GrammarLab })));
 const ProgrammeView = lazy(() => import("./academy").then((module) => ({ default: module.ProgrammeView })));
 const CompanionView = lazy(() => import("./academy").then((module) => ({ default: module.CompanionView })));
 const PracticeArcade = lazy(() => import("./arcade").then((module) => ({ default: module.PracticeArcade })));
+const VocabularyBooster = lazy(() => import("./vocab-boost").then(module => ({ default: module.VocabularyBooster })));
+const PracticeHub = lazy(() => import("./practice-hub").then(module => ({ default: module.PracticeHub })));
 const AssessmentView = lazy(() => import("./practice-tools").then((module) => ({ default: module.AssessmentView })));
 const PersonalWords = lazy(() => import("./practice-tools").then((module) => ({ default: module.PersonalWords })));
 const DailySession = lazy(() => import("./enriched").then((module) => ({ default: module.DailySession })));
@@ -294,8 +297,8 @@ export default function Portal() {
   const selected = missions.find((m) => m.id === routePath.split("/")[1]);
   const nav = [
     ["today", "sun", t("Today", "Oggi")],
-    ["programmes", "calendar", t("Programme", "Percorso")],
-    ["grammar", "book", t("Practice", "Pratica")],
+    ["programmes", "calendar", t("Course", "Percorso")],
+    ["practice", "book", t("Practice", "Pratica")],
     ["discover", "search", t("Find", "Cerca")],
     ["progress", "chart", t("Progress", "Progressi")],
   ];
@@ -351,7 +354,7 @@ export default function Portal() {
       </div>
     );
   return (
-    <div className="daily-app">
+    <div className={`daily-app${routePath === "vocab-boost" && p.vocabPractice?.active ? " vocab-active" : ""}`}>
       <a
         className="skip-link"
         href="#main-content"
@@ -384,7 +387,7 @@ export default function Portal() {
             <button
               key={id}
               onClick={() => go(id)}
-                aria-current={(routePath === id || (id === "today" && routePath === "session") || (id === "progress" && routePath === "weekly") || (id === "programmes" && routePath.split("/")[0] === "chapters") || (id === "grammar" && ["grammar", "games", "vocabulary", "words", "tense", "readiness", "reviews", "diagnostics", "listening", "listen-speak"].includes(routePath.split("/")[0]))) ? "page" : undefined}
+                aria-current={(routePath === id || (id === "today" && routePath === "session") || (id === "progress" && routePath === "weekly") || (id === "programmes" && routePath.split("/")[0] === "chapters") || (id === "practice" && ["grammar", "games", "vocabulary", "vocab-boost", "words", "tense", "readiness", "reviews", "diagnostics", "listening", "listen-speak"].includes(routePath.split("/")[0]))) ? "page" : undefined}
             >
               <Icon name={icon} />
               <span>{label}</span>
@@ -462,6 +465,7 @@ export default function Portal() {
             aria-label={t("Study tools", "Strumenti di studio")}
           >
             {[
+              ["vocab-boost", t("Vocabulary booster · type words", "Vocabolario · scrivi le parole")],
               ["chapters", t("Book chapters", "Capitoli dei libri")],
               ["diagnostics", t("A2 chapter checks", "Controlli dei capitoli A2")],
               ["listening", t("Private listening", "Ascolto personale")],
@@ -504,6 +508,8 @@ export default function Portal() {
         {routePath === "discover" && <DiscoveryView key={route} {...shared} />}
         {(routePath === "chapters" || routePath.startsWith("chapters/")) && <ChapterDashboard key={route} {...shared} chapterId={routePath.split("/")[1]} />}
         {routePath === "reviews" && <ReviewHub key={route} {...shared} />}
+        {routePath === "practice" && <PracticeHub {...shared} />}
+        {routePath === "vocab-boost" && <VocabularyBooster key={route} {...shared} />}
         {routePath === "today" && (
           <div className="workspace today-workspace">
             <div className="today-intro">
@@ -522,6 +528,7 @@ export default function Portal() {
               </p>
             )}
             <SessionPreview {...shared} missions={missions} />
+            <p className="today-vocab-link"><button className="button secondary" onClick={() => go("vocab-boost")}>{p.vocabPractice?.active ? t("Resume typed vocabulary", "Riprendi il vocabolario scritto") : t(`Vocabulary booster · type ${p.vocabPractice?.settings.size ?? 5} words`, `Vocabolario · scrivi ${p.vocabPractice?.settings.size ?? 5} parole`)} →</button></p>
             <p className="today-oral-link"><button className="text-button" onClick={() => go("listen-speak?minutes=5")}>{t("Prefer a short listening & speaking session? · 5 or 10 minutes", "Preferisci una breve sessione di ascolto e parlato? · 5 o 10 minuti")} →</button></p>
             {reviewQueue.totalDue > 0 && <p className="today-review-link"><button className="text-button" onClick={() => go("reviews?minutes=5")}>{t(`${reviewQueue.totalDue} reviews ready · choose a short optional session`, `${reviewQueue.totalDue} ripassi pronti · scegli una breve sessione facoltativa`)} →</button></p>}
             <p className="today-chapter-link"><button className="text-button" onClick={() => go("chapters")}>{t("Explore the twenty book chapters", "Esplora i venti capitoli dei libri")} →</button></p>
@@ -622,6 +629,8 @@ export default function Portal() {
           "discover",
           "chapters",
           "reviews",
+          "practice",
+          "vocab-boost",
           "session",
           "vocabulary",
           "path",
@@ -1926,6 +1935,7 @@ function ProgressView({
         )}
       />
       <button className="button secondary" onClick={() => go("profile")}>{t("Profile & cross-device sync", "Profilo e sincronizzazione tra dispositivi")} →</button>
+      {!!Object.keys(p.vocabPractice?.records ?? {}).length && <p className="progress-vocab-link"><button className="text-button" onClick={() => go("vocab-boost")}>{t(`${Object.keys(p.vocabPractice!.records).length} vocabulary words practised · continue typing`, `${Object.keys(p.vocabPractice!.records).length} parole allenate · continua a scrivere`)} →</button></p>}
       <Rewards p={p} t={t} />
       <div className="stats-grid">
         <div>

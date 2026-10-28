@@ -171,7 +171,7 @@ export function learningRewards(p: Progress) {
     Object.keys(p.completed).length * 10 +
     p.reviewLog.length * 3 +
     activities * 5 +
-    academyXP(p) + Object.keys(p.arcade?.records ?? {}).length * 2;
+    academyXP(p) + new Set([...Object.keys(p.arcade?.records ?? {}), ...Object.keys(p.vocabPractice?.records ?? {})]).size * 2;
   return {
     xp,
     level: Math.floor(xp / 100) + 1,

@@ -26,6 +26,7 @@ import { modelAnswerMismatch } from "./learning-utils";
 import { catalogueParams } from "./navigation";
 import { boosterVerbs, pastVerbAnswers, verbPeople } from "./booster-catalogue";
 import { planningSources } from "./planning-data";
+import { PracticeNavigation } from "./practice-navigation";
 import type {
   ArcadeItem,
   ArcadeMode,
@@ -103,13 +104,14 @@ export function PracticeArcade(props: Props) {
   const reviewRecord = requestedReview ? a.records[requestedReview.id] : undefined;
   const reviewDue = !!(reviewRecord && reviewRecord.due <= today && reviewRecord.date !== today);
   const requestedScene = arcadeScenes.find((scene) => scene.id === props.sceneId);
-  const settings: ArcadeSettings = requestedScene ? { ...a.settings, mode: "conversation", scene: requestedScene.id } : a.settings;
+  const requestedVerbMode = catalogueParams().get("mode") === "verbs";
+  const settings: ArcadeSettings = requestedScene ? { ...a.settings, mode: "conversation", scene: requestedScene.id } : requestedVerbMode ? { ...a.settings, mode: "verbs", support: "recall" } : a.settings;
   const pool = arcadePool(settings),
     due = arcadeDue(p, arcadeItems, today),
     mistakes = arcadeMistakes(p, arcadeItems);
   const roundSize = settings.mode === "conversation" ? 3 : Math.min(settings.size, pool.length);
   const set = (patch: Partial<ArcadeSettings>) => {
-    if (requestedScene) go("games");
+    if (requestedScene || (requestedVerbMode && patch.mode && patch.mode !== "verbs")) go("games");
     save((p) => ({
       ...p,
       arcade: {
@@ -177,15 +179,13 @@ export function PracticeArcade(props: Props) {
   const last = a.history.at(-1);
   return (
     <div className="workspace arcade">
+      <PracticeNavigation active={settings.mode === "words" ? "vocabulary" : settings.mode === "verbs" ? "verbs" : "grammar"} t={t} go={go} />
       <header className="arcade-intro">
         <p className="eyebrow">
           {t("SMALL ROUNDS, USEFUL ITALIAN", "PICCOLI GIRI, ITALIANO UTILE")}
         </p>
         <h1>
-          {t(
-            "Words and verbs.",
-            "Parole e verbi.",
-          )}
+          {requestedVerbMode ? t("Verb practice.", "Pratica dei verbi.") : t("More ways to practise.", "Altri modi per esercitarti.")}
         </h1>
         <p>
           {t(
@@ -194,6 +194,7 @@ export function PracticeArcade(props: Props) {
           )}
         </p>
       </header>
+      <button className="text-button arcade-vocab-link" onClick={() => go("vocab-boost")}>{t("Looking for typed vocabulary? Open Vocabulary booster", "Vuoi scrivere le parole? Apri il vocabolario")} →</button>
       <div className="arcade-game-picker">
         <label htmlFor="arcade-game">{t("Choose a game", "Scegli un gioco")}</label>
         <select id="arcade-game" value={settings.mode} onChange={(event) => set({ mode: event.target.value as ArcadeMode })}>

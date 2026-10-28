@@ -10,7 +10,7 @@ export type WeeklyLearningEvidence = {
   core: { completed: number; recallChecks: number; recallCorrect: number; laterDayCorrect: number };
   grammar: { exerciseDays: number; independentFirstCorrect: number; supportedFirst: number; sameDayRepairs: number; laterDayCorrect: number; completed: number };
   personalWords: { latestReviews: number };
-  arcade: { latestItems: number; independentLatestCorrect: number; supportedLatest: number };
+  arcade: { latestItems: number; independentLatestCorrect: number; supportedLatest: number; ambiguousLatest: number };
   selfAssessed: { grammarProductions: number; programmeCheckpoints: number; companionPages: number };
   diagnostics: { checked: number; independentCorrect: number; supported: number; chapters: number };
   oralPractice: { completedRuns: number; gistFirstChecks: number; detailFirstChecks: number; correctWithoutTextSupport: number; supportedFirstChecks: number; laterDayTransfers: number };
@@ -32,7 +32,7 @@ export function deriveWeeklyLearningReport(
     from, to: today, activeDays: [],
     core: { completed: 0, recallChecks: 0, recallCorrect: 0, laterDayCorrect: 0 },
     grammar: { exerciseDays: 0, independentFirstCorrect: 0, supportedFirst: 0, sameDayRepairs: 0, laterDayCorrect: 0, completed: 0 },
-    personalWords: { latestReviews: 0 }, arcade: { latestItems: 0, independentLatestCorrect: 0, supportedLatest: 0 },
+    personalWords: { latestReviews: 0 }, arcade: { latestItems: 0, independentLatestCorrect: 0, supportedLatest: 0, ambiguousLatest: 0 },
     selfAssessed: { grammarProductions: 0, programmeCheckpoints: 0, companionPages: 0 },
     diagnostics: { checked: 0, independentCorrect: 0, supported: 0, chapters: 0 },
     oralPractice: { completedRuns: 0, gistFirstChecks: 0, detailFirstChecks: 0, correctWithoutTextSupport: 0, supportedFirstChecks: 0, laterDayTransfers: 0 },
@@ -75,11 +75,24 @@ export function deriveWeeklyLearningReport(
   for (const [key, word] of Object.entries(p.academy?.words ?? {})) if (words.has(key) && normalise(word.term.it) === key && inWeek(word.lastDate)) {
     days.add(word.lastDate); result.personalWords.latestReviews++;
   }
-  const arcadeIds = new Set(catalogue.arcade.map((item) => item.id));
-  for (const [id, record] of Object.entries(p.arcade?.records ?? {})) if (arcadeIds.has(id) && inWeek(record.date)) {
-    days.add(record.date); result.arcade.latestItems++;
-    result.arcade.independentLatestCorrect += Number(record.last.correct && !record.last.assisted);
-    result.arcade.supportedLatest += Number(record.last.assisted);
+  // A typed word and its Games counterpart retain separate attempts, but share
+  // an identity here. Date-only records cannot order conflicting same-day work.
+  const latestPractice = new Map<string, { date: string; correct: boolean; assisted: boolean; ambiguous: boolean }>();
+  for (const source of [
+    { ids: new Set(catalogue.arcade.map(item => item.id)), records: p.arcade?.records },
+    { ids: new Set((catalogue.vocab ?? []).map(item => item.id)), records: p.vocabPractice?.records },
+  ]) for (const [id, record] of Object.entries(source.records ?? {})) {
+    if (!source.ids.has(id) || !past(record.date)) continue;
+    if (inWeek(record.date)) days.add(record.date);
+    const previous = latestPractice.get(id);
+    if (!previous || record.date > previous.date) latestPractice.set(id, { date: record.date, correct: record.last.correct, assisted: record.last.assisted, ambiguous: false });
+    else if (record.date === previous.date && (record.last.correct !== previous.correct || record.last.assisted !== previous.assisted)) latestPractice.set(id, { ...previous, ambiguous: true });
+  }
+  for (const record of latestPractice.values()) if (inWeek(record.date)) {
+    result.arcade.latestItems++;
+    if (record.ambiguous) { result.arcade.ambiguousLatest++; continue; }
+    result.arcade.independentLatestCorrect += Number(record.correct && !record.assisted);
+    result.arcade.supportedLatest += Number(record.assisted);
   }
   const active = p.academy?.programme, knownProgramme = reportCatalogue.programmes.find((programme) => programme.id === active?.id);
   if (active && knownProgramme) for (const [index, draft] of Object.entries(active.practice ?? {})) {

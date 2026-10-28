@@ -1,0 +1,261 @@
+{
+  "auditedOn": "2026-10-28T20:50:18.040415+00:00",
+  "reviewer": "Independent typed-vocabulary UI/learner audit agent",
+  "scope": "Dedicated typed vocabulary, connected Practice navigation, source/card/saved-word/review links, layout/focus and bounded profile error visibility. Local synthetic guest browser data only.",
+  "target": "http://127.0.0.1:5197",
+  "rubricDefinedBeforeTesting": true,
+  "rubricEvidence": "work/typed-vocab-ui-audit/criteria.json",
+  "acceptance": {
+    "criteriaPassed": 20,
+    "criteriaTotal": 20,
+    "requiredPasses": 19,
+    "normalizedScoreOutOf10": 10,
+    "requiredScoreOutOf10": 9.5,
+    "openCriticalIssues": 0,
+    "result": "pass within the defined observable acceptance scope",
+    "interpretation": "Checklist acceptance, not a human satisfaction rating, learning-outcome measurement, formal accessibility certification or claim of perfect overall quality."
+  },
+  "criteria": [
+    {
+      "id": "UI01",
+      "criterion": "Practice has one discoverable starting point with distinct vocabulary, verb and grammar destinations.",
+      "result": "pass",
+      "evidence": "Practice hub exposes three destinations; Today and five-item main navigation reach the dedicated typing area."
+    },
+    {
+      "id": "UI02",
+      "criterion": "The dedicated vocabulary route starts a short typed round without requiring a hidden mode setting.",
+      "result": "pass",
+      "evidence": "Fresh vocabulary round starts from the visible five-word action with recall support and no multiple-choice options."
+    },
+    {
+      "id": "UI03",
+      "criterion": "Vocabulary themes and search make the expanded library browseable without a long unstructured wall.",
+      "result": "pass",
+      "evidence": "728 visible-library entries across61 themes; six topic cards initially, paged expansion, EN/IT term search, empty results and query reload."
+    },
+    {
+      "id": "UI04",
+      "criterion": "Vocabulary, saved words, lesson cards and related grammar have clear contextual navigation and return paths.",
+      "result": "pass",
+      "evidence": "New-theme vocabulary cards match the selected theme; Find opens the matching typing theme; saved words and grammar-only expressions return to typed rounds."
+    },
+    {
+      "id": "UI05",
+      "criterion": "Exactly one vocabulary question is active at a time; instructions state what to type.",
+      "result": "pass",
+      "evidence": "One active word prompt, one Italian input and explicit article/accent guidance."
+    },
+    {
+      "id": "UI06",
+      "criterion": "Correct, wrong and hinted answers receive understandable bilingual feedback; supported work is labelled honestly.",
+      "result": "pass",
+      "evidence": "Wrong, correct, hinted and revealed-answer paths checked; first error and support evidence retained. Accent insertion checked."
+    },
+    {
+      "id": "UI07",
+      "criterion": "A typed draft survives reload and leaving the vocabulary area; an unrelated saved game is retained.",
+      "result": "pass",
+      "evidence": "Typed draft and hint survive reload and pause; an unrelated Arcade round/draft remains unchanged."
+    },
+    {
+      "id": "UI08",
+      "criterion": "Round completion gives an honest score, a clear stopping point and an obvious next action.",
+      "result": "pass",
+      "evidence": "Controlled five-word journey yields3 independent,1 supported and1wrong; finish offers retry/next/stop and focuses its heading."
+    },
+    {
+      "id": "UI09",
+      "criterion": "Shared review and saved word routes correctly return to the relevant vocabulary practice.",
+      "result": "pass",
+      "evidence": "Shared scheduled review opens the correct typed word. Saved library and grammar-only words are typeable; original first attempts remain intact."
+    },
+    {
+      "id": "UI10",
+      "criterion": "The tested EN/IT layouts have no horizontal page overflow at 320, 360, 390, 768 and 1440 CSS pixels.",
+      "result": "pass",
+      "evidence": "144-state EN/IT matrix across320/360/390/768/1440 portrait/desktop plus844×390 landscape; no horizontal overflow."
+    },
+    {
+      "id": "UI11",
+      "criterion": "Short landscape layouts at 844×390 allow scrolling to all question and feedback actions without clipping.",
+      "result": "pass",
+      "evidence": "Landscape matrix completes one-word rounds through actual answer/finish clicks; actions remain reachable by scrolling."
+    },
+    {
+      "id": "UI12",
+      "criterion": "Primary vocabulary entry/start actions are visible or immediately discoverable on narrow portrait screens without tall decorative obstruction.",
+      "result": "pass",
+      "evidence": "Typed start ends at y564 on320px EN/IT and y540–564 on390px; no tall decorative header obstructs entry."
+    },
+    {
+      "id": "UI13",
+      "criterion": "Visible interactive targets in the new practice/vocabulary flow are at least 44px high, or have documented equivalent spacing.",
+      "result": "pass",
+      "evidence": "All measured main-area controls are≥44px; targeted compact-header home/EN/IT controls are44px high."
+    },
+    {
+      "id": "UI14",
+      "criterion": "Question, field and feedback padding remains readable; text, controls and focus outlines are not cut off by containers.",
+      "result": "pass",
+      "evidence": "No measured text/control clipping.16px phone input text and readable padding retained. Topic/feedback gap and Next/Save separation verified."
+    },
+    {
+      "id": "UI15",
+      "criterion": "Answer/continue focus management brings the current task into view without hiding feedback behind other elements.",
+      "result": "pass",
+      "evidence": "Question title, feedback and finish receive expected focus; feedback/continuation can be scrolled into view. Profile local errors, including a repeated mismatch, also focus correctly in a390px-tall viewport."
+    },
+    {
+      "id": "UI16",
+      "criterion": "Keyboard-only navigation can start, answer and advance a vocabulary round with visible focus and no trap.",
+      "result": "pass",
+      "evidence": "Keyboard Tab/Enter starts a round, reaches its input, submits and advances; feedback receives focus and next-button focus is visible."
+    },
+    {
+      "id": "UI17",
+      "criterion": "A reduced-height viewport approximating an open mobile keyboard preserves access to the input and check/continue actions.",
+      "result": "pass",
+      "evidence": "390×390 reduced-height viewport accepts typing and can scroll to Check/Finish. This approximates keyboard height, not a physical OS keyboard."
+    },
+    {
+      "id": "UI18",
+      "criterion": "The new flow remains readable and operable at 200% content zoom/reflow without horizontal page scrolling or loss of controls.",
+      "result": "pass",
+      "evidence": "200% CSS zoom at1280px remains operable through lobby/answer/feedback, with no horizontal overflow or clipped measured content."
+    },
+    {
+      "id": "UI19",
+      "criterion": "English and Italian labels, prompts and feedback remain understandable and fit the same layouts.",
+      "result": "pass",
+      "evidence": "All matrix paths tested in EN/IT; Italian wrapping and English short Course label visually inspected."
+    },
+    {
+      "id": "UI20",
+      "criterion": "No uncaught browser errors occur in the audited journeys; loading/navigation does not strand the learner.",
+      "result": "pass",
+      "evidence": "No uncaught browser errors in the audited final journeys and no profile-service requests from these synthetic guest tests."
+    }
+  ],
+  "execution": {
+    "maintainedCommand": "node --experimental-strip-types scripts/audit_typed_vocab_browser.mjs",
+    "fullJourneyGroupsPassed": 10,
+    "matrixStates": 144,
+    "totalMeasuredStates": 148,
+    "supplementaryGroupsPassed": 3,
+    "languages": [
+      "en",
+      "it"
+    ],
+    "viewports": [
+      [
+        320,
+        700
+      ],
+      [
+        360,
+        800
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        1440,
+        1000
+      ],
+      [
+        844,
+        390
+      ]
+    ],
+    "additionalCases": [
+      "1280×900 at200% CSS zoom",
+      "390×390 keyboard-height approximation",
+      "390×390 initial and repeated local PIN mismatch"
+    ],
+    "runtimeErrors": 0,
+    "profileServiceRequests": 0
+  },
+  "beforeAndAfter": {
+    "mobileHeaderItalian320": {
+      "beforePx": 298,
+      "afterPx": 140
+    },
+    "mainPracticeEntryItalian320": {
+      "previousGamesButtonBottomPx": 872,
+      "newTypedVocabularyButtonBottomPx": 564
+    },
+    "savedWordBank390": {
+      "beforePageHeightApproxPx": 6179,
+      "afterPageHeightPx": 1371,
+      "note": "Single saved-word fixtures with different words; the dominant change is collapsing the additional catalogue and revealing six cards on demand."
+    }
+  },
+  "findingsAndRepairs": [
+    {
+      "finding": "Mobile brand/language and navigation occupied two or three rows before practice content.",
+      "repair": "Compact five-destination header; active typing keeps language and pause controls.",
+      "verified": true
+    },
+    {
+      "finding": "Programme broke mid-word at320px English.",
+      "repair": "Short Course main-navigation label.",
+      "verified": true
+    },
+    {
+      "finding": "Vocabulary topic status touched the feedback card shadow.",
+      "repair": "Correct CSS specificity restores14px top spacing.",
+      "verified": true
+    },
+    {
+      "finding": "Personal word bank rendered24 extra catalogue cards immediately.",
+      "repair": "Catalogue hidden until search/browse; then six at a time.",
+      "verified": true
+    },
+    {
+      "finding": "Parent identified grammar-only saved expressions outside the728-card visible library.",
+      "repair": "Stable supplemental typed entries include grammar-word:avere:0; tested saving from grammar and answering one valid form.",
+      "verified": true
+    },
+    {
+      "finding": "Next and Save buttons touched and successful answers were repeated twice.",
+      "repair": "Eight-pixel separation and one correct-answer display.",
+      "verified": true
+    },
+    {
+      "finding": "Initial local PIN mismatch focused correctly, but a second mismatch did not re-trigger focus because the same error state was batched.",
+      "repair": "Local error clears on field editing; repeated mismatch focuses and scrolls to the alert.",
+      "verified": true
+    }
+  ],
+  "visualInspection": [
+    "320px Italian lobby and long-cue feedback",
+    "320px English Practice hub",
+    "1440px vocabulary library",
+    "200% feedback screenshot",
+    "Compact word bank and short-height profile error"
+  ],
+  "evidence": {
+    "baseline": "work/typed-vocab-ui-audit/baseline.json",
+    "mainResults": "work/typed-vocab-ui-audit/final-recheck/results.json",
+    "supplement": "work/typed-vocab-ui-audit/supplement-final/results.json",
+    "repeatErrorRetest": "work/typed-vocab-ui-audit/repeated-error-final/results.json",
+    "screenshots": "Ignored work/typed-vocab-ui-audit directories; no real learner or profile records"
+  },
+  "harnessNotes": [
+    "Lazy sections were measured only after explicit ready selectors resolved.",
+    "A saved word is intentionally concealed until Reveal; the final test checks the cue before revealing Italian.",
+    "Catalogue counts use visible articles, excluding the collapsed saved-word list."
+  ],
+  "limitations": [
+    "Chromium desktop and emulated viewport testing, not physical iPhone/Android hardware.",
+    "200% CSS zoom/reflow and reduced-height viewport approximate magnification and keyboard geometry; OS keyboard behaviors can differ.",
+    "No authentication request, account creation or production learner-record access in this audit; profile synchronization is tested separately by the parent.",
+    "The library still permits intentional vertical scrolling; the criteria concern reachable controls, unclipped content and a short path to typing, not fitting all material on one screen."
+  ]
+}

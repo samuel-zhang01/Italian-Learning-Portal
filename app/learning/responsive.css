@@ -54,3 +54,27 @@
 .daily-footer { flex-wrap: wrap; }
 .daily-footer > * { min-width: 0; max-width: 100%; }
 .daily-footer > span { flex-wrap: wrap; }
+
+/* Keep the five destinations in one readable row on ordinary phones. The
+   previous auto-fit columns consumed two rows before any lesson content. */
+@container (min-width: 280px) and (max-width: 1050px) {
+  .daily-header { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; padding: 10px 16px; min-height: 0; }
+  .daily-header .wordmark { grid-column: 1; }
+  .daily-header .lang-switch { grid-column: 2; margin: 0; }
+  .daily-header nav { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); width: 100%; gap: 4px; padding: 0; }
+  .daily-header nav button { min-height: 48px; padding: 6px 2px; font-size: 11px; gap: 4px; }
+}
+@container (min-width: 280px) and (max-width: 400px) {
+  .daily-header .wordmark { font-size: 26px !important; gap: 7px; }
+  .daily-header .brand-disc { width: 31px; height: 36px; font-size: 28px; }
+  .daily-header .wordmark small { display: none; }
+  .daily-header .lang-switch { padding: 2px; }
+}
+/* Active typed practice keeps language controls and a visible pause action;
+   full navigation returns as soon as the learner pauses or finishes. */
+.daily-app.vocab-active .daily-header { display: flex; min-height: 0; gap: 12px; padding: 8px max(16px, calc((100% - 880px) / 2)); }
+.daily-app.vocab-active .daily-header nav, .daily-app.vocab-active .wordmark small,
+.daily-app.vocab-active .brand-disc, .daily-app.vocab-active .practice-menu,
+.daily-app.vocab-active .daily-footer { display: none; }
+.daily-app.vocab-active .daily-header .wordmark { font-size: 25px !important; }
+.daily-app.vocab-active .daily-header .lang-switch { margin-left: auto; }

@@ -1,0 +1,364 @@
+{
+  "reviewedOn": "2026-10-28",
+  "reviewer": "typed_vocab_content agent; author review with independent variant suggestions from typed_vocab_engine",
+  "scope": "Original everyday vocabulary expansion for a separate typed-practice destination. This report covers content, not independent UI scoring or learning outcomes.",
+  "authorship": "New original examples and English translations. Existing grammar/mission links express topical connections; no card is claimed as a textbook quotation or an exact PDF-page extraction. No independent homework has been completed.",
+  "counts": {
+    "newThemes": 20,
+    "newCards": 400,
+    "canonicalTargetsDistinctWithinExpansion": 400,
+    "existingCardsPreserved": 328,
+    "combinedCardEntries": 728,
+    "combinedDistinctCanonicalTargetStrings": 708,
+    "cardsWithCuratedAlternativeAnswers": 85,
+    "nounPluralReminders": 258,
+    "partsOfSpeech": {
+      "noun": 300,
+      "verb": 40,
+      "adjective": 40,
+      "adverb": 20
+    }
+  },
+  "themes": [
+    {
+      "id": "boost-everyday-objects",
+      "en": "Everyday objects",
+      "it": "Oggetti quotidiani",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "definite-articles",
+        "noun-gender"
+      ],
+      "classLinks": [
+        "articles",
+        "book1-plural-inventory"
+      ]
+    },
+    {
+      "id": "boost-rooms-furniture",
+      "en": "Rooms & furniture",
+      "it": "Stanze e mobili",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "there-is",
+        "definite-articles"
+      ],
+      "classLinks": [
+        "there-is",
+        "home"
+      ]
+    },
+    {
+      "id": "boost-kitchen-table",
+      "en": "Kitchen & table",
+      "it": "Cucina e tavola",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "noun-plurals",
+        "definite-articles"
+      ],
+      "classLinks": [
+        "shopping-amounts",
+        "restaurant-repair"
+      ]
+    },
+    {
+      "id": "boost-fruit-vegetables",
+      "en": "Fruit & vegetables",
+      "it": "Frutta e verdura",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "quantity-partitives",
+        "noun-plurals"
+      ],
+      "classLinks": [
+        "shopping-amounts",
+        "espresso1-u09-plan-the-ingredients"
+      ]
+    },
+    {
+      "id": "boost-food-drink",
+      "en": "Food & drink",
+      "it": "Cibo e bevande",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "quantity-partitives",
+        "piacere"
+      ],
+      "classLinks": [
+        "coffee-order",
+        "shopping-amounts"
+      ]
+    },
+    {
+      "id": "boost-clothes-accessories",
+      "en": "Clothes & accessories",
+      "it": "Vestiti e accessori",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "noun-gender",
+        "adjective-agreement"
+      ],
+      "classLinks": [
+        "clothes",
+        "espresso2-u01-choose-a-gift"
+      ]
+    },
+    {
+      "id": "boost-people-family",
+      "en": "People & family",
+      "it": "Persone e famiglia",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "possessives-family",
+        "noun-gender"
+      ],
+      "classLinks": [
+        "family",
+        "family-news"
+      ]
+    },
+    {
+      "id": "boost-school-work",
+      "en": "Study & work",
+      "it": "Studio e lavoro",
+      "cards": 20,
+      "levelHint": "A2",
+      "grammarLinks": [
+        "questions-negation",
+        "present-are"
+      ],
+      "classLinks": [
+        "jobs",
+        "a-workday",
+        "espresso2-u03-ask-for-a-favour"
+      ]
+    },
+    {
+      "id": "boost-places-town",
+      "en": "Places in town",
+      "it": "Luoghi in città",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "simple-prepositions",
+        "articulated-prepositions"
+      ],
+      "classLinks": [
+        "in-town",
+        "espresso1-u07-find-an-open-place"
+      ]
+    },
+    {
+      "id": "boost-transport",
+      "en": "Getting around",
+      "it": "Spostarsi",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "simple-prepositions",
+        "a2-travel-duration"
+      ],
+      "classLinks": [
+        "in-town",
+        "espresso2-u05-explain-a-delay"
+      ]
+    },
+    {
+      "id": "boost-travel-stays",
+      "en": "Travel & stays",
+      "it": "Viaggi e soggiorni",
+      "cards": 20,
+      "levelHint": "A2",
+      "grammarLinks": [
+        "there-is",
+        "articulated-prepositions"
+      ],
+      "classLinks": [
+        "hotel",
+        "espresso1-u05-choose-a-stay"
+      ]
+    },
+    {
+      "id": "boost-body-health",
+      "en": "Body & health",
+      "it": "Corpo e salute",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "noun-plurals",
+        "a2-irregular-body-nouns"
+      ],
+      "classLinks": [
+        "body-routine",
+        "espresso2-u07-navigate-an-appointment"
+      ]
+    },
+    {
+      "id": "boost-weather-nature",
+      "en": "Weather & nature",
+      "it": "Tempo e natura",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "there-is",
+        "adjective-agreement"
+      ],
+      "classLinks": [
+        "espresso1-u08-change-the-itinerary",
+        "weekend-plan"
+      ]
+    },
+    {
+      "id": "boost-animals",
+      "en": "Animals",
+      "it": "Animali",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "noun-gender",
+        "noun-plurals"
+      ],
+      "classLinks": [
+        "one-many",
+        "likes"
+      ]
+    },
+    {
+      "id": "boost-calendar",
+      "en": "Days & months",
+      "it": "Giorni e mesi",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "a1-dates-numbers",
+        "time-frequency"
+      ],
+      "classLinks": [
+        "the-time",
+        "espresso1-u06-plan-a-celebration"
+      ]
+    },
+    {
+      "id": "boost-daily-verbs",
+      "en": "Everyday actions",
+      "it": "Azioni quotidiane",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "present-are",
+        "present-ere",
+        "present-ire"
+      ],
+      "classLinks": [
+        "regular-verbs",
+        "free-time"
+      ]
+    },
+    {
+      "id": "boost-movement-messages",
+      "en": "Movement & messages",
+      "it": "Movimenti e messaggi",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "irregular-present",
+        "past-essere",
+        "past-irregular"
+      ],
+      "classLinks": [
+        "verb-switch",
+        "week3-journey-auxiliaries",
+        "week3-irregular-story"
+      ]
+    },
+    {
+      "id": "boost-descriptions",
+      "en": "Useful descriptions",
+      "it": "Descrizioni utili",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "adjective-agreement",
+        "a2-comparisons"
+      ],
+      "classLinks": [
+        "agreement-repair",
+        "home"
+      ]
+    },
+    {
+      "id": "boost-feelings-colours",
+      "en": "Feelings & colours",
+      "it": "Emozioni e colori",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "adjective-agreement",
+        "essere"
+      ],
+      "classLinks": [
+        "agreement-repair",
+        "clothes"
+      ]
+    },
+    {
+      "id": "boost-time-place",
+      "en": "When & where",
+      "it": "Quando e dove",
+      "cards": 20,
+      "levelHint": "A1",
+      "grammarLinks": [
+        "time-frequency",
+        "a1-adverbs",
+        "simple-prepositions"
+      ],
+      "classLinks": [
+        "the-time",
+        "prepositions",
+        "daily-routine"
+      ]
+    }
+  ],
+  "answerContract": [
+    "Countable noun cues explicitly say “the …” when the expected Italian includes an article. Calendar day/month names explicitly use bare dictionary forms.",
+    "Infinitive cards use English “to …”; gender-specific people have explicit gender cues.",
+    "Unspecified singular adjectives accept authored masculine/feminine alternatives. Plurals are not silently accepted when singular is requested.",
+    "Common alternatives include frigo, TV, lavello, ciotola, sofà, bici, auto, hotel, calmo/calma, contento/contenta, qui/qua, lì/là and adesso/ora.",
+    "Written accents remain meaningful: tè/te, lì/li and lunedì/lunedi are not collapsed. Curly and straight apostrophes, ordinary case and terminal punctuation use the existing answer normalizer.",
+    "Targets are individual words or natural phrases, never slash-separated instructions requiring unrelated forms in one typed answer.",
+    "Plural reminders include irregular gender changes such as l’uovo/le uova, il braccio/le braccia and il dito/le dita. Mass nouns do not receive misleading routine plurals."
+  ],
+  "checks": {
+    "command": "node --experimental-strip-types --test tests/vocab-library.test.mjs",
+    "testsPassed": 5,
+    "testsFailed": 0,
+    "focusedLint": "passed: tests/vocab-library.test.mjs",
+    "duplicateExpansionIds": 0,
+    "duplicateExpansionCanonicalTargets": 0,
+    "newCanonicalTargetsDuplicatingExistingWholeOrSlashSplitTargets": 0,
+    "grammarAndMissionReferences": "all resolve to existing IDs",
+    "longestItalianCueCharacters": 19,
+    "longestEnglishCueCharacters": 36,
+    "catalogueSha256": "03f49d1574a8bb7e15f95ffb1edf41a7bd01786d0cb5bd6c9bcddad6855dea93"
+  },
+  "reviewFindingsAndRepairs": [
+    "Added everyday equivalents suggested in independent engine-agent review, so correct natural translations are not rejected for lacking the canonical display spelling.",
+    "Clarified old as a description of a thing, late as a late hour, and shirt as a button-up shirt to reduce ambiguous English cues.",
+    "Simplified a thunderstorm example and a tonight example to avoid unnecessary subjunctive/future forms in beginner support.",
+    "Checked all 400 target/gloss pairs, article and gender assignments, 258 plural reminders, example translations and linked IDs. Automatically checked original slash alternatives as well as whole targets."
+  ],
+  "limitations": [
+    "A1/A2 labels are practical difficulty hints, not an official CEFR lexical certification.",
+    "The original 328 cards include deliberate repeated words in different class contexts; 728 is the combined entry count, not a claim of 728 unique concepts.",
+    "Curated alternatives cover common translations, not every possible synonym or dialect form.",
+    "Content checks cannot measure real learner enjoyment, retention or fluency; independent browser audits cover usability separately."
+  ]
+}

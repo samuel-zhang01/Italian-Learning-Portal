@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import grammar from "./grammar.json";
 import curriculum from "./curriculum.json";
 import companion from "./companion.json";
-import enrichment from "./enrichment.json";
+import { vocabBanks } from "./vocab-catalogue";
 import { buildDiscoveryIndex, discoveryKinds, searchDiscovery, type DiscoveryKind, type DiscoveryLevel } from "./discovery-index";
 import { catalogueParams, focusStudyHeading, replaceCatalogueParams } from "./navigation";
 import type { GrammarUnit, Mission, PageCompanion, Pair, Programme, Progress, Source, VocabularyBank } from "./types";
@@ -12,9 +12,10 @@ const sources = [...new Map([...(curriculum.sources as Source[]), ...(companion.
 const sourceById = new Map(sources.map((source) => [source.id, source]));
 const index = buildDiscoveryIndex({
   units: grammar.units as GrammarUnit[], missions: curriculum.missions as Mission[],
-  programmes: grammar.programmes as Programme[], banks: enrichment.banks as VocabularyBank[],
+  programmes: grammar.programmes as Programme[], banks: vocabBanks as VocabularyBank[],
+  bankRoutes: Object.fromEntries(vocabBanks.map(bank => [bank.id, `vocab-boost?bank=${encodeURIComponent(bank.id)}`])),
   sources, pages: companion.pages as PageCompanion[],
-  bankMissions: Object.fromEntries(enrichment.banks.map((bank) => [bank.id, enrichment.lessons.filter((lesson) => lesson.bank === bank.id).map((lesson) => lesson.missionId)])),
+  bankMissions: Object.fromEntries(vocabBanks.map(bank => [bank.id, bank.relatedMissionIds ?? []])),
 });
 const kindLabels: Record<DiscoveryKind, Pair> = {
   grammar: { en: "Grammar", it: "Grammatica" },

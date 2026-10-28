@@ -1,0 +1,81 @@
+.daily-app .vocab-workspace { max-width: 880px; padding-top: 22px; }
+.practice-switcher { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 0 0 22px; }
+.daily-app .practice-switcher button { min-height: 44px; padding: 10px 8px; border: 1px solid var(--line); font-size: 14px; background: var(--paper); }
+.daily-app .practice-switcher button[aria-current] { background: var(--green); color: var(--paper); }
+.vocab-intro h1 { margin-bottom: 10px; }
+.vocab-intro p { margin-bottom: 18px; }
+.vocab-launch { display: grid; gap: 12px; margin-bottom: 16px; }
+.vocab-launch label, .vocab-library > label, .vocab-question > label { display: block; font-weight: 600; font-size: 15px; }
+.daily-app :is(.vocab-launch, .vocab-library, .vocab-question) :is(input, select) { box-sizing: border-box; width: 100%; min-height: 48px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 3px; font: inherit; font-size: 16px; background: #fffdf6; color: var(--ink); }
+.daily-app .vocab-launch .hint { font-size: 14px; margin: 0; }
+.vocab-options summary, .vocab-accents summary, .vocab-example summary, .vocab-end summary { min-height: 44px; padding: 11px 0; cursor: pointer; box-sizing: border-box; }
+.vocab-options { border-top: 1px solid var(--line); }
+.vocab-options p { margin: 12px 0 0; font-size: 14px; }
+.vocab-review-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+.vocab-library { padding-top: 20px; border-top: 1px solid var(--line); }
+.vocab-library > label { margin-bottom: 8px; }
+.vocab-library-filters { display: flex; gap: 6px; margin: 12px 0 18px; }
+.vocab-library-filters button { min-height: 44px; flex: 1; padding: 8px; font: inherit; font-size: 14px; border: 1px solid var(--line); background: var(--paper); }
+.vocab-library-filters button[aria-pressed="true"] { background: var(--green); color: var(--paper); }
+.vocab-topic-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-bottom: 18px; }
+.vocab-topic-card { min-width: 0; display: flex; flex-direction: column; align-items: stretch; padding: 18px; border: 1px solid var(--line); background: var(--paper); }
+.vocab-topic-card h3 { margin-bottom: 8px; }
+.vocab-topic-card p { font-size: 13px; margin-bottom: 10px; }
+.vocab-topic-card progress { margin-top: auto; width: 100%; height: 7px; accent-color: var(--green); }
+.vocab-topic-card .text-button { text-align: left; margin-top: 8px; min-height: 44px; }
+.practice-related { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 28px 0 0; padding-top: 18px; border-top: 1px solid var(--line); }
+.practice-related button { min-height: 44px; }
+.daily-app .vocab-round { max-width: 660px; padding-block: 14px 32px; }
+.vocab-round-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.vocab-round-top button { min-height: 44px; }
+.vocab-round-top > span { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.vocab-round-progress { width: 100%; height: 9px; accent-color: var(--green); margin: 4px 0 18px; }
+.daily-app .vocab-question { padding: 26px; }
+.vocab-question h1 { font-size: clamp(27px, 4vw, 38px); letter-spacing: -.6px; margin-bottom: 18px; }
+.vocab-question .eyebrow { margin-bottom: 10px; }
+.vocab-question input { margin-top: 8px; scroll-margin-block: 20px; }
+.daily-app .vocab-question .hint { font-size: 13px; line-height: 1.5; margin: 10px 0; }
+.vocab-check, .vocab-next, .vocab-start { width: 100%; min-height: 48px; }
+.vocab-help { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; margin-top: 6px; }
+.vocab-help button { min-height: 44px; }
+.vocab-hint { padding: 12px; background: #f1e6c8; border-left: 3px solid var(--ochre); font-size: 14px; }
+.vocab-accents { font-size: 14px; }
+.vocab-accents > div { display: flex; flex-wrap: wrap; gap: 6px; }
+.vocab-accents button { min-width: 44px; min-height: 44px; border: 1px solid var(--line); background: var(--paper); font: inherit; font-size: 18px; }
+.vocab-feedback { scroll-margin-block: 16px; }
+.vocab-feedback h2 { margin: 4px 0 12px; }
+.vocab-feedback.is-correct h2 { color: #245432; }
+.vocab-feedback.needs-practice h2 { color: #863d28; }
+.vocab-feedback .vocab-model { font-size: 27px; color: var(--ink); line-height: 1.35; margin: 12px 0 18px; }
+.vocab-your-answer { font-size: 14px; }
+.vocab-feedback > .text-button { margin-top: 8px; }
+.vocab-example { border-top: 1px solid var(--line); margin-top: 12px; }
+.vocab-example p { font-size: 15px; }
+.daily-app .vocab-context { font-size: 13px; margin: 14px 0 4px; }
+.vocab-end { font-size: 14px; }
+.vocab-finish-actions { display: grid; gap: 12px; max-width: 480px; margin-block: 24px; }
+.vocab-celebration { font-size: 36px; color: var(--ochre); margin: 18px 0; }
+.daily-app .practice-hub { max-width: 1050px; padding-top: 26px; }
+.practice-hub-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 24px; }
+.practice-hub-card { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; min-width: 0; }
+.practice-hub-card > :is(p, h2, .eyebrow) { margin: 0; }
+.practice-hub-card > .button { margin-top: auto; width: 100%; min-height: 48px; }
+.practice-hub-card > p { font-size: 15px; }
+.vocabulary-hub-card { border-color: var(--green); }
+@media (max-width: 760px) {
+  .practice-hub-grid { grid-template-columns: minmax(0, 1fr); }
+  .vocab-topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .daily-app .vocab-question { padding: 20px; }
+  .daily-app .vocab-workspace { padding-top: 16px; }
+  .practice-switcher { margin-bottom: 18px; }
+}
+@media (max-width: 380px) {
+  .vocab-topic-grid { grid-template-columns: minmax(0, 1fr); }
+  .daily-app .practice-switcher button { font-size: 13px; padding-inline: 5px; }
+  .daily-app .vocab-question { padding: 16px; }
+}
+@media (max-height: 500px) and (min-width: 600px) {
+  .daily-app .vocab-round { max-width: 760px; }
+  .daily-app.vocab-active .daily-header { padding-block: 4px; }
+  .vocab-round-progress { margin-bottom: 10px; }
+}

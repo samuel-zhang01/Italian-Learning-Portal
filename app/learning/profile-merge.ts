@@ -14,7 +14,7 @@ const atomic = (path: string[]) => {
   if (path.length === 1 && ["plan", "reviewLog"].includes(path[0])) return true;
   if (path.length === 2 && ["completed", "drafts", "reviews", "sessions"].includes(path[0])) return true;
   if (path[0] === "academy") return path[1] === "programme" || path.length === 3;
-  if (path[0] === "arcade") return (path.length === 2 && path[1] !== "records") || path.length === 3;
+  if (["arcade", "vocabPractice"].includes(path[0])) return (path.length === 2 && path[1] !== "records") || path.length === 3;
   return ["diagnostics", "oralPractice"].includes(path[0]) && path.length === 3;
 };
 
@@ -54,5 +54,5 @@ export function hasStudyRecords(p: Progress) {
     || p.academy?.programme || Object.keys(p.academy?.grammar ?? {}).length || Object.keys(p.academy?.companion ?? {}).length
     || Object.keys(p.academy?.words ?? {}).length || Object.keys(p.academy?.assessments ?? {}).length
     || p.arcade?.active || Object.keys(p.arcade?.records ?? {}).length || Object.keys(p.diagnostics?.runs ?? {}).length
-    || Object.keys(p.oralPractice?.runs ?? {}).length);
+    || Object.keys(p.oralPractice?.runs ?? {}).length || p.vocabPractice?.active || Object.keys(p.vocabPractice?.records ?? {}).length);
 }

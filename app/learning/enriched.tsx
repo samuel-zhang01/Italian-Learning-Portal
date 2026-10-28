@@ -2,6 +2,8 @@ import { Rewards } from "./daily-overview";
 export { Rewards, SessionPreview, SessionNotebook } from "./daily-overview";
 import { useEffect, useRef, useState, type ComponentType } from "react";
 import data from "./enrichment.json";
+import { vocabBanks } from "./vocab-catalogue";
+import { PracticeNavigation } from "./practice-navigation";
 import grammar from "./grammar.json";
 import companion from "./companion.json";
 import { dueReviews, isCorrect } from "./engine";
@@ -757,6 +759,7 @@ export function VocabularyView({
   Audio,
   bankId,
 }: Props & { Audio: Audio; bankId?: string }) {
+  const banks = vocabBanks;
   const chapter = chapterContext(p.sessions?.[today]?.missionId ?? programmeDay(p)?.missionIds[0] ?? "");
   const [selected, setSelected] = useState(() => banks.find((bank) => bank.id === bankId)?.id
     ?? banks.find((bank) => bank.id === chapter?.bankId)?.id ?? banks[0].id);
@@ -779,6 +782,7 @@ export function VocabularyView({
   );
   return (
     <div className="workspace">
+      <PracticeNavigation active="vocabulary" t={t} go={go} />
       <p className="eyebrow">
         {t(
           `${banks.reduce((sum, b) => sum + b.words.length, 0)} WORDS & USEFUL CHUNKS · ${banks.some((b) => b.level === "A2") ? "A1–A2" : "A1"}`,
@@ -786,6 +790,7 @@ export function VocabularyView({
         )}
       </p>
       <h1>{t("Words you can use today.", "Parole da usare oggi.")}</h1>
+      <button className="button primary" onClick={() => go(`vocab-boost?bank=${encodeURIComponent(bank.id)}`)}>{t("Type these words in Vocabulary booster", "Scrivi queste parole nel vocabolario")} →</button>
       <p>
         {t(
           "Learn the article with the noun. Read the example, then change one detail. Choose one bank per day; the daily session saves which cards you practise.",

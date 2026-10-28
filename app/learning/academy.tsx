@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import grammarData from "./grammar.json";
+import { PracticeNavigation } from "./practice-navigation";
 import companionData from "./companion.json";
 import { exercisePrompt, modelAnswerMismatch } from "./learning-utils";
 import { localPdfPageHref } from "./local-pdfs";
@@ -156,6 +157,7 @@ export function GrammarLab(props: Shared & { unitId?: string }) {
   }, 0);
   return (
     <div className="workspace academy">
+      <PracticeNavigation active="grammar" t={t} go={go} />
       <div className="academy-intro">
         <div>
           <p className="eyebrow">

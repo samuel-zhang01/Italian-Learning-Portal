@@ -1,0 +1,64 @@
+{
+  "reviewedOn": "2026-10-28",
+  "scope": "Dedicated typed vocabulary, shared practice navigation and connected learning records.",
+  "catalogue": {
+    "mainEntries": 728,
+    "visibleThemes": 61,
+    "newOriginalEntries": 400,
+    "newThemes": 20,
+    "additionalSavedGrammarIdentities": 245,
+    "additionalSavedNounIdentities": 3,
+    "meaning": "Entry counts are not claims of distinct concepts or CEFR mastery."
+  },
+  "architecture": {
+    "route": "vocab-boost",
+    "entry": "Today or Practice → Vocabulary booster",
+    "progressField": "Optional version-one vocabPractice",
+    "independentPausedGames": true,
+    "typedByDefault": true,
+    "supportedRoundLengths": [
+      5,
+      10
+    ],
+    "normalSelectionOrder": [
+      "due mistakes or hints",
+      "other due words",
+      "unseen words",
+      "familiar words"
+    ],
+    "connectedTo": [
+      "exact-theme vocabulary cards",
+      "personal saved words including grammar terms",
+      "Find",
+      "related grammar and lessons",
+      "shared scheduled review queue",
+      "backups",
+      "profile sync",
+      "practice XP without duplicate matching IDs",
+      "weekly learning evidence"
+    ]
+  },
+  "verified": {
+    "dailyTestsPassed": 308,
+    "typecheck": "passed",
+    "lint": "passed",
+    "productionBuild": "passed",
+    "profileBrowserGroups": 8,
+    "profileEvidence": "work/typed-vocabulary-release/profile-local/results.json"
+  },
+  "preservation": [
+    "All old course word IDs and version-one backups stay valid.",
+    "Vocabulary and Games keep separate active drafts.",
+    "Hints and first mistakes cannot be rewritten as independent successes.",
+    "Concurrent changes to the same typed round require explicit profile conflict resolution.",
+    "Same-day conflicting weekly outcomes are reported as ambiguous rather than assigned invented accuracy."
+  ],
+  "contentReview": "docs/typed-vocabulary-content-review-2026-10-28.json",
+  "independentUiReview": "docs/typed-vocabulary-ui-audit-2026-10-28.json",
+  "maintenance": "Retain supplemental grammar/noun IDs in lookup when later expanding the main vocabulary library; existing saved rounds and review records use those IDs.",
+  "limits": [
+    "Internal automated checks and simulated learner journeys, not a learning-outcome study.",
+    "Browser mobile layouts and reduced viewport height approximate physical phones and keyboards.",
+    "A finite authored answer list is not a general Italian translator."
+  ]
+}

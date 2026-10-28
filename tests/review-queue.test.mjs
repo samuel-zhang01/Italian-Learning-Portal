@@ -38,7 +38,7 @@ test("mixed saved evidence produces one deterministic, capped review plan", () =
   p.arcade.records["scene:cafe:one"] = memory();
   const queue = all(p);
   assert.equal(queue.totalDue, 4);
-  assert.deepEqual(queue.counts, { lesson: 1, grammar: 1, word: 1, arcade: 1 });
+  assert.deepEqual(queue.counts, { lesson: 1, grammar: 1, word: 1, vocab: 0, arcade: 1 });
   assert.equal(queue.items[0].kind, "lesson");
   assert.deepEqual(queue.items.map((item) => item.route), ["review/core", "grammar/unit?exercise=ex1&review=1", "games?review=scene%3Acafe%3Aone", "words?word=la%20sciarpa"]);
   assert.equal(queue.estimatedSeconds, 270);

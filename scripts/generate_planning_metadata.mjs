@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const pick = (item, keys) => Object.fromEntries(keys.map((key) => [key, item[key]]));
 
-export function generatePlanningMetadata({ curriculum, grammar, companion, enrichment, scenes, booster = { verbs: [], nouns: [] } }) {
+export function generatePlanningMetadata({ curriculum, grammar, companion, enrichment, scenes, booster = { verbs: [], nouns: [] }, vocabulary = { banks: [] } }) {
   const firstPractice = new Set();
   const coveredUnits = new Set();
   for (const page of companion.pages) {
@@ -43,7 +43,14 @@ export function generatePlanningMetadata({ curriculum, grammar, companion, enric
       ...pick(bank, ["id", "title"]),
       words: bank.words.map((word) => pick(word, ["id", "term"])),
     })),
+    vocabBanks: vocabulary.banks.map(bank => ({
+      ...pick(bank, ["id", "title"]),
+      words: bank.words.map(word => pick(word, ["id", "term"])),
+    })),
     grammarWords: grammar.units.flatMap((unit) => unit.words),
+    grammarVocabulary: grammar.units.flatMap(unit => unit.words.map((term, index) => ({
+      id: `grammar-word:${unit.id}:${index}`, unitId: unit.id, term,
+    }))),
     booster: {
       verbs: booster.verbs.map((verb) => pick(verb, ["id", "infinitive", "meaning", "unitId"])),
       nouns: booster.nouns.map((noun) => pick(noun, ["id", "term"])),
@@ -55,7 +62,7 @@ export function generatedPlanningJSON() {
   const read = (name) => JSON.parse(readFileSync(path.join(root, "app", "learning", `${name}.json`), "utf8"));
   return `${JSON.stringify(generatePlanningMetadata({
     curriculum: read("curriculum"), grammar: read("grammar"), companion: read("companion"),
-    enrichment: read("enrichment"), scenes: read("arcade-scenes"), booster: read("booster-content"),
+    enrichment: read("enrichment"), scenes: read("arcade-scenes"), booster: read("booster-content"), vocabulary: read("vocab-library"),
   }))}\n`;
 }
 

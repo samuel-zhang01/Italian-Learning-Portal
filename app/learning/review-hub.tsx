@@ -17,6 +17,7 @@ const names: Record<ReviewKind, Pair> = {
   grammar: { en: "Grammar recall", it: "Richiamo di grammatica" },
   word: { en: "Personal word memory", it: "Memoria del lessico personale" },
   arcade: { en: "Game practice", it: "Pratica con i giochi" },
+  vocab: { en: "Typed vocabulary", it: "Lessico scritto" },
 };
 const reasons: Record<ReviewReason, Pair> = {
   mistake: { en: "An earlier attempt needed repair", it: "Un tentativo precedente richiedeva una correzione" },
@@ -73,6 +74,7 @@ export function ReviewHub({ p, t, text, go, today }: Props) {
                   {item.supportUsed && <span>{t("Support recorded", "Aiuto registrato")}</span>}
                 </div>
                 {item.kind === "arcade" && p.arcade?.active && <p className="review-active-note">{t("Your unfinished game stays saved. This review will be ready after that round.", "Il gioco incompleto resta salvato. Questo ripasso sarà disponibile dopo quel giro.")}</p>}
+                {item.kind === "vocab" && p.vocabPractice?.active && <p className="review-active-note">{t("Your vocabulary round stays saved. Finish it before this scheduled word.", "Il giro di lessico resta salvato. Completalo prima di questa parola programmata.")}</p>}
               </div>
               <button className="button secondary" onClick={() => go(item.route)}>{t("Open practice", "Apri la pratica")} →</button>
             </li>)}

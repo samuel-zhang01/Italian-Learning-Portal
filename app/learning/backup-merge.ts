@@ -19,6 +19,7 @@ export function backupCounts(progress: Progress) {
     grammar: Object.keys(progress.academy?.grammar ?? {}).length,
     words: Object.keys(progress.academy?.words ?? {}).length,
     games: Object.keys(progress.arcade?.records ?? {}).length,
+    typedWords: Object.keys(progress.vocabPractice?.records ?? {}).length,
     diagnostics: Object.keys(progress.diagnostics?.runs ?? {}).length,
     oralPractice: Object.keys(progress.oralPractice?.runs ?? {}).length,
   };
@@ -141,6 +142,20 @@ export function mergeProgressBackups(current: Progress, incoming: Progress, ids:
       if (history.has(run.id)) continue;
       if (out.arcade.history.length >= 30) { conflict("game-history-capacity", run.id); continue; }
       out.arcade.history.push(clone(run)); history.add(run.id); additions += 1;
+    }
+  }
+  if (!local.vocabPractice && remote.vocabPractice) { out.vocabPractice = clone(remote.vocabPractice); additions += 1; }
+  else if (out.vocabPractice && remote.vocabPractice) {
+    missing(out.vocabPractice.records, remote.vocabPractice.records, "typed-word-first-attempt-and-schedule", 2000);
+    if (!out.vocabPractice.active && remote.vocabPractice.active && !out.vocabPractice.history.some(run => run.id === remote.vocabPractice!.active!.id)) {
+      out.vocabPractice.active = clone(remote.vocabPractice.active); additions += 1;
+    } else if (remote.vocabPractice.active && !same(out.vocabPractice.active, remote.vocabPractice.active)) conflict("paused-vocabulary", remote.vocabPractice.active.id);
+    const history = new Set(out.vocabPractice.history.map(run => run.id));
+    for (const run of remote.vocabPractice.history) {
+      if (out.vocabPractice.active?.id === run.id) { conflict("active-vocabulary-history", run.id); continue; }
+      if (history.has(run.id)) continue;
+      if (out.vocabPractice.history.length >= 30) { conflict("vocabulary-history-capacity", run.id); continue; }
+      out.vocabPractice.history.push(clone(run)); history.add(run.id); additions += 1;
     }
   }
   if (!local.diagnostics && remote.diagnostics) { out.diagnostics = clone(remote.diagnostics); additions += 1; }

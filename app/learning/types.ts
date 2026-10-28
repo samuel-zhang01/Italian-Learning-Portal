@@ -66,6 +66,7 @@ export type Progress = {
   sessions?: Record<string, StudySession>;
   academy?: AcademyProgress;
   arcade?: ArcadeProgress;
+  vocabPractice?: ArcadeProgress;
   diagnostics?: A2DiagnosticState;
   oralPractice?: OralPracticeState;
 };

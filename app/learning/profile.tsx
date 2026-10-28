@@ -1,4 +1,4 @@
-import { useState, useSyncExternalStore } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { ProfileState, ProfileSync } from "./profile-sync";
 import "./profile.css";
 type Translate = (en: string, it: string) => string;
@@ -34,6 +34,13 @@ export function ProfileView({ sync, t, go }: { sync: ProfileSync; t: Translate; 
   const [formError, setFormError] = useState("");
   const [busy, setBusy] = useState(false);
   const [downloadMessage, setDownloadMessage] = useState("");
+  const errorMessage = useRef<HTMLParagraphElement>(null);
+  useEffect(() => {
+    if (formError || state.error) {
+      errorMessage.current?.focus({ preventScroll: true });
+      errorMessage.current?.scrollIntoView({ block: "nearest" });
+    }
+  }, [formError, state.error]);
   const connected = (["synced", "saving", "offline", "conflict"].includes(state.status) || (state.status === "error" && Boolean(state.lastSynced))) && Boolean(state.username);
   const run = async (action: () => Promise<void>) => { setBusy(true); try { await action(); } finally { setBusy(false); } };
   const downloadRecovery = async (kind: "local" | "remote" = "local") => {
@@ -80,13 +87,13 @@ export function ProfileView({ sync, t, go }: { sync: ProfileSync; t: Translate; 
       </div>
       <label>{t("Username", "Nome utente")}<input name="username" autoComplete="username" autoCapitalize="none" spellCheck={false} minLength={3} maxLength={32} pattern="[A-Za-z0-9][A-Za-z0-9_\-]{2,31}" required value={username} onChange={event => setUsername(event.target.value)} /></label>
       <p className="hint">{t("3–32 letters or numbers; _ and - can follow the first character. Capital letters do not create a different profile.", "3–32 lettere o numeri; _ e - sono ammessi dopo il primo carattere. Le maiuscole non creano un profilo diverso.")}</p>
-      <label>{t("Six-digit PIN", "PIN di sei cifre")}<input name="pin" type="password" inputMode="numeric" autoComplete={creating ? "new-password" : "current-password"} minLength={6} maxLength={6} pattern="[0-9]{6}" required value={pin} onChange={event => setPin(event.target.value.replace(/\D/g, ""))} /></label>
-      {creating && <label>{t("Repeat PIN", "Ripeti PIN")}<input name="pin-confirmation" type="password" inputMode="numeric" autoComplete="new-password" minLength={6} maxLength={6} pattern="[0-9]{6}" required value={confirmation} onChange={event => setConfirmation(event.target.value.replace(/\D/g, ""))} /></label>}
+      <label>{t("Six-digit PIN", "PIN di sei cifre")}<input name="pin" type="password" inputMode="numeric" autoComplete={creating ? "new-password" : "current-password"} minLength={6} maxLength={6} pattern="[0-9]{6}" required value={pin} onChange={event => { setPin(event.target.value.replace(/\D/g, "")); setFormError(""); }} /></label>
+      {creating && <label>{t("Repeat PIN", "Ripeti PIN")}<input name="pin-confirmation" type="password" inputMode="numeric" autoComplete="new-password" minLength={6} maxLength={6} pattern="[0-9]{6}" required value={confirmation} onChange={event => { setConfirmation(event.target.value.replace(/\D/g, "")); setFormError(""); }} /></label>}
       {creating && <p className="hint">{t("Choose six digits you can keep safely. We cannot look up a forgotten PIN; keep a progress backup too.", "Scegli sei cifre da conservare al sicuro. Non possiamo recuperare un PIN dimenticato; conserva anche un backup dei progressi.")}</p>}
       <button className="button primary" disabled={busy}>{busy ? t("Connecting…", "Connessione…") : creating ? t("Create my profile", "Crea il mio profilo") : t("Sign in", "Accedi")}</button>
       <button className="text-button" type="button" onClick={() => go("today")}>{t("Keep studying on this device", "Continua a studiare su questo dispositivo")}</button>
     </form>}
-    {(formError || state.error) && <p className="feedback" role="alert">{formError || errorText(state.error, t)}</p>}
+    {(formError || state.error) && <p ref={errorMessage} tabIndex={-1} className="feedback" role="alert">{formError || errorText(state.error, t)}</p>}
     <details className="profile-details"><summary>{t("Saved copies & how it works", "Copie salvate e come funziona")}</summary>
       <p>{t("The server stores a salted PIN hash, never the PIN itself. Your browser uses a secure sign-in cookie; the learning records are saved on the server and cached on this device.", "Il server conserva un hash del PIN con un sale, mai il PIN stesso. Il browser usa un cookie di accesso sicuro; i dati di studio sono salvati sul server e conservati su questo dispositivo.")}</p>
       <button className="button secondary" onClick={() => void downloadRecovery().catch(() => setDownloadMessage(t("The saved copy is unavailable in this browser.", "La copia salvata non è disponibile in questo browser.")))}>{t("Download last device copy", "Scarica l’ultima copia del dispositivo")}</button>

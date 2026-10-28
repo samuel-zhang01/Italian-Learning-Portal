@@ -9,6 +9,7 @@ import {
 import { addDays, dayKey, validDate } from "./learning-utils.ts";
 import { academyMinutes, validateAcademy } from "./academy-engine.ts";
 import { validateArcade } from "./arcade-engine.ts";
+import { validateVocabPractice } from "./vocab-engine.ts";
 import { validateA2Diagnostics } from "./a2-diagnostic-model.ts";
 import { validateOralPractice } from "./oral-practice-model.ts";
 export { addDays, dayKey, normalise, isCorrect } from "./learning-utils.ts";
@@ -299,6 +300,7 @@ export function parseProgress(raw: string, ids: string[]): Progress {
   }
   if (x.academy !== undefined) validateAcademy(x.academy);
   if (x.arcade !== undefined) validateArcade(x.arcade);
+  if (x.vocabPractice !== undefined) validateVocabPractice(x.vocabPractice);
   if (x.diagnostics !== undefined) validateA2Diagnostics(x.diagnostics);
   if (x.oralPractice !== undefined) validateOralPractice(x.oralPractice);
   return x as unknown as Progress;

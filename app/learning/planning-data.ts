@@ -10,6 +10,22 @@ export const planningPages = data.pages as PlanningPage[];
 export const planningSources = data.sources as Source[];
 export const planningScenes = data.scenes;
 export const planningBanks = data.banks;
+export const planningVocabBanks = [...planningBanks, ...data.vocabBanks];
+// The word bank already contains these grammar terms. Give missing ones a
+// stable practice identity without adding another visible vocabulary library.
+const vocabularyWordKeys = new Set(planningVocabBanks.flatMap(bank => bank.words.map(word => normalise(word.term.it))));
+export const planningGrammarVocabItems = data.grammarVocabulary.filter(item => {
+  const key = normalise(item.term.it);
+  if (vocabularyWordKeys.has(key)) return false;
+  vocabularyWordKeys.add(key);
+  return true;
+});
+export const planningSupplementalNounVocabItems = data.booster.nouns.filter(noun => {
+  const key = normalise(noun.term.it);
+  if (vocabularyWordKeys.has(key)) return false;
+  vocabularyWordKeys.add(key);
+  return true;
+}).map(noun => ({ ...noun, sourceNounId: noun.id, id: `noun-vocab:${noun.id}` }));
 export const planningAssessmentIds = planningUnits.flatMap((unit) => unit.exercises.map((exercise) => exercise.id));
 
 // Review identities reuse the same IDs and normalized word keys as the full
@@ -21,6 +37,7 @@ export const planningReviewCatalogue = {
     ...data.grammarWords,
     ...planningBanks.flatMap((bank) => bank.words.map((word) => word.term)),
     ...data.booster.nouns.map((noun) => noun.term),
+    ...data.vocabBanks.flatMap(bank => bank.words.map(word => word.term)),
   ].map((term) => [normalise(term.it), { key: normalise(term.it), term }])).values()],
   arcade: [
     ...planningBanks.flatMap((bank) => bank.words.map((word) => ({
@@ -41,5 +58,16 @@ export const planningReviewCatalogue = {
     ...planningScenes.flatMap((scene) => scene.turns.map((turn) => ({
       id: `scene:${scene.id}:${turn.id}`, title: scene.title, unitId: turn.unitId,
     }))),
+  ],
+  vocab: [
+    ...planningVocabBanks.flatMap(bank => bank.words.map(word => ({
+      id: word.id, title: { en: word.term.en, it: word.term.en }, wordKey: normalise(word.term.it),
+    }))),
+    ...planningGrammarVocabItems.map(item => ({
+      id: item.id, title: { en: item.term.en, it: item.term.en }, wordKey: normalise(item.term.it),
+    })),
+    ...planningSupplementalNounVocabItems.map(item => ({
+      id: item.id, title: { en: item.term.en, it: item.term.en }, wordKey: normalise(item.term.it),
+    })),
   ],
 };

@@ -76,6 +76,7 @@ export function BackupTransfer({ current, ids, t, apply, mergeDisabled = false }
     sessions: t("Saved sessions", "Sessioni salvate"), grammar: t("Grammar records", "Schede di grammatica"),
     words: t("Personal words", "Parole personali"), games: t("Game records", "Schede dei giochi"), diagnostics: t("Chapter checks", "Controlli dei capitoli"),
     oralPractice: t("Listening & speaking runs", "Sessioni di ascolto e parlato"),
+    typedWords: t("Typed vocabulary records", "Risposte scritte di lessico"),
   };
   const here = backupCounts(base), incoming = pending && backupCounts(pending);
   return <div className="backup-transfer">

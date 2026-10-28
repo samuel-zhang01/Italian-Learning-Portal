@@ -22,6 +22,7 @@ type Catalogue = {
   sources: Source[];
   pages: PageCompanion[];
   bankMissions?: Record<string, string[]>;
+  bankRoutes?: Record<string, string>;
 };
 
 // This is search normalization only. Italian answer grading keeps its own rules.
@@ -110,10 +111,10 @@ export function buildDiscoveryIndex(data: Catalogue): DiscoveryEntry[] {
   for (const bank of data.banks) {
     const missions = data.missions.filter((mission) => data.bankMissions?.[bank.id]?.includes(mission.id));
     const levels = new Set(missions.map(missionLevel));
-    const level = levels.has("A2") && levels.size > 1 ? "A1–A2" : [...levels][0] ?? null;
+    const level = bank.level ?? (levels.has("A2") && levels.size > 1 ? "A1–A2" : [...levels][0] ?? null);
     add({ id: bank.id, kind: "vocabulary", title: bank.title,
       summary: { en: `${bank.words.length} words and phrases to practise with vocabulary cards.`, it: `${bank.words.length} parole ed espressioni da esercitare con le carte lessico.` },
-      route: `vocabulary/${bank.id}`, level, sources: refs(missions.flatMap((mission) => mission.sources)),
+      route: data.bankRoutes?.[bank.id] ?? `vocabulary/${bank.id}`, level, sources: refs(missions.flatMap((mission) => mission.sources)),
       terms: `${pairText(bank.title)} ${bank.words.map((word) => pairText(word.term)).join(" ")} ${missions.map((mission) => `${pairText(mission.title)} ${pairText(mission.goal)}`).join(" ")}` });
   }
   for (const source of data.sources) {

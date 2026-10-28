@@ -1,7 +1,7 @@
 import { addDays, normalise, validDate } from "./learning-utils.ts";
 import type { Pair, Progress } from "./types.ts";
 
-export type ReviewKind = "lesson" | "grammar" | "word" | "arcade";
+export type ReviewKind = "lesson" | "grammar" | "word" | "vocab" | "arcade";
 export type ReviewBudget = 2 | 5 | 10;
 export type ReviewReason = "mistake" | "supported" | "scheduled" | "saved";
 export type ReviewCatalogue = {
@@ -9,6 +9,7 @@ export type ReviewCatalogue = {
   grammar: readonly { id: string; title: Pair; exercises: readonly { id: string; kind?: string }[] }[];
   words: readonly { key: string; term: Pair }[];
   arcade: readonly { id: string; title: Pair; unitId?: string; grammarExerciseId?: string; wordKey?: string }[];
+  vocab?: readonly { id: string; title: Pair; wordKey: string }[];
 };
 export type ReviewItem = {
   id: string;
@@ -34,8 +35,8 @@ export type ReviewQueue = {
   estimatedSeconds: number;
 };
 type Candidate = Omit<ReviewItem, "overdueDays">;
-const cost: Record<ReviewKind, number> = { lesson: 120, grammar: 60, word: 30, arcade: 60 };
-const kindOrder: Record<ReviewKind, number> = { lesson: 0, grammar: 1, word: 2, arcade: 3 };
+const cost: Record<ReviewKind, number> = { lesson: 120, grammar: 60, word: 30, vocab: 30, arcade: 60 };
+const kindOrder: Record<ReviewKind, number> = { lesson: 0, grammar: 1, word: 2, vocab: 3, arcade: 4 };
 const reasonOrder: Record<ReviewReason, number> = { mistake: 0, supported: 1, scheduled: 2, saved: 3 };
 const compare = (a: string, b: string) => a < b ? -1 : a > b ? 1 : 0;
 export const reviewBudget = (minutes: number): ReviewBudget => minutes === 2 || minutes === 10 ? minutes : 5;
@@ -45,7 +46,7 @@ const wordTarget = (key: string) => `word:${key}`;
 /** Read-only recommendations. Existing practice engines own attempts, schedules and credit. */
 export function selectReviewQueue(p: Progress, catalogue: ReviewCatalogue, today: string, minutes = 5): ReviewQueue {
   const budgetMinutes = reviewBudget(minutes);
-  const empty: ReviewQueue = { budgetMinutes, items: [], groups: [], counts: { lesson: 0, grammar: 0, word: 0, arcade: 0 }, totalDue: 0, remainingCount: 0, estimatedSeconds: 0 };
+  const empty: ReviewQueue = { budgetMinutes, items: [], groups: [], counts: { lesson: 0, grammar: 0, word: 0, vocab: 0, arcade: 0 }, totalDue: 0, remainingCount: 0, estimatedSeconds: 0 };
   if (!validDate(today)) return empty;
   const candidates: Candidate[] = [];
   const touchedToday = new Set<string>();
@@ -113,6 +114,16 @@ export function selectReviewQueue(p: Progress, catalogue: ReviewCatalogue, today
     if (!record || !recordedDate(record.date) || !validDate(record.due)) continue;
     add({ id: `arcade:${item.id}`, canonicalId, kind: "arcade", title: item.title,
       route: `games?review=${encodeURIComponent(item.id)}`, due: record.due, evidenceDate: record.date,
+      reason: !record.last.correct ? "mistake" : record.last.assisted ? "supported" : "scheduled", supportUsed: record.last.assisted });
+  }
+
+  for (const item of catalogue.vocab ?? []) {
+    if (!knownWords.has(item.wordKey)) continue;
+    const record = p.vocabPractice?.records[item.id], canonicalId = wordTarget(item.wordKey);
+    if (record?.date === today || (p.vocabPractice?.active?.date === today && p.vocabPractice.active.answers[item.id])) touchedToday.add(canonicalId);
+    if (!record || !recordedDate(record.date) || !validDate(record.due)) continue;
+    add({ id: `vocab:${item.id}`, canonicalId, kind: "vocab", title: item.title, cueLanguage: "en",
+      route: `vocab-boost?review=${encodeURIComponent(item.id)}`, due: record.due, evidenceDate: record.date,
       reason: !record.last.correct ? "mistake" : record.last.assisted ? "supported" : "scheduled", supportUsed: record.last.assisted });
   }
 

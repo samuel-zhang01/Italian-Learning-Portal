@@ -174,6 +174,45 @@ test("weekly core and latest-only word/game metrics do not invent full event cou
   assert.equal(r.arcade.independentLatestCorrect, 1); assert.equal(JSON.stringify(p), before);
 });
 
+test("weekly evidence includes known typed vocabulary while excluding unknown and future records", () => {
+  const p = progress();
+  const memory = (date, correct = false, assisted = false) => ({ first: { answer: "first", correct: false, assisted: false }, last: { answer: "latest", correct, assisted }, date, due: "2026-10-26", successes: 0 });
+  p.vocabPractice = { records: { typed: memory(today, true), supported: memory("2026-10-24", true, true), future: memory("2026-10-26", true), stale: memory(today, true) } };
+  const typedCatalogue = { ...catalogue, vocab: ["typed", "supported", "future"].map(id => ({ id, title: pair(id), wordKey: "il libro" })) };
+  const before = JSON.stringify(p); freeze(p);
+  const r = deriveWeeklyLearningReport(p, typedCatalogue, today, emptyA2Diagnostics(), [], [], context);
+  assert.deepEqual(r.arcade, { latestItems: 2, independentLatestCorrect: 1, supportedLatest: 1, ambiguousLatest: 0 });
+  assert.deepEqual(r.activeDays, ["2026-10-24", today]);
+  assert.equal(r.hasEvidence, true);
+  assert.equal(JSON.stringify(p), before);
+});
+
+test("weekly typed and game evidence for the same word counts once using the newest date without changing either first attempt", () => {
+  const p = progress();
+  const first = { answer: "first mistake", correct: false, assisted: false };
+  p.arcade = { records: { scene: { first, last: { answer: "older correct", correct: true, assisted: false }, date: "2026-10-23", due: today, successes: 1 } } };
+  p.vocabPractice = { records: { scene: { first, last: { answer: "newer wrong", correct: false, assisted: false }, date: today, due: "2026-10-26", successes: 0 } } };
+  const typedCatalogue = { ...catalogue, vocab: [{ id: "scene", title: pair("A typed word"), wordKey: "il libro" }] };
+  const before = JSON.stringify(p); freeze(p);
+  const r = deriveWeeklyLearningReport(p, typedCatalogue, today, emptyA2Diagnostics(), [], [], context);
+  assert.deepEqual(r.arcade, { latestItems: 1, independentLatestCorrect: 0, supportedLatest: 0, ambiguousLatest: 0 });
+  assert.deepEqual(r.activeDays, ["2026-10-23", today], "Both retained dates establish activity, not two latest-item counts.");
+  assert.equal(JSON.stringify(p), before);
+});
+
+test("weekly same-day conflicting vocabulary/game outcomes are not guessed or counted as correct", () => {
+  const p = progress();
+  const first = { answer: "first", correct: false, assisted: false };
+  p.arcade = { records: { scene: { first, last: { answer: "correct", correct: true, assisted: false }, date: today, due: "2026-10-26", successes: 1 } } };
+  p.vocabPractice = { records: { scene: { first, last: { answer: "hinted", correct: true, assisted: true }, date: today, due: "2026-10-26", successes: 0 } } };
+  const typedCatalogue = { ...catalogue, vocab: [{ id: "scene", title: pair("A typed word"), wordKey: "il libro" }] };
+  const r = deriveWeeklyLearningReport(p, typedCatalogue, today, emptyA2Diagnostics(), [], [], context);
+  assert.deepEqual(r.arcade, { latestItems: 1, independentLatestCorrect: 0, supportedLatest: 0, ambiguousLatest: 1 });
+  p.vocabPractice.records.scene.last = { answer: "a different accepted variant", correct: true, assisted: false };
+  const sameOutcome = deriveWeeklyLearningReport(p, typedCatalogue, today, emptyA2Diagnostics(), [], [], context);
+  assert.deepEqual(sameOutcome.arcade, { latestItems: 1, independentLatestCorrect: 1, supportedLatest: 0, ambiguousLatest: 0 });
+});
+
 test("empty or invalid-date weekly reports infer no weakness and return to the saved plan", () => {
   const p = progress(); const r = report(freeze(p));
   assert.equal(r.hasEvidence, false); assert.equal(r.activeDays.length, 0);

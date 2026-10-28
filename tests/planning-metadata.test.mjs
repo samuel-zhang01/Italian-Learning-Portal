@@ -131,8 +131,25 @@ test("light review metadata exactly matches full activity IDs, titles and duplic
     ...(item.word ? { wordKey: wordKey(item.word.term) } : {}),
   }));
   assert.deepEqual(planningReviewCatalogue.arcade, expected);
-  const terms = [...grammar.units.flatMap((unit) => unit.words), ...enrichment.banks.flatMap((bank) => bank.words.map((word) => word.term)), ...read("booster-content").nouns.map((noun) => noun.term)];
+  const terms = [...grammar.units.flatMap((unit) => unit.words), ...enrichment.banks.flatMap((bank) => bank.words.map((word) => word.term)), ...read("booster-content").nouns.map((noun) => noun.term), ...read("vocab-library").banks.flatMap(bank => bank.words.map(word => word.term))];
   assert.deepEqual(planningReviewCatalogue.words, [...new Map(terms.map((term) => [wordKey(term), { key: wordKey(term), term }])).values()]);
+  const vocabulary = [...enrichment.banks, ...read("vocab-library").banks].flatMap(bank => bank.words.map(word => ({
+    id: word.id, title: { en: word.term.en, it: word.term.en }, wordKey: wordKey(word.term),
+  })));
+  const vocabularyKeys = new Set(vocabulary.map(item => item.wordKey));
+  for (const unit of grammar.units) unit.words.forEach((term, index) => {
+    const key = wordKey(term);
+    if (vocabularyKeys.has(key)) return;
+    vocabularyKeys.add(key);
+    vocabulary.push({ id: `grammar-word:${unit.id}:${index}`, title: { en: term.en, it: term.en }, wordKey: key });
+  });
+  for (const noun of read("booster-content").nouns) {
+    const key = wordKey(noun.term);
+    if (vocabularyKeys.has(key)) continue;
+    vocabularyKeys.add(key);
+    vocabulary.push({ id: `noun-vocab:${noun.id}`, title: { en: noun.term.en, it: noun.term.en }, wordKey: key });
+  }
+  assert.deepEqual(planningReviewCatalogue.vocab, vocabulary);
 });
 
 test("the initial progress engine dependency graph contains compact metadata without full teaching catalogues", () => {
@@ -153,7 +170,7 @@ test("the initial progress engine dependency graph contains compact metadata wit
   visit(path.join(root, "app/learning/engine.ts"));
   const names = [...visited].map((file) => path.basename(file));
   assert.ok(names.includes("planning-metadata.json"));
-  for (const full of ["curriculum.json", "grammar.json", "companion.json", "enrichment.json", "arcade-scenes.json", "booster-content.json"]) {
+  for (const full of ["curriculum.json", "grammar.json", "companion.json", "enrichment.json", "arcade-scenes.json", "booster-content.json", "vocab-library.json"]) {
     assert.ok(!names.includes(full), `${full} must load with its study route, not synchronous progress hydration`);
   }
 });

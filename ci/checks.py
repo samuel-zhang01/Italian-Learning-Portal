@@ -38,7 +38,7 @@ def main():
     expected = {'lint': 'eslint .',
                 'typecheck': 'tsc --noEmit',
                 'build:daily': 'node scripts/generate_planning_metadata.mjs && vite build --config vite.static.config.ts && cp public/favicon.svg site-dist/favicon.svg',
-                'test:daily': 'node scripts/generate_planning_metadata.mjs --check && node --experimental-strip-types --test tests/learning.test.mjs tests/academy.test.mjs tests/arcade.test.mjs tests/answer-contract.test.mjs tests/long-course.test.mjs tests/local-pdfs.test.mjs tests/book-media.test.mjs tests/blink-study-captions.test.mjs tests/discovery.test.mjs tests/chapter-content.test.mjs tests/chapter-continuity.test.mjs tests/planning-metadata.test.mjs tests/chapter-dashboard.test.mjs tests/review-queue.test.mjs tests/book-gaps.test.mjs tests/learning-insights.test.mjs tests/listening.test.mjs tests/backup-merge.test.mjs tests/offline-build.test.mjs tests/oral-practice.test.mjs tests/week3-content.test.mjs tests/booster.test.mjs tests/profile-api.test.mjs tests/profile-sync.test.mjs tests/profile-sync-races.test.mjs'}
+                'test:daily': 'node scripts/generate_planning_metadata.mjs --check && node --experimental-strip-types --test tests/learning.test.mjs tests/academy.test.mjs tests/arcade.test.mjs tests/answer-contract.test.mjs tests/long-course.test.mjs tests/local-pdfs.test.mjs tests/book-media.test.mjs tests/blink-study-captions.test.mjs tests/discovery.test.mjs tests/chapter-content.test.mjs tests/chapter-continuity.test.mjs tests/planning-metadata.test.mjs tests/chapter-dashboard.test.mjs tests/review-queue.test.mjs tests/book-gaps.test.mjs tests/learning-insights.test.mjs tests/listening.test.mjs tests/backup-merge.test.mjs tests/offline-build.test.mjs tests/oral-practice.test.mjs tests/week3-content.test.mjs tests/booster.test.mjs tests/profile-api.test.mjs tests/profile-sync.test.mjs tests/profile-sync-races.test.mjs tests/vocab-engine.test.mjs tests/vocab-catalogue.test.mjs tests/vocab-library.test.mjs'}
     require(all(package['scripts'].get(key) == value for key, value in expected.items()), 'Maintained command changed')
     require(not any(key in package['scripts'] for name in expected for key in ('pre'+name, 'post'+name)),
             'New lifecycle script requires review')
@@ -59,7 +59,7 @@ def main():
               for name in ('tests', 'pass', 'fail', 'cancelled', 'skipped', 'todo')}
     require(all(len(value) == 1 for value in totals.values()), 'Node test accounting missing or ambiguous')
     totals = {name: int(value[0]) for name, value in totals.items()}
-    require(all(code == 0 for code in outcomes.values()) and totals['tests'] >= 279
+    require(all(code == 0 for code in outcomes.values()) and totals['tests'] >= 308
             and totals['pass'] == totals['tests'] and all(totals[key] == 0 for key in ('fail', 'cancelled', 'skipped', 'todo')),
             'All maintained daily commands and tests must pass without skips')
     output = work/'site-dist'
