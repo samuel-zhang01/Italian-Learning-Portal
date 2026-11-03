@@ -237,5 +237,25 @@
     "publicArcadeBrowserGroups": 14,
     "publicOfflineBrowserGroups": 6,
     "syntheticProfileRemoved": true
+  },
+  "vocabulary_explorer_2026_11_03": {
+    "passed": true,
+    "report": "docs/vocabulary-explorer-browser-audit.json",
+    "testedPaths": [
+      "Individual word search and compound filters",
+      "Read/reveal without recall credit; save, reload and revisit",
+      "Private PDF checksum connection and physical-page link",
+      "Single-word typed round, wrong-answer evidence, round receipt and review dates",
+      "Browse while a round is paused, then resume the existing draft",
+      "EN/IT mobile and desktop layouts",
+      "All four new lessons in both languages: wrong answer, reload, completion, notebook and delayed recall rescheduling"
+    ],
+    "limitations": [
+      "Automated Chromium journeys; no human usability study or physical-device claim.",
+      "No full screen-reader certification.",
+      "Local private PDF connections expire on reload by design.",
+      "Production publication and live profile sync were outside this task.",
+      "Build retains existing large content-chunk warnings."
+    ]
   }
 }

@@ -200,8 +200,8 @@ try {
   await page.getByRole("button", { name: "Show the answer", exact: true }).click(); await ready(page, ".vocab-feedback");
   const supportedRecord = (await state(page)).vocabPractice.records[first.id];
   assert.equal(supportedRecord.first.assisted, true); assert.equal(supportedRecord.first.correct, false);
-  await page.locator(".vocab-example summary").click();
-  assert.ok((await page.locator(".vocab-example").innerText()).includes(first.word.example.it));
+  await page.locator(".vocab-example summary").first().click();
+  assert.ok((await page.locator(".vocab-example").first().innerText()).includes(first.word.example.it));
   await page.locator(".vocab-next").click(); await ready(page, ".vocab-finish");
   assert.equal(await page.evaluate(() => document.activeElement?.tagName), "H1");
   pass("support", "Accent keys insert correctly; Show the answer records support without independent credit; completion receives focus");

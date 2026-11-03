@@ -11,8 +11,9 @@ export function PracticeHub({ p, today, t, go }: Props) {
       <section className="panel practice-hub-card vocabulary-hub-card">
         <span className="eyebrow">{t("TYPE & REMEMBER", "SCRIVI E RICORDA")}</span>
         <h2>{t("Vocabulary booster", "Allena il vocabolario")}</h2>
-        <p>{t(`See English, type Italian. ${wordCount} words and phrases across everyday and course themes.`, `Leggi l’inglese, scrivi l’italiano. ${wordCount} parole ed espressioni su temi quotidiani e del corso.`)}</p>
+        <p>{t(`Explore ${wordCount} words and phrases. See examples, revisit your class pages, then type from memory.`, `Esplora ${wordCount} parole ed espressioni. Leggi gli esempi, ritrova le pagine del corso e scrivi a memoria.`)}</p>
         <button className="button primary" onClick={() => go("vocab-boost")}>{p.vocabPractice?.active ? t("Resume my words", "Riprendi le mie parole") : t(`Type ${p.vocabPractice?.settings.size ?? 5} words`, `Scrivi ${p.vocabPractice?.settings.size ?? 5} parole`)} →</button>
+        <button className="text-button" onClick={() => go("vocab-boost?view=library")}>{t("Explore my word library", "Esplora il mio lessico")} →</button>
         {due > 0 && <span className="hint">{t(`${due} words ready for review`, `${due} parole da ripassare`)}</span>}
       </section>
       <section className="panel practice-hub-card">

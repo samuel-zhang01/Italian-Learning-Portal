@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-10-28",
+  "reviewedOn": "2026-11-03",
   "banks": [
     {
       "id": "survival",
@@ -4457,6 +4457,1642 @@
           }
         }
       ]
+    },
+    {
+      "id": "week4-wardrobe",
+      "title": {
+        "en": "Clothes & details",
+        "it": "Abiti e dettagli"
+      },
+      "level": "A1",
+      "missionId": "week4-wardrobe-mission",
+      "description": {
+        "en": "Describe three invented items for a small shop window. Include a colour, a material and a pattern.",
+        "it": "Descrivi tre oggetti inventati per una piccola vetrina. Includi un colore, un materiale e un motivo."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-0885f267bac5",
+          "pages": [
+            4,
+            12
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "adjective-agreement"
+      ],
+      "words": [
+        {
+          "id": "word:week4-wardrobe:0",
+          "term": {
+            "en": "the padded jacket",
+            "it": "il piumino"
+          },
+          "example": {
+            "en": "The green padded jacket is very warm.",
+            "it": "Il piumino verde è molto caldo."
+          },
+          "answers": [
+            "il piumino",
+            "il giubbotto imbottito"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                4
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "gender": "m",
+          "plural": {
+            "it": "i piumini",
+            "en": "the padded jackets"
+          }
+        },
+        {
+          "id": "word:week4-wardrobe:1",
+          "term": {
+            "en": "the earrings",
+            "it": "gli orecchini"
+          },
+          "example": {
+            "en": "The earrings are in the box.",
+            "it": "Gli orecchini sono nella scatola."
+          },
+          "answers": [
+            "gli orecchini"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                4
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "gender": "m"
+        },
+        {
+          "id": "word:week4-wardrobe:2",
+          "term": {
+            "en": "the necklace",
+            "it": "la collana"
+          },
+          "example": {
+            "en": "I am looking for a necklace for my sister.",
+            "it": "Cerco una collana per mia sorella."
+          },
+          "answers": [
+            "la collana"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                4
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "gender": "f",
+          "plural": {
+            "it": "le collane",
+            "en": "the necklaces"
+          }
+        },
+        {
+          "id": "word:week4-wardrobe:3",
+          "term": {
+            "en": "the ankle boots",
+            "it": "gli stivaletti"
+          },
+          "example": {
+            "en": "The brown ankle boots cost eighty euros.",
+            "it": "Gli stivaletti marroni costano ottanta euro."
+          },
+          "answers": [
+            "gli stivaletti"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                4
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "gender": "m"
+        },
+        {
+          "id": "word:week4-wardrobe:4",
+          "term": {
+            "en": "the loafers",
+            "it": "i mocassini"
+          },
+          "example": {
+            "en": "These loafers are light.",
+            "it": "Questi mocassini sono leggeri."
+          },
+          "answers": [
+            "i mocassini"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "gender": "m"
+        },
+        {
+          "id": "word:week4-wardrobe:5",
+          "term": {
+            "en": "the raincoat",
+            "it": "l’impermeabile"
+          },
+          "example": {
+            "en": "I put on my raincoat because it is raining.",
+            "it": "Metto l’impermeabile perché piove."
+          },
+          "answers": [
+            "l’impermeabile"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "gender": "m",
+          "plural": {
+            "it": "gli impermeabili",
+            "en": "the raincoats"
+          }
+        },
+        {
+          "id": "word:week4-wardrobe:6",
+          "term": {
+            "en": "the high-heeled shoes",
+            "it": "le scarpe con il tacco"
+          },
+          "example": {
+            "en": "The high-heeled shoes are in the window.",
+            "it": "Le scarpe con il tacco sono nella vetrina."
+          },
+          "answers": [
+            "le scarpe con il tacco",
+            "le scarpe col tacco",
+            "le scarpe con i tacchi"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                4
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "gender": "f"
+        },
+        {
+          "id": "word:week4-wardrobe:7",
+          "term": {
+            "en": "striped",
+            "it": "a righe"
+          },
+          "example": {
+            "en": "I am looking for a striped scarf.",
+            "it": "Cerco una sciarpa a righe."
+          },
+          "answers": [
+            "a righe"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "lesson"
+        },
+        {
+          "id": "word:week4-wardrobe:8",
+          "term": {
+            "en": "polka-dot",
+            "it": "a pois"
+          },
+          "example": {
+            "en": "The polka-dot skirt is blue and white.",
+            "it": "La gonna a pois è blu e bianca."
+          },
+          "answers": [
+            "a pois"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-wardrobe:9",
+          "term": {
+            "en": "plain-coloured",
+            "it": "a tinta unita"
+          },
+          "example": {
+            "en": "I prefer a plain-coloured sweatshirt.",
+            "it": "Preferisco una felpa a tinta unita."
+          },
+          "answers": [
+            "a tinta unita"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-wardrobe:10",
+          "term": {
+            "en": "made of cotton",
+            "it": "di cotone"
+          },
+          "example": {
+            "en": "This T-shirt is made of cotton.",
+            "it": "Questa maglietta è di cotone."
+          },
+          "answers": [
+            "di cotone"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                4
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-wardrobe:11",
+          "term": {
+            "en": "made of wool",
+            "it": "di lana"
+          },
+          "example": {
+            "en": "The wool scarf is warm.",
+            "it": "La sciarpa di lana è calda."
+          },
+          "answers": [
+            "di lana"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                4
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-wardrobe:12",
+          "term": {
+            "en": "long-sleeved",
+            "it": "a maniche lunghe"
+          },
+          "example": {
+            "en": "I would like a long-sleeved shirt.",
+            "it": "Vorrei una camicia a maniche lunghe."
+          },
+          "answers": [
+            "a maniche lunghe"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                4
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-wardrobe:13",
+          "term": {
+            "en": "short-sleeved",
+            "it": "a maniche corte"
+          },
+          "example": {
+            "en": "In summer I wear short-sleeved shirts.",
+            "it": "In estate porto camicie a maniche corte."
+          },
+          "answers": [
+            "a maniche corte"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                4
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-wardrobe:14",
+          "term": {
+            "en": "a pair of shoes",
+            "it": "un paio di scarpe"
+          },
+          "example": {
+            "en": "I buy a pair of black shoes.",
+            "it": "Compro un paio di scarpe nere."
+          },
+          "answers": [
+            "un paio di scarpe"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                4
+              ]
+            }
+          ],
+          "provenance": "extension"
+        }
+      ]
+    },
+    {
+      "id": "week4-fitting",
+      "title": {
+        "en": "Find the right fit",
+        "it": "Trova la taglia giusta"
+      },
+      "level": "A1",
+      "missionId": "week4-fitting-mission",
+      "description": {
+        "en": "Invent a short fitting-room conversation about a jacket. Ask to try it on, describe the fit and ask for another size.",
+        "it": "Inventa un breve dialogo su una giacca. Chiedi di provarla, descrivi come veste e chiedi un’altra taglia."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-0885f267bac5",
+          "pages": [
+            8,
+            12
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "adjective-agreement"
+      ],
+      "words": [
+        {
+          "id": "word:week4-fitting:0",
+          "term": {
+            "en": "the fitting room",
+            "it": "il camerino"
+          },
+          "example": {
+            "en": "The fitting room is at the back of the shop.",
+            "it": "Il camerino è in fondo al negozio."
+          },
+          "answers": [
+            "il camerino",
+            "il camerino di prova"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "gender": "m",
+          "plural": {
+            "it": "i camerini",
+            "en": "the fitting rooms"
+          }
+        },
+        {
+          "id": "word:week4-fitting:1",
+          "term": {
+            "en": "the medium size",
+            "it": "la taglia media"
+          },
+          "example": {
+            "en": "Do you have the medium size in green?",
+            "it": "Avete la taglia media in verde?"
+          },
+          "answers": [
+            "la taglia media"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "gender": "f",
+          "plural": {
+            "it": "le taglie medie",
+            "en": "the medium sizes"
+          }
+        },
+        {
+          "id": "word:week4-fitting:2",
+          "term": {
+            "en": "the small size",
+            "it": "la taglia piccola"
+          },
+          "example": {
+            "en": "The small size is too tight.",
+            "it": "La taglia piccola è troppo stretta."
+          },
+          "answers": [
+            "la taglia piccola"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "gender": "f",
+          "plural": {
+            "it": "le taglie piccole",
+            "en": "the small sizes"
+          }
+        },
+        {
+          "id": "word:week4-fitting:3",
+          "term": {
+            "en": "the large size",
+            "it": "la taglia grande"
+          },
+          "example": {
+            "en": "I am trying on the large size.",
+            "it": "Provo la taglia grande."
+          },
+          "answers": [
+            "la taglia grande"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "gender": "f",
+          "plural": {
+            "it": "le taglie grandi",
+            "en": "the large sizes"
+          }
+        },
+        {
+          "id": "word:week4-fitting:4",
+          "term": {
+            "en": "it suits me",
+            "it": "mi sta bene"
+          },
+          "example": {
+            "en": "This colour suits me.",
+            "it": "Questo colore mi sta bene."
+          },
+          "answers": [
+            "mi sta bene"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "lesson"
+        },
+        {
+          "id": "word:week4-fitting:5",
+          "term": {
+            "en": "they suit me",
+            "it": "mi stanno bene"
+          },
+          "example": {
+            "en": "These glasses suit me.",
+            "it": "Questi occhiali mi stanno bene."
+          },
+          "answers": [
+            "mi stanno bene"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-fitting:6",
+          "term": {
+            "en": "it is too tight (masculine)",
+            "it": "è troppo stretto"
+          },
+          "example": {
+            "en": "The coat is too tight.",
+            "it": "Il cappotto è troppo stretto."
+          },
+          "answers": [
+            "è troppo stretto"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-fitting:7",
+          "term": {
+            "en": "it is too loose (feminine)",
+            "it": "è troppo larga"
+          },
+          "example": {
+            "en": "This jacket is too loose.",
+            "it": "Questa giacca è troppo larga."
+          },
+          "answers": [
+            "è troppo larga"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-fitting:8",
+          "term": {
+            "en": "can I try it on? (masculine)",
+            "it": "posso provarlo?"
+          },
+          "example": {
+            "en": "I like this coat. Can I try it on?",
+            "it": "Questo cappotto mi piace. Posso provarlo?"
+          },
+          "answers": [
+            "posso provarlo?"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-fitting:9",
+          "term": {
+            "en": "can I try it on? (feminine)",
+            "it": "posso provarla?"
+          },
+          "example": {
+            "en": "The jacket is nice. Can I try it on?",
+            "it": "La giacca è bella. Posso provarla?"
+          },
+          "answers": [
+            "posso provarla?"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-fitting:10",
+          "term": {
+            "en": "do you have another size?",
+            "it": "avete un’altra taglia?"
+          },
+          "example": {
+            "en": "This one is small. Do you have another size?",
+            "it": "Questa è piccola. Avete un’altra taglia?"
+          },
+          "answers": [
+            "avete un’altra taglia?",
+            "ha un’altra taglia?",
+            "hai un’altra taglia?"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-fitting:11",
+          "term": {
+            "en": "do you have another colour?",
+            "it": "avete un altro colore?"
+          },
+          "example": {
+            "en": "I like the skirt. Do you have another colour?",
+            "it": "Mi piace la gonna. Avete un altro colore?"
+          },
+          "answers": [
+            "avete un altro colore?",
+            "ha un altro colore?",
+            "hai un altro colore?"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                8
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-fitting:12",
+          "term": {
+            "en": "where are the fitting rooms?",
+            "it": "dove sono i camerini?"
+          },
+          "example": {
+            "en": "I would like to try on the sweatshirt. Where are the fitting rooms?",
+            "it": "Vorrei provare la felpa. Dove sono i camerini?"
+          },
+          "answers": [
+            "dove sono i camerini?"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-fitting:13",
+          "term": {
+            "en": "I wear size forty-two",
+            "it": "porto la quarantadue"
+          },
+          "example": {
+            "en": "I usually wear size forty-two.",
+            "it": "Di solito porto la quarantadue."
+          },
+          "answers": [
+            "porto la quarantadue"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-fitting:14",
+          "term": {
+            "en": "I am looking for a jacket",
+            "it": "cerco una giacca"
+          },
+          "example": {
+            "en": "Good morning, I am looking for a light jacket.",
+            "it": "Buongiorno, cerco una giacca leggera."
+          },
+          "answers": [
+            "cerco una giacca"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                4
+              ]
+            }
+          ],
+          "provenance": "extension"
+        }
+      ]
+    },
+    {
+      "id": "week4-checkout",
+      "title": {
+        "en": "Prices & paying",
+        "it": "Prezzi e pagamenti"
+      },
+      "level": "A1",
+      "missionId": "week4-checkout-mission",
+      "description": {
+        "en": "Invent a checkout exchange for a pair of gloves. Ask the price, choose a payment method and mention the receipt.",
+        "it": "Inventa uno scambio alla cassa per un paio di guanti. Chiedi il prezzo, scegli come pagare e menziona lo scontrino."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-0885f267bac5",
+          "pages": [
+            11,
+            12
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "definite-articles"
+      ],
+      "words": [
+        {
+          "id": "word:week4-checkout:0",
+          "term": {
+            "en": "the shopping centre",
+            "it": "il centro commerciale"
+          },
+          "example": {
+            "en": "The shopping centre opens at nine.",
+            "it": "Il centro commerciale apre alle nove."
+          },
+          "answers": [
+            "il centro commerciale"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "gender": "m",
+          "plural": {
+            "it": "i centri commerciali",
+            "en": "the shopping centres"
+          }
+        },
+        {
+          "id": "word:week4-checkout:1",
+          "term": {
+            "en": "the checkout",
+            "it": "la cassa"
+          },
+          "example": {
+            "en": "I pay at the checkout near the exit.",
+            "it": "Pago alla cassa vicino all’uscita."
+          },
+          "answers": [
+            "la cassa"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "gender": "f",
+          "plural": {
+            "it": "le casse",
+            "en": "the checkouts"
+          }
+        },
+        {
+          "id": "word:week4-checkout:2",
+          "term": {
+            "en": "the price tag",
+            "it": "il cartellino"
+          },
+          "example": {
+            "en": "The price is on the tag.",
+            "it": "Il prezzo è sul cartellino."
+          },
+          "answers": [
+            "il cartellino",
+            "il cartellino del prezzo"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "gender": "m",
+          "plural": {
+            "it": "i cartellini",
+            "en": "the price tags"
+          }
+        },
+        {
+          "id": "word:week4-checkout:3",
+          "term": {
+            "en": "the full price",
+            "it": "il prezzo intero"
+          },
+          "example": {
+            "en": "The full price is fifty euros.",
+            "it": "Il prezzo intero è cinquanta euro."
+          },
+          "answers": [
+            "il prezzo intero"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "gender": "m",
+          "plural": {
+            "it": "i prezzi interi",
+            "en": "the full prices"
+          }
+        },
+        {
+          "id": "word:week4-checkout:4",
+          "term": {
+            "en": "on sale",
+            "it": "in saldo"
+          },
+          "example": {
+            "en": "These shoes are on sale.",
+            "it": "Queste scarpe sono in saldo."
+          },
+          "answers": [
+            "in saldo",
+            "in offerta"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-checkout:5",
+          "term": {
+            "en": "the discount",
+            "it": "lo sconto"
+          },
+          "example": {
+            "en": "The discount is ten euros.",
+            "it": "Lo sconto è di dieci euro."
+          },
+          "answers": [
+            "lo sconto"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "gender": "m",
+          "plural": {
+            "it": "gli sconti",
+            "en": "the discounts"
+          }
+        },
+        {
+          "id": "word:week4-checkout:6",
+          "term": {
+            "en": "the change (money)",
+            "it": "il resto"
+          },
+          "example": {
+            "en": "Here is the change: five euros.",
+            "it": "Ecco il resto: cinque euro."
+          },
+          "answers": [
+            "il resto"
+          ],
+          "partOfSpeech": "noun",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "gender": "m"
+        },
+        {
+          "id": "word:week4-checkout:7",
+          "term": {
+            "en": "in cash",
+            "it": "in contanti"
+          },
+          "example": {
+            "en": "Today I am paying in cash.",
+            "it": "Oggi pago in contanti."
+          },
+          "answers": [
+            "in contanti"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-checkout:8",
+          "term": {
+            "en": "by card",
+            "it": "con la carta"
+          },
+          "example": {
+            "en": "Can I pay by card?",
+            "it": "Posso pagare con la carta?"
+          },
+          "answers": [
+            "con la carta",
+            "con carta",
+            "con la carta di credito"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-checkout:9",
+          "term": {
+            "en": "how much do they cost?",
+            "it": "quanto costano?"
+          },
+          "example": {
+            "en": "How much do these gloves cost?",
+            "it": "Questi guanti, quanto costano?"
+          },
+          "answers": [
+            "quanto costano?",
+            "quanto vengono?"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-checkout:10",
+          "term": {
+            "en": "I will take it (masculine)",
+            "it": "lo prendo"
+          },
+          "example": {
+            "en": "I like this jumper. I will take it.",
+            "it": "Questo maglione mi piace. Lo prendo."
+          },
+          "answers": [
+            "lo prendo"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-checkout:11",
+          "term": {
+            "en": "I will take it (feminine)",
+            "it": "la prendo"
+          },
+          "example": {
+            "en": "The scarf is inexpensive. I will take it.",
+            "it": "La sciarpa costa poco. La prendo."
+          },
+          "answers": [
+            "la prendo"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-checkout:12",
+          "term": {
+            "en": "can I exchange it? (masculine)",
+            "it": "posso cambiarlo?"
+          },
+          "example": {
+            "en": "The jumper is small. Can I exchange it?",
+            "it": "Il maglione è piccolo. Posso cambiarlo?"
+          },
+          "answers": [
+            "posso cambiarlo?"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-checkout:13",
+          "term": {
+            "en": "I keep the receipt",
+            "it": "conservo lo scontrino"
+          },
+          "example": {
+            "en": "I keep the receipt in my bag.",
+            "it": "Conservo lo scontrino nella borsa."
+          },
+          "answers": [
+            "conservo lo scontrino"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-checkout:14",
+          "term": {
+            "en": "just a look",
+            "it": "solo un’occhiata"
+          },
+          "example": {
+            "en": "Thank you, I am just having a look.",
+            "it": "Grazie, do solo un’occhiata."
+          },
+          "answers": [
+            "solo un’occhiata"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                11
+              ]
+            }
+          ],
+          "provenance": "extension"
+        }
+      ]
+    },
+    {
+      "id": "week4-comparing",
+      "title": {
+        "en": "This one or that one?",
+        "it": "Questo o quello?"
+      },
+      "level": "A2",
+      "missionId": "week4-comparing-mission",
+      "description": {
+        "en": "Compare two invented scarves, then describe two qualities of one coat. Use di once and che once.",
+        "it": "Confronta due sciarpe inventate, poi descrivi due qualità di un cappotto. Usa di una volta e che una volta."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-0885f267bac5",
+          "pages": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "a2-comparisons"
+      ],
+      "words": [
+        {
+          "id": "word:week4-comparing:0",
+          "term": {
+            "en": "this jumper",
+            "it": "questo maglione"
+          },
+          "example": {
+            "en": "This jumper is made of wool.",
+            "it": "Questo maglione è di lana."
+          },
+          "answers": [
+            "questo maglione"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                8
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-comparing:1",
+          "term": {
+            "en": "that jacket",
+            "it": "quella giacca"
+          },
+          "example": {
+            "en": "That jacket is on sale.",
+            "it": "Quella giacca è in saldo."
+          },
+          "answers": [
+            "quella giacca"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                7
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-comparing:2",
+          "term": {
+            "en": "those boots",
+            "it": "quegli stivali"
+          },
+          "example": {
+            "en": "Those boots cost too much.",
+            "it": "Quegli stivali costano troppo."
+          },
+          "answers": [
+            "quegli stivali"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                7
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-comparing:3",
+          "term": {
+            "en": "those bags",
+            "it": "quelle borse"
+          },
+          "example": {
+            "en": "I like those red bags.",
+            "it": "Mi piacciono quelle borse rosse."
+          },
+          "answers": [
+            "quelle borse"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                7
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-comparing:4",
+          "term": {
+            "en": "a beautiful coat",
+            "it": "un bel cappotto"
+          },
+          "example": {
+            "en": "It is a beautiful coat, but it is expensive.",
+            "it": "È un bel cappotto, ma è caro."
+          },
+          "answers": [
+            "un bel cappotto"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                7
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-comparing:5",
+          "term": {
+            "en": "cheaper (masculine)",
+            "it": "più economico"
+          },
+          "example": {
+            "en": "This coat is cheaper than the black one.",
+            "it": "Questo cappotto è più economico di quello nero."
+          },
+          "answers": [
+            "più economico",
+            "meno caro",
+            "meno costoso"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                8
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-comparing:6",
+          "term": {
+            "en": "less expensive (masculine)",
+            "it": "meno caro"
+          },
+          "example": {
+            "en": "The nearby shop is less expensive.",
+            "it": "Il negozio vicino è meno caro."
+          },
+          "answers": [
+            "meno caro",
+            "meno costoso",
+            "più economico"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                9
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-comparing:7",
+          "term": {
+            "en": "more comfortable (feminine)",
+            "it": "più comoda"
+          },
+          "example": {
+            "en": "This jacket is more comfortable than mine.",
+            "it": "Questa giacca è più comoda della mia."
+          },
+          "answers": [
+            "più comoda",
+            "più confortevole"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                8
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-comparing:8",
+          "term": {
+            "en": "more elegant",
+            "it": "più elegante"
+          },
+          "example": {
+            "en": "The white shirt is more elegant than the green one.",
+            "it": "La camicia bianca è più elegante di quella verde."
+          },
+          "answers": [
+            "più elegante"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                8
+              ]
+            }
+          ],
+          "provenance": "lesson"
+        },
+        {
+          "id": "word:week4-comparing:9",
+          "term": {
+            "en": "more modern (masculine)",
+            "it": "più moderno"
+          },
+          "example": {
+            "en": "This design is more modern.",
+            "it": "Questo modello è più moderno."
+          },
+          "answers": [
+            "più moderno"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                8
+              ]
+            }
+          ],
+          "provenance": "lesson"
+        },
+        {
+          "id": "word:week4-comparing:10",
+          "term": {
+            "en": "I like it too",
+            "it": "anche a me piace"
+          },
+          "example": {
+            "it": "A te piace il verde. Anche a me piace.",
+            "en": "You like green. I like it too."
+          },
+          "answers": [
+            "anche a me piace"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-comparing:11",
+          "term": {
+            "en": "I do not like it either",
+            "it": "neanche a me piace"
+          },
+          "example": {
+            "it": "A te non piace il rosa. Neanche a me piace.",
+            "en": "You do not like pink. I do not like it either."
+          },
+          "answers": [
+            "neanche a me piace"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:week4-comparing:12",
+          "term": {
+            "en": "I do not (disagreeing with a liking)",
+            "it": "a me no"
+          },
+          "example": {
+            "en": "You like this bag; I do not.",
+            "it": "A te piace questa borsa; a me no."
+          },
+          "answers": [
+            "a me no"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "provenance": "lesson"
+        },
+        {
+          "id": "word:week4-comparing:13",
+          "term": {
+            "en": "I do (disagreeing with a dislike)",
+            "it": "a me sì"
+          },
+          "example": {
+            "en": "You do not like sales; I do.",
+            "it": "A te non piacciono i saldi; a me sì."
+          },
+          "answers": [
+            "a me sì"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                6
+              ]
+            }
+          ],
+          "provenance": "lesson"
+        },
+        {
+          "id": "word:week4-comparing:14",
+          "term": {
+            "en": "youthful",
+            "it": "giovanile"
+          },
+          "example": {
+            "en": "This jacket has a youthful style.",
+            "it": "Questa giacca ha uno stile giovanile."
+          },
+          "answers": [
+            "giovanile"
+          ],
+          "partOfSpeech": "adjective",
+          "sourceRefs": [
+            {
+              "id": "src-0885f267bac5",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "lesson"
+        }
+      ]
     }
   ],
   "lessons": [
@@ -8827,6 +10463,270 @@
         "it": "Pronuncia lentamente le forme in tre blocchi, poi racconta la mattina senza fermarti. Cambia il soggetto in Giulia e Anna e controlla sia sono sia le desinenze in -e."
       },
       "resource": "auxiliary-drill"
+    },
+    {
+      "missionId": "week4-wardrobe-mission",
+      "bank": "week4-wardrobe",
+      "notes": [
+        {
+          "en": "Learn a noun with its article; use short descriptions such as di lana or a righe without changing their endings. The examples here are original practice.",
+          "it": "Impara un nome con il suo articolo; usa descrizioni brevi come di lana o a righe senza cambiarne le desinenze. Gli esempi qui sono pratica originale."
+        },
+        {
+          "en": "Read the Italian example, cover it, then try a different detail.",
+          "it": "Leggi l’esempio italiano, coprilo e poi cambia un dettaglio."
+        },
+        {
+          "en": "Save the expressions you want to revisit. The source links identify the lesson topic; examples and extra phrases are original companion practice.",
+          "it": "Salva le espressioni da ripassare. I riferimenti indicano il tema del corso; esempi ed espressioni aggiuntive sono pratica originale del portale."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What are you looking for?",
+          "it": "A: Che cosa cerchi?"
+        },
+        {
+          "en": "B: A raincoat.",
+          "it": "B: Un impermeabile."
+        },
+        {
+          "en": "A: Do you like this plain-coloured one?",
+          "it": "A: Ti piace questo a tinta unita?"
+        },
+        {
+          "en": "B: I prefer the striped one.",
+          "it": "B: Preferisco quello a righe."
+        },
+        {
+          "en": "A: And the wool scarf?",
+          "it": "A: E la sciarpa di lana?"
+        },
+        {
+          "en": "B: It is nice, but I already have one.",
+          "it": "B: È bella, ma ne ho già una."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Complete: a wool scarf = una sciarpa ___ lana.",
+          "it": "Completa: una sciarpa fatta di lana = una sciarpa ___ lana."
+        },
+        "answers": [
+          "di"
+        ],
+        "explanation": {
+          "en": "Use di for the material.",
+          "it": "Usa di per il materiale."
+        }
+      },
+      "frame": {
+        "en": "I am looking for ___. It is made of ___. I like the ___ one.",
+        "it": "Cerco ___. È di ___. Mi piace quello / quella ___."
+      },
+      "speaking": {
+        "en": "Describe three invented items for a small shop window. Include a colour, a material and a pattern.",
+        "it": "Descrivi tre oggetti inventati per una piccola vetrina. Includi un colore, un materiale e un motivo."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "week4-fitting-mission",
+      "bank": "week4-fitting",
+      "notes": [
+        {
+          "en": "Start with a complete useful phrase. Lo refers to a masculine singular item and la to a feminine singular item: provarlo, provarla.",
+          "it": "Parti da una frase utile completa. Lo si riferisce a un capo maschile singolare e la a uno femminile singolare: provarlo, provarla."
+        },
+        {
+          "en": "Read the Italian example, cover it, then try a different detail.",
+          "it": "Leggi l’esempio italiano, coprilo e poi cambia un dettaglio."
+        },
+        {
+          "en": "Save the expressions you want to revisit. The source links identify the lesson topic; examples and extra phrases are original companion practice.",
+          "it": "Salva le espressioni da ripassare. I riferimenti indicano il tema del corso; esempi ed espressioni aggiuntive sono pratica originale del portale."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Can I try on this jacket?",
+          "it": "A: Posso provare questa giacca?"
+        },
+        {
+          "en": "B: Of course. The fitting room is here.",
+          "it": "B: Certo. Il camerino è qui."
+        },
+        {
+          "en": "A: It is too loose.",
+          "it": "A: È troppo larga."
+        },
+        {
+          "en": "B: Do you want the small size?",
+          "it": "B: Vuole la taglia piccola?"
+        },
+        {
+          "en": "A: Yes, thank you.",
+          "it": "A: Sì, grazie."
+        },
+        {
+          "en": "B: Here is another jacket.",
+          "it": "B: Ecco un’altra giacca."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Complete for a jacket: posso provar___?",
+          "it": "Completa per una giacca: posso provar___?"
+        },
+        "answers": [
+          "la"
+        ],
+        "explanation": {
+          "en": "Giacca is feminine singular: provarla.",
+          "it": "Giacca è femminile singolare: provarla."
+        }
+      },
+      "frame": {
+        "en": "Can I try it on? It is too ___. Do you have another ___?",
+        "it": "Posso provarlo / provarla? È troppo ___. Avete un’altra ___?"
+      },
+      "speaking": {
+        "en": "Invent a short fitting-room conversation about a jacket. Ask to try it on, describe the fit and ask for another size.",
+        "it": "Inventa un breve dialogo su una giacca. Chiedi di provarla, descrivi come veste e chiedi un’altra taglia."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "week4-checkout-mission",
+      "bank": "week4-checkout",
+      "notes": [
+        {
+          "en": "Use costa for one item and costano for several. Practise payment phrases as chunks before changing the details.",
+          "it": "Usa costa per un oggetto e costano per più oggetti. Esercita le espressioni di pagamento come blocchi prima di cambiare i dettagli."
+        },
+        {
+          "en": "Read the Italian example, cover it, then try a different detail.",
+          "it": "Leggi l’esempio italiano, coprilo e poi cambia un dettaglio."
+        },
+        {
+          "en": "Save the expressions you want to revisit. The source links identify the lesson topic; examples and extra phrases are original companion practice.",
+          "it": "Salva le espressioni da ripassare. I riferimenti indicano il tema del corso; esempi ed espressioni aggiuntive sono pratica originale del portale."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: How much do these gloves cost?",
+          "it": "A: Quanto costano questi guanti?"
+        },
+        {
+          "en": "B: Eighteen euros.",
+          "it": "B: Diciotto euro."
+        },
+        {
+          "en": "A: Are they on sale?",
+          "it": "A: Sono in saldo?"
+        },
+        {
+          "en": "B: Yes, the full price is thirty euros.",
+          "it": "B: Sì, il prezzo intero è trenta euro."
+        },
+        {
+          "en": "A: I am paying in cash.",
+          "it": "A: Pago in contanti."
+        },
+        {
+          "en": "B: Here is your receipt.",
+          "it": "B: Ecco lo scontrino."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Complete for two scarves: quanto ___? (costare)",
+          "it": "Completa per due sciarpe: quanto ___? (costare)"
+        },
+        "answers": [
+          "costano"
+        ],
+        "explanation": {
+          "en": "Several items take costano.",
+          "it": "Più oggetti richiedono costano."
+        }
+      },
+      "frame": {
+        "en": "How much do they cost? I am paying ___. I keep ___.",
+        "it": "Quanto costano? Pago ___. Conservo ___."
+      },
+      "speaking": {
+        "en": "Invent a checkout exchange for a pair of gloves. Ask the price, choose a payment method and mention the receipt.",
+        "it": "Inventa uno scambio alla cassa per un paio di guanti. Chiedi il prezzo, scegli come pagare e menziona lo scontrino."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "week4-comparing-mission",
+      "bank": "week4-comparing",
+      "notes": [
+        {
+          "en": "A2 extension: compare two items with più/meno + adjective + di; compare two qualities of one item with che. Before a noun, quello follows the article pattern: quel cappotto, quegli stivali.",
+          "it": "Estensione A2: confronta due oggetti con più/meno + aggettivo + di; confronta due qualità di un oggetto con che. Prima di un nome, quello segue lo schema dell’articolo: quel cappotto, quegli stivali."
+        },
+        {
+          "en": "Read the Italian example, cover it, then try a different detail.",
+          "it": "Leggi l’esempio italiano, coprilo e poi cambia un dettaglio."
+        },
+        {
+          "en": "Save the expressions you want to revisit. The source links identify the lesson topic; examples and extra phrases are original companion practice.",
+          "it": "Salva le espressioni da ripassare. I riferimenti indicano il tema del corso; esempi ed espressioni aggiuntive sono pratica originale del portale."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Do you like these boots?",
+          "it": "A: Ti piacciono questi stivali?"
+        },
+        {
+          "en": "B: Yes, but those are cheaper.",
+          "it": "B: Sì, ma quelli sono più economici."
+        },
+        {
+          "en": "A: I prefer this coat.",
+          "it": "A: Preferisco questo cappotto."
+        },
+        {
+          "en": "B: Me too. It is more comfortable than elegant.",
+          "it": "B: Anche a me piace. È più comodo che elegante."
+        },
+        {
+          "en": "A: Shall we try it on?",
+          "it": "A: Lo proviamo?"
+        },
+        {
+          "en": "B: Gladly.",
+          "it": "B: Volentieri."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Compare two scarves: questa sciarpa è più lunga ___ quella rossa.",
+          "it": "Confronta due sciarpe: questa sciarpa è più lunga ___ quella rossa."
+        },
+        "answers": [
+          "di"
+        ],
+        "explanation": {
+          "en": "Two items are compared: use di.",
+          "it": "Si confrontano due oggetti: usa di."
+        }
+      },
+      "frame": {
+        "en": "This ___ is more ___ than that one. It is more ___ than ___.",
+        "it": "Questo / questa ___ è più ___ di quello / quella. È più ___ che ___."
+      },
+      "speaking": {
+        "en": "Compare two invented scarves, then describe two qualities of one coat. Use di once and che once.",
+        "it": "Confronta due sciarpe inventate, poi descrivi due qualità di un cappotto. Usa di una volta e che una volta."
+      },
+      "resource": "club"
     }
   ],
   "resources": [

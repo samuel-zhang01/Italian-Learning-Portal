@@ -1,0 +1,133 @@
+{
+  "testedAt": "2026-11-03T16:35:40.304Z",
+  "passed": true,
+  "environment": "Local Vite daily app; isolated Chromium guest contexts; profile requests blocked; no production learner data accessed.",
+  "checks": {
+    "typecheck": "passed",
+    "lint": "passed",
+    "dailyTests": {
+      "passed": 312,
+      "failed": 0
+    },
+    "buildDaily": "passed",
+    "privateFileTypesInSiteDist": []
+  },
+  "explorer": {
+    "groups": 13,
+    "checks": [
+      "Search, level and source filters combine; reveal creates no recall evidence; saved words and source-return context survive reload.",
+      "The exact private PDF connects by checksum; word references open at physical page 12.",
+      "Single-word recall records a wrong answer; the round receipt returns to its example, first attempt and next review date.",
+      "Review shows only due words, handles an empty queue and retains the all-words selection across reload.",
+      "Library, expanded cards and practice screen fit EN/IT at 320, 390, 768 and 1280 pixels with 44px controls.",
+      "en: week4-wardrobe-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review.",
+      "en: week4-fitting-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review.",
+      "en: week4-checkout-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review.",
+      "en: week4-comparing-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review.",
+      "it: week4-wardrobe-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review.",
+      "it: week4-fitting-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review.",
+      "it: week4-checkout-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review.",
+      "it: week4-comparing-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review."
+    ],
+    "layoutObservations": 17,
+    "widths": [
+      320,
+      390,
+      768,
+      1280
+    ],
+    "languages": [
+      "en",
+      "it"
+    ],
+    "horizontalOverflow": false,
+    "undersizedControls": false
+  },
+  "typingRegression": {
+    "groups": 12,
+    "checks": [
+      {
+        "id": "entry",
+        "name": "Practice presents connected vocabulary, verbs and grammar; vocabulary opens directly in typing mode"
+      },
+      {
+        "id": "learning",
+        "name": "Wrong and hinted answers remain honest; drafts/hints survive reload and pause; completion offers a clear stopping point"
+      },
+      {
+        "id": "separate",
+        "name": "Vocabulary and Games retain independent unfinished rounds and typed answers"
+      },
+      {
+        "id": "library",
+        "name": "The expanded library is searchable and paged; new topics open matching cards and saved words appear in the shared word bank"
+      },
+      {
+        "id": "grammar-word",
+        "name": "Saving a grammar-only expression leads to a typed round accepting one valid form, with the extra word catalogue collapsed"
+      },
+      {
+        "id": "review",
+        "name": "The shared review queue opens the scheduled typed word and retains its original first attempt"
+      },
+      {
+        "id": "keyboard",
+        "name": "Keyboard-only answering and continuation work, with focused feedback and a visible focus outline"
+      },
+      {
+        "id": "support",
+        "name": "Accent keys insert correctly; Show the answer records support without independent credit; completion receives focus"
+      },
+      {
+        "id": "profile-error",
+        "name": "Initial and repeated local PIN mismatches focus a visible alert in a short viewport without contacting the profile service"
+      },
+      {
+        "id": "layouts",
+        "name": "EN/IT routes, questions, feedback and completion fit portrait, desktop and short landscape without overflow, clipping or undersized controls"
+      },
+      {
+        "id": "reflow",
+        "name": "200% CSS zoom and a reduced-height keyboard approximation remain scrollable and operable; no physical keyboard claim"
+      },
+      {
+        "id": "runtime",
+        "name": "No uncaught browser errors or profile-service requests in the synthetic guest journeys"
+      }
+    ],
+    "layoutObservations": 148,
+    "uncaughtBrowserErrors": []
+  },
+  "visualInspection": [
+    "Desktop practice landing and shopping sequence",
+    "Desktop source-backed word details",
+    "390px expanded word card, example, noun forms and recall record"
+  ],
+  "fixesDuringAudit": [
+    "Gave topic/level/source selects concise accessible labels.",
+    "Connected private-PDF action to the existing materials route.",
+    "Started library-selected rounds in the typing view.",
+    "Retained all-word review selection on reload.",
+    "Allowed paused-round browsing with explicit resume and disabled competing starts.",
+    "Removed conflicting paper texture from flat navigation and saved-word controls."
+  ],
+  "preservation": {
+    "previousPracticeIds": 976,
+    "progressSchemaVersion": 1,
+    "originalContentHashes": "docs/week4-vocabulary-review.json"
+  },
+  "artifacts": {
+    "explorer": "work/week4-vocabulary/explorer/results.json",
+    "typingRegression": "work/week4-vocabulary/regression/results.json",
+    "desktopPreview": "work/week4-vocabulary/explorer/practice-desktop.png",
+    "mobileReadingPreview": "work/week4-vocabulary/explorer/reading-en-390.png"
+  },
+  "limits": [
+    "Automated Chromium journeys; no human usability study or physical-device claim.",
+    "No full screen-reader certification.",
+    "Local private PDF connections expire on reload by design.",
+    "Production publication and live profile sync were outside this task.",
+    "Build retains existing large content-chunk warnings."
+  ],
+  "deployment": "Not deployed; reviewed local build is in site-dist/."
+}

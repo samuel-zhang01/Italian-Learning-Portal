@@ -101,7 +101,7 @@ test("three bounded missions provide bilingual examples, distinct retrieval and 
     for (const word of bank.words) { pair(word.term, word.id); pair(word.example, word.id); }
     assert.ok(grammar.units.some((unit) => unit.missionIds.includes(mission.id)), `${mission.id}: existing grammar route`);
   }
-  assert.equal(enrichment.banks.flatMap((bank) => bank.words).length, 328);
+  assert.equal(enrichment.banks.filter(bank => !bank.id.startsWith("week4-")).flatMap((bank) => bank.words).length, 328);
 });
 
 test("auxiliary and reflexive retrieval accepts justified gender variants without accepting missing or wrong words", () => {

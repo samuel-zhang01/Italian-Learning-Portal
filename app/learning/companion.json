@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-10-28",
+  "reviewedOn": "2026-11-03",
   "sources": [
     {
       "id": "src-c62281320322",
@@ -432,6 +432,14 @@
       "course": 3,
       "pages": 20,
       "sha256": "f293d35b1616561dc25feb0a062f6d7c14b91f511bce5a254efd4e066b936538"
+    },
+    {
+      "id": "src-0885f267bac5",
+      "path": "Course 3/PDF_Week_4_Shopping_and_comparing.pdf",
+      "title": "PDF_Week_4_Shopping_and_comparing.pdf",
+      "course": 3,
+      "pages": 14,
+      "sha256": "0885f267bac57a28748edb348e1cfb66e2c9eaf40eaa09c65dcca9fb894b1b39"
     }
   ],
   "pages": [
@@ -41990,6 +41998,395 @@
       "model": {
         "en": "I will keep my own homework answers separate from the portal’s original practice.",
         "it": "Terrò separate le mie risposte al compito dalla pratica originale del portale."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-0885f267bac5-p1",
+      "sourceId": "src-0885f267bac5",
+      "page": 1,
+      "kind": "reference",
+      "focus": {
+        "en": "Welcome to Week 4",
+        "it": "Benvenuti alla settimana 4"
+      },
+      "unitIds": [
+        "adjective-agreement"
+      ],
+      "task": {
+        "en": "Choose one shopping phrase to learn and one topic to revisit. Start with A1 essentials; comparisons are a supported A2 extension.",
+        "it": "Scegli un’espressione sugli acquisti da imparare e un tema da ripassare. Inizia dalle basi A1; i confronti sono un’estensione A2 guidata."
+      },
+      "model": {
+        "en": "I am looking for a raincoat. I like the striped one. It is blue and white.",
+        "it": "Cerco un impermeabile. Mi piace quello a righe. È blu e bianco."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-0885f267bac5-p2",
+      "sourceId": "src-0885f267bac5",
+      "page": 2,
+      "kind": "reference",
+      "focus": {
+        "en": "Shopping goals",
+        "it": "Obiettivi sugli acquisti"
+      },
+      "unitIds": [
+        "adjective-agreement"
+      ],
+      "task": {
+        "en": "Choose one shopping phrase to learn and one topic to revisit. Start with A1 essentials; comparisons are a supported A2 extension.",
+        "it": "Scegli un’espressione sugli acquisti da imparare e un tema da ripassare. Inizia dalle basi A1; i confronti sono un’estensione A2 guidata."
+      },
+      "model": {
+        "en": "I am looking for a raincoat. I like the striped one. It is blue and white.",
+        "it": "Cerco un impermeabile. Mi piace quello a righe. È blu e bianco."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-0885f267bac5-p3",
+      "sourceId": "src-0885f267bac5",
+      "page": 3,
+      "kind": "reference",
+      "focus": {
+        "en": "Independent film discussion",
+        "it": "Discussione autonoma sul film"
+      },
+      "unitIds": [
+        "adjective-agreement"
+      ],
+      "task": {
+        "en": "Follow this task independently in your private class PDF. For extra practice, use a different situation in the linked lessons.",
+        "it": "Svolgi questo compito autonomamente nel PDF privato del corso. Per altra pratica, usa una situazione diversa nelle lezioni collegate."
+      },
+      "model": {
+        "en": "My homework answers stay separate from the portal examples.",
+        "it": "Le risposte ai compiti restano separate dagli esempi del portale."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-0885f267bac5-p4",
+      "sourceId": "src-0885f267bac5",
+      "page": 4,
+      "kind": "practice",
+      "focus": {
+        "en": "Clothes and accessories",
+        "it": "Abiti e accessori"
+      },
+      "unitIds": [
+        "adjective-agreement"
+      ],
+      "task": {
+        "en": "Describe a winter shop window using an impermeabile, a piumino and a collana. Add one colour to each item.",
+        "it": "Descrivi una vetrina invernale con un impermeabile, un piumino e una collana. Aggiungi un colore a ogni oggetto."
+      },
+      "model": {
+        "en": "There is a green raincoat, a blue padded jacket and a red necklace.",
+        "it": "Ci sono un impermeabile verde, un piumino blu e una collana rossa."
+      },
+      "checks": [
+        {
+          "en": "I wrote my own example instead of copying a source answer.",
+          "it": "Ho scritto un esempio mio invece di copiare una risposta della fonte."
+        },
+        {
+          "en": "I checked the article, ending and meaning.",
+          "it": "Ho controllato articolo, desinenza e significato."
+        }
+      ]
+    },
+    {
+      "id": "src-0885f267bac5-p5",
+      "sourceId": "src-0885f267bac5",
+      "page": 5,
+      "kind": "practice",
+      "focus": {
+        "en": "Express a liking",
+        "it": "Esprimi una preferenza"
+      },
+      "unitIds": [
+        "piacere"
+      ],
+      "task": {
+        "en": "Invent two preferences: one about a single scarf and one about several coats. Use mi piace and mi piacciono.",
+        "it": "Inventa due preferenze: una su una sciarpa e una su più cappotti. Usa mi piace e mi piacciono."
+      },
+      "model": {
+        "en": "I like the yellow scarf. I like the black coats.",
+        "it": "Mi piace la sciarpa gialla. Mi piacciono i cappotti neri."
+      },
+      "checks": [
+        {
+          "en": "I wrote my own example instead of copying a source answer.",
+          "it": "Ho scritto un esempio mio invece di copiare una risposta della fonte."
+        },
+        {
+          "en": "I checked the article, ending and meaning.",
+          "it": "Ho controllato articolo, desinenza e significato."
+        }
+      ]
+    },
+    {
+      "id": "src-0885f267bac5-p6",
+      "sourceId": "src-0885f267bac5",
+      "page": 6,
+      "kind": "practice",
+      "focus": {
+        "en": "Agree about a liking",
+        "it": "Concorda su una preferenza"
+      },
+      "unitIds": [
+        "piacere"
+      ],
+      "task": {
+        "en": "A friend likes green but dislikes pink. Agree with both preferences using anche a me and neanche a me. Then invent a different preference.",
+        "it": "A un amico piace il verde ma non piace il rosa. Concorda con entrambe le preferenze usando anche a me e neanche a me. Poi inventa una preferenza diversa."
+      },
+      "model": {
+        "en": "I like green. Me too. I do not like pink. Me neither.",
+        "it": "Mi piace il verde. Anche a me. Non mi piace il rosa. Neanche a me."
+      },
+      "checks": [
+        {
+          "en": "I wrote my own example instead of copying a source answer.",
+          "it": "Ho scritto un esempio mio invece di copiare una risposta della fonte."
+        },
+        {
+          "en": "I checked the article, ending and meaning.",
+          "it": "Ho controllato articolo, desinenza e significato."
+        }
+      ]
+    },
+    {
+      "id": "src-0885f267bac5-p7",
+      "sourceId": "src-0885f267bac5",
+      "page": 7,
+      "kind": "practice",
+      "focus": {
+        "en": "Point to an item",
+        "it": "Indica un oggetto"
+      },
+      "unitIds": [
+        "demonstratives"
+      ],
+      "task": {
+        "en": "Point to a coat, a backpack and several boots farther away. Put the correct form of quello before each noun.",
+        "it": "Indica un cappotto, uno zaino e diversi stivali lontani. Metti la forma corretta di quello prima di ogni nome."
+      },
+      "model": {
+        "en": "That coat is grey. That backpack is new. Those boots are brown.",
+        "it": "Quel cappotto è grigio. Quello zaino è nuovo. Quegli stivali sono marroni."
+      },
+      "checks": [
+        {
+          "en": "I wrote my own example instead of copying a source answer.",
+          "it": "Ho scritto un esempio mio invece di copiare una risposta della fonte."
+        },
+        {
+          "en": "I checked the article, ending and meaning.",
+          "it": "Ho controllato articolo, desinenza e significato."
+        }
+      ]
+    },
+    {
+      "id": "src-0885f267bac5-p8",
+      "sourceId": "src-0885f267bac5",
+      "page": 8,
+      "kind": "practice",
+      "focus": {
+        "en": "Choose between items",
+        "it": "Scegli fra oggetti"
+      },
+      "unitIds": [
+        "demonstratives"
+      ],
+      "task": {
+        "en": "Invent a choice between two scarves, one near you and one farther away. Give a colour and a preference.",
+        "it": "Inventa una scelta fra due sciarpe, una vicina e una lontana. Indica un colore e una preferenza."
+      },
+      "model": {
+        "en": "This scarf is yellow. That one is green. I prefer the green one.",
+        "it": "Questa sciarpa è gialla. Quella è verde. Preferisco quella verde."
+      },
+      "checks": [
+        {
+          "en": "I wrote my own example instead of copying a source answer.",
+          "it": "Ho scritto un esempio mio invece di copiare una risposta della fonte."
+        },
+        {
+          "en": "I checked the article, ending and meaning.",
+          "it": "Ho controllato articolo, desinenza e significato."
+        }
+      ]
+    },
+    {
+      "id": "src-0885f267bac5-p9",
+      "sourceId": "src-0885f267bac5",
+      "page": 9,
+      "kind": "practice",
+      "focus": {
+        "en": "Compare two items",
+        "it": "Confronta due oggetti"
+      },
+      "unitIds": [
+        "a2-comparisons"
+      ],
+      "task": {
+        "en": "Compare two invented raincoats by price and two shops by size. Use più or meno with di.",
+        "it": "Confronta due impermeabili inventati per prezzo e due negozi per dimensione. Usa più o meno con di."
+      },
+      "model": {
+        "en": "The blue raincoat is cheaper than the red one. This shop is smaller than that one.",
+        "it": "L’impermeabile blu è meno caro di quello rosso. Questo negozio è più piccolo di quello."
+      },
+      "checks": [
+        {
+          "en": "I wrote my own example instead of copying a source answer.",
+          "it": "Ho scritto un esempio mio invece di copiare una risposta della fonte."
+        },
+        {
+          "en": "I checked the article, ending and meaning.",
+          "it": "Ho controllato articolo, desinenza e significato."
+        }
+      ]
+    },
+    {
+      "id": "src-0885f267bac5-p10",
+      "sourceId": "src-0885f267bac5",
+      "page": 10,
+      "kind": "practice",
+      "focus": {
+        "en": "Compare two qualities",
+        "it": "Confronta due qualità"
+      },
+      "unitIds": [
+        "a2-comparisons"
+      ],
+      "task": {
+        "en": "Compare two qualities of one coat using che, then compare two scarves using di.",
+        "it": "Confronta due qualità di un cappotto usando che, poi confronta due sciarpe usando di."
+      },
+      "model": {
+        "en": "This coat is more elegant than comfortable. The red scarf is longer than the green one.",
+        "it": "Questo cappotto è più elegante che comodo. La sciarpa rossa è più lunga di quella verde."
+      },
+      "checks": [
+        {
+          "en": "I wrote my own example instead of copying a source answer.",
+          "it": "Ho scritto un esempio mio invece di copiare una risposta della fonte."
+        },
+        {
+          "en": "I checked the article, ending and meaning.",
+          "it": "Ho controllato articolo, desinenza e significato."
+        }
+      ]
+    },
+    {
+      "id": "src-0885f267bac5-p11",
+      "sourceId": "src-0885f267bac5",
+      "page": 11,
+      "kind": "practice",
+      "focus": {
+        "en": "Shopping habits",
+        "it": "Abitudini di acquisto"
+      },
+      "unitIds": [
+        "present-are"
+      ],
+      "task": {
+        "en": "Invent the habits of a fictional shopper. Say where they shop, who they go with and whether they like sales.",
+        "it": "Inventa le abitudini di una persona immaginaria. Di’ dove fa acquisti, con chi va e se le piacciono i saldi."
+      },
+      "model": {
+        "en": "Nora shops at the shopping centre. She goes with a friend. She likes sales.",
+        "it": "Nora fa acquisti al centro commerciale. Va con un’amica. Le piacciono i saldi."
+      },
+      "checks": [
+        {
+          "en": "I wrote my own example instead of copying a source answer.",
+          "it": "Ho scritto un esempio mio invece di copiare una risposta della fonte."
+        },
+        {
+          "en": "I checked the article, ending and meaning.",
+          "it": "Ho controllato articolo, desinenza e significato."
+        }
+      ]
+    },
+    {
+      "id": "src-0885f267bac5-p12",
+      "sourceId": "src-0885f267bac5",
+      "page": 12,
+      "kind": "practice",
+      "focus": {
+        "en": "Useful shopping words",
+        "it": "Parole utili per gli acquisti"
+      },
+      "unitIds": [
+        "adjective-agreement"
+      ],
+      "task": {
+        "en": "Use three useful expressions in a new scene: a righe, stare bene and scontrino.",
+        "it": "Usa tre espressioni utili in una scena nuova: a righe, stare bene e scontrino."
+      },
+      "model": {
+        "en": "The striped shirt suits me. I will take it and keep the receipt.",
+        "it": "La camicia a righe mi sta bene. La prendo e conservo lo scontrino."
+      },
+      "checks": [
+        {
+          "en": "I wrote my own example instead of copying a source answer.",
+          "it": "Ho scritto un esempio mio invece di copiare una risposta della fonte."
+        },
+        {
+          "en": "I checked the article, ending and meaning.",
+          "it": "Ho controllato articolo, desinenza e significato."
+        }
+      ]
+    },
+    {
+      "id": "src-0885f267bac5-p13",
+      "sourceId": "src-0885f267bac5",
+      "page": 13,
+      "kind": "reference",
+      "focus": {
+        "en": "Reflect and revisit",
+        "it": "Rifletti e ripassa"
+      },
+      "unitIds": [
+        "definite-articles"
+      ],
+      "task": {
+        "en": "Choose one shopping phrase to learn and one topic to revisit. Start with A1 essentials; comparisons are a supported A2 extension.",
+        "it": "Scegli un’espressione sugli acquisti da imparare e un tema da ripassare. Inizia dalle basi A1; i confronti sono un’estensione A2 guidata."
+      },
+      "model": {
+        "en": "How much do these gloves cost? I am paying in cash. I keep the receipt.",
+        "it": "Quanto costano questi guanti? Pago in contanti. Conservo lo scontrino."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-0885f267bac5-p14",
+      "sourceId": "src-0885f267bac5",
+      "page": 14,
+      "kind": "reference",
+      "focus": {
+        "en": "Independent shopping homework",
+        "it": "Compiti autonomi sugli acquisti"
+      },
+      "unitIds": [
+        "definite-articles"
+      ],
+      "task": {
+        "en": "Follow this task independently in your private class PDF. For extra practice, use a different situation in the linked lessons.",
+        "it": "Svolgi questo compito autonomamente nel PDF privato del corso. Per altra pratica, usa una situazione diversa nelle lezioni collegate."
+      },
+      "model": {
+        "en": "My homework answers stay separate from the portal examples.",
+        "it": "Le risposte ai compiti restano separate dagli esempi del portale."
       },
       "checks": []
     }

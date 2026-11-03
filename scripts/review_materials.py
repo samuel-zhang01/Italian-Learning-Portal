@@ -67,7 +67,7 @@ def main():
     output=args.output_dir.resolve()
     if not output.is_relative_to(OUT):
         parser.error('Choose an output folder inside this repository’s data/incoming/.')
-    paths=list(files(source)) if source.is_dir() else []
+    paths=list(files(source)) if source.is_dir() else ([source] if source.is_file() and source.suffix.lower() in {'.pdf', '.pptx'} else [])
     if not paths:
         parser.error('No PDFs or presentations found. Existing reports were left untouched.')
     needed=['pdftotext']+(['pdftoppm','tesseract'] if args.ocr else [])+(['libreoffice'] if args.ocr and any(p.suffix.lower()=='.pptx' for p in paths) else [])
@@ -76,7 +76,7 @@ def main():
         parser.error('Missing tools: '+', '.join(missing))
     records=[]
     for p in paths:
-        record={'path':p.relative_to(source).as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+        record={'path':p.relative_to(source if source.is_dir() else source.parent).as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
         try:
             record['pages']=extract(p,args.ocr)
         except (subprocess.SubprocessError, OSError, zipfile.BadZipFile, ET.ParseError) as error:

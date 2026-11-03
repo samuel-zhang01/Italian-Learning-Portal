@@ -567,5 +567,22 @@
       "Original practice and curated examples are not copied source worksheets.",
       "Only selectively reviewed textbook material is cited; no complete textbook teaching review is claimed."
     ]
+  },
+  "week4_vocabulary_2026_11_03": {
+    "report": "docs/week4-vocabulary-review.json",
+    "source": "Course 3/PDF_Week_4_Shopping_and_comparing.pdf",
+    "physicalPagesReviewed": 14,
+    "newMissions": 4,
+    "newVocabularyEntries": 60,
+    "a1Entries": 45,
+    "a2ExtensionEntries": 15,
+    "totalVocabularyEntries": 788,
+    "totalVocabularyTopics": 65,
+    "sourceTraceability": "Word-level physical-page links; explicitly distinguish class vocabulary from original topic extensions.",
+    "preservation": "All 976 existing practice IDs and all pre-existing content objects remain intact. No progress schema change.",
+    "remainingSourceGaps": [
+      "Independent film and shopping homework remain reference-only.",
+      "Complete indirect-pronoun and bello systems are outside this new vocabulary sequence; existing grammar remains linked."
+    ]
   }
 }

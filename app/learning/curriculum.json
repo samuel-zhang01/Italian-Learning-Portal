@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-10-28",
+  "reviewedOn": "2026-11-03",
   "missions": [
     {
       "id": "say-hello",
@@ -7806,6 +7806,491 @@
           ]
         }
       ]
+    },
+    {
+      "id": "week4-wardrobe-mission",
+      "course": 3,
+      "title": {
+        "en": "Clothes & details",
+        "it": "Abiti e dettagli"
+      },
+      "goal": {
+        "en": "Describe three invented items for a small shop window. Include a colour, a material and a pattern.",
+        "it": "Descrivi tre oggetti inventati per una piccola vetrina. Includi un colore, un materiale e un motivo."
+      },
+      "rule": {
+        "en": "Learn a noun with its article; use short descriptions such as di lana or a righe without changing their endings. The examples here are original practice.",
+        "it": "Impara un nome con il suo articolo; usa descrizioni brevi come di lana o a righe senza cambiarne le desinenze. Gli esempi qui sono pratica originale."
+      },
+      "examples": [
+        {
+          "en": "The green padded jacket is very warm.",
+          "it": "Il piumino verde è molto caldo."
+        },
+        {
+          "en": "The earrings are in the box.",
+          "it": "Gli orecchini sono nella scatola."
+        },
+        {
+          "en": "I am looking for a necklace for my sister.",
+          "it": "Cerco una collana per mia sorella."
+        }
+      ],
+      "words": [
+        {
+          "en": "the padded jacket",
+          "it": "il piumino"
+        },
+        {
+          "en": "the earrings",
+          "it": "gli orecchini"
+        },
+        {
+          "en": "the necklace",
+          "it": "la collana"
+        },
+        {
+          "en": "the ankle boots",
+          "it": "gli stivaletti"
+        },
+        {
+          "en": "the loafers",
+          "it": "i mocassini"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete: a wool scarf = una sciarpa ___ lana.",
+            "it": "Completa: una sciarpa fatta di lana = una sciarpa ___ lana."
+          },
+          "answers": [
+            "di"
+          ],
+          "explanation": {
+            "en": "Use di for the material.",
+            "it": "Usa di per il materiale."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Write the article: ___ orecchini.",
+            "it": "Scrivi l’articolo: ___ orecchini."
+          },
+          "answers": [
+            "gli"
+          ],
+          "explanation": {
+            "en": "Orecchini is masculine plural and starts with a vowel.",
+            "it": "Orecchini è maschile plurale e inizia per vocale."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: a striped coat = un cappotto ___ righe.",
+          "it": "Completa: un cappotto con le righe = un cappotto ___ righe."
+        },
+        "answers": [
+          "a"
+        ],
+        "explanation": {
+          "en": "A righe is a fixed description.",
+          "it": "A righe è una descrizione fissa."
+        }
+      },
+      "output": {
+        "en": "Describe three invented items for a small shop window. Include a colour, a material and a pattern.",
+        "it": "Descrivi tre oggetti inventati per una piccola vetrina. Includi un colore, un materiale e un motivo."
+      },
+      "model": {
+        "en": "I am looking for a raincoat. I like the striped one. It is blue and white.",
+        "it": "Cerco un impermeabile. Mi piace quello a righe. È blu e bianco."
+      },
+      "rubric": [
+        {
+          "en": "I used the target words in complete phrases with the right articles and endings.",
+          "it": "Ho usato le parole in espressioni complete con articoli e desinenze corretti."
+        },
+        {
+          "en": "I checked my meaning against the model and changed the details to make my own example.",
+          "it": "Ho controllato il significato con il modello e cambiato i dettagli per creare un esempio mio."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-0885f267bac5",
+          "pages": [
+            4,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "week4-fitting-mission",
+      "course": 3,
+      "title": {
+        "en": "Find the right fit",
+        "it": "Trova la taglia giusta"
+      },
+      "goal": {
+        "en": "Invent a short fitting-room conversation about a jacket. Ask to try it on, describe the fit and ask for another size.",
+        "it": "Inventa un breve dialogo su una giacca. Chiedi di provarla, descrivi come veste e chiedi un’altra taglia."
+      },
+      "rule": {
+        "en": "Start with a complete useful phrase. Lo refers to a masculine singular item and la to a feminine singular item: provarlo, provarla.",
+        "it": "Parti da una frase utile completa. Lo si riferisce a un capo maschile singolare e la a uno femminile singolare: provarlo, provarla."
+      },
+      "examples": [
+        {
+          "en": "The fitting room is at the back of the shop.",
+          "it": "Il camerino è in fondo al negozio."
+        },
+        {
+          "en": "Do you have the medium size in green?",
+          "it": "Avete la taglia media in verde?"
+        },
+        {
+          "en": "The small size is too tight.",
+          "it": "La taglia piccola è troppo stretta."
+        }
+      ],
+      "words": [
+        {
+          "en": "the fitting room",
+          "it": "il camerino"
+        },
+        {
+          "en": "the medium size",
+          "it": "la taglia media"
+        },
+        {
+          "en": "the small size",
+          "it": "la taglia piccola"
+        },
+        {
+          "en": "the large size",
+          "it": "la taglia grande"
+        },
+        {
+          "en": "it suits me",
+          "it": "mi sta bene"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete for a jacket: posso provar___?",
+            "it": "Completa per una giacca: posso provar___?"
+          },
+          "answers": [
+            "la"
+          ],
+          "explanation": {
+            "en": "Giacca is feminine singular: provarla.",
+            "it": "Giacca è femminile singolare: provarla."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: this coat suits me = questo cappotto mi ___ bene.",
+            "it": "Completa: questo cappotto mi ___ bene. (stare)"
+          },
+          "answers": [
+            "sta"
+          ],
+          "explanation": {
+            "en": "One coat uses sta.",
+            "it": "Un solo cappotto richiede sta."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: these glasses suit me = questi occhiali mi ___ bene.",
+          "it": "Completa: questi occhiali mi ___ bene. (stare)"
+        },
+        "answers": [
+          "stanno"
+        ],
+        "explanation": {
+          "en": "Occhiali is plural: mi stanno bene.",
+          "it": "Occhiali è plurale: mi stanno bene."
+        }
+      },
+      "output": {
+        "en": "Invent a short fitting-room conversation about a jacket. Ask to try it on, describe the fit and ask for another size.",
+        "it": "Inventa un breve dialogo su una giacca. Chiedi di provarla, descrivi come veste e chiedi un’altra taglia."
+      },
+      "model": {
+        "en": "I like this jacket. Can I try it on? It is too loose. Do you have another size?",
+        "it": "Mi piace questa giacca. Posso provarla? È troppo larga. Avete un’altra taglia?"
+      },
+      "rubric": [
+        {
+          "en": "I used the target words in complete phrases with the right articles and endings.",
+          "it": "Ho usato le parole in espressioni complete con articoli e desinenze corretti."
+        },
+        {
+          "en": "I checked my meaning against the model and changed the details to make my own example.",
+          "it": "Ho controllato il significato con il modello e cambiato i dettagli per creare un esempio mio."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-0885f267bac5",
+          "pages": [
+            8,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "week4-checkout-mission",
+      "course": 3,
+      "title": {
+        "en": "Prices & paying",
+        "it": "Prezzi e pagamenti"
+      },
+      "goal": {
+        "en": "Invent a checkout exchange for a pair of gloves. Ask the price, choose a payment method and mention the receipt.",
+        "it": "Inventa uno scambio alla cassa per un paio di guanti. Chiedi il prezzo, scegli come pagare e menziona lo scontrino."
+      },
+      "rule": {
+        "en": "Use costa for one item and costano for several. Practise payment phrases as chunks before changing the details.",
+        "it": "Usa costa per un oggetto e costano per più oggetti. Esercita le espressioni di pagamento come blocchi prima di cambiare i dettagli."
+      },
+      "examples": [
+        {
+          "en": "The shopping centre opens at nine.",
+          "it": "Il centro commerciale apre alle nove."
+        },
+        {
+          "en": "I pay at the checkout near the exit.",
+          "it": "Pago alla cassa vicino all’uscita."
+        },
+        {
+          "en": "The price is on the tag.",
+          "it": "Il prezzo è sul cartellino."
+        }
+      ],
+      "words": [
+        {
+          "en": "the shopping centre",
+          "it": "il centro commerciale"
+        },
+        {
+          "en": "the checkout",
+          "it": "la cassa"
+        },
+        {
+          "en": "the price tag",
+          "it": "il cartellino"
+        },
+        {
+          "en": "the full price",
+          "it": "il prezzo intero"
+        },
+        {
+          "en": "on sale",
+          "it": "in saldo"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete for two scarves: quanto ___? (costare)",
+            "it": "Completa per due sciarpe: quanto ___? (costare)"
+          },
+          "answers": [
+            "costano"
+          ],
+          "explanation": {
+            "en": "Several items take costano.",
+            "it": "Più oggetti richiedono costano."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Complete: I pay in cash = pago in ___.",
+            "it": "Completa: pago con banconote e monete = pago in ___."
+          },
+          "answers": [
+            "contanti"
+          ],
+          "explanation": {
+            "en": "In contanti means paying with cash.",
+            "it": "In contanti significa pagare con banconote e monete."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete: I pay by card = pago con la ___.",
+          "it": "Completa: pago con la ___ di credito."
+        },
+        "answers": [
+          "carta"
+        ],
+        "explanation": {
+          "en": "Use con la carta for payment by card.",
+          "it": "Usa con la carta per questo metodo di pagamento."
+        }
+      },
+      "output": {
+        "en": "Invent a checkout exchange for a pair of gloves. Ask the price, choose a payment method and mention the receipt.",
+        "it": "Inventa uno scambio alla cassa per un paio di guanti. Chiedi il prezzo, scegli come pagare e menziona lo scontrino."
+      },
+      "model": {
+        "en": "How much do these gloves cost? I am paying in cash. I keep the receipt.",
+        "it": "Quanto costano questi guanti? Pago in contanti. Conservo lo scontrino."
+      },
+      "rubric": [
+        {
+          "en": "I used the target words in complete phrases with the right articles and endings.",
+          "it": "Ho usato le parole in espressioni complete con articoli e desinenze corretti."
+        },
+        {
+          "en": "I checked my meaning against the model and changed the details to make my own example.",
+          "it": "Ho controllato il significato con il modello e cambiato i dettagli per creare un esempio mio."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-0885f267bac5",
+          "pages": [
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "week4-comparing-mission",
+      "course": 3,
+      "title": {
+        "en": "This one or that one?",
+        "it": "Questo o quello?"
+      },
+      "goal": {
+        "en": "Compare two invented scarves, then describe two qualities of one coat. Use di once and che once.",
+        "it": "Confronta due sciarpe inventate, poi descrivi due qualità di un cappotto. Usa di una volta e che una volta."
+      },
+      "rule": {
+        "en": "A2 extension: compare two items with più/meno + adjective + di; compare two qualities of one item with che. Before a noun, quello follows the article pattern: quel cappotto, quegli stivali.",
+        "it": "Estensione A2: confronta due oggetti con più/meno + aggettivo + di; confronta due qualità di un oggetto con che. Prima di un nome, quello segue lo schema dell’articolo: quel cappotto, quegli stivali."
+      },
+      "examples": [
+        {
+          "en": "This jumper is made of wool.",
+          "it": "Questo maglione è di lana."
+        },
+        {
+          "en": "That jacket is on sale.",
+          "it": "Quella giacca è in saldo."
+        },
+        {
+          "en": "Those boots cost too much.",
+          "it": "Quegli stivali costano troppo."
+        }
+      ],
+      "words": [
+        {
+          "en": "this jumper",
+          "it": "questo maglione"
+        },
+        {
+          "en": "that jacket",
+          "it": "quella giacca"
+        },
+        {
+          "en": "those boots",
+          "it": "quegli stivali"
+        },
+        {
+          "en": "those bags",
+          "it": "quelle borse"
+        },
+        {
+          "en": "a beautiful coat",
+          "it": "un bel cappotto"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "Compare two scarves: questa sciarpa è più lunga ___ quella rossa.",
+            "it": "Confronta due sciarpe: questa sciarpa è più lunga ___ quella rossa."
+          },
+          "answers": [
+            "di"
+          ],
+          "explanation": {
+            "en": "Two items are compared: use di.",
+            "it": "Si confrontano due oggetti: usa di."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Compare two qualities: questo cappotto è più bello ___ comodo.",
+            "it": "Confronta due qualità: questo cappotto è più bello ___ comodo."
+          },
+          "answers": [
+            "che"
+          ],
+          "explanation": {
+            "en": "Two qualities of the same coat: use che.",
+            "it": "Due qualità dello stesso cappotto: usa che."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete before the noun: ___ stivali. (those)",
+          "it": "Completa davanti al nome: ___ stivali. (lontani)"
+        },
+        "answers": [
+          "quegli"
+        ],
+        "explanation": {
+          "en": "Stivali takes gli, so use quegli before the noun.",
+          "it": "Stivali richiede gli, quindi usa quegli davanti al nome."
+        }
+      },
+      "output": {
+        "en": "Compare two invented scarves, then describe two qualities of one coat. Use di once and che once.",
+        "it": "Confronta due sciarpe inventate, poi descrivi due qualità di un cappotto. Usa di una volta e che una volta."
+      },
+      "model": {
+        "en": "These boots are cheaper than those black ones. I prefer this coat: it is more comfortable than elegant.",
+        "it": "Questi stivali sono più economici di quelli neri. Preferisco questo cappotto: è più comodo che elegante."
+      },
+      "rubric": [
+        {
+          "en": "I used the target words in complete phrases with the right articles and endings.",
+          "it": "Ho usato le parole in espressioni complete con articoli e desinenze corretti."
+        },
+        {
+          "en": "I checked my meaning against the model and changed the details to make my own example.",
+          "it": "Ho controllato il significato con il modello e cambiato i dettagli per creare un esempio mio."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-0885f267bac5",
+          "pages": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12
+          ]
+        }
+      ]
     }
   ],
   "sources": [
@@ -8240,6 +8725,14 @@
       "course": 3,
       "pages": 20,
       "sha256": "f293d35b1616561dc25feb0a062f6d7c14b91f511bce5a254efd4e066b936538"
+    },
+    {
+      "id": "src-0885f267bac5",
+      "path": "Course 3/PDF_Week_4_Shopping_and_comparing.pdf",
+      "title": "PDF_Week_4_Shopping_and_comparing.pdf",
+      "course": 3,
+      "pages": 14,
+      "sha256": "0885f267bac57a28748edb348e1cfb66e2c9eaf40eaa09c65dcca9fb894b1b39"
     }
   ]
 }

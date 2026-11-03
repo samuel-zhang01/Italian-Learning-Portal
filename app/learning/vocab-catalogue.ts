@@ -6,7 +6,7 @@ import { wordKey } from "./academy-engine.ts";
 import { planningGrammarVocabItems, planningSupplementalNounVocabItems, planningUnits } from "./planning-data.ts";
 import { grammarVocabularyAnswers } from "./vocab-grammar.ts";
 
-export type VocabWord = { id: string; term: Pair; example: Pair; exampleKind?: "translation"; answers?: string[]; partOfSpeech?: string; plural?: Pair; gender?: string };
+export type VocabWord = { id: string; term: Pair; example: Pair; exampleKind?: "translation"; answers?: string[]; partOfSpeech?: string; plural?: Pair; gender?: string; sourceRefs?: { id: string; pages: number[] }[]; provenance?: "lesson" | "extension" };
 export type VocabBank = Omit<VocabularyBank, "words"> & { words: VocabWord[]; description?: Pair; relatedGrammarIds?: string[]; relatedMissionIds?: string[]; original?: boolean };
 export const vocabBanks: VocabBank[] = [
   ...(library.banks as VocabBank[]).map(bank => ({ ...bank, original: true })),
@@ -32,7 +32,7 @@ export const vocabItems: VocabItem[] = vocabBanks.flatMap(bank => bank.words.map
     id: word.id, mode: "words", bankId: bank.id, title: bank.title,
     prompt: word.term, answers, paired: Boolean(pairedAnswers[word.id]), word,
     hint: { en: `Start with “${beginning}…”`, it: `Inizia con «${beginning}…»` },
-    explanation: word.example,
+    explanation: word.example, sourceRefs: word.sourceRefs ?? bank.sourceRefs, level: bank.level,
   };
 }));
 export const supplementalGrammarVocabItems: VocabItem[] = planningGrammarVocabItems.map(entry => {
