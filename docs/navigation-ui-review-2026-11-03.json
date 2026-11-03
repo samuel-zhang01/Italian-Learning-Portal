@@ -1,6 +1,6 @@
 {
   "reviewedAt": "2026-11-03T22:16:14.977319+00:00",
-  "status": "verified locally; publication recorded separately",
+  "status": "published and verified",
   "objective": "Repair spacing, unstable click targets and flashes when moving between learning pages.",
   "baseline": {
     "method": "Cold local production build; 800 ms delay on new JavaScript requests; animation-frame sampling during Today to Practice.",
@@ -17,7 +17,8 @@
     "Route query snapshots keep outgoing grammar, vocabulary, verbs, diagnostics and chapters in their existing mode while a new URL loads.",
     "Instant scroll at page commit, consistent page padding, stable scrollbar gutter and footer placement.",
     "Aligned main practice actions, calmer text actions and stationary hover/pressed targets.",
-    "Matching document background before application styles load."
+    "Matching document background before application styles load.",
+    "Quiet text toggles keep their clean background in normal, hovered and pressed states."
   ],
   "browser": {
     "checks": [
@@ -111,5 +112,6 @@
   "limitations": [
     "Synthetic owned Chromium profiles; 800 ms delays affect new JavaScript requests. This is a navigation/layout regression check, not a real-device network benchmark.",
     "No physical-device or full screen-reader audit. Real network timing varies; zero blank frames refers to the recorded navigation scenarios."
-  ]
+  ],
+  "deployment": "deployment-navigation-ui-2026-11-03.json"
 }
