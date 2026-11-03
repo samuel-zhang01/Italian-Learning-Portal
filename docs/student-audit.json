@@ -254,8 +254,9 @@
       "Automated Chromium journeys; no human usability study or physical-device claim.",
       "No full screen-reader certification.",
       "Local private PDF connections expire on reload by design.",
-      "Production publication and live profile sync were outside this task.",
+      "The original local audit did not exercise live profile sync; publication checks are recorded separately.",
       "Build retains existing large content-chunk warnings."
-    ]
+    ],
+    "publicationReport": "docs/deployment-vocabulary-explorer-2026-11-03.json"
   }
 }

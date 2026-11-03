@@ -1,0 +1,399 @@
+{
+  "release": "20261103T164441Z-vocabulary-explorer",
+  "releaseDirectory": "/data/italian/releases/20261103T164441Z-vocabulary-explorer",
+  "previousReleaseDirectory": "/data/italian/releases/20261028T205344Z-typed-vocabulary",
+  "sourceRevision": "20cb7d8fe0f62ae660b72ab1923599c119c37c3f",
+  "artifactHashes": {
+    "app-icon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "assets/academy-DhK-glsh.js": "642e7a0cd16efae98875dc415858c3e2cea03dbbcd8a2098f84642d0a964a9cc",
+    "assets/arcade-DRDwCFo7.js": "66d3a2363358cb577a20a0f90f951572885c6d0a228133d47a08b0f2d9a7978a",
+    "assets/arcade-scenes-D_GrQAm4.js": "9acbc31d1846c8e67351a57d44894c6d524d8c249b3493a90ef01397d54eeadb",
+    "assets/backup-transfer-BxJdxwiM.js": "ebc794a35bd54002fe7961af854d5b77f0790f544903d3ecb4e3442d758186cf",
+    "assets/backup-transfer-ZQnUZdgZ.css": "592a44651b526292fcb66338c9cb095490cdbd079a68a806ac8e51de92ca93df",
+    "assets/booster-content-CcOb-fCU.js": "3380433469d8b4d69dd7d27ac19ffe74573a8e883b511da0d62edd8384a31812",
+    "assets/chapters-CfwLknyS.css": "a8b87bb143e0bb4e4e55347a1c8d78dafba41aaba93c7059fde8c2d1332183ff",
+    "assets/chapters-Dg8-JLJJ.js": "c48cffdd612ded7272b7acd0832a618590d025d56bc9fbaf51e4dd09c5efee4f",
+    "assets/companion-CPJDV4rT.js": "2c15c966252945441f5af351f48b140a026fb64670046f00ba0d25052f93a657",
+    "assets/discovery-DsuFfSNc.js": "d7f88e668d8a44e567995d8b7b93bfcf7ba82107b3b965ecb6bd5644678df92b",
+    "assets/discovery-index-DhGURHV9.js": "ea19169ee45c2d9c45035647da0b33d3b06885b88d987615f57086f512c1c65c",
+    "assets/enriched-vv-PMqoG.js": "4575bf7f71b301b0250d5a967deac54b0997d970f8b2846c79d4f24f2e53e7ef",
+    "assets/enrichment-CH4uVqvh.js": "aa1876a38ff02288ebb6d9cdbeba33fb072b839e3f0fd8cf5983decb40b8a49c",
+    "assets/grammar-D44tCaU9.js": "3aa2a2a1394fa6516ab50bbb8575189889fdefa4034f0b9e75d9dc42547f5a28",
+    "assets/index-DQtDgTbB.css": "7f265418b43b2020d29f15589f34a51d300c5bb80ad6e3358a7e1e99a78c5e7b",
+    "assets/index-DU_ZgJkU.js": "740e071bb4ceeae9eb6a4c01abb565577edff11f98e42a85047dbc96e467336c",
+    "assets/learning-insights-BLQTf6f8.css": "a8d4ba17b735c4f737b8ada17e847a45272bce7a81b6c425c1e6cdac44ae4dd0",
+    "assets/learning-insights-DZlzvEn0.js": "c4278c71a750f1c96500a525dcde3adf8f7f3d03bad7d4aec2fdf9d9e601bdb6",
+    "assets/listening-DXBvV_tX.js": "415087ad9e09c3a388b3a01e4888f9016af9c49010a23fcd197f4c4534f971fa",
+    "assets/listening-DYa2axRK.css": "9ceef35e541c490ce309e98afced2f1804969343e6dc761c7d075bc997746799",
+    "assets/navigation-CcrycXle.js": "f417bc8c9b74837a553bf75a11e4933a2d5a13467930fde19b195448d0d0f256",
+    "assets/offline-gxxkCAZt.js": "8df6c934883b318fdab565eb1cfdc385d0a0b5c962f84c068703571eb43331dc",
+    "assets/oral-practice-C-yY2FnP.js": "4383a7e55839f3910fc08bc8901841cfe9cae512cf80a1adc0cacd77df069069",
+    "assets/oral-practice-C9ivmFoo.css": "eacd3820fbc7a6ed4d884233738c6c8028993639102259f75c5da705d3ec97ea",
+    "assets/painted-cardboard-CX92yXJi.webp": "2267856e5f4e1c2f9388fa4fe7cc1eff3746b3354407287574e42dd51533c2db",
+    "assets/practice-hub-BL9DaZJc.js": "50c52f6d5fab6ebfb3b7fca6c8e7832714762a30634f7a81404455059cb96338",
+    "assets/practice-navigation-CGbuiuPq.js": "20d22414301dbfbcd8880f23da75f64afd52a275b6398582c43f6af0bd024a3f",
+    "assets/practice-tools-D0MvBtHb.js": "603029062ccac41c75c272ed8d0c285a3ab60bb219a89688c5d501196c28ae1a",
+    "assets/profile-C1g0z2YZ.css": "7b860d23ae06ca1a6f26eb34db7b4e84038d648343c46f066323dc2cc4427588",
+    "assets/profile-DvhSNZlZ.js": "9b8c8981a57f11625bf6ebdfd1298d4229eddb6e2dac32f49962741c79f222f9",
+    "assets/review-hub-C0Sh_F8c.css": "e0d5c02b9b6e9f87a95ef873518983f70a779d2537782d05da904e0d2693f146",
+    "assets/review-hub-CLbVkhm0.js": "9ce64b0b58cf718ccf229dd284da4b2ffe7c97ea7a2d6f1a1ab3dfd6fab00dcc",
+    "assets/vocab-boost-CGVlc-JZ.js": "6fa6e8edaaa548516ee7f416f9861dd855a0300b9ac5e4765a2c9fc0662f1ded",
+    "assets/vocab-catalogue-DUNCrVYU.js": "7928a70a269a5f47e0e01fdd8f37f5e74135d37ce58f5b2152561724b85203ce",
+    "favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "index.html": "3798e370832970ab414046138dbee342a0ebc94f0b69c9e98834f55791b57661",
+    "manifest.webmanifest": "12b91f0ec01c070bfffcfa31bea3df6fce59caa7666cd4be77b80b5822448d2a",
+    "offline-worker.js": "9cbd7b1d31be9738d0fc22136dcea6db4e18245ba61aa6affe10a85b0abd2707"
+  },
+  "remoteHashVerification": "passed",
+  "cleanCheckoutBuild": "identical artifacts",
+  "offlineVersion": "70b880b28157e8d9",
+  "files": 39,
+  "status": "public-browser-verified",
+  "url": "https://italian.samuelzhang.co.uk/",
+  "sourceCI": {
+    "databaseId": 41677662596,
+    "url": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/41677662596",
+    "conclusion": "success",
+    "headSha": "20cb7d8fe0f62ae660b72ab1923599c119c37c3f",
+    "status": "completed"
+  },
+  "activatedAt": "2026-11-03T16:49:07.097696+00:00",
+  "verifiedAt": "2026-11-03T16:50:18.081Z",
+  "scope": "Only the 39 site-dist files were transferred. current was switched atomically; the previous static release remains available for rollback.",
+  "publicHttpsVerification": {
+    "passed": true,
+    "testedAt": "2026-11-03T16:49:09.407Z",
+    "tlsValidation": true,
+    "tlsProtocol": "TLS 1.3",
+    "assets": [
+      {
+        "path": "app-icon.svg",
+        "deliveredPath": "app-icon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/academy-DhK-glsh.js",
+        "deliveredPath": "assets/academy-DhK-glsh.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-DRDwCFo7.js",
+        "deliveredPath": "assets/arcade-DRDwCFo7.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-scenes-D_GrQAm4.js",
+        "deliveredPath": "assets/arcade-scenes-D_GrQAm4.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/backup-transfer-BxJdxwiM.js",
+        "deliveredPath": "assets/backup-transfer-BxJdxwiM.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/backup-transfer-ZQnUZdgZ.css",
+        "deliveredPath": "assets/backup-transfer-ZQnUZdgZ.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/booster-content-CcOb-fCU.js",
+        "deliveredPath": "assets/booster-content-CcOb-fCU.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-CfwLknyS.css",
+        "deliveredPath": "assets/chapters-CfwLknyS.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-Dg8-JLJJ.js",
+        "deliveredPath": "assets/chapters-Dg8-JLJJ.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/companion-CPJDV4rT.js",
+        "deliveredPath": "assets/companion-CPJDV4rT.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-DsuFfSNc.js",
+        "deliveredPath": "assets/discovery-DsuFfSNc.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-index-DhGURHV9.js",
+        "deliveredPath": "assets/discovery-index-DhGURHV9.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enriched-vv-PMqoG.js",
+        "deliveredPath": "assets/enriched-vv-PMqoG.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enrichment-CH4uVqvh.js",
+        "deliveredPath": "assets/enrichment-CH4uVqvh.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/grammar-D44tCaU9.js",
+        "deliveredPath": "assets/grammar-D44tCaU9.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-DQtDgTbB.css",
+        "deliveredPath": "assets/index-DQtDgTbB.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-DU_ZgJkU.js",
+        "deliveredPath": "assets/index-DU_ZgJkU.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/learning-insights-BLQTf6f8.css",
+        "deliveredPath": "assets/learning-insights-BLQTf6f8.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/learning-insights-DZlzvEn0.js",
+        "deliveredPath": "assets/learning-insights-DZlzvEn0.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/listening-DXBvV_tX.js",
+        "deliveredPath": "assets/listening-DXBvV_tX.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/listening-DYa2axRK.css",
+        "deliveredPath": "assets/listening-DYa2axRK.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/navigation-CcrycXle.js",
+        "deliveredPath": "assets/navigation-CcrycXle.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/offline-gxxkCAZt.js",
+        "deliveredPath": "assets/offline-gxxkCAZt.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/oral-practice-C-yY2FnP.js",
+        "deliveredPath": "assets/oral-practice-C-yY2FnP.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/oral-practice-C9ivmFoo.css",
+        "deliveredPath": "assets/oral-practice-C9ivmFoo.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/painted-cardboard-CX92yXJi.webp",
+        "deliveredPath": "assets/painted-cardboard-CX92yXJi.webp",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-hub-BL9DaZJc.js",
+        "deliveredPath": "assets/practice-hub-BL9DaZJc.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-navigation-CGbuiuPq.js",
+        "deliveredPath": "assets/practice-navigation-CGbuiuPq.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-tools-D0MvBtHb.js",
+        "deliveredPath": "assets/practice-tools-D0MvBtHb.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/profile-C1g0z2YZ.css",
+        "deliveredPath": "assets/profile-C1g0z2YZ.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/profile-DvhSNZlZ.js",
+        "deliveredPath": "assets/profile-DvhSNZlZ.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-C0Sh_F8c.css",
+        "deliveredPath": "assets/review-hub-C0Sh_F8c.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-CLbVkhm0.js",
+        "deliveredPath": "assets/review-hub-CLbVkhm0.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/vocab-boost-CGVlc-JZ.js",
+        "deliveredPath": "assets/vocab-boost-CGVlc-JZ.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/vocab-catalogue-DUNCrVYU.js",
+        "deliveredPath": "assets/vocab-catalogue-DUNCrVYU.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "favicon.svg",
+        "deliveredPath": "favicon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "manifest.webmanifest",
+        "deliveredPath": "manifest.webmanifest",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "offline-worker.js",
+        "deliveredPath": "offline-worker.js?release=70b880b28157e8d9",
+        "status": 200,
+        "hashMatch": true
+      }
+    ],
+    "freshHtml": {
+      "status": 200,
+      "version": "70b880b28157e8d9",
+      "cacheControl": "no-cache"
+    },
+    "canonicalVersion": "70b880b28157e8d9",
+    "errors": [],
+    "blocked": [],
+    "expectedAnalytics": []
+  },
+  "validation": {
+    "dailyTestsPassed": 312,
+    "typecheck": "passed",
+    "lint": "passed",
+    "productionBuild": "passed",
+    "sourceCI": "passed",
+    "liveExplorerGroups": 13,
+    "liveExplorerChecks": [
+      "Search, level and source filters combine; reveal creates no recall evidence; saved words and source-return context survive reload.",
+      "The exact private PDF connects by checksum; word references open at physical page 12.",
+      "Single-word recall records a wrong answer; the round receipt returns to its example, first attempt and next review date.",
+      "Review shows only due words, handles an empty queue and retains the all-words selection across reload.",
+      "Library, expanded cards and practice screen fit EN/IT at 320, 390, 768 and 1280 pixels with 44px controls.",
+      "en: week4-wardrobe-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review.",
+      "en: week4-fitting-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review.",
+      "en: week4-checkout-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review.",
+      "en: week4-comparing-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review.",
+      "it: week4-wardrobe-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review.",
+      "it: week4-fitting-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review.",
+      "it: week4-checkout-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review.",
+      "it: week4-comparing-mission supports wrong-answer repair, draft reload, completion, notebook and delayed review."
+    ],
+    "liveExplorerLayoutObservations": 17,
+    "liveOfflineGroups": 6,
+    "liveOfflineChecks": [
+      {
+        "language": "en",
+        "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
+        "version": "70b880b28157e8d9",
+        "workerQuery": "?release=70b880b28157e8d9",
+        "assetCount": 38
+      },
+      {
+        "language": "en",
+        "check": "Offline reload, eleven lazy routes, guided draft and oral choice preserve stored progress"
+      },
+      {
+        "language": "en",
+        "check": "Online current-release recheck and queried-worker removal preserve progress"
+      },
+      {
+        "language": "it",
+        "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
+        "version": "70b880b28157e8d9",
+        "workerQuery": "?release=70b880b28157e8d9",
+        "assetCount": 38
+      },
+      {
+        "language": "it",
+        "check": "Offline reload, eleven lazy routes, guided draft and oral choice preserve stored progress"
+      },
+      {
+        "language": "it",
+        "check": "Online current-release recheck and queried-worker removal preserve progress"
+      }
+    ],
+    "uncaughtBrowserErrors": []
+  },
+  "backend": {
+    "changed": false,
+    "healthCheck": {
+      "testedAt": "2026-11-03T16:50:18.081Z",
+      "status": 200,
+      "healthy": true,
+      "learnerRecordsAccessed": false
+    },
+    "learnerRecordsAccessed": false,
+    "databasesAndBackups": "Preserved; no database reads or writes in release work."
+  },
+  "privacy": {
+    "privateStudyFilesPublished": false,
+    "learnerDataPublished": false,
+    "publicAudits": "Disposable synthetic browser progress; network writes and profile endpoints blocked in learning audits."
+  },
+  "content": {
+    "visibleVocabularyEntries": 788,
+    "themes": 65,
+    "newWords": 60,
+    "a1NewWords": 45,
+    "a2ExtensionWords": 15,
+    "newMissions": 4,
+    "sourcePagesReviewed": 14,
+    "previousPracticeIdsPreserved": 976
+  },
+  "releaseGateFix": "Updated the exact approved CI command to include vocab-explorer.test.mjs and raised the minimum passing count from 308 to 312. The corrected source revision passed CI.",
+  "limitations": [
+    "Synthetic Chromium journeys; no physical-device or human usability claim.",
+    "The profile API health endpoint was checked; live cross-device profile mutation was not exercised.",
+    "Downloaded offline releases stay pinned until the learner explicitly checks for and activates an update.",
+    "Existing build large-content-chunk advisory remains."
+  ]
+}

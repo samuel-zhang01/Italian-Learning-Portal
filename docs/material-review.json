@@ -583,6 +583,13 @@
     "remainingSourceGaps": [
       "Independent film and shopping homework remain reference-only.",
       "Complete indirect-pronoun and bello systems are outside this new vocabulary sequence; existing grammar remains linked."
-    ]
+    ],
+    "publication": {
+      "published": true,
+      "url": "https://italian.samuelzhang.co.uk/",
+      "release": "20261103T164441Z-vocabulary-explorer",
+      "verifiedAt": "2026-11-03T16:50:18.081Z",
+      "report": "docs/deployment-vocabulary-explorer-2026-11-03.json"
+    }
   }
 }
