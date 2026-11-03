@@ -1550,7 +1550,9 @@ body {
   margin: 0;
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+  scrollbar-gutter: stable;
+  background: #f4ecdb;
 }
 @media (min-width: 1500px) {
   .workspace {

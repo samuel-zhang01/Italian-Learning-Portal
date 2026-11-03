@@ -1,0 +1,71 @@
+/* Shared rhythm and steady navigation, after the individual tool styles. */
+.daily-app { display: flex; flex-direction: column; }
+.daily-app > main { flex: 1; width: 100%; }
+.route-loading { min-height: 60vh; }
+.route-pending {
+  position: fixed;
+  z-index: 20;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: calc(100% - 32px);
+  padding: 12px 20px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--green);
+  box-shadow: 0 4px 18px #253b2d18;
+  font-size: 14px;
+  text-align: center;
+  /* Cached pages commit immediately, without a one-frame loading badge. */
+  animation: route-status-delay 160ms step-end;
+}
+@keyframes route-status-delay { from { visibility: hidden; } to { visibility: visible; } }
+.daily-app .workspace { padding-block: 32px 56px; }
+.daily-app .workspace.vocab-round { padding-block: 16px 32px; }
+.daily-app .practice-menu { padding-block: 12px; }
+.daily-app .practice-menu > summary { background-image: none; box-shadow: none; }
+.daily-app .practice-menu > summary::before { content: none; }
+.daily-app .page-intro { gap: 24px; margin-bottom: 28px; }
+
+/* Text actions stay quiet; action buttons retain their paper finish. */
+.daily-app .text-button {
+  padding: 10px 12px;
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  font-size: 13px;
+}
+.daily-app .text-button::before { content: none; }
+.daily-app .text-button:hover:not(:disabled) { background: #e9dfca; box-shadow: none; }
+.daily-app .text-button:active:not(:disabled) { transform: none; }
+
+/* No moving target when a pointer, touch or keyboard activates a control. */
+.daily-app :is(button, .button, .file-button):is(:hover, :active):not(:disabled) { transform: none; }
+.daily-app :is(button, .button, .file-button) { transition: background-color 120ms ease, border-color 120ms ease; }
+.daily-app .button:active:not(:disabled) { box-shadow: inset 0 1px 2px #253b2d26; }
+
+.daily-app .practice-hub-grid { gap: 20px; }
+.daily-app .practice-hub-card { padding: 24px; gap: 16px; }
+.daily-app .practice-hub-card h2 { font-size: 20px; }
+.daily-app .practice-hub-card > p { font-size: 15px; line-height: 1.65; }
+.practice-hub-actions { width: 100%; margin-top: auto; display: grid; gap: 8px; }
+.practice-hub-actions > .button { width: 100%; min-height: 48px; }
+.practice-hub-actions > .text-button { justify-self: start; }
+@container (min-width: 761px) {
+  /* Reserve the same secondary-action row so the three main actions align. */
+  .practice-hub-actions { grid-template-rows: auto minmax(44px, auto); }
+}
+@container (max-width: 760px) {
+  .daily-app .workspace { padding-block: 24px 40px; }
+  .daily-app .practice-hub-card { padding: 22px; }
+  .daily-app .practice-hub-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+}
+@container (max-width: 400px) {
+  .daily-app .practice-menu { padding-inline: 18px; }
+  .daily-app .workspace { padding-inline: 18px; }
+  .daily-app .practice-hub-card { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .daily-app :is(button, .button, .file-button) { transition: none; }
+}

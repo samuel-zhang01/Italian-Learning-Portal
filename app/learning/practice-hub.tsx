@@ -12,21 +12,27 @@ export function PracticeHub({ p, today, t, go }: Props) {
         <span className="eyebrow">{t("TYPE & REMEMBER", "SCRIVI E RICORDA")}</span>
         <h2>{t("Vocabulary booster", "Allena il vocabolario")}</h2>
         <p>{t(`Explore ${wordCount} words and phrases. See examples, revisit your class pages, then type from memory.`, `Esplora ${wordCount} parole ed espressioni. Leggi gli esempi, ritrova le pagine del corso e scrivi a memoria.`)}</p>
+        <div className="practice-hub-actions">
         <button className="button primary" onClick={() => go("vocab-boost")}>{p.vocabPractice?.active ? t("Resume my words", "Riprendi le mie parole") : t(`Type ${p.vocabPractice?.settings.size ?? 5} words`, `Scrivi ${p.vocabPractice?.settings.size ?? 5} parole`)} →</button>
         <button className="text-button" onClick={() => go("vocab-boost?view=library")}>{t("Explore my word library", "Esplora il mio lessico")} →</button>
+        </div>
         {due > 0 && <span className="hint">{t(`${due} words ready for review`, `${due} parole da ripassare`)}</span>}
       </section>
       <section className="panel practice-hub-card">
         <span className="eyebrow">{t("PRESENT & PAST", "PRESENTE E PASSATO")}</span>
         <h2>{t("Verb practice", "Pratica dei verbi")}</h2>
         <p>{t("Practise one person at a time. Start with the present, then try passato prossimo.", "Allena una persona alla volta. Inizia dal presente, poi prova il passato prossimo.")}</p>
+        <div className="practice-hub-actions">
         <button className="button secondary" onClick={() => go("games?mode=verbs")}>{t("Practise verbs", "Allena i verbi")} →</button>
+        </div>
       </section>
       <section className="panel practice-hub-card">
         <span className="eyebrow">{t("UNDERSTAND & USE", "CAPISCI E USA")}</span>
         <h2>{t("Grammar lab", "Laboratorio di grammatica")}</h2>
         <p>{t("Short explanations, worked examples and supported exercises from A1 to A2.", "Brevi spiegazioni, esempi svolti ed esercizi guidati da A1 ad A2.")}</p>
+        <div className="practice-hub-actions">
         <button className="button secondary" onClick={() => go("grammar")}>{t("Open grammar", "Apri grammatica")} →</button>
+        </div>
       </section>
     </div>
     <nav className="practice-related" aria-label={t("Continue your practice", "Continua la pratica")}>

@@ -38,7 +38,7 @@
   border: 1px solid var(--line);
   border-radius: 1px 3px 2px 2px;
   box-shadow: var(--cutout-shadow);
-  transition: background-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+  transition: background-color 120ms ease, border-color 120ms ease;
 }
 
 .daily-app :is(button, .button, .file-button, summary):is(:hover, :active, :disabled, [aria-pressed], [aria-current]) {
@@ -288,7 +288,7 @@
   background-size: 280px 280px;
   background-blend-mode: soft-light;
   box-shadow: var(--cutout-shadow);
-  transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease;
+  transition: background-color 120ms ease, border-color 120ms ease;
 }
 
 .daily-app .button {
@@ -322,7 +322,7 @@
 .daily-app :is(.button, .file-button, .lesson-tile,
   .academy-programme-choices > button, .arcade-mode,
   .study-tools-links button):hover:not(:disabled) {
-  transform: translateY(-2px);
+  transform: none;
   box-shadow: 3px 5px 0 #cbbd9e;
 }
 
@@ -336,7 +336,7 @@
 
 .daily-app :is(.button, .filter-tabs button, .academy-filters button,
   .arcade-tiles button, .arcade-accents button):active:not(:disabled) {
-  transform: translate(1px, 2px);
+  transform: none;
   box-shadow: 0 1px 0 #cbbd9e;
 }
 
@@ -361,7 +361,7 @@
 }
 
 .daily-app :is(button, .button, .file-button):active:not(:disabled) {
-  transform: translateY(2px);
+  transform: none;
   box-shadow: inset 0 1px 1px #735b3826;
 }
 

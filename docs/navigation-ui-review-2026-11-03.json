@@ -1,0 +1,115 @@
+{
+  "reviewedAt": "2026-11-03T22:16:14.977319+00:00",
+  "status": "verified locally; publication recorded separately",
+  "objective": "Repair spacing, unstable click targets and flashes when moving between learning pages.",
+  "baseline": {
+    "method": "Cold local production build; 800 ms delay on new JavaScript requests; animation-frame sampling during Today to Practice.",
+    "sampledFrames": 183,
+    "blankFrames": 48,
+    "documentHeights": [
+      1000,
+      1261
+    ]
+  },
+  "changes": [
+    "Stable Suspense boundary and React transition retain the current page until the destination loads.",
+    "Intent preloading on navigation focus/hover and on route activation; cold Today keeps full teaching bodies deferred.",
+    "Route query snapshots keep outgoing grammar, vocabulary, verbs, diagnostics and chapters in their existing mode while a new URL loads.",
+    "Instant scroll at page commit, consistent page padding, stable scrollbar gutter and footer placement.",
+    "Aligned main practice actions, calmer text actions and stationary hover/pressed targets.",
+    "Matching document background before application styles load."
+  ],
+  "browser": {
+    "checks": [
+      "Slow navigation retains content; aligned stable controls; library Back/Forward; rapid clicks and saved drafts: en/390",
+      "Slow navigation retains content; aligned stable controls; library Back/Forward; rapid clicks and saved drafts: en/1440",
+      "Slow navigation retains content; aligned stable controls; library Back/Forward; rapid clicks and saved drafts: it/390",
+      "Slow navigation retains content; aligned stable controls; library Back/Forward; rapid clicks and saved drafts: it/1440",
+      "Keyboard focus preloads the destination; Enter navigates, focus moves to content and the tools menu remains operable",
+      "Outgoing grammar, verb, chapter and diagnostic modes stay unchanged while the next page loads",
+      "EN/IT layout matrix: 25 pages and expanded navigation at 320, 390, 768 and 1440 px, with reduced motion"
+    ],
+    "slowNavigation": [
+      {
+        "label": "slow-practice-en-390",
+        "samples": 67,
+        "blankFrames": 0,
+        "pendingFrames": 47
+      },
+      {
+        "label": "library-to-grammar-en-390",
+        "samples": 67,
+        "blankFrames": 0,
+        "pendingFrames": 50
+      },
+      {
+        "label": "slow-practice-en-1440",
+        "samples": 68,
+        "blankFrames": 0,
+        "pendingFrames": 47
+      },
+      {
+        "label": "library-to-grammar-en-1440",
+        "samples": 73,
+        "blankFrames": 0,
+        "pendingFrames": 50
+      },
+      {
+        "label": "slow-practice-it-390",
+        "samples": 71,
+        "blankFrames": 0,
+        "pendingFrames": 48
+      },
+      {
+        "label": "library-to-grammar-it-390",
+        "samples": 67,
+        "blankFrames": 0,
+        "pendingFrames": 53
+      },
+      {
+        "label": "slow-practice-it-1440",
+        "samples": 70,
+        "blankFrames": 0,
+        "pendingFrames": 48
+      },
+      {
+        "label": "library-to-grammar-it-1440",
+        "samples": 66,
+        "blankFrames": 0,
+        "pendingFrames": 51
+      }
+    ],
+    "layoutObservations": 212,
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "languages": [
+      "en",
+      "it"
+    ],
+    "routes": 25,
+    "runtimeErrors": [],
+    "loadingAndRecoveryGroups": 4,
+    "directLazyRoutes": 10,
+    "zoomAndDoubleTextObservations": 126,
+    "vocabularyGroups": 13,
+    "vocabularyLayoutObservations": 17,
+    "visualInteraction": "Shared browser-view Chromium: screenshot inspection and pointer navigation between Practice, Grammar and Verbs. Automated keyboard activation, focus placement and disclosure checks in owned profiles."
+  },
+  "checks": {
+    "dailyTests": 312,
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "diffCheck": "passed"
+  },
+  "preservation": "No curriculum IDs, progress schema, learner databases or source materials changed. Browser navigation preserves synthetic notebook and unfinished answers; failure/reload retains drafts.",
+  "evidence": "Raw frame traces and screenshots remain in ignored work/navigation-audit/. Reproduce with scripts/audit_navigation_browser.mjs against a built preview.",
+  "limitations": [
+    "Synthetic owned Chromium profiles; 800 ms delays affect new JavaScript requests. This is a navigation/layout regression check, not a real-device network benchmark.",
+    "No physical-device or full screen-reader audit. Real network timing varies; zero blank frames refers to the recorded navigation scenarios."
+  ]
+}

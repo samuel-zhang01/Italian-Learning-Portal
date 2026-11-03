@@ -13,7 +13,7 @@ type Props = VocabularyProps;
 export function VocabularyBooster(props: Props) {
   const { p, today, t, text, save, go } = props;
   const progress = p.vocabPractice ?? emptyVocabPractice();
-  const params = catalogueParams();
+  const [params] = useState(catalogueParams);
   const requested = params.get("bank") ?? p.vocabPractice?.settings.bank;
   const [bankId, setBankId] = useState(requested && (vocabBanks.some(bank => bank.id === requested) || ["all", "saved"].includes(requested)) ? requested : vocabBanks[0].id);
   const [query, setQuery] = useState(params.get("q") ?? "");

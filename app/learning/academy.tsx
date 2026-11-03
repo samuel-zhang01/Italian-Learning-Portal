@@ -104,7 +104,7 @@ function ItalianExample({
 
 export function GrammarLab(props: Shared & { unitId?: string }) {
   const { p, t, text, go, unitId, today } = props;
-  const params = catalogueParams();
+  const [params] = useState(catalogueParams);
   const [query, setQuery] = useState(() => (params.get("q") ?? "").slice(0, 200));
   const [filter, setFilter] = useState<PracticeFilter>(["repair", "tense", "due"].includes(params.get("filter") ?? "") ? params.get("filter") as PracticeFilter : "all");
   const catalogueHeading = useRef<HTMLHeadingElement>(null);

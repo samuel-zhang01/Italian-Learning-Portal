@@ -34,7 +34,7 @@ type Props = {
 };
 
 export function DiscoveryView({ p, t, text, go }: Props) {
-  const params = catalogueParams();
+  const [params] = useState(catalogueParams);
   const [query, setQuery] = useState(() => (params.get("q") ?? "").slice(0, 200));
   const [kind, setKind] = useState<DiscoveryKind | "all">((discoveryKinds as string[]).includes(params.get("kind") ?? "") ? params.get("kind") as DiscoveryKind : "all");
   const [level, setLevel] = useState<DiscoveryLevel>(params.get("level") === "A1" || params.get("level") === "A2" ? params.get("level") as DiscoveryLevel : "all");

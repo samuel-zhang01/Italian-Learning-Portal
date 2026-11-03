@@ -23,7 +23,8 @@ const routeFor = (scene: string, key: string, transfer = false) =>
 export function OralPracticeView(props: Props) {
   const { p, t, text, go, today, save } = props;
   const state = p.oralPractice ?? emptyOralPractice();
-  const params = catalogueParams(), requestedKey = params.get("run") ?? "";
+  const [params] = useState(catalogueParams);
+  const requestedKey = params.get("run") ?? "";
   const scene = oralPracticeScenes.find((item) => item.id === params.get("scene"));
   const selected = Object.hasOwn(state.runs, requestedKey) ? state.runs[requestedKey] : undefined;
   const run = selected?.sceneId === scene?.id ? selected : undefined;

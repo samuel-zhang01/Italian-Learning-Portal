@@ -1,4 +1,8 @@
-/** Catalogue state belongs in the URL, independently of saved learning evidence. */
+/** Catalogue state belongs in the URL, independently of saved learning evidence.
+ * Route components snapshot these parameters with useState(catalogueParams):
+ * the URL may point at the next page while a transition still shows this one.
+ * In-page filter changes use local state and replaceCatalogueParams below.
+ */
 export function catalogueParams(hash = typeof window === "undefined" ? "" : window.location.hash) {
   return new URLSearchParams(hash.includes("?") ? hash.slice(hash.indexOf("?") + 1) : "");
 }
@@ -23,7 +27,8 @@ export function focusStudyHeading(element: HTMLElement | null) {
   const frame = window.requestAnimationFrame(() => {
     if (!element.isConnected) return;
     element.focus({ preventScroll: true });
-    element.scrollIntoView({ block: "start" });
+    // A destination starts with its navigation visible, without a scroll animation.
+    window.scrollTo({ top: 0, behavior: "instant" });
   });
   return () => window.cancelAnimationFrame(frame);
 }

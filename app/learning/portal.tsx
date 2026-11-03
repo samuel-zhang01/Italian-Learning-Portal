@@ -1,5 +1,5 @@
 "use client";
-import { lazy, Suspense, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
+import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore, useTransition, type ReactNode } from "react";
 import { createProfileSync, PROFILE_LINK_KEY } from "./profile-sync";
 import { browserProfileStore } from "./profile-store";
 import curriculum from "./curriculum.json";
@@ -32,28 +32,61 @@ import "./portal.css";
 import "./paper-cutout.css";
 import "./responsive.css";
 import "./vocab-boost.css";
+import "./navigation.css";
 
-const DiscoveryView = lazy(() => import("./discovery").then((module) => ({ default: module.DiscoveryView })));
-const GrammarLab = lazy(() => import("./academy").then((module) => ({ default: module.GrammarLab })));
-const ProgrammeView = lazy(() => import("./academy").then((module) => ({ default: module.ProgrammeView })));
-const CompanionView = lazy(() => import("./academy").then((module) => ({ default: module.CompanionView })));
-const PracticeArcade = lazy(() => import("./arcade").then((module) => ({ default: module.PracticeArcade })));
-const VocabularyBooster = lazy(() => import("./vocab-boost").then(module => ({ default: module.VocabularyBooster })));
-const PracticeHub = lazy(() => import("./practice-hub").then(module => ({ default: module.PracticeHub })));
-const AssessmentView = lazy(() => import("./practice-tools").then((module) => ({ default: module.AssessmentView })));
-const PersonalWords = lazy(() => import("./practice-tools").then((module) => ({ default: module.PersonalWords })));
-const DailySession = lazy(() => import("./enriched").then((module) => ({ default: module.DailySession })));
-const ResourceLibrary = lazy(() => import("./enriched").then((module) => ({ default: module.ResourceLibrary })));
-const VocabularyView = lazy(() => import("./enriched").then((module) => ({ default: module.VocabularyView })));
-const ChapterDashboard = lazy(() => import("./chapters").then((module) => ({ default: module.ChapterDashboard })));
-const BackupTransfer = lazy(() => import("./backup-transfer").then(module => ({ default: module.BackupTransfer })));
-const OfflineStudy = lazy(() => import("./offline").then(module => ({ default: module.OfflineStudy })));
-const ProfileView = lazy(() => import("./profile").then(module => ({ default: module.ProfileView })));
-const A2DiagnosticView = lazy(() => import("./learning-insights").then(module => ({ default: module.A2DiagnosticView })));
-const WeeklyLearningReport = lazy(() => import("./learning-insights").then(module => ({ default: module.WeeklyLearningReport })));
-const ListeningView = lazy(() => import("./listening").then(module => ({ default: module.ListeningView })));
-const OralPracticeView = lazy(() => import("./oral-practice").then(module => ({ default: module.OralPracticeView })));
-const ReviewHub = lazy(() => import("./review-hub").then((module) => ({ default: module.ReviewHub })));
+// Load on intent; cold Today still defers the full teaching libraries.
+const sectionLoaders = {
+  "discovery": () => import("./discovery"),
+  "academy": () => import("./academy"),
+  "arcade": () => import("./arcade"),
+  "vocab-boost": () => import("./vocab-boost"),
+  "practice-hub": () => import("./practice-hub"),
+  "practice-tools": () => import("./practice-tools"),
+  "enriched": () => import("./enriched"),
+  "chapters": () => import("./chapters"),
+  "backup-transfer": () => import("./backup-transfer"),
+  "offline": () => import("./offline"),
+  "profile": () => import("./profile"),
+  "learning-insights": () => import("./learning-insights"),
+  "listening": () => import("./listening"),
+  "oral-practice": () => import("./oral-practice"),
+  "review-hub": () => import("./review-hub"),
+};
+const DiscoveryView = lazy(() => sectionLoaders["discovery"]().then((module) => ({ default: module.DiscoveryView })));
+const GrammarLab = lazy(() => sectionLoaders["academy"]().then((module) => ({ default: module.GrammarLab })));
+const ProgrammeView = lazy(() => sectionLoaders["academy"]().then((module) => ({ default: module.ProgrammeView })));
+const CompanionView = lazy(() => sectionLoaders["academy"]().then((module) => ({ default: module.CompanionView })));
+const PracticeArcade = lazy(() => sectionLoaders["arcade"]().then((module) => ({ default: module.PracticeArcade })));
+const VocabularyBooster = lazy(() => sectionLoaders["vocab-boost"]().then(module => ({ default: module.VocabularyBooster })));
+const PracticeHub = lazy(() => sectionLoaders["practice-hub"]().then(module => ({ default: module.PracticeHub })));
+const AssessmentView = lazy(() => sectionLoaders["practice-tools"]().then((module) => ({ default: module.AssessmentView })));
+const PersonalWords = lazy(() => sectionLoaders["practice-tools"]().then((module) => ({ default: module.PersonalWords })));
+const DailySession = lazy(() => sectionLoaders["enriched"]().then((module) => ({ default: module.DailySession })));
+const ResourceLibrary = lazy(() => sectionLoaders["enriched"]().then((module) => ({ default: module.ResourceLibrary })));
+const VocabularyView = lazy(() => sectionLoaders["enriched"]().then((module) => ({ default: module.VocabularyView })));
+const ChapterDashboard = lazy(() => sectionLoaders["chapters"]().then((module) => ({ default: module.ChapterDashboard })));
+const BackupTransfer = lazy(() => sectionLoaders["backup-transfer"]().then(module => ({ default: module.BackupTransfer })));
+const OfflineStudy = lazy(() => sectionLoaders["offline"]().then(module => ({ default: module.OfflineStudy })));
+const ProfileView = lazy(() => sectionLoaders["profile"]().then(module => ({ default: module.ProfileView })));
+const A2DiagnosticView = lazy(() => sectionLoaders["learning-insights"]().then(module => ({ default: module.A2DiagnosticView })));
+const WeeklyLearningReport = lazy(() => sectionLoaders["learning-insights"]().then(module => ({ default: module.WeeklyLearningReport })));
+const ListeningView = lazy(() => sectionLoaders["listening"]().then(module => ({ default: module.ListeningView })));
+const OralPracticeView = lazy(() => sectionLoaders["oral-practice"]().then(module => ({ default: module.OralPracticeView })));
+const ReviewHub = lazy(() => sectionLoaders["review-hub"]().then((module) => ({ default: module.ReviewHub })));
+
+const routeSections: Record<string, keyof typeof sectionLoaders> = {
+  discover: "discovery", grammar: "academy", programmes: "academy", companion: "academy",
+  games: "arcade", "vocab-boost": "vocab-boost", practice: "practice-hub",
+  readiness: "practice-tools", tense: "practice-tools", words: "practice-tools",
+  session: "enriched", materials: "enriched", vocabulary: "enriched", chapters: "chapters",
+  offline: "offline", profile: "profile", diagnostics: "learning-insights", weekly: "learning-insights",
+  listening: "listening", "listen-speak": "oral-practice", reviews: "review-hub",
+};
+function preloadSection(route: string) {
+  const section = routeSections[route.split(/[/?]/)[0]];
+  // The route boundary handles a failed import when the section is opened.
+  if (section) void sectionLoaders[section]().catch(() => {});
+}
 
 const missions = curriculum.missions as Mission[];
 const sources = Array.from(
@@ -154,6 +187,7 @@ export default function Portal() {
   const [storageError, setStorageError] = useState(false);
   const [loadError, setLoadError] = useState(false);
   const [route, setRoute] = useState("today");
+  const [navigating, startNavigation] = useTransition();
   const routePath = route.split("?")[0];
   const [notice, setNotice] = useState("");
   const [pdfs, setPdfs] = useState<Record<string, string>>({});
@@ -201,8 +235,9 @@ export default function Portal() {
     }
     setReady(true);
     const routeChange = () => {
-      setRoute(initialRoute());
-      setNotice("");
+      const target = initialRoute();
+      // Keep the current lesson painted until its replacement has loaded.
+      startNavigation(() => { setRoute(target); setNotice(""); });
     };
     const sync = (e: StorageEvent) => {
       if (e.key === PROFILE_LINK_KEY) {
@@ -251,11 +286,12 @@ export default function Portal() {
         ? "Parliamo — Un po’ d’italiano, ogni giorno"
         : "Parliamo — A little Italian, every day";
   }, [p.language]);
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!["grammar", "companion", "discover", "chapters", "reviews"].includes(routePath.split("/")[0])) {
       heading.current?.focus({ preventScroll: true });
-      window.scrollTo({ top: 0 });
     }
+    // Commit the new page and its scroll position together, before paint.
+    window.scrollTo({ top: 0, behavior: "instant" });
     if (toolsMenu.current) toolsMenu.current.open = false;
     window.speechSynthesis?.cancel();
   }, [route, routePath]);
@@ -284,9 +320,11 @@ export default function Portal() {
   }
   const go = (target: string) => {
     if (target === initialRoute()) {
-      heading.current?.focus();
+      heading.current?.focus({ preventScroll: true });
+      window.scrollTo({ top: 0, behavior: "instant" });
       return;
     }
+    preloadSection(target);
     window.location.hash = target;
   };
   const due = dueReviews(p, today);
@@ -386,6 +424,8 @@ export default function Portal() {
           {nav.map(([id, icon, label]) => (
             <button
               key={id}
+              onPointerEnter={() => preloadSection(id)}
+              onFocus={() => preloadSection(id)}
               onClick={() => go(id)}
                 aria-current={(routePath === id || (id === "today" && routePath === "session") || (id === "progress" && routePath === "weekly") || (id === "programmes" && routePath.split("/")[0] === "chapters") || (id === "practice" && ["grammar", "games", "vocabulary", "vocab-boost", "words", "tense", "readiness", "reviews", "diagnostics", "listening", "listen-speak"].includes(routePath.split("/")[0]))) ? "page" : undefined}
             >
@@ -457,7 +497,7 @@ export default function Portal() {
           </button>
         </div>
       )}
-      <main id="main-content" ref={heading} tabIndex={-1}>
+      <main id="main-content" ref={heading} tabIndex={-1} aria-busy={navigating} data-route={route}>
         <details key="practice-tools-menu" ref={toolsMenu} className="practice-menu">
           <summary>{t("More practice & materials", "Altra pratica e materiali")}</summary>
           <nav
@@ -488,6 +528,8 @@ export default function Portal() {
               <button
                 key={id}
                 aria-current={routePath.split("/")[0] === id ? "page" : undefined}
+                onPointerEnter={() => preloadSection(id)}
+                onFocus={() => preloadSection(id)}
                 onClick={() => go(id)}
               >
                 {label}
@@ -495,8 +537,8 @@ export default function Portal() {
             ))}
           </nav>
         </details>
+        <Suspense fallback={<section className="workspace route-loading" role="status" aria-live="polite"><p>{t("Opening your practice…", "Apertura della pratica…")}</p></section>}>
         <LearningRouteBoundary key={routePath} t={t}>
-        <Suspense fallback={<section className="workspace" role="status" aria-live="polite"><p>{t("Opening your practice…", "Apertura della pratica…")}</p></section>}>
         {routePath === "offline" && <OfflineStudy t={t} />}
         {routePath === "profile" && (loadError || storageError
           ? <div className="workspace"><h1>{t("Keep your saved work safe", "Conserva il lavoro salvato")}</h1><p>{t("Resolve the device storage warning before connecting a profile. Progress has recovery and backup options.", "Risolvi l’avviso sul salvataggio prima di collegare un profilo. Progressi offre opzioni di recupero e backup.")}</p><button className="button primary" onClick={() => go("progress")}>{t("Open progress & recovery", "Apri progressi e recupero")}</button></div>
@@ -663,9 +705,10 @@ export default function Portal() {
               </button>
             </div>
           )}
-        </Suspense>
         </LearningRouteBoundary>
+        </Suspense>
       </main>
+      {navigating && <div className="route-pending" role="status" aria-live="polite">{t("Opening your next page…", "Apertura della prossima pagina…")}</div>}
       <div className="notice" role="status">
         {notice}
       </div>

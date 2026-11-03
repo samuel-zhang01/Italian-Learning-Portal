@@ -417,7 +417,7 @@ const catalogue = Array.from(
   ).values(),
 );
 export function PersonalWords({ p, t, save, today, go }: Props) {
-  const requestedWord = catalogueParams().get("word");
+  const [requestedWord] = useState(() => catalogueParams().get("word"));
   const [query, setQuery] = useState("");
   const [visible, setVisible] = useState(6);
   const [browsing, setBrowsing] = useState(false);

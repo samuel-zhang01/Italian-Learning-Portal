@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import curriculumData from "./curriculum.json";
 import grammarData from "./grammar.json";
 import enrichmentData from "./enrichment.json";
@@ -37,7 +37,7 @@ const chapters = buildChapterCatalogue({
 });
 
 export function ChapterDashboard({ p, t, text, go, today, chapterId, pdfs = {}, pdfPageOffsets = {} }: Props) {
-  const bookParam = catalogueParams().get("book");
+  const [bookParam] = useState(() => catalogueParams().get("book"));
   const book = bookParam === "1" || bookParam === "2" ? bookParam : "all";
   const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => focusStudyHeading(heading.current), [chapterId, book]);

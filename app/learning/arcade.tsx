@@ -99,12 +99,13 @@ const modes: {
 export function PracticeArcade(props: Props) {
   const { p, t, text, save, go, today } = props;
   const a = p.arcade ?? emptyArcade();
-  const requestedReviewId = catalogueParams().get("review");
+  const [params] = useState(catalogueParams);
+  const requestedReviewId = params.get("review");
   const requestedReview = requestedReviewId ? arcadeItemById.get(requestedReviewId) : undefined;
   const reviewRecord = requestedReview ? a.records[requestedReview.id] : undefined;
   const reviewDue = !!(reviewRecord && reviewRecord.due <= today && reviewRecord.date !== today);
   const requestedScene = arcadeScenes.find((scene) => scene.id === props.sceneId);
-  const requestedVerbMode = catalogueParams().get("mode") === "verbs";
+  const requestedVerbMode = params.get("mode") === "verbs";
   const settings: ArcadeSettings = requestedScene ? { ...a.settings, mode: "conversation", scene: requestedScene.id } : requestedVerbMode ? { ...a.settings, mode: "verbs", support: "recall" } : a.settings;
   const pool = arcadePool(settings),
     due = arcadeDue(p, arcadeItems, today),

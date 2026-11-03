@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { catalogueParams, focusStudyHeading } from "./navigation";
 import { a2DiagnosticChapters } from "./a2-diagnostic-data";
 import {
@@ -19,10 +19,11 @@ const chapterRoute = (id: string, run?: string) => `diagnostics?chapter=${id}${r
 const companionIds = planningSources.flatMap((source) => Array.from({ length: source.pages }, (_, index) => `${source.id}-p${index + 1}`));
 
 export function A2DiagnosticView({ p, t, text, go, today, save }: Props) {
-  const chapter = a2DiagnosticChapters.find((item) => item.id === catalogueParams().get("chapter"));
+  const [params] = useState(catalogueParams);
+  const chapter = a2DiagnosticChapters.find((item) => item.id === params.get("chapter"));
   const state = p.diagnostics ?? emptyA2Diagnostics();
   const runs = Object.entries(state.runs).filter(([, run]) => run.chapterId === chapter?.id).sort(([a], [b]) => b.localeCompare(a));
-  const requestedRun = catalogueParams().get("run");
+  const requestedRun = params.get("run");
   const selected = runs.find(([key]) => key === requestedRun) ?? runs.find(([, run]) => Object.keys(run.answers).length < run.itemIds.length) ?? runs[0];
   const key = selected?.[0], run = selected?.[1];
   const item = chapter?.items.find((question) => !run?.answers[question.id]);

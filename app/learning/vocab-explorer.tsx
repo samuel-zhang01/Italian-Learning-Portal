@@ -35,7 +35,7 @@ export function WordSources({ item, t, text, go, pdfs, pdfPageOffsets }: Pick<Vo
 
 export function VocabularyExplorer(props: Props) {
   const { p, t, text, save, today, onStart } = props;
-  const params = catalogueParams();
+  const [params] = useState(catalogueParams);
   const reviewView = params.get("view") === "review";
   const valid = (key: string, choices: string[], fallback = "all") => choices.includes(params.get(key) ?? "") ? params.get(key)! : fallback;
   const [filters, setFilters] = useState<WordFilters>({ query: params.get("q") ?? "", bank: valid("bank", vocabBanks.map(b => b.id)), level: valid("level", ["A1", "A2"]), source: valid("source", planningSources.map(s => s.id)), status: params.get("status") === "any" ? "all" : valid("status", ["new", "learning", "recalled", "due", "saved"], reviewView ? "due" : "all") });
