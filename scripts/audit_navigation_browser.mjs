@@ -92,6 +92,11 @@ try {
     control.slow = false;
     await page.getByRole("button", { name: language === "en" ? "Explore my word library →" : "Esplora il mio lessico →", exact: true }).click();
     await page.locator(".vocab-explorer").waitFor();
+    const cover = page.locator(".word-results-toolbar .text-button");
+    assert.equal(await cover.evaluate(node => getComputedStyle(node).backgroundImage), "none", "Quiet toggle must not inherit the opaque paper texture");
+    await cover.click();
+    assert.equal(await cover.evaluate(node => getComputedStyle(node).backgroundImage), "none", "Pressed quiet toggle must keep the same clean finish");
+    await cover.click();
     await page.getByRole("searchbox", { name: language === "en" ? "Search English or Italian" : "Cerca in inglese o italiano", exact: true }).fill("giacca");
     const filteredHash = await page.evaluate(() => location.hash);
     control.slow = true; await beginFrames(page);

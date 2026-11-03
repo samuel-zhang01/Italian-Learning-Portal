@@ -37,6 +37,7 @@
   font-size: 13px;
 }
 .daily-app .text-button::before { content: none; }
+.daily-app .text-button:is(:hover, :active, :disabled, [aria-pressed], [aria-current]) { background-image: none; }
 .daily-app .text-button:hover:not(:disabled) { background: #e9dfca; box-shadow: none; }
 .daily-app .text-button:active:not(:disabled) { transform: none; }
 
