@@ -428,6 +428,9 @@ def run_exports(args):
 
 def write_readme(manifest, with_zip):
     lines = ['# Private PDF study exports', '', 'All files stay local and Git-ignored. The individual student PDFs are byte-exact renamed copies of the approved canonical PDFs. Combined/reference PDFs preserve page content and add internal bookmarks.', '', '| Book | Student | Reference | Supplied transcripts | Complete PDF study pack |', '| --- | --- | --- | --- | --- |']
+    linked = (EXPORTS / 'linked/index.html').is_file()
+    if linked:
+        lines[2:2] = ['[Open linked PDF editions](linked/index.html): clickable contents, lesson resource menus and return controls on every page. Original source page numbers are unchanged.', '']
     for book in manifest['books']:
         def link(item):
             return f"[{item['pages']} pages]({Path(item['path']).name})" if item else 'Waiting for interactive print'
@@ -447,6 +450,8 @@ def write_readme(manifest, with_zip):
             cells.append(f'<td><a href="{escape(Path(item["path"]).name, quote=True)}" download>{item["pages"]} pages</a></td>' if item else '<td>Interactive print pending</td>')
         rows.append('<tr><th scope="row">' + escape(book['title']) + '</th>' + ''.join(cells) + '</tr>')
     extra = '<p><a href="combined-complete-study-pack.pdf" download>Combined complete PDF study pack</a></p>' if manifest['status'] == 'complete-accessible-pdf-exports' else ''
+    if linked:
+        extra = '<p><a href="linked/index.html">Open linked PDF editions: contents and lesson resource navigation</a></p>' + extra
     kit = '<p><a href="italian-study-pdf-export-kit.zip" download>Download the PDF and caption ZIP kit</a></p>' if with_zip else ''
     html = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src \'none\'; style-src \'unsafe-inline\'; script-src \'none\'; connect-src \'none\'; frame-src \'none\'; base-uri \'none\'; form-action \'none\'"><title>Private PDF study exports</title><style>body{font:17px/1.6 system-ui,sans-serif;max-width:1100px;margin:3rem auto;padding:0 1.2rem;color:#20382e;background:#faf8f0}h1{font-size:2rem}table{border-collapse:collapse;width:100%;background:#fff}th,td{padding:.8rem;text-align:left;border-bottom:1px solid #ddd}a{color:#165d47}small{color:#526259}</style></head><body><h1>Private PDF study exports</h1><p>Download the accessible student books, private reference material and supplied transcripts. These files remain local and Git-ignored.</p><p><a href="combined-student-books.pdf" download>Combined student books: 503 pages</a></p><table><thead><tr><th>Book</th><th>Student</th><th>Reference</th><th>Transcripts</th><th>Complete PDF pack</th></tr></thead><tbody>' + ''.join(rows) + '</tbody></table>' + extra + kit + '<p>PLUS 2 contains 263 accessible student pages. The publisher lists 264; the unavailable page has not been invented. Reference packs include source solutions and teacher guides. PDF packs overlap.</p><p>Original captions and exact plain-text derivatives are in <a href="source-captions/">source-captions/</a>. Supplied untimed prose and source timing defects retain explicit warnings. No new timing or unavailable media has been created.</p><p><a href="export-manifest.json">Checksums, provenance and page offsets</a> · <a href="README.md">Export notes</a></p><small>Audio and video binaries remain in the private source archive. They and the temporary print cache are excluded from this PDF/caption ZIP kit.</small></body></html>'
     with temporary_output(EXPORTS / 'index.html') as temporary:

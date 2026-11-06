@@ -1,0 +1,248 @@
+{
+  "generator": "link_book_pdfs.py",
+  "version": 1,
+  "generatedAt": "2026-11-05T22:32:20.298982+00:00",
+  "status": "complete",
+  "sourceFilesUnchanged": true,
+  "linkType": "internal-GoTo-only",
+  "sourcePageNumbersUnchanged": true,
+  "mediaLinks": "Lesson transcript associations come from verified captured HTML links; no filename guessing.",
+  "outputs": [
+    {
+      "path": "materials/books/exports/linked/nuovo-espresso-plus-1-student-book.pdf",
+      "sha256": "6383d10c081d012eaba3304e7d1e5c56a4a55c196c19653f6a4047496d8cf24f",
+      "pages": 254,
+      "sourcePages": 240,
+      "contentsPage": 241,
+      "navigationPages": 14,
+      "lessonMenus": 10,
+      "internalLinks": 535
+    },
+    {
+      "path": "materials/books/exports/linked/nuovo-espresso-plus-1-reference-pack.pdf",
+      "sha256": "958893eedcc66a2fa42a61e8e856be1f44e3c8a6ada0eb5eedcbaaccf01a2491",
+      "pages": 429,
+      "sourcePages": 416,
+      "contentsPage": 417,
+      "navigationPages": 13,
+      "lessonMenus": 10,
+      "internalLinks": 732
+    },
+    {
+      "path": "materials/books/exports/linked/nuovo-espresso-plus-1-source-captions.pdf",
+      "sha256": "1b37458d20d400a3328ef6c9ee8da64db27ba1b7b73701469b3136e24f972497",
+      "pages": 62,
+      "sourcePages": 47,
+      "contentsPage": 48,
+      "navigationPages": 15,
+      "lessonMenus": 10,
+      "internalLinks": 247
+    },
+    {
+      "path": "materials/books/exports/linked/nuovo-espresso-plus-1-supplied-transcripts.pdf",
+      "sha256": "7d3120e2746f8039e276a71da591b5184c9ebc32ddd02801c2b029d640f58330",
+      "pages": 168,
+      "sourcePages": 150,
+      "contentsPage": 151,
+      "navigationPages": 18,
+      "lessonMenus": 10,
+      "internalLinks": 617
+    },
+    {
+      "path": "materials/books/exports/linked/nuovo-espresso-plus-1-complete-study-pack.pdf",
+      "sha256": "ca78fbaff8b92a2357c4aea27586750226e313b4d2744b6ca45eb7d5280533eb",
+      "pages": 1772,
+      "sourcePages": 1730,
+      "contentsPage": 1731,
+      "navigationPages": 42,
+      "lessonMenus": 10,
+      "internalLinks": 4086
+    },
+    {
+      "path": "materials/books/exports/linked/nuovo-espresso-plus-2-student-book.pdf",
+      "sha256": "4c7fb785d081f084d6cb18ed0dce8788c1c1ff9146266c8fce07f6ea4d01c885",
+      "pages": 277,
+      "sourcePages": 263,
+      "contentsPage": 264,
+      "navigationPages": 14,
+      "lessonMenus": 10,
+      "internalLinks": 582
+    },
+    {
+      "path": "materials/books/exports/linked/nuovo-espresso-plus-2-reference-pack.pdf",
+      "sha256": "9fc596a90851407fcb98d9e12ed3169034df34b8d00eafe85aab616d02effaea",
+      "pages": 548,
+      "sourcePages": 535,
+      "contentsPage": 536,
+      "navigationPages": 13,
+      "lessonMenus": 10,
+      "internalLinks": 875
+    },
+    {
+      "path": "materials/books/exports/linked/nuovo-espresso-plus-2-source-captions.pdf",
+      "sha256": "a593610a486c1a707252cc3a87a353917749da94ae8418244f3e3d269f0943d2",
+      "pages": 67,
+      "sourcePages": 52,
+      "contentsPage": 53,
+      "navigationPages": 15,
+      "lessonMenus": 10,
+      "internalLinks": 257
+    },
+    {
+      "path": "materials/books/exports/linked/nuovo-espresso-plus-2-supplied-transcripts.pdf",
+      "sha256": "b851de68ceac3ba2289846b4262a612e74ada900d185b92bb0b0401b0c944c5b",
+      "pages": 370,
+      "sourcePages": 353,
+      "contentsPage": 354,
+      "navigationPages": 17,
+      "lessonMenus": 10,
+      "internalLinks": 986
+    },
+    {
+      "path": "materials/books/exports/linked/nuovo-espresso-plus-2-complete-study-pack.pdf",
+      "sha256": "d4c99a37276186cd85923228eecebc5a599c49591d1b1d064049ae930b3398f5",
+      "pages": 2073,
+      "sourcePages": 2032,
+      "contentsPage": 2033,
+      "navigationPages": 41,
+      "lessonMenus": 10,
+      "internalLinks": 4616
+    },
+    {
+      "path": "materials/books/exports/linked/combined-student-books.pdf",
+      "sha256": "00f0f646a4d31c26c5b2ad09ff8b7b25f2289562f1fa3bde5a7af383b15904f6",
+      "pages": 528,
+      "sourcePages": 503,
+      "contentsPage": 504,
+      "navigationPages": 25,
+      "lessonMenus": 20,
+      "internalLinks": 1062
+    },
+    {
+      "path": "materials/books/exports/linked/combined-complete-study-pack.pdf",
+      "sha256": "d23d6329bb5962fdd17debfcb2dda244a6eb5b3f6948ac243fcb6fec8e05acd7",
+      "pages": 3845,
+      "sourcePages": 3762,
+      "contentsPage": 3763,
+      "navigationPages": 83,
+      "lessonMenus": 20,
+      "internalLinks": 8702
+    },
+    {
+      "path": "materials/books/exports/linked/nuovo-espresso-plus-1-interactive-activities.pdf",
+      "sha256": "3d413c631979c4128cc50625256850cc48b3f7406453eccb846119e2dc0c9a51",
+      "pages": 1195,
+      "sourcePages": 1164,
+      "contentsPage": 1165,
+      "navigationPages": 31,
+      "lessonMenus": 10,
+      "internalLinks": 2809
+    },
+    {
+      "path": "materials/books/exports/linked/nuovo-espresso-plus-2-interactive-activities.pdf",
+      "sha256": "1920128d6e0e7848bc35dba77597be841ce67bf0e6740a50e5a89716e3e1a63a",
+      "pages": 1177,
+      "sourcePages": 1144,
+      "contentsPage": 1145,
+      "navigationPages": 33,
+      "lessonMenus": 10,
+      "internalLinks": 2832
+    }
+  ],
+  "validation": {
+    "pdfs": 14,
+    "links": 28938,
+    "renderedPagesCompared": 70,
+    "portalMappings": 8,
+    "allLinkTargetsValid": true,
+    "allSourcePageReturnLinksValid": true,
+    "sampledSourceRenderingIdentical": true,
+    "originalBookmarksPreserved": true,
+    "originalPDFHashesUnchanged": true,
+    "checks": [
+      {
+        "file": "nuovo-espresso-plus-1-student-book.pdf",
+        "textPagesCompared": 30,
+        "renderedPagesCompared": 5
+      },
+      {
+        "file": "nuovo-espresso-plus-1-reference-pack.pdf",
+        "textPagesCompared": 43,
+        "renderedPagesCompared": 5
+      },
+      {
+        "file": "nuovo-espresso-plus-1-source-captions.pdf",
+        "textPagesCompared": 40,
+        "renderedPagesCompared": 5
+      },
+      {
+        "file": "nuovo-espresso-plus-1-supplied-transcripts.pdf",
+        "textPagesCompared": 140,
+        "renderedPagesCompared": 5
+      },
+      {
+        "file": "nuovo-espresso-plus-1-complete-study-pack.pdf",
+        "textPagesCompared": 389,
+        "renderedPagesCompared": 5
+      },
+      {
+        "file": "nuovo-espresso-plus-2-student-book.pdf",
+        "textPagesCompared": 29,
+        "renderedPagesCompared": 5
+      },
+      {
+        "file": "nuovo-espresso-plus-2-reference-pack.pdf",
+        "textPagesCompared": 42,
+        "renderedPagesCompared": 5
+      },
+      {
+        "file": "nuovo-espresso-plus-2-source-captions.pdf",
+        "textPagesCompared": 41,
+        "renderedPagesCompared": 5
+      },
+      {
+        "file": "nuovo-espresso-plus-2-supplied-transcripts.pdf",
+        "textPagesCompared": 128,
+        "renderedPagesCompared": 5
+      },
+      {
+        "file": "nuovo-espresso-plus-2-complete-study-pack.pdf",
+        "textPagesCompared": 380,
+        "renderedPagesCompared": 5
+      },
+      {
+        "file": "combined-student-books.pdf",
+        "textPagesCompared": 56,
+        "renderedPagesCompared": 5
+      },
+      {
+        "file": "combined-complete-study-pack.pdf",
+        "textPagesCompared": 766,
+        "renderedPagesCompared": 5
+      },
+      {
+        "file": "nuovo-espresso-plus-1-interactive-activities.pdf",
+        "textPagesCompared": 211,
+        "renderedPagesCompared": 5
+      },
+      {
+        "file": "nuovo-espresso-plus-2-interactive-activities.pdf",
+        "textPagesCompared": 216,
+        "renderedPagesCompared": 5
+      }
+    ]
+  },
+  "projectChecks": {
+    "syntheticPDFTests": 10,
+    "dailyTests": 313,
+    "typecheck": "passed",
+    "lint": "passed",
+    "buildDaily": "passed",
+    "visualReview": [
+      "contents page",
+      "lesson menu",
+      "source page with footer"
+    ],
+    "cacheRebuild": "All 14 PDF hashes retained on the second generator run."
+  }
+}

@@ -259,6 +259,12 @@ Then visit `http://127.0.0.1:8788/<book-id>/index.html`. Keep this private index
 
 ### Private PDF study exports
 
+For navigation inside the PDFs, open the **[linked editions](materials/books/exports/linked/index.html)**. All 14 exported books and resource packs have clickable contents, lesson resource menus, and **Contents / Indice** controls beneath every source page. In the complete packs, a lesson menu connects its textbook pages, workbook exercises, video worksheets, supplied transcripts and printed activities. Shared transcripts appear under each lesson that actually references them; guides and solutions remain available from the full contents.
+
+These are separate copies in `materials/books/exports/linked/`. Navigation pages are appended, keeping existing physical page numbers and portal offsets intact; controls occupy an added bottom margin. The links stay inside each PDF. Audio/video files remain in the private archive. The original PDFs and original ZIP kit are unchanged; the ZIP does not include the linked editions.
+
+Regenerate them after the ordinary exports with `python3 scripts/link_book_pdfs.py --update-catalogue`, then verify them with `python3 scripts/audit_pdf_navigation.py`. The optional catalogue flag registers the new PDF hashes with the portal while retaining support for the original files. The generator verifies source hashes, writes PDFs atomically, validates every internal link, and preserves modified or unmanaged linked PDFs. Its private manifest is `materials/books/exports/linked/navigation-manifest.json`; the aggregate verification is [`docs/pdf-navigation-audit.json`](docs/pdf-navigation-audit.json).
+
 Start with [`materials/books/exports/index.html`](materials/books/exports/index.html) or, using the books-only localhost server above, `http://127.0.0.1:8788/exports/index.html`. For everyday reading, use the **[combined student books](materials/books/exports/combined-student-books.pdf): 503 pages, about 79 MB**. Plus 1 occupies PDF pages 1–240; Plus 2 starts at PDF page 241. The separate student-book files are byte-exact renamed copies of the approved canonical PDFs. The combined file adds book and section bookmarks.
 
 | Private PDF | Plus 1 pages | Plus 2 pages |

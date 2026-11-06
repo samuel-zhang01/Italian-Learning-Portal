@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import catalogue from "../app/learning/pdf-bundles.json" with { type: "json" };
+import navigationAudit from "../docs/pdf-navigation-audit.json" with { type: "json" };
 import { createLocalPdfStore, localPdfPageHref } from "../app/learning/local-pdfs.ts";
 
 function fixture() {
@@ -239,7 +240,8 @@ test("local PDF page links replace an old fragment and reject invalid page arith
 });
 
 test("the production catalogue contains only bounded hash and page metadata for verified PDF exports", () => {
-  assert.equal(catalogue.length, 6);
+  assert.ok(catalogue.length <= 32);
+  assert.equal(new Set(catalogue.map(({ sha256 }) => sha256)).size, catalogue.length);
   for (const bundle of catalogue) {
     assert.deepEqual(Object.keys(bundle).sort(), ["pages", "sha256", "sources"]);
     assert.match(bundle.sha256, /^[a-f0-9]{64}$/);
@@ -260,4 +262,22 @@ test("the production catalogue contains only bounded hash and page metadata for 
     { sourceId: "src-580f7558db56", offset: 1730 },
     { sourceId: "src-070c40bad24b", offset: 2099 },
   ]);
+});
+
+test("linked PDF editions retain source offsets while adding navigation pages", () => {
+  const linked = navigationAudit.outputs.filter(({ path }) => /(?:student-book|student-books|reference-pack|complete-study-pack)\.pdf$/.test(path));
+  assert.equal(linked.length, 8);
+  for (const edition of linked) {
+    const bundle = catalogue.find(({ sha256 }) => sha256 === edition.sha256);
+    assert.ok(bundle, `Missing linked edition: ${edition.path}`);
+    assert.equal(bundle.pages, edition.pages);
+    assert.equal(edition.contentsPage, edition.sourcePages + 1);
+    assert.equal(bundle.pages, edition.sourcePages + edition.navigationPages);
+    const original = catalogue.find(({ pages }) => pages === edition.sourcePages);
+    if (original) assert.deepEqual(bundle.sources, original.sources);
+    for (const source of bundle.sources) {
+      assert.ok(source.offset + source.pages <= edition.sourcePages);
+      assert.equal(localPdfPageHref("blob:linked", 1, source.offset), `blob:linked#page=${source.offset + 1}`);
+    }
+  }
 });
