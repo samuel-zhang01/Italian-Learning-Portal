@@ -1,0 +1,620 @@
+{
+  "release": "20261108T115740Z-week5-imperative",
+  "releaseDirectory": "/data/italian/releases/20261108T115740Z-week5-imperative",
+  "previousReleaseDirectory": "/data/italian/releases/20261103T222207Z-navigation-polish",
+  "sourceRevision": "5a45a4a9677c54f253e6d4045c8045629cda6e47",
+  "artifactHashes": {
+    "app-icon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "assets/academy-D2YywY84.js": "cbcf1ad393c00f7f8a13e02c2779277653060719e47d8badd5b4631abc937745",
+    "assets/arcade-BlhiO3Lh.js": "71921cdd0ef35308481f4c46f7c36ccba042f68bc8910555075467fed7e5ff3f",
+    "assets/arcade-scenes-D_GrQAm4.js": "9acbc31d1846c8e67351a57d44894c6d524d8c249b3493a90ef01397d54eeadb",
+    "assets/backup-transfer-DIXfsyDm.js": "5fdfcbe2c6ef15027314ccf8a5b7125c4ca96d2768968366fbdedc810356a3b6",
+    "assets/backup-transfer-ZQnUZdgZ.css": "592a44651b526292fcb66338c9cb095490cdbd079a68a806ac8e51de92ca93df",
+    "assets/booster-content-CcOb-fCU.js": "3380433469d8b4d69dd7d27ac19ffe74573a8e883b511da0d62edd8384a31812",
+    "assets/chapters-BlGMO7RK.js": "46d63a5056a70f88b0667867c742f607981671dfa7312c2a71358386485239aa",
+    "assets/chapters-CfwLknyS.css": "a8b87bb143e0bb4e4e55347a1c8d78dafba41aaba93c7059fde8c2d1332183ff",
+    "assets/companion-CX8_OIwK.js": "2e262574aa6d02dc8bf915c7daa40da0eb5465643f6e1739493cfa6b002605ed",
+    "assets/discovery-CB08TLzt.js": "8aa6b8135cf9da70e5da9f5aac655c9264c9418b0493abefef76231812a53c45",
+    "assets/discovery-index-oaZOlvmg.js": "3e300acc0357c466a13d61206ff8f7c940220c098612d0f577e8f649d0462cd8",
+    "assets/enriched-CMpjIPXU.js": "8293f53f4594d081ea25a67492bbb465c63a7c8c0a2c04654530acb910640391",
+    "assets/enrichment-zccWAc0I.js": "8e3929c1404a13f99dbf3568efdc5c86a4d9c1496bba0320c06047e863f80c31",
+    "assets/grammar-C_9ddIR8.js": "615219235c72391f341833135646cb5ffde63b159865b156c134b24f980f9994",
+    "assets/index-C1n5BHln.css": "fdca6075a0190eaf132b42788adc567f17b853608385646bef200dfd15694ff1",
+    "assets/index-Chybs4f2.js": "df1efcf9ace172ad7a072a50f12dd48a142ea534d065a77cbf08608f588d0e3f",
+    "assets/learning-insights-BLQTf6f8.css": "a8d4ba17b735c4f737b8ada17e847a45272bce7a81b6c425c1e6cdac44ae4dd0",
+    "assets/learning-insights-yCojIF1_.js": "f008d0cb3c8ff387ba2024edf9c15d928924b00d804e1f48398b7fdeae4e8edd",
+    "assets/listening-D68eptkI.js": "47b61717b72195ab40f3ab6d479752187e7dd6a773d2276c7076630cda0eb793",
+    "assets/listening-DYa2axRK.css": "9ceef35e541c490ce309e98afced2f1804969343e6dc761c7d075bc997746799",
+    "assets/navigation-3S6zwPaY.js": "afb154d158fce773efcd9c3786db9d713976a3f84f8454d9d59c9d38d5924343",
+    "assets/offline-CeUp32tN.js": "bcbf45064e35a43ee55a9aaa8619a1c29ee6577e58b7200e3548aad168de7cfb",
+    "assets/oral-practice-BjJk41Xn.js": "8cc2c5caeba8bf0d5d58e1bb3473689595ffb09f2eb4039cac0346a4f183ebbc",
+    "assets/oral-practice-C9ivmFoo.css": "eacd3820fbc7a6ed4d884233738c6c8028993639102259f75c5da705d3ec97ea",
+    "assets/painted-cardboard-CX92yXJi.webp": "2267856e5f4e1c2f9388fa4fe7cc1eff3746b3354407287574e42dd51533c2db",
+    "assets/practice-hub-DFOhAAwV.js": "f9d878e3404d20d0878af892ba382d6a6c6f844bc8f4d01fa9795431f1915ab1",
+    "assets/practice-navigation-BFQA678X.js": "567cbc4233b907784ea0365538ff355e85698cffa1453184c0e646ba08761bc2",
+    "assets/practice-tools-BR9vHGjF.js": "d2cf73f3a39242c83ba4867909b4705baa70c971bc83c6af3d87e0f646ede9e3",
+    "assets/profile-BANJdIYQ.js": "71a68b1178594e2340c0b97ad511e17d32f0c30d223310df7a11090ff676a6ce",
+    "assets/profile-C1g0z2YZ.css": "7b860d23ae06ca1a6f26eb34db7b4e84038d648343c46f066323dc2cc4427588",
+    "assets/review-hub-BMqltIkU.js": "be54faa587e4058669093b0aa1d70b4a57babe1c61108e0157a930a19b92ac7f",
+    "assets/review-hub-C0Sh_F8c.css": "e0d5c02b9b6e9f87a95ef873518983f70a779d2537782d05da904e0d2693f146",
+    "assets/vocab-boost-CZUa5XJH.js": "1f4591f873cdb8650ff27c2e2849a3fe727d6a97fa4745f61ede33e3eb854388",
+    "assets/vocab-catalogue-Pn7xNzXT.js": "7a78a8c6982d6ba88c54e130f002e4e2d4a0088cf731d02707f0a067c9fcf891",
+    "favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "index.html": "1251bb91d80a84920496952a384c3f907dff142b959a68f542cab79049532c38",
+    "manifest.webmanifest": "12b91f0ec01c070bfffcfa31bea3df6fce59caa7666cd4be77b80b5822448d2a",
+    "offline-worker.js": "874f4f63dac53d3983d8b4502c904d2fe92f2fd7c18a3f804e7ea7caf28b51ae"
+  },
+  "offlineVersion": "b73d0c710b29e48f",
+  "files": 39,
+  "remoteHashVerification": "passed",
+  "status": "published and verified",
+  "url": "https://italian.samuelzhang.co.uk/",
+  "stagedAt": "2026-11-08T11:57:43.010704+00:00",
+  "activatedAt": "2026-11-08T11:58:27.796706+00:00",
+  "publicAssets": {
+    "passed": true,
+    "testedAt": "2026-11-08T12:00:29.757148+00:00",
+    "tlsValidation": true,
+    "assets": [
+      {
+        "path": "app-icon.svg",
+        "deliveredPath": "/app-icon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/academy-D2YywY84.js",
+        "deliveredPath": "/assets/academy-D2YywY84.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-BlhiO3Lh.js",
+        "deliveredPath": "/assets/arcade-BlhiO3Lh.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-scenes-D_GrQAm4.js",
+        "deliveredPath": "/assets/arcade-scenes-D_GrQAm4.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/backup-transfer-DIXfsyDm.js",
+        "deliveredPath": "/assets/backup-transfer-DIXfsyDm.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/backup-transfer-ZQnUZdgZ.css",
+        "deliveredPath": "/assets/backup-transfer-ZQnUZdgZ.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/booster-content-CcOb-fCU.js",
+        "deliveredPath": "/assets/booster-content-CcOb-fCU.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-BlGMO7RK.js",
+        "deliveredPath": "/assets/chapters-BlGMO7RK.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-CfwLknyS.css",
+        "deliveredPath": "/assets/chapters-CfwLknyS.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/companion-CX8_OIwK.js",
+        "deliveredPath": "/assets/companion-CX8_OIwK.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-CB08TLzt.js",
+        "deliveredPath": "/assets/discovery-CB08TLzt.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-index-oaZOlvmg.js",
+        "deliveredPath": "/assets/discovery-index-oaZOlvmg.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enriched-CMpjIPXU.js",
+        "deliveredPath": "/assets/enriched-CMpjIPXU.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enrichment-zccWAc0I.js",
+        "deliveredPath": "/assets/enrichment-zccWAc0I.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/grammar-C_9ddIR8.js",
+        "deliveredPath": "/assets/grammar-C_9ddIR8.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-C1n5BHln.css",
+        "deliveredPath": "/assets/index-C1n5BHln.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-Chybs4f2.js",
+        "deliveredPath": "/assets/index-Chybs4f2.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/learning-insights-BLQTf6f8.css",
+        "deliveredPath": "/assets/learning-insights-BLQTf6f8.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/learning-insights-yCojIF1_.js",
+        "deliveredPath": "/assets/learning-insights-yCojIF1_.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/listening-D68eptkI.js",
+        "deliveredPath": "/assets/listening-D68eptkI.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/listening-DYa2axRK.css",
+        "deliveredPath": "/assets/listening-DYa2axRK.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/navigation-3S6zwPaY.js",
+        "deliveredPath": "/assets/navigation-3S6zwPaY.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/offline-CeUp32tN.js",
+        "deliveredPath": "/assets/offline-CeUp32tN.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/oral-practice-BjJk41Xn.js",
+        "deliveredPath": "/assets/oral-practice-BjJk41Xn.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/oral-practice-C9ivmFoo.css",
+        "deliveredPath": "/assets/oral-practice-C9ivmFoo.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/painted-cardboard-CX92yXJi.webp",
+        "deliveredPath": "/assets/painted-cardboard-CX92yXJi.webp",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-hub-DFOhAAwV.js",
+        "deliveredPath": "/assets/practice-hub-DFOhAAwV.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-navigation-BFQA678X.js",
+        "deliveredPath": "/assets/practice-navigation-BFQA678X.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-tools-BR9vHGjF.js",
+        "deliveredPath": "/assets/practice-tools-BR9vHGjF.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/profile-BANJdIYQ.js",
+        "deliveredPath": "/assets/profile-BANJdIYQ.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/profile-C1g0z2YZ.css",
+        "deliveredPath": "/assets/profile-C1g0z2YZ.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-BMqltIkU.js",
+        "deliveredPath": "/assets/review-hub-BMqltIkU.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-C0Sh_F8c.css",
+        "deliveredPath": "/assets/review-hub-C0Sh_F8c.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/vocab-boost-CZUa5XJH.js",
+        "deliveredPath": "/assets/vocab-boost-CZUa5XJH.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/vocab-catalogue-Pn7xNzXT.js",
+        "deliveredPath": "/assets/vocab-catalogue-Pn7xNzXT.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "favicon.svg",
+        "deliveredPath": "/favicon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "index.html",
+        "deliveredPath": "/?parliamo-release=20261108T115740Z-week5-imperative",
+        "status": 200,
+        "hashMatch": false,
+        "applicationMarkupMatch": true,
+        "edgeInsertions": [
+          "Cloudflare JavaScript detection challenge",
+          "Cloudflare public analytics beacon"
+        ],
+        "deliveredSHA256": "d8b0e35ce6ca130477407709adbe4468ec2252e1a9134e0a32ef4d718dc04c91"
+      },
+      {
+        "path": "manifest.webmanifest",
+        "deliveredPath": "/manifest.webmanifest",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "offline-worker.js",
+        "deliveredPath": "/offline-worker.js?release=b73d0c710b29e48f",
+        "status": 200,
+        "hashMatch": true
+      }
+    ],
+    "canonicalVersion": "b73d0c710b29e48f",
+    "canonicalCacheControl": "no-cache"
+  },
+  "profileServiceHealth": {
+    "status": 200,
+    "healthy": true,
+    "learnerRecordsAccessed": false
+  },
+  "cleanCheckoutBuild": "identical artifacts",
+  "verifiedAt": "2026-11-08T12:02:31.347724+00:00",
+  "rollbackAvailable": true,
+  "sourceCI": {
+    "conclusion": "success",
+    "databaseId": 42478164311,
+    "headSha": "38d5cf9f339a9d5445b6c310577a8de25d9a1c2b",
+    "status": "completed",
+    "url": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/42478164311",
+    "maintainedCommands": {
+      "lint": 0,
+      "typecheck": 0,
+      "build:daily": 0,
+      "test:daily": 0
+    },
+    "nodeTests": {
+      "tests": 320,
+      "pass": 320,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    }
+  },
+  "sourceCINote": "The successful CI revision changes only ci/README.md and ci/checks.py from the exact source revision used for the release. App, build, package and test sources are identical.",
+  "validation": {
+    "dailyTestsPassed": 320,
+    "typecheck": "passed",
+    "lint": "passed with no warnings",
+    "buildDaily": "passed",
+    "cleanCommittedSourceBuild": "All 39 files match the validated build.",
+    "week5BrowserChecks": 41,
+    "week5LayoutObservations": 44,
+    "navigationChecks": 7,
+    "navigationLayoutObservations": 212,
+    "offlineChecks": 6
+  },
+  "week5Browser": {
+    "passed": true,
+    "testedAt": "2026-11-08T11:59:47.720Z",
+    "target": "https://italian.samuelzhang.co.uk",
+    "checks": [
+      {
+        "name": "Week 5 preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "week5-friendly-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "week5-irregular-advice: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "week5-negative-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "week5-polite-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Notebook contains all four original personal responses",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Guided Week 5 vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "All 32 vocabulary entries are discoverable by source; homework remains reference-only",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Private Week 5 PDF matches by checksum and opens the verified physical page locally",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Week 5 preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "week5-friendly-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "week5-irregular-advice: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "week5-negative-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "week5-polite-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Notebook contains all four original personal responses",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Guided Week 5 vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "All 32 vocabulary entries are discoverable by source; homework remains reference-only",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Week 5 preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "week5-friendly-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "week5-irregular-advice: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "week5-negative-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "week5-polite-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Notebook contains all four original personal responses",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Guided Week 5 vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "All 32 vocabulary entries are discoverable by source; homework remains reference-only",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Week 5 preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "week5-friendly-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "week5-irregular-advice: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "week5-negative-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "week5-polite-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Notebook contains all four original personal responses",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Guided Week 5 vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "All 32 vocabulary entries are discoverable by source; homework remains reference-only",
+        "language": "it",
+        "width": 1440
+      }
+    ],
+    "errors": []
+  },
+  "navigation": {
+    "status": "passed",
+    "checkedAt": "2026-11-08T12:01:41.422Z",
+    "checks": [
+      "Slow navigation retains content; aligned stable controls; library Back/Forward; rapid clicks and saved drafts: en/390",
+      "Slow navigation retains content; aligned stable controls; library Back/Forward; rapid clicks and saved drafts: en/1440",
+      "Slow navigation retains content; aligned stable controls; library Back/Forward; rapid clicks and saved drafts: it/390",
+      "Slow navigation retains content; aligned stable controls; library Back/Forward; rapid clicks and saved drafts: it/1440",
+      "Keyboard focus preloads the destination; Enter navigates, focus moves to content and the tools menu remains operable",
+      "Outgoing grammar, verb, chapter and diagnostic modes stay unchanged while the next page loads",
+      "EN/IT layout matrix: 25 pages and expanded navigation at 320, 390, 768 and 1440 px, with reduced motion"
+    ],
+    "layoutObservations": 212,
+    "errors": []
+  },
+  "offline": {
+    "passed": true,
+    "checks": [
+      {
+        "language": "en",
+        "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
+        "version": "b73d0c710b29e48f",
+        "workerQuery": "?release=b73d0c710b29e48f",
+        "assetCount": 38
+      },
+      {
+        "language": "en",
+        "check": "Offline reload, eleven lazy routes, guided draft and oral choice preserve stored progress"
+      },
+      {
+        "language": "en",
+        "check": "Online current-release recheck and queried-worker removal preserve progress"
+      },
+      {
+        "language": "it",
+        "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
+        "version": "b73d0c710b29e48f",
+        "workerQuery": "?release=b73d0c710b29e48f",
+        "assetCount": 38
+      },
+      {
+        "language": "it",
+        "check": "Offline reload, eleven lazy routes, guided draft and oral choice preserve stored progress"
+      },
+      {
+        "language": "it",
+        "check": "Online current-release recheck and queried-worker removal preserve progress"
+      }
+    ]
+  },
+  "preservation": [
+    "Only 39 built site-dist files were transferred to a new static release.",
+    "No learner database, source PDF, extracted text, credential or backup was read or published during deployment.",
+    "Prior curriculum and programme objects, progress schema and practice IDs are preserved.",
+    "The separate .openai/hosting.json identity is unchanged.",
+    "The previous static release remains available for rollback."
+  ],
+  "limitations": [
+    "Cloudflare adds its JavaScript-detection challenge and may add its analytics beacon to HTML. All origin artifacts match the build; 38 non-HTML public artifacts match exactly, and application HTML outside those identified edge insertions matches.",
+    "Browser verification uses isolated synthetic Chromium profiles, not physical devices or a human learning-outcome study.",
+    "Existing opt-in offline downloads retain their old release until the learner checks for an updated download."
+  ]
+}

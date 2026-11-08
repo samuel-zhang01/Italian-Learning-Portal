@@ -275,6 +275,7 @@
     "limitations": [
       "Browser tests use disposable synthetic Chromium profiles, not physical devices or a human learning-outcome study.",
       "Source glossary and advanced-system limits are recorded in docs/week5-content-review.json."
-    ]
+    ],
+    "publication": "docs/deployment-week5-2026-11-08.json"
   }
 }

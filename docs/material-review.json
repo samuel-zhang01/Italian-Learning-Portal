@@ -611,6 +611,13 @@
       "Pronoun attachment and a full subjunctive treatment are outside the short Week 5 missions; existing advanced grammar remains linked.",
       "The group invitation noi is introduced with a bounded regular pattern; the route does not claim exhaustive imperative mastery.",
       "The glossary items stringere and crepi l’avarizia remain available in the private source reference rather than receiving new dedicated typed-recall cards."
-    ]
+    ],
+    "publication": {
+      "published": true,
+      "url": "https://italian.samuelzhang.co.uk/",
+      "release": "20261108T115740Z-week5-imperative",
+      "verifiedAt": "2026-11-08T12:02:31.347724+00:00",
+      "report": "docs/deployment-week5-2026-11-08.json"
+    }
   }
 }

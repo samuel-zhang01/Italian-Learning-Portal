@@ -1,6 +1,6 @@
 {
   "reviewedOn": "2026-11-08",
-  "status": "local acceptance passed; public deployment pending",
+  "status": "published and verified",
   "sourceReview": "docs/week5-content-review.json",
   "automated": {
     "dailyTestsPassed": 320,
@@ -568,5 +568,448 @@
   "limitations": [
     "Browser tests use disposable synthetic Chromium profiles, not physical devices or a human learning-outcome study.",
     "Source glossary and advanced-system limits are recorded in docs/week5-content-review.json."
-  ]
+  ],
+  "publication": {
+    "url": "https://italian.samuelzhang.co.uk/",
+    "release": "20261108T115740Z-week5-imperative",
+    "report": "docs/deployment-week5-2026-11-08.json",
+    "publicWeek5BrowserChecks": 41,
+    "publicNavigationLayoutObservations": 212,
+    "publicOfflineChecks": 6,
+    "ci": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/42478164311"
+  },
+  "publicWeek5Browser": {
+    "passed": true,
+    "testedAt": "2026-11-08T11:59:47.720Z",
+    "checks": [
+      {
+        "name": "Week 5 preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "week5-friendly-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "week5-irregular-advice: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "week5-negative-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "week5-polite-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Notebook contains all four original personal responses",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Guided Week 5 vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "All 32 vocabulary entries are discoverable by source; homework remains reference-only",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Private Week 5 PDF matches by checksum and opens the verified physical page locally",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Week 5 preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "week5-friendly-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "week5-irregular-advice: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "week5-negative-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "week5-polite-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Notebook contains all four original personal responses",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Guided Week 5 vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "All 32 vocabulary entries are discoverable by source; homework remains reference-only",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Week 5 preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "week5-friendly-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "week5-irregular-advice: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "week5-negative-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "week5-polite-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Notebook contains all four original personal responses",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Guided Week 5 vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "All 32 vocabulary entries are discoverable by source; homework remains reference-only",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Week 5 preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "week5-friendly-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "week5-irregular-advice: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "week5-negative-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "week5-polite-instructions: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Notebook contains all four original personal responses",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Guided Week 5 vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "All 32 vocabulary entries are discoverable by source; homework remains reference-only",
+        "language": "it",
+        "width": 1440
+      }
+    ],
+    "layouts": [
+      {
+        "label": "en-390-today",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-390-programme",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-390-week5-friendly-instructions",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-390-week5-irregular-advice",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-390-week5-negative-instructions",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-390-week5-polite-instructions",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-390-vocabulary",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-320-today",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "en-320-polite",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "en-768-today",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "en-768-polite",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "en-1440-today",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-programme",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-week5-friendly-instructions",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-week5-irregular-advice",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-week5-negative-instructions",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-week5-polite-instructions",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-vocabulary",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-320-today",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "en-320-polite",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "en-768-today",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "en-768-polite",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "it-390-today",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-390-programme",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-390-week5-friendly-instructions",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-390-week5-irregular-advice",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-390-week5-negative-instructions",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-390-week5-polite-instructions",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-390-vocabulary",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-320-today",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "it-320-polite",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "it-768-today",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "it-768-polite",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "it-1440-today",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-programme",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-week5-friendly-instructions",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-week5-irregular-advice",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-week5-negative-instructions",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-week5-polite-instructions",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-vocabulary",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-320-today",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "it-320-polite",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "it-768-today",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "it-768-polite",
+        "width": 768,
+        "document": 753
+      }
+    ],
+    "errors": []
+  }
 }
