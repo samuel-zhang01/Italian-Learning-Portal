@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-11-03",
+  "reviewedOn": "2026-11-08",
   "sources": [
     {
       "id": "src-c62281320322",
@@ -440,6 +440,14 @@
       "course": 3,
       "pages": 14,
       "sha256": "0885f267bac57a28748edb348e1cfb66e2c9eaf40eaa09c65dcca9fb894b1b39"
+    },
+    {
+      "id": "src-d7cf3d20c90d",
+      "path": "Course 3/PDF_Week_5.pdf",
+      "title": "PDF_Week_5.pdf",
+      "course": 3,
+      "pages": 16,
+      "sha256": "d7cf3d20c90da8cff714a1408a25f82387cb815fd3c92bbf7df990f52c8c0ae7"
     }
   ],
   "pages": [
@@ -42387,6 +42395,436 @@
       "model": {
         "en": "My homework answers stay separate from the portal examples.",
         "it": "Le risposte ai compiti restano separate dagli esempi del portale."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-d7cf3d20c90d-p1",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 1,
+      "kind": "reference",
+      "focus": {
+        "en": "Class cover",
+        "it": "Copertina del corso"
+      },
+      "unitIds": [],
+      "task": {
+        "en": "Use this page as a private source pointer. Physical PDF pages, not printed textbook numbers, are used in portal citations.",
+        "it": "Usa questa pagina come rimando alla fonte privata. I riferimenti del portale usano le pagine fisiche del PDF, non i numeri stampati del manuale."
+      },
+      "model": {
+        "en": "The textbook pointer is not a claim that those textbook pages were newly reviewed.",
+        "it": "Il rimando al manuale non indica una nuova revisione di quelle pagine del libro."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-d7cf3d20c90d-p2",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 2,
+      "kind": "reference",
+      "focus": {
+        "en": "Week 5 goals and textbook pointer",
+        "it": "Obiettivi della settimana 5 e rimando al manuale"
+      },
+      "unitIds": [],
+      "task": {
+        "en": "Use this page as a private source pointer. Physical PDF pages, not printed textbook numbers, are used in portal citations.",
+        "it": "Usa questa pagina come rimando alla fonte privata. I riferimenti del portale usano le pagine fisiche del PDF, non i numeri stampati del manuale."
+      },
+      "model": {
+        "en": "The textbook pointer is not a claim that those textbook pages were newly reviewed.",
+        "it": "Il rimando al manuale non indica una nuova revisione di quelle pagine del libro."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-d7cf3d20c90d-p3",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 3,
+      "kind": "reference",
+      "focus": {
+        "en": "Previous independent homework correction",
+        "it": "Correzione dei compiti autonomi precedenti"
+      },
+      "unitIds": [],
+      "task": {
+        "en": "Use your private class PDF to complete this homework independently. Practise a different situation in the portal lessons.",
+        "it": "Usa il PDF privato del corso per svolgere questi compiti autonomamente. Nelle lezioni del portale esercita una situazione diversa."
+      },
+      "model": {
+        "en": "My homework response stays separate from the original portal models.",
+        "it": "La mia risposta ai compiti resta separata dai modelli originali del portale."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-d7cf3d20c90d-p4",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 4,
+      "kind": "practice",
+      "focus": {
+        "en": "When instructions help",
+        "it": "Quando servono le istruzioni"
+      },
+      "unitIds": [
+        "a2-informal-imperative"
+      ],
+      "task": {
+        "en": "Invent two steps for making a paper bookmark; address one friend.",
+        "it": "Inventa due istruzioni per creare un segnalibro di carta; rivolgiti a un amico."
+      },
+      "model": {
+        "en": "Take a sheet. Draw a star.",
+        "it": "Prendi un foglio. Disegna una stella."
+      },
+      "checks": [
+        {
+          "en": "I used two affirmative instructions addressed to one friend.",
+          "it": "Ho usato due istruzioni affermative rivolte a un amico."
+        },
+        {
+          "en": "I checked -a for a regular -are verb and -i for the practised -ere/-ire verbs.",
+          "it": "Ho controllato -a per un verbo regolare in -are e -i per i verbi in -ere/-ire studiati."
+        }
+      ]
+    },
+    {
+      "id": "src-d7cf3d20c90d-p5",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 5,
+      "kind": "practice",
+      "focus": {
+        "en": "Description or instruction?",
+        "it": "Descrizione o istruzione?"
+      },
+      "unitIds": [
+        "a2-informal-imperative"
+      ],
+      "task": {
+        "en": "Change this original description into advice: tu disegni una mappa.",
+        "it": "Trasforma questa descrizione originale in un consiglio: tu disegni una mappa."
+      },
+      "model": {
+        "en": "Draw a map.",
+        "it": "Disegna una mappa."
+      },
+      "checks": [
+        {
+          "en": "I changed the description into an instruction for tu.",
+          "it": "Ho trasformato la descrizione in un’istruzione al tu."
+        },
+        {
+          "en": "I used -a with the regular -are verb.",
+          "it": "Ho usato -a con il verbo regolare in -are."
+        }
+      ]
+    },
+    {
+      "id": "src-d7cf3d20c90d-p6",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 6,
+      "kind": "practice",
+      "focus": {
+        "en": "Compare persons and forms",
+        "it": "Confronta persone e forme"
+      },
+      "unitIds": [
+        "a2-informal-imperative"
+      ],
+      "task": {
+        "en": "Compare an original statement with a tu instruction using cercare. Explain the ending.",
+        "it": "Confronta una frase originale con un’istruzione al tu usando cercare. Spiega la desinenza."
+      },
+      "model": {
+        "en": "You look for a pencil. → Look for a pencil!",
+        "it": "Cerchi una matita. → Cerca una matita!"
+      },
+      "checks": [
+        {
+          "en": "I changed the description into an instruction for tu.",
+          "it": "Ho trasformato la descrizione in un’istruzione al tu."
+        },
+        {
+          "en": "I used -a with the regular -are verb.",
+          "it": "Ho usato -a con il verbo regolare in -are."
+        }
+      ]
+    },
+    {
+      "id": "src-d7cf3d20c90d-p7",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 7,
+      "kind": "practice",
+      "focus": {
+        "en": "Regular imperative forms",
+        "it": "Forme regolari dell’imperativo"
+      },
+      "unitIds": [
+        "a2-plural-imperative"
+      ],
+      "task": {
+        "en": "Invite yourself and a friend to prepare some colours; then address several friends.",
+        "it": "Invita te e un amico a preparare dei colori; poi rivolgiti a più amici."
+      },
+      "model": {
+        "en": "Let’s prepare the colours! Prepare the colours!",
+        "it": "Prepariamo i colori! Preparate i colori!"
+      },
+      "checks": [
+        {
+          "en": "I kept the intended person in each instruction.",
+          "it": "Ho mantenuto il destinatario previsto in ogni istruzione."
+        },
+        {
+          "en": "I checked noi/voi endings; negative tu uses the infinitive.",
+          "it": "Ho controllato le desinenze di noi/voi; il tu negativo usa l’infinito."
+        }
+      ]
+    },
+    {
+      "id": "src-d7cf3d20c90d-p8",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 8,
+      "kind": "practice",
+      "focus": {
+        "en": "Read the imperative table carefully",
+        "it": "Leggi con cura la tabella dell’imperativo"
+      },
+      "unitIds": [
+        "a2-formal-imperative"
+      ],
+      "task": {
+        "en": "Give the same original instruction with tu and polite Lei, using prendere and a map.",
+        "it": "Dai la stessa istruzione originale con tu e con il Lei di cortesia, usando prendere e una mappa."
+      },
+      "model": {
+        "en": "Take a map! (tu) Take a map, please. (Lei)",
+        "it": "Prendi una mappa! Prenda una mappa, per favore."
+      },
+      "checks": [
+        {
+          "en": "I used prendi for tu and prenda for polite Lei.",
+          "it": "Ho usato prendi per tu e prenda per il Lei di cortesia."
+        },
+        {
+          "en": "I kept the object and meaning the same.",
+          "it": "Ho mantenuto lo stesso oggetto e significato."
+        }
+      ]
+    },
+    {
+      "id": "src-d7cf3d20c90d-p9",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 9,
+      "kind": "practice",
+      "focus": {
+        "en": "Irregular advice",
+        "it": "Consigli con forme irregolari"
+      },
+      "unitIds": [
+        "a2-informal-imperative"
+      ],
+      "task": {
+        "en": "Invent a short encouragement before a rehearsal using avere and fare.",
+        "it": "Inventa un breve incoraggiamento prima di una prova con avere e fare."
+      },
+      "model": {
+        "en": "Have confidence in your voice. Take a short break.",
+        "it": "Abbi fiducia nella tua voce. Fa’ una breve pausa."
+      },
+      "checks": [
+        {
+          "en": "I used two irregular tu forms for the same friend.",
+          "it": "Ho usato due forme irregolari al tu per lo stesso amico."
+        },
+        {
+          "en": "I checked the forms against the examples; I did not substitute a Lei form.",
+          "it": "Ho controllato le forme negli esempi; non ho sostituito una forma al Lei."
+        }
+      ]
+    },
+    {
+      "id": "src-d7cf3d20c90d-p10",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 10,
+      "kind": "practice",
+      "focus": {
+        "en": "Choose the addressee first",
+        "it": "Scegli prima il destinatario"
+      },
+      "unitIds": [
+        "a2-informal-imperative"
+      ],
+      "task": {
+        "en": "Choose one addressee explicitly, then give an original instruction using dare and a title for a drawing.",
+        "it": "Scegli esplicitamente un destinatario, poi dai un’istruzione originale usando dare e un titolo per un disegno."
+      },
+      "model": {
+        "en": "To one friend: give the drawing a title.",
+        "it": "A un amico: da’ un titolo al disegno."
+      },
+      "checks": [
+        {
+          "en": "I named whether I am addressing tu or polite Lei.",
+          "it": "Ho indicato se mi rivolgo al tu o al Lei di cortesia."
+        },
+        {
+          "en": "I used da’ / dai for tu, or dia for Lei.",
+          "it": "Ho usato da’ / dai per tu, oppure dia per Lei."
+        }
+      ]
+    },
+    {
+      "id": "src-d7cf3d20c90d-p11",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 11,
+      "kind": "practice",
+      "focus": {
+        "en": "Identify negative instructions",
+        "it": "Riconosci le istruzioni negative"
+      },
+      "unitIds": [
+        "a2-plural-imperative"
+      ],
+      "task": {
+        "en": "Invent a negative instruction about moving a lamp, first for tu and then for voi.",
+        "it": "Inventa un’istruzione negativa sullo spostare una lampada, prima al tu e poi al voi."
+      },
+      "model": {
+        "en": "Do not move the lamp. (tu / voi)",
+        "it": "Non spostare la lampada. / Non spostate la lampada."
+      },
+      "checks": [
+        {
+          "en": "I kept the intended person in each instruction.",
+          "it": "Ho mantenuto il destinatario previsto in ogni istruzione."
+        },
+        {
+          "en": "I checked noi/voi endings; negative tu uses the infinitive.",
+          "it": "Ho controllato le desinenze di noi/voi; il tu negativo usa l’infinito."
+        }
+      ]
+    },
+    {
+      "id": "src-d7cf3d20c90d-p12",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 12,
+      "kind": "practice",
+      "focus": {
+        "en": "Negative tu, voi and Lei",
+        "it": "Tu, voi e Lei al negativo"
+      },
+      "unitIds": [
+        "a2-formal-imperative"
+      ],
+      "task": {
+        "en": "Keep polite Lei in a negative instruction about entering a closed room. Then compare it with tu.",
+        "it": "Mantieni il Lei di cortesia in un’istruzione negativa sull’entrare in una sala chiusa. Poi confrontala con il tu."
+      },
+      "model": {
+        "en": "Do not enter the room. (Lei / tu)",
+        "it": "Non entri nella sala. / Non entrare nella sala."
+      },
+      "checks": [
+        {
+          "en": "Negative Lei keeps entri; negative tu uses entrare.",
+          "it": "Il Lei negativo mantiene entri; il tu negativo usa entrare."
+        },
+        {
+          "en": "Both sentences express the same prohibition.",
+          "it": "Entrambe le frasi esprimono lo stesso divieto."
+        }
+      ]
+    },
+    {
+      "id": "src-d7cf3d20c90d-p13",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 13,
+      "kind": "practice",
+      "focus": {
+        "en": "Vocabulary for practical advice",
+        "it": "Lessico per consigli pratici"
+      },
+      "unitIds": [
+        "a2-informal-imperative"
+      ],
+      "task": {
+        "en": "Use one source-vocabulary noun in a new instruction, away from the class shopping task.",
+        "it": "Usa un nome del lessico della fonte in una nuova istruzione, diversa dal compito sugli acquisti."
+      },
+      "model": {
+        "en": "Read the label on the paint box.",
+        "it": "Leggi l’etichetta della scatola dei colori."
+      },
+      "checks": [
+        {
+          "en": "I used a word from the vocabulary page in a new situation.",
+          "it": "Ho usato una parola della pagina di lessico in una situazione nuova."
+        },
+        {
+          "en": "I checked the verb form for my chosen addressee.",
+          "it": "Ho controllato la forma del verbo per il destinatario scelto."
+        }
+      ]
+    },
+    {
+      "id": "src-d7cf3d20c90d-p14",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 14,
+      "kind": "reference",
+      "focus": {
+        "en": "Reflect on support you need",
+        "it": "Rifletti sul sostegno che ti serve"
+      },
+      "unitIds": [],
+      "task": {
+        "en": "Name one form you can recall and one you want to practise again. This reflection has no automatic score.",
+        "it": "Indica una forma che ricordi e una che vuoi esercitare ancora. Questa riflessione non ha un punteggio automatico."
+      },
+      "model": {
+        "en": "I recall prendi; I want to practise prenda again.",
+        "it": "Ricordo prendi; voglio esercitare ancora prenda."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-d7cf3d20c90d-p15",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 15,
+      "kind": "reference",
+      "focus": {
+        "en": "Independent imperative homework",
+        "it": "Compiti autonomi sull’imperativo"
+      },
+      "unitIds": [],
+      "task": {
+        "en": "Use your private class PDF to complete this homework independently. Practise a different situation in the portal lessons.",
+        "it": "Usa il PDF privato del corso per svolgere questi compiti autonomamente. Nelle lezioni del portale esercita una situazione diversa."
+      },
+      "model": {
+        "en": "My homework response stays separate from the original portal models.",
+        "it": "La mia risposta ai compiti resta separata dai modelli originali del portale."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-d7cf3d20c90d-p16",
+      "sourceId": "src-d7cf3d20c90d",
+      "page": 16,
+      "kind": "reference",
+      "focus": {
+        "en": "Independent advice-picture task",
+        "it": "Compito autonomo sui consigli nelle immagini"
+      },
+      "unitIds": [],
+      "task": {
+        "en": "Use your private class PDF to complete this homework independently. Practise a different situation in the portal lessons.",
+        "it": "Usa il PDF privato del corso per svolgere questi compiti autonomamente. Nelle lezioni del portale esercita una situazione diversa."
+      },
+      "model": {
+        "en": "My homework response stays separate from the original portal models.",
+        "it": "La mia risposta ai compiti resta separata dai modelli originali del portale."
       },
       "checks": []
     }

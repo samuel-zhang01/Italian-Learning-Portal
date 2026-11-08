@@ -238,7 +238,7 @@ export function dailyStudyPlan<
     .map((id) => units.find((unit) => unit.id === id))
     .filter((unit): unit is GrammarUnit => Boolean(unit));
   const unit = programmeUnits.find((item) => !getGrammarDraft(p, item.id).completed)
-    ?? units.find((item) => item.missionIds.includes(mission.id))
+    ?? units.find((item) => item.missionIds.includes(mission.id) || mission.relatedGrammarIds?.includes(item.id))
     ?? grammarReviewQueue(p, units, date)[0]?.unit
     ?? units.find((item) => !getGrammarDraft(p, item.id).completed)
     ?? units[0];

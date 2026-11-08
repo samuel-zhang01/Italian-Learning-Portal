@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-10-28",
+  "reviewedOn": "2026-11-08",
   "units": [
     {
       "id": "noun-gender",
@@ -23098,6 +23098,163 @@
               {
                 "en": "The subject and adjective agreement remain clear across the three sentences.",
                 "it": "Il soggetto e la concordanza degli aggettivi restano chiari nelle tre frasi."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "course3-week5",
+      "title": {
+        "en": "Course 3 · Week 5 · Instructions & advice",
+        "it": "Corso 3 · Settimana 5 · Istruzioni e consigli"
+      },
+      "summary": {
+        "en": "Four focused study days: regular tu instructions, irregular advice, negative tu/voi and polite Lei. Reuse the existing grammar workshops and add original personal responses. Completed lessons and grammar stay saved when changing programme; the programme day checklist restarts. A study day can span several sittings.",
+        "it": "Quattro giorni di studio mirati: istruzioni regolari al tu, consigli irregolari, tu/voi negativi e Lei di cortesia. Riprendi i laboratori di grammatica esistenti e aggiungi risposte personali originali. Cambiando percorso, lezioni e grammatica completate restano salvate; l’elenco dei giorni riparte. Un giorno di studio può richiedere più sessioni."
+      },
+      "days": [
+        {
+          "title": {
+            "en": "Give a friend two clear steps",
+            "it": "Dai due istruzioni chiare a un amico"
+          },
+          "unitIds": [
+            "a2-informal-imperative"
+          ],
+          "missionIds": [
+            "week5-friendly-instructions"
+          ],
+          "outcome": {
+            "en": "Help one friend prepare a craft activity with two regular tu instructions.",
+            "it": "Aiuta un amico a preparare un’attività creativa con due istruzioni regolari al tu."
+          },
+          "practice": {
+            "prompt": {
+              "en": "From memory, change the setting to a community garden and give two instructions. State who you are addressing; check the verb forms.",
+              "it": "A memoria, sposta la situazione in un orto condiviso e dai due istruzioni. Indica a chi ti rivolgi; controlla le forme verbali."
+            },
+            "model": {
+              "en": "Take a pot. Write your name on it.",
+              "it": "Prendi un vaso. Scrivi il tuo nome sul vaso."
+            },
+            "rubric": [
+              {
+                "en": "I made a new response for the garden, rather than copying the lesson model.",
+                "it": "Ho creato una nuova risposta per l’orto, invece di copiare il modello della lezione."
+              },
+              {
+                "en": "I checked the forms for the addressee and marked this as self-assessed.",
+                "it": "Ho controllato le forme per il destinatario e ho indicato l’autovalutazione."
+              }
+            ]
+          }
+        },
+        {
+          "title": {
+            "en": "Encourage a friend with irregular verbs",
+            "it": "Incoraggia un amico con verbi irregolari"
+          },
+          "unitIds": [
+            "a2-informal-imperative"
+          ],
+          "missionIds": [
+            "week5-irregular-advice"
+          ],
+          "outcome": {
+            "en": "Give one friend a brief, supportive instruction using sii, abbi or a short irregular form.",
+            "it": "Dai a un amico una breve istruzione di incoraggiamento con sii, abbi o una forma irregolare breve."
+          },
+          "practice": {
+            "prompt": {
+              "en": "From memory, change the setting to a community garden and give two instructions. State who you are addressing; check the verb forms.",
+              "it": "A memoria, sposta la situazione in un orto condiviso e dai due istruzioni. Indica a chi ti rivolgi; controlla le forme verbali."
+            },
+            "model": {
+              "en": "Be careful with the seeds. Give the pot a name.",
+              "it": "Fa’ attenzione ai semi. Da’ un nome al vaso."
+            },
+            "rubric": [
+              {
+                "en": "I made a new response for the garden, rather than copying the lesson model.",
+                "it": "Ho creato una nuova risposta per l’orto, invece di copiare il modello della lezione."
+              },
+              {
+                "en": "I checked the forms for the addressee and marked this as self-assessed.",
+                "it": "Ho controllato le forme per il destinatario e ho indicato l’autovalutazione."
+              }
+            ]
+          }
+        },
+        {
+          "title": {
+            "en": "One friend or a group: say what to avoid",
+            "it": "Un amico o un gruppo: indica che cosa evitare"
+          },
+          "unitIds": [
+            "a2-plural-imperative"
+          ],
+          "missionIds": [
+            "week5-negative-instructions"
+          ],
+          "outcome": {
+            "en": "Keep a craft table organised with a negative tu instruction, then adapt it for voi.",
+            "it": "Tieni in ordine un tavolo creativo con un’istruzione negativa al tu, poi adattala al voi."
+          },
+          "practice": {
+            "prompt": {
+              "en": "From memory, change the setting to a community garden and give two instructions. State who you are addressing; check the verb forms.",
+              "it": "A memoria, sposta la situazione in un orto condiviso e dai due istruzioni. Indica a chi ti rivolgi; controlla le forme verbali."
+            },
+            "model": {
+              "en": "Do not move the plants. (tu) Do not move the plants. (voi)",
+              "it": "Non spostare le piante. Non spostate le piante."
+            },
+            "rubric": [
+              {
+                "en": "I made a new response for the garden, rather than copying the lesson model.",
+                "it": "Ho creato una nuova risposta per l’orto, invece di copiare il modello della lezione."
+              },
+              {
+                "en": "I checked the forms for the addressee and marked this as self-assessed.",
+                "it": "Ho controllato le forme per il destinatario e ho indicato l’autovalutazione."
+              }
+            ]
+          }
+        },
+        {
+          "title": {
+            "en": "Guide a visitor politely with Lei",
+            "it": "Guida un visitatore con il Lei di cortesia"
+          },
+          "unitIds": [
+            "a2-formal-imperative"
+          ],
+          "missionIds": [
+            "week5-polite-instructions"
+          ],
+          "outcome": {
+            "en": "Give a visitor one positive and one negative instruction, keeping polite Lei throughout.",
+            "it": "Dai a un visitatore un’istruzione positiva e una negativa, mantenendo sempre il Lei di cortesia."
+          },
+          "practice": {
+            "prompt": {
+              "en": "From memory, change the setting to a community garden and give two instructions. State who you are addressing; check the verb forms.",
+              "it": "A memoria, sposta la situazione in un orto condiviso e dai due istruzioni. Indica a chi ti rivolgi; controlla le forme verbali."
+            },
+            "model": {
+              "en": "Leave the pot here, please. Do not enter the greenhouse.",
+              "it": "Lasci il vaso qui, per favore. Non entri nella serra."
+            },
+            "rubric": [
+              {
+                "en": "I made a new response for the garden, rather than copying the lesson model.",
+                "it": "Ho creato una nuova risposta per l’orto, invece di copiare il modello della lezione."
+              },
+              {
+                "en": "I checked the forms for the addressee and marked this as self-assessed.",
+                "it": "Ho controllato le forme per il destinatario e ho indicato l’autovalutazione."
               }
             ]
           }

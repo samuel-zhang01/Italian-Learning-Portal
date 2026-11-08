@@ -92,7 +92,7 @@ test("full and compact catalogues produce identical plans for all programmes, bu
       cases += 1;
     }
   }
-  assert.equal(cases, 3696);
+  assert.equal(cases, 3808);
 });
 
 test("saved session pinning and grammar recall fallback remain identical with compact data", () => {

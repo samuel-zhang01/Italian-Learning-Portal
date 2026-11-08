@@ -88,7 +88,8 @@ export function buildDiscoveryIndex(data: Catalogue): DiscoveryEntry[] {
     if (levels.has("A1-plus")) return "A1-plus";
     return levels.has("A1") ? "A1" : null;
   };
-  const missionUnits = (id: string) => data.units.filter((unit) => unit.missionIds.includes(id));
+  const missionUnits = (id: string) => data.units.filter((unit) => unit.missionIds.includes(id)
+    || data.missions.find((mission) => mission.id === id)?.relatedGrammarIds?.includes(unit.id));
   const missionLevel = (mission: Mission) => levelOf(missionUnits(mission.id)) ?? (mission.course === 3 ? "A1-plus" : "A1");
   const entries: DiscoveryEntry[] = [];
   const add = (entry: DiscoveryEntry) => entries.push({ ...entry, sources: refs(entry.sources), terms: normaliseSearch(`${entry.terms} ${refText(entry.sources)}`) });
@@ -105,7 +106,8 @@ export function buildDiscoveryIndex(data: Catalogue): DiscoveryEntry[] {
   for (const programme of data.programmes) {
     const units = [...new Set(programme.days.flatMap((day) => day.unitIds))].map((id) => unitById.get(id)).filter((unit): unit is GrammarUnit => Boolean(unit));
     add({ id: programme.id, kind: "programme", title: programme.title, summary: programme.summary,
-      route: "programmes", level: levelOf(units), sources: refs(units.flatMap((unit) => unit.sources)),
+      route: `programmes?programme=${encodeURIComponent(programme.id)}`, level: levelOf(units),
+      sources: refs([...units.flatMap((unit) => unit.sources), ...data.missions.filter((mission) => programme.days.some((day) => day.missionIds.includes(mission.id))).flatMap((mission) => mission.sources)]),
       terms: `${pairText(programme.title)} ${pairText(programme.summary)} ${programme.days.map((day) => `${pairText(day.title)} ${pairText(day.outcome)}`).join(" ")} ${units.map(grammarSearchText).join(" ")}` });
   }
   for (const bank of data.banks) {

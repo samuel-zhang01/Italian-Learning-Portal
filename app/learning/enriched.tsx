@@ -170,7 +170,7 @@ export function DailySession({
     ?? banks.find((b) => b.id === extra.bank)!;
   const session = savedSession ?? emptySession(m.id, plannedDuration, bank.id);
   const chapter = chapterContext(m.id);
-  const sessionLevel = chapter?.level ?? (m.id.startsWith("book2-") ? "A2" : "A1");
+  const sessionLevel = chapter?.level ?? bank.level ?? (m.id.startsWith("book2-") ? "A2" : "A1");
   const done = sessionDone(p, today);
   const duration = session.duration ?? 30;
   const stages = sessionActivities(duration);

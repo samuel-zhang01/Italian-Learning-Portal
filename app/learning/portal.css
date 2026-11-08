@@ -2480,3 +2480,20 @@ html {
     font-size: 10px;
   }
 }
+.class-update {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin: 1.5rem 0;
+  padding: clamp(1rem, 3vw, 1.6rem);
+  border: 1px solid var(--line, #d9d2bd);
+  border-radius: 1rem;
+  background: #f7f1df;
+}
+.class-update > div:first-child { flex: 1 1 22rem; }
+.class-update h2 { margin: .3rem 0 .6rem; }
+.class-update p { max-width: 60ch; }
+.class-update-actions { display: flex; flex-direction: column; align-items: flex-start; gap: .65rem; max-width: 100%; }
+.class-update-actions button { white-space: normal; text-align: left; min-height: 44px; max-width: 100%; }

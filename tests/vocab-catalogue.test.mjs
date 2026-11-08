@@ -13,9 +13,9 @@ import { answerVocab, finishVocabRound, startVocabRound, updateVocabDraft } from
 import { selectReviewQueue } from "../app/learning/review-queue.ts";
 import { mergeProfileProgress } from "../app/learning/profile-merge.ts";
 
-test("typed vocabulary retains every previous word identity and gives all 788 entries a typed answer contract", () => {
-  assert.equal(vocabItems.length, 788);
-  assert.equal(new Set(vocabItems.map(item => item.id)).size, 788);
+test("typed vocabulary retains every previous word identity and gives all 820 entries a typed answer contract", () => {
+  assert.equal(vocabItems.length, 820);
+  assert.equal(new Set(vocabItems.map(item => item.id)).size, 820);
   for (const word of enrichment.banks.flatMap(bank => bank.words)) assert.ok(vocabItemById.has(word.id));
   for (const item of vocabItems) {
     assert.equal(item.mode, "words"); assert.equal(item.options, undefined);
@@ -46,10 +46,10 @@ test("saved-word practice selects only starred catalogue entries and preserves t
   assert.deepEqual(vocabPool(saved, "saved").map(item => item.id), [word.id]);
   assert.deepEqual(saved.completed, original.completed);
   assert.equal(saved.arcade, original.arcade);
-  assert.equal(vocabPool(saved, "all").length, 788);
+  assert.equal(vocabPool(saved, "all").length, 820);
 });
 
-test("every existing grammar and booster-noun word can be typed after saving without expanding the visible 788-entry library", () => {
+test("every existing grammar and booster-noun word can be typed after saving without expanding the visible 820-entry library", () => {
   const available = new Set(vocabPracticeItems.map(item => wordKey(item.word.term)));
   const terms = [...grammar.units.flatMap(unit => unit.words), ...booster.nouns.map(noun => noun.term)];
   for (const term of terms) {
@@ -59,8 +59,8 @@ test("every existing grammar and booster-noun word can be typed after saving wit
   }
   assert.equal(supplementalGrammarVocabItems.length, 245);
   assert.equal(supplementalNounVocabItems.length, 3);
-  assert.equal(vocabItems.length, 788); assert.equal(vocabBanks.length, 65);
-  assert.equal(vocabPool(emptyProgress(), "all").length, 788);
+  assert.equal(vocabItems.length, 820); assert.equal(vocabBanks.length, 69);
+  assert.equal(vocabPool(emptyProgress(), "all").length, 820);
   assert.equal(vocabItemById.size, vocabPracticeItems.length);
 });
 

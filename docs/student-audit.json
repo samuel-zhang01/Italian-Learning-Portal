@@ -258,5 +258,23 @@
       "Build retains existing large content-chunk warnings."
     ],
     "publicationReport": "docs/deployment-vocabulary-explorer-2026-11-03.json"
+  },
+  "week5_2026_11_08": {
+    "report": "docs/week5-student-audit.json",
+    "source": "docs/week5-content-review.json",
+    "tested": [
+      "Four Week 5 lessons in EN and IT at 390 and 1440 px, including wrong answers, corrections, reload and self-check completion.",
+      "Guided vocabulary, original scene comprehension, supported speaking and memory trail; correct A2 label.",
+      "Notebook evidence, next-day scheduling and scheduled recall, fresh personal programme checkpoints and saved-session pinning.",
+      "44 targeted layout observations, 212 navigation layouts, private PDF checksum/page link, source-filtered vocabulary and reference-only homework.",
+      "320 daily tests, typecheck, lint, production build and six real-service-worker offline checks."
+    ],
+    "findingsFixed": [
+      "Correct the guided-session level label using the authored bank level."
+    ],
+    "limitations": [
+      "Browser tests use disposable synthetic Chromium profiles, not physical devices or a human learning-outcome study.",
+      "Source glossary and advanced-system limits are recorded in docs/week5-content-review.json."
+    ]
   }
 }

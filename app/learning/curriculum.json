@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-11-03",
+  "reviewedOn": "2026-11-08",
   "missions": [
     {
       "id": "say-hello",
@@ -8291,6 +8291,494 @@
           ]
         }
       ]
+    },
+    {
+      "id": "week5-friendly-instructions",
+      "course": 3,
+      "title": {
+        "en": "Give a friend two clear steps",
+        "it": "Dai due istruzioni chiare a un amico"
+      },
+      "goal": {
+        "en": "Help one friend prepare a craft activity with two regular tu instructions.",
+        "it": "Aiuta un amico a preparare un’attività creativa con due istruzioni regolari al tu."
+      },
+      "rule": {
+        "en": "For an affirmative instruction to one friend, regular -are verbs use -a: ascolta. Regular -ere and -ire verbs use -i: prendi, apri. Compare tu ascolti (a description) with ascolta! (an instruction). Some -ire verbs use -isci, as in finisci; learn irregular verbs separately.",
+        "it": "Per un’istruzione affermativa a un amico, i verbi regolari in -are usano -a: ascolta. I verbi regolari in -ere e -ire usano -i: prendi, apri. Confronta tu ascolti (descrizione) con ascolta! (istruzione). Alcuni verbi in -ire usano -isci, come finisci; studia a parte gli irregolari."
+      },
+      "examples": [
+        {
+          "en": "Listen to this message.",
+          "it": "Ascolta questo messaggio."
+        },
+        {
+          "en": "Take a blue pencil.",
+          "it": "Prendi una matita blu."
+        },
+        {
+          "en": "Open the green notebook.",
+          "it": "Apri il quaderno verde."
+        }
+      ],
+      "words": [
+        {
+          "en": "listen (tu)",
+          "it": "ascolta"
+        },
+        {
+          "en": "take (tu)",
+          "it": "prendi"
+        },
+        {
+          "en": "open (tu)",
+          "it": "apri"
+        },
+        {
+          "en": "write (tu)",
+          "it": "scrivi"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "One friend: ___ il foglio sul tavolo. (posare)",
+            "it": "Un amico: ___ il foglio sul tavolo. (posare)"
+          },
+          "answers": [
+            "posa"
+          ],
+          "explanation": {
+            "en": "Posare is a regular -are verb: the affirmative tu instruction is posa, not posi.",
+            "it": "Posare è un verbo regolare in -are: l’istruzione affermativa al tu è posa, non posi."
+          }
+        },
+        {
+          "prompt": {
+            "en": "One friend: ___ un titolo sul foglio. (scrivere)",
+            "it": "Un amico: ___ un titolo sul foglio. (scrivere)"
+          },
+          "answers": [
+            "scrivi"
+          ],
+          "explanation": {
+            "en": "Scrivere is an -ere verb: the affirmative tu instruction is scrivi.",
+            "it": "Scrivere è un verbo in -ere: l’istruzione affermativa al tu è scrivi."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "One friend: ___ il quaderno a pagina tre. (aprire)",
+          "it": "Un amico: ___ il quaderno a pagina tre. (aprire)"
+        },
+        "answers": [
+          "apri"
+        ],
+        "explanation": {
+          "en": "Aprire uses apri for an affirmative tu instruction.",
+          "it": "Aprire usa apri nell’istruzione affermativa al tu."
+        }
+      },
+      "output": {
+        "en": "Give one friend two steps for an invented craft activity. Use two different verbs and tu throughout.",
+        "it": "Dai a un amico due istruzioni per un’attività creativa inventata. Usa due verbi diversi e sempre il tu."
+      },
+      "model": {
+        "en": "Take a blue sheet. Draw a small moon.",
+        "it": "Prendi un foglio blu. Disegna una piccola luna."
+      },
+      "rubric": [
+        {
+          "en": "I used two affirmative instructions addressed to one friend.",
+          "it": "Ho usato due istruzioni affermative rivolte a un amico."
+        },
+        {
+          "en": "I checked -a for a regular -are verb and -i for the practised -ere/-ire verbs.",
+          "it": "Ho controllato -a per un verbo regolare in -are e -i per i verbi in -ere/-ire studiati."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-d7cf3d20c90d",
+          "pages": [
+            4,
+            5,
+            7,
+            8,
+            13
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "a2-informal-imperative"
+      ]
+    },
+    {
+      "id": "week5-irregular-advice",
+      "course": 3,
+      "title": {
+        "en": "Encourage a friend with irregular verbs",
+        "it": "Incoraggia un amico con verbi irregolari"
+      },
+      "goal": {
+        "en": "Give one friend a brief, supportive instruction using sii, abbi or a short irregular form.",
+        "it": "Dai a un amico una breve istruzione di incoraggiamento con sii, abbi o una forma irregolare breve."
+      },
+      "rule": {
+        "en": "Some tu instructions must be learned: essere → sii, avere → abbi, dire → di’. Andare, fare, dare and stare allow va’/vai, fa’/fai, da’/dai and sta’/stai. Use an apostrophe in the short forms, not an accent; dì also occurs as the imperative of dire. These are tu forms, not polite Lei forms.",
+        "it": "Alcune istruzioni al tu vanno imparate: essere → sii, avere → abbi, dire → di’. Andare, fare, dare e stare ammettono va’/vai, fa’/fai, da’/dai e sta’/stai. Nelle forme brevi usa l’apostrofo, non l’accento; si trova anche dì come imperativo di dire. Sono forme al tu, non forme di cortesia al Lei."
+      },
+      "examples": [
+        {
+          "en": "Be curious during the visit.",
+          "it": "Sii curioso durante la visita."
+        },
+        {
+          "en": "Have confidence in your project.",
+          "it": "Abbi fiducia nel tuo progetto."
+        },
+        {
+          "en": "Say your name into the microphone.",
+          "it": "Di’ il tuo nome al microfono."
+        }
+      ],
+      "words": [
+        {
+          "en": "be (tu)",
+          "it": "sii"
+        },
+        {
+          "en": "have (tu)",
+          "it": "abbi"
+        },
+        {
+          "en": "say (tu)",
+          "it": "di’"
+        },
+        {
+          "en": "do / make (tu)",
+          "it": "fa’"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "One friend before a rehearsal: ___ fiducia nel gruppo. (avere)",
+            "it": "Un amico prima di una prova: ___ fiducia nel gruppo. (avere)"
+          },
+          "answers": [
+            "abbi"
+          ],
+          "explanation": {
+            "en": "The irregular affirmative tu form of avere is abbi.",
+            "it": "La forma irregolare affermativa al tu di avere è abbi."
+          }
+        },
+        {
+          "prompt": {
+            "en": "One friend: ___ una pausa di due minuti. (fare)",
+            "it": "Un amico: ___ una pausa di due minuti. (fare)"
+          },
+          "answers": [
+            "fa’",
+            "fa'",
+            "fai"
+          ],
+          "explanation": {
+            "en": "Both fa’ and fai are accepted tu instructions. Faccia belongs to polite Lei.",
+            "it": "Fa’ e fai sono entrambe istruzioni corrette al tu. Faccia appartiene al Lei di cortesia."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "One friend: ___ pronto alle otto. (essere)",
+          "it": "Un amico: ___ pronto alle otto. (essere)"
+        },
+        "answers": [
+          "sii"
+        ],
+        "explanation": {
+          "en": "The imperative tu of essere is sii, with two i letters.",
+          "it": "L’imperativo al tu di essere è sii, con due i."
+        }
+      },
+      "output": {
+        "en": "Invent two encouraging instructions for a friend before a music rehearsal. Use two irregular verbs.",
+        "it": "Inventa due istruzioni di incoraggiamento per un amico prima di una prova musicale. Usa due verbi irregolari."
+      },
+      "model": {
+        "en": "Have confidence in your voice. Take a short break.",
+        "it": "Abbi fiducia nella tua voce. Fa’ una breve pausa."
+      },
+      "rubric": [
+        {
+          "en": "I used two irregular tu forms for the same friend.",
+          "it": "Ho usato due forme irregolari al tu per lo stesso amico."
+        },
+        {
+          "en": "I checked the forms against the examples; I did not substitute a Lei form.",
+          "it": "Ho controllato le forme negli esempi; non ho sostituito una forma al Lei."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-d7cf3d20c90d",
+          "pages": [
+            4,
+            9,
+            10
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "a2-informal-imperative"
+      ]
+    },
+    {
+      "id": "week5-negative-instructions",
+      "course": 3,
+      "title": {
+        "en": "One friend or a group: say what to avoid",
+        "it": "Un amico o un gruppo: indica che cosa evitare"
+      },
+      "goal": {
+        "en": "Keep a craft table organised with a negative tu instruction, then adapt it for voi.",
+        "it": "Tieni in ordine un tavolo creativo con un’istruzione negativa al tu, poi adattala al voi."
+      },
+      "rule": {
+        "en": "For a negative instruction to one friend, use non + infinitive: non spostare. For voi, keep the plural imperative: non spostate. Regular voi forms end in -ate, -ete, -ite. For an invitation including yourself, use noi: prepariamo! Its negative keeps the same form: non prepariamo.",
+        "it": "Per un’istruzione negativa a un amico usa non + infinito: non spostare. Con voi mantieni l’imperativo plurale: non spostate. Le forme regolari al voi terminano in -ate, -ete, -ite. Per una proposta che include chi parla usa noi: prepariamo! Al negativo la forma resta uguale: non prepariamo."
+      },
+      "examples": [
+        {
+          "en": "Do not move the lamp.",
+          "it": "Non spostare la lampada."
+        },
+        {
+          "en": "Do not move the table.",
+          "it": "Non spostate il tavolo."
+        },
+        {
+          "en": "Do not open the small parcel.",
+          "it": "Non aprire il pacco piccolo."
+        }
+      ],
+      "words": [
+        {
+          "en": "do not move (tu)",
+          "it": "non spostare"
+        },
+        {
+          "en": "do not move (voi)",
+          "it": "non spostate"
+        },
+        {
+          "en": "do not open (tu)",
+          "it": "non aprire"
+        },
+        {
+          "en": "do not open (voi)",
+          "it": "non aprite"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "One friend: non ___ la scatola blu. (spostare)",
+            "it": "Un amico: non ___ la scatola blu. (spostare)"
+          },
+          "answers": [
+            "spostare"
+          ],
+          "explanation": {
+            "en": "Negative tu uses non + infinitive, so non spostare.",
+            "it": "Il tu negativo usa non + infinito: non spostare."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Several friends: non ___ la scatola blu. (spostare)",
+            "it": "Più amici: non ___ la scatola blu. (spostare)"
+          },
+          "answers": [
+            "spostate"
+          ],
+          "explanation": {
+            "en": "For voi, use non + the voi imperative: non spostate.",
+            "it": "Con voi usa non + l’imperativo al voi: non spostate."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Several friends: non ___ il pacco adesso. (aprire)",
+          "it": "Più amici: non ___ il pacco adesso. (aprire)"
+        },
+        "answers": [
+          "aprite"
+        ],
+        "explanation": {
+          "en": "Negative voi keeps the conjugated form: non aprite. Non aprire addresses one friend.",
+          "it": "Il voi negativo mantiene la forma coniugata: non aprite. Non aprire si rivolge a un amico."
+        }
+      },
+      "output": {
+        "en": "Invent one rule about a craft table for one friend. Rewrite the same rule for several friends, then add one noi invitation.",
+        "it": "Inventa una regola su un tavolo creativo per un amico. Riscrivi la stessa regola per più amici, poi aggiungi una proposta al noi."
+      },
+      "model": {
+        "en": "Do not move the brushes. (one friend) Do not move the brushes. (group) Let’s prepare the colours!",
+        "it": "Non spostare i pennelli. Non spostate i pennelli. Prepariamo i colori!"
+      },
+      "rubric": [
+        {
+          "en": "My negative tu uses an infinitive; my negative voi uses a voi form.",
+          "it": "Il mio tu negativo usa l’infinito; il mio voi negativo usa una forma al voi."
+        },
+        {
+          "en": "My noi invitation includes me as part of the group.",
+          "it": "La mia proposta al noi include anche me nel gruppo."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-d7cf3d20c90d",
+          "pages": [
+            7,
+            8,
+            11,
+            12
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "a2-plural-imperative"
+      ]
+    },
+    {
+      "id": "week5-polite-instructions",
+      "course": 3,
+      "title": {
+        "en": "Guide a visitor politely with Lei",
+        "it": "Guida un visitatore con il Lei di cortesia"
+      },
+      "goal": {
+        "en": "Give a visitor one positive and one negative instruction, keeping polite Lei throughout.",
+        "it": "Dai a un visitatore un’istruzione positiva e una negativa, mantenendo sempre il Lei di cortesia."
+      },
+      "rule": {
+        "en": "To address one person politely, Lei uses different forms: -are → -i (aspetti); regular -ere/-ire → -a (prenda, senta). Useful irregular forms include sia, abbia, vada, faccia, dica, dia and stia. The negative is non + the same Lei form: non aspetti, non prenda. Non + infinitive belongs to negative tu, not Lei.",
+        "it": "Per rivolgersi a una persona con cortesia, Lei usa forme diverse: -are → -i (aspetti); i verbi regolari in -ere/-ire → -a (prenda, senta). Alcune forme irregolari utili sono sia, abbia, vada, faccia, dica, dia e stia. Il negativo usa non + la stessa forma al Lei: non aspetti, non prenda. Non + infinito appartiene al tu negativo, non al Lei."
+      },
+      "examples": [
+        {
+          "en": "Wait near reception, please.",
+          "it": "Aspetti vicino alla reception, per favore."
+        },
+        {
+          "en": "Take the corridor on the left.",
+          "it": "Prenda il corridoio a sinistra."
+        },
+        {
+          "en": "Listen to this short message.",
+          "it": "Senta questo breve messaggio."
+        }
+      ],
+      "words": [
+        {
+          "en": "wait (Lei)",
+          "it": "aspetti"
+        },
+        {
+          "en": "take (Lei)",
+          "it": "prenda"
+        },
+        {
+          "en": "listen (Lei)",
+          "it": "senta"
+        },
+        {
+          "en": "go (Lei)",
+          "it": "vada"
+        }
+      ],
+      "checks": [
+        {
+          "prompt": {
+            "en": "One visitor, polite Lei: ___ il modulo sul banco. (lasciare)",
+            "it": "Un visitatore, Lei di cortesia: ___ il modulo sul banco. (lasciare)"
+          },
+          "answers": [
+            "lasci"
+          ],
+          "explanation": {
+            "en": "For polite Lei, lasciare becomes lasci; lascia addresses tu.",
+            "it": "Con il Lei di cortesia lasciare diventa lasci; lascia si rivolge al tu."
+          }
+        },
+        {
+          "prompt": {
+            "en": "One visitor, polite Lei: non ___ in questa sala. (entrare)",
+            "it": "Un visitatore, Lei di cortesia: non ___ in questa sala. (entrare)"
+          },
+          "answers": [
+            "entri"
+          ],
+          "explanation": {
+            "en": "Negative Lei keeps the Lei form: non entri. Non entrare is negative tu.",
+            "it": "Il Lei negativo mantiene la forma al Lei: non entri. Non entrare è il tu negativo."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "One visitor, polite Lei: ___ dal corridoio a destra. (passare)",
+          "it": "Un visitatore, Lei di cortesia: ___ dal corridoio a destra. (passare)"
+        },
+        "answers": [
+          "passi"
+        ],
+        "explanation": {
+          "en": "Passare is regular -are: the polite instruction is passi.",
+          "it": "Passare è regolare in -are: l’istruzione di cortesia è passi."
+        }
+      },
+      "output": {
+        "en": "Invent two instructions for one visitor at a small exhibition. Use polite Lei once positively and once negatively.",
+        "it": "Inventa due istruzioni per un visitatore a una piccola mostra. Usa il Lei di cortesia una volta al positivo e una al negativo."
+      },
+      "model": {
+        "en": "Leave your bag here, please. Do not enter the small room.",
+        "it": "Lasci la borsa qui, per favore. Non entri nella sala piccola."
+      },
+      "rubric": [
+        {
+          "en": "Both instructions address one visitor with polite Lei.",
+          "it": "Entrambe le istruzioni si rivolgono a un visitatore con il Lei di cortesia."
+        },
+        {
+          "en": "After non I kept the Lei form, rather than using an infinitive.",
+          "it": "Dopo non ho mantenuto la forma al Lei, invece di usare l’infinito."
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-d7cf3d20c90d",
+          "pages": [
+            7,
+            8,
+            9,
+            11,
+            12,
+            13
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "a2-formal-imperative"
+      ]
     }
   ],
   "sources": [
@@ -8733,6 +9221,14 @@
       "course": 3,
       "pages": 14,
       "sha256": "0885f267bac57a28748edb348e1cfb66e2c9eaf40eaa09c65dcca9fb894b1b39"
+    },
+    {
+      "id": "src-d7cf3d20c90d",
+      "path": "Course 3/PDF_Week_5.pdf",
+      "title": "PDF_Week_5.pdf",
+      "course": 3,
+      "pages": 16,
+      "sha256": "d7cf3d20c90da8cff714a1408a25f82387cb815fd3c92bbf7df990f52c8c0ae7"
     }
   ]
 }

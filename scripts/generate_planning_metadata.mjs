@@ -21,7 +21,10 @@ export function generatePlanningMetadata({ curriculum, grammar, companion, enric
   return {
     schemaVersion: 1,
     sources: [...new Map([...curriculum.sources, ...companion.sources].map((source) => [source.id, source])).values()],
-    missions: curriculum.missions.map((mission) => pick(mission, ["id", "course", "title", "goal"])),
+    missions: curriculum.missions.map((mission) => ({
+      ...pick(mission, ["id", "course", "title", "goal"]),
+      ...(mission.relatedGrammarIds ? { relatedGrammarIds: mission.relatedGrammarIds } : {}),
+    })),
     units: grammar.units.map((unit) => ({
       ...pick(unit, ["id", "title", "level", "missionIds", "prerequisites", "sources"]),
       exercises: unit.exercises.map((exercise) => pick(exercise, ["id", "kind"])),

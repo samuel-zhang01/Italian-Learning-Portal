@@ -15,6 +15,7 @@ export type Check = { prompt: Pair; answers: string[]; explanation: Pair };
 export type Mission = {
   id: string;
   course: number;
+  relatedGrammarIds?: string[];
   title: Pair;
   goal: Pair;
   rule: Pair;

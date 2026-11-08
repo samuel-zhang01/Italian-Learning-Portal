@@ -1,0 +1,122 @@
+{
+  "reviewedOn": "2026-11-08",
+  "source": {
+    "id": "src-d7cf3d20c90d",
+    "path": "Course 3/PDF_Week_5.pdf",
+    "title": "PDF_Week_5.pdf",
+    "course": 3,
+    "pages": 16,
+    "sha256": "d7cf3d20c90da8cff714a1408a25f82387cb815fd3c92bbf7df990f52c8c0ae7"
+  },
+  "physicalPagesRead": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "visualPages": [
+    5,
+    6,
+    8,
+    16
+  ],
+  "method": "Page-preserving text extraction with OCR on sparse pages, plus visual inspection of the comparison tables and advice images.",
+  "sourceIssues": [
+    {
+      "page": 8,
+      "issue": "Present-indicative person labels are vertically misaligned in the source image; use the clear imperative table and page 7. Do not propagate the label mismatch."
+    },
+    {
+      "page": 6,
+      "issue": "The comparison grid contains io and lui/lei rows. The portal does not invent an io imperative and distinguishes polite Lei from descriptive lui/lei."
+    },
+    {
+      "page": 10,
+      "issue": "The exercise heading says tu/Lei but one item contains tutti insieme; new practice names its addressee explicitly."
+    }
+  ],
+  "baseline": {
+    "curriculum.missions": {
+      "count": 74,
+      "sha256": "8ecd14f7f9231c0c664f13d504b5d523da98fa8a807f59527f1d3f232921568d"
+    },
+    "curriculum.sources": {
+      "count": 55,
+      "sha256": "027c731f6404e9ce07701c4b019fe2a62f29c878f4b60db867e8fe16549ceb40"
+    },
+    "enrichment.banks": {
+      "count": 45,
+      "sha256": "6e508f82eb4e8f7bbe4967d86c7bbee0837b473241389b97020b260b3a2e1e18"
+    },
+    "enrichment.lessons": {
+      "count": 74,
+      "sha256": "6d83b1af0600b2c0df4039980a9b495841b2b9fc32214eed0ba6d0488de0b2e8"
+    },
+    "grammar.units": {
+      "count": 65,
+      "sha256": "5d3016fdff829f4cade443960a8fb9e9c54c70ee3ae871c9f75f6e893daf3a63"
+    },
+    "grammar.programmes": {
+      "count": 4,
+      "sha256": "1eb20a9f1512e0b3198d86f0a500d3a80114640f49e32dfff9069cc3f902534c"
+    },
+    "companion.sources": {
+      "count": 55,
+      "sha256": "38f8c2c3647687dc94e6e0f63ee44e4d5dc285fe88d6f3890e3c4872b064b99b"
+    },
+    "companion.pages": {
+      "count": 1643,
+      "sha256": "4c6b9a3bb35c32cd08fe8a4daad65405820938f28420d5af02eceb4ae6ae5f48"
+    }
+  },
+  "missionIds": [
+    "week5-friendly-instructions",
+    "week5-irregular-advice",
+    "week5-negative-instructions",
+    "week5-polite-instructions"
+  ],
+  "programmeId": "course3-week5",
+  "newMissions": 4,
+  "newGuidedSessions": 4,
+  "newVocabularyEntries": 32,
+  "referencePages": [
+    1,
+    2,
+    3,
+    14,
+    15,
+    16
+  ],
+  "practicePages": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "provenance": "Original portal situations, explanations, examples and questions. Word-level lesson/extension labels distinguish source vocabulary from related original additions. Physical PDF page numbers only.",
+  "remainingSourceGaps": [
+    "Independent homework and its correction stay reference-only; no submitted assignment is completed.",
+    "The source points to Nuovo Espresso Plus 2 Unit 1 pp. 15–18, but this import does not newly review those textbook pages.",
+    "Pronoun attachment and a full subjunctive treatment are outside the short Week 5 missions; existing advanced grammar remains linked.",
+    "The group invitation noi is introduced with a bounded regular pattern; the route does not claim exhaustive imperative mastery.",
+    "The glossary items stringere and crepi l’avarizia remain available in the private source reference rather than receiving new dedicated typed-recall cards."
+  ]
+}

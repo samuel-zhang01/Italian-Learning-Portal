@@ -95,8 +95,8 @@ test("supplement references use actually reviewed bounded native pages and retai
       if (unitIds.includes(item.id)) assert.ok(pointer.unitIds.includes(item.id), `${item.id}: reference topic link`);
     }
   }
-  assert.equal(companion.pages.filter((page) => page.kind === "practice").length, 753);
-  assert.equal(companion.pages.filter((page) => page.kind === "practice" && !["src-f293d35b1616", "src-0885f267bac5"].includes(page.sourceId)).length, 730);
+  assert.equal(companion.pages.filter((page) => page.kind === "practice").length, 763);
+  assert.equal(companion.pages.filter((page) => page.kind === "practice" && !["src-f293d35b1616", "src-0885f267bac5", "src-d7cf3d20c90d"].includes(page.sourceId)).length, 730);
   assert.ok(!companion.pages.some((page) => page.sourceId === "src-580f7558db56" && page.page === 264));
 });
 

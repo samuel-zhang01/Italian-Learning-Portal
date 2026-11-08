@@ -3,7 +3,7 @@ import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState, useSyncEx
 import { createProfileSync, PROFILE_LINK_KEY } from "./profile-sync";
 import { browserProfileStore } from "./profile-store";
 import curriculum from "./curriculum.json";
-import { planningSources, planningReviewCatalogue } from "./planning-data";
+import { planningSources, planningReviewCatalogue, planningUnits } from "./planning-data";
 import { selectReviewQueue } from "./review-queue";
 import { coreRecallFeedback, firstCoreRecallToday, type LocalRecallAttempt } from "./review-evidence";
 import { createLocalPdfStore, localPdfPageHref, type LocalPdfResult } from "./local-pdfs";
@@ -570,6 +570,17 @@ export default function Portal() {
               </p>
             )}
             <SessionPreview {...shared} missions={missions} />
+            <section className="class-update" aria-label={t("Latest class material", "Ultimo materiale del corso")}>
+              <div>
+                <p className="eyebrow">{t("COURSE 3 · WEEK 5", "CORSO 3 · SETTIMANA 5")}</p>
+                <h2>{t("Instructions you can use.", "Istruzioni da usare.")}</h2>
+                <p>{t("Four short lessons: help a friend, give advice, say what to avoid and guide a visitor politely.", "Quattro brevi lezioni: aiuta un amico, dai consigli, indica che cosa evitare e guida un visitatore con cortesia.")}</p>
+              </div>
+              <div className="class-update-actions">
+                <button className="button secondary" onClick={() => go("programmes?programme=course3-week5")}>{t("Open Week 5 route", "Apri il percorso della settimana 5")} →</button>
+                <button className="text-button" onClick={() => go("lesson/week5-friendly-instructions")}>{t("Try the first 5-minute lesson", "Prova la prima lezione di 5 minuti")} →</button>
+              </div>
+            </section>
             <p className="today-vocab-link"><button className="button secondary" onClick={() => go("vocab-boost")}>{p.vocabPractice?.active ? t("Resume typed vocabulary", "Riprendi il vocabolario scritto") : t(`Vocabulary booster · type ${p.vocabPractice?.settings.size ?? 5} words`, `Vocabolario · scrivi ${p.vocabPractice?.settings.size ?? 5} parole`)} →</button></p>
             <p className="today-oral-link"><button className="text-button" onClick={() => go("listen-speak?minutes=5")}>{t("Prefer a short listening & speaking session? · 5 or 10 minutes", "Preferisci una breve sessione di ascolto e parlato? · 5 o 10 minuti")} →</button></p>
             {reviewQueue.totalDue > 0 && <p className="today-review-link"><button className="text-button" onClick={() => go("reviews?minutes=5")}>{t(`${reviewQueue.totalDue} reviews ready · choose a short optional session`, `${reviewQueue.totalDue} ripassi pronti · scegli una breve sessione facoltativa`)} →</button></p>}
@@ -606,7 +617,7 @@ export default function Portal() {
         {(routePath === "grammar" || routePath.startsWith("grammar/")) && (
           <GrammarLab key={route} {...shared} unitId={routePath.split("/")[1]} />
         )}
-        {routePath === "programmes" && <ProgrammeView {...shared} />}
+        {routePath === "programmes" && <ProgrammeView key={route} {...shared} />}
         {(routePath === "companion" || routePath.startsWith("companion/")) && (
           <CompanionView key={route} {...shared} pageId={routePath.split("/")[1]} />
         )}
@@ -1193,11 +1204,13 @@ function PlanView(props: Shared) {
 function SourceNote({
   m,
   t,
+  go,
   pdfs,
   pdfPageOffsets = {},
 }: {
   m: Mission;
   t: Translate;
+  go: (route: string) => void;
   pdfs: Record<string, string>;
   pdfPageOffsets?: Record<string, number>;
 }) {
@@ -1248,6 +1261,12 @@ function SourceNote({
           "Le pagine PDF si contano dalla prima pagina. Collega un PDF locale in Materiali per aprirlo qui.",
         )}
       </p>
+      {m.relatedGrammarIds?.map((id) => {
+        const unit = planningUnits.find((unit) => unit.id === id);
+        return unit ? <p key={id}><button className="text-button" onClick={() => go(`grammar/${id}`)}>
+          {t("Grammar workshop", "Laboratorio di grammatica")}: {t(unit.title.en, unit.title.it)} →
+        </button></p> : null;
+      })}
     </details>
   );
 }
@@ -1419,7 +1438,7 @@ function LessonView({
             )}
           </button>
         </div>
-        <SourceNote m={m} t={t} pdfs={pdfs} pdfPageOffsets={pdfPageOffsets} />
+        <SourceNote m={m} t={t} go={go} pdfs={pdfs} pdfPageOffsets={pdfPageOffsets} />
       </div>
     );
   return (
@@ -1754,7 +1773,7 @@ function LessonView({
           </>
         )}
       </article>
-      <SourceNote m={m} t={t} pdfs={pdfs} pdfPageOffsets={pdfPageOffsets} />
+      <SourceNote m={m} t={t} go={go} pdfs={pdfs} pdfPageOffsets={pdfPageOffsets} />
     </div>
   );
 }

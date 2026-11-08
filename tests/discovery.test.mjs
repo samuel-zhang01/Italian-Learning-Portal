@@ -49,7 +49,7 @@ test("discovery filters material and level while retaining reference-page classi
   const reference = companion.pages.find((page) => page.kind === "reference");
   assert.equal(index.find((entry) => entry.kind === "page" && entry.id === reference.id).pageKind, "reference");
   assert.ok(searchDiscovery(index, "", "vocabulary").every((entry) => entry.route.startsWith("vocabulary/")));
-  assert.ok(searchDiscovery(index, "", "programme").every((entry) => entry.route === "programmes"));
+  assert.ok(searchDiscovery(index, "", "programme").every((entry) => entry.route === `programmes?programme=${encodeURIComponent(entry.id)}`));
   assert.ok(searchDiscovery(index, "Plus 2", "source", "A2").some((entry) => entry.id === "src-580f7558db56"));
 });
 

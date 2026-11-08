@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-11-03",
+  "reviewedOn": "2026-11-08",
   "banks": [
     {
       "id": "survival",
@@ -6093,6 +6093,903 @@
           "provenance": "lesson"
         }
       ]
+    },
+    {
+      "id": "week5-clear-steps",
+      "title": {
+        "en": "Give a friend two clear steps",
+        "it": "Dai due istruzioni chiare a un amico"
+      },
+      "level": "A2",
+      "missionId": "week5-friendly-instructions",
+      "description": {
+        "en": "Help one friend prepare a craft activity with two regular tu instructions.",
+        "it": "Aiuta un amico a preparare un’attività creativa con due istruzioni regolari al tu."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-d7cf3d20c90d",
+          "pages": [
+            4,
+            5,
+            7,
+            8,
+            13
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "a2-informal-imperative"
+      ],
+      "words": [
+        {
+          "term": {
+            "en": "listen (tu)",
+            "it": "ascolta"
+          },
+          "example": {
+            "en": "Listen to this message.",
+            "it": "Ascolta questo messaggio."
+          },
+          "answers": [
+            "ascolta"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                5
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-clear-steps:0"
+        },
+        {
+          "term": {
+            "en": "take (tu)",
+            "it": "prendi"
+          },
+          "example": {
+            "en": "Take a blue pencil.",
+            "it": "Prendi una matita blu."
+          },
+          "answers": [
+            "prendi"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                8
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-clear-steps:1"
+        },
+        {
+          "term": {
+            "en": "open (tu)",
+            "it": "apri"
+          },
+          "example": {
+            "en": "Open the green notebook.",
+            "it": "Apri il quaderno verde."
+          },
+          "answers": [
+            "apri"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                7
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "id": "word:week5-clear-steps:2"
+        },
+        {
+          "term": {
+            "en": "write (tu)",
+            "it": "scrivi"
+          },
+          "example": {
+            "en": "Write a date on the sheet.",
+            "it": "Scrivi una data sul foglio."
+          },
+          "answers": [
+            "scrivi"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                5
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-clear-steps:3"
+        },
+        {
+          "term": {
+            "en": "the label",
+            "it": "l’etichetta"
+          },
+          "example": {
+            "en": "Read the label on the box.",
+            "it": "Leggi l’etichetta della scatola."
+          },
+          "answers": [
+            "l’etichetta"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-clear-steps:4"
+        },
+        {
+          "term": {
+            "en": "to follow",
+            "it": "seguire"
+          },
+          "example": {
+            "en": "To learn, you can follow an example.",
+            "it": "Per imparare, puoi seguire un esempio."
+          },
+          "answers": [
+            "seguire"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-clear-steps:5"
+        },
+        {
+          "term": {
+            "en": "the tips",
+            "it": "i consigli"
+          },
+          "example": {
+            "en": "Write the tips in the notebook.",
+            "it": "Scrivi i consigli nel quaderno."
+          },
+          "answers": [
+            "i consigli"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-clear-steps:6"
+        },
+        {
+          "term": {
+            "en": "the collection",
+            "it": "la collezione"
+          },
+          "example": {
+            "en": "Look at the postcard collection.",
+            "it": "Guarda la collezione di cartoline."
+          },
+          "answers": [
+            "la collezione"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-clear-steps:7"
+        }
+      ]
+    },
+    {
+      "id": "week5-helpful-advice",
+      "title": {
+        "en": "Encourage a friend with irregular verbs",
+        "it": "Incoraggia un amico con verbi irregolari"
+      },
+      "level": "A2",
+      "missionId": "week5-irregular-advice",
+      "description": {
+        "en": "Give one friend a brief, supportive instruction using sii, abbi or a short irregular form.",
+        "it": "Dai a un amico una breve istruzione di incoraggiamento con sii, abbi o una forma irregolare breve."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-d7cf3d20c90d",
+          "pages": [
+            4,
+            9,
+            10
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "a2-informal-imperative"
+      ],
+      "words": [
+        {
+          "term": {
+            "en": "be (tu)",
+            "it": "sii"
+          },
+          "example": {
+            "en": "Be curious during the visit.",
+            "it": "Sii curioso durante la visita."
+          },
+          "answers": [
+            "sii"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                9
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-helpful-advice:0"
+        },
+        {
+          "term": {
+            "en": "have (tu)",
+            "it": "abbi"
+          },
+          "example": {
+            "en": "Have confidence in your project.",
+            "it": "Abbi fiducia nel tuo progetto."
+          },
+          "answers": [
+            "abbi"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                9
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-helpful-advice:1"
+        },
+        {
+          "term": {
+            "en": "say (tu)",
+            "it": "di’"
+          },
+          "example": {
+            "en": "Say your name into the microphone.",
+            "it": "Di’ il tuo nome al microfono."
+          },
+          "answers": [
+            "di’",
+            "di'",
+            "dì"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                9
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-helpful-advice:2"
+        },
+        {
+          "term": {
+            "en": "do / make (tu)",
+            "it": "fa’"
+          },
+          "example": {
+            "en": "Take a short break.",
+            "it": "Fa’ una breve pausa."
+          },
+          "answers": [
+            "fa’",
+            "fa'",
+            "fai"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                9
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-helpful-advice:3"
+        },
+        {
+          "term": {
+            "en": "go (tu)",
+            "it": "va’"
+          },
+          "example": {
+            "en": "Go to the rehearsal room.",
+            "it": "Va’ in sala prove."
+          },
+          "answers": [
+            "va’",
+            "va'",
+            "vai"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                9
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-helpful-advice:4"
+        },
+        {
+          "term": {
+            "en": "give (tu)",
+            "it": "da’"
+          },
+          "example": {
+            "en": "Give the drawing a title.",
+            "it": "Da’ un titolo al disegno."
+          },
+          "answers": [
+            "da’",
+            "da'",
+            "dai"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                9
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-helpful-advice:5"
+        },
+        {
+          "term": {
+            "en": "stay (tu)",
+            "it": "sta’"
+          },
+          "example": {
+            "en": "Stay near the group.",
+            "it": "Sta’ vicino al gruppo."
+          },
+          "answers": [
+            "sta’",
+            "sta'",
+            "stai"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                9
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-helpful-advice:6"
+        },
+        {
+          "term": {
+            "en": "patience",
+            "it": "la pazienza"
+          },
+          "example": {
+            "en": "Patience helps when you learn.",
+            "it": "La pazienza aiuta quando impari."
+          },
+          "answers": [
+            "la pazienza"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                9
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-helpful-advice:7"
+        }
+      ]
+    },
+    {
+      "id": "week5-group-instructions",
+      "title": {
+        "en": "One friend or a group: say what to avoid",
+        "it": "Un amico o un gruppo: indica che cosa evitare"
+      },
+      "level": "A2",
+      "missionId": "week5-negative-instructions",
+      "description": {
+        "en": "Keep a craft table organised with a negative tu instruction, then adapt it for voi.",
+        "it": "Tieni in ordine un tavolo creativo con un’istruzione negativa al tu, poi adattala al voi."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-d7cf3d20c90d",
+          "pages": [
+            7,
+            8,
+            11,
+            12,
+            13
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "a2-plural-imperative"
+      ],
+      "words": [
+        {
+          "term": {
+            "en": "do not move (tu)",
+            "it": "non spostare"
+          },
+          "example": {
+            "en": "Do not move the lamp.",
+            "it": "Non spostare la lampada."
+          },
+          "answers": [
+            "non spostare"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "id": "word:week5-group-instructions:0"
+        },
+        {
+          "term": {
+            "en": "do not move (voi)",
+            "it": "non spostate"
+          },
+          "example": {
+            "en": "Do not move the table.",
+            "it": "Non spostate il tavolo."
+          },
+          "answers": [
+            "non spostate"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "id": "word:week5-group-instructions:1"
+        },
+        {
+          "term": {
+            "en": "do not open (tu)",
+            "it": "non aprire"
+          },
+          "example": {
+            "en": "Do not open the small parcel.",
+            "it": "Non aprire il pacco piccolo."
+          },
+          "answers": [
+            "non aprire"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "id": "word:week5-group-instructions:2"
+        },
+        {
+          "term": {
+            "en": "do not open (voi)",
+            "it": "non aprite"
+          },
+          "example": {
+            "en": "Do not open the red box.",
+            "it": "Non aprite la scatola rossa."
+          },
+          "answers": [
+            "non aprite"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "id": "word:week5-group-instructions:3"
+        },
+        {
+          "term": {
+            "en": "wait (voi)",
+            "it": "aspettate"
+          },
+          "example": {
+            "en": "Wait near the door.",
+            "it": "Aspettate vicino alla porta."
+          },
+          "answers": [
+            "aspettate"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                7
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "id": "word:week5-group-instructions:4"
+        },
+        {
+          "term": {
+            "en": "let’s prepare (noi)",
+            "it": "prepariamo"
+          },
+          "example": {
+            "en": "Let’s prepare a surprise together.",
+            "it": "Prepariamo una sorpresa insieme."
+          },
+          "answers": [
+            "prepariamo"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                7
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "id": "word:week5-group-instructions:5"
+        },
+        {
+          "term": {
+            "en": "to avoid",
+            "it": "evitare"
+          },
+          "example": {
+            "en": "We can avoid waste.",
+            "it": "Possiamo evitare gli sprechi."
+          },
+          "answers": [
+            "evitare"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-group-instructions:6"
+        },
+        {
+          "term": {
+            "en": "the goods",
+            "it": "la merce"
+          },
+          "example": {
+            "en": "The goods arrive in a box.",
+            "it": "La merce arriva in una scatola."
+          },
+          "answers": [
+            "la merce"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-group-instructions:7"
+        }
+      ]
+    },
+    {
+      "id": "week5-polite-requests",
+      "title": {
+        "en": "Guide a visitor politely with Lei",
+        "it": "Guida un visitatore con il Lei di cortesia"
+      },
+      "level": "A2",
+      "missionId": "week5-polite-instructions",
+      "description": {
+        "en": "Give a visitor one positive and one negative instruction, keeping polite Lei throughout.",
+        "it": "Dai a un visitatore un’istruzione positiva e una negativa, mantenendo sempre il Lei di cortesia."
+      },
+      "sourceRefs": [
+        {
+          "id": "src-d7cf3d20c90d",
+          "pages": [
+            7,
+            8,
+            9,
+            11,
+            12,
+            13
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "a2-formal-imperative"
+      ],
+      "words": [
+        {
+          "term": {
+            "en": "wait (Lei)",
+            "it": "aspetti"
+          },
+          "example": {
+            "en": "Wait near reception, please.",
+            "it": "Aspetti vicino alla reception, per favore."
+          },
+          "answers": [
+            "aspetti"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                7
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "id": "word:week5-polite-requests:0"
+        },
+        {
+          "term": {
+            "en": "take (Lei)",
+            "it": "prenda"
+          },
+          "example": {
+            "en": "Take the corridor on the left.",
+            "it": "Prenda il corridoio a sinistra."
+          },
+          "answers": [
+            "prenda"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                8
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-polite-requests:1"
+        },
+        {
+          "term": {
+            "en": "listen (Lei)",
+            "it": "senta"
+          },
+          "example": {
+            "en": "Listen to this short message.",
+            "it": "Senta questo breve messaggio."
+          },
+          "answers": [
+            "senta"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                8
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-polite-requests:2"
+        },
+        {
+          "term": {
+            "en": "go (Lei)",
+            "it": "vada"
+          },
+          "example": {
+            "en": "Go to room number two.",
+            "it": "Vada alla sala numero due."
+          },
+          "answers": [
+            "vada"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                9
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-polite-requests:3"
+        },
+        {
+          "term": {
+            "en": "do / make (Lei)",
+            "it": "faccia"
+          },
+          "example": {
+            "en": "Make a copy of the form.",
+            "it": "Faccia una copia del modulo."
+          },
+          "answers": [
+            "faccia"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                9
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-polite-requests:4"
+        },
+        {
+          "term": {
+            "en": "do not enter (Lei)",
+            "it": "non entri"
+          },
+          "example": {
+            "en": "Do not enter the closed room.",
+            "it": "Non entri nella sala chiusa."
+          },
+          "answers": [
+            "non entri"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                12
+              ]
+            }
+          ],
+          "provenance": "extension",
+          "id": "word:week5-polite-requests:5"
+        },
+        {
+          "term": {
+            "en": "the shawl",
+            "it": "lo scialle"
+          },
+          "example": {
+            "en": "Put the shawl on the chair.",
+            "it": "Appoggi lo scialle sulla sedia."
+          },
+          "answers": [
+            "lo scialle"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-polite-requests:6"
+        },
+        {
+          "term": {
+            "en": "the crew neck",
+            "it": "il girocollo"
+          },
+          "example": {
+            "en": "This jumper has a crew neck.",
+            "it": "Questo maglione ha il girocollo."
+          },
+          "answers": [
+            "il girocollo"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-d7cf3d20c90d",
+              "pages": [
+                13
+              ]
+            }
+          ],
+          "provenance": "lesson",
+          "id": "word:week5-polite-requests:7"
+        }
+      ]
     }
   ],
   "lessons": [
@@ -10725,6 +11622,270 @@
       "speaking": {
         "en": "Compare two invented scarves, then describe two qualities of one coat. Use di once and che once.",
         "it": "Confronta due sciarpe inventate, poi descrivi due qualità di un cappotto. Usa di una volta e che una volta."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "week5-friendly-instructions",
+      "bank": "week5-clear-steps",
+      "notes": [
+        {
+          "en": "For an affirmative instruction to one friend, regular -are verbs use -a: ascolta. Regular -ere and -ire verbs use -i: prendi, apri. Compare tu ascolti (a description) with ascolta! (an instruction). Some -ire verbs use -isci, as in finisci; learn irregular verbs separately.",
+          "it": "Per un’istruzione affermativa a un amico, i verbi regolari in -are usano -a: ascolta. I verbi regolari in -ere e -ire usano -i: prendi, apri. Confronta tu ascolti (descrizione) con ascolta! (istruzione). Alcuni verbi in -ire usano -isci, come finisci; studia a parte gli irregolari."
+        },
+        {
+          "en": "First identify who you are addressing: one friend, a group, or one person politely. Then choose the verb form.",
+          "it": "Prima identifica a chi parli: un amico, un gruppo o una persona con cortesia. Poi scegli la forma del verbo."
+        },
+        {
+          "en": "These are original companion situations. Write or say your own version, then use the self-checks; production is self-assessed.",
+          "it": "Queste sono situazioni originali del portale. Scrivi o pronuncia la tua versione, poi usa i criteri di controllo; la produzione è autovalutata."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: What do I need for the card?",
+          "it": "A: Che cosa serve per il biglietto?"
+        },
+        {
+          "en": "B: Take a green sheet.",
+          "it": "B: Prendi un foglio verde."
+        },
+        {
+          "en": "A: And then?",
+          "it": "A: E poi?"
+        },
+        {
+          "en": "B: Draw a small sun.",
+          "it": "B: Disegna un piccolo sole."
+        },
+        {
+          "en": "A: Shall I add a name?",
+          "it": "A: Aggiungo un nome?"
+        },
+        {
+          "en": "B: Yes, write it here.",
+          "it": "B: Sì, scrivi il nome qui."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Which colour is the sheet in the scene? Write the Italian adjective.",
+          "it": "Di che colore è il foglio nella scena? Scrivi l’aggettivo italiano."
+        },
+        "answers": [
+          "verde"
+        ],
+        "explanation": {
+          "en": "The friend says: Prendi un foglio verde.",
+          "it": "L’amico dice: Prendi un foglio verde."
+        }
+      },
+      "frame": {
+        "en": "Take ___. Draw / write / open ___.",
+        "it": "Prendi ___. Disegna / scrivi / apri ___."
+      },
+      "speaking": {
+        "en": "Give one friend two steps for an invented craft activity. Use two different verbs and tu throughout.",
+        "it": "Dai a un amico due istruzioni per un’attività creativa inventata. Usa due verbi diversi e sempre il tu."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "week5-irregular-advice",
+      "bank": "week5-helpful-advice",
+      "notes": [
+        {
+          "en": "Some tu instructions must be learned: essere → sii, avere → abbi, dire → di’. Andare, fare, dare and stare allow va’/vai, fa’/fai, da’/dai and sta’/stai. Use an apostrophe in the short forms, not an accent; dì also occurs as the imperative of dire. These are tu forms, not polite Lei forms.",
+          "it": "Alcune istruzioni al tu vanno imparate: essere → sii, avere → abbi, dire → di’. Andare, fare, dare e stare ammettono va’/vai, fa’/fai, da’/dai e sta’/stai. Nelle forme brevi usa l’apostrofo, non l’accento; si trova anche dì come imperativo di dire. Sono forme al tu, non forme di cortesia al Lei."
+        },
+        {
+          "en": "First identify who you are addressing: one friend, a group, or one person politely. Then choose the verb form.",
+          "it": "Prima identifica a chi parli: un amico, un gruppo o una persona con cortesia. Poi scegli la forma del verbo."
+        },
+        {
+          "en": "These are original companion situations. Write or say your own version, then use the self-checks; production is self-assessed.",
+          "it": "Queste sono situazioni originali del portale. Scrivi o pronuncia la tua versione, poi usa i criteri di controllo; la produzione è autovalutata."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: I have a rehearsal in ten minutes.",
+          "it": "A: Ho una prova fra dieci minuti."
+        },
+        {
+          "en": "B: Have confidence in your voice.",
+          "it": "B: Abbi fiducia nella tua voce."
+        },
+        {
+          "en": "A: I need a moment.",
+          "it": "A: Ho bisogno di un momento."
+        },
+        {
+          "en": "B: Take a short break.",
+          "it": "B: Fa’ una breve pausa."
+        },
+        {
+          "en": "A: Where shall I wait?",
+          "it": "A: Dove aspetto?"
+        },
+        {
+          "en": "B: Go to the rehearsal room.",
+          "it": "B: Va’ in sala prove."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "In how many minutes does the rehearsal start? Write the number in Italian.",
+          "it": "Fra quanti minuti inizia la prova? Scrivi il numero in italiano."
+        },
+        "answers": [
+          "dieci"
+        ],
+        "explanation": {
+          "en": "The rehearsal starts in ten minutes: fra dieci minuti.",
+          "it": "La prova inizia fra dieci minuti."
+        }
+      },
+      "frame": {
+        "en": "Have confidence in ___. Take / be / say ___.",
+        "it": "Abbi fiducia in ___. Fa’ / sii / di’ ___."
+      },
+      "speaking": {
+        "en": "Invent two encouraging instructions for a friend before a music rehearsal. Use two irregular verbs.",
+        "it": "Inventa due istruzioni di incoraggiamento per un amico prima di una prova musicale. Usa due verbi irregolari."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "week5-negative-instructions",
+      "bank": "week5-group-instructions",
+      "notes": [
+        {
+          "en": "For a negative instruction to one friend, use non + infinitive: non spostare. For voi, keep the plural imperative: non spostate. Regular voi forms end in -ate, -ete, -ite. For an invitation including yourself, use noi: prepariamo! Its negative keeps the same form: non prepariamo.",
+          "it": "Per un’istruzione negativa a un amico usa non + infinito: non spostare. Con voi mantieni l’imperativo plurale: non spostate. Le forme regolari al voi terminano in -ate, -ete, -ite. Per una proposta che include chi parla usa noi: prepariamo! Al negativo la forma resta uguale: non prepariamo."
+        },
+        {
+          "en": "First identify who you are addressing: one friend, a group, or one person politely. Then choose the verb form.",
+          "it": "Prima identifica a chi parli: un amico, un gruppo o una persona con cortesia. Poi scegli la forma del verbo."
+        },
+        {
+          "en": "These are original companion situations. Write or say your own version, then use the self-checks; production is self-assessed.",
+          "it": "Queste sono situazioni originali del portale. Scrivi o pronuncia la tua versione, poi usa i criteri di controllo; la produzione è autovalutata."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Can we open the parcel?",
+          "it": "A: Possiamo aprire il pacco?"
+        },
+        {
+          "en": "B: No, do not open it yet. (to the group)",
+          "it": "B: No, non aprite ancora il pacco."
+        },
+        {
+          "en": "A: Where shall we put the brushes?",
+          "it": "A: Dove mettiamo i pennelli?"
+        },
+        {
+          "en": "B: Leave the brushes here. (to the group)",
+          "it": "B: Lasciate i pennelli qui."
+        },
+        {
+          "en": "A: And the colours?",
+          "it": "A: E i colori?"
+        },
+        {
+          "en": "B: Let’s prepare the colours together.",
+          "it": "B: Prepariamo i colori insieme."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Complete the group instruction from the scene: non ___ ancora il pacco.",
+          "it": "Completa l’istruzione al gruppo della scena: non ___ ancora il pacco."
+        },
+        "answers": [
+          "aprite"
+        ],
+        "explanation": {
+          "en": "The speaker addresses several people with voi: non aprite.",
+          "it": "Chi parla si rivolge a più persone con voi: non aprite."
+        }
+      },
+      "frame": {
+        "en": "Do not ___ (tu). Do not ___ (voi). Let’s ___ (noi)!",
+        "it": "Non ___ (tu). Non ___ (voi). ___ (noi)!"
+      },
+      "speaking": {
+        "en": "Invent one rule about a craft table for one friend. Rewrite the same rule for several friends, then add one noi invitation.",
+        "it": "Inventa una regola su un tavolo creativo per un amico. Riscrivi la stessa regola per più amici, poi aggiungi una proposta al noi."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "week5-polite-instructions",
+      "bank": "week5-polite-requests",
+      "notes": [
+        {
+          "en": "To address one person politely, Lei uses different forms: -are → -i (aspetti); regular -ere/-ire → -a (prenda, senta). Useful irregular forms include sia, abbia, vada, faccia, dica, dia and stia. The negative is non + the same Lei form: non aspetti, non prenda. Non + infinitive belongs to negative tu, not Lei.",
+          "it": "Per rivolgersi a una persona con cortesia, Lei usa forme diverse: -are → -i (aspetti); i verbi regolari in -ere/-ire → -a (prenda, senta). Alcune forme irregolari utili sono sia, abbia, vada, faccia, dica, dia e stia. Il negativo usa non + la stessa forma al Lei: non aspetti, non prenda. Non + infinito appartiene al tu negativo, non al Lei."
+        },
+        {
+          "en": "First identify who you are addressing: one friend, a group, or one person politely. Then choose the verb form.",
+          "it": "Prima identifica a chi parli: un amico, un gruppo o una persona con cortesia. Poi scegli la forma del verbo."
+        },
+        {
+          "en": "These are original companion situations. Write or say your own version, then use the self-checks; production is self-assessed.",
+          "it": "Queste sono situazioni originali del portale. Scrivi o pronuncia la tua versione, poi usa i criteri di controllo; la produzione è autovalutata."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Good morning, where is the exhibition?",
+          "it": "A: Buongiorno, dov’è la mostra?"
+        },
+        {
+          "en": "B: Take the corridor on the left, please.",
+          "it": "B: Prenda il corridoio a sinistra, per favore."
+        },
+        {
+          "en": "A: Can I leave my bag here?",
+          "it": "A: Posso lasciare la borsa qui?"
+        },
+        {
+          "en": "B: Yes, leave it on this chair.",
+          "it": "B: Sì, lasci la borsa su questa sedia."
+        },
+        {
+          "en": "A: Is the small room open?",
+          "it": "A: La sala piccola è aperta?"
+        },
+        {
+          "en": "B: No, do not enter that room, please.",
+          "it": "B: No, non entri in quella sala, per favore."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Which direction does the visitor take? Complete: a ___.",
+          "it": "In quale direzione va il visitatore? Completa: a ___."
+        },
+        "answers": [
+          "sinistra"
+        ],
+        "explanation": {
+          "en": "The visitor is asked to take the corridor on the left: a sinistra.",
+          "it": "Al visitatore viene indicato il corridoio a sinistra."
+        }
+      },
+      "frame": {
+        "en": "Please ___ here (Lei). Do not ___ (Lei).",
+        "it": "___ qui, per favore (Lei). Non ___ (Lei)."
+      },
+      "speaking": {
+        "en": "Invent two instructions for one visitor at a small exhibition. Use polite Lei once positively and once negatively.",
+        "it": "Inventa due istruzioni per un visitatore a una piccola mostra. Usa il Lei di cortesia una volta al positivo e una al negativo."
       },
       "resource": "club"
     }

@@ -1,7 +1,7 @@
 import type { GrammarExercise, GrammarUnit, Mission, PageCompanion, Programme } from "./types.ts";
 
 // Planning uses catalogue identity and ordering, never exercise answers or prose.
-export type PlanningMission = Pick<Mission, "id" | "course" | "title" | "goal">;
+export type PlanningMission = Pick<Mission, "id" | "course" | "title" | "goal" | "relatedGrammarIds">;
 export type PlanningUnit = Pick<GrammarUnit, "id" | "title" | "level" | "missionIds" | "prerequisites" | "sources"> & {
   exercises: Pick<GrammarExercise, "id" | "kind">[];
 };

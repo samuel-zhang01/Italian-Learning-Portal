@@ -154,12 +154,12 @@ test("grammar provides 65 substantial bilingual A1/A2 units, six exercise format
 });
 
 test("every source page has one explicit companion classification; original practice has support and valid grammar links", () => {
-  assert.equal(sources.length, 55);
+  assert.equal(sources.length, 56);
   assert.equal(
     pages.length,
     sources.reduce((n, s) => n + s.pages, 0),
   );
-  assert.equal(pages.length, 1643);
+  assert.equal(pages.length, 1659);
   assert.equal(new Set(pages.map((p) => p.id)).size, pages.length);
   for (const source of sources) {
     assert.match(source.sha256, /^[0-9a-f]{64}$/);
@@ -186,7 +186,7 @@ test("every source page has one explicit companion classification; original prac
 test("the original programmes and the chapter journey reference real lessons", () => {
   assert.deepEqual(
     programmes.map((p) => p.days.length),
-    [14, 28, 10, 80],
+    [14, 28, 10, 80, 4],
   );
   for (const programme of programmes) {
     [programme.title, programme.summary].forEach(pair);
@@ -630,7 +630,7 @@ test("new book sources expose bounded metadata and reference pointers while the 
   ];
   assert.equal(expected.length, 5);
   const curriculum = read("curriculum");
-  assert.equal(curriculum.sources.length, 55);
+  assert.equal(curriculum.sources.length, 56);
   assert.deepEqual(new Set(curriculum.sources.map((source) => source.id)), new Set(sources.map((source) => source.id)));
   for (const [id, count, path] of expected) {
     const source = sources.find((item) => item.id === id);
@@ -642,8 +642,8 @@ test("new book sources expose bounded metadata and reference pointers while the 
     assert.equal(entries.length, count);
     assert.ok(entries.every((page) => page.kind === "reference" && page.checks.length === 0));
   }
-  assert.equal(pages.filter((page) => page.kind === "practice" && !["src-f293d35b1616", "src-0885f267bac5"].includes(page.sourceId)).length, 730);
-  assert.equal(pages.filter((page) => page.kind === "practice").length, 753);
+  assert.equal(pages.filter((page) => page.kind === "practice" && !["src-f293d35b1616", "src-0885f267bac5", "src-d7cf3d20c90d"].includes(page.sourceId)).length, 730);
+  assert.equal(pages.filter((page) => page.kind === "practice").length, 763);
   for (const unit of units.filter((item) => item.level === "A2")) {
     for (const ref of unit.sources) {
       for (const page of ref.pages)

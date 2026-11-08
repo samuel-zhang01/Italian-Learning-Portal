@@ -1507,7 +1507,8 @@ function ProgrammePractice({
 
 export function ProgrammeView({ p, t, text, save, go, today }: Shared) {
   const [viewedId, setViewedId] = useState(
-    p.academy?.programme?.id ?? "supported-a1",
+    () => programmes.find((item) => item.id === catalogueParams().get("programme"))?.id
+      ?? p.academy?.programme?.id ?? "supported-a1",
   );
   const [notice, setNotice] = useState("");
   const [viewedDay, setViewedDay] = useState<number | null>(null);
@@ -1612,6 +1613,7 @@ export function ProgrammeView({ p, t, text, save, go, today }: Shared) {
             aria-pressed={item.id === programme.id}
             onClick={() => {
               setViewedId(item.id);
+              replaceCatalogueParams({ programme: item.id });
               setNotice("");
               setViewedDay(null);
             }}

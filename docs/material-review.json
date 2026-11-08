@@ -591,5 +591,26 @@
       "verifiedAt": "2026-11-03T16:50:18.081Z",
       "report": "docs/deployment-vocabulary-explorer-2026-11-03.json"
     }
+  },
+  "week5_2026_11_08": {
+    "report": "docs/week5-content-review.json",
+    "source": "Course 3/PDF_Week_5.pdf",
+    "physicalPagesReviewed": 16,
+    "newMissions": 4,
+    "newVocabularyEntries": 32,
+    "programmeId": "course3-week5",
+    "topics": [
+      "Regular tu instructions",
+      "Irregular tu advice",
+      "Negative tu versus voi and a noi invitation",
+      "Polite Lei positive and negative instructions"
+    ],
+    "remainingSourceGaps": [
+      "Independent homework and its correction stay reference-only; no submitted assignment is completed.",
+      "The source points to Nuovo Espresso Plus 2 Unit 1 pp. 15–18, but this import does not newly review those textbook pages.",
+      "Pronoun attachment and a full subjunctive treatment are outside the short Week 5 missions; existing advanced grammar remains linked.",
+      "The group invitation noi is introduced with a bounded regular pattern; the route does not claim exhaustive imperative mastery.",
+      "The glossary items stringere and crepi l’avarizia remain available in the private source reference rather than receiving new dedicated typed-recall cards."
+    ]
   }
 }
