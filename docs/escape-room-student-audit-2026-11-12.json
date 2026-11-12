@@ -1,6 +1,6 @@
 {
   "reviewedOn": "2026-11-12",
-  "status": "local acceptance passed; deployment pending",
+  "status": "local and public acceptance passed; deployed",
   "sourceReview": "docs/escape-room-content-review-2026-11-12.json",
   "checks": {
     "dailyTestsPassed": 327,
@@ -418,5 +418,408 @@
     "The new sembrare/mancare lesson is limited to present-tense nominal-subject patterns; it is not a complete course on either verb.",
     "Synthetic isolated Chromium profiles; no physical device or screen-reader audit.",
     "The next-day review UI uses an explicitly advanced synthetic schedule, alongside automated real-date scheduling tests."
-  ]
+  ],
+  "publicBrowser": {
+    "testedAt": "2026-11-12T15:24:54.989Z",
+    "base": "https://italian.samuelzhang.co.uk",
+    "passed": true,
+    "checks": [
+      {
+        "name": "Class revision preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "reviewlab-compare-quantities: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "reviewlab-seems-and-misses: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Notebook contains both original personal responses",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Guided Class revision vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "All 16 vocabulary entries are discoverable by source; the answer key remains reference-only",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Private Class revision PDF matches by checksum and opens the reviewed rendered page locally",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Class revision preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "reviewlab-compare-quantities: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "reviewlab-seems-and-misses: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Notebook contains both original personal responses",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Guided Class revision vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "All 16 vocabulary entries are discoverable by source; the answer key remains reference-only",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Class revision preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "reviewlab-compare-quantities: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "reviewlab-seems-and-misses: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Notebook contains both original personal responses",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Guided Class revision vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "All 16 vocabulary entries are discoverable by source; the answer key remains reference-only",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Class revision preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "reviewlab-compare-quantities: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "reviewlab-seems-and-misses: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Notebook contains both original personal responses",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Guided Class revision vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "All 16 vocabulary entries are discoverable by source; the answer key remains reference-only",
+        "language": "it",
+        "width": 1440
+      }
+    ],
+    "layouts": [
+      {
+        "label": "en-390-today",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-390-programme",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-390-reviewlab-compare-quantities",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-390-reviewlab-seems-and-misses",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-390-vocabulary",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-320-today",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "en-320-polite",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "en-768-today",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "en-768-polite",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "en-1440-today",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-programme",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-reviewlab-compare-quantities",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-reviewlab-seems-and-misses",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-vocabulary",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-320-today",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "en-320-polite",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "en-768-today",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "en-768-polite",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "it-390-today",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-390-programme",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-390-reviewlab-compare-quantities",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-390-reviewlab-seems-and-misses",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-390-vocabulary",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-320-today",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "it-320-polite",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "it-768-today",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "it-768-polite",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "it-1440-today",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-programme",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-reviewlab-compare-quantities",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-reviewlab-seems-and-misses",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-vocabulary",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-320-today",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "it-320-polite",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "it-768-today",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "it-768-polite",
+        "width": 768,
+        "document": 753
+      }
+    ],
+    "errors": [],
+    "blocked": [],
+    "failed": [],
+    "limitations": [
+      "Synthetic isolated Chromium profiles; no physical device or screen-reader audit.",
+      "The next-day review UI uses an explicitly advanced synthetic schedule, alongside automated real-date scheduling tests."
+    ]
+  },
+  "publicOffline": {
+    "passed": true,
+    "checks": [
+      {
+        "language": "en",
+        "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
+        "version": "39865ba16d561bcf",
+        "workerQuery": "?release=39865ba16d561bcf",
+        "assetCount": 38
+      },
+      {
+        "language": "en",
+        "check": "Offline reload, eleven lazy routes, guided draft and oral choice preserve stored progress"
+      },
+      {
+        "language": "en",
+        "check": "Online current-release recheck and queried-worker removal preserve progress"
+      },
+      {
+        "language": "it",
+        "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
+        "version": "39865ba16d561bcf",
+        "workerQuery": "?release=39865ba16d561bcf",
+        "assetCount": 38
+      },
+      {
+        "language": "it",
+        "check": "Offline reload, eleven lazy routes, guided draft and oral choice preserve stored progress"
+      },
+      {
+        "language": "it",
+        "check": "Online current-release recheck and queried-worker removal preserve progress"
+      }
+    ]
+  },
+  "publication": {
+    "report": "docs/deployment-escape-room-2026-11-12.json",
+    "release": "20261112T152026Z-escape-room-revision",
+    "url": "https://italian.samuelzhang.co.uk/",
+    "sourceRevision": "6eb3d7b6ffa2b5cc2a01fabeae852390668bd39b",
+    "ci": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/43245596050"
+  }
 }

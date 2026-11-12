@@ -633,6 +633,13 @@
       "The supplied completed puzzle, code clues and final code remain private source material.",
       "The past, reflexive and comparison foundations are reused rather than duplicated as new grammar units.",
       "The new sembrare/mancare lesson is limited to present-tense nominal-subject patterns; it is not a complete course on either verb."
-    ]
+    ],
+    "publication": {
+      "report": "docs/deployment-escape-room-2026-11-12.json",
+      "release": "20261112T152026Z-escape-room-revision",
+      "url": "https://italian.samuelzhang.co.uk/",
+      "sourceRevision": "6eb3d7b6ffa2b5cc2a01fabeae852390668bd39b",
+      "ci": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/43245596050"
+    }
   }
 }

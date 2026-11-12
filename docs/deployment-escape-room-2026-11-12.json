@@ -1,0 +1,757 @@
+{
+  "release": "20261112T152026Z-escape-room-revision",
+  "releaseDirectory": "/data/italian/releases/20261112T152026Z-escape-room-revision",
+  "previousReleaseDirectory": "/data/italian/releases/20261108T115740Z-week5-imperative",
+  "sourceRevision": "6eb3d7b6ffa2b5cc2a01fabeae852390668bd39b",
+  "artifactHashes": {
+    "app-icon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "assets/academy-BNKTvA60.js": "00f2d26fd0173df90abdfddb3da7c5309d7220110cb2c49ad8e9d4c6e5fa539f",
+    "assets/arcade-DiXJuTYN.js": "8e1d5cd1f67a73b355bf81ddec935a331a3f0cd4da2b6f4ab45ba998d24c52a7",
+    "assets/arcade-scenes-D_GrQAm4.js": "9acbc31d1846c8e67351a57d44894c6d524d8c249b3493a90ef01397d54eeadb",
+    "assets/backup-transfer-DUllx3Zd.js": "dd191ea5ff2fd37f45f78e7d83a84948f46d82201ed87f716b5a960e9686201e",
+    "assets/backup-transfer-ZQnUZdgZ.css": "592a44651b526292fcb66338c9cb095490cdbd079a68a806ac8e51de92ca93df",
+    "assets/booster-content-CcOb-fCU.js": "3380433469d8b4d69dd7d27ac19ffe74573a8e883b511da0d62edd8384a31812",
+    "assets/chapters-CfwLknyS.css": "a8b87bb143e0bb4e4e55347a1c8d78dafba41aaba93c7059fde8c2d1332183ff",
+    "assets/chapters-NKVfV0gE.js": "d3e10e8e4435347222ad390e95fdcf9e629ec4301af00b14278a922cf5dc49f5",
+    "assets/companion-0He2U-cV.js": "d9411c78bfe500906f09a605ea7430870c4495b00fe05885bef2e00cdc2721b8",
+    "assets/discovery-BkaQRgv6.js": "849230c691eb979a219b4908f9141a276493ca00468787cbad96a1015e0b99ec",
+    "assets/discovery-index-Cwgslkc1.js": "b763575224a64b1112fa718c7dd5a2a0524edc355f8c61a072b976d418ab08b3",
+    "assets/enriched-Jdm6a0Py.js": "4510d49026318815d7c7395da317dc77a84d01b01d809704c75cf1217cde419c",
+    "assets/enrichment-DZlO_Gxi.js": "35446b83ee429f4a1ba639dc8a355d544c08dc5fb1623b57c342c533cfb6b0df",
+    "assets/grammar-fTcUwQty.js": "50de34241c6575f7040a61f1f1996c0244f5e75d17c5190699fb8bc41e6e1efc",
+    "assets/index-C1n5BHln.css": "fdca6075a0190eaf132b42788adc567f17b853608385646bef200dfd15694ff1",
+    "assets/index-Drtyw_CS.js": "c5884bbe0a6fdf1aa1a79785635287be9dad891fcec656cb1444bf0fe5def6ff",
+    "assets/learning-insights-6pqwLiCM.js": "06d299428a761bef83fe8c1c4d457093bd5f5f9a26a78d16de83d321f1cd1fdd",
+    "assets/learning-insights-BLQTf6f8.css": "a8d4ba17b735c4f737b8ada17e847a45272bce7a81b6c425c1e6cdac44ae4dd0",
+    "assets/listening-B8jK45SF.js": "8fb6c9ac60faf1e31800c3876da763a434fca0cb0969206f2e134581147014f2",
+    "assets/listening-DYa2axRK.css": "9ceef35e541c490ce309e98afced2f1804969343e6dc761c7d075bc997746799",
+    "assets/navigation-3S6zwPaY.js": "afb154d158fce773efcd9c3786db9d713976a3f84f8454d9d59c9d38d5924343",
+    "assets/offline-D1ONlxYy.js": "9885912ea609b85004e68609447a0c69ed1c7be0e192722c68094ca7ff6e308c",
+    "assets/oral-practice-C9ivmFoo.css": "eacd3820fbc7a6ed4d884233738c6c8028993639102259f75c5da705d3ec97ea",
+    "assets/oral-practice-Zhe-dTae.js": "7f63c63f5781a105ce4fc7f65fc99fc9a4f8845290581ebc9be4398d51199e3f",
+    "assets/painted-cardboard-CX92yXJi.webp": "2267856e5f4e1c2f9388fa4fe7cc1eff3746b3354407287574e42dd51533c2db",
+    "assets/practice-hub-CokxpyBH.js": "2434b63beaba311f5ca464af8fe605fa4712f47ccaac3f21dade723855a649ae",
+    "assets/practice-navigation-lh3Dd6ec.js": "2d64f68eb3315d7a38d8c85017badd3da829a9618e55380ed51555b93ac76c96",
+    "assets/practice-tools-Bj_XqGvG.js": "b757e510882cb3c422d0bda0abf6be3d7cd6f3c675ffe61f6cd52edbba934388",
+    "assets/profile-C1g0z2YZ.css": "7b860d23ae06ca1a6f26eb34db7b4e84038d648343c46f066323dc2cc4427588",
+    "assets/profile-DuBdv9z7.js": "fb131915e96cc78dfd655f16e6b2970e7e3e915f7313ed156b6fa8836a409a16",
+    "assets/review-hub-C0Sh_F8c.css": "e0d5c02b9b6e9f87a95ef873518983f70a779d2537782d05da904e0d2693f146",
+    "assets/review-hub-VFf9HGk8.js": "ad4046e439bfd56b4bc481955c6edb3955bba2d4e041a8963fb77617e4af4902",
+    "assets/vocab-boost-mr_-CnPv.js": "6bef3f0dbc2559edff3bf17d3bcf8863a7e847de01fd4fae766602fe764fa4b1",
+    "assets/vocab-catalogue-BF26x8FZ.js": "de06bf6fd7046950d63e7390c5d5b2bef4339364fd0022e0f463e7c2ac20fa97",
+    "favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "index.html": "e185b112b97b6f9b71a64487d804ded5ddd2b2f976bc7c262f72f13492530303",
+    "manifest.webmanifest": "12b91f0ec01c070bfffcfa31bea3df6fce59caa7666cd4be77b80b5822448d2a",
+    "offline-worker.js": "796fc4d10a4476b664e983421c0253c390722263ed9ed5ef81f8f5085eb1410b"
+  },
+  "offlineVersion": "39865ba16d561bcf",
+  "files": 39,
+  "remoteHashVerification": "passed",
+  "status": "public assets verified; live browser checks pending",
+  "url": "https://italian.samuelzhang.co.uk/",
+  "stagedAt": "2026-11-12T15:20:28.704885+00:00",
+  "activatedAt": "2026-11-12T15:20:30.422545+00:00",
+  "publicAssets": {
+    "passed": true,
+    "testedAt": "2026-11-12T15:20:31.445040+00:00",
+    "tlsValidation": true,
+    "assets": [
+      {
+        "path": "app-icon.svg",
+        "deliveredPath": "/app-icon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/academy-BNKTvA60.js",
+        "deliveredPath": "/assets/academy-BNKTvA60.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-DiXJuTYN.js",
+        "deliveredPath": "/assets/arcade-DiXJuTYN.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-scenes-D_GrQAm4.js",
+        "deliveredPath": "/assets/arcade-scenes-D_GrQAm4.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/backup-transfer-DUllx3Zd.js",
+        "deliveredPath": "/assets/backup-transfer-DUllx3Zd.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/backup-transfer-ZQnUZdgZ.css",
+        "deliveredPath": "/assets/backup-transfer-ZQnUZdgZ.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/booster-content-CcOb-fCU.js",
+        "deliveredPath": "/assets/booster-content-CcOb-fCU.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-CfwLknyS.css",
+        "deliveredPath": "/assets/chapters-CfwLknyS.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-NKVfV0gE.js",
+        "deliveredPath": "/assets/chapters-NKVfV0gE.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/companion-0He2U-cV.js",
+        "deliveredPath": "/assets/companion-0He2U-cV.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-BkaQRgv6.js",
+        "deliveredPath": "/assets/discovery-BkaQRgv6.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-index-Cwgslkc1.js",
+        "deliveredPath": "/assets/discovery-index-Cwgslkc1.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enriched-Jdm6a0Py.js",
+        "deliveredPath": "/assets/enriched-Jdm6a0Py.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enrichment-DZlO_Gxi.js",
+        "deliveredPath": "/assets/enrichment-DZlO_Gxi.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/grammar-fTcUwQty.js",
+        "deliveredPath": "/assets/grammar-fTcUwQty.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-C1n5BHln.css",
+        "deliveredPath": "/assets/index-C1n5BHln.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-Drtyw_CS.js",
+        "deliveredPath": "/assets/index-Drtyw_CS.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/learning-insights-6pqwLiCM.js",
+        "deliveredPath": "/assets/learning-insights-6pqwLiCM.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/learning-insights-BLQTf6f8.css",
+        "deliveredPath": "/assets/learning-insights-BLQTf6f8.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/listening-B8jK45SF.js",
+        "deliveredPath": "/assets/listening-B8jK45SF.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/listening-DYa2axRK.css",
+        "deliveredPath": "/assets/listening-DYa2axRK.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/navigation-3S6zwPaY.js",
+        "deliveredPath": "/assets/navigation-3S6zwPaY.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/offline-D1ONlxYy.js",
+        "deliveredPath": "/assets/offline-D1ONlxYy.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/oral-practice-C9ivmFoo.css",
+        "deliveredPath": "/assets/oral-practice-C9ivmFoo.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/oral-practice-Zhe-dTae.js",
+        "deliveredPath": "/assets/oral-practice-Zhe-dTae.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/painted-cardboard-CX92yXJi.webp",
+        "deliveredPath": "/assets/painted-cardboard-CX92yXJi.webp",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-hub-CokxpyBH.js",
+        "deliveredPath": "/assets/practice-hub-CokxpyBH.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-navigation-lh3Dd6ec.js",
+        "deliveredPath": "/assets/practice-navigation-lh3Dd6ec.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-tools-Bj_XqGvG.js",
+        "deliveredPath": "/assets/practice-tools-Bj_XqGvG.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/profile-C1g0z2YZ.css",
+        "deliveredPath": "/assets/profile-C1g0z2YZ.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/profile-DuBdv9z7.js",
+        "deliveredPath": "/assets/profile-DuBdv9z7.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-C0Sh_F8c.css",
+        "deliveredPath": "/assets/review-hub-C0Sh_F8c.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-VFf9HGk8.js",
+        "deliveredPath": "/assets/review-hub-VFf9HGk8.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/vocab-boost-mr_-CnPv.js",
+        "deliveredPath": "/assets/vocab-boost-mr_-CnPv.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/vocab-catalogue-BF26x8FZ.js",
+        "deliveredPath": "/assets/vocab-catalogue-BF26x8FZ.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "favicon.svg",
+        "deliveredPath": "/favicon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "index.html",
+        "deliveredPath": "/?parliamo-release=20261112T152026Z-escape-room-revision",
+        "status": 200,
+        "hashMatch": false,
+        "applicationMarkupMatch": true,
+        "edgeInsertions": [
+          "Cloudflare JavaScript detection challenge",
+          "Cloudflare public analytics beacon"
+        ],
+        "deliveredSHA256": "4c133ee74177f4e73aacb46cf16bc492f42ac19805b95610d90f8063bba30763"
+      },
+      {
+        "path": "manifest.webmanifest",
+        "deliveredPath": "/manifest.webmanifest",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "offline-worker.js",
+        "deliveredPath": "/offline-worker.js?release=39865ba16d561bcf",
+        "status": 200,
+        "hashMatch": true
+      }
+    ],
+    "canonicalVersion": "39865ba16d561bcf",
+    "canonicalCacheControl": "no-cache"
+  },
+  "profileServiceHealth": {
+    "status": 200,
+    "healthy": true,
+    "learnerRecordsAccessed": false
+  },
+  "cleanCheckoutBuild": "identical artifacts",
+  "verifiedAt": "2026-11-12T16:00:14.396239+00:00",
+  "rollbackAvailable": true,
+  "sourceCI": {
+    "conclusion": "success",
+    "databaseId": 43245596050,
+    "headSha": "6eb3d7b6ffa2b5cc2a01fabeae852390668bd39b",
+    "status": "completed",
+    "url": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/43245596050"
+  },
+  "validation": {
+    "dailyTestsPassed": 327,
+    "typecheck": "passed",
+    "lint": "passed with no warnings",
+    "buildDaily": "passed",
+    "planningParityCases": 3948,
+    "cleanCommittedSourceBuild": "All 39 files match the validated build.",
+    "publicRevisionBrowserChecks": 33,
+    "publicRevisionLayoutObservations": 36,
+    "localNavigationChecks": 7,
+    "localNavigationLayoutObservations": 212,
+    "localWeek5RegressionChecks": 41,
+    "publicOfflineChecks": 6
+  },
+  "revisionBrowser": {
+    "testedAt": "2026-11-12T15:24:54.989Z",
+    "base": "https://italian.samuelzhang.co.uk",
+    "passed": true,
+    "checks": [
+      {
+        "name": "Class revision preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "reviewlab-compare-quantities: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "reviewlab-seems-and-misses: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Notebook contains both original personal responses",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Guided Class revision vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "All 16 vocabulary entries are discoverable by source; the answer key remains reference-only",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Private Class revision PDF matches by checksum and opens the reviewed rendered page locally",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Class revision preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "reviewlab-compare-quantities: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "reviewlab-seems-and-misses: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Notebook contains both original personal responses",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Guided Class revision vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "All 16 vocabulary entries are discoverable by source; the answer key remains reference-only",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Class revision preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "reviewlab-compare-quantities: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "reviewlab-seems-and-misses: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Notebook contains both original personal responses",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Guided Class revision vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "All 16 vocabulary entries are discoverable by source; the answer key remains reference-only",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Class revision preview, explicit programme choice and Today topic agree; earlier evidence is retained",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "reviewlab-compare-quantities: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "reviewlab-seems-and-misses: wrong-answer feedback, reload, self-check, completion and next-day scheduling",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Notebook contains both original personal responses",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Guided Class revision vocabulary, scene correction, reload, self-assessed speaking and memory trail complete together",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Scheduled recall starts hidden and advances independently after a correct answer",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Fresh programme response, draft reload and self-check gate the next study day; today’s session stays pinned",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "All 16 vocabulary entries are discoverable by source; the answer key remains reference-only",
+        "language": "it",
+        "width": 1440
+      }
+    ],
+    "layouts": [
+      {
+        "label": "en-390-today",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-390-programme",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-390-reviewlab-compare-quantities",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-390-reviewlab-seems-and-misses",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-390-vocabulary",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "en-320-today",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "en-320-polite",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "en-768-today",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "en-768-polite",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "en-1440-today",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-programme",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-reviewlab-compare-quantities",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-reviewlab-seems-and-misses",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-vocabulary",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "en-320-today",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "en-320-polite",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "en-768-today",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "en-768-polite",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "it-390-today",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-390-programme",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-390-reviewlab-compare-quantities",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-390-reviewlab-seems-and-misses",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-390-vocabulary",
+        "width": 390,
+        "document": 375
+      },
+      {
+        "label": "it-320-today",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "it-320-polite",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "it-768-today",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "it-768-polite",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "it-1440-today",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-programme",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-reviewlab-compare-quantities",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-reviewlab-seems-and-misses",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-vocabulary",
+        "width": 1440,
+        "document": 1425
+      },
+      {
+        "label": "it-320-today",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "it-320-polite",
+        "width": 320,
+        "document": 305
+      },
+      {
+        "label": "it-768-today",
+        "width": 768,
+        "document": 753
+      },
+      {
+        "label": "it-768-polite",
+        "width": 768,
+        "document": 753
+      }
+    ],
+    "errors": [],
+    "blocked": [],
+    "failed": [],
+    "limitations": [
+      "Synthetic isolated Chromium profiles; no physical device or screen-reader audit.",
+      "The next-day review UI uses an explicitly advanced synthetic schedule, alongside automated real-date scheduling tests."
+    ]
+  },
+  "offline": {
+    "passed": true,
+    "checks": [
+      {
+        "language": "en",
+        "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
+        "version": "39865ba16d561bcf",
+        "workerQuery": "?release=39865ba16d561bcf",
+        "assetCount": 38
+      },
+      {
+        "language": "en",
+        "check": "Offline reload, eleven lazy routes, guided draft and oral choice preserve stored progress"
+      },
+      {
+        "language": "en",
+        "check": "Online current-release recheck and queried-worker removal preserve progress"
+      },
+      {
+        "language": "it",
+        "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
+        "version": "39865ba16d561bcf",
+        "workerQuery": "?release=39865ba16d561bcf",
+        "assetCount": 38
+      },
+      {
+        "language": "it",
+        "check": "Offline reload, eleven lazy routes, guided draft and oral choice preserve stored progress"
+      },
+      {
+        "language": "it",
+        "check": "Online current-release recheck and queried-worker removal preserve progress"
+      }
+    ]
+  },
+  "navigation": {
+    "status": "passed",
+    "target": "http://127.0.0.1:5212",
+    "checkedAt": "2026-11-12T15:14:40.161Z",
+    "checks": [
+      "Slow navigation retains content; aligned stable controls; library Back/Forward; rapid clicks and saved drafts: en/390",
+      "Slow navigation retains content; aligned stable controls; library Back/Forward; rapid clicks and saved drafts: en/1440",
+      "Slow navigation retains content; aligned stable controls; library Back/Forward; rapid clicks and saved drafts: it/390",
+      "Slow navigation retains content; aligned stable controls; library Back/Forward; rapid clicks and saved drafts: it/1440",
+      "Keyboard focus preloads the destination; Enter navigates, focus moves to content and the tools menu remains operable",
+      "Outgoing grammar, verb, chapter and diagnostic modes stay unchanged while the next page loads",
+      "EN/IT layout matrix: 25 pages and expanded navigation at 320, 390, 768 and 1440 px, with reduced motion"
+    ],
+    "layoutObservations": 212,
+    "errors": []
+  },
+  "preservation": [
+    "Only the 39 built site-dist files were transferred to a new static release.",
+    "No learner database, private source material, extracted text, credential or backup was read or published during deployment.",
+    "Prior learning objects, practice IDs and the version-1 progress schema are preserved.",
+    "The separate .openai/hosting.json identity is unchanged.",
+    "The previous static release remains available for rollback."
+  ],
+  "limitations": [
+    "Cloudflare adds JavaScript detection and analytics code to public HTML. All origin artifacts and 38 non-HTML public artifacts match the build; application HTML outside those identified insertions matches.",
+    "Browser verification uses isolated synthetic Chromium profiles, not physical devices or a human learning-outcome study.",
+    "Existing opt-in offline downloads retain their old release until the learner checks for an updated download.",
+    "The full 212-observation navigation matrix and the 41-check Week 5 regression ran against the local production build; the new revision route and offline flow also passed against the public deployment."
+  ]
+}

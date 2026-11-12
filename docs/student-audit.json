@@ -289,6 +289,13 @@
     "limitations": [
       "Synthetic isolated Chromium profiles; no physical device or screen-reader audit.",
       "The next-day review UI uses an explicitly advanced synthetic schedule, alongside automated real-date scheduling tests."
-    ]
+    ],
+    "publication": {
+      "report": "docs/deployment-escape-room-2026-11-12.json",
+      "release": "20261112T152026Z-escape-room-revision",
+      "url": "https://italian.samuelzhang.co.uk/",
+      "sourceRevision": "6eb3d7b6ffa2b5cc2a01fabeae852390668bd39b",
+      "ci": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/43245596050"
+    }
   }
 }

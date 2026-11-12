@@ -22,12 +22,17 @@ ALLOWED = (ROOT / 'materials', ROOT / 'Organised')
 def run(args: list[str]) -> str:
     return subprocess.run(args, check=True, capture_output=True, text=True, timeout=180).stdout
 
+def supported_source(path: Path) -> bool:
+    return (path.suffix.lower() in {'.pdf', '.pptx', '.docx'}
+            and not path.name.startswith('.') and '__Companion_EN-IT' not in path.name
+            and not path.is_symlink())
+
 def files(source: Path):
     for directory, folders, names in os.walk(source, followlinks=False):
         folders[:] = sorted(n for n in folders if not n.startswith('.') and n not in {'__MACOSX', '00 — Course Info'} and not (Path(directory)/n).is_symlink())
         for name in sorted(names):
             p = Path(directory)/name
-            if not name.startswith('.') and not p.is_symlink() and p.suffix.lower() in {'.pdf', '.pptx', '.docx'}:
+            if supported_source(p):
                 yield p
 
 def slides(path: Path) -> list[str]:
@@ -78,7 +83,7 @@ def main():
     output=args.output_dir.resolve()
     if not output.is_relative_to(OUT):
         parser.error('Choose an output folder inside this repository’s data/incoming/.')
-    paths=list(files(source)) if source.is_dir() else ([source] if source.is_file() and source.suffix.lower() in {'.pdf', '.pptx', '.docx'} else [])
+    paths=list(files(source)) if source.is_dir() else ([source] if source.is_file() and supported_source(source) else [])
     if not paths:
         parser.error('No PDFs, presentations or Word documents found. Existing reports were left untouched.')
     needed=['pdftotext']+(['pdftoppm','tesseract'] if args.ocr else [])+(['libreoffice'] if any(p.suffix.lower()=='.docx' or (args.ocr and p.suffix.lower()=='.pptx') for p in paths) else [])
