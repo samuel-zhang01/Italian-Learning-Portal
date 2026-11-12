@@ -24,6 +24,8 @@ export const vocabBanks: VocabBank[] = [
   ...(enrichment.banks as VocabBank[]).map(bank => ({ ...bank, relatedMissionIds: enrichment.lessons.filter(lesson => lesson.bank === bank.id).map(lesson => lesson.missionId) })),
   ...courseVocabBanks,
 ];
+// The sentence-card view uses banks with authored usage examples.
+export const exampleVocabBanks = vocabBanks.filter(bank => bank.words.every(word => word.exampleKind !== "translation"));
 // These eight older cards name paired forms. A typed round asks for one form,
 // including the full auxiliary, rather than requiring a slash-separated list.
 const pairedAnswers: Record<string, string[]> = {

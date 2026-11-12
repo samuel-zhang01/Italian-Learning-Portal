@@ -5,7 +5,7 @@ import grammar from "../app/learning/grammar.json" with { type: "json" };
 import booster from "../app/learning/booster-content.json" with { type: "json" };
 import library from "../app/learning/vocab-library.json" with { type: "json" };
 import course from "../app/learning/course-vocabulary.json" with { type: "json" };
-import { vocabItems, vocabItemById, vocabBanks, vocabPool, vocabPracticeItems, supplementalGrammarVocabItems, supplementalNounVocabItems, courseVocabularySummary, vocabWordType, vocabPartOfSpeechIds } from "../app/learning/vocab-catalogue.ts";
+import { vocabItems, vocabItemById, vocabBanks, exampleVocabBanks, vocabPool, vocabPracticeItems, supplementalGrammarVocabItems, supplementalNounVocabItems, courseVocabularySummary, vocabWordType, vocabPartOfSpeechIds } from "../app/learning/vocab-catalogue.ts";
 import { filterVocabulary } from "../app/learning/vocab-explorer-model.ts";
 import { emptyProgress, parseProgress } from "../app/learning/engine.ts";
 import { saveWord, wordKey } from "../app/learning/academy-engine.ts";
@@ -19,6 +19,8 @@ import { mergeProfileProgress } from "../app/learning/profile-merge.ts";
 test("typed vocabulary retains every previous identity and expands the valid answer contract to course-list words", () => {
   const previous = [...library.banks, ...enrichment.banks].flatMap(bank => bank.words);
   assert.equal(previous.length, 836);
+  assert.deepEqual(exampleVocabBanks.map(bank => bank.id), [...library.banks, ...enrichment.banks].map(bank => bank.id), "sentence cards preserve the authored banks");
+  assert.ok(exampleVocabBanks.every(bank => bank.words.every(word => word.exampleKind !== "translation")), "dictionary translations are not presented as example sentences");
   assert.deepEqual(vocabItems.slice(0, previous.length).map(item => item.id), previous.map(word => word.id));
   assert.deepEqual(vocabItems.slice(0, previous.length).map(item => item.word), previous, "existing authored cards remain unchanged");
   assert.ok(vocabItems.length > previous.length);
