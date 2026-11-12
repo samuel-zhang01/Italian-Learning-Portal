@@ -1,68 +1,67 @@
 {
-  "release": "20261112T172102Z-word-quest",
-  "releaseDirectory": "/data/italian/releases/20261112T172102Z-word-quest",
-  "previousReleaseDirectory": "/data/italian/releases/20261112T152026Z-escape-room-revision",
-  "sourceRevision": "2cd5b2b7677ae25dcd924f28bdf75cab7caf95c0",
+  "release": "20261112T174123Z-word-quest-cards",
+  "releaseDirectory": "/data/italian/releases/20261112T174123Z-word-quest-cards",
+  "previousReleaseDirectory": "/data/italian/releases/20261112T172102Z-word-quest",
+  "sourceRevision": "068ff7e7ff44106e4a9668f2891ee7b76b59a985",
   "artifactHashes": {
     "app-icon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
-    "assets/academy-hpNkK3DS.js": "81d202d6eebe473366e8cbbd9dd01145ef930c2542d1d552c87dfec12a762e6e",
-    "assets/arcade-B8-s5dtb.js": "070013618c5060c181dbd47d161a983072ab5291525f6b706efe927dfe8b0921",
+    "assets/academy-a6BqvN9j.js": "fed16ad2b429d8ff5c17d3287967d0cfca2cd27cebc134b5361fc3ce15d73d95",
+    "assets/arcade-BQyFUSTl.js": "fffe2523888537493fef74402dff8b3561eedd62cc2e1b51e16295c2410e5939",
     "assets/arcade-scenes-D_GrQAm4.js": "9acbc31d1846c8e67351a57d44894c6d524d8c249b3493a90ef01397d54eeadb",
+    "assets/backup-transfer-CE6WSAnn.js": "486233216468a0920e9e869475999e92b499ef00f8403fde4d850dfd804dd2c8",
     "assets/backup-transfer-ZQnUZdgZ.css": "592a44651b526292fcb66338c9cb095490cdbd079a68a806ac8e51de92ca93df",
-    "assets/backup-transfer-ceSpi80f.js": "f234423c867e7ce5d2e81efeb45256823319d487f460e765e1cf91390b40076f",
     "assets/booster-content-CcOb-fCU.js": "3380433469d8b4d69dd7d27ac19ffe74573a8e883b511da0d62edd8384a31812",
     "assets/chapters-CfwLknyS.css": "a8b87bb143e0bb4e4e55347a1c8d78dafba41aaba93c7059fde8c2d1332183ff",
-    "assets/chapters-DpZjhpCd.js": "bb47012334cd92f15b6289cb11843bfdda7514e50038af2def4fe553818d809e",
+    "assets/chapters-DhirHQ4n.js": "a19d0291c4896530a48fc01ef21428a5655e0bdd5bb4374a064de5b33fa6fdd7",
     "assets/companion-0He2U-cV.js": "d9411c78bfe500906f09a605ea7430870c4495b00fe05885bef2e00cdc2721b8",
-    "assets/discovery-Pa8KS5Ni.js": "d47a2139d4b9c36112c4b39ffc56f20857fab79758b0f942adf8b958b96ddd4a",
+    "assets/discovery-DbVZWXCP.js": "f168ca66ed2b90ca76b4aa10bf0d98a5e9158c24effbb6521f36abac85d3470c",
     "assets/discovery-index-Cwgslkc1.js": "b763575224a64b1112fa718c7dd5a2a0524edc355f8c61a072b976d418ab08b3",
-    "assets/enriched-Bxq5iC_P.js": "cb06389f1e48a30bea71c60f1715e0f594e6d091a4576d7f0cef33cb78a49f1a",
+    "assets/enriched-CU_HYj0q.js": "2c05425cb279d5f50a30a4d0bc94e42b36f74843a6aea14b56bdeb9cc6e925b3",
     "assets/enrichment-DZlO_Gxi.js": "35446b83ee429f4a1ba639dc8a355d544c08dc5fb1623b57c342c533cfb6b0df",
     "assets/grammar-fTcUwQty.js": "50de34241c6575f7040a61f1f1996c0244f5e75d17c5190699fb8bc41e6e1efc",
-    "assets/index-BhTyfMEC.js": "b8495ab6aea6aa6e49b29bf3e4a5f6153667d9eaca11a72b53929a4c29328779",
+    "assets/index-BSwFpaky.js": "6678ef6e08706e7583c497145faa1ceda817b237f4a9ebd35a1b74b6ae9fc032",
     "assets/index-C1n5BHln.css": "fdca6075a0190eaf132b42788adc567f17b853608385646bef200dfd15694ff1",
     "assets/learning-insights-BLQTf6f8.css": "a8d4ba17b735c4f737b8ada17e847a45272bce7a81b6c425c1e6cdac44ae4dd0",
-    "assets/learning-insights-CACsuzDH.js": "a782a64e2070133b796a60d6f5e0363163650ffa3de41797c483a88226c39218",
-    "assets/listening-DSwJQi5c.js": "3bb9519f6f3e31caf0dc517c026f8ab490e9b6e1383a3b9944f54c77d0233076",
+    "assets/learning-insights-Cf6u8PRH.js": "57ca537897390d02596b7080c4103740211ffee9cb5a4a59a4fdbbf02def727d",
+    "assets/listening-DRrwVf7c.js": "7270a721305323f9ca4232c58654acaa167dcdcfcaa05725bab2a8b7565f1b5b",
     "assets/listening-DYa2axRK.css": "9ceef35e541c490ce309e98afced2f1804969343e6dc761c7d075bc997746799",
     "assets/navigation-3S6zwPaY.js": "afb154d158fce773efcd9c3786db9d713976a3f84f8454d9d59c9d38d5924343",
-    "assets/offline-DZoNo4J5.js": "4fd87e5e33df4fb672ef82cffaad9f7cc2f3fb7d35ebecb32f653ae6199c6230",
+    "assets/offline-BIlPLiZe.js": "b97212e85a04b278f25d1f4489fcfcc055758efff8009e1f618168e304febdce",
+    "assets/oral-practice-BA_wPsrm.js": "ec9d2d37200d1896ada3ea409bf4e9576ed319f6fe881d38e52fa78fca23b45d",
     "assets/oral-practice-C9ivmFoo.css": "eacd3820fbc7a6ed4d884233738c6c8028993639102259f75c5da705d3ec97ea",
-    "assets/oral-practice-CzHICwyN.js": "04fbf54057e80ec2a8426629377aaf45bf1763b4ad7ccb92e96956fc97665cd2",
     "assets/painted-cardboard-CX92yXJi.webp": "2267856e5f4e1c2f9388fa4fe7cc1eff3746b3354407287574e42dd51533c2db",
-    "assets/practice-hub-C3byLatq.js": "48a616978f98b7e0a075b433bdd38e82494eb6b93622e12cc8352c513c343298",
-    "assets/practice-navigation-CKsH5KAR.js": "dac1213efbeaee647826f914b1c9f2f9e124f5a098eef3203da7ccb37657614b",
-    "assets/practice-tools-BxpzZojm.js": "0ef21cd45ef0305d7de6ce4bcb16a1e5226aa2c90bf057658c6bc88ff3eaafac",
+    "assets/practice-hub-CNclkjQJ.js": "4a614c0672e952db06413801a2be0223b13f1a184c2f46ab7c181e7dd6a1e310",
+    "assets/practice-navigation-9AFYBPBT.js": "6f8a3887ebbc87e291035fc5e9459ae6ec839a04731e6321601a09de170c616a",
+    "assets/practice-tools-wFZ-oE2m.js": "ccc13c93dc9bc349760e26b5026decfd72597082cf594c80c58c284b4ac4241c",
     "assets/profile-C1g0z2YZ.css": "7b860d23ae06ca1a6f26eb34db7b4e84038d648343c46f066323dc2cc4427588",
-    "assets/profile-DX6sDGTd.js": "b5dba0081dd728ae367878c8c9479091ac0d4c1bd12442d0c1facd8537ce5ec2",
-    "assets/review-hub-BhWZqikn.js": "4afa384d989f816fdd49b846d1cfa419e2b646da673f23bbd54026987c32d0b5",
+    "assets/profile-c849Th_6.js": "168031dc386cb2d2af6808f066621f238cab8c5290291a754ad799f9040bc304",
     "assets/review-hub-C0Sh_F8c.css": "e0d5c02b9b6e9f87a95ef873518983f70a779d2537782d05da904e0d2693f146",
+    "assets/review-hub-C_YzrIGO.js": "896c91a7bf7971a73d175aa44d957f5e9ae2d81f3b60b4d1d0ae09466f5d532d",
     "assets/vocab-boost-BApxbOZa.css": "497765b6a6fd0657e880eba4d2308a5fe4352e4a11090ab75185fa4e5a80723e",
-    "assets/vocab-boost-DpYtfw2s.js": "4afb24ac3766d58eca44c4a21221ee7c1cddf059d74e8f44b42b977edc13b47d",
-    "assets/vocab-catalogue-DgHTLIL8.js": "8870f71b49733980df2298310fcf1c02fcc417b5e1107c618fff1543069f0508",
+    "assets/vocab-boost-C6XSBdf7.js": "01353de231420a5cd30d908c8652de7d7367ae00fbddf0bb2282bfeb5fda1464",
+    "assets/vocab-catalogue-Le5RWeHe.js": "88b0a18b71351f515ab5ff740b5e4a54d18857c5991401e2a4863d9a5956e303",
     "favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
-    "index.html": "0380ab2278f9120a4313c37108c0158c70ac0dde88609b9d6eb67097fd15ff5c",
+    "index.html": "48f04bc7afd9c574d68f2f5e3204463ca41b01cd28c3ff36a04dc248349326a4",
     "manifest.webmanifest": "12b91f0ec01c070bfffcfa31bea3df6fce59caa7666cd4be77b80b5822448d2a",
-    "offline-worker.js": "60e0bb39dee6294a9feb214b9fdad62c674d8534834059ed6ed27950ff0819a4"
+    "offline-worker.js": "3c2b813fd994531a00ff95e92bd3aca6a337e225890b9d75a0203e5253cc1349"
   },
-  "offlineVersion": "1b66fb8bae8c7e96",
+  "offlineVersion": "4927301114e427ed",
   "files": 40,
   "remoteHashVerification": "passed",
   "status": "deployed; public acceptance passed",
   "url": "https://italian.samuelzhang.co.uk/",
-  "stagedAt": "2026-11-12T17:21:04.891553+00:00",
+  "stagedAt": "2026-11-12T17:41:25.494573+00:00",
   "sourceCI": {
     "conclusion": "success",
-    "databaseId": 43269133180,
-    "headSha": "cf4cc9c98bc74671fd5ab3b161eaf15259abb43a",
+    "databaseId": 43271925492,
+    "headSha": "068ff7e7ff44106e4a9668f2891ee7b76b59a985",
     "status": "completed",
-    "url": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/43269133180"
+    "url": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/43271925492"
   },
-  "sourceCINote": "The successful CI revision changes only the strict expected test command in ci/checks.py. App, build and test inputs are identical to the staged source revision.",
-  "activatedAt": "2026-11-12T17:27:21.458970+00:00",
+  "activatedAt": "2026-11-12T17:43:10.052420+00:00",
   "publicAssets": {
     "passed": true,
-    "testedAt": "2026-11-12T17:27:22.256560+00:00",
+    "testedAt": "2026-11-12T17:43:10.939326+00:00",
     "tlsValidation": true,
     "assets": [
       {
@@ -72,14 +71,14 @@
         "hashMatch": true
       },
       {
-        "path": "assets/academy-hpNkK3DS.js",
-        "deliveredPath": "/assets/academy-hpNkK3DS.js",
+        "path": "assets/academy-a6BqvN9j.js",
+        "deliveredPath": "/assets/academy-a6BqvN9j.js",
         "status": 200,
         "hashMatch": true
       },
       {
-        "path": "assets/arcade-B8-s5dtb.js",
-        "deliveredPath": "/assets/arcade-B8-s5dtb.js",
+        "path": "assets/arcade-BQyFUSTl.js",
+        "deliveredPath": "/assets/arcade-BQyFUSTl.js",
         "status": 200,
         "hashMatch": true
       },
@@ -90,14 +89,14 @@
         "hashMatch": true
       },
       {
-        "path": "assets/backup-transfer-ZQnUZdgZ.css",
-        "deliveredPath": "/assets/backup-transfer-ZQnUZdgZ.css",
+        "path": "assets/backup-transfer-CE6WSAnn.js",
+        "deliveredPath": "/assets/backup-transfer-CE6WSAnn.js",
         "status": 200,
         "hashMatch": true
       },
       {
-        "path": "assets/backup-transfer-ceSpi80f.js",
-        "deliveredPath": "/assets/backup-transfer-ceSpi80f.js",
+        "path": "assets/backup-transfer-ZQnUZdgZ.css",
+        "deliveredPath": "/assets/backup-transfer-ZQnUZdgZ.css",
         "status": 200,
         "hashMatch": true
       },
@@ -114,8 +113,8 @@
         "hashMatch": true
       },
       {
-        "path": "assets/chapters-DpZjhpCd.js",
-        "deliveredPath": "/assets/chapters-DpZjhpCd.js",
+        "path": "assets/chapters-DhirHQ4n.js",
+        "deliveredPath": "/assets/chapters-DhirHQ4n.js",
         "status": 200,
         "hashMatch": true
       },
@@ -126,8 +125,8 @@
         "hashMatch": true
       },
       {
-        "path": "assets/discovery-Pa8KS5Ni.js",
-        "deliveredPath": "/assets/discovery-Pa8KS5Ni.js",
+        "path": "assets/discovery-DbVZWXCP.js",
+        "deliveredPath": "/assets/discovery-DbVZWXCP.js",
         "status": 200,
         "hashMatch": true
       },
@@ -138,8 +137,8 @@
         "hashMatch": true
       },
       {
-        "path": "assets/enriched-Bxq5iC_P.js",
-        "deliveredPath": "/assets/enriched-Bxq5iC_P.js",
+        "path": "assets/enriched-CU_HYj0q.js",
+        "deliveredPath": "/assets/enriched-CU_HYj0q.js",
         "status": 200,
         "hashMatch": true
       },
@@ -156,8 +155,8 @@
         "hashMatch": true
       },
       {
-        "path": "assets/index-BhTyfMEC.js",
-        "deliveredPath": "/assets/index-BhTyfMEC.js",
+        "path": "assets/index-BSwFpaky.js",
+        "deliveredPath": "/assets/index-BSwFpaky.js",
         "status": 200,
         "hashMatch": true
       },
@@ -174,14 +173,14 @@
         "hashMatch": true
       },
       {
-        "path": "assets/learning-insights-CACsuzDH.js",
-        "deliveredPath": "/assets/learning-insights-CACsuzDH.js",
+        "path": "assets/learning-insights-Cf6u8PRH.js",
+        "deliveredPath": "/assets/learning-insights-Cf6u8PRH.js",
         "status": 200,
         "hashMatch": true
       },
       {
-        "path": "assets/listening-DSwJQi5c.js",
-        "deliveredPath": "/assets/listening-DSwJQi5c.js",
+        "path": "assets/listening-DRrwVf7c.js",
+        "deliveredPath": "/assets/listening-DRrwVf7c.js",
         "status": 200,
         "hashMatch": true
       },
@@ -198,8 +197,14 @@
         "hashMatch": true
       },
       {
-        "path": "assets/offline-DZoNo4J5.js",
-        "deliveredPath": "/assets/offline-DZoNo4J5.js",
+        "path": "assets/offline-BIlPLiZe.js",
+        "deliveredPath": "/assets/offline-BIlPLiZe.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/oral-practice-BA_wPsrm.js",
+        "deliveredPath": "/assets/oral-practice-BA_wPsrm.js",
         "status": 200,
         "hashMatch": true
       },
@@ -210,32 +215,26 @@
         "hashMatch": true
       },
       {
-        "path": "assets/oral-practice-CzHICwyN.js",
-        "deliveredPath": "/assets/oral-practice-CzHICwyN.js",
-        "status": 200,
-        "hashMatch": true
-      },
-      {
         "path": "assets/painted-cardboard-CX92yXJi.webp",
         "deliveredPath": "/assets/painted-cardboard-CX92yXJi.webp",
         "status": 200,
         "hashMatch": true
       },
       {
-        "path": "assets/practice-hub-C3byLatq.js",
-        "deliveredPath": "/assets/practice-hub-C3byLatq.js",
+        "path": "assets/practice-hub-CNclkjQJ.js",
+        "deliveredPath": "/assets/practice-hub-CNclkjQJ.js",
         "status": 200,
         "hashMatch": true
       },
       {
-        "path": "assets/practice-navigation-CKsH5KAR.js",
-        "deliveredPath": "/assets/practice-navigation-CKsH5KAR.js",
+        "path": "assets/practice-navigation-9AFYBPBT.js",
+        "deliveredPath": "/assets/practice-navigation-9AFYBPBT.js",
         "status": 200,
         "hashMatch": true
       },
       {
-        "path": "assets/practice-tools-BxpzZojm.js",
-        "deliveredPath": "/assets/practice-tools-BxpzZojm.js",
+        "path": "assets/practice-tools-wFZ-oE2m.js",
+        "deliveredPath": "/assets/practice-tools-wFZ-oE2m.js",
         "status": 200,
         "hashMatch": true
       },
@@ -246,14 +245,8 @@
         "hashMatch": true
       },
       {
-        "path": "assets/profile-DX6sDGTd.js",
-        "deliveredPath": "/assets/profile-DX6sDGTd.js",
-        "status": 200,
-        "hashMatch": true
-      },
-      {
-        "path": "assets/review-hub-BhWZqikn.js",
-        "deliveredPath": "/assets/review-hub-BhWZqikn.js",
+        "path": "assets/profile-c849Th_6.js",
+        "deliveredPath": "/assets/profile-c849Th_6.js",
         "status": 200,
         "hashMatch": true
       },
@@ -264,20 +257,26 @@
         "hashMatch": true
       },
       {
+        "path": "assets/review-hub-C_YzrIGO.js",
+        "deliveredPath": "/assets/review-hub-C_YzrIGO.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
         "path": "assets/vocab-boost-BApxbOZa.css",
         "deliveredPath": "/assets/vocab-boost-BApxbOZa.css",
         "status": 200,
         "hashMatch": true
       },
       {
-        "path": "assets/vocab-boost-DpYtfw2s.js",
-        "deliveredPath": "/assets/vocab-boost-DpYtfw2s.js",
+        "path": "assets/vocab-boost-C6XSBdf7.js",
+        "deliveredPath": "/assets/vocab-boost-C6XSBdf7.js",
         "status": 200,
         "hashMatch": true
       },
       {
-        "path": "assets/vocab-catalogue-DgHTLIL8.js",
-        "deliveredPath": "/assets/vocab-catalogue-DgHTLIL8.js",
+        "path": "assets/vocab-catalogue-Le5RWeHe.js",
+        "deliveredPath": "/assets/vocab-catalogue-Le5RWeHe.js",
         "status": 200,
         "hashMatch": true
       },
@@ -289,7 +288,7 @@
       },
       {
         "path": "index.html",
-        "deliveredPath": "/?parliamo-release=20261112T172102Z-word-quest",
+        "deliveredPath": "/?parliamo-release=20261112T174123Z-word-quest-cards",
         "status": 200,
         "hashMatch": false,
         "applicationMarkupMatch": true,
@@ -297,7 +296,7 @@
           "Cloudflare JavaScript detection challenge",
           "Cloudflare public analytics beacon"
         ],
-        "deliveredSHA256": "88742a31177c3338397ed70a4f044957fc616a10def4a244f7bb012b6280b3d0"
+        "deliveredSHA256": "477aa0bf8540f54c722794779cef540634b32bfc1134301d30d27951eb53a236"
       },
       {
         "path": "manifest.webmanifest",
@@ -307,12 +306,12 @@
       },
       {
         "path": "offline-worker.js",
-        "deliveredPath": "/offline-worker.js?release=1b66fb8bae8c7e96",
+        "deliveredPath": "/offline-worker.js?release=4927301114e427ed",
         "status": 200,
         "hashMatch": true
       }
     ],
-    "canonicalVersion": "1b66fb8bae8c7e96",
+    "canonicalVersion": "4927301114e427ed",
     "canonicalCacheControl": "no-cache"
   },
   "profileServiceHealth": {
@@ -321,7 +320,7 @@
     "learnerRecordsAccessed": false
   },
   "cleanCheckoutBuild": "identical artifacts",
-  "verifiedAt": "2026-11-12T17:31:47.445573+00:00",
+  "verifiedAt": "2026-11-12T17:48:39.000786+00:00",
   "rollbackAvailable": true,
   "validation": {
     "dailyTests": 340,
@@ -333,10 +332,11 @@
     "vocabularyPublicLayoutObservations": 46,
     "publicOfflineChecks": 6,
     "localNavigationChecks": 7,
-    "localNavigationLayouts": 212
+    "localNavigationLayouts": 212,
+    "legacyCardsLiveChecks": 4
   },
   "vocabularyBrowser": {
-    "testedAt": "2026-11-12T17:29:28.531Z",
+    "testedAt": "2026-11-12T17:46:11.392Z",
     "base": "https://italian.samuelzhang.co.uk",
     "passed": true,
     "checks": [
@@ -818,8 +818,8 @@
       {
         "language": "en",
         "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
-        "version": "1b66fb8bae8c7e96",
-        "workerQuery": "?release=1b66fb8bae8c7e96",
+        "version": "4927301114e427ed",
+        "workerQuery": "?release=4927301114e427ed",
         "assetCount": 39
       },
       {
@@ -833,8 +833,8 @@
       {
         "language": "it",
         "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
-        "version": "1b66fb8bae8c7e96",
-        "workerQuery": "?release=1b66fb8bae8c7e96",
+        "version": "4927301114e427ed",
+        "workerQuery": "?release=4927301114e427ed",
         "assetCount": 39
       },
       {
@@ -844,6 +844,37 @@
       {
         "language": "it",
         "check": "Online current-release recheck and queried-worker removal preserve progress"
+      }
+    ]
+  },
+  "legacyExampleCards": {
+    "authoredWords": 836,
+    "banks": 71,
+    "dictionaryTranslationsPresentedAsSentences": false,
+    "publicBrowserChecks": [
+      {
+        "language": "en",
+        "width": 390,
+        "authoredBanks": 71,
+        "dictionaryReachable": true
+      },
+      {
+        "language": "en",
+        "width": 1440,
+        "authoredBanks": 71,
+        "dictionaryReachable": true
+      },
+      {
+        "language": "it",
+        "width": 390,
+        "authoredBanks": 71,
+        "dictionaryReachable": true
+      },
+      {
+        "language": "it",
+        "width": 1440,
+        "authoredBanks": 71,
+        "dictionaryReachable": true
       }
     ]
   },

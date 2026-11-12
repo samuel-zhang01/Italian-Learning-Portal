@@ -60,6 +60,12 @@
       "status": "passed",
       "checks": 7,
       "layoutObservations": 212
+    },
+    "legacyExampleCards": {
+      "passed": true,
+      "publicChecks": 4,
+      "authoredWords": 836,
+      "banks": 71
     }
   },
   "browser": {
@@ -790,14 +796,15 @@
     "journey": 38,
     "layoutObservations": 46,
     "offline": 6,
+    "legacyExampleCards": 4,
     "errors": 0,
     "failedAssets": 0
   },
   "publication": {
     "report": "docs/deployment-word-quest-2026-11-12.json",
     "url": "https://italian.samuelzhang.co.uk/",
-    "release": "20261112T172102Z-word-quest",
-    "sourceRevision": "2cd5b2b7677ae25dcd924f28bdf75cab7caf95c0",
-    "sourceCI": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/43269133180"
+    "release": "20261112T174123Z-word-quest-cards",
+    "sourceRevision": "068ff7e7ff44106e4a9668f2891ee7b76b59a985",
+    "sourceCI": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/43271925492"
   }
 }
