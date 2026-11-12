@@ -1,0 +1,864 @@
+{
+  "release": "20261112T172102Z-word-quest",
+  "releaseDirectory": "/data/italian/releases/20261112T172102Z-word-quest",
+  "previousReleaseDirectory": "/data/italian/releases/20261112T152026Z-escape-room-revision",
+  "sourceRevision": "2cd5b2b7677ae25dcd924f28bdf75cab7caf95c0",
+  "artifactHashes": {
+    "app-icon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "assets/academy-hpNkK3DS.js": "81d202d6eebe473366e8cbbd9dd01145ef930c2542d1d552c87dfec12a762e6e",
+    "assets/arcade-B8-s5dtb.js": "070013618c5060c181dbd47d161a983072ab5291525f6b706efe927dfe8b0921",
+    "assets/arcade-scenes-D_GrQAm4.js": "9acbc31d1846c8e67351a57d44894c6d524d8c249b3493a90ef01397d54eeadb",
+    "assets/backup-transfer-ZQnUZdgZ.css": "592a44651b526292fcb66338c9cb095490cdbd079a68a806ac8e51de92ca93df",
+    "assets/backup-transfer-ceSpi80f.js": "f234423c867e7ce5d2e81efeb45256823319d487f460e765e1cf91390b40076f",
+    "assets/booster-content-CcOb-fCU.js": "3380433469d8b4d69dd7d27ac19ffe74573a8e883b511da0d62edd8384a31812",
+    "assets/chapters-CfwLknyS.css": "a8b87bb143e0bb4e4e55347a1c8d78dafba41aaba93c7059fde8c2d1332183ff",
+    "assets/chapters-DpZjhpCd.js": "bb47012334cd92f15b6289cb11843bfdda7514e50038af2def4fe553818d809e",
+    "assets/companion-0He2U-cV.js": "d9411c78bfe500906f09a605ea7430870c4495b00fe05885bef2e00cdc2721b8",
+    "assets/discovery-Pa8KS5Ni.js": "d47a2139d4b9c36112c4b39ffc56f20857fab79758b0f942adf8b958b96ddd4a",
+    "assets/discovery-index-Cwgslkc1.js": "b763575224a64b1112fa718c7dd5a2a0524edc355f8c61a072b976d418ab08b3",
+    "assets/enriched-Bxq5iC_P.js": "cb06389f1e48a30bea71c60f1715e0f594e6d091a4576d7f0cef33cb78a49f1a",
+    "assets/enrichment-DZlO_Gxi.js": "35446b83ee429f4a1ba639dc8a355d544c08dc5fb1623b57c342c533cfb6b0df",
+    "assets/grammar-fTcUwQty.js": "50de34241c6575f7040a61f1f1996c0244f5e75d17c5190699fb8bc41e6e1efc",
+    "assets/index-BhTyfMEC.js": "b8495ab6aea6aa6e49b29bf3e4a5f6153667d9eaca11a72b53929a4c29328779",
+    "assets/index-C1n5BHln.css": "fdca6075a0190eaf132b42788adc567f17b853608385646bef200dfd15694ff1",
+    "assets/learning-insights-BLQTf6f8.css": "a8d4ba17b735c4f737b8ada17e847a45272bce7a81b6c425c1e6cdac44ae4dd0",
+    "assets/learning-insights-CACsuzDH.js": "a782a64e2070133b796a60d6f5e0363163650ffa3de41797c483a88226c39218",
+    "assets/listening-DSwJQi5c.js": "3bb9519f6f3e31caf0dc517c026f8ab490e9b6e1383a3b9944f54c77d0233076",
+    "assets/listening-DYa2axRK.css": "9ceef35e541c490ce309e98afced2f1804969343e6dc761c7d075bc997746799",
+    "assets/navigation-3S6zwPaY.js": "afb154d158fce773efcd9c3786db9d713976a3f84f8454d9d59c9d38d5924343",
+    "assets/offline-DZoNo4J5.js": "4fd87e5e33df4fb672ef82cffaad9f7cc2f3fb7d35ebecb32f653ae6199c6230",
+    "assets/oral-practice-C9ivmFoo.css": "eacd3820fbc7a6ed4d884233738c6c8028993639102259f75c5da705d3ec97ea",
+    "assets/oral-practice-CzHICwyN.js": "04fbf54057e80ec2a8426629377aaf45bf1763b4ad7ccb92e96956fc97665cd2",
+    "assets/painted-cardboard-CX92yXJi.webp": "2267856e5f4e1c2f9388fa4fe7cc1eff3746b3354407287574e42dd51533c2db",
+    "assets/practice-hub-C3byLatq.js": "48a616978f98b7e0a075b433bdd38e82494eb6b93622e12cc8352c513c343298",
+    "assets/practice-navigation-CKsH5KAR.js": "dac1213efbeaee647826f914b1c9f2f9e124f5a098eef3203da7ccb37657614b",
+    "assets/practice-tools-BxpzZojm.js": "0ef21cd45ef0305d7de6ce4bcb16a1e5226aa2c90bf057658c6bc88ff3eaafac",
+    "assets/profile-C1g0z2YZ.css": "7b860d23ae06ca1a6f26eb34db7b4e84038d648343c46f066323dc2cc4427588",
+    "assets/profile-DX6sDGTd.js": "b5dba0081dd728ae367878c8c9479091ac0d4c1bd12442d0c1facd8537ce5ec2",
+    "assets/review-hub-BhWZqikn.js": "4afa384d989f816fdd49b846d1cfa419e2b646da673f23bbd54026987c32d0b5",
+    "assets/review-hub-C0Sh_F8c.css": "e0d5c02b9b6e9f87a95ef873518983f70a779d2537782d05da904e0d2693f146",
+    "assets/vocab-boost-BApxbOZa.css": "497765b6a6fd0657e880eba4d2308a5fe4352e4a11090ab75185fa4e5a80723e",
+    "assets/vocab-boost-DpYtfw2s.js": "4afb24ac3766d58eca44c4a21221ee7c1cddf059d74e8f44b42b977edc13b47d",
+    "assets/vocab-catalogue-DgHTLIL8.js": "8870f71b49733980df2298310fcf1c02fcc417b5e1107c618fff1543069f0508",
+    "favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "index.html": "0380ab2278f9120a4313c37108c0158c70ac0dde88609b9d6eb67097fd15ff5c",
+    "manifest.webmanifest": "12b91f0ec01c070bfffcfa31bea3df6fce59caa7666cd4be77b80b5822448d2a",
+    "offline-worker.js": "60e0bb39dee6294a9feb214b9fdad62c674d8534834059ed6ed27950ff0819a4"
+  },
+  "offlineVersion": "1b66fb8bae8c7e96",
+  "files": 40,
+  "remoteHashVerification": "passed",
+  "status": "deployed; public acceptance passed",
+  "url": "https://italian.samuelzhang.co.uk/",
+  "stagedAt": "2026-11-12T17:21:04.891553+00:00",
+  "sourceCI": {
+    "conclusion": "success",
+    "databaseId": 43269133180,
+    "headSha": "cf4cc9c98bc74671fd5ab3b161eaf15259abb43a",
+    "status": "completed",
+    "url": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/43269133180"
+  },
+  "sourceCINote": "The successful CI revision changes only the strict expected test command in ci/checks.py. App, build and test inputs are identical to the staged source revision.",
+  "activatedAt": "2026-11-12T17:27:21.458970+00:00",
+  "publicAssets": {
+    "passed": true,
+    "testedAt": "2026-11-12T17:27:22.256560+00:00",
+    "tlsValidation": true,
+    "assets": [
+      {
+        "path": "app-icon.svg",
+        "deliveredPath": "/app-icon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/academy-hpNkK3DS.js",
+        "deliveredPath": "/assets/academy-hpNkK3DS.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-B8-s5dtb.js",
+        "deliveredPath": "/assets/arcade-B8-s5dtb.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/arcade-scenes-D_GrQAm4.js",
+        "deliveredPath": "/assets/arcade-scenes-D_GrQAm4.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/backup-transfer-ZQnUZdgZ.css",
+        "deliveredPath": "/assets/backup-transfer-ZQnUZdgZ.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/backup-transfer-ceSpi80f.js",
+        "deliveredPath": "/assets/backup-transfer-ceSpi80f.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/booster-content-CcOb-fCU.js",
+        "deliveredPath": "/assets/booster-content-CcOb-fCU.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-CfwLknyS.css",
+        "deliveredPath": "/assets/chapters-CfwLknyS.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/chapters-DpZjhpCd.js",
+        "deliveredPath": "/assets/chapters-DpZjhpCd.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/companion-0He2U-cV.js",
+        "deliveredPath": "/assets/companion-0He2U-cV.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-Pa8KS5Ni.js",
+        "deliveredPath": "/assets/discovery-Pa8KS5Ni.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/discovery-index-Cwgslkc1.js",
+        "deliveredPath": "/assets/discovery-index-Cwgslkc1.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enriched-Bxq5iC_P.js",
+        "deliveredPath": "/assets/enriched-Bxq5iC_P.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/enrichment-DZlO_Gxi.js",
+        "deliveredPath": "/assets/enrichment-DZlO_Gxi.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/grammar-fTcUwQty.js",
+        "deliveredPath": "/assets/grammar-fTcUwQty.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-BhTyfMEC.js",
+        "deliveredPath": "/assets/index-BhTyfMEC.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/index-C1n5BHln.css",
+        "deliveredPath": "/assets/index-C1n5BHln.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/learning-insights-BLQTf6f8.css",
+        "deliveredPath": "/assets/learning-insights-BLQTf6f8.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/learning-insights-CACsuzDH.js",
+        "deliveredPath": "/assets/learning-insights-CACsuzDH.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/listening-DSwJQi5c.js",
+        "deliveredPath": "/assets/listening-DSwJQi5c.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/listening-DYa2axRK.css",
+        "deliveredPath": "/assets/listening-DYa2axRK.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/navigation-3S6zwPaY.js",
+        "deliveredPath": "/assets/navigation-3S6zwPaY.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/offline-DZoNo4J5.js",
+        "deliveredPath": "/assets/offline-DZoNo4J5.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/oral-practice-C9ivmFoo.css",
+        "deliveredPath": "/assets/oral-practice-C9ivmFoo.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/oral-practice-CzHICwyN.js",
+        "deliveredPath": "/assets/oral-practice-CzHICwyN.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/painted-cardboard-CX92yXJi.webp",
+        "deliveredPath": "/assets/painted-cardboard-CX92yXJi.webp",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-hub-C3byLatq.js",
+        "deliveredPath": "/assets/practice-hub-C3byLatq.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-navigation-CKsH5KAR.js",
+        "deliveredPath": "/assets/practice-navigation-CKsH5KAR.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/practice-tools-BxpzZojm.js",
+        "deliveredPath": "/assets/practice-tools-BxpzZojm.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/profile-C1g0z2YZ.css",
+        "deliveredPath": "/assets/profile-C1g0z2YZ.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/profile-DX6sDGTd.js",
+        "deliveredPath": "/assets/profile-DX6sDGTd.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-BhWZqikn.js",
+        "deliveredPath": "/assets/review-hub-BhWZqikn.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/review-hub-C0Sh_F8c.css",
+        "deliveredPath": "/assets/review-hub-C0Sh_F8c.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/vocab-boost-BApxbOZa.css",
+        "deliveredPath": "/assets/vocab-boost-BApxbOZa.css",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/vocab-boost-DpYtfw2s.js",
+        "deliveredPath": "/assets/vocab-boost-DpYtfw2s.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "assets/vocab-catalogue-DgHTLIL8.js",
+        "deliveredPath": "/assets/vocab-catalogue-DgHTLIL8.js",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "favicon.svg",
+        "deliveredPath": "/favicon.svg",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "index.html",
+        "deliveredPath": "/?parliamo-release=20261112T172102Z-word-quest",
+        "status": 200,
+        "hashMatch": false,
+        "applicationMarkupMatch": true,
+        "edgeInsertions": [
+          "Cloudflare JavaScript detection challenge",
+          "Cloudflare public analytics beacon"
+        ],
+        "deliveredSHA256": "88742a31177c3338397ed70a4f044957fc616a10def4a244f7bb012b6280b3d0"
+      },
+      {
+        "path": "manifest.webmanifest",
+        "deliveredPath": "/manifest.webmanifest",
+        "status": 200,
+        "hashMatch": true
+      },
+      {
+        "path": "offline-worker.js",
+        "deliveredPath": "/offline-worker.js?release=1b66fb8bae8c7e96",
+        "status": 200,
+        "hashMatch": true
+      }
+    ],
+    "canonicalVersion": "1b66fb8bae8c7e96",
+    "canonicalCacheControl": "no-cache"
+  },
+  "profileServiceHealth": {
+    "status": 200,
+    "healthy": true,
+    "learnerRecordsAccessed": false
+  },
+  "cleanCheckoutBuild": "identical artifacts",
+  "verifiedAt": "2026-11-12T17:31:47.445573+00:00",
+  "rollbackAvailable": true,
+  "validation": {
+    "dailyTests": 340,
+    "typecheck": "passed",
+    "lint": "passed",
+    "buildDaily": "passed",
+    "cleanCommittedSourceBuildFiles": 40,
+    "vocabularyPublicJourneyChecks": 38,
+    "vocabularyPublicLayoutObservations": 46,
+    "publicOfflineChecks": 6,
+    "localNavigationChecks": 7,
+    "localNavigationLayouts": 212
+  },
+  "vocabularyBrowser": {
+    "testedAt": "2026-11-12T17:29:28.531Z",
+    "base": "https://italian.samuelzhang.co.uk",
+    "passed": true,
+    "checks": [
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "en",
+        "width": 320
+      },
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "en",
+        "width": 768
+      },
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "it",
+        "width": 320
+      },
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "it",
+        "width": 768
+      },
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "The longest actual English cue and Italian tile target fit without awarding browsing points",
+        "language": "en",
+        "width": 320
+      },
+      {
+        "name": "The accent key inserts meaningful è without pretending keyboard assistance is a spelling hint",
+        "language": "en",
+        "width": 320
+      },
+      {
+        "name": "The longest actual English cue and Italian tile target fit without awarding browsing points",
+        "language": "en",
+        "width": 768
+      },
+      {
+        "name": "The longest actual English cue and Italian tile target fit without awarding browsing points",
+        "language": "it",
+        "width": 320
+      },
+      {
+        "name": "The accent key inserts meaningful è without pretending keyboard assistance is a spelling hint",
+        "language": "it",
+        "width": 320
+      },
+      {
+        "name": "The longest actual English cue and Italian tile target fit without awarding browsing points",
+        "language": "it",
+        "width": 768
+      },
+      {
+        "name": "Wrong feedback, draft reload, pause/resume and independent recall preserve the same challenge",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "A five-word challenge records one mistake, two independent answers and two supported answers honestly",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Tricky-word repair keeps first evidence, unique-word XP and the daily goal intact",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "CSV word “attico” can be found, saved without XP, and practised from its details",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "The new CSV word joins shared scheduled recall and advances spacing without duplicate XP",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "A real backup export preserves new word evidence, the first mistake, saved words and earlier work",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Wrong feedback, draft reload, pause/resume and independent recall preserve the same challenge",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "A five-word challenge records one mistake, two independent answers and two supported answers honestly",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Tricky-word repair keeps first evidence, unique-word XP and the daily goal intact",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "CSV word “attico” can be found, saved without XP, and practised from its details",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "The new CSV word joins shared scheduled recall and advances spacing without duplicate XP",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "A real backup export preserves new word evidence, the first mistake, saved words and earlier work",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Wrong feedback, draft reload, pause/resume and independent recall preserve the same challenge",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "A five-word challenge records one mistake, two independent answers and two supported answers honestly",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Tricky-word repair keeps first evidence, unique-word XP and the daily goal intact",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "CSV word “attico” can be found, saved without XP, and practised from its details",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "The new CSV word joins shared scheduled recall and advances spacing without duplicate XP",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "A real backup export preserves new word evidence, the first mistake, saved words and earlier work",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Wrong feedback, draft reload, pause/resume and independent recall preserve the same challenge",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "A five-word challenge records one mistake, two independent answers and two supported answers honestly",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Tricky-word repair keeps first evidence, unique-word XP and the daily goal intact",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "CSV word “attico” can be found, saved without XP, and practised from its details",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "The new CSV word joins shared scheduled recall and advances spacing without duplicate XP",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "A real backup export preserves new word evidence, the first mistake, saved words and earlier work",
+        "language": "it",
+        "width": 1440
+      }
+    ],
+    "layouts": [
+      {
+        "label": "en-320-hub",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "en-390-hub",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "en-768-hub",
+        "width": 768,
+        "height": 1000,
+        "document": 753
+      },
+      {
+        "label": "en-1440-hub",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "it-320-hub",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "it-390-hub",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "it-768-hub",
+        "width": 768,
+        "height": 1000,
+        "document": 753
+      },
+      {
+        "label": "it-1440-hub",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "en-320-long-cue",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "en-320-long-tiles",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "en-320-long-feedback",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "en-320-accent-feedback",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "en-768-long-cue",
+        "width": 768,
+        "height": 500,
+        "document": 753
+      },
+      {
+        "label": "en-768-long-tiles",
+        "width": 768,
+        "height": 500,
+        "document": 753
+      },
+      {
+        "label": "en-768-long-feedback",
+        "width": 768,
+        "height": 500,
+        "document": 753
+      },
+      {
+        "label": "it-320-long-cue",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "it-320-long-tiles",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "it-320-long-feedback",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "it-320-accent-feedback",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "it-768-long-cue",
+        "width": 768,
+        "height": 500,
+        "document": 753
+      },
+      {
+        "label": "it-768-long-tiles",
+        "width": 768,
+        "height": 500,
+        "document": 753
+      },
+      {
+        "label": "it-768-long-feedback",
+        "width": 768,
+        "height": 500,
+        "document": 753
+      },
+      {
+        "label": "en-390-question",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "en-390-wrong-feedback",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "en-390-paused-hub",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "en-390-tiles",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "en-390-finish",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "en-390-csv-word",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "en-1440-question",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-wrong-feedback",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-paused-hub",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-tiles",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-finish",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-csv-word",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "it-390-question",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "it-390-wrong-feedback",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "it-390-paused-hub",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "it-390-tiles",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "it-390-finish",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "it-390-csv-word",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "it-1440-question",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-wrong-feedback",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-paused-hub",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-tiles",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-finish",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-csv-word",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      }
+    ],
+    "errors": [],
+    "failedAssets": []
+  },
+  "offline": {
+    "passed": true,
+    "checks": [
+      {
+        "language": "en",
+        "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
+        "version": "1b66fb8bae8c7e96",
+        "workerQuery": "?release=1b66fb8bae8c7e96",
+        "assetCount": 39
+      },
+      {
+        "language": "en",
+        "check": "Offline reload, eleven lazy routes, guided draft and oral choice preserve stored progress"
+      },
+      {
+        "language": "en",
+        "check": "Online current-release recheck and queried-worker removal preserve progress"
+      },
+      {
+        "language": "it",
+        "check": "Explicit current-release query registration, complete public cache and queried-worker recognition",
+        "version": "1b66fb8bae8c7e96",
+        "workerQuery": "?release=1b66fb8bae8c7e96",
+        "assetCount": 39
+      },
+      {
+        "language": "it",
+        "check": "Offline reload, eleven lazy routes, guided draft and oral choice preserve stored progress"
+      },
+      {
+        "language": "it",
+        "check": "Online current-release recheck and queried-worker removal preserve progress"
+      }
+    ]
+  },
+  "preservation": [
+    "Only 40 validated public site-dist artifacts were transferred.",
+    "Private archives, the raw CSV, extracted source text, learner records and credentials were not published.",
+    "Existing version-1 progress, drafts, first attempts, schedules and all 1,084 previous practice identities are preserved.",
+    "The separate historical Sites identity and existing profile service configuration are unchanged.",
+    "The previous static release remains available for rollback."
+  ],
+  "limitations": [
+    "Isolated synthetic Chromium profiles, not physical devices or a human learning-outcome study.",
+    "Scheduled recall uses explicitly backdated synthetic answer evidence; automated tests verify real-date scheduling.",
+    "Device speech is not treated as a recording-quality test. API calls are blocked; no real profiles or learner records are read.",
+    "The full 212-observation navigation audit ran against the exact local production build; the vocabulary and offline journeys also passed on the public host.",
+    "Existing offline downloads remain pinned until the learner checks for an updated download."
+  ]
+}

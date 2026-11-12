@@ -650,6 +650,12 @@
     "dailyTests": 340,
     "newJourneyChecks": 38,
     "newJourneyLayouts": 46,
-    "publication": "pending"
+    "publication": {
+      "report": "docs/deployment-word-quest-2026-11-12.json",
+      "url": "https://italian.samuelzhang.co.uk/",
+      "release": "20261112T172102Z-word-quest",
+      "sourceRevision": "2cd5b2b7677ae25dcd924f28bdf75cab7caf95c0",
+      "sourceCI": "https://github.com/samuel-zhang01/Italian-Learning-Portal/actions/runs/43269133180"
+    }
   }
 }
