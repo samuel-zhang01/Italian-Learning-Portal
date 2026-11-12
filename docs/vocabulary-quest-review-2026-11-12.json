@@ -1,0 +1,789 @@
+{
+  "reviewedOn": "2026-11-12",
+  "status": "built acceptance passed; publication pending",
+  "scope": "Word Quest and an expanded searchable vocabulary collection using the approved simple course list",
+  "catalogue": {
+    "approvedListRows": 2900,
+    "visibleWords": 2952,
+    "practiceTargets": 2993,
+    "banks": 78,
+    "newTargets": 1909,
+    "reusedListRows": 991,
+    "originalAuthoredWordsPreserved": 836,
+    "previousPracticeIdentitiesPreserved": 1084,
+    "sourceCsvSHA256": "591abf64d684fe22310f87f0a66ec5c62c3ac19c5a7d2dbec5bf61cf50bcfa1c",
+    "importer": "scripts/import_course_vocabulary.py",
+    "reproducibility": "--check passed",
+    "newExamples": "Translation-only entries; no fabricated sentences or CEFR levels.",
+    "answerContract": "Explicit complete forms, reviewed equivalents and clarified homographs; meaningful accents remain required."
+  },
+  "experience": [
+    "Illustrated Word Quest hub with short challenges, daily goals, small quests and evidence-based practice badges.",
+    "Typed answers, accent keys, optional supported answer tiles and synthetic device speech; help stays recorded.",
+    "Pause, draft/feedback reload, receipt, tricky-word replay and shared delayed recall.",
+    "All-word collection with search, word types, topics, source/level options, six practice states, list/card layouts, cover/reveal, favourites, audio and detail/history views.",
+    "Only24 initial collection rows render; filters and layout remain in the URL.",
+    "Phone goal strip, focused challenge header, touch controls and reduced-motion support."
+  ],
+  "preservation": {
+    "progressVersion": 1,
+    "migrationRequired": false,
+    "firstAttemptsDraftsAndSchedules": "preserved",
+    "uniqueWordXpAcrossGamesAndVocabulary": "unchanged",
+    "recordCapacity": 10000,
+    "largeBackupTests": "3100-word reload and3300-word merge; oversized state rejected",
+    "originalArchiveRawCsvLearnerDataPublished": false,
+    "profileServiceChanges": false,
+    "otherLearningContent": "No lesson, grammar, programme or existing vocabulary JSON changed."
+  },
+  "checks": {
+    "dailyTests": 340,
+    "typecheck": "passed",
+    "lint": "passed",
+    "buildDaily": "passed",
+    "newJourney": {
+      "passed": true,
+      "checks": 38,
+      "layoutObservations": 46,
+      "errors": []
+    },
+    "collection": {
+      "checks": 2,
+      "layoutObservations": 18,
+      "passed": true
+    },
+    "offline": {
+      "passed": true,
+      "checks": 6
+    },
+    "navigation": {
+      "status": "passed",
+      "checks": 7,
+      "layoutObservations": 212
+    }
+  },
+  "browser": {
+    "testedAt": "2026-11-12T17:15:52.181Z",
+    "base": "http://127.0.0.1:5221",
+    "mode": "complete journey",
+    "passed": true,
+    "checks": [
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "en",
+        "width": 320
+      },
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "en",
+        "width": 768
+      },
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "it",
+        "width": 320
+      },
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "it",
+        "width": 768
+      },
+      {
+        "name": "Fresh challenge hub has zero earned progress and fits the viewport",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "The longest actual English cue and Italian tile target fit without awarding browsing points",
+        "language": "en",
+        "width": 320
+      },
+      {
+        "name": "The accent key inserts meaningful è without pretending keyboard assistance is a spelling hint",
+        "language": "en",
+        "width": 320
+      },
+      {
+        "name": "The longest actual English cue and Italian tile target fit without awarding browsing points",
+        "language": "en",
+        "width": 768
+      },
+      {
+        "name": "The longest actual English cue and Italian tile target fit without awarding browsing points",
+        "language": "it",
+        "width": 320
+      },
+      {
+        "name": "The accent key inserts meaningful è without pretending keyboard assistance is a spelling hint",
+        "language": "it",
+        "width": 320
+      },
+      {
+        "name": "The longest actual English cue and Italian tile target fit without awarding browsing points",
+        "language": "it",
+        "width": 768
+      },
+      {
+        "name": "Wrong feedback, draft reload, pause/resume and independent recall preserve the same challenge",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "A five-word challenge records one mistake, two independent answers and two supported answers honestly",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Tricky-word repair keeps first evidence, unique-word XP and the daily goal intact",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "CSV word “attico” can be found, saved without XP, and practised from its details",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "The new CSV word joins shared scheduled recall and advances spacing without duplicate XP",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "A real backup export preserves new word evidence, the first mistake, saved words and earlier work",
+        "language": "en",
+        "width": 390
+      },
+      {
+        "name": "Wrong feedback, draft reload, pause/resume and independent recall preserve the same challenge",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "A five-word challenge records one mistake, two independent answers and two supported answers honestly",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Tricky-word repair keeps first evidence, unique-word XP and the daily goal intact",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "CSV word “attico” can be found, saved without XP, and practised from its details",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "The new CSV word joins shared scheduled recall and advances spacing without duplicate XP",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "A real backup export preserves new word evidence, the first mistake, saved words and earlier work",
+        "language": "en",
+        "width": 1440
+      },
+      {
+        "name": "Wrong feedback, draft reload, pause/resume and independent recall preserve the same challenge",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "A five-word challenge records one mistake, two independent answers and two supported answers honestly",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Tricky-word repair keeps first evidence, unique-word XP and the daily goal intact",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "CSV word “attico” can be found, saved without XP, and practised from its details",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "The new CSV word joins shared scheduled recall and advances spacing without duplicate XP",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "A real backup export preserves new word evidence, the first mistake, saved words and earlier work",
+        "language": "it",
+        "width": 390
+      },
+      {
+        "name": "Wrong feedback, draft reload, pause/resume and independent recall preserve the same challenge",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "A five-word challenge records one mistake, two independent answers and two supported answers honestly",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "Tricky-word repair keeps first evidence, unique-word XP and the daily goal intact",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "CSV word “attico” can be found, saved without XP, and practised from its details",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "The new CSV word joins shared scheduled recall and advances spacing without duplicate XP",
+        "language": "it",
+        "width": 1440
+      },
+      {
+        "name": "A real backup export preserves new word evidence, the first mistake, saved words and earlier work",
+        "language": "it",
+        "width": 1440
+      }
+    ],
+    "layouts": [
+      {
+        "label": "en-320-hub",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "en-390-hub",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "en-768-hub",
+        "width": 768,
+        "height": 1000,
+        "document": 753
+      },
+      {
+        "label": "en-1440-hub",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "it-320-hub",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "it-390-hub",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "it-768-hub",
+        "width": 768,
+        "height": 1000,
+        "document": 753
+      },
+      {
+        "label": "it-1440-hub",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "en-320-long-cue",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "en-320-long-tiles",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "en-320-long-feedback",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "en-320-accent-feedback",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "en-768-long-cue",
+        "width": 768,
+        "height": 500,
+        "document": 753
+      },
+      {
+        "label": "en-768-long-tiles",
+        "width": 768,
+        "height": 500,
+        "document": 753
+      },
+      {
+        "label": "en-768-long-feedback",
+        "width": 768,
+        "height": 500,
+        "document": 753
+      },
+      {
+        "label": "it-320-long-cue",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "it-320-long-tiles",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "it-320-long-feedback",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "it-320-accent-feedback",
+        "width": 320,
+        "height": 1000,
+        "document": 320
+      },
+      {
+        "label": "it-768-long-cue",
+        "width": 768,
+        "height": 500,
+        "document": 753
+      },
+      {
+        "label": "it-768-long-tiles",
+        "width": 768,
+        "height": 500,
+        "document": 753
+      },
+      {
+        "label": "it-768-long-feedback",
+        "width": 768,
+        "height": 500,
+        "document": 753
+      },
+      {
+        "label": "en-390-question",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "en-390-wrong-feedback",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "en-390-paused-hub",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "en-390-tiles",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "en-390-finish",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "en-390-csv-word",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "en-1440-question",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-wrong-feedback",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-paused-hub",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-tiles",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-finish",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "en-1440-csv-word",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "it-390-question",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "it-390-wrong-feedback",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "it-390-paused-hub",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "it-390-tiles",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "it-390-finish",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "it-390-csv-word",
+        "width": 390,
+        "height": 1000,
+        "document": 390
+      },
+      {
+        "label": "it-1440-question",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-wrong-feedback",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-paused-hub",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-tiles",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-finish",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      },
+      {
+        "label": "it-1440-csv-word",
+        "width": 1440,
+        "height": 1000,
+        "document": 1425
+      }
+    ],
+    "screenshots": [
+      "en-320-hub.png",
+      "en-390-hub.png",
+      "en-390-hub-full.png",
+      "en-768-hub.png",
+      "en-1440-hub.png",
+      "en-1440-hub-full.png",
+      "it-320-hub.png",
+      "it-390-hub.png",
+      "it-390-hub-full.png",
+      "it-768-hub.png",
+      "it-1440-hub.png",
+      "it-1440-hub-full.png",
+      "en-320-long-cue.png",
+      "en-320-long-tiles.png",
+      "en-320-long-feedback.png",
+      "en-768-long-cue.png",
+      "en-768-long-tiles.png",
+      "en-768-long-feedback.png",
+      "it-320-long-cue.png",
+      "it-320-long-tiles.png",
+      "it-320-long-feedback.png",
+      "it-768-long-cue.png",
+      "it-768-long-tiles.png",
+      "it-768-long-feedback.png",
+      "en-390-question.png",
+      "en-390-wrong-feedback.png",
+      "en-390-tiles.png",
+      "en-390-finish.png",
+      "en-390-csv-word.png",
+      "en-1440-question.png",
+      "en-1440-wrong-feedback.png",
+      "en-1440-tiles.png",
+      "en-1440-finish.png",
+      "en-1440-csv-word.png",
+      "it-390-question.png",
+      "it-390-wrong-feedback.png",
+      "it-390-tiles.png",
+      "it-390-finish.png",
+      "it-390-csv-word.png",
+      "it-1440-question.png",
+      "it-1440-wrong-feedback.png",
+      "it-1440-tiles.png",
+      "it-1440-finish.png",
+      "it-1440-csv-word.png"
+    ],
+    "touchTargets": [
+      {
+        "language": "en",
+        "width": 390,
+        "controls": [
+          {
+            "text": "Pause and save challenge",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Insert à",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Insert è",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Insert é",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Insert ì",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Insert ò",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Insert ù",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Check answer",
+            "width": 240.796875,
+            "height": 48
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "width": 1440,
+        "controls": [
+          {
+            "text": "Pause and save challenge",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Insert à",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Insert è",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Insert é",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Insert ì",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Insert ò",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Insert ù",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Check answer",
+            "width": 200,
+            "height": 48
+          }
+        ]
+      },
+      {
+        "language": "it",
+        "width": 390,
+        "controls": [
+          {
+            "text": "Metti in pausa e salva la sfida",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Inserisci à",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Inserisci è",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Inserisci é",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Inserisci ì",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Inserisci ò",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Inserisci ù",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Controlla la risposta",
+            "width": 226.140625,
+            "height": 48
+          }
+        ]
+      },
+      {
+        "language": "it",
+        "width": 1440,
+        "controls": [
+          {
+            "text": "Metti in pausa e salva la sfida",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Inserisci à",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Inserisci è",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Inserisci é",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Inserisci ì",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Inserisci ò",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Inserisci ù",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "text": "Controlla la risposta",
+            "width": 203.015625,
+            "height": 48
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "failed": [],
+    "blocked": [],
+    "limitations": [
+      "Isolated synthetic Chromium profiles, not physical devices or a human learning-outcome study.",
+      "Scheduled recall uses explicitly backdated synthetic answer evidence; automated tests verify real-date scheduling.",
+      "Device speech is not treated as a recording-quality test. API calls are blocked; no real profiles or learner records are read."
+    ]
+  },
+  "limitations": [
+    "Isolated synthetic Chromium profiles, not physical devices or a human learning-outcome study.",
+    "Scheduled recall uses explicitly backdated synthetic answer evidence; automated tests verify real-date scheduling.",
+    "Device speech is not treated as a recording-quality test. API calls are blocked; no real profiles or learner records are read.",
+    "Collection status means latest retained answer evidence, not permanent language mastery. Badges and practice-day counts derive from retained evidence rather than a permanent lifetime ledger.",
+    "New course-list cards provide dictionary translations. Existing authored examples remain, with grammar/source links where available.",
+    "Accepted answers are bounded spellings and reviewed variants; the app does not grade arbitrary semantic equivalents or spontaneous speaking."
+  ]
+}

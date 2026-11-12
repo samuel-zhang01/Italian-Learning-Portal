@@ -2,180 +2,164 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import { vocabBanks, vocabItemById, vocabItems, vocabPracticeItems, vocabPool, vocabSearch, type VocabItem } from "./vocab-catalogue";
 import { answerVocab, emptyVocabPractice, finishVocabRound, hintVocab, nextVocabItem, startVocabRound, updateVocabDraft } from "./vocab-engine";
 import { saveWord, wordKey } from "./academy-engine";
+import { shuffled } from "./arcade-engine";
 import { catalogueParams, catalogueRoute, replaceCatalogueParams } from "./navigation";
 import { PracticeNavigation } from "./practice-navigation";
+import { vocabularyJourney, vocabularyRoundSummary } from "./vocab-challenges";
+import { GoalRing, QuestIcon, WordBuddy, topicArt, type QuestIconName } from "./vocab-quest-art";
 import type { ArcadeRound } from "./types";
 import { VocabularyExplorer, WordSources, type VocabularyProps } from "./vocab-explorer";
-import { vocabularySummary } from "./vocab-explorer-model";
 import "./vocab-boost.css";
+import "./vocab-quest.css";
+
 type Props = VocabularyProps;
 
 export function VocabularyBooster(props: Props) {
   const { p, today, t, text, save, go } = props;
   const progress = p.vocabPractice ?? emptyVocabPractice();
   const [params] = useState(catalogueParams);
-  const requested = params.get("bank") ?? p.vocabPractice?.settings.bank;
-  const [bankId, setBankId] = useState(requested && (vocabBanks.some(bank => bank.id === requested) || ["all", "saved"].includes(requested)) ? requested : vocabBanks[0].id);
+  const requested = params.get("bank") ?? p.vocabPractice?.settings.bank ?? "all";
+  const [bankId, setBankId] = useState(vocabBanks.some(bank => bank.id === requested) || ["all", "saved"].includes(requested) ? requested : "all");
   const [query, setQuery] = useState(params.get("q") ?? "");
   const [visible, setVisible] = useState(6);
-  const [completedRound, setCompletedRound] = useState<ArcadeRound | null>(null);
-  const [completedId, setCompletedId] = useState<string | null>(null);
   const [group, setGroup] = useState("everyday");
+  const [completedRound, setCompletedRound] = useState<ArcadeRound | null>(null);
   const screen = useRef<HTMLDivElement>(null);
+  const view = params.get("view") ?? "practice";
+  const paused = params.get("paused") === "1";
+  const journey = vocabularyJourney(p, today, vocabPracticeItems);
+  const pool = vocabPool(p, bankId);
+  const savedPool = vocabPool(p, "saved");
+  const due = vocabPracticeItems.filter(item => progress.records[item.id]?.due <= today && progress.records[item.id]?.date < today);
+  const mistakes = vocabPracticeItems.filter(item => progress.records[item.id] && (!progress.records[item.id].last.correct || progress.records[item.id].last.assisted));
   const activeId = progress.active?.id;
   useEffect(() => {
-    if (!activeId) {
+    if (!activeId || paused || view !== "practice") {
       const heading = screen.current?.querySelector<HTMLElement>("h1");
       heading?.setAttribute("tabindex", "-1"); heading?.focus({ preventScroll: true });
       window.scrollTo({ top: 0 });
     }
-  }, [activeId, completedId]);
-  const view = params.get("view") ?? "practice";
-  const totals = vocabularySummary(vocabPracticeItems, p, today);
+  }, [activeId, paused, view, completedRound?.id]);
+  const start = (items = pool, review = false, selected = bankId, size = progress.settings.size) => {
+    if (progress.active) { go("vocab-boost"); return; }
+    setCompletedRound(null);
+    save(state => {
+      const current = state.vocabPractice ?? emptyVocabPractice();
+      return startVocabRound({ ...state, vocabPractice: { ...current, settings: { ...current.settings, bank: selected, size: size === 10 ? 10 : 5 } } }, items, today, crypto.randomUUID(), review);
+    });
+    if (view !== "practice" || paused || params.get("review")) go("vocab-boost");
+  };
+  const goView = (next: string) => go(catalogueRoute("vocab-boost", { view: next, ...(next === "practice" && progress.active ? { paused: "1" } : {}) }));
+  if (progress.active && view !== "library" && view !== "review" && !paused) {
+    const item = vocabItemById.get(progress.active.itemIds[progress.active.index]);
+    if (!item) return <div className="workspace vocab-workspace vocab-quest"><h1>{t("This word is unavailable", "Questa parola non è disponibile")}</h1><p>{t("Your submitted answers are saved. Choose a fresh challenge.", "Le risposte inviate sono salvate. Scegli una nuova sfida.")}</p><button className="button primary" onClick={() => save(state => ({ ...state, vocabPractice: { ...state.vocabPractice!, active: null } }))}>{t("Choose a challenge", "Scegli una sfida")}</button></div>;
+    return <VocabQuestion key={progress.active.id + ":" + progress.active.index} {...props} round={progress.active} item={item} onFinish={() => { setCompletedRound(progress.active!); save(finishVocabRound); }} />;
+  }
+  if (completedRound && progress.history.some(round => round.id === completedRound.id)) {
+    const result = vocabularyRoundSummary(completedRound);
+    const repair = completedRound.itemIds.map(id => vocabItemById.get(id)).filter((item): item is VocabItem => Boolean(item && (!completedRound.answers[item.id]?.correct || completedRound.answers[item.id]?.assisted)));
+    return <div ref={screen} className="workspace vocab-workspace vocab-quest vq-finish">
+      <PracticeNavigation active="vocabulary" t={t} go={go}/>
+      <div className="vq-finish-hero"><div className="vq-confetti" aria-hidden="true">{Array.from({length: 12}, (_, i) => <i key={i}/>)}</div><WordBuddy happy/><p className="vq-kicker">{t("CHALLENGE COMPLETE", "SFIDA COMPLETATA")}</p><h1>{result.perfect ? t("Look at you go!", "Guarda come vai!") : t("More Italian in your pocket.", "Più italiano in tasca.")}</h1><p>{t("Every try gives your next conversation a little more possibility.", "Ogni tentativo offre una possibilità in più alla prossima conversazione.")}</p></div>
+      <div className="vq-finish-stats"><div><QuestIcon name="book"/><strong>{result.submitted}</strong><span>{t("words practised", "parole allenate")}</span></div><div><QuestIcon name="star"/><strong>{result.independent}</strong><span>{t("without hints", "senza indizi")}</span></div><div><QuestIcon name="flame"/><strong>{result.bestCombo}</strong><span>{t("best recall combo", "serie migliore")}</span></div></div>
+      <div className="vq-finish-goal"><QuestIcon name={journey.dailyProgress >= 1 ? "check" : "target"}/><div><strong>{journey.dailyProgress >= 1 ? t("Daily word goal complete!", "Obiettivo lessicale completato!") : t(journey.todayAnswered + " / " + journey.dailyGoal + " words tried today", journey.todayAnswered + " / " + journey.dailyGoal + " parole provate oggi")}</strong><progress value={journey.dailyProgress} max={1} aria-label={t("Daily word goal", "Obiettivo lessicale giornaliero")}/></div><span>{journey.xp} XP<small>{t("total practice", "pratica totale")}</small></span></div>
+      <div className="vq-finish-actions">{repair.length > 0 && <button className="button primary vq-raised" onClick={() => start(repair, true)}><QuestIcon name="refresh"/>{t("Give tricky words another go", "Riprova le parole difficili")}</button>}<button className={"button " + (repair.length ? "secondary" : "primary vq-raised")} onClick={() => setCompletedRound(null)}>{t("Back to my challenges", "Torna alle mie sfide")}<QuestIcon name="arrow"/></button><button className="text-button" onClick={() => go("today")}>{t("Done for now", "Basta per ora")}</button></div>
+      <section className="vq-round-receipt"><h2>{t("Your round, word by word", "Il tuo giro, parola per parola")}</h2>{completedRound.itemIds.map(id => { const item = vocabItemById.get(id), answer = completedRound.answers[id]; if (!item || !answer) return null; return <div key={id}><span><strong lang="it">{item.word.term.it}</strong><small lang="en">{item.word.term.en}</small></span><span className={"word-status word-status-" + (answer.correct && !answer.assisted ? "recalled" : "learning")}>{answer.correct ? answer.assisted ? t("With help", "Con aiuto") : t("Recalled", "Ricordata") : t("Try again", "Da riprovare")}</span><button className="text-button" onClick={() => go(catalogueRoute("vocab-boost", { view: "library", word: id, q: item.word.term.it }))}>{t("Revisit", "Rivedi")} ↗</button></div>; })}</section>
+    </div>;
+  }
+  const needle = vocabSearch(query);
+  const matching = vocabBanks.filter(bank => (needle || group === "all" || (group === "everyday" ? bank.original : !bank.original)) && (!needle || vocabSearch(bank.title.en + " " + bank.title.it + " " + bank.words.map(word => word.term.en + " " + word.term.it).join(" ")).includes(needle)));
   const reviewId = params.get("review");
   const reviewItem = reviewId ? vocabItemById.get(reviewId) : undefined;
-  const pool = vocabPool(p, bankId);
-  const due = vocabPracticeItems.filter(item => progress.records[item.id]?.due <= today && progress.records[item.id]?.date !== today);
-  const mistakes = vocabPracticeItems.filter(item => progress.records[item.id] && (!progress.records[item.id].last.correct || progress.records[item.id].last.assisted));
   const selectedBank = vocabBanks.find(bank => bank.id === bankId);
-  const choose = (id: string) => { setBankId(id); replaceCatalogueParams({ bank: id, q: query }); };
-  const start = (items = pool, review = false, selected = bankId) => {
-    setCompletedId(null);
-    save(state => startVocabRound({ ...state, vocabPractice: { ...(state.vocabPractice ?? emptyVocabPractice()), settings: { ...(state.vocabPractice ?? emptyVocabPractice()).settings, bank: selected } } }, items, today, crypto.randomUUID(), review));
-    if (view === "library" || view === "review") go("vocab-boost");
-  };
-  if (progress.active && view !== "library" && view !== "review") {
-    const item = vocabItemById.get(progress.active.itemIds[progress.active.index]);
-    if (!item) return <div className="workspace vocab-workspace"><h1>{t("This word is unavailable", "Questa parola non è disponibile")}</h1><p>{t("Your saved answers are safe. End this round to choose another topic.", "Le risposte salvate sono al sicuro. Termina questo giro per scegliere un altro tema.")}</p><button className="button secondary" onClick={() => save(state => ({ ...state, vocabPractice: { ...state.vocabPractice!, active: null } }))}>{t("End this round", "Termina questo giro")}</button></div>;
-    return <VocabQuestion key={`${progress.active.id}:${progress.active.index}`} {...props} round={progress.active} item={item} onFinish={() => { setCompletedId(progress.active!.id); setCompletedRound(progress.active!); save(finishVocabRound); }} />;
-  }
-  const completed = progress.history.find(round => round.id === completedId);
-  if (completed) return <div ref={screen} className="workspace vocab-workspace vocab-finish">
-    <PracticeNavigation active="vocabulary" t={t} go={go} />
-    <p className="vocab-celebration" aria-hidden="true">✦ ✦ ✦</p>
-    <h1>{t("A little more Italian.", "Un po’ più d’italiano.")}</h1>
-    <p>{t(`${completed.independent} of ${completed.total} recalled without hints.`, `${completed.independent} parole su ${completed.total} ricordate senza indizi.`)}</p>
-    <p>{t(`${completed.supported} correct with help. Mistakes and supported words are ready to practise again.`, `${completed.supported} corrette con aiuto. Gli errori e le parole aiutate sono pronti per un altro giro.`)}</p>
-    <div className="vocab-round-receipt">
-      <h2>{t("Your words from this round", "Le parole di questo giro")}</h2>
-      {completedRound?.itemIds.map(id => { const item = vocabItemById.get(id); const answer = completedRound.answers[id]; if (!item || !answer) return null; return <div key={id}><span><strong lang="it">{item.word.term.it}</strong><small lang="en">{item.word.term.en}</small></span><span className={`word-status word-status-${answer.correct && !answer.assisted ? "recalled" : "learning"}`}>{answer.correct ? answer.assisted ? t("With help", "Con aiuto") : t("Recalled", "Ricordata") : t("Practise again", "Da riprovare")}</span><button className="text-button" onClick={() => go(catalogueRoute("vocab-boost", {view:"library", word:id, q:item.word.term.en}))}>{t("Revisit", "Rivedi")} →</button></div>; })}
-    </div>
-    <div className="vocab-finish-actions">
-      {mistakes.length > 0 && <button className="button primary" onClick={() => start(mistakes, true)}>{t("Practise tricky words", "Riprova le parole difficili")} →</button>}
-      <button className={`button ${mistakes.length ? "secondary" : "primary"}`} onClick={() => { setCompletedId(null); go("vocab-boost"); }}>{t("Choose my next words", "Scegli le prossime parole")}</button>
-      <button className="text-button" onClick={() => go("today")}>{t("Done for now · back to today", "Basta per ora · torna a oggi")}</button>
-    </div>
-    <p className="hint">{t("Your first attempts stay recorded. Tomorrow’s due words also appear in the shared review queue.", "I primi tentativi restano registrati. Le parole da ripassare domani compaiono anche nell’elenco dei ripassi.")}</p>
-  </div>;
-  const needle = vocabSearch(query);
-  const matching = vocabBanks.filter(bank => (needle || group === "all" || (group === "everyday" ? bank.original : !bank.original)) && (!needle || vocabSearch(`${bank.title.en} ${bank.title.it} ${bank.words.map(word => `${word.term.en} ${word.term.it}`).join(" ")}`).includes(needle)));
-  return <div ref={screen} className="workspace vocab-workspace">
-    <PracticeNavigation active="vocabulary" t={t} go={go} />
-    <header className="vocab-intro"><p className="eyebrow">{t("A LITTLE EVERY DAY", "UN PO’ OGNI GIORNO")}</p><h1>{t("Words for real life.", "Parole per la vita.")}</h1><p>{t("Learn in context. Try from memory. Come back with confidence.", "Impara nel contesto. Prova a ricordare. Ritorna con fiducia.")}</p></header>
-    <nav className="vocab-view-nav" aria-label={t("Vocabulary workspace", "Spazio del vocabolario")}>
-      {[["practice",t("Practise", "Allenati")],["library",t("Explore words", "Esplora le parole")],["review",t("My review", "Il mio ripasso")]].map(([id,label]) => <button key={id} aria-current={view === id ? "page" : undefined} onClick={() => go(catalogueRoute("vocab-boost", {view:id}))}>{label}{id === "review" && totals.due > 0 && <span>{totals.due}</span>}</button>)}
+  return <div ref={screen} className={"workspace vocab-workspace vocab-quest" + (view !== "practice" ? " vq-collection-view" : "")}>
+    <PracticeNavigation active="vocabulary" t={t} go={go}/>
+    <header className="vq-page-heading"><div><p className="vq-kicker">{t("A LITTLE ITALIAN, EVERY DAY", "UN PO’ D’ITALIANO, OGNI GIORNO")}</p><h1>{view === "library" ? t("Your word collection.", "La tua collezione di parole.") : view === "review" ? t("Keep your Italian fresh.", "Tieni vivo il tuo italiano.") : t("Word Quest", "Avventura lessicale")}</h1><p>{view === "practice" ? t("Play a little. Remember a little more.", "Gioca un po’. Ricorda un po’ di più.") : t("Find your words. Make them part of your day.", "Trova le tue parole. Portale nella tua giornata.")}</p></div><div className="vq-xp-bubble"><QuestIcon name="bolt"/><strong>{journey.xp}</strong><span>{t("practice XP", "XP di pratica")}</span></div></header>
+    <nav className="vocab-view-nav vq-view-nav" aria-label={t("Vocabulary workspace", "Spazio del vocabolario")}>
+      {([["practice", "spark", t("Challenges", "Sfide")], ["library", "book", t("All words", "Tutte le parole")], ["review", "refresh", t("My review", "Il mio ripasso")]] as [string, QuestIconName, string][]).map(([id,icon,label]) => <button key={id} aria-current={view === id ? "page" : undefined} onClick={() => goView(id)}><QuestIcon name={icon} size={20}/>{label}{id === "review" && due.length > 0 && <span>{due.length}</span>}</button>)}
     </nav>
-    {view === "library" || view === "review" ? <VocabularyExplorer {...props} onStart={start} /> : <>
-
-    {reviewId !== null ? <section className="panel vocab-launch">
-      <h2>{t("Your scheduled word", "La parola da ripassare")}</h2>
-      {reviewItem && due.some(item => item.id === reviewId) ? <button className="button primary" onClick={() => start([reviewItem], true)}>{t("Type this review", "Scrivi questo ripasso")}</button> : <p role="status">{t("This word is not due now. Choose a topic or return to your reviews.", "Questa parola non è da ripassare ora. Scegli un tema o torna ai ripassi.")}</p>}
-      <button className="text-button" onClick={() => go("reviews")}>{t("Back to my review queue", "Torna ai miei ripassi")}</button>
-      <button className="text-button" onClick={() => go("vocab-boost")}>{t("Choose vocabulary", "Scegli il vocabolario")}</button>
-    </section> : <section className="panel vocab-launch">
-      <label htmlFor="vocab-topic">{t("My topic", "Il mio tema")}</label>
-      <select id="vocab-topic" value={bankId} onChange={event => choose(event.target.value)}>
-        <option value="all">{t("Mix all topics", "Mescola tutti i temi")}</option>
-        <option value="saved">{t("My saved words", "Le mie parole salvate")}</option>
-        <optgroup label={t("Everyday vocabulary", "Vocabolario quotidiano")}>{vocabBanks.filter(bank => bank.original).map(bank => <option key={bank.id} value={bank.id}>{text(bank.title)}</option>)}</optgroup>
-        <optgroup label={t("From my course", "Dal mio corso")}>{vocabBanks.filter(bank => !bank.original).map(bank => <option key={bank.id} value={bank.id}>{text(bank.title)}</option>)}</optgroup>
-      </select>
-      <button className="button primary vocab-start" disabled={!pool.length} onClick={() => start()}>{t(`Start ${Math.min(progress.settings.size, pool.length)} words`, `Inizia con ${Math.min(progress.settings.size, pool.length)} parole`)} →</button>
-      {!pool.length ? <p role="status">{t("Save some words first, or choose another topic.", "Salva prima qualche parola oppure scegli un altro tema.")}</p> : <p className="hint">{t("Type every answer. Hints are always available.", "Scrivi ogni risposta. Gli indizi sono sempre disponibili.")}</p>}
-      <details className="vocab-options"><summary>{t("Round options", "Opzioni del giro")}</summary>
-        <label htmlFor="vocab-size">{t("Round length", "Lunghezza del giro")}</label>
-        <select id="vocab-size" value={progress.settings.size} onChange={event => save(state => ({ ...state, vocabPractice: { ...(state.vocabPractice ?? emptyVocabPractice()), settings: { ...(state.vocabPractice ?? emptyVocabPractice()).settings, size: Number(event.target.value) as 5 | 10 } } }))}><option value={5}>{t("5 words", "5 parole")}</option><option value={10}>{t("10 words", "10 parole")}</option></select>
-        <p>{t("Due words come first, then new words. Mistakes return for support. Practice points celebrate effort; they are not a language grade.", "Prima le parole da ripassare, poi quelle nuove. Gli errori tornano per aiutarti. I punti celebrano la pratica; non sono un voto linguistico.")}</p>
-      </details>
-    </section>}
-    <div className="vocab-review-actions">
-      {due.length > 0 && <button className="button secondary" onClick={() => start(due, true)}>{t(`Review due words (${due.length})`, `Ripassa le parole in scadenza (${due.length})`)}</button>}
-      {mistakes.length > 0 && <button className="text-button" onClick={() => start(mistakes, true)}>{t(`Practise mistakes (${mistakes.length})`, `Riprova gli errori (${mistakes.length})`)}</button>}
-    </div>
-    <div className="vocab-memory-strip"><span><strong>{totals.recalled}</strong>{t("recalled without hints", "ricordate senza indizi")}</span><span><strong>{totals.learning}</strong>{t("need another try", "da riprovare")}</span><span><strong>{totals.due}</strong>{t("ready for review", "da ripassare")}</span></div>
-    <section className="vocab-feature" aria-labelledby="vocab-feature-title">
-      <div className="vocab-feature-heading"><span className="eyebrow">{t("FROM YOUR CLASS · WEEK 4", "DAL TUO CORSO · SETTIMANA 4")}</span><span className="vocab-feature-stamp" aria-hidden="true">Ciao,<br/>shopping!</span><h2 id="vocab-feature-title">{t("Find it. Try it. Make it yours.", "Cerca. Prova. Scegli.")}</h2><p>{t("A small shopping trip, from your first words to choosing between two things.", "Un piccolo giro di shopping, dalle prime parole alla scelta fra due cose.")}</p></div>
-      <ol className="vocab-learning-path">{vocabBanks.filter(bank => bank.id.startsWith("week4-")).map((bank,index) => <li key={bank.id}><span className="vocab-path-number">0{index+1}</span><div><small>{bank.level === "A1" ? t("A1 essentials", "Basi A1") : t("A2 extension", "Estensione A2")}</small><h3>{text(bank.title)}</h3><p>{t(`${bank.words.length} words & phrases`, `${bank.words.length} parole ed espressioni`)}</p><button className="text-button" onClick={() => go(catalogueRoute("vocab-boost", {view:"library",bank:bank.id}))}>{t("Explore & learn", "Esplora e impara")} →</button></div></li>)}</ol>
-    </section>
-    <section className="vocab-library" aria-labelledby="vocab-library-title">
-      <h2 id="vocab-library-title">{t("Choose a familiar topic", "Scegli un tema familiare")}</h2>
-      <button className="text-button" onClick={() => go("vocab-boost?view=library")}>{t("Search every word, example & source", "Cerca tutte le parole, gli esempi e le fonti")} →</button>
-      <p className="hint">{t(`${vocabItems.length} words and phrases · ${vocabBanks.length} topics · ${Object.keys(progress.records).length} practised`, `${vocabItems.length} parole ed espressioni · ${vocabBanks.length} temi · ${Object.keys(progress.records).length} parole allenate`)}</p>
-      <label htmlFor="vocab-search">{t("Find a topic or word", "Cerca un tema o una parola")}</label>
-      <input id="vocab-search" type="search" value={query} placeholder={t("e.g. food, travel, casa", "es. cibo, viaggi, casa")} onChange={event => { setQuery(event.target.value.slice(0, 100)); setVisible(6); replaceCatalogueParams({ bank: bankId, q: event.target.value.slice(0, 100) }); }} />
-      <div className="vocab-library-filters">{[["everyday", t("Everyday", "Quotidiano")], ["course", t("My course", "Il mio corso")], ["all", t("All", "Tutti")]].map(([id, title]) => <button key={id} aria-pressed={group === id} onClick={() => { setGroup(id); setVisible(6); }}>{title}</button>)}</div>
-      <div className="vocab-topic-grid">{matching.slice(0, visible).map(bank => {
-        const seen = bank.words.filter(word => progress.records[word.id]).length;
-        return <article className="vocab-topic-card" key={bank.id}><h3>{text(bank.title)}</h3><p>{t(`${seen}/${bank.words.length} practised`, `${seen}/${bank.words.length} allenate`)}</p><progress value={seen} max={bank.words.length} aria-label={t(`${text(bank.title)}: words practised`, `${text(bank.title)}: parole allenate`)} /><button className="text-button" onClick={() => { choose(bank.id); start(vocabPool(p, bank.id), false, bank.id); }}>{t("Type these words", "Scrivi queste parole")} →</button></article>;
-      })}</div>
-      {!matching.length && <p role="status">{t("No match yet. Try an English or Italian word.", "Nessuna corrispondenza. Prova una parola inglese o italiana.")}</p>}
-      {matching.length > visible && <button className="button secondary" onClick={() => setVisible(value => value + 6)}>{t("Show more topics", "Mostra altri temi")}</button>}
-    </section>
+    {view === "library" || view === "review" ? <VocabularyExplorer {...props} onStart={start}/> : <>
+      {reviewId !== null && <section className="vq-scheduled"><QuestIcon name="refresh"/><div><h2>{t("One word, right on time.", "Una parola, al momento giusto.")}</h2>{reviewItem && due.some(item => item.id === reviewId) ? <button className="button primary vq-raised" onClick={() => start([reviewItem], true)}>{t("Start this review", "Inizia questo ripasso")}</button> : <p>{t("This word is not due now. Your next challenge is below.", "Questa parola non è da ripassare ora. La prossima sfida è qui sotto.")}</p>}<button className="text-button" onClick={() => go("reviews")}>{t("All scheduled reviews", "Tutti i ripassi programmati")} →</button></div></section>}
+      <div className="vq-dashboard">
+        <div className="vq-main">
+          <section className="vq-hero">
+            <div className="vq-hero-copy"><span className="vq-pill"><QuestIcon name="spark" size={16}/>{progress.active ? t("YOUR CHALLENGE IS SAVED", "LA TUA SFIDA È SALVATA") : t("YOUR NEXT LITTLE WIN", "LA TUA PROSSIMA PICCOLA VITTORIA")}</span><h2>{progress.active ? t("Pick up where you left off.", "Riprendi da dove eri.") : t("Ready, set… parliamo!", "Pronti, partenza… parliamo!")}</h2><p>{progress.active ? t("Your words, answers and draft are right here.", "Le tue parole, le risposte e la bozza sono qui.") : t("A quick challenge. A few new words. A little more confidence for real life.", "Una sfida veloce. Qualche parola nuova. Un po’ più di fiducia per la vita vera.")}</p><button className="button primary vq-raised vq-primary-start" disabled={!pool.length && !progress.active} onClick={() => progress.active ? go("vocab-boost") : start()}>{t(progress.active ? "Continue challenge" : "Start " + Math.min(progress.settings.size, pool.length) + "-word challenge", progress.active ? "Continua la sfida" : "Inizia la sfida di " + Math.min(progress.settings.size, pool.length) + " parole")}<QuestIcon name="arrow" size={20}/></button><small>{t("No rush. Hints whenever you need them.", "Nessuna fretta. Indizi quando ti servono.")}</small></div><div className="vq-hero-art"><div className="vq-buddy-orbit"/><WordBuddy/><span className="vq-floating-word">Ciao!</span><span className="vq-floating-star"><QuestIcon name="star" size={25}/></span></div>
+            <div className="vq-mobile-goal"><span><QuestIcon name={journey.dailyProgress>=1?"check":"target"} size={17}/>{t("Today’s word goal", "Obiettivo lessicale di oggi")}<strong>{Math.min(journey.todayAnswered,journey.dailyGoal)}/{journey.dailyGoal}</strong></span><progress value={journey.dailyProgress} max={1} aria-label={t("Daily word goal", "Obiettivo lessicale giornaliero")}/></div>
+          </section>
+          <div className="vq-snapshot"><div><span className="vq-stat-icon vq-green"><QuestIcon name="check"/></span><span><strong>{journey.recalled}</strong><small>{t("recalled", "ricordate")}</small></span></div><div><span className="vq-stat-icon vq-purple"><QuestIcon name="book"/></span><span><strong>{vocabItems.length.toLocaleString()}</strong><small>{t("words to explore", "parole da esplorare")}</small></span></div><div><span className="vq-stat-icon vq-orange"><QuestIcon name="trophy"/></span><span><strong>{journey.badges.filter(badge => badge.earned).length} / {journey.badges.length}</strong><small>{t("badges earned", "medaglie ottenute")}</small></span></div></div>
+          <section className="vq-choose-challenge" aria-labelledby="vq-challenge-heading"><div className="vq-section-heading"><h2 id="vq-challenge-heading">{t("How do you want to play?", "Come vuoi giocare?")}</h2><span>{t("Small rounds, real recall", "Piccoli giri, ricordi veri")}</span></div><div className="vq-challenge-grid">
+            <ChallengeCard tone="mint" icon="bolt" title={t("Quick five", "Cinque al volo")} description={t("A fresh mix to get you going.", "Un nuovo mix per cominciare.")} detail={t("5 words", "5 parole")} action={t("Let’s go", "Si parte")} onClick={() => start(vocabItems, false, "all", 5)}/>
+            <ChallengeCard tone="lavender" icon="refresh" title={t("Memory boost", "Memoria in forma")} description={due.length ? t(due.length + " words are ready to come back.", due.length + " parole sono pronte a tornare.") : t("Nothing due? Try a longer mixed round.", "Nessun ripasso? Prova un mix più lungo.")} detail={due.length ? t("Due words first", "Prima i ripassi") : t("10 words", "10 parole")} action={due.length ? t("Review", "Ripassa") : t("Try ten", "Prova dieci")} onClick={() => start(due.length ? due : vocabItems, due.length > 0, "all", 10)}/>
+            <ChallengeCard tone="peach" icon={mistakes.length ? "heart" : "star"} title={mistakes.length ? t("Tricky-word rescue", "Salva le parole difficili") : t("Your favourites", "Le tue preferite")} description={mistakes.length ? t("A friendly second try, with all the help you need.", "Un secondo tentativo, con tutto l’aiuto che serve.") : savedPool.length ? t("Your saved words, ready for a challenge.", "Le parole salvate sono pronte per una sfida.") : t("Build a little collection of words you love.", "Crea una piccola collezione di parole che ami.")} detail={t((mistakes.length || savedPool.length) + " words", (mistakes.length || savedPool.length) + " parole")} action={mistakes.length || savedPool.length ? t("Practise", "Allenati") : t("Find favourites", "Trova le preferite")} onClick={() => mistakes.length || savedPool.length ? start(mistakes.length ? mistakes : savedPool, true, mistakes.length ? "all" : "saved") : goView("library")}/>
+          </div></section>
+          <section className="vq-topics" aria-labelledby="vq-topics-heading"><div className="vq-section-heading"><div><p className="vq-kicker">{t("A WORLD OF WORDS", "UN MONDO DI PAROLE")}</p><h2 id="vq-topics-heading">{t("Pick your next adventure.", "Scegli la prossima avventura.")}</h2></div><button className="text-button" onClick={() => goView("library")}>{t("See all words", "Vedi tutte le parole")}<QuestIcon name="arrow" size={17}/></button></div>
+            <label className="vq-search-label" htmlFor="vocab-search">{t("Find a topic or word", "Cerca un tema o una parola")}</label><input id="vocab-search" className="vq-topic-search" type="search" value={query} placeholder={t("Food, travel, casa…", "Cibo, viaggi, casa…")} onChange={event => { const value = event.target.value.slice(0,100); setQuery(value); setVisible(6); replaceCatalogueParams({ bank:bankId,q:value,paused:paused ? "1" : "" }); }}/>
+            <div className="vq-topic-filters" aria-label={t("Topic collection", "Collezione dei temi")}>{[["everyday",t("Everyday", "Quotidiano")],["course",t("From my course", "Dal mio corso")],["all",t("All topics", "Tutti i temi")]].map(([id,label]) => <button key={id} aria-pressed={group === id} onClick={() => {setGroup(id);setVisible(6);}}>{label}</button>)}</div>
+            <div className="vq-topic-grid">{matching.slice(0,visible).map(bank => { const art = topicArt(bank.id), recalled = bank.words.filter(word => {const r=progress.records[word.id];return r?.last.correct && !r.last.assisted;}).length; return <article key={bank.id} className={"vq-topic-card vq-tone-" + art.tone}><div className="vq-topic-top"><span className="vq-topic-icon"><QuestIcon name={art.icon} size={27}/></span><span>{t(bank.words.length + " words", bank.words.length + " parole")}</span></div><h3>{text(bank.title)}</h3><div className="vq-topic-progress"><span>{t(recalled + " recalled", recalled + " ricordate")}</span><progress value={recalled} max={bank.words.length} aria-label={text(bank.title) + ": " + t("words recalled", "parole ricordate")}/></div><div className="vq-topic-actions"><button onClick={() => {setBankId(bank.id);start(vocabPool(p,bank.id),false,bank.id);}}>{t("Play", "Gioca")}<QuestIcon name="arrow" size={17}/></button><button aria-label={t("Explore " + text(bank.title), "Esplora " + text(bank.title))} onClick={() => go(catalogueRoute("vocab-boost",{view:"library",bank:bank.id}))}><QuestIcon name="book" size={20}/></button></div></article>; })}</div>
+            {!matching.length && <div className="vq-empty"><QuestIcon name="compass" size={38}/><h3>{t("Let’s look a little wider.", "Cerchiamo un po’ più in là.")}</h3><p>{t("Try another English or Italian word.", "Prova un’altra parola inglese o italiana.")}</p><button className="button secondary" onClick={() => {setQuery("");setGroup("all");replaceCatalogueParams({bank:bankId});}}>{t("Show all topics", "Mostra tutti i temi")}</button></div>}
+            {matching.length > visible && <button className="button secondary vq-more" onClick={() => setVisible(n => n+6)}>{t("More adventures", "Altre avventure")}<QuestIcon name="arrow" size={18}/></button>}
+          </section>
+          <details className="vq-round-settings"><summary>{t("Make this round yours", "Personalizza il giro")}</summary><div><label htmlFor="vocab-topic">{t("Next topic", "Prossimo tema")}<select id="vocab-topic" value={bankId} onChange={e => {setBankId(e.target.value);replaceCatalogueParams({bank:e.target.value,paused:paused?"1":""});}}><option value="all">{t("Mix all topics", "Mescola tutti i temi")}</option><option value="saved">{t("My saved words", "Le mie parole salvate")}</option>{vocabBanks.map(bank => <option key={bank.id} value={bank.id}>{text(bank.title)}</option>)}</select></label><label htmlFor="vocab-size">{t("Words per round", "Parole per giro")}<select id="vocab-size" value={progress.settings.size} onChange={e => save(state => ({...state,vocabPractice:{...(state.vocabPractice??emptyVocabPractice()),settings:{...(state.vocabPractice??emptyVocabPractice()).settings,size:Number(e.target.value) as 5|10}}}))}><option value={5}>{t("5 words", "5 parole")}</option><option value={10}>{t("10 words", "10 parole")}</option></select></label></div><p>{selectedBank ? text(selectedBank.title) : t("Due words come first, then new discoveries.", "Prima i ripassi, poi nuove scoperte.")}</p></details>
+        </div>
+        <aside className="vq-sidebar">
+          <section className="vq-daily-goal"><div className="vq-section-heading"><h2>{t("Your daily goal", "Il tuo obiettivo")}</h2><QuestIcon name={journey.dailyProgress>=1?"check":"target"}/></div><GoalRing value={journey.dailyProgress} label={Math.min(journey.todayAnswered,journey.dailyGoal)+"/"+journey.dailyGoal} caption={t("words today", "parole oggi")}/><p>{journey.dailyProgress>=1?t("You showed up for your Italian. Nice work!", "Hai dedicato tempo al tuo italiano. Ben fatto!"):t("Ten different words. One little step forward.", "Dieci parole diverse. Un piccolo passo avanti.")}</p></section>
+          <section className="vq-quests"><div className="vq-section-heading"><h2>{t("Today’s mini quests", "Le mini sfide di oggi")}</h2><QuestIcon name="spark" size={20}/></div>{journey.quests.map((quest,index) => <div className={"vq-quest-item"+(quest.earned?" is-earned":"")} key={quest.id}><span className="vq-quest-icon"><QuestIcon name={quest.earned?"check":(["book","star","compass"] as QuestIconName[])[index]} size={19}/></span><div><strong>{text(quest.title)}</strong><progress value={quest.progress} max={quest.target} aria-label={text(quest.description)}/></div><small>{quest.progress}/{quest.target}</small></div>)}</section>
+          <section className="vq-badges"><div className="vq-section-heading"><h2>{t("Little wins, earned.", "Piccole vittorie, meritate.")}</h2><QuestIcon name="trophy" size={22}/></div><div className="vq-badge-grid">{journey.badges.map((badge,index) => <div key={badge.id} className={"vq-badge"+(badge.earned?" is-earned":"")} title={text(badge.description)}><span><QuestIcon name={(["spark","book","star","compass","flame"] as QuestIconName[])[index]} size={24}/>{badge.earned&&<i><QuestIcon name="check" size={11}/></i>}</span><strong>{text(badge.title)}</strong><small>{badge.earned?t("Earned", "Ottenuta"):badge.progress+"/"+badge.target}</small></div>)}</div>{journey.nextBadge&&<p className="vq-next-badge">{t("Next little win:", "La prossima vittoria:")} <strong>{text(journey.nextBadge.description)}</strong></p>}</section>
+          <button className="vq-collection-invite" onClick={() => goView("library")}><span className="vq-topic-icon"><QuestIcon name="book" size={25}/></span><strong>{t("A home for every word.", "Una casa per ogni parola.")}</strong><span>{t("Search, save and see what’s still to learn.", "Cerca, salva e scopri cosa c’è da imparare.")}</span><span className="vq-invite-link">{t("Open my collection", "Apri la collezione")}<QuestIcon name="arrow" size={18}/></span></button>
+        </aside>
+      </div>
+      <p className="vq-reward-note">{t("Practice XP celebrates words you try, once per word. Recalled means your latest answer was correct without help. Come back to see what sticks.", "Gli XP celebrano le parole che provi, una volta per parola. Ricordata significa che l’ultima risposta era corretta senza aiuto. Ritorna per vedere cosa rimane.")}</p>
     </>}
-    <nav className="practice-related" aria-label={t("Keep these words connected", "Collega queste parole")}>
-      <button className="text-button" onClick={() => go("words")}>{t("My saved word bank", "Il mio lessico salvato")}</button>
-      {view === "practice" && <button className="text-button" onClick={() => go(selectedBank ? `vocabulary/${selectedBank.id}` : "vocabulary")}>{t("Learn with vocabulary cards", "Impara con le carte lessico")}</button>}
-      {view === "practice" && selectedBank?.relatedMissionIds?.[0] && <button className="text-button" onClick={() => go(`lesson/${selectedBank.relatedMissionIds![0]}`)}>{t("Use these words in a lesson", "Usa queste parole in una lezione")}</button>}
-      <button className="text-button" onClick={() => go("practice")}>{t("All practice", "Tutta la pratica")}</button>
-    </nav>
   </div>;
 }
 
-function VocabQuestion({ p, t, text, save, go, today, pdfs, pdfPageOffsets, round, item, onFinish }: Props & { round: ArcadeRound; item: VocabItem; onFinish: () => void }) {
-  const input = useRef<HTMLInputElement>(null);
-  const title = useRef<HTMLHeadingElement>(null);
-  const feedback = useRef<HTMLDivElement>(null);
-  const result = round.answers[item.id];
-  const hint = round.hints.includes(item.id);
-  const [ending, setEnding] = useState(false);
-  const bank = vocabBanks.find(bank => bank.id === item.bankId);
-  const saved = Boolean(p.academy?.words[wordKey(item.word.term)]?.starred);
-  useEffect(() => { title.current?.focus({ preventScroll: true }); title.current?.scrollIntoView({ block: "nearest" }); }, []);
-  useEffect(() => { if (result) { input.current?.blur(); feedback.current?.focus({ preventScroll: true }); feedback.current?.scrollIntoView({ block: "nearest" }); } }, [result]);
-  const check = (event: FormEvent) => { event.preventDefault(); if (!result && round.draft.trim()) save(state => answerVocab(state, item, round.draft, today)); };
-  const insertAccent = (accent: string) => {
-    const start = input.current?.selectionStart ?? round.draft.length, end = input.current?.selectionEnd ?? start;
-    save(state => updateVocabDraft(state, round.draft.slice(0, start) + accent + round.draft.slice(end)));
-    requestAnimationFrame(() => { input.current?.focus(); input.current?.setSelectionRange(start + 1, start + 1); });
-  };
-  return <div className="workspace vocab-workspace vocab-round">
-    <div className="vocab-round-top"><button className="text-button" onClick={() => go("practice")}>← {t("Pause & save", "Pausa e salva")}</button><span>{round.index + 1} / {round.itemIds.length}</span></div>
-    <progress className="vocab-round-progress" value={Object.keys(round.answers).length} max={round.itemIds.length} aria-label={t("Round progress", "Avanzamento del giro")} />
-    <form className="panel vocab-question" onSubmit={check}>
-      <p className="eyebrow">{t("TYPE THIS IN ITALIAN", "SCRIVI IN ITALIANO")}</p>
-      <h1 ref={title} tabIndex={-1} lang="en">{item.word.term.en}</h1>
-      {item.paired && <p className="hint">{t("One of the listed forms is enough.", "Basta una delle forme indicate.")}</p>}
-      {!result ? <>
-        <label htmlFor="vocab-answer">{t("Your Italian", "Il tuo italiano")}</label>
-        <input id="vocab-answer" ref={input} value={round.draft} maxLength={500} lang="it" autoComplete="off" autoCapitalize="none" spellCheck={false} enterKeyHint="done" aria-describedby="vocab-answer-help" onChange={event => save(state => updateVocabDraft(state, event.target.value))} />
-        <p id="vocab-answer-help" className="hint">{t("Include the article for “the” or “a”. Keep accents: è and e are different.", "Scrivi l’articolo per «the» o «a». Mantieni gli accenti: è ed e sono diversi.")}</p>
-        <button type="submit" className="button primary vocab-check" disabled={!round.draft.trim()}>{t("Check answer", "Controlla la risposta")}</button>
-        <div className="vocab-help"><button className="text-button" type="button" onClick={() => save(hintVocab)}>{t("Give me a hint", "Dammi un indizio")}</button><button className="text-button" type="button" onClick={() => save(state => answerVocab(hintVocab(state), item, "—", today))}>{t("Show the answer", "Mostra la risposta")}</button></div>
-        {hint && <p className="vocab-hint" role="status">{text(item.hint)} · {t("Help recorded for this word", "Aiuto registrato per questa parola")}</p>}
-        <details className="vocab-accents"><summary>{t("Accent keys · à è é ì ò ù", "Tasti accentati · à è é ì ò ù")}</summary><div>{["à", "è", "é", "ì", "ò", "ù"].map(accent => <button key={accent} type="button" aria-label={t(`Insert ${accent}`, `Inserisci ${accent}`)} onPointerDown={event => event.preventDefault()} onClick={() => insertAccent(accent)}>{accent}</button>)}</div></details>
-      </> : <div ref={feedback} className={`vocab-feedback ${result.correct ? "is-correct" : "needs-practice"}`} tabIndex={-1} role="region" aria-label={t("Answer feedback", "Riscontro sulla risposta")}>
-        <h2>{result.correct ? result.assisted ? t("You got it with help.", "Ci sei riuscito con aiuto.") : t("You remembered it!", "Te la sei ricordata!") : t("Let’s remember this one.", "Ricordiamo questa parola.")}</h2>
-        {!result.correct && result.answer !== "—" && <p className="vocab-your-answer">{t("You wrote:", "Hai scritto:")} <span lang="it">{result.answer}</span></p>}
-        <p className="vocab-model" lang="it">{result.correct ? result.answer : item.answers[0]}</p>
-        {!result.correct && <p className="hint">{t("Compare the spelling and article. You can practise it again after this round.", "Confronta la grafia e l’articolo. Puoi riprovarla dopo questo giro.")}</p>}
-        <button type="button" className="button primary vocab-next" onClick={() => round.index === round.itemIds.length - 1 ? onFinish() : save(nextVocabItem)}>{round.index === round.itemIds.length - 1 ? t("Finish round", "Concludi il giro") : t("Next word", "Prossima parola")} →</button>
-        <button type="button" className="text-button" aria-pressed={saved} onClick={() => save(state => saveWord(state, item.word.term, item.word.exampleKind === "translation" ? undefined : item.word.example))}>{saved ? t("★ In my word bank", "★ Nel mio lessico") : t("☆ Save to my word bank", "☆ Salva nel mio lessico")}</button>
-        <p className="vocab-next-review">{t("Next review", "Prossimo ripasso")}: <strong>{p.vocabPractice?.records[item.id]?.due}</strong></p>
-        <details className="vocab-example"><summary>{item.word.exampleKind === "translation" ? t("Translation reminder", "Promemoria della traduzione") : t("Example & word details", "Esempio e dettagli della parola")}</summary><p lang="it">{item.word.example.it}</p><p lang="en">{item.word.example.en}</p>{item.word.plural && <p>{t("Plural:", "Plurale:")} <span lang="it">{item.word.plural.it}</span></p>}{item.answers.length > 1 && <p>{t("Also accepted:", "Altre forme accettate:")} <span lang="it">{item.answers.join(" · ")}</span></p>}{(item.unitId || bank?.relatedGrammarIds?.[0]) && <button className="text-button" type="button" onClick={() => go(`grammar/${item.unitId ?? bank!.relatedGrammarIds![0]}`)}>{t("Explain the grammar", "Spiega la grammatica")} →</button>}</details>
-        <details className="vocab-example"><summary>{t("Where this word belongs", "Da dove viene questa parola")}</summary><WordSources item={item} t={t} text={text} go={go} pdfs={pdfs} pdfPageOffsets={pdfPageOffsets}/></details>
+function ChallengeCard({tone,icon,title,description,detail,action,onClick}:{tone:string;icon:QuestIconName;title:string;description:string;detail:string;action:string;onClick:()=>void}) {
+  return <button className={"vq-challenge-card vq-"+tone} onClick={onClick}><span className="vq-challenge-card-icon"><QuestIcon name={icon} size={27}/></span><strong>{title}</strong><span className="vq-challenge-description">{description}</span><small>{detail}</small><span className="vq-challenge-action">{action}<QuestIcon name="arrow" size={18}/></span></button>;
+}
+
+function VocabQuestion({p,t,text,save,go,today,pdfs,pdfPageOffsets,round,item,onFinish}:Props&{round:ArcadeRound;item:VocabItem;onFinish:()=>void}) {
+  const input=useRef<HTMLInputElement>(null), title=useRef<HTMLHeadingElement>(null), feedback=useRef<HTMLDivElement>(null);
+  const result=round.answers[item.id], hint=round.hints.includes(item.id), summary=vocabularyRoundSummary(round);
+  const [ending,setEnding]=useState(false), [showTiles,setShowTiles]=useState(false), [chosen,setChosen]=useState<number[]>([]), [audioNotice,setAudioNotice]=useState("");
+  const target=item.answers[0], wordTiles=/\s/.test(target.trim()), pieces=wordTiles?target.trim().split(/\s+/):Array.from(target);
+  const tiles=shuffled(pieces.map((value,id)=>({value,id})),round.id+item.id);
+  const saved=Boolean(p.academy?.words[wordKey(item.word.term)]?.starred), bank=vocabBanks.find(bank=>bank.id===item.bankId);
+  useEffect(()=>{title.current?.focus({preventScroll:true});window.scrollTo({top:0});},[]);
+  useEffect(()=>{if(result){input.current?.blur();feedback.current?.focus({preventScroll:true});feedback.current?.scrollIntoView({block:"nearest"});}},[result]);
+  const advance=()=>round.index===round.itemIds.length-1?onFinish():save(nextVocabItem);
+  const check=(e:FormEvent)=>{e.preventDefault();if(!result&&round.draft.trim())save(state=>answerVocab(state,item,round.draft,today));};
+  const chooseTile=(next:number[])=>{setChosen(next);save(state=>updateVocabDraft(state,next.map(id=>pieces[id]).join(wordTiles?" ":"")));};
+  const insertAccent=(accent:string)=>{const start=input.current?.selectionStart??round.draft.length,end=input.current?.selectionEnd??start;save(state=>updateVocabDraft(state,round.draft.slice(0,start)+accent+round.draft.slice(end)));requestAnimationFrame(()=>{input.current?.focus();input.current?.setSelectionRange(start+1,start+1);});};
+  const listen=()=>{if(!("speechSynthesis" in window)){setAudioNotice(t("Audio is unavailable here. Try a spelling hint instead.", "L’audio non è disponibile. Prova un indizio scritto."));return;}save(hintVocab);const utterance=new SpeechSynthesisUtterance(target);utterance.lang="it-IT";utterance.rate=.85;window.speechSynthesis.cancel();window.speechSynthesis.speak(utterance);setAudioNotice(t("Device voice · help recorded", "Voce del dispositivo · aiuto registrato"));};
+  return <div className="workspace vocab-workspace vocab-quest vq-round">
+    <div className="vq-round-top"><button className="vq-close-round" aria-label={t("Pause and save challenge", "Metti in pausa e salva la sfida")} onClick={()=>go("vocab-boost?paused=1")}><QuestIcon name="close"/></button><progress className="vocab-round-progress" value={summary.submitted} max={round.itemIds.length} aria-label={t("Round progress", "Avanzamento del giro")}/><span className="vq-round-counter">{round.index+1}<small>/{round.itemIds.length}</small></span></div>
+    <div className="vq-round-meta"><span><QuestIcon name="book" size={17}/>{text(item.title)}</span>{summary.currentCombo>1&&<span className="vq-combo" role="status"><QuestIcon name="flame" size={17}/>{t(summary.currentCombo+" in a row!",summary.currentCombo+" di fila!")}</span>}</div>
+    <form className="vocab-question vq-question" onSubmit={check}>
+      <p className="vq-kicker">{t("CAN YOU SAY IT IN ITALIAN?", "SAI DIRLO IN ITALIANO?")}</p>
+      <div className="vq-prompt"><WordBuddy happy={Boolean(result?.correct)}/><div className="vq-speech-bubble"><span>{t("Write in Italian", "Scrivi in italiano")}</span><h1 id="vocab-prompt" ref={title} tabIndex={-1} lang="en">{item.word.term.en}</h1></div></div>
+      {item.paired&&<p className="hint">{t("One of the full forms is enough.", "Basta una delle forme complete.")}</p>}
+      {!result?<>
+        <label id="vocab-answer-label" htmlFor="vocab-answer">{showTiles?t("Build your answer", "Componi la risposta"):t("Your Italian", "Il tuo italiano")}</label>
+        <input id="vocab-answer" ref={input} value={round.draft} maxLength={500} lang="it" readOnly={showTiles} autoComplete="off" autoCapitalize="none" spellCheck={false} enterKeyHint="done" placeholder={t("Type your answer…", "Scrivi la risposta…")} aria-describedby="vocab-answer-help vocab-prompt" onChange={event=>save(state=>updateVocabDraft(state,event.target.value))}/>
+        <p id="vocab-answer-help" className="hint">{t("Keep meaningful accents: è and e are different. Use an article when the cue asks for one.", "Mantieni gli accenti: è ed e sono diversi. Usa l’articolo quando è richiesto.")}</p>
+        {showTiles&&<div className="vq-tiles" aria-label={t("Answer tiles", "Tessere della risposta")}><p>{t("Tap the tiles in order. This is a supported answer.", "Tocca le tessere in ordine. Questa è una risposta con aiuto.")}</p><div>{tiles.map(tile=><button type="button" key={tile.id} disabled={chosen.includes(tile.id)} lang="it" onClick={()=>chooseTile([...chosen,tile.id])}>{tile.value===" "?t("space","spazio"):tile.value}</button>)}</div><button type="button" className="text-button" disabled={!chosen.length} onClick={()=>chooseTile(chosen.slice(0,-1))}>{t("Undo last tile", "Annulla l’ultima tessera")}</button><button type="button" className="text-button" onClick={()=>setShowTiles(false)}>{t("Switch to typing", "Torna alla scrittura")}</button></div>}
+        <div className="vq-input-tools"><div className="vq-accent-keys" aria-label={t("Accent keys", "Tasti accentati")}>{["à","è","é","ì","ò","ù"].map(accent=><button key={accent} type="button" disabled={showTiles} aria-label={t("Insert "+accent,"Inserisci "+accent)} onPointerDown={e=>e.preventDefault()} onClick={()=>insertAccent(accent)}>{accent}</button>)}</div><button className="vq-build-button" type="button" aria-pressed={showTiles} onClick={()=>{save(hintVocab);setShowTiles(!showTiles);}}><QuestIcon name="tiles" size={18}/>{t("Use tiles", "Usa le tessere")}</button></div>
+        <div className="vq-assistance"><button type="button" onClick={()=>save(hintVocab)}><QuestIcon name="spark" size={17}/>{t("A little hint", "Un piccolo indizio")}</button><button type="button" onClick={listen}><QuestIcon name="sound" size={18}/>{t("Listen with help", "Ascolta con aiuto")}</button></div>
+        {hint&&<p className="vocab-hint vq-hint" role="status">{text(item.hint)}<small>{t("Help is part of learning. This try is marked as supported.", "L’aiuto fa parte dell’apprendimento. Questo tentativo è con supporto.")}</small></p>}
+        {audioNotice&&<p className="vq-audio-notice" role="status">{audioNotice}</p>}
+        <div className="vq-answer-bar"><button type="button" className="text-button" onClick={()=>save(state=>answerVocab(hintVocab(state),item,"—",today))}>{t("Show me", "Mostramela")}</button><button type="submit" className="button primary vq-raised vocab-check" disabled={!round.draft.trim()}>{t("Check answer", "Controlla la risposta")}<QuestIcon name="check" size={19}/></button></div>
+      </>:<div ref={feedback} className={"vocab-feedback vq-feedback "+(result.correct?"is-correct":"needs-practice")} tabIndex={-1} role="region" aria-label={t("Answer feedback", "Riscontro sulla risposta")} onKeyDown={e=>{if(e.key==="Enter"&&e.target===e.currentTarget){e.preventDefault();advance();}}}>
+        <div className="vq-feedback-heading"><span><QuestIcon name={result.correct?"check":"heart"} size={26}/></span><div><h2>{result.correct?result.assisted?t("A little help. Still a step forward!", "Un po’ d’aiuto. Sempre un passo avanti!"):t("That’s your Italian!", "Questo è il tuo italiano!"):t("A new word to take with you.", "Una nuova parola da portare con te.")}</h2><p>{result.correct&&!result.assisted?t("Recalled without hints", "Ricordata senza indizi"):t("A good one to practise again", "Una bella parola da riprovare")}</p></div></div>
+        {!result.correct&&result.answer!=="—"&&<p className="vocab-your-answer">{t("You wrote:", "Hai scritto:")} <span lang="it">{result.answer}</span></p>}
+        <p className="vocab-model" lang="it">{result.correct?result.answer:item.answers[0]}</p>
+        <p className="vq-feedback-meaning" lang="en">{item.word.term.en}</p>
+        <div className="vq-feedback-tools"><button type="button" onClick={listen}><QuestIcon name="sound" size={19}/>{t("Hear it · device voice", "Ascolta · voce del dispositivo")}</button><button type="button" aria-pressed={saved} onClick={()=>save(state=>saveWord(state,item.word.term,item.word.exampleKind==="translation"?undefined:item.word.example))}><QuestIcon name="star" size={19}/>{saved?t("Saved", "Salvata"):t("Save word", "Salva la parola")}</button></div>
+        <div className="vq-answer-bar"><span className="vq-review-date">{t("Back for review:", "Torna per il ripasso:")} {p.vocabPractice?.records[item.id]?.due}</span><button type="button" className="button primary vq-raised vocab-next" onClick={advance}>{round.index===round.itemIds.length-1?t("Finish challenge", "Concludi la sfida"):t("Next word", "Prossima parola")}<QuestIcon name="arrow" size={19}/></button></div>
+        <details className="vocab-example"><summary>{item.word.exampleKind==="translation"?t("Translation & accepted forms", "Traduzione e forme accettate"):t("See it in a sentence", "Leggila in una frase")}</summary><p lang="it">{item.word.example.it}</p><p lang="en">{item.word.example.en}</p>{item.word.plural&&<p>{t("Plural:", "Plurale:")} <span lang="it">{item.word.plural.it}</span></p>}{item.answers.length>1&&<p>{t("Also accepted:", "Altre forme accettate:")} <span lang="it">{item.answers.join(" · ")}</span></p>}{(item.unitId||bank?.relatedGrammarIds?.[0])&&<button className="text-button" type="button" onClick={()=>go("grammar/"+(item.unitId??bank!.relatedGrammarIds![0]))}>{t("Explain the grammar", "Spiega la grammatica")} →</button>}</details>
+        <details className="vocab-example"><summary>{t("More about this word", "Altre informazioni sulla parola")}</summary><WordSources item={item} t={t} text={text} go={go} pdfs={pdfs} pdfPageOffsets={pdfPageOffsets}/></details>
       </div>}
     </form>
-    <p className="vocab-context">{text(item.title)} · {t("Saved as you go", "Si salva mentre procedi")}</p>
-    <details className="vocab-end"><summary>{t("Change topic", "Cambia tema")}</summary>{ending ? <><p>{t("Submitted answers stay saved. This unfinished answer will be discarded.", "Le risposte inviate restano salvate. Questa risposta incompleta verrà eliminata.")}</p><button className="button secondary" onClick={() => { save(state => ({ ...state, vocabPractice: { ...state.vocabPractice!, active: null } })); go("vocab-boost"); }}>{t("End round and choose a topic", "Termina il giro e scegli un tema")}</button><button className="text-button" onClick={() => setEnding(false)}>{t("Keep this round", "Continua questo giro")}</button></> : <button className="text-button" onClick={() => setEnding(true)}>{t("End this round early", "Termina questo giro prima")}</button>}</details>
+    <p className="vq-round-saved"><QuestIcon name="check" size={15}/>{t("Your progress saves as you go.", "I progressi si salvano mentre procedi.")}</p>
+    <details className="vocab-end vq-end"><summary>{t("Choose a different challenge", "Scegli un’altra sfida")}</summary>{ending?<><p>{t("Submitted answers stay saved. The unfinished answer will be discarded.", "Le risposte inviate restano salvate. La risposta incompleta verrà eliminata.")}</p><button className="button secondary" onClick={()=>{save(state=>({...state,vocabPractice:{...state.vocabPractice!,active:null}}));go("vocab-boost");}}>{t("End this round", "Termina questo giro")}</button><button className="text-button" onClick={()=>setEnding(false)}>{t("Keep going", "Continua")}</button></>:<button className="text-button" onClick={()=>setEnding(true)}>{t("End this round early", "Termina questo giro prima")}</button>}</details>
   </div>;
 }

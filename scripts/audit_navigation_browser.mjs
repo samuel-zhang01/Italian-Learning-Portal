@@ -90,14 +90,14 @@ try {
     const action = page.locator(".practice-hub-actions > .button").first(); const before = await action.boundingBox(); await action.hover(); await page.waitForTimeout(180); assert.deepEqual(await action.boundingBox(), before, "Hover must not move the click target");
     await shot(page, `practice-${language}-${width}`);
     control.slow = false;
-    await page.getByRole("button", { name: language === "en" ? "Explore my word library →" : "Esplora il mio lessico →", exact: true }).click();
+    await page.getByRole("button", { name: language === "en" ? "Explore every word →" : "Esplora tutte le parole →", exact: true }).click();
     await page.locator(".vocab-explorer").waitFor();
-    const cover = page.locator(".word-results-toolbar .text-button");
+    const cover = page.locator(".collection-cover");
     assert.equal(await cover.evaluate(node => getComputedStyle(node).backgroundImage), "none", "Quiet toggle must not inherit the opaque paper texture");
     await cover.click();
     assert.equal(await cover.evaluate(node => getComputedStyle(node).backgroundImage), "none", "Pressed quiet toggle must keep the same clean finish");
     await cover.click();
-    await page.getByRole("searchbox", { name: language === "en" ? "Search English or Italian" : "Cerca in inglese o italiano", exact: true }).fill("giacca");
+    await page.locator("#word-search").fill("giacca");
     const filteredHash = await page.evaluate(() => location.hash);
     control.slow = true; await beginFrames(page);
     await page.locator(".practice-switcher").getByRole("button", { name: language === "en" ? "Grammar" : "Grammatica", exact: true }).click();
@@ -108,7 +108,7 @@ try {
     assert.equal(await page.evaluate(() => scrollY), 0, "The navigation remains visible on a new catalogue");
     await page.goBack(); await page.locator(".vocab-explorer").waitFor();
     assert.equal(await page.evaluate(() => location.hash), filteredHash);
-    assert.equal(await page.locator(".word-search input").inputValue(), "giacca");
+    assert.equal(await page.locator("#word-search").inputValue(), "giacca");
     await page.goForward(); await page.locator(".workspace.academy").waitFor();
     await page.locator(".daily-header nav").getByRole("button", { name: language === "en" ? "Today" : "Oggi", exact: true }).click();
     await page.locator(".today-workspace").waitFor();

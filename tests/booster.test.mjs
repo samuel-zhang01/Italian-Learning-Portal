@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import curriculum from "../app/learning/curriculum.json" with { type: "json" };
 import { emptyProgress, parseProgress } from "../app/learning/engine.ts";
-import { answerArcade, emptyArcade, hintArcade, nextArcadeItem, startArcadeRound, updateArcadeDraft, validateArcade } from "../app/learning/arcade-engine.ts";
+import { answerArcade, emptyArcade, hintArcade, nextArcadeItem, startArcadeRound, updateArcadeDraft, validateArcade, MAX_ARCADE_RECORDS } from "../app/learning/arcade-engine.ts";
 import { arcadeItemById, arcadeItems, arcadePool } from "../app/learning/arcade-catalogue.ts";
 import { boosterItems, boosterNouns, boosterVerbs, pastVerbAnswers } from "../app/learning/booster-catalogue.ts";
 import { planningReviewCatalogue } from "../app/learning/planning-data.ts";
@@ -121,6 +121,6 @@ test("every published game can retain a record inside the enlarged bounded backu
   };
   assert.equal(Object.keys(parseProgress(JSON.stringify(p), ids).arcade.records).length, arcadeItems.length);
   const record = p.arcade.records[arcadeItems[0].id];
-  p.arcade.records = Object.fromEntries(Array.from({ length: 2001 }, (_, index) => [`synthetic:${index}`, record]));
+  p.arcade.records = Object.fromEntries(Array.from({ length: MAX_ARCADE_RECORDS + 1 }, (_, index) => [`synthetic:${index}`, record]));
   assert.throws(() => validateArcade(p.arcade));
 });

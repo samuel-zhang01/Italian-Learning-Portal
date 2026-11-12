@@ -1,5 +1,6 @@
 import { emptyProgress, parseProgress } from "./engine.ts";
 import { MAX_ORAL_RUNS } from "./oral-practice-model.ts";
+import { MAX_ARCADE_RECORDS } from "./arcade-engine.ts";
 import type { Progress } from "./types.ts";
 
 export type BackupConflict = { area: string; key: string };
@@ -133,7 +134,7 @@ export function mergeProgressBackups(current: Progress, incoming: Progress, ids:
   }
   if (!local.arcade && remote.arcade) { out.arcade = clone(remote.arcade); additions += 1; }
   else if (out.arcade && remote.arcade) {
-    missing(out.arcade.records, remote.arcade.records, "game-first-attempt-and-schedule", 2000);
+    missing(out.arcade.records, remote.arcade.records, "game-first-attempt-and-schedule", MAX_ARCADE_RECORDS);
     if (!out.arcade.active && remote.arcade.active && !out.arcade.history.some((run) => run.id === remote.arcade!.active!.id)) { out.arcade.active = clone(remote.arcade.active); additions += 1; }
     else if (remote.arcade.active && !same(out.arcade.active, remote.arcade.active)) conflict("paused-game", remote.arcade.active.id);
     const history = new Set(out.arcade.history.map((run) => run.id));
@@ -146,7 +147,7 @@ export function mergeProgressBackups(current: Progress, incoming: Progress, ids:
   }
   if (!local.vocabPractice && remote.vocabPractice) { out.vocabPractice = clone(remote.vocabPractice); additions += 1; }
   else if (out.vocabPractice && remote.vocabPractice) {
-    missing(out.vocabPractice.records, remote.vocabPractice.records, "typed-word-first-attempt-and-schedule", 2000);
+    missing(out.vocabPractice.records, remote.vocabPractice.records, "typed-word-first-attempt-and-schedule", MAX_ARCADE_RECORDS);
     if (!out.vocabPractice.active && remote.vocabPractice.active && !out.vocabPractice.history.some(run => run.id === remote.vocabPractice!.active!.id)) {
       out.vocabPractice.active = clone(remote.vocabPractice.active); additions += 1;
     } else if (remote.vocabPractice.active && !same(out.vocabPractice.active, remote.vocabPractice.active)) conflict("paused-vocabulary", remote.vocabPractice.active.id);

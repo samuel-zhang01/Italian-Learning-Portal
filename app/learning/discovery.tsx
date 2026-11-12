@@ -13,7 +13,7 @@ const sourceById = new Map(sources.map((source) => [source.id, source]));
 const index = buildDiscoveryIndex({
   units: grammar.units as GrammarUnit[], missions: curriculum.missions as Mission[],
   programmes: grammar.programmes as Programme[], banks: vocabBanks as VocabularyBank[],
-  bankRoutes: Object.fromEntries(vocabBanks.map(bank => [bank.id, `vocab-boost?bank=${encodeURIComponent(bank.id)}`])),
+  bankRoutes: Object.fromEntries(vocabBanks.map(bank => [bank.id, `vocab-boost?view=library&bank=${encodeURIComponent(bank.id)}`])),
   sources, pages: companion.pages as PageCompanion[],
   bankMissions: Object.fromEntries(vocabBanks.map(bank => [bank.id, bank.relatedMissionIds ?? []])),
 });

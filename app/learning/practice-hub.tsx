@@ -1,20 +1,20 @@
-import { planningVocabBanks } from "./planning-data";
+import { planningVocabularyCollectionCount } from "./planning-data";
 import type { Progress } from "./types";
 type Props = { p: Progress; today: string; t: (en: string, it: string) => string; go: (route: string) => void };
 export function PracticeHub({ p, today, t, go }: Props) {
-  const wordCount = planningVocabBanks.reduce((sum, bank) => sum + bank.words.length, 0);
+  const wordCount = planningVocabularyCollectionCount;
   const due = Object.values(p.vocabPractice?.records ?? {}).filter(record => record.due <= today && record.date !== today).length;
   return <div className="workspace practice-hub">
     <h1>{t("What shall we practise?", "Che cosa alleniamo?")}</h1>
     <p>{t("One small round. Pick the skill you need today.", "Un piccolo giro. Scegli cosa allenare oggi.")}</p>
     <div className="practice-hub-grid">
       <section className="panel practice-hub-card vocabulary-hub-card">
-        <span className="eyebrow">{t("TYPE & REMEMBER", "SCRIVI E RICORDA")}</span>
-        <h2>{t("Vocabulary booster", "Allena il vocabolario")}</h2>
-        <p>{t(`Explore ${wordCount} words and phrases. See examples, revisit your class pages, then type from memory.`, `Esplora ${wordCount} parole ed espressioni. Leggi gli esempi, ritrova le pagine del corso e scrivi a memoria.`)}</p>
+        <span className="eyebrow">{t("PLAY, COLLECT & REMEMBER", "GIOCA, COLLEZIONA E RICORDA")}</span>
+        <h2>{t("Word Quest · vocabulary", "Avventura lessicale · vocabolario")}</h2>
+        <p>{t(`Explore ${wordCount} words and phrases. Try short challenges, earn practice badges and build your word collection.`, `Esplora ${wordCount} parole ed espressioni. Prova brevi sfide, ottieni medaglie di pratica e crea la tua collezione di parole.`)}</p>
         <div className="practice-hub-actions">
-        <button className="button primary" onClick={() => go("vocab-boost")}>{p.vocabPractice?.active ? t("Resume my words", "Riprendi le mie parole") : t(`Type ${p.vocabPractice?.settings.size ?? 5} words`, `Scrivi ${p.vocabPractice?.settings.size ?? 5} parole`)} →</button>
-        <button className="text-button" onClick={() => go("vocab-boost?view=library")}>{t("Explore my word library", "Esplora il mio lessico")} →</button>
+        <button className="button primary" onClick={() => go("vocab-boost")}>{p.vocabPractice?.active ? t("Continue my challenge", "Continua la mia sfida") : t(`Type ${p.vocabPractice?.settings.size ?? 5} words`, `Scrivi ${p.vocabPractice?.settings.size ?? 5} parole`)} →</button>
+        <button className="text-button" onClick={() => go("vocab-boost?view=library")}>{t("Explore every word", "Esplora tutte le parole")} →</button>
         </div>
         {due > 0 && <span className="hint">{t(`${due} words ready for review`, `${due} parole da ripassare`)}</span>}
       </section>

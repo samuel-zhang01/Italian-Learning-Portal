@@ -11,6 +11,8 @@ export const planningSources = data.sources as Source[];
 export const planningScenes = data.scenes;
 export const planningBanks = data.banks;
 export const planningVocabBanks = [...planningBanks, ...data.vocabBanks];
+export const planningCourseVocabBanks = data.courseVocabBanks;
+export const planningVocabularyCollectionCount = data.vocabularyCollectionCount;
 // The word bank already contains these grammar terms. Give missing ones a
 // stable practice identity without adding another visible vocabulary library.
 const vocabularyWordKeys = new Set(planningVocabBanks.flatMap(bank => bank.words.map(word => normalise(word.term.it))));
@@ -38,6 +40,7 @@ export const planningReviewCatalogue = {
     ...planningBanks.flatMap((bank) => bank.words.map((word) => word.term)),
     ...data.booster.nouns.map((noun) => noun.term),
     ...data.vocabBanks.flatMap(bank => bank.words.map(word => word.term)),
+    ...planningCourseVocabBanks.flatMap(bank => bank.words.map(word => word.term)),
   ].map((term) => [normalise(term.it), { key: normalise(term.it), term }])).values()],
   arcade: [
     ...planningBanks.flatMap((bank) => bank.words.map((word) => ({
@@ -69,5 +72,8 @@ export const planningReviewCatalogue = {
     ...planningSupplementalNounVocabItems.map(item => ({
       id: item.id, title: { en: item.term.en, it: item.term.en }, wordKey: normalise(item.term.it),
     })),
+    ...planningCourseVocabBanks.flatMap(bank => bank.words.map(word => ({
+      id: word.id, title: { en: word.term.en, it: word.term.en }, wordKey: normalise(word.term.it),
+    }))),
   ],
 };

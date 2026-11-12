@@ -1,0 +1,262 @@
+/* A compact collection desk, scoped away from the challenge screen. */
+.daily-app .word-collection {
+  --collection-ink: #193e38;
+  --collection-muted: #657873;
+  --collection-line: #dce8e2;
+  --collection-green: #24644f;
+  --collection-lime: #d6f380;
+  color: var(--collection-ink);
+  padding-top: 4px;
+}
+.daily-app .word-collection :is(button, .button, summary) {
+  background-image: none;
+  box-shadow: none;
+  font: inherit;
+  letter-spacing: 0;
+}
+.daily-app .word-collection :is(button, .button, summary)::before { content: none; }
+.daily-app .word-collection :is(button, select, input, summary) { touch-action: manipulation; }
+.daily-app .word-collection button { min-height: 44px; }
+.daily-app .word-collection svg { width: 22px; height: 22px; flex: 0 0 auto; }
+.daily-app .word-collection :is(h2, h3, h4) { font-family: inherit; color: var(--collection-ink); letter-spacing: -.035em; }
+.daily-app .word-collection :is(p, dl, blockquote) { overflow-wrap: anywhere; }
+.daily-app .word-collection .collection-heading { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin-bottom: 22px; }
+.daily-app .word-collection .collection-heading > div:first-child { flex: 1; min-width: 0; }
+.daily-app .word-collection .collection-kicker { margin: 0 0 10px; font-size: 10px; font-weight: 800; letter-spacing: .12em; color: #547569; }
+.daily-app .word-collection .collection-heading h2 { font-size: clamp(27px, 3.4vw, 40px); font-weight: 850; line-height: 1.15; margin: 0 0 10px; }
+.daily-app .word-collection .collection-heading p:last-child { max-width: 580px; margin: 0; font-size: 14px; color: var(--collection-muted); }
+.daily-app .word-collection .collection-book { position: relative; width: 115px; height: 116px; border-radius: 26px; background: #e5f1e9; display: grid; place-content: center; transform: rotate(5deg); flex: 0 0 auto; }
+.daily-app .word-collection .collection-book svg { width: 66px; height: 66px; color: #36765a; stroke-width: 1.5; }
+.daily-app .word-collection .collection-book > span { position: absolute; top: -7px; left: -12px; padding: 4px 12px; background: var(--collection-lime); color: #315222; font-size: 16px; font-weight: 850; border-radius: 10px 10px 10px 2px; transform: rotate(-11deg); }
+.daily-app .word-collection .collection-book small { position: absolute; right: -8px; bottom: 1px; padding: 4px 10px; color: #926327; background: #ffedc1; border-radius: 10px 10px 2px 10px; font-size: 13px; font-weight: 750; transform: rotate(-9deg); }
+.daily-app .word-collection .collection-progress { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; font-size: 12px; color: var(--collection-muted); margin-bottom: 24px; }
+.daily-app .word-collection .collection-progress > span { white-space: nowrap; }
+.daily-app .word-collection .collection-progress strong { color: var(--collection-green); font-size: 17px; font-variant-numeric: tabular-nums; }
+.daily-app .word-collection .collection-progress > div { flex: 1; min-width: 100px; height: 8px; background: #e5ece6; overflow: hidden; border-radius: 10px; }
+.daily-app .word-collection .collection-progress > div > span { display: block; height: 100%; border-radius: inherit; background: #6cb464; transition: width .25s ease; }
+.daily-app .word-collection .collection-progress small { font-size: 11px; }
+.daily-app .word-collection .collection-states { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; margin-bottom: 24px; }
+.daily-app .word-collection .collection-state { border: 1.5px solid var(--collection-line); border-radius: 14px; background-color: #fff; padding: 11px 8px; text-align: center; color: var(--collection-muted); min-height: 76px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; line-height: 1.25; transition: background-color .15s, transform .15s; }
+.daily-app .word-collection .collection-state strong { font-size: 21px; font-weight: 850; font-variant-numeric: tabular-nums; letter-spacing: -.03em; color: var(--collection-ink); }
+.daily-app .word-collection .collection-state > span { font-size: 11px; font-weight: 700; }
+.daily-app .word-collection .collection-state:hover { border-color: #76a68c; transform: translateY(-1px); }
+.daily-app .word-collection .collection-state[aria-pressed=true] { background-color: #e4f3e8; border-color: #438363; color: #2a5c42; box-shadow: 0 2px 0 #438363; }
+.daily-app .word-collection .collection-state-new[aria-pressed=true] { background-color: #eaf2ff; border-color: #6b96d4; box-shadow: 0 2px 0 #6b96d4; color: #3b6395; }
+.daily-app .word-collection .collection-state-learning[aria-pressed=true] { background-color: #fff0d8; border-color: #d8a349; box-shadow: 0 2px 0 #d8a349; color: #8f6220; }
+.daily-app .word-collection .collection-state-saved[aria-pressed=true] { background-color: #fff6d3; border-color: #ccb04f; box-shadow: 0 2px 0 #ccb04f; color: #80691d; }
+.daily-app .word-collection .collection-state-due[aria-pressed=true] { background-color: #f4eaff; border-color: #a08cc4; box-shadow: 0 2px 0 #a08cc4; color: #745797; }
+.daily-app .word-collection .collection-paused { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 18px; margin: 0 0 20px; padding: 14px 18px; border-radius: 14px; background: #e8f0fb; color: #385c8a; font-size: 13px; }
+.daily-app .word-collection .collection-paused > span { flex: 1; min-width: 180px; }
+.daily-app .word-collection .collection-paused button { border: 0; padding: 6px 0; background: none; color: #325b88; font-weight: 800; }
+.daily-app .word-collection .collection-tools { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, .9fr) minmax(0, 1fr); gap: 12px; align-items: end; }
+.daily-app .word-collection :is(.collection-search > label, .collection-field) { display: block; min-width: 0; color: #456257; font-size: 11px; font-weight: 750; }
+.daily-app .word-collection .collection-input { display: block; box-sizing: border-box; width: 100%; min-width: 0; min-height: 50px; margin: 7px 0 0; border: 1.5px solid #d7e4dc; border-radius: 12px; background: #fff; color: var(--collection-ink); font-family: inherit; font-size: 15px; font-weight: 550; padding: 12px; line-height: 1.5; text-overflow: ellipsis; }
+.daily-app .word-collection .collection-input:focus { border-color: #4b8f6b; }
+.daily-app .word-collection .collection-search > div { position: relative; }
+.daily-app .word-collection .collection-search > div > svg { position: absolute; top: 14px; left: 14px; width: 21px; height: 21px; color: #758e80; pointer-events: none; }
+.daily-app .word-collection .collection-search input { padding-left: 45px; padding-right: 42px; font-weight: 500; font-size: 16px; }
+.daily-app .word-collection .collection-search input::-webkit-search-cancel-button { appearance: none; }
+.daily-app .word-collection .collection-clear { position: absolute; right: 3px; top: 3px; width: 44px; height: 44px; padding: 11px; min-height: 44px; border: 0; border-radius: 10px; color: #71877a; background: transparent; }
+.daily-app .word-collection .collection-clear svg { width: 18px; height: 18px; }
+.daily-app .word-collection .collection-more-filters { margin: 10px 0 20px; font-size: 12px; }
+.daily-app .word-collection .collection-more-filters summary { min-height: 44px; padding: 10px 0; font-size: 12px; font-weight: 750; border: 0; color: #527262; background: transparent; cursor: pointer; }
+.daily-app .word-collection .collection-more-filters > div { display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 12px; padding-bottom: 12px; }
+.daily-app .word-collection .collection-results { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.daily-app .word-collection .collection-results > p { display: flex; align-items: center; flex-wrap: wrap; gap: 5px; margin: 0 auto 0 0; font-size: 13px; color: var(--collection-muted); }
+.daily-app .word-collection .collection-results > p strong { color: var(--collection-ink); font-weight: 850; }
+.daily-app .word-collection .collection-results > p > button { padding: 5px 9px; min-height: 44px; border: 0; background: transparent; font-size: 12px; font-weight: 750; color: var(--collection-green); text-decoration: underline; text-underline-offset: 3px; }
+.daily-app .word-collection .collection-sort select { max-width: 190px; min-height: 44px; padding: 8px 25px 8px 10px; border: 0; border-radius: 10px; background: transparent; color: #4c685a; font-size: 12px; font-weight: 700; margin: 0; }
+.daily-app .word-collection .collection-layout { display: flex; padding: 3px; gap: 2px; border: 1px solid #dce6df; border-radius: 12px; background: #edf3ee; }
+.daily-app .word-collection .collection-layout button { width: 44px; height: 44px; padding: 11px; border: 0; border-radius: 9px; background: transparent; color: #7c9084; }
+.daily-app .word-collection .collection-layout button[aria-pressed=true] { color: #2b6650; background: #fff; box-shadow: 0 1px 4px #23462a16; }
+.daily-app .word-collection .collection-layout svg { width: 20px; height: 20px; }
+.daily-app .word-collection .collection-practice-bar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding: 14px 0 0; }
+.daily-app .word-collection .collection-cover { color: #5b7564; background: #f0f5ef; border: 1px solid #d7e2d7; border-radius: 12px; padding: 9px 13px; font-size: 12px; font-weight: 750; }
+.daily-app .word-collection .collection-cover[aria-pressed=true] { color: #344d79; border-color: #a7badd; background: #eaf0fc; }
+.daily-app .word-collection .collection-practise { display: inline-flex; align-items: center; justify-content: center; gap: 16px; min-height: 48px; padding: 11px 20px; border: 1px solid #24583d; border-radius: 13px; background: #296349; color: #fff; box-shadow: 0 3px 0 #18432e; font-size: 13px; line-height: 1.4; font-weight: 800; text-decoration: none; }
+.daily-app .word-collection .collection-practise:hover:not(:disabled) { background: #337b59; }
+.daily-app .word-collection .collection-practise:active:not(:disabled) { transform: translateY(2px); box-shadow: 0 1px 0 #18432e; }
+.daily-app .word-collection .collection-practise > span { font-size: 21px; }
+.daily-app .word-collection .collection-notice { color: #3c7652; min-height: 21px; font-size: 12px; line-height: 1.5; margin: 11px 0 7px; }
+.daily-app .word-collection .collection-notice:empty { min-height: 0; margin: 10px 0 0; }
+.daily-app .word-collection .collection-evidence-note { margin: 6px 0 16px; padding: 12px 14px; border-radius: 12px; background: #eaf5e7; font-size: 12px; color: #4c6e41; }
+.daily-app .word-collection .collection-words { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; align-items: start; margin-top: 18px; }
+.daily-app .word-collection .collection-words-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.daily-app .word-collection .collection-word { min-width: 0; border: 1.5px solid #dce7df; border-radius: 16px; padding: 0; background: #fff; box-shadow: 0 2px 0 #dfe8e0; overflow: hidden; scroll-margin-top: 140px; transition: border-color .15s; }
+.daily-app .word-collection .collection-word:hover { border-color: #a1bfa9; }
+.daily-app .word-collection .collection-word.word-card-open { grid-column: 1 / -1; border-color: #77a785; }
+.daily-app .word-collection .collection-entry { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr) auto; gap: 6px 18px; align-items: center; padding: 15px 18px 9px; }
+.daily-app .word-collection .collection-entry-word { min-width: 0; }
+.daily-app .word-collection .collection-entry h3 { font-size: 21px; line-height: 1.3; margin: 0 0 3px; font-weight: 800; overflow-wrap: anywhere; }
+.daily-app .word-collection .collection-word-type { color: #607568; font-size: 11px; font-weight: 650; line-height: 1.5; }
+.daily-app .word-collection .collection-entry-meaning { font-size: 14px; line-height: 1.55; color: #687d70; margin: 0; min-width: 0; }
+.daily-app .word-collection .collection-word-actions { display: flex; align-items: center; gap: 3px; }
+.daily-app .word-collection .collection-icon-button { display: grid; place-content: center; width: 44px; min-width: 44px; height: 44px; padding: 10px; border: 0; border-radius: 11px; color: #789080; background: transparent; }
+.daily-app .word-collection .collection-icon-button:hover { color: #2d6d4e; background: #eef6eb; }
+.daily-app .word-collection .collection-icon-button[aria-pressed=true] { color: #a17b15; background: #fff5cf; }
+.daily-app .word-collection .collection-icon-button[aria-pressed=true] svg { fill: #f4cd61; stroke: #a67c14; }
+.daily-app .word-collection .collection-icon-button svg { width: 20px; height: 20px; }
+.daily-app .word-collection .collection-entry-footer { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 10px; min-width: 0; }
+.daily-app .word-collection .collection-status { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 7px; background: #f0f3f1; color: #5c7063; font-size: 11px; font-weight: 700; line-height: 1.4; }
+.daily-app .word-collection .collection-status::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+.daily-app .word-collection .collection-status-learning { color: #9c6e26; background: #fff1d8; }
+.daily-app .word-collection .collection-status-recalled { color: #4d7c36; background: #eaf6e3; }
+.daily-app .word-collection .collection-status-due { color: #80639d; background: #f3eafb; }
+.daily-app .word-collection .collection-open { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 6px 0 6px 8px; color: #49795b; border: 0; background: transparent; font-size: 11px; font-weight: 800; }
+.daily-app .word-collection .collection-open svg { width: 15px; height: 15px; transition: transform .2s; }
+.daily-app .word-collection .collection-open[aria-expanded=true] svg { transform: rotate(90deg); }
+.daily-app .word-collection .collection-reveal { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; min-height: 44px; padding: 0; border: 0; background: transparent; color: #819385; text-align: left; font-size: 16px; font-weight: 750; }
+.daily-app .word-collection .collection-reveal > span { color: #4f7d61; font-size: 10px; font-weight: 700; }
+.daily-app .word-collection .collection-words-grid .collection-entry { grid-template-columns: minmax(0, 1fr) auto; gap: 5px 4px; padding: 16px 16px 7px; }
+.daily-app .word-collection .collection-words-grid .collection-entry-word { grid-column: 1; }
+.daily-app .word-collection .collection-words-grid .collection-word-actions { grid-column: 2; grid-row: 1; flex-direction: column; align-self: start; margin-top: -4px; }
+.daily-app .word-collection .collection-words-grid .collection-entry-meaning { grid-column: 1; grid-row: 2; align-self: start; }
+.daily-app .word-collection .collection-words-grid .collection-entry h3 { font-size: 23px; min-height: 30px; }
+.daily-app .word-collection .collection-words-grid .collection-entry-footer { margin-top: 5px; }
+.daily-app .word-collection .collection-words-grid .word-card-open .collection-entry { grid-template-columns: minmax(0, 1fr) minmax(0, .9fr) auto; }
+.daily-app .word-collection .collection-words-grid .word-card-open .collection-word-actions { grid-column: 3; grid-row: 1; flex-direction: row; }
+.daily-app .word-collection .collection-words-grid .word-card-open .collection-entry-meaning { grid-column: 2; grid-row: 1; }
+.daily-app .word-collection .collection-details { padding: 20px; border-top: 1px solid #e3ece4; background: #f8fbf7; animation: collection-open .15s ease-out; }
+.daily-app .word-collection .collection-detail-columns { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 30px; }
+.daily-app .word-collection .collection-definition > span { display: block; font-size: 10px; font-weight: 800; color: #79917f; text-transform: uppercase; letter-spacing: .07em; margin-bottom: 8px; }
+.daily-app .word-collection .collection-definition blockquote { padding: 0; margin: 0 0 20px; border: 0; background: none; }
+.daily-app .word-collection .collection-definition blockquote p[lang=it] { color: #28533a; font-size: 20px; line-height: 1.5; font-weight: 700; margin: 0 0 8px; }
+.daily-app .word-collection .collection-definition blockquote p[lang=en] { color: #5c7262; font-size: 14px; line-height: 1.7; margin: 0; }
+.daily-app .word-collection .collection-grammar { display: flex; flex-wrap: wrap; gap: 14px 25px; padding: 0; margin: 0; }
+.daily-app .word-collection .collection-grammar dt { color: #617766; font-size: 10px; margin: 0 0 4px; }
+.daily-app .word-collection .collection-grammar dd { margin: 0; font-size: 12px; color: #42654e; font-weight: 650; }
+.daily-app .word-collection .collection-grammar-forms { flex-basis: 100%; }
+.daily-app .word-collection .collection-memory { border-radius: 12px; padding: 15px 17px; background: #edf3ec; }
+.daily-app .word-collection .collection-memory h4 { font-size: 13px; font-weight: 800; margin: 0 0 12px; }
+.daily-app .word-collection .collection-memory dl { display: grid; gap: 10px; margin: 0; }
+.daily-app .word-collection .collection-memory dl > div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 3px 10px; }
+.daily-app .word-collection .collection-memory dt { font-size: 11px; color: #617667; }
+.daily-app .word-collection .collection-memory dd { margin: 0; font-size: 11px; color: #42664d; font-weight: 650; }
+.daily-app .word-collection .collection-memory > p { font-size: 12px; color: #526e59; margin: 10px 0 0; }
+.daily-app .word-collection .collection-detail-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.daily-app .word-collection .collection-device-voice { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; border: 0; background: transparent; color: #4f705a; font-size: 11px; padding: 8px 4px; }
+.daily-app .word-collection .collection-device-voice svg { width: 17px; height: 17px; }
+.daily-app .word-collection .collection-connections { margin-top: 18px; padding-top: 9px; border-top: 1px solid #e0e9de; }
+.daily-app .word-collection .collection-connections summary { min-height: 44px; padding: 10px 0; border: 0; background: transparent; color: #6d8972; font-size: 11px; font-weight: 750; }
+.daily-app .word-collection .collection-connections .word-sources { margin: 0; padding: 8px 0 0; border: 0; }
+.daily-app .word-collection .collection-origin { font-size: 10px; color: #677d6b; margin: 20px 0 0; }
+.daily-app .word-collection .collection-pagination { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 24px 0 8px; }
+.daily-app .word-collection .collection-pagination > p { font-size: 11px; color: #627968; margin: 0; }
+.daily-app .word-collection .collection-load-more { display: flex; align-items: center; justify-content: center; gap: 16px; min-height: 48px; padding: 10px 24px; border: 1.5px solid #c6dac9; border-radius: 13px; color: #43734d; background: #fff; font-size: 13px; font-weight: 800; margin: 0; }
+.daily-app .word-collection .collection-empty { display: flex; flex-direction: column; align-items: center; padding: 40px 20px; margin-top: 18px; text-align: center; border: 1.5px dashed #ccddce; border-radius: 18px; background: #f8fbf6; }
+.daily-app .word-collection .collection-empty > span { display: grid; place-content: center; color: #6d986e; width: 68px; height: 68px; background: #e8f3df; border-radius: 21px; margin-bottom: 16px; }
+.daily-app .word-collection .collection-empty svg { width: 38px; height: 38px; }
+.daily-app .word-collection .collection-empty h3 { font-size: 22px; font-weight: 800; margin: 0 0 10px; }
+.daily-app .word-collection .collection-empty p { font-size: 13px; color: #5b735c; max-width: 420px; margin-bottom: 22px; }
+.daily-app .word-collection .collection-history { margin-top: 30px; padding: 24px; border-radius: 16px; background: #eef4ec; }
+.daily-app .word-collection .collection-history h3 { font-weight: 800; margin: 0 0 18px; }
+.daily-app .word-collection .collection-history ol { list-style: none; margin: 0; padding: 0; }
+.daily-app .word-collection .collection-history li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 18px; padding: 12px 0; border-top: 1px solid #dce7d9; font-size: 12px; }
+.daily-app .word-collection .collection-history time { color: #627651; }
+.daily-app .word-collection .collection-history li > span { color: #55734c; }
+.collection-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@keyframes collection-open { from { opacity: .5; transform: translateY(-3px); } to { opacity: 1; transform: none; } }
+@media (max-width: 950px) {
+  .daily-app .word-collection .collection-words-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .daily-app .word-collection .collection-tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .daily-app .word-collection .collection-search { grid-column: 1 / -1; }
+  .daily-app .word-collection .collection-more-filters > div { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .daily-app .word-collection .collection-more-filters > div > label:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 650px) {
+  .daily-app .word-collection .collection-heading { gap: 15px; margin-bottom: 16px; }
+  .daily-app .word-collection .collection-heading h2 { font-size: 28px; }
+  .daily-app .word-collection .collection-heading p:last-child { font-size: 12px; }
+  .daily-app .word-collection .collection-book { width: 76px; height: 83px; border-radius: 20px; margin-right: 4px; }
+  .daily-app .word-collection .collection-book svg { width: 45px; height: 45px; }
+  .daily-app .word-collection .collection-book > span { font-size: 12px; padding: 3px 8px; left: -5px; }
+  .daily-app .word-collection .collection-book small { font-size: 10px; padding: 3px 7px; right: -4px; }
+  .daily-app .word-collection .collection-progress { gap: 6px 10px; font-size: 11px; }
+  .daily-app .word-collection .collection-progress > small { flex-basis: 100%; }
+  .daily-app .word-collection .collection-states { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 20px; }
+  .daily-app .word-collection .collection-state { min-height: 70px; padding: 10px 5px; border-radius: 12px; }
+  .daily-app .word-collection .collection-state strong { font-size: 19px; }
+  .daily-app .word-collection .collection-state > span { font-size: 10px; }
+  .daily-app .word-collection .collection-results > p { flex-basis: 100%; }
+  .daily-app .word-collection .collection-sort { flex: 1; min-width: 0; }
+  .daily-app .word-collection .collection-sort select { max-width: 100%; padding-left: 0; font-size: 11px; }
+  .daily-app .word-collection .collection-layout { padding: 2px; }
+  .daily-app .word-collection .collection-layout button { width: 44px; height: 44px; }
+  .daily-app .word-collection .collection-practice-bar { gap: 10px; }
+  .daily-app .word-collection .collection-practise { padding-inline: 14px; font-size: 12px; }
+  .daily-app .word-collection .collection-cover { font-size: 11px; padding-inline: 11px; }
+  .daily-app .word-collection .collection-word { border-radius: 14px; scroll-margin-top: 190px; }
+  .daily-app .word-collection .collection-entry { grid-template-columns: minmax(0, 1fr) auto; gap: 3px 8px; padding: 13px 14px 6px; }
+  .daily-app .word-collection .collection-entry-word { grid-column: 1; }
+  .daily-app .word-collection .collection-entry h3 { font-size: 20px; }
+  .daily-app .word-collection .collection-entry-meaning { grid-column: 1; grid-row: 2; font-size: 13px; margin: 4px 0 6px; }
+  .daily-app .word-collection .collection-word-actions { grid-column: 2; grid-row: 1 / 3; flex-direction: column; }
+  .daily-app .word-collection .collection-word-type { font-size: 10px; }
+  .daily-app .word-collection .collection-entry-footer { margin-top: 0; }
+  .daily-app .word-collection .collection-words-grid { grid-template-columns: minmax(0, 1fr); }
+  .daily-app .word-collection .collection-words-grid .collection-entry,
+  .daily-app .word-collection .collection-words-grid .word-card-open .collection-entry { grid-template-columns: minmax(0, 1fr) auto; }
+  .daily-app .word-collection .collection-words-grid .collection-word-actions,
+  .daily-app .word-collection .collection-words-grid .word-card-open .collection-word-actions { grid-column: 2; grid-row: 1 / 3; }
+  .daily-app .word-collection .collection-words-grid .collection-entry-meaning,
+  .daily-app .word-collection .collection-words-grid .word-card-open .collection-entry-meaning { grid-column: 1; grid-row: 2; }
+  .daily-app .word-collection .collection-details { padding: 17px 14px; }
+  .daily-app .word-collection .collection-detail-columns { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .daily-app .word-collection .collection-definition blockquote p[lang=it] { font-size: 18px; }
+  .daily-app .word-collection .collection-detail-actions > .collection-practise { width: 100%; }
+  .daily-app .word-collection .collection-device-voice { font-size: 11px; text-align: left; }
+  .daily-app .word-collection .collection-history { padding: 20px 16px; }
+}
+@media (max-width: 360px) {
+  .daily-app .word-collection .collection-book { display: none; }
+  .daily-app .word-collection .collection-tools { gap: 10px; }
+  .daily-app .word-collection .collection-input { padding-inline: 9px; font-size: 16px; }
+  .daily-app .word-collection .collection-search input { padding-left: 41px; padding-right: 38px; }
+  .daily-app .word-collection .collection-practice-bar > button { width: 100%; }
+  .daily-app .word-collection .collection-practise { min-height: 48px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .daily-app .word-collection * { transition: none !important; animation: none !important; }
+}
+/* The global paper input rule has attribute selectors; keep this desk crisp. */
+.daily-app .vocab-workspace .word-collection :is(.collection-tools, .collection-more-filters) :is(input, select).collection-input {
+  min-height: 50px;
+  border: 1.5px solid #d7e4dc;
+  border-radius: 12px;
+  background-color: #fff;
+  background-image: none;
+  box-shadow: none;
+  padding: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.daily-app .vocab-workspace .word-collection .collection-tools .collection-search input.collection-input { padding-left: 45px; padding-right: 45px; }
+.daily-app .vocab-workspace .word-collection .collection-sort select {
+  border: 0;
+  border-radius: 10px;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+}
+.daily-app .vocab-workspace .word-collection .collection-more-filters > summary {
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: transparent;
+  background-image: none;
+}
+@media (max-width: 650px) {
+  .daily-app .word-collection .collection-state { min-height: 58px; padding-block: 8px; gap: 2px; }
+}
+@media (max-width: 430px) {
+  .daily-app .word-collection .collection-book { display: none; }
+  .daily-app .word-collection .collection-heading h2 { font-size: 27px; }
+}
+@media (max-width: 360px) {
+  .daily-app .word-collection .collection-practice-bar > button { width: auto; }
+}
+.daily-app .word-collection .collection-heading-compact { margin-bottom: 16px; gap: 18px; }
+.daily-app .word-collection .collection-heading-compact .collection-book { width: 68px; height: 68px; border-radius: 18px; margin-right: 6px; }
+.daily-app .word-collection .collection-heading-compact .collection-book svg { width: 40px; height: 40px; }
+.daily-app .word-collection .collection-heading-compact .collection-book > span { font-size: 11px; padding: 3px 8px; top: -4px; left: -8px; }
+.daily-app .word-collection .collection-heading-compact .collection-book small { font-size: 9px; padding: 2px 6px; }

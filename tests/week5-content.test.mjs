@@ -159,7 +159,7 @@ test("the escape-room refresh preserves every prior content object and typed-pra
     const [name, key] = path.split(".");
     assert.equal(digest({ curriculum, enrichment, grammar, companion }[name][key].slice(0, baseline.count)), baseline.sha256, path);
   }
-  const priorIds = vocabPracticeItems.filter(item => !item.bankId.startsWith("reviewlab-")).map(item => item.id).sort();
+  const priorIds = vocabPracticeItems.filter(item => !item.bankId.startsWith("reviewlab-") && !item.id.startsWith("course-word:")).map(item => item.id).sort();
   assert.equal(priorIds.length, escapeReview.previousVocabularyPracticeIds.count);
   assert.equal(digest(priorIds), escapeReview.previousVocabularyPracticeIds.sha256);
   assert.equal(escapeReview.week5Recheck.sha256, "d7cf3d20c90da8cff714a1408a25f82387cb815fd3c92bbf7df990f52c8c0ae7");

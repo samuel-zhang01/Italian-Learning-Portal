@@ -3,7 +3,10 @@ import assert from "node:assert/strict";
 import enrichment from "../app/learning/enrichment.json" with { type: "json" };
 import grammar from "../app/learning/grammar.json" with { type: "json" };
 import booster from "../app/learning/booster-content.json" with { type: "json" };
-import { vocabItems, vocabItemById, vocabBanks, vocabPool, vocabPracticeItems, supplementalGrammarVocabItems, supplementalNounVocabItems } from "../app/learning/vocab-catalogue.ts";
+import library from "../app/learning/vocab-library.json" with { type: "json" };
+import course from "../app/learning/course-vocabulary.json" with { type: "json" };
+import { vocabItems, vocabItemById, vocabBanks, vocabPool, vocabPracticeItems, supplementalGrammarVocabItems, supplementalNounVocabItems, courseVocabularySummary, vocabWordType, vocabPartOfSpeechIds } from "../app/learning/vocab-catalogue.ts";
+import { filterVocabulary } from "../app/learning/vocab-explorer-model.ts";
 import { emptyProgress, parseProgress } from "../app/learning/engine.ts";
 import { saveWord, wordKey } from "../app/learning/academy-engine.ts";
 import { isCorrect } from "../app/learning/learning-utils.ts";
@@ -13,14 +16,18 @@ import { answerVocab, finishVocabRound, startVocabRound, updateVocabDraft } from
 import { selectReviewQueue } from "../app/learning/review-queue.ts";
 import { mergeProfileProgress } from "../app/learning/profile-merge.ts";
 
-test("typed vocabulary retains every previous word identity and gives all 836 entries a typed answer contract", () => {
-  assert.equal(vocabItems.length, 836);
-  assert.equal(new Set(vocabItems.map(item => item.id)).size, 836);
+test("typed vocabulary retains every previous identity and expands the valid answer contract to course-list words", () => {
+  const previous = [...library.banks, ...enrichment.banks].flatMap(bank => bank.words);
+  assert.equal(previous.length, 836);
+  assert.deepEqual(vocabItems.slice(0, previous.length).map(item => item.id), previous.map(word => word.id));
+  assert.deepEqual(vocabItems.slice(0, previous.length).map(item => item.word), previous, "existing authored cards remain unchanged");
+  assert.ok(vocabItems.length > previous.length);
+  assert.equal(new Set(vocabItems.map(item => item.id)).size, vocabItems.length);
   for (const word of enrichment.banks.flatMap(bank => bank.words)) assert.ok(vocabItemById.has(word.id));
   for (const item of vocabItems) {
     assert.equal(item.mode, "words"); assert.equal(item.options, undefined);
     assert.ok(item.answers.length > 0 && item.answers.every(answer => answer.trim() && !answer.includes("/")));
-    assert.ok(vocabBanks.some(bank => bank.id === item.bankId));
+    assert.ok(item.unitId || item.bankId === "saved-nouns" || vocabBanks.some(bank => bank.id === item.bankId));
   }
 });
 test("paired legacy cards accept one complete form without accepting missing auxiliaries or lost accents", () => {
@@ -46,10 +53,10 @@ test("saved-word practice selects only starred catalogue entries and preserves t
   assert.deepEqual(vocabPool(saved, "saved").map(item => item.id), [word.id]);
   assert.deepEqual(saved.completed, original.completed);
   assert.equal(saved.arcade, original.arcade);
-  assert.equal(vocabPool(saved, "all").length, 836);
+  assert.equal(vocabPool(saved, "all").length, vocabItems.length);
 });
 
-test("every existing grammar and booster-noun word can be typed after saving without expanding the visible 836-entry library", () => {
+test("all existing supplemental identities stay reachable when the visible word collection expands", () => {
   const available = new Set(vocabPracticeItems.map(item => wordKey(item.word.term)));
   const terms = [...grammar.units.flatMap(unit => unit.words), ...booster.nouns.map(noun => noun.term)];
   for (const term of terms) {
@@ -59,9 +66,79 @@ test("every existing grammar and booster-noun word can be typed after saving wit
   }
   assert.equal(supplementalGrammarVocabItems.length, 245);
   assert.equal(supplementalNounVocabItems.length, 3);
-  assert.equal(vocabItems.length, 836); assert.equal(vocabBanks.length, 71);
-  assert.equal(vocabPool(emptyProgress(), "all").length, 836);
+  assert.deepEqual(vocabBanks.slice(0, 71).map(bank => bank.id), [...library.banks, ...enrichment.banks].map(bank => bank.id));
+  assert.equal(vocabPool(emptyProgress(), "all").length, vocabItems.length);
   assert.equal(vocabItemById.size, vocabPracticeItems.length);
+});
+
+test("every approved CSV row resolves to a visible target and imported entries do not invent examples or levels", () => {
+  assert.equal(course.coverage.length, course.listRows);
+  assert.equal(new Set(course.coverage.map(row => row.key)).size, course.listRows);
+  const visibleIds = new Set(vocabItems.map(item => item.id));
+  for (const row of course.coverage) assert.ok(visibleIds.has(row.id), row.id);
+  assert.equal(courseVocabularySummary.addedWords + courseVocabularySummary.coveredRows, course.listRows);
+  for (const item of vocabItems.filter(item => item.word.provenance === "course-list")) {
+    assert.equal(item.collection, "course");
+    assert.equal(item.level, undefined);
+    assert.equal(item.word.exampleKind, "translation");
+    assert.deepEqual(item.word.example, item.word.term);
+    assert.ok(vocabWordType(item));
+    assert.ok(item.answers.every(answer => isCorrect(answer, item.answers) && !/[→/]/.test(answer)));
+  }
+  const json = JSON.stringify(course);
+  assert.ok(!json.includes("Organised/") && !json.includes("source_text") && !json.includes("learner_status"));
+});
+
+test("new typed records survive backup reload and reach the shared dated review queue", () => {
+  const word = vocabItems.find(item => item.collection === "course");
+  const ids = planningMissions.map(mission => mission.id);
+  const started = updateVocabDraft(startVocabRound(emptyProgress(), [word], "2026-11-12", "course-import"), word.answers[0].slice(0, 2));
+  const loaded = parseProgress(JSON.stringify(started), ids);
+  assert.equal(loaded.vocabPractice.active.draft, word.answers[0].slice(0, 2));
+  const finished = finishVocabRound(answerVocab(loaded, word, word.answers[0], "2026-11-12"));
+  const queue = selectReviewQueue(parseProgress(JSON.stringify(finished), ids), planningReviewCatalogue, "2026-11-13");
+  assert.ok(queue.items.some(item => item.id === `vocab:${word.id}`));
+});
+
+test("word-type and collection filters preserve meaning, including adverbs and mixed grammatical roles", () => {
+  const p = emptyProgress(), filters = { query: "", bank: "all", source: "all", level: "all", status: "all" };
+  const adverb = vocabItems.find(item => item.word.term.it === "sempre");
+  assert.ok(vocabPartOfSpeechIds(adverb).includes("adverb"));
+  assert.ok(!vocabPartOfSpeechIds(adverb).includes("verb"));
+  assert.ok(filterVocabulary(vocabItems, p, "2026-11-12", {...filters,partOfSpeech:"adverb"}).includes(adverb));
+  const mixed = {...adverb,word:{...adverb.word,partOfSpeech:"noun / adjective"}};
+  assert.equal(filterVocabulary([mixed], p, "2026-11-12", {...filters,partOfSpeech:"adjective"}).length, 1);
+  assert.ok(filterVocabulary(vocabItems, p, "2026-11-12", {...filters,collection:"course"}).every(item => item.collection === "course"));
+});
+
+test("imported answer variants preserve full auxiliaries and meaningful accents", () => {
+  const past = vocabItems.find(item => item.word.term.it.includes("sono andato"));
+  assert.ok(isCorrect("sono andata", past.answers));
+  assert.ok(!isCorrect("andata", past.answers));
+  const yes = vocabItems.find(item => item.word.term.it === "sì");
+  assert.ok(yes && isCorrect("sì", yes.answers));
+  assert.ok(!isCorrect("si", yes.answers));
+  const impersonal = vocabItems.find(item => item.word.term.it === "si" && item.word.term.en.includes("impersonal"));
+  assert.ok(impersonal && isCorrect("si", impersonal.answers));
+  assert.ok(!isCorrect("sì", impersonal.answers));
+});
+
+test("reviewed synonyms accept equivalent answers while ambiguous dictionary senses stay separate", () => {
+  const imported = vocabItems.filter(item => item.collection === "course");
+  const find = it => imported.find(item => item.word.term.it === it);
+  const wood = find("legno"), forest = find("bosco");
+  assert.ok(wood.word.term.en.includes("material") && forest.word.term.en.includes("forest"));
+  assert.ok(!isCorrect("bosco", wood.answers) && !isCorrect("legno", forest.answers));
+  const paper = find("foglio"), bed = find("lenzuolo");
+  assert.ok(paper.word.term.en.includes("paper") && bed.word.term.en.includes("bed"));
+  assert.ok(!isCorrect("lenzuolo", paper.answers));
+  const nurse = find("infermiere");
+  assert.ok(isCorrect("infermiera", nurse.answers));
+  const money = find("spendere"), time = find("trascorrere");
+  assert.ok(money.word.term.en.includes("money") && time.word.term.en.includes("time"));
+  assert.ok(!isCorrect("trascorrere", money.answers));
+  assert.ok(!vocabPartOfSpeechIds(find("tu")).includes("noun"));
+  assert.ok(vocabPartOfSpeechIds(find("tu")).includes("pronoun"));
 });
 
 test("grammar arrow reminders ask for the form named by the English cue instead of requiring source notation", () => {

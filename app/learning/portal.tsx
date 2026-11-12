@@ -384,6 +384,8 @@ export default function Portal() {
     setPdfStatus({ en: "PDF disconnected for this tab.", it: "PDF scollegato per questa scheda." });
   }
   const shared = { p, t, text, save, go, today, pdfs, pdfPageOffsets };
+  const vocabRouteParams = new URLSearchParams(route.split("?")[1] ?? "");
+  const vocabularyFocused = routePath === "vocab-boost" && p.vocabPractice?.active && !["library", "review"].includes(vocabRouteParams.get("view") ?? "practice") && vocabRouteParams.get("paused") !== "1";
   if (!ready)
     return (
       <div className="daily-app">
@@ -393,7 +395,7 @@ export default function Portal() {
       </div>
     );
   return (
-    <div className={`daily-app${routePath === "vocab-boost" && p.vocabPractice?.active ? " vocab-active" : ""}`}>
+    <div className={"daily-app" + (routePath === "vocab-boost" ? " vocab-surface" : "") + (vocabularyFocused ? " vocab-active" : "")}>
       <a
         className="skip-link"
         href="#main-content"
@@ -506,7 +508,7 @@ export default function Portal() {
             aria-label={t("Study tools", "Strumenti di studio")}
           >
             {[
-              ["vocab-boost", t("Vocabulary booster · type words", "Vocabolario · scrivi le parole")],
+              ["vocab-boost", t("Word Quest · vocabulary", "Avventura lessicale · vocabolario")],
               ["chapters", t("Book chapters", "Capitoli dei libri")],
               ["diagnostics", t("A2 chapter checks", "Controlli dei capitoli A2")],
               ["listening", t("Private listening", "Ascolto personale")],
@@ -583,7 +585,7 @@ export default function Portal() {
                 <button className="text-button" onClick={() => go("lesson/reviewlab-compare-quantities")}>{t("Try a new 5-minute lesson", "Prova una nuova lezione di 5 minuti")} →</button>
               </div>
             </section>
-            <p className="today-vocab-link"><button className="button secondary" onClick={() => go("vocab-boost")}>{p.vocabPractice?.active ? t("Resume typed vocabulary", "Riprendi il vocabolario scritto") : t(`Vocabulary booster · type ${p.vocabPractice?.settings.size ?? 5} words`, `Vocabolario · scrivi ${p.vocabPractice?.settings.size ?? 5} parole`)} →</button></p>
+            <p className="today-vocab-link"><button className="button secondary" onClick={() => go("vocab-boost")}>{p.vocabPractice?.active ? t("Continue Word Quest", "Continua l’avventura lessicale") : t(`Word Quest · ${p.vocabPractice?.settings.size ?? 5} words`, `Avventura lessicale · ${p.vocabPractice?.settings.size ?? 5} parole`)} →</button></p>
             <p className="today-oral-link"><button className="text-button" onClick={() => go("listen-speak?minutes=5")}>{t("Prefer a short listening & speaking session? · 5 or 10 minutes", "Preferisci una breve sessione di ascolto e parlato? · 5 o 10 minuti")} →</button></p>
             {reviewQueue.totalDue > 0 && <p className="today-review-link"><button className="text-button" onClick={() => go("reviews?minutes=5")}>{t(`${reviewQueue.totalDue} reviews ready · choose a short optional session`, `${reviewQueue.totalDue} ripassi pronti · scegli una breve sessione facoltativa`)} →</button></p>}
             <p className="today-chapter-link"><button className="text-button" onClick={() => go("chapters")}>{t("Explore the twenty book chapters", "Esplora i venti capitoli dei libri")} →</button></p>

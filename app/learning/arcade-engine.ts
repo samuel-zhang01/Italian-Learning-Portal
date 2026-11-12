@@ -7,6 +7,10 @@ import type {
 } from "./types.ts";
 import { addDays, isCorrect, validDate } from "./learning-utils.ts";
 
+// Shared by Games and typed vocabulary; enough room for the complete course
+// collection while keeping imported records bounded. Version-1 shapes stay unchanged.
+export const MAX_ARCADE_RECORDS = 10_000;
+
 export const defaultArcadeSettings: ArcadeSettings = {
   mode: "words",
   size: 5,
@@ -261,7 +265,7 @@ export function validateArcade(
   if ((s.wordFocus !== undefined && !["meaning", "articles"].includes(String(s.wordFocus)))
     || (s.verbLevel !== undefined && !["present", "past", "mixed"].includes(String(s.verbLevel)))
     || (s.verbScope !== undefined && !["essentials", "all"].includes(String(s.verbScope)))) fail();
-  if (Object.keys(value.records).length > 2000 || value.history.length > 30)
+  if (Object.keys(value.records).length > MAX_ARCADE_RECORDS || value.history.length > 30)
     fail();
   for (const [id, r] of Object.entries(value.records)) {
     if (

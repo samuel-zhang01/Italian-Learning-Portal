@@ -8,7 +8,9 @@ import { generatedPlanningJSON } from "../scripts/generate_planning_metadata.mjs
 import {
   planningAssessmentIds, planningBanks, planningMissions, planningPages,
   planningProgrammes, planningReviewCatalogue, planningScenes, planningSources, planningUnits,
+  planningVocabularyCollectionCount,
 } from "../app/learning/planning-data.ts";
+import { vocabItems } from "../app/learning/vocab-catalogue.ts";
 import { dailyStudyPlan } from "../app/learning/study.ts";
 import { emptyProgress, parseProgress } from "../app/learning/engine.ts";
 import { emptyAcademy, getGrammarDraft, grammarReviewQueue, selectProgramme, wordKey } from "../app/learning/academy-engine.ts";
@@ -37,10 +39,14 @@ test("generated planning metadata exactly matches its reproducible authored-only
   assert.equal(actual, generatedPlanningJSON(), "run node scripts/generate_planning_metadata.mjs after changing authored catalogue identity");
   const sourceBytes = ["curriculum", "grammar", "companion", "enrichment", "arcade-scenes"]
     .reduce((sum, name) => sum + Buffer.byteLength(readFileSync(path.join(root, "app/learning", `${name}.json`))), 0);
-  assert.ok(Buffer.byteLength(actual) < sourceBytes / 10, "planning must stay below one tenth of full authored catalogue bytes");
+  const {courseVocabBanks, ...core} = JSON.parse(actual);
+  assert.ok(Buffer.byteLength(JSON.stringify(core)) < sourceBytes / 10, "core planning must stay below one tenth of full authored catalogue bytes");
+  const courseWords = courseVocabBanks.flatMap(bank => bank.words);
+  assert.ok(Buffer.byteLength(JSON.stringify(courseVocabBanks)) < courseWords.length * 100, "new review metadata keeps only one compact ID/term record per word");
 });
 
 test("metadata preserves catalogue ordering and identity while omitting exercise and lesson bodies", () => {
+  assert.equal(planningVocabularyCollectionCount, vocabItems.length);
   assert.deepEqual(planningAssessmentIds, grammar.units.flatMap((unit) => unit.exercises.map((exercise) => exercise.id)));
   assert.deepEqual(planningMissions.map((mission) => mission.id), curriculum.missions.map((mission) => mission.id));
   assert.deepEqual(planningUnits.map((unit) => unit.id), grammar.units.map((unit) => unit.id));
@@ -131,7 +137,7 @@ test("light review metadata exactly matches full activity IDs, titles and duplic
     ...(item.word ? { wordKey: wordKey(item.word.term) } : {}),
   }));
   assert.deepEqual(planningReviewCatalogue.arcade, expected);
-  const terms = [...grammar.units.flatMap((unit) => unit.words), ...enrichment.banks.flatMap((bank) => bank.words.map((word) => word.term)), ...read("booster-content").nouns.map((noun) => noun.term), ...read("vocab-library").banks.flatMap(bank => bank.words.map(word => word.term))];
+  const terms = [...grammar.units.flatMap((unit) => unit.words), ...enrichment.banks.flatMap((bank) => bank.words.map((word) => word.term)), ...read("booster-content").nouns.map((noun) => noun.term), ...read("vocab-library").banks.flatMap(bank => bank.words.map(word => word.term)), ...read("course-vocabulary").banks.flatMap(bank => bank.words.map(word => word.term))];
   assert.deepEqual(planningReviewCatalogue.words, [...new Map(terms.map((term) => [wordKey(term), { key: wordKey(term), term }])).values()]);
   const vocabulary = [...enrichment.banks, ...read("vocab-library").banks].flatMap(bank => bank.words.map(word => ({
     id: word.id, title: { en: word.term.en, it: word.term.en }, wordKey: wordKey(word.term),
@@ -149,6 +155,9 @@ test("light review metadata exactly matches full activity IDs, titles and duplic
     vocabularyKeys.add(key);
     vocabulary.push({ id: `noun-vocab:${noun.id}`, title: { en: noun.term.en, it: noun.term.en }, wordKey: key });
   }
+  for (const bank of read("course-vocabulary").banks) for (const word of bank.words) vocabulary.push({
+    id: word.id, title: { en: word.term.en, it: word.term.en }, wordKey: wordKey(word.term),
+  });
   assert.deepEqual(planningReviewCatalogue.vocab, vocabulary);
 });
 
@@ -170,7 +179,7 @@ test("the initial progress engine dependency graph contains compact metadata wit
   visit(path.join(root, "app/learning/engine.ts"));
   const names = [...visited].map((file) => path.basename(file));
   assert.ok(names.includes("planning-metadata.json"));
-  for (const full of ["curriculum.json", "grammar.json", "companion.json", "enrichment.json", "arcade-scenes.json", "booster-content.json", "vocab-library.json"]) {
+  for (const full of ["curriculum.json", "grammar.json", "companion.json", "enrichment.json", "arcade-scenes.json", "booster-content.json", "vocab-library.json", "course-vocabulary.json"]) {
     assert.ok(!names.includes(full), `${full} must load with its study route, not synchronous progress hydration`);
   }
 });
