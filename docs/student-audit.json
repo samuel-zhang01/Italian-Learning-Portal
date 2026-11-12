@@ -277,5 +277,18 @@
       "Source glossary and advanced-system limits are recorded in docs/week5-content-review.json."
     ],
     "publication": "docs/deployment-week5-2026-11-08.json"
+  },
+  "escape_room_2026_11_12": {
+    "report": "docs/escape-room-student-audit-2026-11-12.json",
+    "tested": [
+      "Two original lessons in EN/IT at 390 and 1440 px: wrong answers, corrections, reload, self-check, completion, notebook and scheduled recall.",
+      "Five-day route selection, fresh production gate, guided vocabulary/scene/speaking/memory trail, and saved-session pinning.",
+      "Rendered-DOCX labels and exact private PDF matching/page links; answer-key companions remain references.",
+      "327 passing daily tests, typecheck, lint, production build and six offline checks."
+    ],
+    "limitations": [
+      "Synthetic isolated Chromium profiles; no physical device or screen-reader audit.",
+      "The next-day review UI uses an explicitly advanced synthetic schedule, alongside automated real-date scheduling tests."
+    ]
   }
 }

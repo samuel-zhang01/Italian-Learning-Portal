@@ -3,6 +3,7 @@ import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState, useSyncEx
 import { createProfileSync, PROFILE_LINK_KEY } from "./profile-sync";
 import { browserProfileStore } from "./profile-store";
 import curriculum from "./curriculum.json";
+import { sourcePageLabel } from "./source-references";
 import { planningSources, planningReviewCatalogue, planningUnits } from "./planning-data";
 import { selectReviewQueue } from "./review-queue";
 import { coreRecallFeedback, firstCoreRecallToday, type LocalRecallAttempt } from "./review-evidence";
@@ -572,13 +573,14 @@ export default function Portal() {
             <SessionPreview {...shared} missions={missions} />
             <section className="class-update" aria-label={t("Latest class material", "Ultimo materiale del corso")}>
               <div>
-                <p className="eyebrow">{t("COURSE 3 · WEEK 5", "CORSO 3 · SETTIMANA 5")}</p>
-                <h2>{t("Instructions you can use.", "Istruzioni da usare.")}</h2>
-                <p>{t("Four short lessons: help a friend, give advice, say what to avoid and guide a visitor politely.", "Quattro brevi lezioni: aiuta un amico, dai consigli, indica che cosa evitare e guida un visitatore con cortesia.")}</p>
+                <p className="eyebrow">{t("COURSE 3 · CLASS REVISION", "CORSO 3 · RIPASSO DEL CORSO")}</p>
+                <h2>{t("Put the pieces together.", "Metti insieme le strutture.")}</h2>
+                <p>{t("Two new lessons on comparing quantities and saying what seems right or what you miss. Follow five revision checkpoints, or return to Week 5 instructions and advice.", "Due lezioni nuove sui confronti tra quantità e su ciò che sembra adatto o manca. Segui cinque tappe di ripasso, oppure torna alle istruzioni e ai consigli della settimana 5.")}</p>
               </div>
               <div className="class-update-actions">
+                <button className="button secondary" onClick={() => go("programmes?programme=course3-integrated-recall")}>{t("Open class revision route", "Apri il percorso di ripasso")} →</button>
                 <button className="button secondary" onClick={() => go("programmes?programme=course3-week5")}>{t("Open Week 5 route", "Apri il percorso della settimana 5")} →</button>
-                <button className="text-button" onClick={() => go("lesson/week5-friendly-instructions")}>{t("Try the first 5-minute lesson", "Prova la prima lezione di 5 minuti")} →</button>
+                <button className="text-button" onClick={() => go("lesson/reviewlab-compare-quantities")}>{t("Try a new 5-minute lesson", "Prova una nuova lezione di 5 minuti")} →</button>
               </div>
             </section>
             <p className="today-vocab-link"><button className="button secondary" onClick={() => go("vocab-boost")}>{p.vocabPractice?.active ? t("Resume typed vocabulary", "Riprendi il vocabolario scritto") : t(`Vocabulary booster · type ${p.vocabPractice?.settings.size ?? 5} words`, `Vocabolario · scrivi ${p.vocabPractice?.settings.size ?? 5} parole`)} →</button></p>
@@ -1236,11 +1238,10 @@ function SourceNote({
             <strong>{s.title}</strong>
             <small>{s.path}</small>
             <p>
-              {s.title.endsWith(".pptx")
-                ? t("Slides", "Diapositive")
-                : t("PDF pages", "Pagine PDF")}
+                {t(sourcePageLabel(s).en, sourcePageLabel(s).it)}
               : {ref.pages.join(", ")}
             </p>
+            {s.pagination && <p className="hint">{t(s.pagination.note.en, s.pagination.note.it)}</p>}
             {pdfs[s.id] && (
               <a
                 className="text-button"
@@ -2399,10 +2400,9 @@ function Materials({
                 </summary>
                 <p>
                   {s.pages}{" "}
-                  {s.title.endsWith(".pptx")
-                    ? t("slides", "diapositive")
-                    : t("PDF pages", "pagine PDF")}
+                  {text(sourcePageLabel(s))}
                 </p>
+                {s.pagination && <p className="hint">{text(s.pagination.note)}</p>}
                 {pdfs[s.id] && (
                   <a
                     className="text-button"

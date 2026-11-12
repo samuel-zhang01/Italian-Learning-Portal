@@ -619,5 +619,20 @@
       "verifiedAt": "2026-11-08T12:02:31.347724+00:00",
       "report": "docs/deployment-week5-2026-11-08.json"
     }
+  },
+  "escape_room_2026_11_12": {
+    "report": "docs/escape-room-content-review-2026-11-12.json",
+    "source": "Course 3/Solution_Italian_Level_2_Escape_Room_.docx",
+    "renderedPagesReviewed": 3,
+    "week5Unchanged": true,
+    "newMissions": 2,
+    "newVocabularyEntries": 16,
+    "programmeId": "course3-integrated-recall",
+    "remainingSourceGaps": [
+      "This review uses a retained three-page LibreOffice render; Word or another PDF export may paginate differently.",
+      "The supplied completed puzzle, code clues and final code remain private source material.",
+      "The past, reflexive and comparison foundations are reused rather than duplicated as new grammar units.",
+      "The new sembrare/mancare lesson is limited to present-tense nominal-subject patterns; it is not a complete course on either verb."
+    ]
   }
 }

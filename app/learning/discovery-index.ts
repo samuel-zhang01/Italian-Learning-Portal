@@ -123,7 +123,9 @@ export function buildDiscoveryIndex(data: Catalogue): DiscoveryEntry[] {
     const first = data.pages.find((page) => page.sourceId === source.id);
     if (!first) continue;
     add({ id: source.id, kind: "source", title: { en: source.title, it: source.title },
-      summary: { en: `${source.pages} physical pages / slides. Open its companion catalogue.`, it: `${source.pages} pagine / diapositive fisiche. Apri le schede della fonte.` },
+      summary: source.pagination
+        ? { en: `${source.pages} pages in the reviewed document render. Word pagination may differ.`, it: `${source.pages} pagine nel documento renderizzato e verificato. L’impaginazione in Word può variare.` }
+        : { en: `${source.pages} physical pages / slides. Open its companion catalogue.`, it: `${source.pages} pagine / diapositive fisiche. Apri le schede della fonte.` },
       route: `companion/${first.id}`, level: sourceLevel(source), sources: [{ id: source.id, pages: [] }],
       terms: `${source.title} ${source.path}` });
   }
@@ -131,7 +133,9 @@ export function buildDiscoveryIndex(data: Catalogue): DiscoveryEntry[] {
     const source = sourceById.get(page.sourceId);
     if (!source) continue;
     add({ id: page.id, kind: "page", title: page.focus,
-      summary: { en: `${source.title} · physical page ${page.page}`, it: `${source.title} · pagina fisica ${page.page}` },
+      summary: source.pagination
+        ? { en: `${source.title} · reviewed render page ${page.page}`, it: `${source.title} · pagina ${page.page} del documento renderizzato e verificato` }
+        : { en: `${source.title} · physical page ${page.page}`, it: `${source.title} · pagina fisica ${page.page}` },
       route: `companion/${page.id}`, level: sourceLevel(source) ?? levelOf(page.unitIds.map((id) => unitById.get(id)).filter((unit): unit is GrammarUnit => Boolean(unit))),
       sources: [{ id: source.id, pages: [page.page] }], pageKind: page.kind,
       terms: `${pairText(page.focus)} ${source.title} ${source.path} ${page.page} ${page.unitIds.map((id) => unitById.get(id)).filter((unit): unit is GrammarUnit => Boolean(unit)).map(grammarSearchText).join(" ")}` });

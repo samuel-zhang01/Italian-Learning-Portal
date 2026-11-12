@@ -5,6 +5,21 @@ import catalogue from "../app/learning/pdf-bundles.json" with { type: "json" };
 import navigationAudit from "../docs/pdf-navigation-audit.json" with { type: "json" };
 import { createLocalPdfStore, localPdfPageHref } from "../app/learning/local-pdfs.ts";
 
+test("a Word source connects only its exact reviewed PDF render, never native DOCX bytes or an arbitrary export", async () => {
+  const render = "%PDF-1.7\nA reviewed document render", native = "Synthetic native Word document bytes";
+  const source = {
+    id: "word-source", path: "Course 3/review.docx", pages: 3,
+    sha256: createHash("sha256").update(native).digest("hex"),
+    pagination: { basis: "rendered-document", pdfSha256: createHash("sha256").update(render).digest("hex") },
+  };
+  const store = createLocalPdfStore([source], { createObjectURL: () => "blob:reviewed-render", revokeObjectURL: () => {} }, []);
+  assert.equal((await store.connect(new File([native], "review.docx"))).status, "unmatched");
+  assert.equal((await store.connect(new File(["%PDF a different export"], "review.pdf"))).status, "unmatched");
+  assert.equal((await store.connect(new File([render], "renamed.pdf"))).status, "matched");
+  assert.equal(localPdfPageHref(store.snapshot()[source.id], 2), "blob:reviewed-render#page=2");
+  store.dispose();
+});
+
 function fixture() {
   const content = "%PDF-1.7\nA local study book";
   const hash = createHash("sha256").update(content).digest("hex");

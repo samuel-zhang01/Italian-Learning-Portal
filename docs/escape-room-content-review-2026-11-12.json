@@ -1,0 +1,113 @@
+{
+  "reviewedOn": "2026-11-12",
+  "source": {
+    "id": "src-6c05684ab06a",
+    "path": "Course 3/Solution_Italian_Level_2_Escape_Room_.docx",
+    "title": "Solution_Italian_Level_2_Escape_Room_.docx",
+    "course": 3,
+    "pages": 3,
+    "sha256": "6c05684ab06ad0ed49c17df39eeae066b856d2c18ab0820085adab5310fbccd3",
+    "pagination": {
+      "basis": "rendered-document",
+      "note": {
+        "en": "Page numbers refer to the reviewed three-page LibreOffice PDF render. Word pagination may differ; check the CASE heading. Only that exact private PDF render can connect here.",
+        "it": "I numeri rimandano al PDF di tre pagine renderizzato con LibreOffice e verificato. L’impaginazione in Word può variare; controlla il titolo CASE. Qui si può collegare solo quel PDF privato esatto."
+      },
+      "pdfSha256": "bb29de7b0fcb54041a2ed811f404bb5a32fee548eb2eee8e784f233a55884c33"
+    }
+  },
+  "physicalPagesRead": [
+    1,
+    2,
+    3
+  ],
+  "visualPages": [
+    1,
+    2,
+    3
+  ],
+  "pagination": {
+    "renderer": "LibreOffice 24.2",
+    "physicalPages": 3,
+    "nativeWordPaginationClaimed": false,
+    "casePageMap": {
+      "CASE 01": 1,
+      "CASE 02": 1,
+      "CASE 03": 2,
+      "CASE 04": 2,
+      "CASE 05": 3
+    }
+  },
+  "week5Recheck": {
+    "path": "Course 3/PDF_Week_5.pdf",
+    "sha256": "d7cf3d20c90da8cff714a1408a25f82387cb815fd3c92bbf7df990f52c8c0ae7",
+    "pages": 16,
+    "changed": false,
+    "existingMissionIdsPreserved": true
+  },
+  "sourceIssues": [
+    {
+      "page": 2,
+      "case": "CASE 04",
+      "issue": "The instruction asks to replace stressed pronouns, but the supplied completed sentences already contain unstressed pronouns. New practice names a person explicitly before requesting one pronoun."
+    }
+  ],
+  "baseline": {
+    "curriculum.missions": {
+      "count": 78,
+      "sha256": "ef537a37c637cdd0a095628afa641154f2ba4734649244d7b6207c033d2f8d00"
+    },
+    "curriculum.sources": {
+      "count": 56,
+      "sha256": "784c236876afa84cbe3fec50dd869aeabad4bdccf7cb2ed887f1302c37e82863"
+    },
+    "enrichment.banks": {
+      "count": 49,
+      "sha256": "53e616af664847960ab6354f895d63ee470430136c272cd4c8cf411a9b5a8c39"
+    },
+    "enrichment.lessons": {
+      "count": 78,
+      "sha256": "f81aea719b7237dc696b55c079e011ab925465ceedd3871eaa808a51fcc0d25f"
+    },
+    "grammar.units": {
+      "count": 65,
+      "sha256": "5d3016fdff829f4cade443960a8fb9e9c54c70ee3ae871c9f75f6e893daf3a63"
+    },
+    "grammar.programmes": {
+      "count": 5,
+      "sha256": "98114b2d2e17ecc98a2cf1707d3977d58e7b6dd5a1f274a01040fa92b07a56f3"
+    },
+    "companion.sources": {
+      "count": 56,
+      "sha256": "1249532c90957c59b0073cdea06e9cbcdf1550fd329755e0af1e4d754eb7c2a4"
+    },
+    "companion.pages": {
+      "count": 1659,
+      "sha256": "7e9e97940e5190a570fffa57fb4703a4ae541368cb4ee1282eab5063aff66e18"
+    }
+  },
+  "previousVocabularyPracticeIds": {
+    "count": 1068,
+    "sha256": "a7f4b1775f6063aaae88bdfc28307761056e4b1a4390412c609293d80264121b"
+  },
+  "missionIds": [
+    "reviewlab-compare-quantities",
+    "reviewlab-seems-and-misses"
+  ],
+  "programmeId": "course3-integrated-recall",
+  "newMissions": 2,
+  "newGuidedSessions": 2,
+  "newVocabularyEntries": 16,
+  "referencePages": [
+    1,
+    2,
+    3
+  ],
+  "provenance": "All practice, scenes, examples and programme responses are original changed-detail companion material. All three answer-key pages remain reference-only; puzzle answers and the final code are not published. Vocabulary phrases are labelled original topic extensions.",
+  "remainingSourceGaps": [
+    "This review uses a retained three-page LibreOffice render; Word or another PDF export may paginate differently.",
+    "The supplied completed puzzle, code clues and final code remain private source material.",
+    "The past, reflexive and comparison foundations are reused rather than duplicated as new grammar units.",
+    "The new sembrare/mancare lesson is limited to present-tense nominal-subject patterns; it is not a complete course on either verb."
+  ]
+}

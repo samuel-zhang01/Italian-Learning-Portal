@@ -47,7 +47,7 @@ test("all twenty chapters have eight contextual cards with stable IDs and verifi
   assert.equal(banks.length, 20);
   assert.equal(enrichment.banks.slice(0, 41).length, 41);
   assert.equal(enrichment.banks.slice(0, 41).flatMap((bank) => bank.words).length, 328);
-  assert.equal(new Set(enrichment.banks.flatMap((bank) => bank.words.map((word) => word.id))).size, 420);
+  assert.equal(new Set(enrichment.banks.flatMap((bank) => bank.words.map((word) => word.id))).size, 436);
   for (const bank of banks) {
     const book = bank.level === "A1" ? 1 : 2;
     assert.ok(Number.isInteger(bank.chapter) && bank.chapter >= 1 && bank.chapter <= 10);

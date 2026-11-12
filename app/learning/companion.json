@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-11-08",
+  "reviewedOn": "2026-11-12",
   "sources": [
     {
       "id": "src-c62281320322",
@@ -448,6 +448,22 @@
       "course": 3,
       "pages": 16,
       "sha256": "d7cf3d20c90da8cff714a1408a25f82387cb815fd3c92bbf7df990f52c8c0ae7"
+    },
+    {
+      "id": "src-6c05684ab06a",
+      "path": "Course 3/Solution_Italian_Level_2_Escape_Room_.docx",
+      "title": "Solution_Italian_Level_2_Escape_Room_.docx",
+      "course": 3,
+      "pages": 3,
+      "sha256": "6c05684ab06ad0ed49c17df39eeae066b856d2c18ab0820085adab5310fbccd3",
+      "pagination": {
+        "basis": "rendered-document",
+        "note": {
+          "en": "Page numbers refer to the reviewed three-page LibreOffice PDF render. Word pagination may differ; check the CASE heading. Only that exact private PDF render can connect here.",
+          "it": "I numeri rimandano al PDF di tre pagine renderizzato con LibreOffice e verificato. L’impaginazione in Word può variare; controlla il titolo CASE. Qui si può collegare solo quel PDF privato esatto."
+        },
+        "pdfSha256": "bb29de7b0fcb54041a2ed811f404bb5a32fee548eb2eee8e784f233a55884c33"
+      }
     }
   ],
   "pages": [
@@ -42825,6 +42841,77 @@
       "model": {
         "en": "My homework response stays separate from the original portal models.",
         "it": "La mia risposta ai compiti resta separata dai modelli originali del portale."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-6c05684ab06a-p1",
+      "sourceId": "src-6c05684ab06a",
+      "page": 1,
+      "kind": "reference",
+      "focus": {
+        "en": "Comparisons and present/past review",
+        "it": "Confronti e ripasso di presente/passato"
+      },
+      "unitIds": [
+        "a2-comparisons",
+        "present-past-choice"
+      ],
+      "task": {
+        "en": "Review this private answer-key page after your own attempt. Use the linked original lessons for a different situation; the portal does not reproduce the completed puzzle or its code.",
+        "it": "Consulta questa pagina del correttore privato dopo il tuo tentativo. Usa le lezioni originali collegate per una situazione diversa; il portale non riproduce l’enigma completato né il codice."
+      },
+      "model": {
+        "en": "I compare the language pattern, then try new details from memory.",
+        "it": "Confronto la struttura linguistica e poi provo dettagli nuovi a memoria."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-6c05684ab06a-p2",
+      "sourceId": "src-6c05684ab06a",
+      "page": 2,
+      "kind": "reference",
+      "focus": {
+        "en": "Reflexives and short personal messages",
+        "it": "Riflessivi e brevi messaggi personali"
+      },
+      "unitIds": [
+        "past-essere",
+        "piacere",
+        "a2-indirect-pronouns"
+      ],
+      "task": {
+        "en": "Review this private answer-key page after your own attempt. Use the linked original lessons for a different situation; the portal does not reproduce the completed puzzle or its code.",
+        "it": "Consulta questa pagina del correttore privato dopo il tuo tentativo. Usa le lezioni originali collegate per una situazione diversa; il portale non riproduce l’enigma completato né il codice."
+      },
+      "model": {
+        "en": "I compare the language pattern, then try new details from memory.",
+        "it": "Confronto la struttura linguistica e poi provo dettagli nuovi a memoria."
+      },
+      "checks": []
+    },
+    {
+      "id": "src-6c05684ab06a-p3",
+      "sourceId": "src-6c05684ab06a",
+      "page": 3,
+      "kind": "reference",
+      "focus": {
+        "en": "Combine the timeline with a personal reaction",
+        "it": "Unisci la sequenza temporale a una reazione personale"
+      },
+      "unitIds": [
+        "present-past-choice",
+        "past-essere",
+        "a2-comparisons"
+      ],
+      "task": {
+        "en": "Review this private answer-key page after your own attempt. Use the linked original lessons for a different situation; the portal does not reproduce the completed puzzle or its code.",
+        "it": "Consulta questa pagina del correttore privato dopo il tuo tentativo. Usa le lezioni originali collegate per una situazione diversa; il portale non riproduce l’enigma completato né il codice."
+      },
+      "model": {
+        "en": "I compare the language pattern, then try new details from memory.",
+        "it": "Confronto la struttura linguistica e poi provo dettagli nuovi a memoria."
       },
       "checks": []
     }

@@ -35,7 +35,7 @@ const doneDraft = () => ({
 });
 test("all lessons have bilingual teaching, distinct retrieval and exact source pages", () => {
   assert.equal(new Set(ids).size, missions.length);
-  assert.equal(missions.length, 78);
+  assert.equal(missions.length, 80);
   const bilingual = (x) => {
     if (Array.isArray(x)) x.forEach(bilingual);
     else if (x && typeof x === "object") {
@@ -225,8 +225,8 @@ test("every stable mission has original guided material and a valid vocabulary b
     enrichment.lessons.map((l) => l.missionId).sort(),
     [...ids].sort(),
   );
-  assert.equal(enrichment.banks.length, 49);
-  assert.equal(enrichment.banks.flatMap((b) => b.words).length, 420);
+  assert.equal(enrichment.banks.length, 51);
+  assert.equal(enrichment.banks.flatMap((b) => b.words).length, 436);
   const bilingual = (pair) => {
     assert.ok(pair.en.trim());
     assert.ok(pair.it.trim());

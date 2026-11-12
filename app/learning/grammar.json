@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-11-08",
+  "reviewedOn": "2026-11-12",
   "units": [
     {
       "id": "noun-gender",
@@ -23255,6 +23255,202 @@
               {
                 "en": "I checked the forms for the addressee and marked this as self-assessed.",
                 "it": "Ho controllato le forme per il destinatario e ho indicato l’autovalutazione."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "course3-integrated-recall",
+      "title": {
+        "en": "Course 3 · Put the pieces together",
+        "it": "Corso 3 · Metti insieme le strutture"
+      },
+      "summary": {
+        "en": "Five revision checkpoints using original situations: comparisons, present/past, reflexives, short personal messages and a combined retelling. Two new lessons fill specific gaps; the other lessons and grammar are reused. Each day needs new self-assessed writing. This is companion revision, not the supplied escape-room solution.",
+        "it": "Cinque tappe di ripasso con situazioni originali: confronti, presente/passato, riflessivi, brevi messaggi personali e un racconto integrato. Due lezioni nuove colmano lacune specifiche; le altre lezioni e la grammatica vengono riprese. Ogni giorno richiede un nuovo testo autovalutato. È ripasso complementare, non la soluzione dell’escape room."
+      },
+      "days": [
+        {
+          "title": {
+            "en": "Compare supplies for an activity",
+            "it": "Confronta i materiali per un’attività"
+          },
+          "unitIds": [
+            "a2-comparisons"
+          ],
+          "missionIds": [
+            "reviewlab-compare-quantities"
+          ],
+          "outcome": {
+            "en": "Invent a drawing club. Compare two quantities with che and two objects with di.",
+            "it": "Inventa un gruppo di disegno. Confronta due quantità con che e due oggetti con di."
+          },
+          "practice": {
+            "prompt": {
+              "en": "Invent a drawing club. Compare two quantities with che and two objects with di.",
+              "it": "Inventa un gruppo di disegno. Confronta due quantità con che e due oggetti con di."
+            },
+            "model": {
+              "en": "We have more pencils than erasers. This table is bigger than that one.",
+              "it": "Abbiamo più matite che gomme. Questo tavolo è più grande di quello."
+            },
+            "rubric": [
+              {
+                "en": "I used the requested structures with my own changed details.",
+                "it": "Ho usato le strutture richieste con dettagli miei e diversi."
+              },
+              {
+                "en": "I checked the subject, verb form and pronouns; this is my self-assessment.",
+                "it": "Ho controllato soggetto, forma verbale e pronomi; questa è la mia autovalutazione."
+              }
+            ]
+          }
+        },
+        {
+          "title": {
+            "en": "Separate routine from one completed event",
+            "it": "Distingui la routine da un fatto concluso"
+          },
+          "unitIds": [
+            "present-past-choice"
+          ],
+          "missionIds": [
+            "week3-irregular-story"
+          ],
+          "outcome": {
+            "en": "Invent a community garden routine and contrast it with two completed actions yesterday. Use an explicit time marker in each sentence.",
+            "it": "Inventa una routine in un orto condiviso e confrontala con due azioni concluse ieri. Usa un’indicazione temporale esplicita in ogni frase."
+          },
+          "practice": {
+            "prompt": {
+              "en": "Invent a community garden routine and contrast it with two completed actions yesterday. Use an explicit time marker in each sentence.",
+              "it": "Inventa una routine in un orto condiviso e confrontala con due azioni concluse ieri. Usa un’indicazione temporale esplicita in ogni frase."
+            },
+            "model": {
+              "en": "I usually work in the garden on Friday. Yesterday I bought seeds and prepared the ground.",
+              "it": "Di solito lavoro nell’orto il venerdì. Ieri ho comprato i semi e ho preparato il terreno."
+            },
+            "rubric": [
+              {
+                "en": "I used the requested structures with my own changed details.",
+                "it": "Ho usato le strutture richieste con dettagli miei e diversi."
+              },
+              {
+                "en": "I checked the subject, verb form and pronouns; this is my self-assessment.",
+                "it": "Ho controllato soggetto, forma verbale e pronomi; questa è la mia autovalutazione."
+              }
+            ]
+          }
+        },
+        {
+          "title": {
+            "en": "Rebuild a reflexive routine",
+            "it": "Ricostruisci una routine riflessiva"
+          },
+          "unitIds": [
+            "past-essere"
+          ],
+          "missionIds": [
+            "week3-reflexive-morning"
+          ],
+          "outcome": {
+            "en": "Describe how two invented female friends normally get ready for a walk, then say what changed yesterday. Use a present and a past reflexive form.",
+            "it": "Descrivi come due amiche inventate si preparano normalmente per una passeggiata, poi racconta che cosa è cambiato ieri. Usa un riflessivo al presente e uno al passato."
+          },
+          "practice": {
+            "prompt": {
+              "en": "Describe how two invented female friends normally get ready for a walk, then say what changed yesterday. Use a present and a past reflexive form.",
+              "it": "Descrivi come due amiche inventate si preparano normalmente per una passeggiata, poi racconta che cosa è cambiato ieri. Usa un riflessivo al presente e uno al passato."
+            },
+            "model": {
+              "en": "Usually the two friends get ready at eight. Yesterday they got up at six.",
+              "it": "Di solito le due amiche si preparano alle otto. Ieri si sono alzate alle sei."
+            },
+            "rubric": [
+              {
+                "en": "I used the requested structures with my own changed details.",
+                "it": "Ho usato le strutture richieste con dettagli miei e diversi."
+              },
+              {
+                "en": "I checked the subject, verb form and pronouns; this is my self-assessment.",
+                "it": "Ho controllato soggetto, forma verbale e pronomi; questa è la mia autovalutazione."
+              }
+            ]
+          }
+        },
+        {
+          "title": {
+            "en": "Give a personal reaction",
+            "it": "Esprimi una reazione personale"
+          },
+          "unitIds": [
+            "piacere",
+            "a2-indirect-pronouns"
+          ],
+          "missionIds": [
+            "reviewlab-seems-and-misses"
+          ],
+          "outcome": {
+            "en": "Invent a visit to a coastal town. Say what seems beautiful to one woman and what two visitors miss. Check both the pronouns and the subjects.",
+            "it": "Inventa una visita a una città di mare. Di’ che cosa sembra bello a una donna e che cosa manca a due visitatori. Controlla pronomi e soggetti."
+          },
+          "practice": {
+            "prompt": {
+              "en": "Invent a visit to a coastal town. Say what seems beautiful to one woman and what two visitors miss. Check both the pronouns and the subjects.",
+              "it": "Inventa una visita a una città di mare. Di’ che cosa sembra bello a una donna e che cosa manca a due visitatori. Controlla pronomi e soggetti."
+            },
+            "model": {
+              "en": "Bea thinks the beach is beautiful: it seems beautiful to her. The two visitors miss their friends.",
+              "it": "A Bea la spiaggia sembra bella: le sembra bella. Ai due visitatori mancano gli amici."
+            },
+            "rubric": [
+              {
+                "en": "I used the requested structures with my own changed details.",
+                "it": "Ho usato le strutture richieste con dettagli miei e diversi."
+              },
+              {
+                "en": "I checked the subject, verb form and pronouns; this is my self-assessment.",
+                "it": "Ho controllato soggetto, forma verbale e pronomi; questa è la mia autovalutazione."
+              }
+            ]
+          }
+        },
+        {
+          "title": {
+            "en": "Recall, connect and change a detail",
+            "it": "Ricorda, collega e cambia un dettaglio"
+          },
+          "unitIds": [
+            "present-past-choice",
+            "a2-comparisons",
+            "piacere"
+          ],
+          "missionIds": [
+            "reviewlab-seems-and-misses"
+          ],
+          "outcome": {
+            "en": "Without reopening the earlier models, invent three lines about a trip: one completed action yesterday, one quantity comparison today and one reaction with sembrare or mancare. Then check your work.",
+            "it": "Senza riaprire i modelli precedenti, inventa tre frasi su una gita: un’azione conclusa ieri, un confronto tra quantità oggi e una reazione con sembrare o mancare. Poi controlla il testo."
+          },
+          "practice": {
+            "prompt": {
+              "en": "Without reopening the earlier models, invent three lines about a trip: one completed action yesterday, one quantity comparison today and one reaction with sembrare or mancare. Then check your work.",
+              "it": "Senza riaprire i modelli precedenti, inventa tre frasi su una gita: un’azione conclusa ieri, un confronto tra quantità oggi e una reazione con sembrare o mancare. Poi controlla il testo."
+            },
+            "model": {
+              "en": "Yesterday we visited a garden. Today we have more photos than tickets. This new route seems useful to us.",
+              "it": "Ieri abbiamo visitato un giardino. Oggi abbiamo più foto che biglietti. Questo nuovo percorso ci sembra utile."
+            },
+            "rubric": [
+              {
+                "en": "I used the requested structures with my own changed details.",
+                "it": "Ho usato le strutture richieste con dettagli miei e diversi."
+              },
+              {
+                "en": "I checked the subject, verb form and pronouns; this is my self-assessment.",
+                "it": "Ho controllato soggetto, forma verbale e pronomi; questa è la mia autovalutazione."
               }
             ]
           }

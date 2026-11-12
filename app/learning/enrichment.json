@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-11-08",
+  "reviewedOn": "2026-11-12",
   "banks": [
     {
       "id": "survival",
@@ -6990,6 +6990,443 @@
           "id": "word:week5-polite-requests:7"
         }
       ]
+    },
+    {
+      "id": "reviewlab-quantities",
+      "title": {
+        "en": "Compare quantities and qualities",
+        "it": "Confronta quantità e qualità"
+      },
+      "description": {
+        "en": "Compare two quantities with che, then compare the same quality of two objects with di.",
+        "it": "Confronta due quantità con che, poi la stessa qualità di due oggetti con di."
+      },
+      "level": "A2",
+      "missionId": "reviewlab-compare-quantities",
+      "sourceRefs": [
+        {
+          "id": "src-6c05684ab06a",
+          "pages": [
+            1
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "a2-comparisons"
+      ],
+      "words": [
+        {
+          "id": "word:reviewlab-quantities:0",
+          "term": {
+            "en": "more invitations than places",
+            "it": "più inviti che posti"
+          },
+          "example": {
+            "en": "We have more invitations than places at the table.",
+            "it": "Abbiamo più inviti che posti a tavola."
+          },
+          "answers": [
+            "più inviti che posti"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                1
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:reviewlab-quantities:1",
+          "term": {
+            "en": "more tea than coffee",
+            "it": "più tè che caffè"
+          },
+          "example": {
+            "en": "Today I am making more tea than coffee.",
+            "it": "Oggi preparo più tè che caffè."
+          },
+          "answers": [
+            "più tè che caffè"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                1
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:reviewlab-quantities:2",
+          "term": {
+            "en": "fewer boxes than books",
+            "it": "meno scatole che libri"
+          },
+          "example": {
+            "en": "There are fewer boxes than books.",
+            "it": "Ci sono meno scatole che libri."
+          },
+          "answers": [
+            "meno scatole che libri"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                1
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:reviewlab-quantities:3",
+          "term": {
+            "en": "more practice than theory",
+            "it": "più pratica che teoria"
+          },
+          "example": {
+            "en": "In the workshop we do more practice than theory.",
+            "it": "Nel laboratorio facciamo più pratica che teoria."
+          },
+          "answers": [
+            "più pratica che teoria"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                1
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:reviewlab-quantities:4",
+          "term": {
+            "en": "more messages than calls",
+            "it": "più messaggi che chiamate"
+          },
+          "example": {
+            "en": "I receive more messages than calls.",
+            "it": "Ricevo più messaggi che chiamate."
+          },
+          "answers": [
+            "più messaggi che chiamate"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                1
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:reviewlab-quantities:5",
+          "term": {
+            "en": "fewer bags than suitcases",
+            "it": "meno borse che valigie"
+          },
+          "example": {
+            "en": "We have fewer bags than suitcases.",
+            "it": "Abbiamo meno borse che valigie."
+          },
+          "answers": [
+            "meno borse che valigie"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                1
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:reviewlab-quantities:6",
+          "term": {
+            "en": "more pens than pencils",
+            "it": "più penne che matite"
+          },
+          "example": {
+            "en": "There are more pens than pencils on the table.",
+            "it": "Sul tavolo ci sono più penne che matite."
+          },
+          "answers": [
+            "più penne che matite"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                1
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:reviewlab-quantities:7",
+          "term": {
+            "en": "more photos than videos",
+            "it": "più foto che video"
+          },
+          "example": {
+            "en": "I have more photos than videos on my phone.",
+            "it": "Nel telefono ho più foto che video."
+          },
+          "answers": [
+            "più foto che video"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                1
+              ]
+            }
+          ],
+          "provenance": "extension"
+        }
+      ]
+    },
+    {
+      "id": "reviewlab-messages",
+      "title": {
+        "en": "Say what seems right and what you miss",
+        "it": "Di’ che cosa sembra adatto e che cosa ti manca"
+      },
+      "description": {
+        "en": "Write a short message with sembrare and mancare, keeping the person separate from the thing that controls the verb.",
+        "it": "Scrivi un breve messaggio con sembrare e mancare, distinguendo la persona dalla cosa che determina il verbo."
+      },
+      "level": "A2",
+      "missionId": "reviewlab-seems-and-misses",
+      "sourceRefs": [
+        {
+          "id": "src-6c05684ab06a",
+          "pages": [
+            2
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "piacere",
+        "a2-indirect-pronouns"
+      ],
+      "words": [
+        {
+          "id": "word:reviewlab-messages:0",
+          "term": {
+            "en": "it seems easy to me",
+            "it": "mi sembra facile"
+          },
+          "example": {
+            "en": "This route seems easy to me.",
+            "it": "Questo percorso mi sembra facile."
+          },
+          "answers": [
+            "mi sembra facile"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                2
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:reviewlab-messages:1",
+          "term": {
+            "en": "they seem useful to me",
+            "it": "mi sembrano utili"
+          },
+          "example": {
+            "en": "These tips seem useful to me.",
+            "it": "Questi consigli mi sembrano utili."
+          },
+          "answers": [
+            "mi sembrano utili"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                2
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:reviewlab-messages:2",
+          "term": {
+            "en": "we miss the sea",
+            "it": "ci manca il mare"
+          },
+          "example": {
+            "en": "After the trip we miss the sea.",
+            "it": "Dopo il viaggio ci manca il mare."
+          },
+          "answers": [
+            "ci manca il mare"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                2
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:reviewlab-messages:3",
+          "term": {
+            "en": "we miss the walks",
+            "it": "ci mancano le passeggiate"
+          },
+          "example": {
+            "en": "We miss the walks through the woods.",
+            "it": "Ci mancano le passeggiate nel bosco."
+          },
+          "answers": [
+            "ci mancano le passeggiate"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                2
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:reviewlab-messages:4",
+          "term": {
+            "en": "it seems interesting to her",
+            "it": "le sembra interessante"
+          },
+          "example": {
+            "en": "This museum seems interesting to Bea: it seems interesting to her.",
+            "it": "A Bea questo museo sembra interessante: le sembra interessante."
+          },
+          "answers": [
+            "le sembra interessante"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                2
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:reviewlab-messages:5",
+          "term": {
+            "en": "he misses his friends",
+            "it": "gli mancano gli amici"
+          },
+          "example": {
+            "en": "Teo lives far away and misses his friends.",
+            "it": "Teo vive lontano e gli mancano gli amici."
+          },
+          "answers": [
+            "gli mancano gli amici"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                2
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:reviewlab-messages:6",
+          "term": {
+            "en": "you like the programme (plural you)",
+            "it": "vi piace il programma"
+          },
+          "example": {
+            "en": "Do you like the programme for the trip?",
+            "it": "Vi piace il programma della gita?"
+          },
+          "answers": [
+            "vi piace il programma"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                2
+              ]
+            }
+          ],
+          "provenance": "extension"
+        },
+        {
+          "id": "word:reviewlab-messages:7",
+          "term": {
+            "en": "I do not miss the traffic",
+            "it": "non mi manca il traffico"
+          },
+          "example": {
+            "en": "I walk here and do not miss the traffic.",
+            "it": "Qui cammino e non mi manca il traffico."
+          },
+          "answers": [
+            "non mi manca il traffico"
+          ],
+          "partOfSpeech": "phrase",
+          "sourceRefs": [
+            {
+              "id": "src-6c05684ab06a",
+              "pages": [
+                2
+              ]
+            }
+          ],
+          "provenance": "extension"
+        }
+      ]
     }
   ],
   "lessons": [
@@ -11886,6 +12323,140 @@
       "speaking": {
         "en": "Invent two instructions for one visitor at a small exhibition. Use polite Lei once positively and once negatively.",
         "it": "Inventa due istruzioni per un visitatore a una piccola mostra. Usa il Lei di cortesia una volta al positivo e una al negativo."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "reviewlab-compare-quantities",
+      "bank": "reviewlab-quantities",
+      "notes": [
+        {
+          "en": "In the pattern practised here, compare quantities of two nouns after the same verb with più/meno … che: abbiamo più inviti che posti. Compare one quality of two separate objects with di: questa tazza è più grande di quella. Two infinitive activities also use che: preferisco leggere più che guardare la TV. Identify what is being compared before choosing the connector.",
+          "it": "Nello schema esercitato qui, confronta le quantità di due nomi dopo lo stesso verbo con più/meno … che: abbiamo più inviti che posti. Confronta una qualità di due oggetti distinti con di: questa tazza è più grande di quella. Anche due attività all’infinito usano che: preferisco leggere più che guardare la TV. Individua che cosa confronti prima di scegliere il connettivo."
+        },
+        {
+          "en": "Read the whole situation, name the subject and the person involved, then retrieve the short form before checking.",
+          "it": "Leggi tutta la situazione, individua il soggetto e la persona coinvolta, poi recupera la forma breve prima di controllare."
+        },
+        {
+          "en": "This is new companion practice with changed details. The supplied answer key and its puzzle answers remain in your private source. Your own production is self-assessed.",
+          "it": "Questa è pratica nuova del portale con dettagli diversi. Il correttore fornito e le risposte dell’enigma restano nella fonte privata. La tua produzione è autovalutata."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Are we ready for the picnic?",
+          "it": "A: Siamo pronti per il picnic?"
+        },
+        {
+          "en": "B: Almost. We have more cups than plates.",
+          "it": "B: Quasi. Abbiamo più tazze che piatti."
+        },
+        {
+          "en": "A: Which basket shall we take?",
+          "it": "A: Quale cestino prendiamo?"
+        },
+        {
+          "en": "B: This basket is lighter than that one.",
+          "it": "B: Questo cestino è più leggero di quello."
+        },
+        {
+          "en": "A: Shall we buy some plates?",
+          "it": "A: Compriamo dei piatti?"
+        },
+        {
+          "en": "B: Yes, but let’s use the cups we already have.",
+          "it": "B: Sì, ma usiamo le tazze che abbiamo già."
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "Which objects are more numerous: tazze or piatti?",
+          "it": "Quali oggetti sono più numerosi: tazze o piatti?"
+        },
+        "answers": [
+          "tazze",
+          "le tazze"
+        ],
+        "explanation": {
+          "en": "They have more cups than plates.",
+          "it": "Hanno più tazze che piatti."
+        }
+      },
+      "frame": {
+        "en": "We have more / fewer ___ than ___. This ___ is more / less ___ than that one.",
+        "it": "Abbiamo più / meno ___ che ___. Questo / questa ___ è più / meno ___ di quello / quella."
+      },
+      "speaking": {
+        "en": "Invent preparations for a small picnic. Write one comparison between two quantities using che and one between two objects using di.",
+        "it": "Inventa i preparativi per un piccolo picnic. Scrivi un confronto tra due quantità con che e uno tra due oggetti con di."
+      },
+      "resource": "club"
+    },
+    {
+      "missionId": "reviewlab-seems-and-misses",
+      "bank": "reviewlab-messages",
+      "notes": [
+        {
+          "en": "With these present-tense patterns, the thing described controls singular or plural: mi sembra utile questa mappa / mi sembrano utili queste mappe; ci manca il mare / ci mancano le passeggiate. The small pronoun identifies the person: mi, ti, gli (to him), le (to her), ci, vi. Changing mi to ci does not make a singular thing plural. Compare the familiar piace/piacciono pattern, and put non before the pronoun.",
+          "it": "In questi schemi al presente, la cosa descritta determina il singolare o il plurale: mi sembra utile questa mappa / mi sembrano utili queste mappe; ci manca il mare / ci mancano le passeggiate. Il pronome indica la persona: mi, ti, gli (a lui), le (a lei), ci, vi. Cambiare mi in ci non rende plurale una cosa singolare. Confronta lo schema già noto piace/piacciono e metti non prima del pronome."
+        },
+        {
+          "en": "Read the whole situation, name the subject and the person involved, then retrieve the short form before checking.",
+          "it": "Leggi tutta la situazione, individua il soggetto e la persona coinvolta, poi recupera la forma breve prima di controllare."
+        },
+        {
+          "en": "This is new companion practice with changed details. The supplied answer key and its puzzle answers remain in your private source. Your own production is self-assessed.",
+          "it": "Questa è pratica nuova del portale con dettagli diversi. Il correttore fornito e le risposte dell’enigma restano nella fonte privata. La tua produzione è autovalutata."
+        }
+      ],
+      "dialogue": [
+        {
+          "en": "A: Do you miss the weekend?",
+          "it": "A: Ti manca il fine settimana?"
+        },
+        {
+          "en": "B: Yes, we miss the paths through the woods.",
+          "it": "B: Sì, ci mancano i sentieri nel bosco."
+        },
+        {
+          "en": "A: Are these maps clear?",
+          "it": "A: Queste mappe sono chiare?"
+        },
+        {
+          "en": "B: Yes, they seem useful to us.",
+          "it": "B: Sì, ci sembrano utili."
+        },
+        {
+          "en": "A: And what about the traffic?",
+          "it": "A: E il traffico?"
+        },
+        {
+          "en": "B: I do not miss the traffic!",
+          "it": "B: Non mi manca il traffico!"
+        }
+      ],
+      "question": {
+        "prompt": {
+          "en": "What does the speaker not miss? Write the Italian noun, with or without its article.",
+          "it": "Che cosa non manca a chi parla? Scrivi il nome italiano, con o senza articolo."
+        },
+        "answers": [
+          "traffico",
+          "il traffico"
+        ],
+        "explanation": {
+          "en": "The speaker says non mi manca il traffico.",
+          "it": "Chi parla dice non mi manca il traffico."
+        }
+      },
+      "frame": {
+        "en": "This ___ seems ___ to me / us. I / we miss ___.",
+        "it": "Questo / questa ___ mi / ci sembra ___. Mi / ci manca ___ / mancano ___."
+      },
+      "speaking": {
+        "en": "Invent a message after a weekend away. Say what seems useful to you or your group and what you miss. Use sembrare once and mancare once.",
+        "it": "Inventa un messaggio dopo un fine settimana fuori. Di’ che cosa sembra utile a te o al gruppo e che cosa vi manca. Usa sembrare una volta e mancare una volta."
       },
       "resource": "club"
     }

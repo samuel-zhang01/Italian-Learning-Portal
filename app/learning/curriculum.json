@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-11-08",
+  "reviewedOn": "2026-11-12",
   "missions": [
     {
       "id": "say-hello",
@@ -8779,6 +8779,243 @@
       "relatedGrammarIds": [
         "a2-formal-imperative"
       ]
+    },
+    {
+      "id": "reviewlab-compare-quantities",
+      "title": {
+        "en": "Compare quantities and qualities",
+        "it": "Confronta quantità e qualità"
+      },
+      "goal": {
+        "en": "Compare two quantities with che, then compare the same quality of two objects with di.",
+        "it": "Confronta due quantità con che, poi la stessa qualità di due oggetti con di."
+      },
+      "rule": {
+        "en": "In the pattern practised here, compare quantities of two nouns after the same verb with più/meno … che: abbiamo più inviti che posti. Compare one quality of two separate objects with di: questa tazza è più grande di quella. Two infinitive activities also use che: preferisco leggere più che guardare la TV. Identify what is being compared before choosing the connector.",
+        "it": "Nello schema esercitato qui, confronta le quantità di due nomi dopo lo stesso verbo con più/meno … che: abbiamo più inviti che posti. Confronta una qualità di due oggetti distinti con di: questa tazza è più grande di quella. Anche due attività all’infinito usano che: preferisco leggere più che guardare la TV. Individua che cosa confronti prima di scegliere il connettivo."
+      },
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete the quantity comparison: abbiamo più tazze ___ piattini.",
+            "it": "Completa il confronto tra quantità: abbiamo più tazze ___ piattini."
+          },
+          "answers": [
+            "che"
+          ],
+          "explanation": {
+            "en": "The two quantities are cups and saucers, after the same verb: più tazze che piattini.",
+            "it": "Le due quantità sono tazze e piattini, dopo lo stesso verbo: più tazze che piattini."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Compare two museums: questo museo è più grande ___ quello.",
+            "it": "Confronta due musei: questo museo è più grande ___ quello."
+          },
+          "answers": [
+            "di"
+          ],
+          "explanation": {
+            "en": "One quality, size, is compared across two museums: più grande di quello.",
+            "it": "Una qualità, la grandezza, è confrontata tra due musei: più grande di quello."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Complete the quantity comparison: ci sono meno sedie ___ ospiti.",
+          "it": "Completa il confronto tra quantità: ci sono meno sedie ___ ospiti."
+        },
+        "answers": [
+          "che"
+        ],
+        "explanation": {
+          "en": "This pattern compares how many chairs and guests there are: meno sedie che ospiti.",
+          "it": "Questo schema confronta il numero di sedie e ospiti: meno sedie che ospiti."
+        }
+      },
+      "output": {
+        "en": "Invent preparations for a small picnic. Write one comparison between two quantities using che and one between two objects using di.",
+        "it": "Inventa i preparativi per un piccolo picnic. Scrivi un confronto tra due quantità con che e uno tra due oggetti con di."
+      },
+      "model": {
+        "en": "We have more cups than plates. This basket is lighter than that one.",
+        "it": "Abbiamo più tazze che piatti. Questo cestino è più leggero di quello."
+      },
+      "rubric": [
+        {
+          "en": "My che sentence compares quantities of two nouns after the same verb.",
+          "it": "La mia frase con che confronta le quantità di due nomi dopo lo stesso verbo."
+        },
+        {
+          "en": "My di sentence compares one quality of two objects; the adjective agrees with its subject.",
+          "it": "La mia frase con di confronta una qualità di due oggetti; l’aggettivo concorda con il soggetto."
+        }
+      ],
+      "course": 3,
+      "examples": [
+        {
+          "en": "We have more invitations than places at the table.",
+          "it": "Abbiamo più inviti che posti a tavola."
+        },
+        {
+          "en": "Today I am making more tea than coffee.",
+          "it": "Oggi preparo più tè che caffè."
+        },
+        {
+          "en": "There are fewer boxes than books.",
+          "it": "Ci sono meno scatole che libri."
+        }
+      ],
+      "words": [
+        {
+          "en": "more invitations than places",
+          "it": "più inviti che posti"
+        },
+        {
+          "en": "more tea than coffee",
+          "it": "più tè che caffè"
+        },
+        {
+          "en": "fewer boxes than books",
+          "it": "meno scatole che libri"
+        },
+        {
+          "en": "more practice than theory",
+          "it": "più pratica che teoria"
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-6c05684ab06a",
+          "pages": [
+            1
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "a2-comparisons"
+      ]
+    },
+    {
+      "id": "reviewlab-seems-and-misses",
+      "title": {
+        "en": "Say what seems right and what you miss",
+        "it": "Di’ che cosa sembra adatto e che cosa ti manca"
+      },
+      "goal": {
+        "en": "Write a short message with sembrare and mancare, keeping the person separate from the thing that controls the verb.",
+        "it": "Scrivi un breve messaggio con sembrare e mancare, distinguendo la persona dalla cosa che determina il verbo."
+      },
+      "rule": {
+        "en": "With these present-tense patterns, the thing described controls singular or plural: mi sembra utile questa mappa / mi sembrano utili queste mappe; ci manca il mare / ci mancano le passeggiate. The small pronoun identifies the person: mi, ti, gli (to him), le (to her), ci, vi. Changing mi to ci does not make a singular thing plural. Compare the familiar piace/piacciono pattern, and put non before the pronoun.",
+        "it": "In questi schemi al presente, la cosa descritta determina il singolare o il plurale: mi sembra utile questa mappa / mi sembrano utili queste mappe; ci manca il mare / ci mancano le passeggiate. Il pronome indica la persona: mi, ti, gli (a lui), le (a lei), ci, vi. Cambiare mi in ci non rende plurale una cosa singolare. Confronta lo schema già noto piace/piacciono e metti non prima del pronome."
+      },
+      "checks": [
+        {
+          "prompt": {
+            "en": "Complete in the present: ci ___ i sentieri del bosco. (mancare)",
+            "it": "Completa al presente: ci ___ i sentieri del bosco. (mancare)"
+          },
+          "answers": [
+            "mancano"
+          ],
+          "explanation": {
+            "en": "The subject i sentieri is plural, so use mancano. Ci tells us who misses the paths.",
+            "it": "Il soggetto i sentieri è plurale, quindi usa mancano. Ci indica a chi mancano i sentieri."
+          }
+        },
+        {
+          "prompt": {
+            "en": "Two maps: queste mappe ci ___ chiare. (sembrare, present)",
+            "it": "Due mappe: queste mappe ci ___ chiare. (sembrare, presente)"
+          },
+          "answers": [
+            "sembrano"
+          ],
+          "explanation": {
+            "en": "Queste mappe is plural, so use sembrano and the plural adjective chiare.",
+            "it": "Queste mappe è plurale, quindi usa sembrano e l’aggettivo plurale chiare."
+          }
+        }
+      ],
+      "review": {
+        "prompt": {
+          "en": "Replace a Bea with one unstressed pronoun: a Bea manca il lago → ___ manca il lago.",
+          "it": "Sostituisci a Bea con un solo pronome atono: a Bea manca il lago → ___ manca il lago."
+        },
+        "answers": [
+          "le"
+        ],
+        "explanation": {
+          "en": "Bea is one female person: a lei becomes le. The singular subject il lago keeps manca.",
+          "it": "Bea è una persona femminile: a lei diventa le. Il soggetto singolare il lago mantiene manca."
+        }
+      },
+      "output": {
+        "en": "Invent a message after a weekend away. Say what seems useful to you or your group and what you miss. Use sembrare once and mancare once.",
+        "it": "Inventa un messaggio dopo un fine settimana fuori. Di’ che cosa sembra utile a te o al gruppo e che cosa vi manca. Usa sembrare una volta e mancare una volta."
+      },
+      "model": {
+        "en": "These maps seem useful to us. We miss the paths through the woods.",
+        "it": "Queste mappe ci sembrano utili. Ci mancano i sentieri nel bosco."
+      },
+      "rubric": [
+        {
+          "en": "I matched sembra/sembrano and manca/mancano to the things, not to the pronoun.",
+          "it": "Ho concordato sembra/sembrano e manca/mancano con le cose, non con il pronome."
+        },
+        {
+          "en": "My pronouns identify who has the impression or misses something; my adjectives agree.",
+          "it": "I pronomi indicano chi ha l’impressione o sente la mancanza; gli aggettivi concordano."
+        }
+      ],
+      "course": 3,
+      "examples": [
+        {
+          "en": "This route seems easy to me.",
+          "it": "Questo percorso mi sembra facile."
+        },
+        {
+          "en": "These tips seem useful to me.",
+          "it": "Questi consigli mi sembrano utili."
+        },
+        {
+          "en": "After the trip we miss the sea.",
+          "it": "Dopo il viaggio ci manca il mare."
+        }
+      ],
+      "words": [
+        {
+          "en": "it seems easy to me",
+          "it": "mi sembra facile"
+        },
+        {
+          "en": "they seem useful to me",
+          "it": "mi sembrano utili"
+        },
+        {
+          "en": "we miss the sea",
+          "it": "ci manca il mare"
+        },
+        {
+          "en": "we miss the walks",
+          "it": "ci mancano le passeggiate"
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-6c05684ab06a",
+          "pages": [
+            2
+          ]
+        }
+      ],
+      "relatedGrammarIds": [
+        "piacere",
+        "a2-indirect-pronouns"
+      ]
     }
   ],
   "sources": [
@@ -9229,6 +9466,22 @@
       "course": 3,
       "pages": 16,
       "sha256": "d7cf3d20c90da8cff714a1408a25f82387cb815fd3c92bbf7df990f52c8c0ae7"
+    },
+    {
+      "id": "src-6c05684ab06a",
+      "path": "Course 3/Solution_Italian_Level_2_Escape_Room_.docx",
+      "title": "Solution_Italian_Level_2_Escape_Room_.docx",
+      "course": 3,
+      "pages": 3,
+      "sha256": "6c05684ab06ad0ed49c17df39eeae066b856d2c18ab0820085adab5310fbccd3",
+      "pagination": {
+        "basis": "rendered-document",
+        "note": {
+          "en": "Page numbers refer to the reviewed three-page LibreOffice PDF render. Word pagination may differ; check the CASE heading. Only that exact private PDF render can connect here.",
+          "it": "I numeri rimandano al PDF di tre pagine renderizzato con LibreOffice e verificato. L’impaginazione in Word può variare; controlla il titolo CASE. Qui si può collegare solo quel PDF privato esatto."
+        },
+        "pdfSha256": "bb29de7b0fcb54041a2ed811f404bb5a32fee548eb2eee8e784f233a55884c33"
+      }
     }
   ]
 }

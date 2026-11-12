@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import grammarData from "./grammar.json";
+import { sourcePageLabel } from "./source-references";
 import { PracticeNavigation } from "./practice-navigation";
 import companionData from "./companion.json";
 import { exercisePrompt, modelAnswerMismatch } from "./learning-utils";
@@ -1904,7 +1905,7 @@ export function CompanionView(props: Shared & { pageId?: string }) {
         <div className="academy-source-meta">
           <span>
             {selectedSource.pages}{" "}
-            {t("source pages / slides", "pagine / diapositive nella fonte")}
+            {text(sourcePageLabel(selectedSource))}
           </span>
           <span>
             {completeCount}/
@@ -1913,6 +1914,7 @@ export function CompanionView(props: Shared & { pageId?: string }) {
           </span>
         </div>
       )}
+      {selectedSource?.pagination && <p className="hint">{text(selectedSource.pagination.note)}</p>}
       <div className="academy-companion-layout">
         <aside className="academy-page-browser">
           <h2>{t("Choose a page", "Scegli una pagina")}</h2>

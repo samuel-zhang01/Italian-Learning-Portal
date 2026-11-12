@@ -12,6 +12,8 @@ import { dailyStudyPlan, emptySession, sessionMission } from "../app/learning/st
 import { planningMissions, planningPages, planningProgrammes, planningUnits } from "../app/learning/planning-data.ts";
 import { vocabItemById } from "../app/learning/vocab-catalogue.ts";
 import { buildDiscoveryIndex, searchDiscovery } from "../app/learning/discovery-index.ts";
+import { sourcePageLabel } from "../app/learning/source-references.ts";
+import { vocabPracticeItems } from "../app/learning/vocab-catalogue.ts";
 
 const review = JSON.parse(readFileSync(new URL("../docs/week5-content-review.json", import.meta.url), "utf8"));
 const sourceId = "src-d7cf3d20c90d", today = "2026-11-08";
@@ -145,4 +147,110 @@ test("search opens the exact class programme and includes new source pages and l
   assert.ok(result.sources.some(ref => ref.id === sourceId));
   assert.equal(index.find(entry => entry.id === missions[0].id).level, "A2");
   assert.ok(index.some(entry => entry.id === `${sourceId}-p12`));
+});
+
+const escapeReview = JSON.parse(readFileSync(new URL("../docs/escape-room-content-review-2026-11-12.json", import.meta.url), "utf8"));
+const escapeSource = curriculum.sources.find(source => source.id === escapeReview.source.id);
+const escapeMissions = curriculum.missions.filter(mission => escapeReview.missionIds.includes(mission.id));
+const escapeProgramme = grammar.programmes.find(programme => programme.id === escapeReview.programmeId);
+
+test("the escape-room refresh preserves every prior content object and typed-practice identity", () => {
+  for (const [path, baseline] of Object.entries(escapeReview.baseline)) {
+    const [name, key] = path.split(".");
+    assert.equal(digest({ curriculum, enrichment, grammar, companion }[name][key].slice(0, baseline.count)), baseline.sha256, path);
+  }
+  const priorIds = vocabPracticeItems.filter(item => !item.bankId.startsWith("reviewlab-")).map(item => item.id).sort();
+  assert.equal(priorIds.length, escapeReview.previousVocabularyPracticeIds.count);
+  assert.equal(digest(priorIds), escapeReview.previousVocabularyPracticeIds.sha256);
+  assert.equal(escapeReview.week5Recheck.sha256, "d7cf3d20c90da8cff714a1408a25f82387cb815fd3c92bbf7df990f52c8c0ae7");
+  assert.equal(escapeReview.week5Recheck.changed, false);
+});
+
+test("Word source citations identify the reviewed render and keep the completed puzzle reference-only", () => {
+  assert.deepEqual(escapeSource, escapeReview.source);
+  assert.equal(escapeSource.sha256, "6c05684ab06ad0ed49c17df39eeae066b856d2c18ab0820085adab5310fbccd3");
+  assert.equal(escapeSource.pages, 3);
+  assert.equal(escapeSource.pagination.basis, "rendered-document");
+  assert.match(escapeSource.pagination.pdfSha256, /^[a-f0-9]{64}$/);
+  assert.match(sourcePageLabel(escapeSource).en, /Rendered document/);
+  assert.match(escapeSource.pagination.note.en, /Word pagination may differ/);
+  assert.deepEqual(companion.sources.find(source => source.id === escapeSource.id), escapeSource);
+  const pages = companion.pages.filter(page => page.sourceId === escapeSource.id);
+  assert.deepEqual(pages.map(page => page.page), [1, 2, 3]);
+  for (const page of pages) {
+    assert.equal(page.kind, "reference"); assert.deepEqual(page.checks, []);
+    [page.focus, page.task, page.model].forEach(pair);
+    assert.match(page.task.en, /private answer-key/);
+  }
+  assert.ok(escapeReview.sourceIssues.some(issue => issue.case === "CASE 04"));
+});
+
+test("the two new outcomes include complete bilingual retrieval, original scenes and original vocabulary", () => {
+  assert.equal(escapeMissions.length, 2);
+  for (const mission of escapeMissions) {
+    [mission.title, mission.goal, mission.rule, ...mission.examples, ...mission.words, mission.output, mission.model, ...mission.rubric].forEach(pair);
+    assert.equal(mission.checks.length, 2); assert.equal(mission.rubric.length, 2);
+    assert.equal(new Set([...mission.checks, mission.review].map(question => question.prompt.it)).size, 3);
+    for (const question of [...mission.checks, mission.review]) {
+      pair(question.prompt); pair(question.explanation);
+      assert.ok(question.answers.length && question.answers.every(answer => isCorrect(answer, question.answers)));
+    }
+    const lesson = enrichment.lessons.find(lesson => lesson.missionId === mission.id);
+    assert.ok(lesson.dialogue.length >= 4); assert.ok(lesson.notes.length >= 3);
+    [...lesson.dialogue, ...lesson.notes, lesson.frame, lesson.speaking, lesson.question.prompt, lesson.question.explanation].forEach(pair);
+    const bank = enrichment.banks.find(bank => bank.id === lesson.bank);
+    assert.equal(bank.words.length, 8);
+    for (const word of bank.words) {
+      pair(word.term); pair(word.example); assert.equal(word.provenance, "extension");
+      assert.ok(vocabItemById.has(word.id));
+    }
+    for (const ref of mission.sources) {
+      assert.equal(ref.id, escapeSource.id);
+      assert.ok(ref.pages.every(page => escapeReview.physicalPagesRead.includes(page)));
+    }
+  }
+});
+
+test("quantity and personal-message checks preserve the intended comparison, subject and recipient", () => {
+  const [quantities, messages] = escapeMissions;
+  assert.ok(isCorrect("che", quantities.checks[0].answers));
+  assert.equal(isCorrect("di", quantities.checks[0].answers), false);
+  assert.ok(isCorrect("di", quantities.checks[1].answers));
+  assert.equal(isCorrect("che", quantities.checks[1].answers), false);
+  assert.ok(isCorrect("mancano", messages.checks[0].answers));
+  assert.equal(isCorrect("manca", messages.checks[0].answers), false);
+  assert.ok(isCorrect("sembrano", messages.checks[1].answers));
+  assert.equal(isCorrect("sembra", messages.checks[1].answers), false);
+  assert.ok(isCorrect("le", messages.review.answers));
+  assert.equal(isCorrect("gli", messages.review.answers), false);
+});
+
+test("five original revision checkpoints reuse existing learning and require fresh self-assessed production", () => {
+  assert.equal(escapeProgramme.days.length, 5);
+  assert.ok(escapeProgramme.days.every(day => day.practice && day.unitIds.every(id => grammar.units.some(unit => unit.id === id))));
+  let p = selectProgramme(emptyProgress(), escapeProgramme.id, today);
+  p.notes = "Preserve my notebook.";
+  assert.equal(plan(p).mission.id, escapeMissions[0].id);
+  for (let index = 0; index < escapeProgramme.days.length; index++) {
+    p.academy.programme.day = index;
+    for (const id of escapeProgramme.days[index].missionIds) p.completed[id] = { date: addDays(today, -1), firstCorrect: 1, total: 2, output: "Una risposta precedente.", supported: false, confidence: 2 };
+    for (const id of escapeProgramme.days[index].unitIds) p.academy.grammar[id] = { ...getGrammarDraft(p, id), completed: addDays(today, -1) };
+    assert.equal(programmeDayReady(p, escapeProgramme, index), false);
+    p = updateProgrammePracticeDraft(p, escapeProgramme, index, { output: "Una nuova risposta originale.", rubric: [0, 1], modelSeen: false });
+    p = completeProgrammePractice(p, escapeProgramme, index, today);
+    assert.ok(programmeDayReady(p, escapeProgramme, index));
+    p = completeProgrammeDay(p, escapeProgramme, index, today);
+    assert.equal(p.academy.programme.day, index + 1);
+  }
+  const restored = parseProgress(JSON.stringify(p), curriculum.missions.map(mission => mission.id));
+  assert.equal(restored.version, 1); assert.equal(restored.notes, p.notes);
+  assert.equal(restored.academy.programme.day, 5);
+  assert.equal(Object.keys(restored.academy.programme.practice).length, 5);
+});
+
+test("discovery labels the reviewed document render and opens its specific revision programme", () => {
+  const index = buildDiscoveryIndex({ ...grammar, missions: curriculum.missions, ...companion, banks: enrichment.banks });
+  assert.match(index.find(entry => entry.id === escapeSource.id).summary.en, /Word pagination may differ/);
+  assert.match(index.find(entry => entry.id === `${escapeSource.id}-p2`).summary.en, /reviewed render page 2/);
+  assert.equal(index.find(entry => entry.id === escapeProgramme.id).route, "programmes?programme=course3-integrated-recall");
 });

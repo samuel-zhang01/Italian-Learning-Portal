@@ -12,7 +12,7 @@ export type LocalPdfBundle = {
   pages: number;
   sources: { sourceId: string; sha256: string; pages: number; offset: number }[];
 };
-type LocalPdfSource = Pick<Source, "id" | "path" | "sha256"> & Partial<Pick<Source, "pages">>;
+type LocalPdfSource = Pick<Source, "id" | "path" | "sha256"> & Partial<Pick<Source, "pages" | "pagination">>;
 type LocalPdfFile = Blob & { name: string };
 type ObjectUrls = {
   createObjectURL: (file: Blob) => string;
@@ -93,8 +93,13 @@ export function createLocalPdfStore(
 ) {
   const byHash = new Map(
     sources
-      .filter((source) => source.path.toLowerCase().endsWith(".pdf"))
-      .map((source) => [source.sha256, source.id]),
+      .flatMap((source): [string, string][] => {
+        if (source.path.toLowerCase().endsWith(".pdf")) return [[source.sha256, source.id]];
+        const render = source.pagination;
+        return source.path.toLowerCase().endsWith(".docx") && render?.basis === "rendered-document"
+          && SHA256.test(render.pdfSha256) && positivePageCount(source.pages)
+          ? [[render.pdfSha256, source.id]] : [];
+      }),
   );
   const bundlesByHash = knownBundles(sources, bundles);
   const connections = new Map<string, { url: string; offset: number }>();

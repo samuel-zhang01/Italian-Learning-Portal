@@ -1,4 +1,7 @@
-"""Read only the supplied study folder; preserve physical page/slide numbering."""
+"""Read only the supplied study folder; preserve physical page/slide numbering.
+
+DOCX citations use a retained LibreOffice PDF render, not assumed Word pagination.
+"""
 from __future__ import annotations
 import argparse
 import hashlib
@@ -24,7 +27,7 @@ def files(source: Path):
         folders[:] = sorted(n for n in folders if not n.startswith('.') and n not in {'__MACOSX', '00 — Course Info'} and not (Path(directory)/n).is_symlink())
         for name in sorted(names):
             p = Path(directory)/name
-            if not name.startswith('.') and not p.is_symlink() and p.suffix.lower() in {'.pdf', '.pptx'}:
+            if not name.startswith('.') and not p.is_symlink() and p.suffix.lower() in {'.pdf', '.pptx', '.docx'}:
                 yield p
 
 def slides(path: Path) -> list[str]:
@@ -32,15 +35,23 @@ def slides(path: Path) -> list[str]:
         names = sorted((n for n in archive.namelist() if re.fullmatch(r'ppt/slides/slide\d+\.xml', n)), key=lambda n:int(re.search(r'(\d+)\.xml', n)[1]))
         return [' '.join(t.text or '' for t in ET.fromstring(archive.read(n)).iter() if t.tag.endswith('}t')) for n in names]
 
-def extract(path: Path, ocr: bool) -> list[dict]:
+def extract(path: Path, ocr: bool, retained_pdf: Path | None = None) -> list[dict]:
     with tempfile.TemporaryDirectory(prefix='italian-material-') as folder:
         temp = Path(folder)
         pdf = path
-        if path.suffix.lower() == '.pptx':
-            if not ocr:
+        if path.suffix.lower() in {'.pptx', '.docx'}:
+            if path.suffix.lower() == '.pptx' and not ocr:
                 return [{'page':i, 'method':'slide-text', 'needs_visual_review':len(re.sub(r'\W','',text))<100, 'text':text} for i,text in enumerate(slides(path), 1)]
             run(['libreoffice', f'-env:UserInstallation={temp.as_uri()}/profile', '--headless', '--convert-to', 'pdf', '--outdir', str(temp), str(path)])
             pdf = temp / (path.stem+'.pdf')
+            if retained_pdf is not None:
+                retained_pdf.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
+                if retained_pdf.parent.is_symlink():
+                    raise OSError('Rendered destination must not be a symlink')
+                with tempfile.NamedTemporaryFile(dir=retained_pdf.parent, prefix='.render-', delete=False) as saved:
+                    saved.write(pdf.read_bytes())
+                    saved_path = Path(saved.name)
+                saved_path.replace(retained_pdf)
         text = run(['pdftotext', '-layout', str(pdf), '-']).split('\f')
         if text and not text[-1].strip():
             text.pop()
@@ -67,10 +78,10 @@ def main():
     output=args.output_dir.resolve()
     if not output.is_relative_to(OUT):
         parser.error('Choose an output folder inside this repository’s data/incoming/.')
-    paths=list(files(source)) if source.is_dir() else ([source] if source.is_file() and source.suffix.lower() in {'.pdf', '.pptx'} else [])
+    paths=list(files(source)) if source.is_dir() else ([source] if source.is_file() and source.suffix.lower() in {'.pdf', '.pptx', '.docx'} else [])
     if not paths:
-        parser.error('No PDFs or presentations found. Existing reports were left untouched.')
-    needed=['pdftotext']+(['pdftoppm','tesseract'] if args.ocr else [])+(['libreoffice'] if args.ocr and any(p.suffix.lower()=='.pptx' for p in paths) else [])
+        parser.error('No PDFs, presentations or Word documents found. Existing reports were left untouched.')
+    needed=['pdftotext']+(['pdftoppm','tesseract'] if args.ocr else [])+(['libreoffice'] if any(p.suffix.lower()=='.docx' or (args.ocr and p.suffix.lower()=='.pptx') for p in paths) else [])
     missing=[x for x in needed if not shutil.which(x)]
     if missing:
         parser.error('Missing tools: '+', '.join(missing))
@@ -78,7 +89,11 @@ def main():
     for p in paths:
         record={'path':p.relative_to(source if source.is_dir() else source.parent).as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
         try:
-            record['pages']=extract(p,args.ocr)
+            retained = output/'rendered'/(p.stem+'.pdf') if p.suffix.lower()=='.docx' else None
+            record['pages']=extract(p,args.ocr,retained)
+            if retained is not None:
+                record['page_basis']='LibreOffice-rendered document; pagination may differ in Word'
+                record['rendered_pdf']={'path':retained.relative_to(ROOT).as_posix(),'sha256':hashlib.sha256(retained.read_bytes()).hexdigest()}
         except (subprocess.SubprocessError, OSError, zipfile.BadZipFile, ET.ParseError) as error:
             record['error']=type(error).__name__  # Do not emit raw document/tool output.
         records.append(record)

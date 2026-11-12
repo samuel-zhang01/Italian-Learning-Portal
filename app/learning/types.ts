@@ -10,6 +10,7 @@ export type Source = {
   course: number;
   pages: number;
   sha256: string;
+  pagination?: { basis: "rendered-document"; note: Pair; pdfSha256: string };
 };
 export type Check = { prompt: Pair; answers: string[]; explanation: Pair };
 export type Mission = {
